@@ -54,6 +54,8 @@ export interface Place {
   lat: number;
   lng: number;
   size: SizeClass | null;
+  /** 面積（公頃），來自公園管理維護地點資料；null = 未知 */
+  area_ha?: number | null;
   stay: StayBucket | null;
   stay_src: string | null;
   /** null = 未知 */

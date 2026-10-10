@@ -96,30 +96,30 @@ export async function runSeed(
     // 4. 場地（attrs 不寫，由 place_attributes 的 trigger 同步）
     changes.places_upserted = (
       await sql`
-      INSERT INTO places (id, name, city, district, address, geom, size_class, stay_bucket, stay_source,
+      INSERT INTO places (id, name, city, district, address, geom, size_class, area_ha, stay_bucket, stay_source,
                           age_min, age_max, fee, indoor, hours, surface, status, summary, coord_source)
       SELECT id, name, city, district, address,
              ST_SetSRID(ST_MakePoint(lng, lat), 4326)::geography,
-             size_class, stay_bucket, stay_source, age_min, age_max, fee, indoor, hours, surface, status, summary,
+             size_class, area_ha, stay_bucket, stay_source, age_min, age_max, fee, indoor, hours, surface, status, summary,
              coord_source
       FROM jsonb_to_recordset(${sql.json(rows.places)}) AS x(
         id text, name text, city text, district text, address text, lat float8, lng float8,
-        size_class char(1), stay_bucket text, stay_source text, age_min smallint, age_max smallint,
+        size_class char(1), area_ha numeric, stay_bucket text, stay_source text, age_min smallint, age_max smallint,
         fee text, indoor boolean, hours text, surface text, status text, summary text, coord_source text)
       ON CONFLICT (id) DO UPDATE SET
         name = EXCLUDED.name, city = EXCLUDED.city, district = EXCLUDED.district, address = EXCLUDED.address,
-        geom = EXCLUDED.geom, size_class = EXCLUDED.size_class, stay_bucket = EXCLUDED.stay_bucket,
+        geom = EXCLUDED.geom, size_class = EXCLUDED.size_class, area_ha = EXCLUDED.area_ha, stay_bucket = EXCLUDED.stay_bucket,
         stay_source = EXCLUDED.stay_source, age_min = EXCLUDED.age_min, age_max = EXCLUDED.age_max,
         fee = EXCLUDED.fee, indoor = EXCLUDED.indoor, hours = EXCLUDED.hours, surface = EXCLUDED.surface,
         status = EXCLUDED.status, summary = EXCLUDED.summary, coord_source = EXCLUDED.coord_source,
         updated_at = now()
       WHERE (places.name, places.city, places.district, places.address, ST_AsEWKT(places.geom),
-             places.size_class, places.stay_bucket, places.stay_source, places.age_min, places.age_max,
+             places.size_class, places.area_ha, places.stay_bucket, places.stay_source, places.age_min, places.age_max,
              places.fee, places.indoor, places.hours, places.surface, places.status, places.summary,
              places.coord_source)
         IS DISTINCT FROM
             (EXCLUDED.name, EXCLUDED.city, EXCLUDED.district, EXCLUDED.address, ST_AsEWKT(EXCLUDED.geom),
-             EXCLUDED.size_class, EXCLUDED.stay_bucket, EXCLUDED.stay_source, EXCLUDED.age_min, EXCLUDED.age_max,
+             EXCLUDED.size_class, EXCLUDED.area_ha, EXCLUDED.stay_bucket, EXCLUDED.stay_source, EXCLUDED.age_min, EXCLUDED.age_max,
              EXCLUDED.fee, EXCLUDED.indoor, EXCLUDED.hours, EXCLUDED.surface, EXCLUDED.status, EXCLUDED.summary,
              EXCLUDED.coord_source)`
     ).count;

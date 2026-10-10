@@ -3,6 +3,7 @@
 輸入：
   data/raw/hsc/hccg-playgrounds.tsv    養工處清冊（116 筆，原文照錄）
   data/raw/hsc/osm-matches.tsv         清冊名稱 ↔ OSM 比對結果與座標
+  data/raw/hsc/manual-review.tsv       人工處理結果（pnpm tool:locate；格式見 lib/manual.py）
 
 規則（對應 CLAUDE.md 資料規則）：
   - 清冊只列「有」的遊具，沒列出的不代表沒有 → 只產生 y。
@@ -12,6 +13,7 @@ import re
 
 from lib.attrs import map_items
 from lib.io import read_tsv
+from lib.manual import coord_label, read_manual, status_text
 
 SOURCE_ID = "hccg"
 SOURCE_SHORT = "清冊"
@@ -72,13 +74,23 @@ def estimate(items):
 def records(root, review):
     hccg = read_tsv(root / "data/raw/hsc/hccg-playgrounds.tsv")
     osm = {r[0]: r for r in read_tsv(root / "data/raw/hsc/osm-matches.tsv")}
+    manual = read_manual(root / "data/raw/hsc/manual-review.tsv")
 
     for no, name, district, text in hccg:
         district = district.replace("公所", "")
         items = parse_items(text)
         m = osm.get(no, [no, name, "none"])
         method = m[2] if len(m) > 2 else "none"
-        coord = (float(m[4]), float(m[5])) if len(m) >= 6 and m[4] else None
+        osm_coord = (float(m[4]), float(m[5])) if len(m) >= 6 and m[4] else None
+
+        # 人工處理結果：已定位用人工座標；找不到／廢除／待實地／重複的不上地圖（比對錯的 OSM 座標也不用）
+        man = manual.get(no)
+        coord, label = osm_coord, None
+        if man and man["狀態"] == "located":
+            coord, label = (float(man["緯度"]), float(man["經度"])), coord_label(man)
+        elif man and man["狀態"] != "confirmed":
+            coord = None
+        status = status_text(man)
 
         mapped = {}
         if items:
@@ -86,13 +98,16 @@ def records(root, review):
             if unmapped:
                 review.add("unmapped-items", [no, name, "、".join(unmapped)])
             if method.startswith("review") or method.endswith("spread") or method == "contains":
-                review.add("match-review", [no, name, method, m[3] if len(m) > 3 else "", *(coord or ("", ""))])
+                review.add("match-review",
+                           [no, name, method, m[3] if len(m) > 3 else "", *(osm_coord or ("", "")), status])
 
         stay, size = estimate(items)
         yield {
             "ext_no": no, "name": name, "district": district, "raw_text": text,
             "items": items, "attrs": mapped,
             "coord": coord, "coord_ref": m[3] if len(m) > 3 else "", "match_method": method,
+            # 人工定位時的座標來源說明（沒有時用 OSM 的說法）；review 清單的「處理狀態」
+            "coord_label": label, "review_status": status,
             "summary": f"清冊列出的遊具：{text.rstrip('。、')}", "stay": stay, "size": size,
             "official_ref": {"hccg_no": int(no), "name": name, "items": text},
         }

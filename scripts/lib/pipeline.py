@@ -8,6 +8,8 @@
   ALIAS           {來源裡的名稱: 既有場地 id}（名稱不同但是同一處）
   COORD_OVERRIDE  {既有場地 id: (lat, lng, 座標來源說明)}
   records(root, review)  依序產生 SourceRecord（格式見 lib/merge.py）
+
+補充資料（例如 sources/hccg_parks.py 的公園面積）由 run(..., parks=) 傳入，只用完全相同的名稱對應。
 """
 import sys
 
@@ -19,7 +21,22 @@ from .review import ReviewCollector
 CSV_BASE = ["id", "name", "district", "lat", "lng", "size", "stay", "age_min", "age_max", "fee", "status"]
 
 
-def run(root, adapter, today):
+def apply_areas(places, parks, review):
+    """用公園資料補面積：先用場地名稱，對不到再用清冊上的名稱；有多個不同面積時不填，列入 review"""
+    for p in places:
+        if p["name"] in parks:
+            areas = {parks[p["name"]]["area"]}
+        else:
+            names = [r["name"] for r in p.get("official_ref", [])]
+            areas = {parks[n]["area"] for n in names if n in parks}
+        areas.discard(None)
+        p["area_ha"] = areas.pop() if len(areas) == 1 else None
+        if p["area_ha"] is None:
+            reason = "對到多個不同面積" if len(areas) > 1 else "公園資料沒有這個名稱"
+            review.add("parks-unmatched", [p["id"], p["name"], reason])
+
+
+def run(root, adapter, today, parks=None):
     # 每個縣市一個資料夾：data/seed/<縣市>/、data/review/<縣市>/
     seed_dir = root / "data/seed" / adapter.CITY
     seed_path = seed_dir / "places.json"
@@ -48,12 +65,14 @@ def run(root, adapter, today):
             merge_attrs(target, rec, adapter.SOURCE_ID, adapter.SOURCE_SHORT, today, review)
             if rec["coord"] and target["id"] not in adapter.COORD_OVERRIDE:
                 target["lat"], target["lng"] = rec["coord"]
-                target["source_coords"] = f"OpenStreetMap {rec['coord_ref']}（{adapter.SOURCE_SHORT}編號 {rec['ext_no']}）"
+                target["source_coords"] = (rec.get("coord_label")
+                                           or f"OpenStreetMap {rec['coord_ref']}（{adapter.SOURCE_SHORT}編號 {rec['ext_no']}）")
             target.setdefault("official_ref", []).append(rec["official_ref"])
             continue
 
         if not rec["coord"]:
-            review.add("unmatched", [rec["ext_no"], rec["name"], rec["district"], rec["raw_text"]])
+            review.add("unmatched", [rec["ext_no"], rec["name"], rec["district"], rec["raw_text"],
+                                     rec.get("review_status", "")])
             stats["skipped_nocoord"] += 1
             continue
 
@@ -71,6 +90,11 @@ def run(root, adapter, today):
     leftover = [p["name"] for p in seed["places"] if "Google" in p.get("source_coords", "")]
     if leftover:
         sys.exit(f"仍有 Google 座標未替換：{leftover}")
+
+    if parks is not None:
+        seed["sources"].update(parks.SOURCES)
+        records = parks.load(root)
+        apply_areas(seed["places"], {n: {"area": parks.area_ha(r)} for n, r in records.items()}, review)
 
     for p in seed["places"]:
         p["city"] = adapter.CITY

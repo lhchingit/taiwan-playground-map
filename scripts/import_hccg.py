@@ -12,10 +12,10 @@
 from pathlib import Path
 
 from lib import pipeline
-from sources import hccg
+from sources import hccg, hccg_parks
 
 ROOT = Path(__file__).resolve().parent.parent
 TODAY = "2026-10-10"
 
 if __name__ == "__main__":
-    pipeline.run(ROOT, hccg, TODAY)
+    pipeline.run(ROOT, hccg, TODAY, parks=hccg_parks)

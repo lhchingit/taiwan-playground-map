@@ -27,6 +27,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      # 匯入腳本（Python）的測試
+      - run: python -m unittest discover -s scripts/tests -t scripts
       # places.json 必須和產生它的腳本、原始資料一致
       - run: python scripts/check_seed_hash.py
 

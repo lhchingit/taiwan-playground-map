@@ -75,6 +75,12 @@ export function validateSeed(data: unknown): string[] {
       lng > TW.lngMax
     )
       err(`${id}：座標不在台灣範圍內`);
+    if (
+      p.area_ha !== undefined &&
+      p.area_ha !== null &&
+      !(typeof p.area_ha === 'number' && p.area_ha >= 0)
+    )
+      err(`${id}：area_ha 必須是非負數或 null`);
     if (typeof p.source_coords === 'string' && p.source_coords.includes('Google'))
       err(`${id}：座標來自 Google，不可存進資料庫`);
 

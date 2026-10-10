@@ -66,6 +66,9 @@ pnpm docker:down   # 停止並移除容器
 | `pnpm docker:up`／`docker:down` | 用 Docker Compose 建置並啟動／停止網站（見上方） |
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生新竹市的 `data/seed/hsc/`、`data/review/hsc/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
+| `pnpm tool:locate` | 人工定位工具（只在本機）：http://localhost:4100，處理找不到座標與待確認比對的清冊資料，結果寫進 `data/raw/hsc/manual-review.tsv`；之後重新執行上一列的兩個腳本套用 |
+| `python3 scripts/fetch_hccg_parks.py` | 重新下載新竹市公園管理維護地點（面積與地點提示）到 `data/raw/hsc/hccg-parks.json` |
+| `python -m unittest discover -s scripts/tests -t scripts` | 匯入腳本（Python）的測試 |
 | `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
 | `pnpm screenshots p1b`／`p1c` | 原型與正式版並排截圖（正式版要先在 3100 埠執行）：p1b 首頁篩選、p1c 場地詳情，輸出到 `docs/screenshots/<組別>/` |
 

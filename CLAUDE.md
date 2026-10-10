@@ -24,6 +24,8 @@ supabase db reset        # 重建資料庫並跑 migrations + seed
 pnpm seed                # 從 data/seed/<縣市>/places.json 匯入（--city hsc 只匯入一個縣市、--dry-run 試跑）
 pnpm city launch hsc     # 上線（匯入不會自動上線）；status／unlaunch
 python3 scripts/build_seed.py && python3 scripts/import_hccg.py   # 重新產生新竹市的 data/seed/hsc/
+pnpm tool:locate         # 人工定位工具（本機），結果寫進 data/raw/hsc/manual-review.tsv
+python -m unittest discover -s scripts/tests -t scripts   # 匯入腳本的測試
 ```
 
 改完程式後，至少跑 `pnpm lint && pnpm typecheck && pnpm test`；動到 UI 的話再跑 `pnpm test:e2e`。
