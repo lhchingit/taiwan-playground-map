@@ -71,6 +71,18 @@ test.describe('場地頁', () => {
     expect(ld).not.toHaveProperty('isAccessibleForFree');
   });
 
+  test('廁所來自公廁資料：青青草原標示來源與育嬰台', async ({ page }) => {
+    await page.goto('/hsinchu-city/places/hsc-hccg-056');
+    const amenity = page.getByRole('region', { name: '生活機能' });
+    const toilet = amenity.locator('.arow', { hasText: '廁所' });
+    await expect(toilet).toContainText('青青草原公廁(1)～青青草原公廁(6)（共 6 處）');
+    await expect(toilet.getByRole('link', { name: /新竹市公廁地點資訊/ })).toHaveAttribute(
+      'href',
+      'https://data.gov.tw/dataset/67757',
+    );
+    await expect(amenity.locator('.arow', { hasText: '哺乳室' })).toContainText('公廁育嬰台 2 座');
+  });
+
   test('還沒有資料的項目收成一行', async ({ page }) => {
     await page.goto(LUGUANG);
     const play = page.getByRole('region', { name: '遊樂設施' });

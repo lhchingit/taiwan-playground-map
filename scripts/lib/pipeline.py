@@ -36,7 +36,35 @@ def apply_areas(places, parks, review):
             review.add("parks-unmatched", [p["id"], p["name"], reason])
 
 
-def run(root, adapter, today, parks=None):
+def _names(toilets):
+    """3 筆以內用頓號串接；更多時寫成「第一筆～最後一筆（共 N 處）」"""
+    names = [t["name"] for t in toilets]
+    return "、".join(names) if len(names) <= 3 else f"{names[0]}～{names[-1]}（共 {len(names)} 處）"
+
+
+def apply_toilets(places, toilets, aliases, src, today, review):
+    """公廁資料：名稱完全相同或人工對應表 → 廁所「有」；育嬰台 > 0 → 哺乳室／尿布台「有」。
+    沿用清冊合併的規則（merge_attrs）：現有是「無」列入 conflicts、不覆蓋；未知或網友線索才改用公廁資料。"""
+    by_name = {p["name"]: p for p in places}
+    by_id = {p["id"]: p for p in places}
+    matched = {}
+    for t in toilets:
+        place = by_id.get(aliases[t["name"]]) if t["name"] in aliases else by_name.get(t["key"])
+        if place:
+            matched.setdefault(place["id"], (place, []))[1].append(t)
+        else:
+            hints = [p["name"] for p in places if t["key"] and (t["key"] in p["name"] or p["name"] in t["key"])]
+            review.add("toilets-unmatched", [t["name"], t["key"], "、".join(hints)])
+    for place, ts in matched.values():
+        attrs = {"toilet": _names(ts)}
+        nursing = [t for t in ts if t["nursing"] > 0]
+        if nursing:
+            n = sum(t["nursing"] for t in nursing)
+            attrs["nursing"] = f"公廁育嬰台 {n} 座（{'、'.join(t['name'] for t in nursing)}）"
+        merge_attrs(place, {"attrs": attrs}, src.SOURCE_ID, src.SOURCE_SHORT, today, review)
+
+
+def run(root, adapter, today, parks=None, toilets=None):
     # 每個縣市一個資料夾：data/seed/<縣市>/、data/review/<縣市>/
     seed_dir = root / "data/seed" / adapter.CITY
     seed_path = seed_dir / "places.json"
@@ -95,6 +123,12 @@ def run(root, adapter, today, parks=None):
         seed["sources"].update(parks.SOURCES)
         records = parks.load(root)
         apply_areas(seed["places"], {n: {"area": parks.area_ha(r)} for n, r in records.items()}, review)
+
+    if toilets is not None:
+        seed["sources"].update(toilets.SOURCES)
+        rows, fetched = toilets.load(root)
+        aliases = toilets.load_aliases(root, {t["name"] for t in rows}, {p["id"] for p in seed["places"]})
+        apply_toilets(seed["places"], rows, aliases, toilets, fetched, review)
 
     for p in seed["places"]:
         p["city"] = adapter.CITY

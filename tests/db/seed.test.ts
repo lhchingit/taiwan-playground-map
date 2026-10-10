@@ -30,7 +30,7 @@ async function snapshot() {
 describe('pnpm seed', () => {
   it('各表筆數符合完成標準', async () => {
     expect(await snapshot()).toMatchObject({
-      sources: 9, // P0 的 8 個＋公園管理維護地點（hccg_parks，P2(a)）
+      sources: Object.keys(seed.sources).length,
       attribute_defs: 38,
       places: seed.places.length,
       place_parking: 72,
@@ -112,6 +112,20 @@ describe('pnpm seed', () => {
     expect(r).toEqual({ known: withArea, unknown: seed.places.length - withArea });
     const [park] = await sql`SELECT area_ha::float8 AS a FROM places WHERE id = 'hsc-hsinchu-park'`;
     expect(park?.a).toBe(13.86);
+  });
+
+  it('公廁資料：名稱對到的場地廁所是「有」，有育嬰台的才設哺乳室；沒有寫入任何「無」', async () => {
+    const expectedRows = seed.places.flatMap((p) =>
+      (['toilet', 'nursing'] as const)
+        .filter((k) => p.attrs[k]?.src === 'hccg_toilets')
+        .map((k) => `${p.id}.${k}=${p.attrs[k]!.v}`),
+    );
+    const rows = await sql`
+      SELECT place_id || '.' || key || '=' || value AS r FROM place_attributes
+      WHERE source_id = 'hccg_toilets' ORDER BY place_id, key`;
+    expect(rows.map((x) => x.r).sort()).toEqual(expectedRows.sort());
+    expect(rows.length).toBeGreaterThan(0);
+    expect(rows.every((x) => String(x.r).endsWith('=y'))).toBe(true);
   });
 
   it('每個場地都有座標來源：OpenStreetMap 或人工定位（不可以是 Google）', async () => {
