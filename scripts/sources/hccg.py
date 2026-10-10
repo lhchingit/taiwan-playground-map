@@ -1,8 +1,8 @@
 """新竹市兒童遊戲場清冊（養護工程處）轉接器，座標來自 OpenStreetMap 比對結果。
 
 輸入：
-  data/raw/hccg-playgrounds.tsv    養工處清冊（116 筆，原文照錄）
-  data/raw/osm-matches.tsv         清冊名稱 ↔ OSM 比對結果與座標
+  data/raw/hsc/hccg-playgrounds.tsv    養工處清冊（116 筆，原文照錄）
+  data/raw/hsc/osm-matches.tsv         清冊名稱 ↔ OSM 比對結果與座標
 
 規則（對應 CLAUDE.md 資料規則）：
   - 清冊只列「有」的遊具，沒列出的不代表沒有 → 只產生 y。
@@ -70,8 +70,8 @@ def estimate(items):
 
 
 def records(root, review):
-    hccg = read_tsv(root / "data/raw/hccg-playgrounds.tsv")
-    osm = {r[0]: r for r in read_tsv(root / "data/raw/osm-matches.tsv")}
+    hccg = read_tsv(root / "data/raw/hsc/hccg-playgrounds.tsv")
+    osm = {r[0]: r for r in read_tsv(root / "data/raw/hsc/osm-matches.tsv")}
 
     for no, name, district, text in hccg:
         district = district.replace("公所", "")

@@ -1,4 +1,4 @@
-// 領域型別，對應 data/seed/places.json 的結構。資料庫型別在 ./database.ts（supabase gen types 產生）。
+// 領域型別，對應 data/seed/<縣市>/places.json 的結構。資料庫型別在 ./database.ts（supabase gen types 產生）。
 
 /** 三態：y 有／n 無／u 未知。沒有資料就是 u，絕不能當成 n。 */
 export type Tri = 'y' | 'n' | 'u';

@@ -30,6 +30,13 @@ jobs:
       # places.json 必須和產生它的腳本、原始資料一致
       - run: python scripts/check_seed_hash.py
 
+  workflows:
+    name: workflow 語法檢查（actionlint）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:1.7.7 -color
+
   db:
     name: 資料庫、e2e 與 Docker（migration / seed / RLS / Playwright / compose）
     runs-on: ubuntu-latest
@@ -47,6 +54,8 @@ jobs:
       - run: pnpm seed
       # 第二次：確認可以重複執行
       - run: pnpm seed
+      # 匯入不會自動上線（docs/operations.md）
+      - run: pnpm city launch hsc
       - run: pnpm test:db
       # 產生的資料庫型別必須和 migration 一致
       - run: pnpm typegen && git diff --exit-code src/types/database.ts

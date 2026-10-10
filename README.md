@@ -19,8 +19,9 @@ pnpm install
 pnpm exec supabase start
 pnpm exec supabase db reset
 
-# 4. 匯入種子資料（可以重複執行）
+# 4. 匯入種子資料（可以重複執行），再讓新竹市上線（匯入不會自動上線）
 pnpm seed
+pnpm city launch hsc
 
 # 5. 產生 .env.local（Next.js 連本機 Supabase 用）
 pnpm env:local
@@ -58,8 +59,10 @@ pnpm docker:down   # 停止並移除容器
 |---|---|
 | `pnpm typegen` | migration 改了之後，重新產生 `src/types/database.ts` |
 | `pnpm format` | 用 Prettier 排版 |
+| `pnpm seed --city <代碼>`／`--dry-run` | 只匯入一個縣市；試跑（做完後回滾，只印出會改變什麼） |
+| `pnpm city status`／`launch <代碼>`／`unlaunch <代碼>` | 縣市的場地數與上線狀態；上線、下線 |
 | `pnpm docker:up`／`docker:down` | 用 Docker Compose 建置並啟動／停止網站（見上方） |
-| `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生 `places.json`、`places.csv`、`data/review/` |
+| `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生新竹市的 `data/seed/hsc/`、`data/review/hsc/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
 | `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
 | `pnpm screenshots p1b`／`p1c` | 原型與正式版並排截圖（正式版要先在 3100 埠執行）：p1b 首頁篩選、p1c 場地詳情，輸出到 `docs/screenshots/<組別>/` |
@@ -72,14 +75,15 @@ pnpm docker:down   # 停止並移除容器
 | `docs/decisions.md` | 技術決策與重新檢討的條件 |
 | `docs/tasks/` | 依序實作的任務說明（P0～P4；P4 是拓展到新竹縣、桃園市、苗栗縣） |
 | `docs/prototype/playmap.html` | 可直接打開的原型，介面與行為以它為準 |
-| `data/seed/places.json` | 新竹市 72 處種子資料（含來源） |
-| `data/raw/` | 養工處清冊原文、清冊與 OpenStreetMap 的比對結果、各縣市 OSM 行政界範圍 |
-| `data/review/` | 匯入時需要人工處理的清單（P2） |
-| `scripts/build_seed.py` | 產生 places.json v0.1（手工整理的 10 筆） |
+| `data/seed/<縣市>/places.json` | 種子資料，每個縣市一個資料夾（目前：`hsc` 新竹市 72 處，含來源） |
+| `data/raw/<縣市>/` | 原始資料（新竹市：養工處清冊原文、清冊與 OSM 的比對結果）；`data/raw/osm-city-bounds.json` 是各縣市 OSM 行政界範圍 |
+| `data/review/<縣市>/` | 匯入時需要人工處理的清單（P2） |
+| `scripts/build_seed.py` | 產生新竹市 places.json v0.1（手工整理的 10 筆） |
 | `scripts/import_hccg.py` | 用清冊轉接器匯入、換成 OSM 座標，輸出 v0.2 |
 | `scripts/sources/` | 資料來源轉接器，每個來源一個（目前：`hccg.py` 新竹市清冊） |
 | `scripts/lib/` | 轉接器共用：讀寫檔、屬性對照、比對合併、review 清單 |
-| `scripts/seed.ts`、`scripts/seed/` | `pnpm seed`：檢查 places.json 後寫入資料庫 |
+| `scripts/seed.ts`、`scripts/city.ts`、`scripts/seed/` | `pnpm seed`：檢查全部縣市的 places.json 後寫入資料庫；`pnpm city`：上線／下線 |
+| `docs/operations.md` | 營運手冊：正式環境的匯入、上線、下線（GitHub Actions「資料作業」） |
 | `supabase/migrations/0001_init.sql` | 初版資料表、索引、attrs 同步 trigger、RLS |
 | `supabase/migrations/0002_public_views.sql` | 首頁用的公開 view：`city_bounds`（縣市範圍）、`place_cards`（清單與地圖） |
 | `supabase/migrations/0003_place_coord_source.sql` | 場地的座標來源說明（`coord_source`） |

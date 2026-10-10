@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { citiesToLoad, distanceToBboxKm, type CityBounds } from '@/lib/cities';
+import { citiesToLoad, distanceToBboxKm, nearestCity, type CityBounds } from '@/lib/cities';
 
 // 簡化的範圍，只用來測試
 const city = (code: string, bbox: number[] | null): CityBounds => ({
@@ -54,5 +54,30 @@ describe('citiesToLoad', () => {
 
   it('全部都太遠時回傳空陣列', () => {
     expect(citiesToLoad({ lat: 22.6, lng: 120.3 }, cities)).toEqual([]);
+  });
+});
+
+describe('nearestCity', () => {
+  const cities = [
+    city('aaa', [120.9, 24.7, 121.0, 24.8]),
+    city('bbb', [121.0, 24.8, 121.3, 25.0]),
+    city('ccc', null),
+  ];
+
+  it('在範圍內的縣市', () => {
+    expect(nearestCity({ lat: 24.75, lng: 120.95 }, cities)?.code).toBe('aaa');
+    expect(nearestCity({ lat: 24.9, lng: 121.2 }, cities)?.code).toBe('bbb');
+  });
+
+  it('都不在範圍內時取最近的', () => {
+    expect(nearestCity({ lat: 25.2, lng: 121.2 }, cities)?.code).toBe('bbb');
+  });
+
+  it('距離相同（兩個範圍重疊）時依代碼', () => {
+    expect(nearestCity({ lat: 24.8, lng: 121.0 }, cities)?.code).toBe('aaa');
+  });
+
+  it('沒有任何範圍時回傳 null', () => {
+    expect(nearestCity({ lat: 24.8, lng: 121 }, [city('ccc', null)])).toBeNull();
   });
 });

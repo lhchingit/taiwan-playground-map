@@ -14,15 +14,15 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUTS = [
-    "data/seed/places.json",
-    "data/seed/places.csv",
-    "data/review/conflicts.csv",
-    "data/review/match-review.csv",
-    "data/review/no-playground.csv",
-    "data/review/unmapped-items.csv",
-    "data/review/unmatched.csv",
-]
+# 每個縣市：產生的指令與輸出檔（新增縣市時在這裡加一筆）
+CITIES = {
+    "hsc": {
+        "scripts": ["scripts/build_seed.py", "scripts/import_hccg.py"],
+        "outputs": ["data/seed/hsc/places.json", "data/seed/hsc/places.csv"]
+        + [f"data/review/hsc/{k}.csv" for k in
+           ["conflicts", "match-review", "no-playground", "unmapped-items", "unmatched"]],
+    },
+}
 
 
 def sha256(path):
@@ -35,12 +35,13 @@ def main():
         work = Path(tmp)
         shutil.copytree(ROOT / "scripts", work / "scripts", ignore=shutil.ignore_patterns("__pycache__"))
         shutil.copytree(ROOT / "data/raw", work / "data/raw")
-        (work / "data/seed").mkdir()
-        for script in ["scripts/build_seed.py", "scripts/import_hccg.py"]:
-            subprocess.run([sys.executable, script], cwd=work, env=env, check=True, stdout=subprocess.DEVNULL)
-
         failed = []
-        for rel in OUTPUTS:
+        for city, spec in CITIES.items():
+            (work / "data/seed" / city).mkdir(parents=True)
+            for script in spec["scripts"]:
+                subprocess.run([sys.executable, script], cwd=work, env=env, check=True,
+                               stdout=subprocess.DEVNULL)
+        for rel in [o for spec in CITIES.values() for o in spec["outputs"]]:
             got, want = sha256(work / rel), sha256(ROOT / rel)
             ok = got == want
             print(f"{'OK  ' if ok else 'DIFF'} {got}  {rel}")

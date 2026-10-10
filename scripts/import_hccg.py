@@ -1,7 +1,7 @@
 """匯入新竹市兒童遊戲場清冊，並用 OpenStreetMap 座標取代原型暫用的 Google 座標。
 
-輸入：data/seed/places.json v0.1（10 筆，scripts/build_seed.py 產生）＋ scripts/sources/hccg.py 讀的原始資料
-輸出：data/seed/places.json v0.2（覆寫）、data/seed/places.csv、data/review/*.csv
+輸入：data/seed/hsc/places.json v0.1（10 筆，scripts/build_seed.py 產生）＋ scripts/sources/hccg.py 讀的原始資料
+輸出：data/seed/hsc/places.json v0.2（覆寫）、data/seed/hsc/places.csv、data/review/hsc/*.csv
 
 規則（對應 CLAUDE.md 資料規則）：
   - 清冊寫「無」的場地不匯入地圖（另列 no-playground.csv 供確認）。

@@ -140,10 +140,10 @@ for p in PLACES:
 
 json.dump({"version": "0.1", "city": "新竹市", "generated": VERIFIED, "sources": SOURCES,
            "labels": {"play": PLAY, "play_groups": [{"name": n, "keys": list(g)} for n, g in PLAY_GROUPS], "amenity": AMENITY}, "places": PLACES},
-          open("data/seed/places.json", "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1)
+          open("data/seed/hsc/places.json", "w", encoding="utf-8", newline="\n"), ensure_ascii=False, indent=1)
 
 keys = list(PLAY) + list(AMENITY)
-with open("data/seed/places.csv", "w", newline="", encoding="utf-8-sig") as f:
+with open("data/seed/hsc/places.csv", "w", newline="", encoding="utf-8-sig") as f:
     w = csv.writer(f)
     w.writerow(["id","name","district","address","lat","lng","size","stay","age_min","age_max","fee","status"] + keys + ["parking_type","parking_fee","parking_spaces"])
     for p in PLACES:

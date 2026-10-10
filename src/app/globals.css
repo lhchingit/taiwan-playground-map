@@ -647,6 +647,35 @@ a.card {
   text-decoration: none;
 }
 
+/* 首頁的縣市選單 */
+.city-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.city-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+}
+.city-list a {
+  color: var(--teal);
+  font-family: var(--f-display);
+  font-size: 18px;
+}
+.nearest {
+  margin: 0 0 10px;
+}
+.nearest a {
+  color: var(--teal);
+}
+
 /* 場地頁 */
 .place-page {
   max-width: 720px;
