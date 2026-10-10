@@ -15,8 +15,8 @@ const huninn = Huninn({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: '竹市放電地圖',
-  description: '新竹市親子遊樂場與公園地圖：依遊樂設施、年齡、生活機能、停車與距離篩選。',
+  title: '全台放電地圖',
+  description: '台灣親子遊樂場與公園地圖：依遊樂設施、年齡、生活機能、停車與距離篩選。',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

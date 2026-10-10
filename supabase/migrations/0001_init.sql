@@ -1,4 +1,4 @@
--- 0001_init：竹市放電地圖初版 schema（對應 data/seed/places.json）
+-- 0001_init：全台放電地圖初版 schema（對應 data/seed/places.json）
 CREATE EXTENSION IF NOT EXISTS postgis;
 
 -- 縣市（decisions D12）。launched_at 為 NULL 的縣市不出現在公開頁面
