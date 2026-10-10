@@ -96,7 +96,7 @@ pnpm docker:down   # 停止並移除容器
 | `supabase/migrations/0001_init.sql` | 初版資料表、索引、attrs 同步 trigger、RLS |
 | `supabase/migrations/0002_public_views.sql` | 首頁用的公開 view：`city_bounds`（縣市範圍）、`place_cards`（清單與地圖） |
 | `supabase/migrations/0003_place_coord_source.sql` | 場地的座標來源說明（`coord_source`） |
-| `supabase/pending/0004_auth_roles.sql` | 會員角色、審核、照片、權限（P3 才放回 migrations） |
+| `supabase/migrations/0004_auth_roles.sql` | 會員角色、修正建議與審核（`review_suggestion()`）、修改紀錄、照片紀錄、權限（P3）；權限測試在 `tests/db/auth.test.ts` |
 | `src/app/` | 頁面：`/` 導向 `/hsinchu-city`；`/[city]` 首頁；`/[city]/places/[id]` 場地頁；`/api/cities/[code]/places`、`/api/places/[id]`（快取 1 小時）；`sitemap.xml`、`robots.txt` |
 | `src/components/home/` | 首頁元件：篩選面板、出發點、清單、地圖、詳情面板 |
 | `src/components/place/` | 場地詳情內容（場地頁與首頁面板共用） |

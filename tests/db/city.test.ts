@@ -1,7 +1,7 @@
 // pnpm seed 的試跑、上線／下線（scripts/seed/run.ts、scripts/seed/city.ts）
 // 前提：supabase db reset && pnpm seed && pnpm city launch hsc 已經跑過
 import { readFileSync } from 'node:fs';
-import { afterAll, describe, expect, it } from 'vitest';
+import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { SeedFile } from '@/types/place';
 import fixture from '../fixtures/seed-test.json';
 import { cityStatus, launchCity, unlaunchCity } from '../../scripts/seed/city';
@@ -62,6 +62,7 @@ describe('pnpm city', () => {
 
   afterAll(async () => {
     await sql`DELETE FROM places WHERE id = ANY(${ids})`;
+    await sql`DELETE FROM place_attribute_history WHERE place_id = ANY(${ids})`;
     await sql`UPDATE cities SET launched_at = NULL WHERE code = 'hsq'`;
   });
 
@@ -99,12 +100,20 @@ describe('pnpm seed --prune（從種子資料拿掉的場地）', () => {
   const target = seed.places[seed.places.length - 1]!;
   const without = { ...seed, places: seed.places.filter((p) => p.id !== target.id) };
   let createdUserSource = false;
+  let historyStart = 0;
+
+  beforeAll(async () => {
+    const [h] = await sql`SELECT COALESCE(max(id), 0)::int AS id FROM place_attribute_history`;
+    historyStart = h?.id ?? 0;
+  });
 
   afterAll(async () => {
     await sql`DELETE FROM place_attributes WHERE place_id = ${target.id} AND source_id = 'user'`;
     if (createdUserSource) await sql`DELETE FROM sources WHERE id = 'user'`;
     // 把刪掉的場地補回來
     await runSeed(sql, seed);
+    // 這組測試刪除又補回場地、暫時寫入使用者資料，產生的修改紀錄一併清掉
+    await sql`DELETE FROM place_attribute_history WHERE id > ${historyStart}`;
   });
 
   it('沒加 --prune 只列出、不刪除', async () => {
