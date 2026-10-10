@@ -53,6 +53,10 @@ export function parseCityArgs(argv: readonly string[]): CityArgs {
   return { action, code: code ?? null, allowRemote };
 }
 
+export function isLocalDatabase(url: string): boolean {
+  return LOCAL_HOSTS.has(new URL(url).hostname);
+}
+
 /** 預設只連本機；連其他主機一定要明確加上 --allow-remote，避免誤寫正式資料庫 */
 export function resolveDatabaseUrl(databaseUrl: string | undefined, allowRemote: boolean): string {
   const url = databaseUrl ?? LOCAL_DB;

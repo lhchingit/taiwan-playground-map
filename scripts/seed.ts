@@ -4,7 +4,7 @@
 //   pnpm seed --dry-run             試跑：做完全部步驟後回滾，只印出會改變什麼
 // 預設只連本機 Supabase；連其他資料庫要設 DATABASE_URL 並加上 --allow-remote。
 // 匯入不會改上線狀態，上線／下線用 pnpm city。
-import { connect, parseSeedArgs, resolveDatabaseUrl } from './seed/cli';
+import { connect, isLocalDatabase, parseSeedArgs, resolveDatabaseUrl } from './seed/cli';
 import { loadAllSeeds } from './seed/files';
 import { boundsWithoutSeeds, loadOsmBounds } from './seed/osm-bounds';
 import { revalidateSite } from './seed/revalidate-site';
@@ -69,7 +69,7 @@ async function main() {
       print(code, summary);
       // 真的寫入、而且有變動時，通知網站清快取
       if (!summary.dryRun && Object.values(summary.changes).some((n) => n > 0)) {
-        await revalidateSite(code);
+        await revalidateSite(code, isLocalDatabase(url));
       }
     }
   } finally {

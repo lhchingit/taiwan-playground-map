@@ -49,7 +49,9 @@ pnpm docker:down   # 停止並移除容器
 ```
 
 - 容器透過 `host.docker.internal:54321` 連到主機上的 Supabase。**建置時也要連得到**：場地頁是建置時產生的，所以要先啟動 Supabase 再 `docker:up`。
-- 資料改了（`pnpm seed`）之後，重新 `pnpm docker:up` 才會看到新的場地頁；容器裡的資料快取 1 小時。
+- 資料改了之後**不用重新建置**：`pnpm seed`、`pnpm city launch／unlaunch` 會用 `.env.local` 的 `REVALIDATE_SECRET` 通知容器清快取，變更立刻生效（`pnpm dev` 也一樣）。
+  `.env.local` 是舊的（沒有 `REVALIDATE_SECRET`）的話，先 `pnpm env:local` 再 `pnpm docker:up`。
+- ⚠️ 重新 `pnpm docker:up` **不會**讀到新資料：原始碼沒變時 Docker 會沿用上次的建置結果。真的要從頭建置用 `docker compose --env-file .env.local build --no-cache`。
 - 用 e2e 測容器：`PLAYWRIGHT_BASE_URL=http://localhost:3000 pnpm exec playwright test`（不會另外啟動伺服器）。
 - 映像檔只含 Next 的 standalone 輸出（約 280 MB），以非 root 的 `node` 使用者執行；`.env*` 不會被打包進去。
 

@@ -2,9 +2,16 @@ import { describe, expect, it } from 'vitest';
 import type { SeedFile } from '@/types/place';
 import { isAuthorized, revalidationTags } from '@/lib/revalidate';
 import fixture from '../fixtures/seed-test.json';
-import { LOCAL_DB, parseCityArgs, parseSeedArgs, resolveDatabaseUrl } from '../../scripts/seed/cli';
+import {
+  isLocalDatabase,
+  LOCAL_DB,
+  parseCityArgs,
+  parseSeedArgs,
+  resolveDatabaseUrl,
+} from '../../scripts/seed/cli';
 import { crossCheck } from '../../scripts/seed/files';
 import { boundsWithoutSeeds } from '../../scripts/seed/osm-bounds';
+import { parseEnvFile, siteConfig } from '../../scripts/seed/revalidate-site';
 
 describe('parseSeedArgs', () => {
   it('預設：全部縣市、真的寫入、只連本機', () => {
@@ -117,5 +124,38 @@ describe('清快取 API', () => {
     expect(revalidationTags(undefined)).toContain('attribute_defs');
     expect(revalidationTags('../x')).toBeNull();
     expect(revalidationTags(42)).toBeNull();
+  });
+});
+
+describe('清快取要通知哪個網站', () => {
+  const local = parseEnvFile(
+    '# 註解\nSUPABASE_URL=http://127.0.0.1:54321\nSITE_URL=http://localhost:3000/\nREVALIDATE_SECRET=abc\n',
+  );
+
+  it('parseEnvFile 讀出 KEY=VALUE、忽略註解', () => {
+    expect(local).toEqual({
+      SUPABASE_URL: 'http://127.0.0.1:54321',
+      SITE_URL: 'http://localhost:3000/',
+      REVALIDATE_SECRET: 'abc',
+    });
+  });
+
+  it('本機資料庫：環境變數沒設定時用 .env.local（去掉結尾的 /）', () => {
+    expect(siteConfig({}, true, local)).toEqual({ site: 'http://localhost:3000', secret: 'abc' });
+  });
+
+  it('正式資料庫：不讀 .env.local，避免把正式環境的變更通知到本機網站', () => {
+    expect(siteConfig({}, false, local)).toBeNull();
+  });
+
+  it('環境變數優先', () => {
+    expect(
+      siteConfig({ SITE_URL: 'https://example.tw', REVALIDATE_SECRET: 'prod' }, true, local),
+    ).toEqual({ site: 'https://example.tw', secret: 'prod' });
+  });
+
+  it('isLocalDatabase', () => {
+    expect(isLocalDatabase(LOCAL_DB)).toBe(true);
+    expect(isLocalDatabase('postgresql://u:p@db.example.supabase.co:5432/postgres')).toBe(false);
   });
 });
