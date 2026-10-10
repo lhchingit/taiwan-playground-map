@@ -736,3 +736,174 @@ a.card {
     animation: none !important;
   }
 }
+
+/* 登入（P3） */
+.head-top,
+.place-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.auth-slot {
+  display: inline-block;
+  min-width: 56px;
+  height: 32px;
+}
+.auth-btn {
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+  max-width: 14em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.auth-menu {
+  position: relative;
+}
+.auth-menu summary {
+  list-style: none;
+}
+.auth-menu summary::-webkit-details-marker {
+  display: none;
+}
+/* 頁首有 overflow: hidden（背景圖案），選單打開時要能超出 */
+.head:has(.auth-menu[open]) {
+  overflow: visible;
+}
+.auth-pop {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 20;
+  min-width: 9em;
+  display: grid;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.12);
+  overflow: hidden;
+}
+.auth-pop a,
+.auth-pop button {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.auth-pop a:hover,
+.auth-pop button:hover {
+  background: var(--chip);
+}
+.login-panel {
+  display: grid;
+  gap: 10px;
+}
+.login-panel form {
+  margin: 0;
+}
+.login-btn {
+  width: 100%;
+  padding: 10px;
+}
+.login-or {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.login-dialog {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0;
+  width: min(420px, calc(100vw - 32px));
+  background: var(--panel);
+  color: var(--ink);
+}
+.login-dialog::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+.login-dialog-body {
+  padding: 16px;
+}
+.login-dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.login-dialog-head h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 20px;
+}
+.me-form {
+  display: grid;
+  gap: 6px;
+}
+.me-row {
+  display: flex;
+  gap: 6px;
+}
+.me-row input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.note.err {
+  color: var(--slide);
+}
+.note.ok {
+  color: var(--teal);
+}
+.note.small {
+  font-size: 12px;
+}
+.note:empty {
+  display: none;
+}
+.btn.danger {
+  border-color: var(--slide);
+  color: var(--slide);
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.me-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.me-list li {
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 8px 10px;
+  display: grid;
+  gap: 2px;
+}
+.me-status {
+  font-weight: 600;
+}
+.me-status.pending {
+  color: var(--muted);
+}
+.me-status.accepted {
+  color: var(--teal);
+}
+.me-status.rejected {
+  color: var(--slide);
+}

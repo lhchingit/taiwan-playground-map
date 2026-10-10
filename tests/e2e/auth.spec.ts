@@ -1,0 +1,169 @@
+// 登入（Email 登入連結）、登出、回報修正的登入視窗、「我的貢獻」頁、刪除帳號。
+// 登入信由本機 Supabase 的 Mailpit 收；測試帳號一律是 test-e2e-…@example.test，跑完刪除。
+// Google 登入在本機預設沒有設定金鑰，只檢查按鈕顯示「尚未設定」。
+import { randomUUID } from 'node:crypto';
+import { expect, test, type Page } from '@playwright/test';
+import { adminSql, MAILPIT_URL } from '../db/helpers';
+
+test.skip(!!process.env.PLAYWRIGHT_BASE_URL, '外部伺服器（例如 Docker）的登入導回網址不同');
+
+const sql = adminSql();
+const PLACE = '/hsinchu-city/places/hsc-luguang-park';
+// 這個 worker 建立的帳號與建議（桌機、手機兩個專案平行執行，只清自己的）
+const created: string[] = [];
+const suggestions: string[] = [];
+
+test.beforeEach(async ({ page }) => {
+  await page.route(/tiles\.openfreemap\.org|tile\.openstreetmap\.org|nominatim/, (r) => r.abort());
+});
+
+test.afterAll(async () => {
+  if (suggestions.length) await sql`DELETE FROM edit_suggestions WHERE id = ANY(${suggestions})`;
+  if (created.length) await sql`DELETE FROM auth.users WHERE email = ANY(${created})`;
+  await sql.end();
+});
+
+function newEmail() {
+  const email = `test-e2e-${randomUUID().slice(0, 8)}@example.test`;
+  created.push(email);
+  return email;
+}
+
+/** 從 Mailpit 讀這個信箱最新的一封信，取出登入連結 */
+async function loginLink(email: string): Promise<string> {
+  for (let i = 0; i < 40; i++) {
+    const res = await fetch(
+      `${MAILPIT_URL}/api/v1/search?query=${encodeURIComponent(`to:"${email}"`)}&limit=1`,
+    );
+    const list = (await res.json()) as { messages: { ID: string }[] };
+    const id = list.messages[0]?.ID;
+    if (id) {
+      const msg = (await (await fetch(`${MAILPIT_URL}/api/v1/message/${id}`)).json()) as {
+        HTML: string;
+      };
+      const href = /href="([^"]+)"/.exec(msg.HTML)?.[1];
+      if (href) return href.replaceAll('&amp;', '&');
+    }
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  throw new Error(`Mailpit 沒有收到寄給 ${email} 的信`);
+}
+
+/** 在畫面上的登入表單（登入頁或登入視窗）用 Email 登入，打開信裡的連結 */
+async function loginWithEmail(page: Page, email: string) {
+  await page.getByLabel('用 Email 登入連結（不需要密碼）').fill(email);
+  await page.getByRole('button', { name: '寄登入連結' }).click();
+  await expect(page.getByText(`登入連結已寄到 ${email}`)).toBeVisible();
+  await page.goto(await loginLink(email));
+}
+
+const userId = async (email: string) =>
+  (await sql`SELECT id FROM auth.users WHERE email = ${email}`)[0]!.id as string;
+
+test('Email 登入連結：從頁首登入、回到原頁顯示暱稱、登出', async ({ page }) => {
+  await page.goto(PLACE);
+  const nav = page.getByRole('navigation', { name: '導覽' });
+  await nav.getByRole('link', { name: '登入', exact: true }).click();
+  await expect(page).toHaveURL(/\/login\?next=/);
+  // Google 在本機沒有設定金鑰
+  await expect(page.getByRole('button', { name: '用 Google 登入' })).toBeDisabled();
+  await expect(page.getByText('（尚未設定）')).toBeVisible();
+
+  await loginWithEmail(page, newEmail());
+  await expect(page).toHaveURL(new RegExp(`${PLACE}$`));
+  const me = nav.getByText(/^家長 \d{4}$/);
+  await expect(me).toBeVisible();
+
+  // 公開頁面登入後仍然是快取的靜態頁：不經過 session 更新、不設定 cookie
+  const res = await page.request.get(PLACE);
+  expect(res.headers()['set-cookie']).toBeUndefined();
+  expect(res.headers()['cache-control'] ?? '').not.toMatch(/private|no-store/);
+
+  await me.click();
+  await nav.getByRole('button', { name: '登出' }).click();
+  await expect(page).toHaveURL(new RegExp(`${PLACE}$`));
+  await expect(nav.getByRole('link', { name: '登入', exact: true })).toBeVisible();
+});
+
+test('未登入按「回報修正」跳出登入視窗；登入後回到場地頁並打開回報區塊', async ({ page }) => {
+  await page.goto(PLACE);
+  await page.getByRole('button', { name: '回報修正' }).click();
+  const dialog = page.getByRole('dialog', { name: '登入' });
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByText('瀏覽地圖與場地資料不需要登入')).toBeVisible();
+
+  await loginWithEmail(page, newEmail());
+  await expect(page).toHaveURL(new RegExp(`${PLACE}\\?report=1$`));
+  await expect(page.getByText('回報修正功能即將開放')).toBeVisible();
+});
+
+test('登入狀態還在查詢時按「回報修正」，等查完仍然跳出登入視窗', async ({ page }) => {
+  // 模擬網路慢：/api/session 晚 1.5 秒回應，頁面一打開就按
+  await page.route('**/api/session', async (route) => {
+    await new Promise((r) => setTimeout(r, 1500));
+    await route.continue();
+  });
+  await page.goto(PLACE);
+  await page.getByRole('button', { name: '回報修正' }).click();
+  await expect(page.getByRole('dialog', { name: '登入' })).toBeVisible();
+});
+
+test('登入視窗可以用 Esc 關閉，不影響瀏覽', async ({ page }) => {
+  await page.goto(PLACE);
+  await page.getByRole('button', { name: '回報修正' }).click();
+  await expect(page.getByRole('dialog', { name: '登入' })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog', { name: '登入' })).toBeHidden();
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+});
+
+test('未登入打開 /me 會導到登入頁', async ({ page }) => {
+  await page.goto('/me');
+  await expect(page).toHaveURL(/\/login\?next=(%2F|\/)me$/);
+  await expect(page.getByRole('heading', { name: '登入', level: 1 })).toBeVisible();
+});
+
+test('我的貢獻：建議的狀態與原因、改暱稱、刪除帳號', async ({ page }) => {
+  const email = newEmail();
+  await page.goto('/login?next=/me');
+  await loginWithEmail(page, email);
+  await expect(page).toHaveURL(/\/me$/);
+  await expect(page.getByText('還沒有資料。在場地頁按「回報修正」就可以提供修正。')).toBeVisible();
+
+  // 提交介面在 P3(c)；這裡直接在資料庫建立兩筆建議（一筆審核中、一筆被退回）
+  const id = await userId(email);
+  const rows = await sql`
+    INSERT INTO edit_suggestions (place_id, user_id, kind, payload, note) VALUES
+      ('hsc-luguang-park', ${id}, 'attribute', '{"key":"footwash","value":"y"}', 'e2e'),
+      ('hsc-luguang-park', ${id}, 'attribute', '{"key":"shade","value":"n"}', 'e2e')
+    RETURNING id`;
+  const ids = rows.map((r) => String(r.id));
+  suggestions.push(...ids);
+  await sql`UPDATE edit_suggestions SET status = 'rejected', reject_reason = 'unverifiable', reviewed_at = now()
+            WHERE user_id = ${id} AND payload->>'key' = 'shade'`;
+  await page.reload();
+  const list = page.getByRole('region', { name: '我的修正建議' });
+  await expect(list.getByText('洗腳池：有')).toBeVisible();
+  await expect(list.getByText('審核中')).toBeVisible();
+  await expect(list.getByText('未採納（無法查證）')).toBeVisible();
+
+  // 改暱稱：頁首跟著更新
+  await page.getByLabel('暱稱（其他人只看得到暱稱）').fill('小明爸爸');
+  await page.getByRole('button', { name: '儲存' }).click();
+  await expect(page.getByText('已更新暱稱。')).toBeVisible();
+  await expect(page.getByRole('navigation', { name: '導覽' }).getByText('小明爸爸')).toBeVisible();
+
+  // 刪除帳號：要輸入「刪除」確認
+  await page.getByLabel('請輸入「刪除」確認').fill('不要');
+  await page.getByRole('button', { name: '刪除帳號' }).click();
+  await expect(page.getByText('請輸入「刪除」兩個字確認。')).toBeVisible();
+  await page.getByLabel('請輸入「刪除」確認').fill('刪除');
+  await page.getByRole('button', { name: '刪除帳號' }).click();
+  await expect(page).toHaveURL(/\/hsinchu-city/);
+  await expect(page.getByRole('link', { name: '登入', exact: true })).toBeVisible();
+
+  expect(await sql`SELECT 1 FROM auth.users WHERE id = ${id}`).toHaveLength(0);
+  // 建議保留，但不再有提交者
+  const left = await sql`SELECT user_id FROM edit_suggestions WHERE id = ANY(${ids})`;
+  expect(left.map((r) => r.user_id)).toEqual([null, null]);
+});

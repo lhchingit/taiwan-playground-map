@@ -61,7 +61,20 @@
 - **理由：** Google 最普及；LINE 是台灣家長最常用的帳號；Email 登入連結給不想綁社群帳號的人。
 - **暫不做 Facebook：** 要通過 Meta 的應用程式審查，並提供刪除資料的回呼網址，前期維護成本高。
 - **暫不做 Apple：** 做 iOS App 時再加（App Store 通常要求有第三方登入時也提供 Apple 登入）。
-- **待確認：** Supabase 是否支援以自訂 OIDC 串接 LINE，P3 開工時調查後補在這裡。
+- **LINE 調查結果（2026-10-11）：**
+  - Supabase Auth 在 2026-02 開放自訂 OAuth2／OIDC provider（[說明](https://supabase.com/docs/guides/auth/custom-oauth-providers)），但 **OIDC 模式不能用於 LINE 網頁登入**。
+    - LINE 網頁登入的 ID token 用 HS256，以 channel secret 簽章（[LINE 文件](https://developers.line.biz/en/docs/line-login/verify-id-token/)）。
+    - LINE 的 discovery 文件卻只列 ES256，JWKS 也只有 ES256 公開金鑰。
+    - Supabase 用 go-oidc 依 JWKS 驗證，不接受 HMAC，所以一定驗證失敗。
+  - **OAuth2（手動設定）模式**可能可行：只用 LINE 的 userinfo，不驗 ID token。
+    - LINE 的 userinfo 沒有 email，要開 `email_optional`。
+    - 文件沒寫是否支援本機 CLI，要用雲端專案與真的 LINE Login channel 實測。
+  - **自己處理 LINE 流程**一定可行：伺服器跟 LINE 交換授權碼、用 LINE 的 verify API 驗證，再用 Supabase 管理 API 建立 session。缺點是網站伺服器要持有 service role key，登入流程也變成自己寫、要自己維護的安全敏感程式。
+- **決定（2026-10-11）：**
+  - P3(b) 先做 Google 與 Email 登入連結。
+  - LINE 另外用 OAuth2 手動模式實驗：需要建立 LINE Login channel，用雲端 Supabase 測試。可行就加上，不可行再討論。
+  - 不採用自己處理 LINE 流程。
+- **Email 登入連結的作法：** 信裡的連結指向網站的 `/auth/confirm`，在伺服器端驗證 `token_hash`。換瀏覽器或裝置打開也能登入，不受 PKCE 必須同一個瀏覽器的限制。
 
 ## D11 使用者貢獻內容的授權（待決定，上線前必須定案）
 

@@ -90,10 +90,11 @@ test.describe('場地頁', () => {
     await expect(play.locator('.arow', { hasText: '嬰兒鞦韆' })).toHaveCount(0);
   });
 
-  test('回報修正顯示即將開放', async ({ page }) => {
+  // P3：回報修正要先登入（登入後的流程在 auth.spec.ts）
+  test('未登入按回報修正跳出登入視窗', async ({ page }) => {
     await page.goto(LUGUANG);
     await page.getByRole('button', { name: '回報修正' }).click();
-    await expect(page.getByRole('status')).toHaveText(/即將開放/);
+    await expect(page.getByRole('dialog', { name: '登入' })).toBeVisible();
   });
 
   test('查實際路線：場地頁沒有出發點，只帶目的地', async ({ page }) => {

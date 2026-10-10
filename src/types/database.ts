@@ -444,6 +444,9 @@ isOneToOne: false
 "city_launched":
 { Args: { "p_city": string }; Returns: boolean
                            },
+"delete_my_account":
+{ Args: Record<PropertyKey, never>; Returns: undefined
+                           },
 "disablelongtransactions":
 { Args: Record<PropertyKey, never>; Returns: string
                            },

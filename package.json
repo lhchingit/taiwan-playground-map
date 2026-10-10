@@ -28,6 +28,7 @@
     "docker:down": "docker compose --env-file .env.local down"
   },
   "dependencies": {
+    "@supabase/ssr": "0.12.7",
     "maplibre-gl": "6.13.0",
     "next": "16.4.0",
     "react": "19.3.0",

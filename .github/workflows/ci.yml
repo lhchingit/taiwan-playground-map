@@ -50,8 +50,8 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      # 只開測試需要的服務（postgres、postgrest、kong、gotrue）
-      - run: pnpm exec supabase start -x realtime,storage-api,imgproxy,edge-runtime,logflare,vector,supavisor,studio,mailpit,postgres-meta
+      # 只開測試需要的服務（postgres、postgrest、kong、gotrue；mailpit 收 e2e 的登入信）
+      - run: pnpm exec supabase start -x realtime,storage-api,imgproxy,edge-runtime,logflare,vector,supavisor,studio,postgres-meta
       - run: pnpm exec supabase db reset
       - run: pnpm seed
       # 第二次：確認可以重複執行
