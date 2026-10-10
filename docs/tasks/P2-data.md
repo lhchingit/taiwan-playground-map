@@ -44,6 +44,7 @@
 - 清冊沒有註明調查年份；匯入的屬性 `verified_at` 是擷取日期，不是現場確認日期。
   在 `sources` 標註「清冊未註明調查年份」，場地頁顯示來源時要讓家長看得出來。
 - 寫一個 `scripts/check_hccg_update.py`：比對政府資料開放平台上清冊的雜湊值與 `data/raw/` 的版本，有更新就產生差異報告（新增、刪除、設施變更）。之後每季執行一次。
+  - **結果（2026-10-10）：** P2(d) 完成。三份資料（清冊、公園、公廁）都會檢查；清冊依公園名稱配對，報告列出新增、刪除、設施變更（用匯入規則算出屬性變化）、編號變動。`.github/workflows/hccg-update.yml` 每季自動執行，有變動開 issue。補上 `fetch_hccg_playgrounds.py`。處理流程見 `docs/operations.md`「政府資料更新」。
 
 ### 4. 補生活機能資料（最多「未知」的欄位）
 
@@ -65,6 +66,6 @@
 - [ ] `unmatched.csv` 剩下的每一筆都有註記原因（找不到、已廢除、待實地）。
 - [ ] `match-review.csv` 每一筆都確認過，結果反映在 `osm-matches.tsv`。
 - [ ] 「無遊具」公園的處理方式已決定並寫進 `docs/decisions.md`。
-- [ ] `check_hccg_update.py` 可以執行，並有測試。
+- [x] `check_hccg_update.py` 可以執行，並有測試。
 - [ ] 重新執行 `build_seed.py && import_hccg.py` 後，`filter-cases.json` 用原型重新產生，並更新 P1 的測試數字。
 - [ ] 生活機能如果有匯入新資料來源，每一個都記錄在 `sources`，授權條款寫進 `docs/decisions.md`。
