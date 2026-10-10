@@ -211,7 +211,7 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
     <main className="app">
       <div className="side">
         <header className="head">
-          <h1>竹市放電地圖</h1>
+          <h1>全台放電地圖</h1>
           <p className="sub">
             {city.name}親子遊樂場與公園．資料 {places.length} 處
           </p>

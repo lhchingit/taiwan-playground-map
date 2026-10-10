@@ -1,4 +1,4 @@
-# 竹市放電地圖：Next.js 網站的映像檔（本機測試用；資料庫沿用 Supabase CLI）。
+# 全台放電地圖：Next.js 網站的映像檔（本機測試用；資料庫沿用 Supabase CLI）。
 # next build 會讀資料庫（建置時產生場地頁），所以建置時要連得到 Supabase，見 compose.yaml。
 
 FROM node:24-bookworm-slim AS base

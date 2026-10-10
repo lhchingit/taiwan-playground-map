@@ -67,7 +67,7 @@ test.describe('桌機', () => {
   test('/ 導向 /hsinchu-city', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveURL(/\/hsinchu-city$/);
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText('竹市放電地圖');
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('全台放電地圖');
     await expect(count(page)).toHaveText('72');
     await expect(page.getByTestId('origin-name')).toHaveText('新竹火車站（範例）');
   });

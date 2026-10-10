@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const city = await findCity((await params).city);
   if (!city) return {};
   return {
-    title: `${city.name}親子遊樂場與公園地圖｜竹市放電地圖`,
+    title: `${city.name}親子遊樂場與公園地圖｜全台放電地圖`,
     description: `${city.name}的親子遊樂場與公園：依遊樂設施、孩子年齡、廁所等生活機能、停車與距離篩選，資料標示來源。`,
   };
 }
@@ -64,7 +64,7 @@ function Loading() {
     <main className="app">
       <div className="side">
         <header className="head">
-          <h1>竹市放電地圖</h1>
+          <h1>全台放電地圖</h1>
           <p className="sub">載入中…</p>
         </header>
       </div>

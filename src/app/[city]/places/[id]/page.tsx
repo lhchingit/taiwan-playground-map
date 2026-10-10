@@ -60,7 +60,7 @@ export default async function PlacePage({ params }: Props) {
   return (
     <main className="place-page">
       <nav className="place-nav" aria-label="導覽">
-        <Link href={`/${city.slug}`}>← 竹市放電地圖：回到{city.name}地圖</Link>
+        <Link href={`/${city.slug}`}>← 全台放電地圖：回到{city.name}地圖</Link>
       </nav>
       <article className="place-article">
         <PlaceDetailView detail={detail} catalog={catalog} headingLevel={1} />
