@@ -10,6 +10,6 @@ export function toFilterPlace(p: Place): FilterPlace {
 }
 
 export function loadSeedPlaces(): FilterPlace[] {
-  const seed = JSON.parse(readFileSync('data/seed/places.json', 'utf8')) as SeedFile;
+  const seed = JSON.parse(readFileSync('data/seed/hsc/places.json', 'utf8')) as SeedFile;
   return seed.places.map(toFilterPlace);
 }

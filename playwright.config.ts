@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { E2E_REVALIDATE_SECRET } from './tests/e2e/constants';
 
 const PORT = 3100;
 // 設定 PLAYWRIGHT_BASE_URL 時改測已經在跑的網站（例：Docker 容器 http://localhost:3000），不自己啟動伺服器
@@ -9,8 +10,15 @@ export default defineConfig({
   testDir: 'tests/e2e',
   use: { baseURL: external ?? `http://localhost:${PORT}` },
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
-    { name: 'mobile', use: { ...devices['Pixel 7'] } },
+    { name: 'desktop', use: { ...devices['Desktop Chrome'] }, testIgnore: /multi-city/ },
+    { name: 'mobile', use: { ...devices['Pixel 7'] }, testIgnore: /multi-city/ },
+    // 會暫時讓新竹縣上線，所以等其他測試跑完才執行
+    {
+      name: 'multi-city',
+      use: { ...devices['Desktop Chrome'] },
+      testMatch: /multi-city/,
+      dependencies: ['desktop', 'mobile'],
+    },
   ],
   webServer: external
     ? undefined
@@ -18,6 +26,7 @@ export default defineConfig({
         command: `pnpm build && pnpm start --port ${PORT}`,
         url: `http://localhost:${PORT}/hsinchu-city`,
         reuseExistingServer: !process.env.CI,
+        env: { REVALIDATE_SECRET: E2E_REVALIDATE_SECRET },
         timeout: 300_000,
       },
 });

@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import type { SeedFile } from '@/types/place';
 import { validateSeed } from '../../scripts/seed/validate';
 
-const real = JSON.parse(readFileSync('data/seed/places.json', 'utf8')) as SeedFile;
+const real = JSON.parse(readFileSync('data/seed/hsc/places.json', 'utf8')) as SeedFile;
 
 /** 複製真實資料後改動其中一處，確認檢查會抓到 */
 function mutated(change: (s: SeedFile) => void): SeedFile {

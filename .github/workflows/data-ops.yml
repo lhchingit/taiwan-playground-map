@@ -1,0 +1,89 @@
+# 正式環境的資料作業：手動觸發，需要 production environment 的核准者核准後才執行。
+# 第一次使用前的設定與完整流程見 docs/operations.md。
+name: 資料作業（正式環境）
+
+on:
+  workflow_dispatch:
+    inputs:
+      city:
+        description: 縣市
+        type: choice
+        options: [hsc, hsq, tyc, mlc]
+        required: true
+      action:
+        description: 動作（seed 會先試跑，再真的匯入）
+        type: choice
+        options: [status, dry-run, seed, launch, unlaunch]
+        required: true
+
+# 同時只能有一個資料作業在跑，不取消正在進行的
+concurrency:
+  group: data-ops
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  run:
+    name: ${{ inputs.action }} ${{ inputs.city }}
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+      SITE_URL: ${{ secrets.SITE_URL }}
+      REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+      CITY: ${{ inputs.city }}
+      ACTION: ${{ inputs.action }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: 檢查設定
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::error::缺少 secret PROD_DATABASE_URL（見 docs/operations.md）"
+            exit 1
+          fi
+
+      - name: 狀態
+        if: inputs.action == 'status'
+        run: pnpm city status "$CITY" --allow-remote | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # seed 一定先試跑：結果放進 job summary，試跑失敗就不會匯入
+      - name: 試跑
+        if: inputs.action == 'dry-run' || inputs.action == 'seed'
+        run: |
+          {
+            echo "## 試跑：$CITY"
+            echo '```'
+            pnpm --silent seed --city "$CITY" --dry-run --allow-remote
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: 匯入
+        if: inputs.action == 'seed'
+        run: |
+          {
+            echo "## 匯入：$CITY"
+            echo '```'
+            pnpm --silent seed --city "$CITY" --allow-remote
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: 上線
+        if: inputs.action == 'launch'
+        run: pnpm city launch "$CITY" --allow-remote | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: 下線
+        if: inputs.action == 'unlaunch'
+        run: pnpm city unlaunch "$CITY" --allow-remote | tee -a "$GITHUB_STEP_SUMMARY"

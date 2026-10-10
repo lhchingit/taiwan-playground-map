@@ -2,12 +2,13 @@
 import { readFileSync } from 'node:fs';
 import { afterAll, describe, expect, it } from 'vitest';
 import { readAttr, type SeedFile } from '@/types/place';
-import { loadOsmBounds } from '../../scripts/seed/osm-bounds';
+import { listSeedCities } from '../../scripts/seed/files';
+import { boundsWithoutSeeds, loadOsmBounds } from '../../scripts/seed/osm-bounds';
 import { runSeed } from '../../scripts/seed/run';
 import { adminSql, anonClient } from './helpers';
 
 const sql = adminSql();
-const seed = JSON.parse(readFileSync('data/seed/places.json', 'utf8')) as SeedFile;
+const seed = JSON.parse(readFileSync('data/seed/hsc/places.json', 'utf8')) as SeedFile;
 
 afterAll(() => sql.end());
 
@@ -45,7 +46,7 @@ describe('pnpm seed', () => {
 
   it('重跑不會改變任何資料（筆數、更新時間、停車 id、上線時間）', async () => {
     const before = await snapshot();
-    await runSeed(sql, seed, loadOsmBounds());
+    await runSeed(sql, seed, boundsWithoutSeeds(loadOsmBounds(), listSeedCities()));
     expect(await snapshot()).toEqual(before);
   });
 

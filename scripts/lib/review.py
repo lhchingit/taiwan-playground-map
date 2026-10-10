@@ -1,4 +1,4 @@
-"""匯入時需要人工處理的清單（data/review/*.csv）。"""
+"""匯入時需要人工處理的清單（data/review/<縣市>/*.csv）。"""
 from .io import write_csv
 
 HEADS = {
@@ -18,7 +18,7 @@ class ReviewCollector:
         self.rows[kind].append(row)
 
     def write(self, out_dir):
-        out_dir.mkdir(exist_ok=True)
+        out_dir.mkdir(parents=True, exist_ok=True)
         for k, rows in self.rows.items():
             write_csv(out_dir / f"{k}.csv", HEADS[k], rows)
 

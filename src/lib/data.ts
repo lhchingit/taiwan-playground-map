@@ -35,7 +35,7 @@ export async function getAttributeCatalog(): Promise<AttributeCatalog> {
 export async function getCityPlaces(code: string): Promise<CityPlace[]> {
   'use cache';
   cacheLife('hours');
-  cacheTag(`places:${code}`);
+  cacheTag(`places:${code}`, `city:${code}`);
   const { data, error } = await supabaseServer()
     .from('place_cards')
     .select('*')
@@ -68,7 +68,8 @@ export async function getLaunchedPlaceParams(): Promise<{ city: string; id: stri
 export async function getPlaceDetail(id: string): Promise<PlaceDetail | null> {
   'use cache';
   cacheLife('hours');
-  cacheTag(`place:${id}`);
+  // places：找不到（縣市未上線）的結果也要能在上線時清掉，所以一律加上
+  cacheTag(`place:${id}`, 'places');
   const sb = supabaseServer();
   const [card, place, attributes, parking, sources] = await Promise.all([
     sb.from('place_cards').select('*').eq('id', id).maybeSingle(),
@@ -94,6 +95,8 @@ export async function getPlaceDetail(id: string): Promise<PlaceDetail | null> {
     if (r.error) throw new Error(`讀取場地 ${id} 失敗：${r.error.message}`);
   }
   if (!card.data || !place.data) return null;
+  // 縣市上線／下線時一起清除（/api/revalidate）
+  cacheTag(`city:${String(card.data.city)}`);
   return toPlaceDetail({
     card: toCityPlace(card.data),
     place: place.data,

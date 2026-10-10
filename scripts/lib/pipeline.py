@@ -20,7 +20,9 @@ CSV_BASE = ["id", "name", "district", "lat", "lng", "size", "stay", "age_min", "
 
 
 def run(root, adapter, today):
-    seed_path = root / "data/seed/places.json"
+    # 每個縣市一個資料夾：data/seed/<縣市>/、data/review/<縣市>/
+    seed_dir = root / "data/seed" / adapter.CITY
+    seed_path = seed_dir / "places.json"
     seed = read_json(seed_path)
     if seed.get("version") != "0.1":
         sys.exit(f"places.json 是 v{seed.get('version')}，已經匯入過；請先執行 scripts/build_seed.py 重新產生 v0.1，避免重複合併")
@@ -76,12 +78,12 @@ def run(root, adapter, today):
     seed["generated"] = today
     write_json(seed_path, seed)
 
-    write_csv(root / "data/seed/places.csv",
+    write_csv(seed_dir / "places.csv",
               CSV_BASE + keys + ["parking_type", "parking_fee", "parking_spaces"],
               [[p[k] for k in CSV_BASE] + [p["attrs"][k]["v"] for k in keys]
                + [p["parking"]["type"], p["parking"]["fee"], p["parking"]["spaces"] or ""]
                for p in seed["places"]])
-    review.write(root / "data/review")
+    review.write(root / "data/review" / adapter.CITY)
 
     print(f"場地總數 {len(seed['places'])}｜合併到既有 {stats['merged']}｜新增 {stats['new']}"
           f"｜清冊無遊具 {stats['skipped_none']}｜找不到座標 {stats['skipped_nocoord']}")

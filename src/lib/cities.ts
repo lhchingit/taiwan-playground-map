@@ -35,3 +35,15 @@ export function citiesToLoad(
     .sort((a, b) => a.km - b.km || a.code.localeCompare(b.code))
     .map((c) => c.code);
 }
+
+/** 離出發點最近的縣市（到範圍的距離；在範圍內為 0）。沒有任何縣市有範圍時回傳 null。 */
+export function nearestCity<C extends CityBounds>(origin: Origin, cities: readonly C[]): C | null {
+  let best: { city: C; km: number } | null = null;
+  for (const c of cities) {
+    if (!c.bbox) continue;
+    const km = distanceToBboxKm(origin, c.bbox);
+    if (!best || km < best.km || (km === best.km && c.code < best.city.code))
+      best = { city: c, km };
+  }
+  return best?.city ?? null;
+}

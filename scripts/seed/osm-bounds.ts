@@ -22,3 +22,14 @@ export function parseOsmBounds(data: unknown): Record<string, Bbox> {
 export function loadOsmBounds(): Record<string, Bbox> {
   return parseOsmBounds(JSON.parse(readFileSync(PATH, 'utf8')));
 }
+
+/**
+ * 只保留沒有種子資料的縣市：有場地的縣市用「場地座標外擴 1 公里」，
+ * 不可以在匯入其他縣市時被 OSM 行政界蓋掉。
+ */
+export function boundsWithoutSeeds(
+  osm: Readonly<Record<string, Bbox>>,
+  seedCities: readonly string[],
+): Record<string, Bbox> {
+  return Object.fromEntries(Object.entries(osm).filter(([code]) => !seedCities.includes(code)));
+}

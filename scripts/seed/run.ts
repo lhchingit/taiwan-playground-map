@@ -1,18 +1,35 @@
-// 把 places.json 寫進資料庫。整個流程在同一個交易裡，任何一步失敗就全部回滾。
+// 把一個縣市的 places.json 寫進資料庫。整個流程在同一個交易裡，任何一步失敗就全部回滾。
 // 可以重複執行：只有內容有變的列才會更新，重跑不會產生重複資料，也不會觸發多餘的 attrs 同步。
-import type { Sql } from 'postgres';
+// 匯入不會改上線狀態（cities.launched_at）；上線／下線用 pnpm city（scripts/city.ts）。
+import type { Sql, TransactionSql } from 'postgres';
 import type { SeedFile } from '../../src/types/place';
 import type { Bbox } from './bbox';
 import { toSeedRows } from './transform';
 
-/** seed 時設為已上線的縣市（decisions D12）；其他縣市的 launched_at 保持原狀 */
-export const LAUNCHED_CITIES = ['hsc'];
-
 /** 使用者回報（P3）寫入的資料，seed 不可以覆蓋或刪除 */
 const USER_SOURCE = 'user';
 
+/** 試跑結束時丟出，讓交易回滾 */
+class DryRunRollback extends Error {
+  constructor(readonly summary: SeedSummary) {
+    super('dry run');
+  }
+}
+
+export interface SeedOptions {
+  /** 在交易裡做完全部步驟，最後回滾，不寫入 */
+  dryRun?: boolean;
+}
+
 export interface SeedSummary {
+  dryRun: boolean;
+  /** 匯入前、後各表筆數 */
+  before: Record<string, number>;
   counts: Record<string, number>;
+  /** 每個步驟新增／更新／刪除的列數 */
+  changes: Record<string, number>;
+  /** 這次匯入的縣市目前是否上線（匯入不會改變它） */
+  launched: { code: string; launchedAt: string | null }[];
   knownAttrs: { id: string; name: string; y: number; n: number }[];
   bboxes: { code: string; bbox: number[]; source: 'places' | 'osm' }[];
   /** 資料庫裡有、places.json 沒有的場地（不自動刪除，交給人工確認） */
@@ -23,6 +40,7 @@ export async function runSeed(
   db: Sql,
   seed: SeedFile,
   osmBounds: Readonly<Record<string, Bbox>> = {},
+  options: SeedOptions = {},
 ): Promise<SeedSummary> {
   const rows = toSeedRows(seed, osmBounds);
   const placeIds = rows.places.map((p) => p.id);
@@ -30,18 +48,31 @@ export async function runSeed(
   // 有場地的縣市（用來找資料庫裡多出來的場地）
   const seedCities = rows.cities.filter((c) => c.bboxSource === 'places').map((c) => c.code);
 
-  return db.begin(async (sql) => {
+  const tableCounts = (sql: TransactionSql) => sql<Record<string, number>[]>`
+      SELECT (SELECT count(*) FROM sources)::int AS sources,
+             (SELECT count(*) FROM attribute_defs)::int AS attribute_defs,
+             (SELECT count(*) FROM places)::int AS places,
+             (SELECT count(*) FROM place_attributes)::int AS place_attributes,
+             (SELECT count(*) FROM place_parking)::int AS place_parking`;
+
+  const work = db.begin(async (sql) => {
+    const [before] = await tableCounts(sql);
+    const changes: Record<string, number> = {};
+
     // 1. 來源
-    await sql`
+    changes.sources = (
+      await sql`
       INSERT INTO sources (id, label, url, kind)
       SELECT id, label, url, kind FROM jsonb_to_recordset(${sql.json(rows.sources)})
         AS x(id text, label text, url text, kind text)
       ON CONFLICT (id) DO UPDATE SET label = EXCLUDED.label, url = EXCLUDED.url, kind = EXCLUDED.kind
       WHERE (sources.label, sources.url, sources.kind)
-        IS DISTINCT FROM (EXCLUDED.label, EXCLUDED.url, EXCLUDED.kind)`;
+        IS DISTINCT FROM (EXCLUDED.label, EXCLUDED.url, EXCLUDED.kind)`
+    ).count;
 
     // 2. 屬性字典
-    await sql`
+    changes.attribute_defs = (
+      await sql`
       INSERT INTO attribute_defs (key, label, category, group_name, sort_order)
       SELECT key, label, category, group_name, sort_order
       FROM jsonb_to_recordset(${sql.json(rows.attributeDefs)})
@@ -49,20 +80,22 @@ export async function runSeed(
       ON CONFLICT (key) DO UPDATE SET label = EXCLUDED.label, category = EXCLUDED.category,
         group_name = EXCLUDED.group_name, sort_order = EXCLUDED.sort_order
       WHERE (attribute_defs.label, attribute_defs.category, attribute_defs.group_name, attribute_defs.sort_order)
-        IS DISTINCT FROM (EXCLUDED.label, EXCLUDED.category, EXCLUDED.group_name, EXCLUDED.sort_order)`;
+        IS DISTINCT FROM (EXCLUDED.label, EXCLUDED.category, EXCLUDED.group_name, EXCLUDED.sort_order)`
+    ).count;
 
-    // 3. 縣市範圍與上線時間（launched_at 只在 NULL 時設定，重跑不改）
+    // 3. 縣市範圍（上線時間不在這裡改）
+    changes.cities_bbox = 0;
     for (const c of rows.cities) {
-      await sql`
-        UPDATE cities SET bbox = ${c.bbox}::numeric[]
-        WHERE code = ${c.code} AND bbox IS DISTINCT FROM ${c.bbox}::numeric[]`;
+      changes.cities_bbox += (
+        await sql`
+          UPDATE cities SET bbox = ${c.bbox}::numeric[]
+          WHERE code = ${c.code} AND bbox IS DISTINCT FROM ${c.bbox}::numeric[]`
+      ).count;
     }
-    await sql`
-      UPDATE cities SET launched_at = now()
-      WHERE code = ANY(${LAUNCHED_CITIES}) AND launched_at IS NULL`;
 
     // 4. 場地（attrs 不寫，由 place_attributes 的 trigger 同步）
-    await sql`
+    changes.places_upserted = (
+      await sql`
       INSERT INTO places (id, name, city, district, address, geom, size_class, stay_bucket, stay_source,
                           age_min, age_max, fee, indoor, hours, surface, status, summary, coord_source)
       SELECT id, name, city, district, address,
@@ -88,17 +121,21 @@ export async function runSeed(
             (EXCLUDED.name, EXCLUDED.city, EXCLUDED.district, EXCLUDED.address, ST_AsEWKT(EXCLUDED.geom),
              EXCLUDED.size_class, EXCLUDED.stay_bucket, EXCLUDED.stay_source, EXCLUDED.age_min, EXCLUDED.age_max,
              EXCLUDED.fee, EXCLUDED.indoor, EXCLUDED.hours, EXCLUDED.surface, EXCLUDED.status, EXCLUDED.summary,
-             EXCLUDED.coord_source)`;
+             EXCLUDED.coord_source)`
+    ).count;
 
     // 5. 屬性：先刪掉 places.json 已經沒有的列（不動使用者回報的資料），再 upsert
-    await sql`
+    changes.place_attributes_deleted = (
+      await sql`
       DELETE FROM place_attributes a
       WHERE a.place_id = ANY(${placeIds})
         AND a.source_id IS DISTINCT FROM ${USER_SOURCE}
         AND NOT EXISTS (
           SELECT 1 FROM jsonb_to_recordset(${sql.json(rows.placeAttributes)}) AS x(place_id text, key text)
-          WHERE x.place_id = a.place_id AND x.key = a.key)`;
-    await sql`
+          WHERE x.place_id = a.place_id AND x.key = a.key)`
+    ).count;
+    changes.place_attributes_upserted = (
+      await sql`
       INSERT INTO place_attributes (place_id, key, value, note, source_id, verified_at)
       SELECT place_id, key, value, note, source_id, verified_at
       FROM jsonb_to_recordset(${sql.json(rows.placeAttributes)}) AS x(
@@ -107,32 +144,39 @@ export async function runSeed(
         source_id = EXCLUDED.source_id, verified_at = EXCLUDED.verified_at
       WHERE place_attributes.source_id IS DISTINCT FROM ${USER_SOURCE}
         AND (place_attributes.value, place_attributes.note, place_attributes.source_id, place_attributes.verified_at)
-          IS DISTINCT FROM (EXCLUDED.value, EXCLUDED.note, EXCLUDED.source_id, EXCLUDED.verified_at)`;
+          IS DISTINCT FROM (EXCLUDED.value, EXCLUDED.note, EXCLUDED.source_id, EXCLUDED.verified_at)`
+    ).count;
 
     // 6. 停車：每個場地維持一列 seed 資料（表沒有自然鍵，所以分三步，重跑時 id 不變）
     const parking = sql.json(rows.parking);
     const parkingCols = sql`AS x(place_id text, type text, fee text, spaces int, note text, source_id text, verified_at date)`;
     //   a. 不是剛好一列的（0 列或多列）先清掉
-    await sql`
+    changes.place_parking_deleted = (
+      await sql`
       DELETE FROM place_parking pp
       WHERE pp.place_id = ANY(${placeIds}) AND pp.source_id IS DISTINCT FROM ${USER_SOURCE}
         AND (SELECT count(*) FROM place_parking o
-             WHERE o.place_id = pp.place_id AND o.source_id IS DISTINCT FROM ${USER_SOURCE}) <> 1`;
+             WHERE o.place_id = pp.place_id AND o.source_id IS DISTINCT FROM ${USER_SOURCE}) <> 1`
+    ).count;
     //   b. 剩下的一列有變才更新
-    await sql`
+    changes.place_parking_updated = (
+      await sql`
       UPDATE place_parking pp SET type = x.type, fee = x.fee, spaces = x.spaces, note = x.note,
         source_id = x.source_id, verified_at = x.verified_at
       FROM jsonb_to_recordset(${parking}) ${parkingCols}
       WHERE pp.place_id = x.place_id AND pp.source_id IS DISTINCT FROM ${USER_SOURCE}
         AND (pp.type, pp.fee, pp.spaces, pp.note, pp.source_id, pp.verified_at)
-          IS DISTINCT FROM (x.type, x.fee, x.spaces, x.note, x.source_id, x.verified_at)`;
+          IS DISTINCT FROM (x.type, x.fee, x.spaces, x.note, x.source_id, x.verified_at)`
+    ).count;
     //   c. 沒有的補上
-    await sql`
+    changes.place_parking_inserted = (
+      await sql`
       INSERT INTO place_parking (place_id, type, fee, spaces, note, source_id, verified_at)
       SELECT x.place_id, x.type, x.fee, x.spaces, x.note, x.source_id, x.verified_at
       FROM jsonb_to_recordset(${parking}) ${parkingCols}
       WHERE NOT EXISTS (SELECT 1 FROM place_parking pp
-                        WHERE pp.place_id = x.place_id AND pp.source_id IS DISTINCT FROM ${USER_SOURCE})`;
+                        WHERE pp.place_id = x.place_id AND pp.source_id IS DISTINCT FROM ${USER_SOURCE})`
+    ).count;
 
     // 7. 檢查 places.attrs 與 place_attributes 一致（trigger 負責同步，這裡只驗證）
     const drift = await sql<{ id: string }[]>`
@@ -147,12 +191,10 @@ export async function runSeed(
     }
 
     // 8. 摘要
-    const [counts] = await sql<Record<string, number>[]>`
-      SELECT (SELECT count(*) FROM sources)::int AS sources,
-             (SELECT count(*) FROM attribute_defs)::int AS attribute_defs,
-             (SELECT count(*) FROM places)::int AS places,
-             (SELECT count(*) FROM place_attributes)::int AS place_attributes,
-             (SELECT count(*) FROM place_parking)::int AS place_parking`;
+    const [counts] = await tableCounts(sql);
+    const launched = await sql<{ code: string; launchedAt: string | null }[]>`
+      SELECT code, launched_at::text AS "launchedAt" FROM cities
+      WHERE code = ANY(${seedCities}) ORDER BY code`;
     const knownAttrs = await sql<{ id: string; name: string; y: number; n: number }[]>`
       SELECT p.id, p.name,
              count(*) FILTER (WHERE a.value = 'y')::int AS y,
@@ -168,11 +210,25 @@ export async function runSeed(
       ORDER BY id`;
 
     const sourceOf = new Map(rows.cities.map((c) => [c.code, c.bboxSource]));
-    return {
+    const summary: SeedSummary = {
+      dryRun: options.dryRun === true,
+      before: before ?? {},
       counts: counts ?? {},
+      changes,
+      launched,
       knownAttrs,
       bboxes: bboxes.map((b) => ({ ...b, source: sourceOf.get(b.code) ?? 'places' })),
       orphanPlaces: orphans.map((o) => o.id),
     };
+    // 試跑：丟出特殊錯誤讓交易回滾，摘要照樣回傳
+    if (options.dryRun) throw new DryRunRollback(summary);
+    return summary;
   });
+
+  try {
+    return await work;
+  } catch (e) {
+    if (e instanceof DryRunRollback) return e.summary;
+    throw e;
+  }
 }
