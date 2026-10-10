@@ -68,6 +68,8 @@ pnpm docker:down   # 停止並移除容器
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生新竹市的 `data/seed/hsc/`、`data/review/hsc/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
 | `pnpm tool:locate` | 人工定位工具（只在本機）：http://localhost:4100，處理找不到座標與待確認比對的清冊資料，結果寫進 `data/raw/hsc/manual-review.tsv`；之後重新執行上一列的兩個腳本套用 |
+| `python3 scripts/check_hccg_update.py` | 檢查新竹市政府的三份開放資料（清冊、公園、公廁）有沒有更新，印出差異報告（只讀；結束碼 0 沒變動／1 有變動／2 失敗）。GitHub Actions 每季自動執行，有變動會開 issue |
+| `python3 scripts/fetch_hccg_playgrounds.py` | 重新下載新竹市兒童遊戲場清冊到 `data/raw/hsc/hccg-playgrounds.tsv`（原文照錄） |
 | `python3 scripts/fetch_hccg_toilets.py` | 重新下載新竹市公廁地點資訊到 `data/raw/hsc/hccg-toilets.json`；名稱對不到的公廁列在 `data/review/hsc/toilets-unmatched.csv`，人工確認後填 `data/raw/hsc/toilet-aliases.tsv` |
 | `python3 scripts/fetch_hccg_parks.py` | 重新下載新竹市公園管理維護地點（面積與地點提示）到 `data/raw/hsc/hccg-parks.json` |
 | `python -m unittest discover -s scripts/tests -t scripts` | 匯入腳本（Python）的測試 |

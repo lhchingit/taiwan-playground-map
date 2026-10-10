@@ -62,6 +62,27 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
 
 **場地從種子資料拿掉時**（例如人工確認已廢除、待實地確認）：`seed` 預設只會警告「資料庫有、places.json 沒有」，不會刪除。確認要刪的話，在 Run workflow 勾選 **prune**：試跑會先列出會刪除的場地，匯入時才真的刪除。有使用者回報資料的場地不會被刪，會列出來交給人工處理。
 
+## 政府資料更新（新竹市）
+
+`.github/workflows/hccg-update.yml` 每季（1、4、7、10 月 1 日）執行 `scripts/check_hccg_update.py`，
+比對清冊、公園、公廁三份開放資料跟 `data/raw/hsc/` 的版本。沒有變動就安靜結束；有變動會開一個標籤是「資料更新」的 issue
+（已經有開著的就留言），內容是差異報告。也可以在 Actions 頁面手動執行，或在本機跑 `python3 scripts/check_hccg_update.py`。
+
+收到 issue 後：
+
+1. **先看報告裡標「注意」或「要跟著處理」的項目**
+   - **編號變動**：`manual-review.tsv`、`osm-matches.tsv` 用清冊編號對應，場地 id 也由編號產生（D12，公開後不改）。
+     不能直接重新匯入，要先人工決定怎麼對應，必要時先開 issue 討論。
+   - **被引用的場地刪除**：確認是真的廢除，還是改名或併到別處；`manual-review.tsv` 等檔案裡的那一列要跟著處理。
+   - **對不到屬性的新設施文字**：在 `scripts/sources/hccg.py` 的 `RULES` 加規則；看不出是什麼設施就留著，**不可推測**。
+   - **屬性不再列出**：清冊沒列出不代表沒有，**不可以改成「無」**。
+   - **下載網址換了**：更新 `scripts/sources/hccg_datasets.py`。
+2. **下載**：報告列出要跑的 `fetch_hccg_*.py`。
+3. **重新匯入**：`python3 scripts/build_seed.py && python3 scripts/import_hccg.py`，看 `git diff data/` 與 `data/review/hsc/` 的變化。
+4. **更新標準答案**：`pnpm regen:filter-cases`，跑完整測試（含 `pnpm test:e2e`）。
+5. **開 PR**，說明裡附上 issue 連結與報告重點。合併後關閉 issue。
+6. **匯入正式環境**：Actions → 資料作業 → `hsc` + `dry-run` 確認，再 `seed`（有場地被拿掉時勾 prune）。
+
 ## 出錯時
 
 - **資料有問題、要先收回**：`hsq` + `unlaunch`。訪客立刻看不到新竹縣（RLS＋清快取），資料留在資料庫，修正後重新 `seed`、`launch`。
