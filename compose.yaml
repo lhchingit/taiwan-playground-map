@@ -1,0 +1,40 @@
+# 本機用 Docker 跑網站：pnpm docker:up（等於 docker compose --env-file .env.local up --build -d）
+# 前提：本機 Supabase 已啟動並匯入資料（supabase start → supabase db reset → pnpm seed），
+#       並執行過 pnpm env:local 產生 .env.local（提供 SUPABASE_ANON_KEY）。
+# 網站從容器裡經由 host.docker.internal 連到 Supabase CLI 在主機上開的 54321 埠；建置時也要連（產生場地頁）。
+
+name: playmap
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        SUPABASE_URL: http://host.docker.internal:54321
+        SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:?請先執行 pnpm env:local，並用 pnpm docker:up 啟動}
+        SITE_URL: ${SITE_URL:-http://localhost:3000}
+      extra_hosts:
+        - host.docker.internal:host-gateway
+    image: playmap-web
+    environment:
+      SUPABASE_URL: http://host.docker.internal:54321
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+      SITE_URL: ${SITE_URL:-http://localhost:3000}
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - '3000:3000'
+    healthcheck:
+      # 映像檔裡沒有 curl，用 node 的 fetch
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://localhost:3000/hsinchu-city').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+    restart: unless-stopped

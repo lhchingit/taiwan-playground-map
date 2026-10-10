@@ -31,7 +31,7 @@ jobs:
       - run: python scripts/check_seed_hash.py
 
   db:
-    name: 資料庫與 e2e（migration / seed / RLS / Playwright）
+    name: 資料庫、e2e 與 Docker（migration / seed / RLS / Playwright / compose）
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -54,6 +54,16 @@ jobs:
       - run: pnpm env:local
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:e2e
+      # Docker：映像檔能建置（建置時連本機 Supabase）、容器健康、主要頁面回 200
+      - run: docker compose --env-file .env.local up --build -d --wait
+      - run: |
+          for u in /hsinchu-city /hsinchu-city/places/hsc-luguang-park /api/cities/hsc/places; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "http://localhost:3000$u")
+            echo "$code $u"
+            test "$code" = 200
+          done
+      - if: always()
+        run: docker compose --env-file .env.local down || true
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

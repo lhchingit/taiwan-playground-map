@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+test-results
+playwright-report
+docs/screenshots
+**/__pycache__
+# 金鑰不打包進映像檔（建置與執行時由 compose 傳入）
+.env*
+!.env.example

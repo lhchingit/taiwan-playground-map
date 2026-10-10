@@ -37,12 +37,28 @@ pnpm test:e2e                              # 需要步驟 3～5；會自動 buil
 
 本機 Supabase 的網址與金鑰用 `pnpm exec supabase status` 查看；Studio 在 http://127.0.0.1:54323 。
 
+### 用 Docker Compose 執行
+
+網站包成容器（正式版建置），資料庫沿用本機的 Supabase CLI。
+
+```bash
+# 前提：上面的步驟 1～5（Supabase 已啟動、已匯入資料、已產生 .env.local）
+pnpm docker:up     # 建置映像檔並在背景啟動：http://localhost:3000
+pnpm docker:down   # 停止並移除容器
+```
+
+- 容器透過 `host.docker.internal:54321` 連到主機上的 Supabase。**建置時也要連得到**：場地頁是建置時產生的，所以要先啟動 Supabase 再 `docker:up`。
+- 資料改了（`pnpm seed`）之後，重新 `pnpm docker:up` 才會看到新的場地頁；容器裡的資料快取 1 小時。
+- 用 e2e 測容器：`PLAYWRIGHT_BASE_URL=http://localhost:3000 pnpm exec playwright test`（不會另外啟動伺服器）。
+- 映像檔只含 Next 的 standalone 輸出（約 280 MB），以非 root 的 `node` 使用者執行；`.env*` 不會被打包進去。
+
 ### 其他指令
 
 | 指令 | 用途 |
 |---|---|
 | `pnpm typegen` | migration 改了之後，重新產生 `src/types/database.ts` |
 | `pnpm format` | 用 Prettier 排版 |
+| `pnpm docker:up`／`docker:down` | 用 Docker Compose 建置並啟動／停止網站（見上方） |
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生 `places.json`、`places.csv`、`data/review/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
 | `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
