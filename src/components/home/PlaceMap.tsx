@@ -1,6 +1,6 @@
 'use client';
 
-// 地圖：OpenFreeMap 向量圖磚，載入失敗或 7 秒沒載入時改用 CARTO 點陣圖磚（decisions D2，與原型相同）。
+// 地圖：OpenFreeMap 向量圖磚，載入失敗或 7 秒沒載入時改用 OSM 官方點陣圖磚（decisions D2；樣式在 src/lib/map-styles.ts）。
 // 只在瀏覽器載入（HomeApp 用 next/dynamic 引入）。
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { setWorkerUrl } from 'maplibre-gl';
@@ -12,25 +12,8 @@ import MapGL, {
   type StyleSpecification,
 } from 'react-map-gl/maplibre';
 import type { Origin } from '@/lib/filter';
+import { FALLBACK_AFTER_MS, FALLBACK_STYLE, OSM_ATTRIBUTION, VECTOR_STYLE } from '@/lib/map-styles';
 import type { CityPlace } from '@/lib/places';
-
-const VECTOR_STYLE = 'https://tiles.openfreemap.org/styles/positron';
-const RASTER_STYLE: StyleSpecification = {
-  version: 8,
-  sources: {
-    carto: {
-      type: 'raster',
-      tiles: [
-        'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-        'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
-      ],
-      tileSize: 256,
-      attribution: '© CARTO',
-    },
-  },
-  layers: [{ id: 'carto', type: 'raster', source: 'carto' }],
-};
-const FALLBACK_AFTER_MS = 7000;
 
 // maplibre-gl 6 預設從主程式旁邊載入 worker，打包後找不到；改指向打包器輸出的檔案
 setWorkerUrl(new URL('maplibre-gl/dist/maplibre-gl-worker.mjs', import.meta.url).href);
@@ -63,7 +46,7 @@ export default function PlaceMap(props: PlaceMapProps) {
 
   useEffect(() => {
     const t = setTimeout(() => {
-      if (!loaded.current) setStyle(RASTER_STYLE);
+      if (!loaded.current) setStyle(FALLBACK_STYLE);
     }, FALLBACK_AFTER_MS);
     return () => clearTimeout(t);
   }, []);
@@ -107,7 +90,7 @@ export default function PlaceMap(props: PlaceMapProps) {
         initialViewState={{ longitude: props.center.lng, latitude: props.center.lat, zoom: 12 }}
         style={{ position: 'absolute', inset: 0 }}
         mapStyle={style}
-        attributionControl={{ compact: true, customAttribution: '© OpenStreetMap contributors' }}
+        attributionControl={{ compact: true, customAttribution: OSM_ATTRIBUTION }}
         cursor={props.picking ? 'crosshair' : undefined}
         onLoad={() => {
           loaded.current = true;
@@ -115,7 +98,7 @@ export default function PlaceMap(props: PlaceMapProps) {
           fitAll();
         }}
         onError={() => {
-          if (!loaded.current) setStyle(RASTER_STYLE);
+          if (!loaded.current) setStyle(FALLBACK_STYLE);
         }}
         onClick={(e) => {
           if (props.picking) props.onPick({ lat: e.lngLat.lat, lng: e.lngLat.lng });
