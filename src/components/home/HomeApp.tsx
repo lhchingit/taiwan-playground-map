@@ -1,15 +1,25 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { citiesToLoad, type CityBounds } from '@/lib/cities';
 import { loadCityPlaces } from '@/lib/city-cache';
-import { filterPlaces, filtersToQuery, queryToFilters, type Filters } from '@/lib/filter';
+import { loadPlaceDetail } from '@/lib/detail-cache';
+import {
+  filterPlaces,
+  filtersToQuery,
+  haversineKm,
+  passes,
+  queryToFilters,
+  type Filters,
+} from '@/lib/filter';
 import { exampleOrigin, type NamedOrigin } from '@/lib/origin';
+import type { PlaceDetail } from '@/lib/place-detail';
 import type { AttributeCatalog, CityPlace } from '@/lib/places';
 import { useTravelMode } from '@/lib/prefs';
 import { FilterPanel } from './FilterPanel';
 import { OriginControls } from './OriginControls';
+import { PANEL_TITLE_ID, PlacePanel } from './PlacePanel';
 import { ResultList } from './ResultList';
 
 const PlaceMap = dynamic(() => import('./PlaceMap'), {
@@ -25,6 +35,14 @@ export interface HomeAppProps {
   places: CityPlace[];
   /** 網址的 query string（不含「?」） */
   query: string;
+}
+
+/** history.state 裡標記「這一筆是打開詳情面板時加的」，關閉時用上一頁回到首頁網址 */
+const PANEL_STATE = 'playmapPlace';
+
+function placeIdFromPath(pathname: string, slug: string): string | null {
+  const m = pathname.match(new RegExp(`^/${slug}/places/([^/]+)$`));
+  return m?.[1] ? decodeURIComponent(m[1]) : null;
 }
 
 export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) {
@@ -43,6 +61,8 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
   const [focus, setFocus] = useState<{ id: string; seq: number } | null>(null);
   const [otherCities, setOtherCities] = useState<Record<string, CityPlace[]>>({});
   const [failed, setFailed] = useState<string[]>([]);
+  const [details, setDetails] = useState<Record<string, PlaceDetail | 'error'>>({});
+  const lastOpened = useRef<string | null>(null);
 
   const setOrigin = useCallback((o: NamedOrigin) => {
     setOriginState(o);
@@ -82,14 +102,67 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
     if ('geolocation' in navigator) requestPosition(() => {});
   }, [requestPosition]);
 
-  // 篩選條件同步到網址，方便分享
+  // 篩選條件同步到網址，方便分享（詳情面板打開時網址是場地頁，不動）
   useEffect(() => {
+    if (selected) return;
     const q = filtersToQuery(filters);
     const url = `${location.pathname}${q ? `?${q}` : ''}`;
     if (url !== `${location.pathname}${location.search}`) {
       history.replaceState(history.state, '', url);
     }
-  }, [filters]);
+  }, [filters, selected]);
+
+  // 詳情面板與網址：打開時網址換成場地頁（可分享），關閉或上一頁時回到首頁原本的網址
+  function openPlace(id: string, fly: boolean) {
+    if (selected !== id) {
+      const url = `/${city.slug}/places/${encodeURIComponent(id)}`;
+      const state = { ...history.state, [PANEL_STATE]: id };
+      // 從一個場地換到另一個時取代，按上一頁一次就回到首頁
+      if (selected) history.replaceState(state, '', url);
+      else history.pushState(state, '', url);
+    }
+    lastOpened.current = id;
+    setSelected(id);
+    if (fly) setFocus((f) => ({ id, seq: (f?.seq ?? 0) + 1 }));
+  }
+
+  function closePlace() {
+    if (history.state?.[PANEL_STATE]) history.back();
+    else setSelected(null);
+  }
+
+  useEffect(() => {
+    const onPop = () => {
+      const id = placeIdFromPath(location.pathname, city.slug);
+      setSelected(id);
+      if (!id && lastOpened.current) {
+        // 關閉後把焦點還給原本的卡片
+        const card = document.querySelector<HTMLElement>(
+          `a.card[data-id="${CSS.escape(lastOpened.current)}"]`,
+        );
+        card?.focus();
+      }
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [city.slug]);
+
+  useEffect(() => {
+    if (!selected || details[selected]) return;
+    let cancelled = false;
+    loadPlaceDetail(selected)
+      .then((d) => !cancelled && setDetails((m) => ({ ...m, [selected]: d })))
+      .catch(() => !cancelled && setDetails((m) => ({ ...m, [selected]: 'error' })));
+    return () => {
+      cancelled = true;
+    };
+  }, [selected, details]);
+
+  // 面板打開（或內容載入完成）時，把焦點移到標題
+  const panelReady = selected ? (details[selected] ?? 'loading') : null;
+  useEffect(() => {
+    if (panelReady) document.getElementById(PANEL_TITLE_ID)?.focus({ preventScroll: true });
+  }, [selected, panelReady]);
 
   // 依出發點載入附近縣市（decisions D4）；這個頁面的縣市一定包含
   const codes = useMemo(
@@ -123,7 +196,15 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
     () => filterPlaces(allPlaces, filters, origin),
     [allPlaces, filters, origin],
   );
-  const selectedId = selected && results.some((r) => r.id === selected) ? selected : null;
+  const selectedPlace = selected ? results.find((r) => r.id === selected) : undefined;
+  const selectedId = selectedPlace ? selectedPlace.id : null;
+
+  // 改篩選條件後，打開的場地不再符合時關閉面板（同原型）
+  function changeFilters(f: Filters) {
+    setFilters(f);
+    const p = selected ? allPlaces.find((x) => x.id === selected) : undefined;
+    if (p && !passes(p, haversineKm(origin, p), f, f.includeUnknown)) closePlace();
+  }
   const failedNames = failed.map((c) => cities.find((x) => x.code === c)?.name ?? c);
 
   return (
@@ -147,7 +228,7 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
           />
         </header>
         <div className="scroll">
-          <FilterPanel filters={filters} onChange={setFilters} catalog={catalog} />
+          <FilterPanel filters={filters} onChange={changeFilters} catalog={catalog} />
           {failedNames.length > 0 && (
             <p className="note" role="status" style={{ padding: '8px 16px', margin: 0 }}>
               {failedNames.join('、')}的資料暫時載入失敗，目前只顯示其他縣市。
@@ -160,10 +241,8 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
             catalog={catalog}
             mode={mode}
             selected={selectedId}
-            onSelect={(id) => {
-              setSelected(id);
-              setFocus((f) => ({ id, seq: (f?.seq ?? 0) + 1 }));
-            }}
+            placeHref={(id) => `/${city.slug}/places/${encodeURIComponent(id)}`}
+            onSelect={(id) => openPlace(id, true)}
           />
         </div>
       </div>
@@ -174,7 +253,7 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
           center={exampleOrigin(city)}
           selected={selectedId}
           picking={picking}
-          onSelect={setSelected}
+          onSelect={(id) => openPlace(id, false)}
           onPick={(o) => {
             setPicking(false);
             setOrigin({
@@ -185,6 +264,15 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
           fitKey={String(fitSeq)}
           focus={focus}
         />
+        {selectedPlace && (
+          <PlacePanel
+            detail={details[selectedPlace.id] ?? 'loading'}
+            name={selectedPlace.name}
+            catalog={catalog}
+            trip={{ origin, km: selectedPlace.km, mode }}
+            onClose={closePlace}
+          />
+        )}
       </section>
     </main>
   );

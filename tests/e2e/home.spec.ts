@@ -25,7 +25,7 @@ const count = (page: Page) => page.getByTestId('count');
 const cards = (page: Page) => page.getByTestId('results').locator('.card');
 const markers = (page: Page) => page.getByTestId('marker');
 const chip = (page: Page, name: string) =>
-  page.locator('details.filters').getByRole('button', { name, exact: true });
+  page.locator('#filter-body').getByRole('button', { name, exact: true });
 
 /** 地圖標記數量要等於清單數量 */
 async function expectMarkersMatchList(page: Page) {
@@ -154,10 +154,12 @@ test.describe('手機', () => {
       page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth);
     expect(await noHScroll()).toBe(true);
 
-    // 手機上篩選面板預設收起
-    const details = page.locator('details.filters');
-    await expect(details).not.toHaveAttribute('open', '');
-    await details.locator('summary').click();
+    // 手機上篩選面板預設收起（由 CSS 決定，載入後不會跳動）
+    const toggle = page.getByRole('button', { name: '篩選條件' });
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    await expect(chip(page, '沙坑')).toBeHidden();
+    await toggle.click();
+    await expect(toggle).toHaveAttribute('aria-expanded', 'true');
     await expect(chip(page, '沙坑')).toBeVisible();
     expect(await noHScroll()).toBe(true);
 

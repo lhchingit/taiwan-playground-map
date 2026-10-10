@@ -1,0 +1,181 @@
+// 場地頁與首頁詳情面板 e2e。地圖圖磚在測試中攔截；定位權限未授予，出發點是範例（新竹火車站）。
+import { expect, test, type Page } from '@playwright/test';
+
+const LUGUANG = '/hsinchu-city/places/hsc-luguang-park';
+const EXAMPLE_ORIGIN = '24.80163,120.97163';
+
+test.beforeEach(async ({ page }) => {
+  await page.route(/tiles\.openfreemap\.org|basemaps\.cartocdn\.com|nominatim/, (r) => r.abort());
+});
+
+const panel = (page: Page) => page.getByTestId('place-panel');
+const card = (page: Page, id: string) => page.locator(`a.card[data-id="${id}"]`);
+const routeHref = async (scope: ReturnType<Page['locator']> | Page) =>
+  new URL(
+    (await scope.getByRole('link', { name: '查實際路線（Google 地圖）' }).getAttribute('href')) ??
+      '',
+  );
+
+test.describe('場地頁', () => {
+  test.skip(({ isMobile }) => isMobile, '桌機');
+
+  test('直接打開綠光公園：有溜索並標示來源與日期；SEO 標記齊全', async ({ page }) => {
+    const res = await page.goto(LUGUANG);
+    expect(res?.status()).toBe(200);
+    await expect(page).toHaveTitle('綠光公園｜新竹市親子遊樂場');
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('綠光公園');
+
+    const zipline = page.locator('.arow', { hasText: '溜索' });
+    await expect(zipline).toContainText('全市首座溜索');
+    await expect(zipline.getByRole('link', { name: /蕃薯藤/ })).toHaveAttribute(
+      'href',
+      'https://travel.yam.com/article/119929',
+    );
+    await expect(zipline).toContainText('2026-10-10');
+
+    await expect(page.getByText('座標與地圖資料 © OpenStreetMap contributors')).toBeVisible();
+    await expect(page.getByText('OpenStreetMap w448662016（清冊編號 94）')).toBeVisible();
+
+    await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+      'content',
+      /新竹市第一座有溜索的公園/,
+    );
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      'href',
+      new RegExp(`${LUGUANG}$`),
+    );
+    const ld = JSON.parse(
+      (await page.locator('script[type="application/ld+json"]').textContent()) ?? '{}',
+    );
+    expect(ld).toMatchObject({ '@type': 'Playground', name: '綠光公園' });
+    expect(ld.amenityFeature.map((a: { name: string }) => a.name)).toContain('溜索');
+  });
+
+  test('還沒有資料的項目收成一行', async ({ page }) => {
+    await page.goto(LUGUANG);
+    const play = page.getByRole('region', { name: '遊樂設施' });
+    await expect(play.locator('.unk')).toContainText('還沒有資料：嬰兒鞦韆');
+    await expect(play.locator('.arow', { hasText: '嬰兒鞦韆' })).toHaveCount(0);
+  });
+
+  test('回報修正顯示即將開放', async ({ page }) => {
+    await page.goto(LUGUANG);
+    await page.getByRole('button', { name: '回報修正' }).click();
+    await expect(page.getByRole('status')).toHaveText(/即將開放/);
+  });
+
+  test('查實際路線：場地頁沒有出發點，只帶目的地', async ({ page }) => {
+    await page.goto(LUGUANG);
+    const url = await routeHref(page);
+    expect(url.origin + url.pathname).toBe('https://www.google.com/maps/dir/');
+    expect(url.searchParams.get('origin')).toBeNull();
+    expect(url.searchParams.get('destination')).toMatch(/^24\.\d+,120\.\d+$/);
+    expect(url.searchParams.get('travelmode')).toBe('driving');
+  });
+
+  test('不存在的場地、網址縣市不符、未上線縣市 → 404', async ({ page }) => {
+    expect((await page.goto('/hsinchu-city/places/no-such-place'))?.status()).toBe(404);
+    expect((await page.goto('/hsinchu-county/places/hsc-luguang-park'))?.status()).toBe(404);
+    expect((await page.goto('/no-such-city'))?.status()).toBe(404);
+  });
+
+  test('sitemap 列出首頁與 72 個場地頁；robots 指向 sitemap', async ({ page }) => {
+    const xml = await (await page.request.get('/sitemap.xml')).text();
+    expect(xml.match(/<loc>/g)).toHaveLength(73);
+    expect(xml).toContain(`${LUGUANG}</loc>`);
+    const robots = await (await page.request.get('/robots.txt')).text();
+    expect(robots).toContain('Sitemap:');
+  });
+});
+
+test.describe('首頁的詳情面板', () => {
+  test.skip(({ isMobile }) => isMobile, '桌機');
+
+  test('點卡片打開面板、網址換成場地頁；上一頁回到原本的篩選；重新整理是場地頁', async ({
+    page,
+  }) => {
+    await page.goto('/hsinchu-city?play=sandpit');
+    await expect(page.getByTestId('count')).toHaveText('8');
+    await card(page, 'hsc-hsinchu-park').click();
+
+    await expect(page).toHaveURL(/\/hsinchu-city\/places\/hsc-hsinchu-park$/);
+    await expect(panel(page)).toBeVisible();
+    await expect(panel(page).getByRole('heading', { level: 2 })).toHaveText('新竹公園');
+    await expect(panel(page).getByRole('heading', { level: 2 })).toBeFocused();
+    await expect(panel(page)).toContainText(/直線 .+，開車約 \d+ 分鐘（估算）/);
+
+    await page.goBack();
+    await expect(page).toHaveURL(/\/hsinchu-city\?play=sandpit$/);
+    await expect(panel(page)).toHaveCount(0);
+    await expect(page.getByTestId('count')).toHaveText('8');
+    await expect(card(page, 'hsc-hsinchu-park')).toBeFocused();
+
+    await page.goForward();
+    await expect(panel(page)).toBeVisible();
+    await page.reload();
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('新竹公園');
+    await expect(page.locator('.app')).toHaveCount(0);
+  });
+
+  test('卡片是連結，搜尋引擎與「開新分頁」都能用', async ({ page }) => {
+    await page.goto('/hsinchu-city');
+    await expect(card(page, 'hsc-luguang-park')).toHaveAttribute('href', LUGUANG);
+  });
+
+  test('點地圖標記也會打開面板；Esc 關閉', async ({ page }) => {
+    await page.goto('/hsinchu-city?play=zipline');
+    const marker = page.getByTestId('marker').and(page.locator('[title="綠光公園"]'));
+    await marker.click();
+    await expect(panel(page)).toBeVisible();
+    await expect(page).toHaveURL(new RegExp(`${LUGUANG}$`));
+
+    await page.keyboard.press('Escape');
+    await expect(panel(page)).toHaveCount(0);
+    await expect(page).toHaveURL(/\/hsinchu-city\?play=zipline$/);
+  });
+
+  test('查實際路線：面板帶入目前的出發點與交通方式', async ({ page }) => {
+    await page.goto('/hsinchu-city');
+    await page
+      .getByRole('group', { name: '交通方式' })
+      .getByRole('button', { name: '步行' })
+      .click();
+    await card(page, 'hsc-luguang-park').click();
+    const url = await routeHref(panel(page));
+    expect(url.searchParams.get('origin')).toBe(EXAMPLE_ORIGIN);
+    expect(url.searchParams.get('travelmode')).toBe('walking');
+  });
+
+  test('改篩選條件後場地不再符合時，面板關閉、網址換成新的篩選', async ({ page }) => {
+    await page.goto('/hsinchu-city');
+    await card(page, 'hsc-hsinchu-park').click();
+    await expect(panel(page)).toBeVisible();
+    // 新竹公園沒有溜索的資料
+    await page.locator('#filter-body').getByRole('button', { name: '溜索', exact: true }).click();
+    await expect(panel(page)).toHaveCount(0);
+    await expect(page).toHaveURL(/\/hsinchu-city\?play=zipline$/);
+  });
+});
+
+test.describe('手機', () => {
+  test.skip(({ isMobile }) => !isMobile, '手機');
+  test.use({ viewport: { width: 400, height: 860 } });
+
+  const noHScroll = (page: Page) =>
+    page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth);
+
+  test('底部抽屜打開時沒有水平捲動', async ({ page }) => {
+    await page.goto('/hsinchu-city');
+    await card(page, 'hsc-luguang-park').click();
+    await expect(panel(page)).toBeVisible();
+    expect(await noHScroll(page)).toBe(true);
+    const box = await panel(page).boundingBox();
+    expect(box?.width).toBeLessThanOrEqual(400);
+  });
+
+  test('場地頁沒有水平捲動', async ({ page }) => {
+    await page.goto(LUGUANG);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('綠光公園');
+    expect(await noHScroll(page)).toBe(true);
+  });
+});

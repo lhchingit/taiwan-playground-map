@@ -20,6 +20,8 @@ interface Props {
   catalog: AttributeCatalog;
   mode: TravelMode;
   selected: string | null;
+  /** 場地頁網址（卡片是連結，搜尋引擎與「開新分頁」都能用） */
+  placeHref: (id: string) => string;
   onSelect: (id: string) => void;
 }
 
@@ -30,6 +32,7 @@ export function ResultList({
   catalog,
   mode,
   selected,
+  placeHref,
   onSelect,
 }: Props) {
   const selectedKeys = [...filters.play, ...filters.amen];
@@ -52,46 +55,49 @@ export function ResultList({
         {results.map((p, i) => {
           const pk = parkingTri(p.parking.type);
           return (
-            <li
-              key={p.id}
-              className={`card${selected === p.id ? ' sel' : ''}`}
-              data-id={p.id}
-              tabIndex={0}
-              aria-current={selected === p.id ? 'true' : undefined}
-              onClick={() => onSelect(p.id)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') onSelect(p.id);
-              }}
-            >
-              <div className="ctop">
-                <span className="cname">
-                  <span className="cnum">{i + 1}</span>
-                  {p.name}
-                </span>
-                <span className="cdist">{distanceText(p.km, mode)}</span>
-              </div>
-              <div className="cmeta">
-                {p.district ?? ''}．{ageText(p)}．停留 {stayText(p.stay)}
-                {p.status === 'seasonal' && (
-                  <>
-                    {' '}
-                    ．<span className="pill">季節性開放</span>
-                  </>
-                )}
-              </div>
-              <div className="tags">
-                {showParking && (
-                  <span className={`tag ${pk}`}>
-                    {pk === 'u' ? '?' : ''}停車：{parkingText(p.parking)}
+            <li key={p.id}>
+              <a
+                href={placeHref(p.id)}
+                className={`card${selected === p.id ? ' sel' : ''}`}
+                data-id={p.id}
+                aria-current={selected === p.id ? 'true' : undefined}
+                onClick={(e) => {
+                  // 中鍵、Ctrl／Cmd 點擊照常開新分頁
+                  if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                  e.preventDefault();
+                  onSelect(p.id);
+                }}
+              >
+                <div className="ctop">
+                  <span className="cname">
+                    <span className="cnum">{i + 1}</span>
+                    {p.name}
                   </span>
-                )}
-                {cardTags(p.attrs, selectedKeys, catalog.order).map(({ key, v }) => (
-                  <span key={key} className={`tag ${v}`} title={TRI_LABEL[v]}>
-                    {v === 'u' ? '?' : ''}
-                    {catalog.labels[key] ?? key}
-                  </span>
-                ))}
-              </div>
+                  <span className="cdist">{distanceText(p.km, mode)}</span>
+                </div>
+                <div className="cmeta">
+                  {p.district ?? ''}．{ageText(p)}．停留 {stayText(p.stay)}
+                  {p.status === 'seasonal' && (
+                    <>
+                      {' '}
+                      ．<span className="pill">季節性開放</span>
+                    </>
+                  )}
+                </div>
+                <div className="tags">
+                  {showParking && (
+                    <span className={`tag ${pk}`}>
+                      {pk === 'u' ? '?' : ''}停車：{parkingText(p.parking)}
+                    </span>
+                  )}
+                  {cardTags(p.attrs, selectedKeys, catalog.order).map(({ key, v }) => (
+                    <span key={key} className={`tag ${v}`} title={TRI_LABEL[v]}>
+                      {v === 'u' ? '?' : ''}
+                      {catalog.labels[key] ?? key}
+                    </span>
+                  ))}
+                </div>
+              </a>
             </li>
           );
         })}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import {
   AGE_OPTIONS,
   DEFAULT_FILTERS,
@@ -72,27 +72,38 @@ function Seg<K extends string>(props: {
   );
 }
 
+const MOBILE = '(max-width: 820px)';
+function subscribeMobile(fn: () => void) {
+  const mq = window.matchMedia(MOBILE);
+  mq.addEventListener('change', fn);
+  return () => mq.removeEventListener('change', fn);
+}
+const isMobileNow = () => window.matchMedia(MOBILE).matches;
+
 export function FilterPanel({ filters: f, onChange, catalog }: Props) {
   const set = (patch: Partial<Filters>) => onChange({ ...f, ...patch });
   const count = activeFilterCount(f);
-  const details = useRef<HTMLDetailsElement>(null);
-
-  // 手機上篩選面板預設收起（原型相同）
-  useEffect(() => {
-    if (details.current && window.matchMedia('(max-width: 820px)').matches) {
-      details.current.open = false;
-    }
-  }, []);
+  // null = 依螢幕寬度（CSS 決定：手機收起、桌機展開，同原型），使用者按過之後才由這裡決定。
+  // 不在載入後用 JavaScript 收起，避免畫面跳動。
+  const [open, setOpen] = useState<boolean | null>(null);
+  const isMobile = useSyncExternalStore(subscribeMobile, isMobileNow, () => false);
+  const expanded = open ?? !isMobile;
 
   const label = (k: string) => catalog.labels[k] ?? k;
 
   return (
-    <details className="filters" open ref={details}>
-      <summary>
+    <div className="filters" data-open={open === null ? 'auto' : String(open)}>
+      <button
+        type="button"
+        className="ftoggle"
+        aria-expanded={expanded}
+        aria-controls="filter-body"
+        onClick={() => setOpen(!expanded)}
+      >
         <span>篩選條件</span>
         {count > 0 && <span className="pill">{count} 項</span>}
-      </summary>
-      <div className="fbody">
+      </button>
+      <div className="fbody" id="filter-body">
         <div className="fgroup">
           <h3 id="f-km">距離上限（直線）</h3>
           <div className="rangerow">
@@ -252,6 +263,6 @@ export function FilterPanel({ filters: f, onChange, catalog }: Props) {
           清除篩選
         </button>
       </div>
-    </details>
+    </div>
   );
 }

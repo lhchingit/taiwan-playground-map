@@ -45,6 +45,8 @@ export type PlaceRow = {
   surface: string | null;
   status: string;
   summary: string | null;
+  /** 座標來源說明（OSM 編號等） */
+  coord_source: string | null;
 };
 
 export type PlaceAttributeRow = {
@@ -156,6 +158,7 @@ export function toSeedRows(
     surface: p.surface,
     status: p.status,
     summary: p.summary,
+    coord_source: p.source_coords ?? null,
   }));
 
   // 沒有資料列 = 未知：值為 u 且沒有來源的屬性不寫入；u 但有來源（查過但無法確認）保留紀錄
