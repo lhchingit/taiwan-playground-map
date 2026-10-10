@@ -20,7 +20,9 @@
     "screenshots": "tsx scripts/screenshots.ts",
     "seed": "tsx scripts/seed.ts",
     "typegen": "supabase gen types typescript --local --schema public > src/types/database.ts",
-    "env:local": "node scripts/write-env-local.mjs"
+    "env:local": "node scripts/write-env-local.mjs",
+    "docker:up": "docker compose --env-file .env.local up --build -d",
+    "docker:down": "docker compose --env-file .env.local down"
   },
   "dependencies": {
     "maplibre-gl": "6.13.0",
