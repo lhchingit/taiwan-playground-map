@@ -1,0 +1,73 @@
+{
+ "version": "test",
+ "city": "測試用",
+ "generated": "2026-10-10",
+ "note": "測試用假資料，不可進入 seed。場地放在新竹縣（hsq），用來測試未上線縣市的權限。",
+ "sources": {
+  "est": {"label": "依面積與設施推估", "url": null, "kind": "estimate"}
+ },
+ "labels": {
+  "play": {"slide": "溜滑梯", "sandpit": "沙坑"},
+  "play_groups": [
+   {"name": "滑行擺盪", "keys": ["slide"]},
+   {"name": "玩沙玩水", "keys": ["sandpit"]}
+  ],
+  "amenity": {"toilet": "廁所", "shade": "遮蔭"}
+ },
+ "places": [
+  {
+   "id": "test-hsq-known",
+   "name": "測試場地（有資料）",
+   "city": "hsq",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.83,
+   "lng": 121.01,
+   "size": "S",
+   "stay": "lt30",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": "free",
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": null,
+   "attrs": {
+    "slide": {"v": "y", "src": "est", "note": "測試", "at": "2026-10-10"},
+    "sandpit": {"v": "u", "src": null, "note": null, "at": null},
+    "toilet": {"v": "n", "src": "est", "note": null, "at": "2026-10-10"},
+    "shade": {"v": "u", "src": "est", "note": "說法不一", "at": "2026-10-10"}
+   },
+   "parking": {"type": "lot", "fee": "free", "spaces": 10, "src": "est", "note": null, "at": "2026-10-10"}
+  },
+  {
+   "id": "test-hsq-unknown",
+   "name": "測試場地（全部未知）",
+   "city": "hsq",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.84,
+   "lng": 121.02,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": null,
+   "attrs": {
+    "slide": {"v": "u", "src": null, "note": null, "at": null},
+    "sandpit": {"v": "u", "src": null, "note": null, "at": null},
+    "toilet": {"v": "u", "src": null, "note": null, "at": null},
+    "shade": {"v": "u", "src": null, "note": null, "at": null}
+   },
+   "parking": {"type": "u", "fee": "u", "spaces": null, "src": null, "note": null, "at": null}
+  }
+ ]
+}

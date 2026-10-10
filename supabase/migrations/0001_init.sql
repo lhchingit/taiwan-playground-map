@@ -135,6 +135,11 @@ CREATE POLICY public_read ON places           FOR SELECT USING (
   EXISTS (SELECT 1 FROM cities c WHERE c.code = places.city AND c.launched_at IS NOT NULL));
 CREATE POLICY public_read ON attribute_defs   FOR SELECT USING (true);
 CREATE POLICY public_read ON sources          FOR SELECT USING (true);
-CREATE POLICY public_read ON place_attributes FOR SELECT USING (true);
-CREATE POLICY public_read ON place_parking    FOR SELECT USING (true);
+-- 屬性與停車跟著場地：所屬場地的縣市尚未上線時也讀不到
+CREATE POLICY public_read ON place_attributes FOR SELECT USING (
+  EXISTS (SELECT 1 FROM places p JOIN cities c ON c.code = p.city
+          WHERE p.id = place_attributes.place_id AND c.launched_at IS NOT NULL));
+CREATE POLICY public_read ON place_parking    FOR SELECT USING (
+  EXISTS (SELECT 1 FROM places p JOIN cities c ON c.code = p.city
+          WHERE p.id = place_parking.place_id AND c.launched_at IS NOT NULL));
 -- edit_suggestions 的權限在 P3 設定
