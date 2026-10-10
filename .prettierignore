@@ -1,0 +1,12 @@
+# 文件、資料、SQL 與產生的檔案不由 prettier 排版
+*.md
+docs/
+data/
+supabase/
+tests/fixtures/
+src/types/database.ts
+pnpm-lock.yaml
+.claude/
+.next/
+playwright-report/
+test-results/

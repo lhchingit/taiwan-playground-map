@@ -1,0 +1,4 @@
+# 只允許這兩個套件在安裝時執行建置腳本（esbuild：tsx／vitest 用；unrs-resolver：eslint 用）
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true

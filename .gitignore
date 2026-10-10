@@ -1,0 +1,24 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# 測試
+/test-results/
+/playwright-report/
+/playwright/.cache/
+coverage/
+
+# 環境變數（.env.example 例外）
+.env*
+!.env.example
+
+# Supabase 本機
+supabase/.branches/
+supabase/.temp/
+
+# Python
+__pycache__/
+
+.DS_Store

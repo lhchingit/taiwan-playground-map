@@ -1,0 +1,6 @@
+# 原始碼一律 LF（Prettier 預設 LF；避免 Windows 的 core.autocrlf 改成 CRLF）
+* text=auto eol=lf
+
+# 資料檔逐位元組保存（places.json 是 LF、csv 是 CRLF），不讓 git 轉換換行；
+# scripts/check_seed_hash.py 靠雜湊比對這些檔案
+data/** -text

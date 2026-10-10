@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: lint / typecheck / 單元測試 / seed 雜湊
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # places.json 必須和產生它的腳本、原始資料一致
+      - run: python scripts/check_seed_hash.py
+
+  db:
+    name: 資料庫（migration / seed / RLS）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # 只開測試需要的服務（postgres、postgrest、kong、gotrue）
+      - run: pnpm exec supabase start -x realtime,storage-api,imgproxy,edge-runtime,logflare,vector,supavisor,studio,mailpit,postgres-meta
+      - run: pnpm exec supabase db reset
+      - run: pnpm seed
+      # 第二次：確認可以重複執行
+      - run: pnpm seed
+      - run: pnpm test:db
+      # 產生的資料庫型別必須和 migration 一致
+      - run: pnpm typegen && git diff --exit-code src/types/database.ts
