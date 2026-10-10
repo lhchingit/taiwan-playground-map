@@ -26,16 +26,18 @@ def enc(records):
 
 
 class FakeNet:
-    def __init__(self, data, urls=None, fail=False):
-        self.data, self.urls, self.fail = data, urls or {}, fail
+    def __init__(self, data, urls=None, fail=False, modified="2026-04-16 12:01:51"):
+        self.data, self.urls, self.fail, self.modified = data, urls or {}, fail, modified
+        self.downloads = 0
 
     def meta(self, dataset_id):
         if self.fail:
             raise urllib.error.URLError("network down")
         ds = next(d for d in DATASETS.values() if d["id"] == dataset_id)
-        return {"modified": "2026-04-16 12:01:51", "json_url": self.urls.get(dataset_id, ds["url"])}
+        return {"modified": self.modified, "json_url": self.urls.get(dataset_id, ds["url"])}
 
     def get(self, url):
+        self.downloads += 1
         return self.data[url]
 
 
@@ -68,10 +70,10 @@ class Fixture:
                         PARKS["url"]: enc(parks if parks is not None else self.PARK_RECS),
                         TOILETS["url"]: enc(toilets if toilets is not None else self.TOILET_RECS)}, **kw)
 
-    def run(self, net):
+    def run(self, net, *argv):
         out = io.StringIO()
         with contextlib.redirect_stdout(out), contextlib.redirect_stderr(io.StringIO()):
-            code = chk.main([], root=self.root, net=net, today="2026-10-10")
+            code = chk.main(list(argv), root=self.root, net=net, today="2026-10-10")
         return code, out.getvalue()
 
 
@@ -176,6 +178,51 @@ class UpdateCheckTest(unittest.TestCase):
     def test_network_failure_exits_2(self):
         code, _ = self.fx.run(self.fx.net(fail=True))
         self.assertEqual(code, 2)
+
+
+class MetaOnlyTest(unittest.TestCase):
+    """GitHub Actions 連不到市府的下載主機，只看 data.gov.tw 的更新時間與下載網址"""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.fx = Fixture(self.tmp.name)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_platform_not_newer(self):
+        # 內容其實有變也不會發現（不下載）；這是 --meta-only 的限制，所以本機要跑完整檢查
+        net = self.fx.net(playgrounds=[], modified="2026-10-10 08:00:00")
+        code, report = self.fx.run(net, "--meta-only")
+        self.assertEqual((code, net.downloads), (0, 0))
+        self.assertIn("4 → （未下載）", report)
+
+    def test_platform_newer(self):
+        net = self.fx.net(modified="2026-10-11 09:00:00")
+        code, report = self.fx.run(net, "--meta-only")
+        self.assertEqual((code, net.downloads), (1, 0))
+        self.assertIn("晚於我們的擷取日期（2026-10-10）", report)
+        self.assertIn("1. 在本機執行 `python3 scripts/check_hccg_update.py`", report)
+
+    def test_url_changed(self):
+        net = self.fx.net(urls={TOILETS["id"]: "https://odws.hccg.gov.tw/new.json"})
+        code, report = self.fx.run(net, "--meta-only")
+        self.assertEqual((code, net.downloads), (1, 0))
+        self.assertIn("下載網址換了", report)
+
+
+class NetErrorTest(unittest.TestCase):
+    def test_error_names_url(self):
+        orig = chk.download
+
+        def boom(url):
+            raise urllib.error.URLError("timed out")
+        chk.download = boom
+        try:
+            with self.assertRaisesRegex(OSError, "下載 https://example.test/x.json 失敗"):
+                chk.Net().get("https://example.test/x.json")
+        finally:
+            chk.download = orig
 
 
 class RenderTsvTest(unittest.TestCase):
