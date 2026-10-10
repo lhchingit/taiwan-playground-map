@@ -167,6 +167,7 @@ describe('縣市上線狀態控制匿名讀取（以新竹縣測試）', () => {
 
   afterAll(async () => {
     await sql`DELETE FROM places WHERE id = ANY(${ids})`;
+    await sql`DELETE FROM place_attribute_history WHERE place_id = ANY(${ids})`;
     await setLaunched(false);
   });
 

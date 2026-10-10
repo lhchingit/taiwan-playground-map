@@ -35,14 +35,14 @@ export type Database = {
                   ]
                 },"edit_suggestions": {
                   Row: {
-                    "created_at": string,"field": string | null,"id": number,"key": string | null,"note": string | null,"place_id": string | null,"proposed": string,"reviewed_at": string | null,"reviewed_by": string | null,"status": string,"user_id": string | null
+                    "created_at": string,"field": string | null,"id": number,"key": string | null,"kind": string,"note": string | null,"payload": NonNullable<Json>,"place_id": string | null,"proposed": string | null,"reject_reason": string | null,"review_note": string | null,"reviewed_at": string | null,"reviewed_by": string | null,"status": string,"user_id": string | null
                   }
                   ComputedFields: never
                   Insert: {
-                    "created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"note"?: string | null,"place_id"?: string | null,"proposed": string,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
+                    "created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"kind"?: string,"note"?: string | null,"payload"?: NonNullable<Json>,"place_id"?: string | null,"proposed"?: string | null,"reject_reason"?: string | null,"review_note"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
                   }
                   Update: {
-                    "created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"note"?: string | null,"place_id"?: string | null,"proposed"?: string,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
+                    "created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"kind"?: string,"note"?: string | null,"payload"?: NonNullable<Json>,"place_id"?: string | null,"proposed"?: string | null,"reject_reason"?: string | null,"review_note"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
                   }
                   Relationships: [
                     {
@@ -63,7 +63,91 @@ isOneToOne: false
 isOneToOne: false
       referencedRelation: "places"
       referencedColumns: ["id"]
+    },{
+      foreignKeyName: "edit_suggestions_user_fk"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
     }
+                  ]
+                },"moderator_cities": {
+                  Row: {
+                    "city": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "city": string,"user_id": string
+                  }
+                  Update: {
+                    "city"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "moderator_cities_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "cities"
+      referencedColumns: ["code"]
+    },{
+      foreignKeyName: "moderator_cities_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "city_bounds"
+      referencedColumns: ["code"]
+    },{
+      foreignKeyName: "moderator_cities_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"photos": {
+                  Row: {
+                    "caption": string | null,"created_at": string,"exif_stripped": boolean,"id": string,"place_id": string,"reject_reason": string | null,"reviewed_at": string | null,"reviewed_by": string | null,"status": string,"storage_path": string,"user_id": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "caption"?: string | null,"created_at"?: string,"exif_stripped"?: boolean,"id"?: string,"place_id": string,"reject_reason"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"storage_path": string,"user_id"?: string | null
+                  }
+                  Update: {
+                    "caption"?: string | null,"created_at"?: string,"exif_stripped"?: boolean,"id"?: string,"place_id"?: string,"reject_reason"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"storage_path"?: string,"user_id"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "photos_place_id_fkey"
+      columns: ["place_id"]
+isOneToOne: false
+      referencedRelation: "place_cards"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "photos_place_id_fkey"
+      columns: ["place_id"]
+isOneToOne: false
+      referencedRelation: "places"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "photos_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"place_attribute_history": {
+                  Row: {
+                    "changed_at": string,"changed_by": string | null,"id": number,"key": string,"new_note": string | null,"new_source": string | null,"new_value": string | null,"old_note": string | null,"old_source": string | null,"old_value": string | null,"place_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "changed_at"?: string,"changed_by"?: string | null,"id"?: number,"key": string,"new_note"?: string | null,"new_source"?: string | null,"new_value"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id": string
+                  }
+                  Update: {
+                    "changed_at"?: string,"changed_by"?: string | null,"id"?: number,"key"?: string,"new_note"?: string | null,"new_source"?: string | null,"new_value"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id"?: string
+                  }
+                  Relationships: [
+                    
                   ]
                 },"place_attributes": {
                   Row: {
@@ -160,6 +244,20 @@ isOneToOne: false
       referencedRelation: "city_bounds"
       referencedColumns: ["code"]
     }
+                  ]
+                },"profiles": {
+                  Row: {
+                    "accepted_count": number,"ban_reason": string | null,"banned_at": string | null,"created_at": string,"display_name": string | null,"id": string,"role": string,"terms_accepted_at": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "accepted_count"?: number,"ban_reason"?: string | null,"banned_at"?: string | null,"created_at"?: string,"display_name"?: string | null,"id": string,"role"?: string,"terms_accepted_at"?: string | null
+                  }
+                  Update: {
+                    "accepted_count"?: number,"ban_reason"?: string | null,"banned_at"?: string | null,"created_at"?: string,"display_name"?: string | null,"id"?: string,"role"?: string,"terms_accepted_at"?: string | null
+                  }
+                  Relationships: [
+                    
                   ]
                 },"sources": {
                   Row: {
@@ -337,6 +435,15 @@ isOneToOne: false
                            } |
 { Args: { "column_name": string,"new_dim": number,"new_srid": number,"new_type": string,"table_name": string,"use_typmod"?: boolean }; Returns: string
                            },
+"app_role":
+{ Args: Record<PropertyKey, never>; Returns: string
+                           },
+"can_moderate":
+{ Args: { "p_city": string }; Returns: boolean
+                           },
+"city_launched":
+{ Args: { "p_city": string }; Returns: boolean
+                           },
 "disablelongtransactions":
 { Args: Record<PropertyKey, never>; Returns: string
                            },
@@ -441,8 +548,17 @@ isOneToOne: false
 "gettransactionid":
 { Args: Record<PropertyKey, never>; Returns: unknown
                            },
+"has_accepted_terms":
+{ Args: Record<PropertyKey, never>; Returns: boolean
+                           },
+"is_admin":
+{ Args: Record<PropertyKey, never>; Returns: boolean
+                           },
 "longtransactionsenabled":
 { Args: Record<PropertyKey, never>; Returns: boolean
+                           },
+"place_city":
+{ Args: { "p_place_id": string }; Returns: string
                            },
 "populate_geometry_columns":
 { Args: { "tbl_oid": unknown,"use_typmod"?: boolean }; Returns: number
@@ -511,6 +627,9 @@ isOneToOne: false
                            },
 "postgis_wagyu_version":
 { Args: Record<PropertyKey, never>; Returns: string
+                           },
+"review_suggestion":
+{ Args: { "p_accept": boolean,"p_id": number,"p_note"?: string,"p_reason"?: string }; Returns: undefined
                            },
 "st_3dclosestpoint":
 { Args: { "geom1": unknown,"geom2": unknown }; Returns: unknown

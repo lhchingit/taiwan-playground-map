@@ -30,7 +30,8 @@ async function snapshot() {
 describe('pnpm seed', () => {
   it('各表筆數符合完成標準', async () => {
     expect(await snapshot()).toMatchObject({
-      sources: Object.keys(seed.sources).length,
+      // 'user'（使用者回報）由 migration 0004 建立，不在種子資料裡
+      sources: new Set([...Object.keys(seed.sources), 'user']).size,
       attribute_defs: 38,
       places: seed.places.length,
       place_parking: 72,
