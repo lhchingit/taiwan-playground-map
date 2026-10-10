@@ -93,6 +93,13 @@ describe('pnpm seed', () => {
     expect(others?.n).toBe(0);
   });
 
+  it('清冊新增的場地收費是未知（清冊沒有這項資訊，不推測）', async () => {
+    const rows = await sql`
+      SELECT coalesce(fee, 'null') AS fee, count(*)::int AS n FROM places
+      WHERE id LIKE 'hsc-hccg-%' GROUP BY 1`;
+    expect(rows).toEqual([{ fee: 'null', n: 62 }]);
+  });
+
   it('每個場地都有座標來源，而且都來自 OpenStreetMap（不可以是 Google）', async () => {
     const [r] = await sql`
       SELECT count(*) FILTER (WHERE coord_source IS NULL)::int AS missing,
