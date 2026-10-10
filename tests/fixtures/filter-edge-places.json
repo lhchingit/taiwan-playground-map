@@ -1,0 +1,41 @@
+{
+ "note": "測試用假資料，不可進入 seed。用來測 filter-cases.json 沒涵蓋的篩選規則（null 欄位、無停車位、同距離排序）。出發點 24.80, 120.97。",
+ "origin": {"lat": 24.8, "lng": 120.97},
+ "places": [
+  {
+   "id": "test-known",
+   "lat": 24.81, "lng": 120.97,
+   "age_min": 2, "age_max": 10, "stay": "30_60", "size": "M", "indoor": false, "fee": "free",
+   "attrs": {"slide": "y", "toilet": "n", "sandpit": "u"},
+   "parking": {"type": "lot", "fee": "paid", "spaces": 20}
+  },
+  {
+   "id": "test-nulls",
+   "lat": 24.82, "lng": 120.97,
+   "age_min": null, "age_max": null, "stay": null, "size": null, "indoor": false, "fee": null,
+   "attrs": {},
+   "parking": {"type": "u", "fee": "u", "spaces": null}
+  },
+  {
+   "id": "test-no-parking",
+   "lat": 24.83, "lng": 120.97,
+   "age_min": 2, "age_max": 10, "stay": "30_60", "size": "M", "indoor": true, "fee": "paid",
+   "attrs": {"slide": "y"},
+   "parking": {"type": "none", "fee": "u", "spaces": null}
+  },
+  {
+   "id": "test-tie-b",
+   "lat": 24.9, "lng": 120.97,
+   "age_min": 2, "age_max": 10, "stay": "30_60", "size": "M", "indoor": false, "fee": "free",
+   "attrs": {},
+   "parking": {"type": "street", "fee": "free", "spaces": 5}
+  },
+  {
+   "id": "test-tie-a",
+   "lat": 24.9, "lng": 120.97,
+   "age_min": 2, "age_max": 10, "stay": "30_60", "size": "M", "indoor": false, "fee": "free",
+   "attrs": {},
+   "parking": {"type": "street", "fee": "free", "spaces": 5}
+  }
+ ]
+}
