@@ -1,5 +1,6 @@
 // 場地頁與首頁詳情面板 e2e。地圖圖磚在測試中攔截；定位權限未授予，出發點是範例（新竹火車站）。
 import { expect, test, type Page } from '@playwright/test';
+import { expected, TOTAL } from './expected';
 
 const LUGUANG = '/hsinchu-city/places/hsc-luguang-park';
 const EXAMPLE_ORIGIN = '24.80163,120.97163';
@@ -98,9 +99,9 @@ test.describe('場地頁', () => {
     expect((await page.goto('/no-such-city'))?.status()).toBe(404);
   });
 
-  test('sitemap 列出首頁與 72 個場地頁；robots 指向 sitemap', async ({ page }) => {
+  test('sitemap 列出首頁與全部場地頁；robots 指向 sitemap', async ({ page }) => {
     const xml = await (await page.request.get('/sitemap.xml')).text();
-    expect(xml.match(/<loc>/g)).toHaveLength(73);
+    expect(xml.match(/<loc>/g)).toHaveLength(TOTAL + 1);
     expect(xml).toContain(`${LUGUANG}</loc>`);
     const robots = await (await page.request.get('/robots.txt')).text();
     expect(robots).toContain('Sitemap:');
@@ -114,7 +115,7 @@ test.describe('首頁的詳情面板', () => {
     page,
   }) => {
     await page.goto('/hsinchu-city?play=sandpit');
-    await expect(page.getByTestId('count')).toHaveText('8');
+    await expect(page.getByTestId('count')).toHaveText(String(expected('沙坑').expected_count));
     await card(page, 'hsc-hsinchu-park').click();
 
     await expect(page).toHaveURL(/\/hsinchu-city\/places\/hsc-hsinchu-park$/);
@@ -126,7 +127,7 @@ test.describe('首頁的詳情面板', () => {
     await page.goBack();
     await expect(page).toHaveURL(/\/hsinchu-city\?play=sandpit$/);
     await expect(panel(page)).toHaveCount(0);
-    await expect(page.getByTestId('count')).toHaveText('8');
+    await expect(page.getByTestId('count')).toHaveText(String(expected('沙坑').expected_count));
     await expect(card(page, 'hsc-hsinchu-park')).toBeFocused();
 
     await page.goForward();

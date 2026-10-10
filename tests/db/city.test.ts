@@ -93,3 +93,55 @@ describe('pnpm city', () => {
     expect(hsq?.launched_at).toBeNull();
   });
 });
+
+describe('pnpm seed --prune（從種子資料拿掉的場地）', () => {
+  const seed = JSON.parse(readFileSync('data/seed/hsc/places.json', 'utf8')) as SeedFile;
+  const target = seed.places[seed.places.length - 1]!;
+  const without = { ...seed, places: seed.places.filter((p) => p.id !== target.id) };
+  let createdUserSource = false;
+
+  afterAll(async () => {
+    await sql`DELETE FROM place_attributes WHERE place_id = ${target.id} AND source_id = 'user'`;
+    if (createdUserSource) await sql`DELETE FROM sources WHERE id = 'user'`;
+    // 把刪掉的場地補回來
+    await runSeed(sql, seed);
+  });
+
+  it('沒加 --prune 只列出、不刪除', async () => {
+    const s = await runSeed(sql, without);
+    expect(s.orphanPlaces).toEqual([target.id]);
+    expect(s.pruned).toEqual([]);
+    expect(await sql`SELECT 1 FROM places WHERE id = ${target.id}`).toHaveLength(1);
+  });
+
+  it('--dry-run --prune：列出會刪除的場地，資料完全不變', async () => {
+    const before = await fingerprint();
+    const s = await runSeed(sql, without, {}, { dryRun: true, prune: true });
+    expect(s.pruned).toEqual([target.id]);
+    expect(await fingerprint()).toEqual(before);
+  });
+
+  it('有使用者回報資料的場地拒絕刪除', async () => {
+    const [has] = await sql`SELECT count(*)::int AS n FROM sources WHERE id = 'user'`;
+    if (!has?.n) {
+      await sql`INSERT INTO sources (id, label, kind) VALUES ('user', '使用者回報（測試）', 'user')`;
+      createdUserSource = true;
+    }
+    await sql`INSERT INTO place_attributes (place_id, key, value, source_id, verified_at)
+              VALUES (${target.id}, 'skatepark', 'y', 'user', '2026-10-11')
+              ON CONFLICT (place_id, key) DO UPDATE SET source_id = 'user'`;
+    const s = await runSeed(sql, without, {}, { prune: true });
+    expect(s.pruned).toEqual([]);
+    expect(s.pruneBlocked).toEqual([target.id]);
+    expect(await sql`SELECT 1 FROM places WHERE id = ${target.id}`).toHaveLength(1);
+    await sql`DELETE FROM place_attributes WHERE place_id = ${target.id} AND source_id = 'user'`;
+  });
+
+  it('--prune：刪除場地，屬性與停車一起刪', async () => {
+    const s = await runSeed(sql, without, {}, { prune: true });
+    expect(s.pruned).toEqual([target.id]);
+    expect(s.changes.places_pruned).toBe(1);
+    expect(await sql`SELECT 1 FROM places WHERE id = ${target.id}`).toHaveLength(0);
+    expect(await sql`SELECT 1 FROM place_parking WHERE place_id = ${target.id}`).toHaveLength(0);
+  });
+});

@@ -61,7 +61,8 @@ pnpm docker:down   # 停止並移除容器
 |---|---|
 | `pnpm typegen` | migration 改了之後，重新產生 `src/types/database.ts` |
 | `pnpm format` | 用 Prettier 排版 |
-| `pnpm seed --city <代碼>`／`--dry-run` | 只匯入一個縣市；試跑（做完後回滾，只印出會改變什麼） |
+| `pnpm seed --city <代碼>`／`--dry-run`／`--prune` | 只匯入一個縣市；試跑（做完後回滾，只印出會改變什麼）；刪除種子資料已經沒有的場地（有使用者回報資料的不刪） |
+| `pnpm regen:filter-cases` | 補資料後，用原型重新產生 `tests/fixtures/filter-cases.json`（`--check` 只檢查是否最新） |
 | `pnpm city status`／`launch <代碼>`／`unlaunch <代碼>` | 縣市的場地數與上線狀態；上線、下線 |
 | `pnpm docker:up`／`docker:down` | 用 Docker Compose 建置並啟動／停止網站（見上方） |
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生新竹市的 `data/seed/hsc/`、`data/review/hsc/` |

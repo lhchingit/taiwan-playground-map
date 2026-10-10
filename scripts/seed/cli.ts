@@ -10,14 +10,17 @@ export interface SeedArgs {
   city: string | null;
   /** 試跑：在交易裡做完全部步驟後回滾，不寫入 */
   dryRun: boolean;
+  /** 刪除資料庫有、places.json 沒有的場地 */
+  prune: boolean;
   allowRemote: boolean;
 }
 
 export function parseSeedArgs(argv: readonly string[]): SeedArgs {
-  const out: SeedArgs = { city: null, dryRun: false, allowRemote: false };
+  const out: SeedArgs = { city: null, dryRun: false, prune: false, allowRemote: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--dry-run') out.dryRun = true;
+    else if (a === '--prune') out.prune = true;
     else if (a === '--allow-remote') out.allowRemote = true;
     else if (a === '--city') {
       const code = argv[++i];

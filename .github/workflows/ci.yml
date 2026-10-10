@@ -64,6 +64,8 @@ jobs:
       # e2e：Next.js 讀 .env.local 連本機 Supabase；地圖圖磚與 Nominatim 在測試中攔截
       - run: pnpm env:local
       - run: pnpm exec playwright install --with-deps chromium
+      # 標準答案要跟原型＋目前的種子資料一致（scripts/regen-filter-cases.ts）
+      - run: pnpm regen:filter-cases --check
       - run: pnpm test:e2e
       # Docker：映像檔能建置（建置時連本機 Supabase）、容器健康、主要頁面回 200
       - run: docker compose --env-file .env.local up --build -d --wait

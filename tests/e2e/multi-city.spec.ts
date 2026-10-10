@@ -3,6 +3,7 @@
 // 其他 e2e 跑完之後才執行。
 import { readFileSync } from 'node:fs';
 import { expect, test, type APIRequestContext } from '@playwright/test';
+import { TOTAL } from './expected';
 import type { SeedFile } from '@/types/place';
 import { adminSql } from '../db/helpers';
 import { toSeedRows } from '../../scripts/seed/transform';
@@ -60,7 +61,7 @@ test('新竹縣上線並清快取後：/ 是縣市選單，新竹縣的頁面可
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('全台放電地圖');
   const list = page.locator('.city-list');
   await expect(list.getByRole('link')).toHaveText(['新竹市', '新竹縣']);
-  await expect(list.locator('li', { hasText: '新竹市' })).toContainText('72 處');
+  await expect(list.locator('li', { hasText: '新竹市' })).toContainText(`${TOTAL} 處`);
   await expect(list.locator('li', { hasText: '新竹縣' })).toContainText('2 處');
 
   await list.getByRole('link', { name: '新竹縣' }).click();

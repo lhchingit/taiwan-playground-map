@@ -1,5 +1,6 @@
 // RLS 初版：匿名使用者只能讀、不能寫；未上線縣市的場地、屬性、停車都讀不到。
 // 前提：supabase db reset && pnpm seed 已經跑過
+import { readFileSync } from 'node:fs';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { SeedFile } from '@/types/place';
 import fixture from '../fixtures/seed-test.json';
@@ -232,10 +233,13 @@ describe('首頁用的公開 view', () => {
     }
   });
 
-  it('place_cards：新竹市 72 處，座標、attrs、停車都正確', async () => {
+  it('place_cards：新竹市全部場地，座標、attrs、停車都正確', async () => {
+    const total = (
+      JSON.parse(readFileSync('data/seed/hsc/places.json', 'utf8')) as { places: unknown[] }
+    ).places.length;
     const { data, error } = await anon.from('place_cards').select('*').eq('city', 'hsc');
     expect(error).toBeNull();
-    expect(data).toHaveLength(72);
+    expect(data).toHaveLength(total);
     const byId = new Map(data?.map((p) => [p.id, p]));
     const park = byId.get('hsc-hsinchu-park');
     expect(park?.lat).toBeCloseTo(24.799191, 6);

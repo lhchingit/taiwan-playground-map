@@ -86,11 +86,23 @@ describe('validateEntry（跟 lib/manual.py 相同的規則）', () => {
 describe('工具的清單', () => {
   const items = loadItems('.');
 
-  it('跟匯入流程產生的 review 清單相同（找不到座標 22 筆、待確認比對 10 筆）', () => {
-    const nos = (kind: string) => items.filter((i) => i.kind === kind).map((i) => i.no);
-    expect(nos('unmatched')).toEqual(csvFirstColumn('data/review/hsc/unmatched.csv'));
-    expect(nos('match-review')).toEqual(csvFirstColumn('data/review/hsc/match-review.csv'));
-    expect(items).toHaveLength(32);
+  it('review 清單裡的每一筆都在工具裡；工具的清單不受處理結果影響（處理過的不會消失）', () => {
+    const all = new Set(items.map((i) => i.no));
+    for (const f of ['unmatched', 'match-review']) {
+      for (const no of csvFirstColumn(`data/review/hsc/${f}.csv`)) expect(all).toContain(no);
+    }
+    // 找不到座標 22 筆、待確認比對 10 筆，是依原始資料算的，跟有沒有處理過無關
+    expect(items.filter((i) => i.kind === 'unmatched')).toHaveLength(22);
+    expect(items.filter((i) => i.kind === 'match-review')).toHaveLength(10);
+  });
+
+  it('沒有處理結果時，工具的分類跟匯入流程完全相同', () => {
+    const noReview = items.filter((i) => i.review === null);
+    const unmatched = new Set(csvFirstColumn('data/review/hsc/unmatched.csv'));
+    const matchReview = new Set(csvFirstColumn('data/review/hsc/match-review.csv'));
+    for (const i of noReview) {
+      expect(i.kind === 'unmatched' ? unmatched.has(i.no) : matchReview.has(i.no)).toBe(true);
+    }
   });
 
   it('附上公園資料的提示（吉羊公園）', () => {

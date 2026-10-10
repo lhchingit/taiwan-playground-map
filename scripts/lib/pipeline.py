@@ -67,7 +67,7 @@ def run(root, adapter, today, parks=None):
                 target["lat"], target["lng"] = rec["coord"]
                 target["source_coords"] = (rec.get("coord_label")
                                            or f"OpenStreetMap {rec['coord_ref']}（{adapter.SOURCE_SHORT}編號 {rec['ext_no']}）")
-            target.setdefault("official_ref", []).append(rec["official_ref"])
+            target.setdefault("official_ref", []).extend([rec["official_ref"], *rec.get("merged_refs", [])])
             continue
 
         if not rec["coord"]:

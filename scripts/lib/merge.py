@@ -48,5 +48,6 @@ def new_place(rec, uid, display_name, keys, src_id, today):
         attrs=attrs,
         parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
         source_coords=rec.get("coord_label") or f"OpenStreetMap {rec['coord_ref']}（比對方式：{rec['match_method']}）",
-        official_ref=[rec["official_ref"]],
+        # 合併進來的重複清冊資料也保留原文
+        official_ref=[rec["official_ref"], *rec.get("merged_refs", [])],
     )

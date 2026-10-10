@@ -60,6 +60,8 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
 
 之後資料有更新，重新跑 `seed` 即可，不用再上線一次。
 
+**場地從種子資料拿掉時**（例如人工確認已廢除、待實地確認）：`seed` 預設只會警告「資料庫有、places.json 沒有」，不會刪除。確認要刪的話，在 Run workflow 勾選 **prune**：試跑會先列出會刪除的場地，匯入時才真的刪除。有使用者回報資料的場地不會被刪，會列出來交給人工處理。
+
 ## 出錯時
 
 - **資料有問題、要先收回**：`hsq` + `unlaunch`。訪客立刻看不到新竹縣（RLS＋清快取），資料留在資料庫，修正後重新 `seed`、`launch`。

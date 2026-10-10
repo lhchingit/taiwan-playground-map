@@ -2,6 +2,7 @@
 //   pnpm seed                       全部縣市
 //   pnpm seed --city hsq            只匯入新竹縣
 //   pnpm seed --dry-run             試跑：做完全部步驟後回滾，只印出會改變什麼
+//   pnpm seed --prune               也刪除資料庫有、places.json 沒有的場地（有使用者回報資料的拒絕刪除）
 // 預設只連本機 Supabase；連其他資料庫要設 DATABASE_URL 並加上 --allow-remote。
 // 匯入不會改上線狀態，上線／下線用 pnpm city。
 import { connect, isLocalDatabase, parseSeedArgs, resolveDatabaseUrl } from './seed/cli';
@@ -38,9 +39,20 @@ function print(code: string, s: SeedSummary) {
         : `上線狀態：${l.code} 尚未上線（確認資料後執行 pnpm city launch ${l.code}）`,
     );
   }
-  if (s.orphanPlaces.length > 0) {
+  if (s.pruned.length > 0) {
+    console.log(
+      `${s.dryRun ? '會刪除' : '已刪除'} ${s.pruned.length} 處不在 places.json 的場地：${s.pruned.join(', ')}`,
+    );
+  }
+  if (s.pruneBlocked.length > 0) {
     console.warn(
-      `注意：資料庫有 ${s.orphanPlaces.length} 處場地不在 places.json，未自動刪除：${s.orphanPlaces.join(', ')}`,
+      `注意：${s.pruneBlocked.join(', ')} 不在 places.json，但有使用者回報資料，沒有刪除；請人工處理。`,
+    );
+  }
+  if (s.orphanPlaces.length > s.pruneBlocked.length) {
+    const left = s.orphanPlaces.filter((id) => !s.pruneBlocked.includes(id));
+    console.warn(
+      `注意：資料庫有 ${left.length} 處場地不在 places.json，未刪除：${left.join(', ')}（加上 --prune 才會刪除）`,
     );
   }
 }
@@ -65,7 +77,7 @@ async function main() {
   const db = connect(url);
   try {
     for (const [code, seed] of targets) {
-      const summary = await runSeed(db, seed, osm, { dryRun: args.dryRun });
+      const summary = await runSeed(db, seed, osm, { dryRun: args.dryRun, prune: args.prune });
       print(code, summary);
       // 真的寫入、而且有變動時，通知網站清快取
       if (!summary.dryRun && Object.values(summary.changes).some((n) => n > 0)) {
