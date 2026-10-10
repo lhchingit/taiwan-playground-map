@@ -94,7 +94,9 @@ export default function PlaceMap(props: PlaceMapProps) {
     const id = latest.current.focus?.id;
     const p = latest.current.results.find((r) => r.id === id);
     if (!m || !p) return;
-    m.flyTo({ center: [p.lng, p.lat], zoom: Math.max(m.getZoom(), 14.5) });
+    // 桌機的詳情面板在右側，把場地往左移，避免被面板蓋住（同原型）
+    const offset: [number, number] = window.innerWidth > 820 ? [-190, 0] : [0, 0];
+    m.flyTo({ center: [p.lng, p.lat], zoom: Math.max(m.getZoom(), 14.5), offset });
   }, [focusSeq]);
 
   return (

@@ -137,14 +137,14 @@ isOneToOne: false
                   ]
                 },"places": {
                   Row: {
-                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"created_at": string,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"id": string,"indoor": boolean,"name": string,"size_class": string | null,"status": string,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"updated_at": string
+                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"coord_source": string | null,"created_at": string,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"id": string,"indoor": boolean,"name": string,"size_class": string | null,"status": string,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"id": string,"indoor"?: boolean,"name": string,"size_class"?: string | null,"status"?: string,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"coord_source"?: string | null,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"id": string,"indoor"?: boolean,"name": string,"size_class"?: string | null,"status"?: string,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"updated_at"?: string
                   }
                   Update: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"id"?: string,"indoor"?: boolean,"name"?: string,"size_class"?: string | null,"status"?: string,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"coord_source"?: string | null,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"id"?: string,"indoor"?: boolean,"name"?: string,"size_class"?: string | null,"status"?: string,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {

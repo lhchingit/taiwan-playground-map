@@ -93,6 +93,15 @@ describe('pnpm seed', () => {
     expect(others?.n).toBe(0);
   });
 
+  it('每個場地都有座標來源，而且都來自 OpenStreetMap（不可以是 Google）', async () => {
+    const [r] = await sql`
+      SELECT count(*) FILTER (WHERE coord_source IS NULL)::int AS missing,
+             count(*) FILTER (WHERE coord_source ILIKE '%google%')::int AS google,
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS other
+      FROM places WHERE id NOT LIKE 'test-%'`;
+    expect(r).toEqual({ missing: 0, google: 0, other: 0 });
+  });
+
   it('沒有場地的縣市也有範圍（OSM 行政界），前端才能判斷要不要載入', async () => {
     const osm = loadOsmBounds();
     const bounds = await sql`

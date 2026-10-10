@@ -1,6 +1,6 @@
 # 竹市放電地圖（playmap）
 
-新竹市親子遊樂場與公園地圖。目前完成 P0（專案骨架與資料匯入）與 P1 的首頁（篩選、清單、地圖）；場地頁見 `docs/tasks/P1-prototype-port.md`。
+新竹市親子遊樂場與公園地圖。目前完成 P0（專案骨架與資料匯入）與 P1（首頁的篩選、清單、地圖，以及每個場地的獨立頁面）。
 
 ## 從 clone 到跑起來
 
@@ -46,7 +46,7 @@ pnpm test:e2e                              # 需要步驟 3～5；會自動 buil
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生 `places.json`、`places.csv`、`data/review/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
 | `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
-| `pnpm screenshots` | 原型與正式版並排截圖（正式版要先在 3100 埠執行），輸出到 `docs/screenshots/p1b/` |
+| `pnpm screenshots p1b`／`p1c` | 原型與正式版並排截圖（正式版要先在 3100 埠執行）：p1b 首頁篩選、p1c 場地詳情，輸出到 `docs/screenshots/<組別>/` |
 
 ## 目錄
 
@@ -66,9 +66,11 @@ pnpm test:e2e                              # 需要步驟 3～5；會自動 buil
 | `scripts/seed.ts`、`scripts/seed/` | `pnpm seed`：檢查 places.json 後寫入資料庫 |
 | `supabase/migrations/0001_init.sql` | 初版資料表、索引、attrs 同步 trigger、RLS |
 | `supabase/migrations/0002_public_views.sql` | 首頁用的公開 view：`city_bounds`（縣市範圍）、`place_cards`（清單與地圖） |
-| `supabase/pending/0003_auth_roles.sql` | 會員角色、審核、照片、權限（P3 才放回 migrations） |
-| `src/app/` | 頁面：`/` 導向 `/hsinchu-city`；`/[city]` 首頁；`/api/cities/[code]/places` 各縣市場地（快取 1 小時） |
-| `src/components/home/` | 首頁元件：篩選面板、出發點、清單、地圖 |
+| `supabase/migrations/0003_place_coord_source.sql` | 場地的座標來源說明（`coord_source`） |
+| `supabase/pending/0004_auth_roles.sql` | 會員角色、審核、照片、權限（P3 才放回 migrations） |
+| `src/app/` | 頁面：`/` 導向 `/hsinchu-city`；`/[city]` 首頁；`/[city]/places/[id]` 場地頁；`/api/cities/[code]/places`、`/api/places/[id]`（快取 1 小時）；`sitemap.xml`、`robots.txt` |
+| `src/components/home/` | 首頁元件：篩選面板、出發點、清單、地圖、詳情面板 |
+| `src/components/place/` | 場地詳情內容（場地頁與首頁面板共用） |
 | `src/lib/filter/` | 篩選、距離、時間估算、網址轉換（純函式） |
 | `src/lib/` | 縣市載入判斷、格式、資料讀取、地址搜尋等 |
 | `src/types/` | `place.ts` 手寫領域型別；`database.ts` 由 `pnpm typegen` 產生 |
