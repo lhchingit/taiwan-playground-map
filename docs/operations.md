@@ -39,6 +39,26 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
 | `SITE_URL` | 正式網址，例如 `https://example.tw`（結尾不要 `/`） |
 | `REVALIDATE_SECRET` | 第 2 步的密鑰 |
 
+### 4. 登入（P3）
+
+網站只用 anon key，登入 session 存在 httpOnly cookie，不需要 service role key。上線前在 Supabase 後台設定：
+
+1. **Authentication → URL Configuration**
+   - Site URL：正式網址，例如 `https://<網域>`。
+   - Redirect URLs：`https://<網域>/**`。只有清單裡的網址可以收到登入結果。
+2. **Google 登入**
+   - 在 Google Cloud Console 建立「OAuth 用戶端 ID」，類型選「網頁應用程式」。
+   - 「已授權的重新導向 URI」填 Supabase 的 callback：`https://<專案代碼>.supabase.co/auth/v1/callback`。
+   - 把 Client ID、Secret 填到 Supabase 的 Authentication → Providers → Google。
+   - OAuth 同意畫面的應用程式名稱填「全台放電地圖」，範圍只要 email、profile。
+3. **Email 登入連結**
+   - Authentication → Emails → Templates 的「Magic Link」與「Confirm signup」兩個範本，主旨與內容都改成 `supabase/templates/magic_link.html`。
+   - 連結格式是 `{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=email`，網站在 `/auth/confirm` 驗證。
+4. **寄信服務（SMTP）**：Supabase 內建的寄信服務每小時只能寄很少封，只適合測試，**上線前一定要設定自訂 SMTP**（Authentication → Emails → SMTP Settings），例如 Amazon SES、Resend、Postmark。寄件人用自己網域的信箱，並設定 SPF／DKIM，避免被當成垃圾信。
+5. **頻率限制**：Authentication → Rate Limits 的寄信上限依 SMTP 方案調整。
+
+本機開發：Google 預設關閉（登入頁顯示「尚未設定」）；Email 登入信可以在 Mailpit（http://127.0.0.1:54324）看到。
+
 ## 匯入一個新縣市（以新竹縣 `hsq` 為例）
 
 1. **本機準備資料**（P4 任務，見 `docs/tasks/P4-expansion.md`）

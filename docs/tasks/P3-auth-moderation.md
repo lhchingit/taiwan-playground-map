@@ -18,7 +18,7 @@
 | 方式 | 本階段 | 備註 |
 |---|---|---|
 | Google | 做 | Supabase 內建 |
-| LINE | 做 | **先調查再實作**：確認 Supabase 目前是否支援自訂 OAuth／OIDC provider。若不支援，提出替代方案（例如用 Edge Function 處理 LINE Login 流程再建立 session）並比較風險，寫進 `docs/decisions.md` 經我確認後才實作 |
+| LINE | 做 | **先調查再實作**：確認 Supabase 目前是否支援自訂 OAuth／OIDC provider。若不支援，提出替代方案（例如用 Edge Function 處理 LINE Login 流程再建立 session）並比較風險，寫進 `docs/decisions.md` 經我確認後才實作。**調查結果（2026-10-11）：** 自訂 OIDC 不能用（LINE 網頁登入的 ID token 是 HS256）；P3(b) 先不做，之後實驗 OAuth2 手動模式，見 D10 |
 | Email 登入連結 | 做 | 免密碼 |
 | Facebook、Apple | 不做 | 見 decisions D10 |
 

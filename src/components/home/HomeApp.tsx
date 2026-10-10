@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { AuthButton } from '@/components/auth/AuthButton';
 import { citiesToLoad, type CityBounds } from '@/lib/cities';
 import { loadCityPlaces } from '@/lib/city-cache';
 import { loadPlaceDetail } from '@/lib/detail-cache';
@@ -211,7 +212,10 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
     <main className="app">
       <div className="side">
         <header className="head">
-          <h1>全台放電地圖</h1>
+          <div className="head-top">
+            <h1>全台放電地圖</h1>
+            <AuthButton />
+          </div>
           <p className="sub">
             {city.name}親子遊樂場與公園．資料 {places.length} 處
           </p>

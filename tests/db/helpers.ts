@@ -11,6 +11,7 @@ interface LocalSupabase {
   ANON_KEY: string;
   SERVICE_ROLE_KEY: string;
   DB_URL: string;
+  MAILPIT_URL?: string;
 }
 
 function localSupabase(): LocalSupabase {
@@ -35,6 +36,8 @@ function localSupabase(): LocalSupabase {
 const env = localSupabase();
 
 export const DB_URL = env.DB_URL;
+/** 本機 Supabase 的收信工具（Email 登入連結的 e2e 用） */
+export const MAILPIT_URL = env.MAILPIT_URL ?? process.env.MAILPIT_URL ?? 'http://127.0.0.1:54324';
 
 export function anonClient() {
   return createClient<Database>(env.API_URL, env.ANON_KEY, {

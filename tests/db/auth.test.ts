@@ -563,4 +563,34 @@ describe('刪除帳號', () => {
     expect((await sql`SELECT 1 FROM photos WHERE user_id = ${leaving.id}`).length).toBe(0);
     expect((await sql`SELECT 1 FROM profiles WHERE id = ${leaving.id}`).length).toBe(0);
   });
+
+  it('delete_my_account()：會員自己刪除帳號，只刪自己（「我的貢獻」頁）', async () => {
+    const leaving = await people.create('member');
+    const { data } = await suggest(leaving, { payload: { key: 'shade', value: 'y' } });
+    expect((await review(modHsc, data!.id, true)).error).toBeNull();
+
+    const { error } = await leaving.client.rpc('delete_my_account');
+    expect(error).toBeNull();
+
+    expect((await sql`SELECT 1 FROM auth.users WHERE id = ${leaving.id}`).length).toBe(0);
+    expect((await sql`SELECT 1 FROM profiles WHERE id = ${leaving.id}`).length).toBe(0);
+    const [s] = await sql`SELECT status, user_id FROM edit_suggestions WHERE id = ${data!.id}`;
+    expect(s).toMatchObject({ status: 'accepted', user_id: null });
+    // 其他人不受影響
+    expect((await sql`SELECT 1 FROM profiles WHERE id = ${member.id}`).length).toBe(1);
+  });
+
+  it('delete_my_account()：被停權的人也能刪除自己的帳號', async () => {
+    const banned = await people.create('member', { banned: true });
+    expect((await banned.client.rpc('delete_my_account')).error).toBeNull();
+    expect((await sql`SELECT 1 FROM auth.users WHERE id = ${banned.id}`).length).toBe(0);
+  });
+
+  it('delete_my_account()：匿名使用者不能呼叫', async () => {
+    const [{ n: before } = { n: 0 }] = await sql`SELECT count(*)::int AS n FROM auth.users`;
+    const { error } = await anon.rpc('delete_my_account');
+    expect(error).not.toBeNull();
+    const [{ n: after } = { n: 0 }] = await sql`SELECT count(*)::int AS n FROM auth.users`;
+    expect(after).toBe(before);
+  });
 });
