@@ -1,6 +1,6 @@
 # 竹市放電地圖（playmap）
 
-新竹市親子遊樂場與公園地圖。目前完成 P0（專案骨架與資料匯入），還沒有介面；下一步見 `docs/tasks/P1-prototype-port.md`。
+新竹市親子遊樂場與公園地圖。目前完成 P0（專案骨架與資料匯入）與 P1 的首頁（篩選、清單、地圖）；場地頁見 `docs/tasks/P1-prototype-port.md`。
 
 ## 從 clone 到跑起來
 
@@ -22,14 +22,17 @@ pnpm exec supabase db reset
 # 4. 匯入種子資料（可以重複執行）
 pnpm seed
 
-# 5. 檢查
+# 5. 產生 .env.local（Next.js 連本機 Supabase 用）
+pnpm env:local
+
+# 6. 開發伺服器：http://localhost:3000（會導向 /hsinchu-city）
+pnpm dev
+
+# 檢查
 pnpm lint && pnpm typecheck && pnpm test   # 單元測試，不需要資料庫
 pnpm test:db                               # 資料庫測試（RLS、seed），需要步驟 3、4
 pnpm exec playwright install chromium      # 第一次跑 e2e 前
-pnpm test:e2e
-
-# 開發伺服器
-pnpm dev
+pnpm test:e2e                              # 需要步驟 3～5；會自動 build 並啟動在 3100 埠
 ```
 
 本機 Supabase 的網址與金鑰用 `pnpm exec supabase status` 查看；Studio 在 http://127.0.0.1:54323 。
@@ -42,6 +45,8 @@ pnpm dev
 | `pnpm format` | 用 Prettier 排版 |
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生 `places.json`、`places.csv`、`data/review/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
+| `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
+| `pnpm screenshots` | 原型與正式版並排截圖（正式版要先在 3100 埠執行），輸出到 `docs/screenshots/p1b/` |
 
 ## 目錄
 
@@ -52,7 +57,7 @@ pnpm dev
 | `docs/tasks/` | 依序實作的任務說明（P0～P4；P4 是拓展到新竹縣、桃園市、苗栗縣） |
 | `docs/prototype/playmap.html` | 可直接打開的原型，介面與行為以它為準 |
 | `data/seed/places.json` | 新竹市 72 處種子資料（含來源） |
-| `data/raw/` | 養工處清冊原文、清冊與 OpenStreetMap 的比對結果 |
+| `data/raw/` | 養工處清冊原文、清冊與 OpenStreetMap 的比對結果、各縣市 OSM 行政界範圍 |
 | `data/review/` | 匯入時需要人工處理的清單（P2） |
 | `scripts/build_seed.py` | 產生 places.json v0.1（手工整理的 10 筆） |
 | `scripts/import_hccg.py` | 用清冊轉接器匯入、換成 OSM 座標，輸出 v0.2 |
@@ -60,10 +65,16 @@ pnpm dev
 | `scripts/lib/` | 轉接器共用：讀寫檔、屬性對照、比對合併、review 清單 |
 | `scripts/seed.ts`、`scripts/seed/` | `pnpm seed`：檢查 places.json 後寫入資料庫 |
 | `supabase/migrations/0001_init.sql` | 初版資料表、索引、attrs 同步 trigger、RLS |
-| `supabase/pending/0002_auth_roles.sql` | 會員角色、審核、照片、權限（P3 才放回 migrations） |
+| `supabase/migrations/0002_public_views.sql` | 首頁用的公開 view：`city_bounds`（縣市範圍）、`place_cards`（清單與地圖） |
+| `supabase/pending/0003_auth_roles.sql` | 會員角色、審核、照片、權限（P3 才放回 migrations） |
+| `src/app/` | 頁面：`/` 導向 `/hsinchu-city`；`/[city]` 首頁；`/api/cities/[code]/places` 各縣市場地（快取 1 小時） |
+| `src/components/home/` | 首頁元件：篩選面板、出發點、清單、地圖 |
+| `src/lib/filter/` | 篩選、距離、時間估算、網址轉換（純函式） |
+| `src/lib/` | 縣市載入判斷、格式、資料讀取、地址搜尋等 |
 | `src/types/` | `place.ts` 手寫領域型別；`database.ts` 由 `pnpm typegen` 產生 |
 | `tests/unit/`、`tests/db/`、`tests/e2e/` | 單元測試、資料庫測試、端對端測試 |
 | `tests/fixtures/` | 測試用資料（`filter-cases.json` 是原型算出的 21 個篩選標準答案） |
+| `docs/screenshots/` | 原型與正式版的並排截圖 |
 | `.claude/commands/new-attribute.md` | 新增屬性的固定流程 |
 
 地圖資料 © OpenStreetMap contributors（ODbL）。

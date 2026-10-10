@@ -55,6 +55,12 @@ isOneToOne: false
       foreignKeyName: "edit_suggestions_place_id_fkey"
       columns: ["place_id"]
 isOneToOne: false
+      referencedRelation: "place_cards"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "edit_suggestions_place_id_fkey"
+      columns: ["place_id"]
+isOneToOne: false
       referencedRelation: "places"
       referencedColumns: ["id"]
     }
@@ -77,6 +83,12 @@ isOneToOne: false
 isOneToOne: false
       referencedRelation: "attribute_defs"
       referencedColumns: ["key"]
+    },{
+      foreignKeyName: "place_attributes_place_id_fkey"
+      columns: ["place_id"]
+isOneToOne: false
+      referencedRelation: "place_cards"
+      referencedColumns: ["id"]
     },{
       foreignKeyName: "place_attributes_place_id_fkey"
       columns: ["place_id"]
@@ -107,6 +119,12 @@ isOneToOne: false
       foreignKeyName: "place_parking_place_id_fkey"
       columns: ["place_id"]
 isOneToOne: false
+      referencedRelation: "place_cards"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "place_parking_place_id_fkey"
+      columns: ["place_id"]
+isOneToOne: false
       referencedRelation: "places"
       referencedColumns: ["id"]
     },{
@@ -134,6 +152,12 @@ isOneToOne: false
       columns: ["city"]
 isOneToOne: false
       referencedRelation: "cities"
+      referencedColumns: ["code"]
+    },{
+      foreignKeyName: "places_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "city_bounds"
       referencedColumns: ["code"]
     }
                   ]
@@ -168,7 +192,21 @@ isOneToOne: false
                 }
           }
           Views: {
-            "geography_columns": {
+            "city_bounds": {
+                  Row: {
+                    "bbox": (number)[] | null,"code": string | null,"launched": boolean | null,"name": string | null,"slug": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                           "bbox"?: (number)[] | null,"code"?: string | null,"launched"?: never,"name"?: string | null,"slug"?: string | null
+                         }
+                        Update: {
+                           "bbox"?: (number)[] | null,"code"?: string | null,"launched"?: never,"name"?: string | null,"slug"?: string | null
+                         }
+                        Relationships: [
+                    
+                  ]
+                },"geography_columns": {
                   Row: {
                     "coord_dimension": number | null,"f_geography_column": unknown,"f_table_catalog": unknown,"f_table_name": unknown,"f_table_schema": unknown,"srid": number | null,"type": string | null
                   }
@@ -189,6 +227,26 @@ isOneToOne: false
                          }
                         Relationships: [
                     
+                  ]
+                },"place_cards": {
+                  Row: {
+                    "age_max": number | null,"age_min": number | null,"attrs": Json | null,"city": string | null,"district": string | null,"fee": string | null,"id": string | null,"indoor": boolean | null,"lat": number | null,"lng": number | null,"name": string | null,"parking": Json | null,"size": string | null,"status": string | null,"stay": string | null
+                  }
+                  ComputedFields: never
+                  Relationships: [
+                    {
+      foreignKeyName: "places_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "cities"
+      referencedColumns: ["code"]
+    },{
+      foreignKeyName: "places_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "city_bounds"
+      referencedColumns: ["code"]
+    }
                   ]
                 }
           }

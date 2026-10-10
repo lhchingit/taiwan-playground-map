@@ -69,6 +69,8 @@ export type ParkingRow = {
 export type CityRow = {
   code: string;
   bbox: Bbox;
+  /** places：場地座標外擴 1 公里；osm：OSM 行政界 */
+  bboxSource: 'places' | 'osm';
 };
 
 export interface SeedRows {
@@ -103,7 +105,29 @@ export function toAttributeDefs(labels: SeedFile['labels']): AttributeDefRow[] {
   ];
 }
 
-export function toSeedRows(seed: SeedFile): SeedRows {
+/**
+ * 縣市範圍：有場地的縣市用場地座標外擴 1 公里；沒有場地的縣市用 OSM 行政界
+ * （data/raw/osm-city-bounds.json），讓前端能判斷出發點附近要載入哪些縣市（decisions D4）。
+ */
+export function toCityRows(places: SeedFile['places'], osmBounds: Readonly<Record<string, Bbox>>) {
+  const byCity = new Map<string, { lat: number; lng: number }[]>();
+  for (const p of places) byCity.set(p.city, [...(byCity.get(p.city) ?? []), p]);
+  return [
+    ...[...byCity].map(([code, points]) => ({
+      code,
+      bbox: bboxWithBuffer(points, 1),
+      bboxSource: 'places' as const,
+    })),
+    ...Object.entries(osmBounds)
+      .filter(([code]) => !byCity.has(code))
+      .map(([code, bbox]) => ({ code, bbox, bboxSource: 'osm' as const })),
+  ];
+}
+
+export function toSeedRows(
+  seed: SeedFile,
+  osmBounds: Readonly<Record<string, Bbox>> = {},
+): SeedRows {
   const sources = Object.entries(seed.sources).map(([id, s]) => ({
     id,
     label: s.label,
@@ -111,9 +135,7 @@ export function toSeedRows(seed: SeedFile): SeedRows {
     kind: s.kind,
   }));
 
-  const byCity = new Map<string, { lat: number; lng: number }[]>();
-  for (const p of seed.places) byCity.set(p.city, [...(byCity.get(p.city) ?? []), p]);
-  const cities = [...byCity].map(([code, points]) => ({ code, bbox: bboxWithBuffer(points, 1) }));
+  const cities = toCityRows(seed.places, osmBounds);
 
   const places = seed.places.map((p) => ({
     id: p.id,

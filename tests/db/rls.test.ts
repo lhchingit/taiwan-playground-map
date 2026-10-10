@@ -91,6 +91,19 @@ describe('匿名使用者不能寫入', () => {
       match: { place_id: park },
       update: { status: 'accepted' },
     },
+    // 公開的 view 只能讀；city_bounds 以擁有者權限執行，若能寫入會繞過 RLS
+    {
+      table: 'city_bounds',
+      insert: { code: 'tst', slug: 'test', name: '測試' },
+      match: { code: 'hsq' },
+      update: { name: '改名', bbox: [0, 0, 1, 1] },
+    },
+    {
+      table: 'place_cards',
+      insert: { id: 'test-anon', name: '測試', city: 'hsc' },
+      match: { id: park },
+      update: { name: '改名' },
+    },
   ] as const;
 
   // supabase-js 的表名型別是字面值聯集，這裡逐表測試，用寬鬆型別呼叫
@@ -100,7 +113,8 @@ describe('匿名使用者不能寫入', () => {
   for (const c of cases) {
     it(`${c.table}：新增失敗`, async () => {
       const { error } = await from(c.table).insert(c.insert as never);
-      expect(error?.code).toBe('42501'); // 違反 RLS
+      // 42501：違反 RLS 或沒有權限；55000：view 本身不能寫入（Postgres 先檢查這個才檢查權限）
+      expect(['42501', '55000']).toContain(error?.code);
     });
 
     it(`${c.table}：修改不到任何一列`, async () => {
@@ -130,12 +144,14 @@ describe('縣市上線狀態控制匿名讀取（以新竹縣測試）', () => {
     const attrs = await anon.from('place_attributes').select('place_id').in('place_id', ids);
     const parking = await anon.from('place_parking').select('place_id').in('place_id', ids);
     const city = await anon.from('cities').select('code').eq('code', 'hsq');
-    for (const r of [places, attrs, parking, city]) expect(r.error).toBeNull();
+    const cards = await anon.from('place_cards').select('id').in('id', ids);
+    for (const r of [places, attrs, parking, city, cards]) expect(r.error).toBeNull();
     return {
       places: places.data?.length,
       attrs: attrs.data?.length,
       parking: parking.data?.length,
       city: city.data?.length,
+      cards: cards.data?.length,
     };
   }
 
@@ -153,8 +169,10 @@ describe('縣市上線狀態控制匿名讀取（以新竹縣測試）', () => {
     await setLaunched(false);
   });
 
-  it('未上線時（launched_at 為 NULL）讀不到場地、屬性、停車與縣市', async () => {
-    expect(await anonSees()).toEqual({ places: 0, attrs: 0, parking: 0, city: 0 });
+  const hidden = { places: 0, attrs: 0, parking: 0, city: 0, cards: 0 };
+
+  it('未上線時（launched_at 為 NULL）讀不到場地、屬性、停車、縣市與 place_cards', async () => {
+    expect(await anonSees()).toEqual(hidden);
   });
 
   it('上線後讀得到', async () => {
@@ -164,11 +182,70 @@ describe('縣市上線狀態控制匿名讀取（以新竹縣測試）', () => {
       attrs: rows.placeAttributes.length,
       parking: 2,
       city: 1,
+      cards: 2,
     });
   });
 
   it('設回 NULL 後又讀不到', async () => {
     await setLaunched(false);
-    expect(await anonSees()).toEqual({ places: 0, attrs: 0, parking: 0, city: 0 });
+    expect(await anonSees()).toEqual(hidden);
+  });
+
+  it('未上線時 city_bounds 仍看得到範圍（前端靠它判斷要不要載入）', async () => {
+    const { data, error } = await anon.from('city_bounds').select('*').eq('code', 'hsq');
+    expect(error).toBeNull();
+    expect(data).toEqual([
+      expect.objectContaining({ code: 'hsq', slug: 'hsinchu-county', launched: false }),
+    ]);
+    expect(data?.[0]?.bbox).toHaveLength(4);
+  });
+});
+
+describe('首頁用的公開 view', () => {
+  it('匿名與登入使用者對 view 只有讀取權限', async () => {
+    const rows = await sql`
+      SELECT r AS role, v AS view, p AS privilege, has_table_privilege(r, v, p) AS granted
+      FROM unnest(array['anon', 'authenticated']) r,
+           unnest(array['city_bounds', 'place_cards']) v,
+           unnest(array['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'TRUNCATE']) p`;
+    for (const r of rows)
+      expect([r.role, r.view, r.privilege, r.granted]).toEqual([
+        r.role,
+        r.view,
+        r.privilege,
+        r.privilege === 'SELECT',
+      ]);
+  });
+
+  it('city_bounds：4 個縣市都有範圍，只公開這幾個欄位', async () => {
+    const { data, error } = await anon.from('city_bounds').select('*').order('code');
+    expect(error).toBeNull();
+    expect(data?.map((c) => [c.code, c.launched])).toEqual([
+      ['hsc', true],
+      ['hsq', false],
+      ['mlc', false],
+      ['tyc', false],
+    ]);
+    for (const c of data ?? []) {
+      expect(Object.keys(c).sort()).toEqual(['bbox', 'code', 'launched', 'name', 'slug']);
+      expect(c.bbox).toHaveLength(4);
+    }
+  });
+
+  it('place_cards：新竹市 72 處，座標、attrs、停車都正確', async () => {
+    const { data, error } = await anon.from('place_cards').select('*').eq('city', 'hsc');
+    expect(error).toBeNull();
+    expect(data).toHaveLength(72);
+    const byId = new Map(data?.map((p) => [p.id, p]));
+    const park = byId.get('hsc-hsinchu-park');
+    expect(park?.lat).toBeCloseTo(24.799191, 6);
+    expect(park?.lng).toBeCloseTo(120.977891, 6);
+    expect((park?.attrs as Record<string, string>).sandpit).toBe('y');
+    expect(park?.parking).toEqual({ type: 'u', fee: 'u', spaces: null });
+    expect(byId.get('hsc-nanliao-sand-water')?.parking).toEqual({
+      type: 'lot',
+      fee: 'paid',
+      spaces: null,
+    });
   });
 });

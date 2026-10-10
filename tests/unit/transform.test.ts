@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { readAttr, type SeedFile } from '@/types/place';
 import fixture from '../fixtures/seed-test.json';
-import { toAttributeDefs, toSeedRows } from '../../scripts/seed/transform';
+import { parseOsmBounds } from '../../scripts/seed/osm-bounds';
+import { toAttributeDefs, toCityRows, toSeedRows } from '../../scripts/seed/transform';
 
 const seed = fixture as SeedFile;
 
@@ -51,6 +52,41 @@ describe('toSeedRows', () => {
 
   it('依縣市產生範圍', () => {
     expect(rows.cities.map((c) => c.code)).toEqual(['hsq']);
+  });
+});
+
+describe('toCityRows', () => {
+  const osm = {
+    hsq: [120.9, 24.4, 121.4, 24.9] as [number, number, number, number],
+    tyc: [121.0, 24.6, 121.5, 25.1] as [number, number, number, number],
+  };
+
+  it('有場地的縣市用場地座標外擴，沒有場地的才用 OSM 行政界', () => {
+    const cities = toCityRows(seed.places, osm);
+    expect(cities.map((c) => [c.code, c.bboxSource])).toEqual([
+      ['hsq', 'places'],
+      ['tyc', 'osm'],
+    ]);
+    expect(cities[0]?.bbox).not.toEqual(osm.hsq);
+    expect(cities[1]?.bbox).toEqual(osm.tyc);
+  });
+
+  it('沒有 OSM 資料時只產生有場地的縣市', () => {
+    expect(toCityRows(seed.places, {}).map((c) => c.code)).toEqual(['hsq']);
+  });
+});
+
+describe('parseOsmBounds', () => {
+  it('讀出 [西, 南, 東, 北]', () => {
+    expect(parseOsmBounds({ cities: { hsq: { bbox: [120.9, 24.4, 121.4, 24.9] } } })).toEqual({
+      hsq: [120.9, 24.4, 121.4, 24.9],
+    });
+  });
+
+  it('順序錯誤（西 > 東）時丟錯', () => {
+    expect(() =>
+      parseOsmBounds({ cities: { hsq: { bbox: [121.4, 24.4, 120.9, 24.9] } } }),
+    ).toThrow();
   });
 });
 

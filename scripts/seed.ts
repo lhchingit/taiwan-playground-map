@@ -2,6 +2,7 @@
 // 預設連本機 Supabase；要連其他資料庫請設 DATABASE_URL，並加上 --allow-remote。
 import { readFileSync } from 'node:fs';
 import postgres from 'postgres';
+import { loadOsmBounds } from './seed/osm-bounds';
 import { runSeed } from './seed/run';
 import { assertValidSeed } from './seed/validate';
 
@@ -20,11 +21,14 @@ async function main() {
 
   const db = postgres(url, { onnotice: () => {} });
   try {
-    const s = await runSeed(db, seed);
+    const s = await runSeed(db, seed, loadOsmBounds());
     console.log('各表筆數');
     for (const [table, n] of Object.entries(s.counts)) console.log(`  ${table.padEnd(18)} ${n}`);
-    console.log('縣市範圍 [西, 南, 東, 北]（場地座標外擴 1 公里）');
-    for (const c of s.bboxes) console.log(`  ${c.code} ${JSON.stringify(c.bbox)}`);
+    console.log('縣市範圍 [西, 南, 東, 北]');
+    for (const c of s.bboxes) {
+      const how = c.source === 'places' ? '場地座標外擴 1 公里' : 'OSM 行政界';
+      console.log(`  ${c.code} ${JSON.stringify(c.bbox)}（${how}）`);
+    }
     console.log('每個場地已知屬性數（y 有／n 無；其餘為未知）');
     for (const p of s.knownAttrs)
       console.log(`  ${p.id.padEnd(28)} y ${String(p.y).padStart(2)}  n ${p.n}  ${p.name}`);

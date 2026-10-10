@@ -1,4 +1,6 @@
-// P0 不做介面；P1 依 docs/prototype/playmap.html 移植
+import { redirect } from 'next/navigation';
+
+// 目前只有新竹市上線（decisions D12）
 export default function Home() {
-  return <main>竹市放電地圖建置中</main>;
+  redirect('/hsinchu-city');
 }

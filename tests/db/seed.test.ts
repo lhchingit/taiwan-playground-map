@@ -2,6 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { afterAll, describe, expect, it } from 'vitest';
 import { readAttr, type SeedFile } from '@/types/place';
+import { loadOsmBounds } from '../../scripts/seed/osm-bounds';
 import { runSeed } from '../../scripts/seed/run';
 import { adminSql, anonClient } from './helpers';
 
@@ -44,7 +45,7 @@ describe('pnpm seed', () => {
 
   it('重跑不會改變任何資料（筆數、更新時間、停車 id、上線時間）', async () => {
     const before = await snapshot();
-    await runSeed(sql, seed);
+    await runSeed(sql, seed, loadOsmBounds());
     expect(await snapshot()).toEqual(before);
   });
 
@@ -90,6 +91,18 @@ describe('pnpm seed', () => {
     const [others] =
       await sql`SELECT count(*)::int AS n FROM cities WHERE code <> 'hsc' AND launched_at IS NOT NULL`;
     expect(others?.n).toBe(0);
+  });
+
+  it('沒有場地的縣市也有範圍（OSM 行政界），前端才能判斷要不要載入', async () => {
+    const osm = loadOsmBounds();
+    const bounds = await sql`
+      SELECT code, bbox::float8[] AS bbox FROM cities WHERE code <> 'hsc' ORDER BY code`;
+    expect(bounds).toEqual(
+      Object.keys(osm)
+        .filter((c) => c !== 'hsc')
+        .sort()
+        .map((code) => ({ code, bbox: osm[code] })),
+    );
   });
 
   it('匿名使用者讀得到新竹市全部場地', async () => {

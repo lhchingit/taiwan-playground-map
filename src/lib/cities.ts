@@ -1,0 +1,37 @@
+// 依出發點決定要載入哪些縣市（decisions D4）。純函式，距離在前端計算，出發點不送到伺服器。
+import { haversineKm, type Origin } from './filter';
+
+export interface CityBounds {
+  code: string;
+  slug: string;
+  name: string;
+  /** [西, 南, 東, 北]；null 代表還沒有範圍 */
+  bbox: readonly number[] | null;
+  launched: boolean;
+}
+
+/** D4：範圍與出發點距離在這個公里數內的縣市都要載入 */
+export const LOAD_RADIUS_KM = 20;
+
+/** 出發點到範圍的最短直線距離（公里）；在範圍內為 0 */
+export function distanceToBboxKm(origin: Origin, bbox: readonly number[]): number {
+  const [west, south, east, north] = bbox as [number, number, number, number];
+  const nearest = {
+    lat: Math.min(Math.max(origin.lat, south), north),
+    lng: Math.min(Math.max(origin.lng, west), east),
+  };
+  return haversineKm(origin, nearest);
+}
+
+/** 要載入的縣市代碼，依距離由近到遠 */
+export function citiesToLoad(
+  origin: Origin,
+  cities: readonly CityBounds[],
+  radiusKm = LOAD_RADIUS_KM,
+): string[] {
+  return cities
+    .flatMap((c) => (c.bbox ? [{ code: c.code, km: distanceToBboxKm(origin, c.bbox) }] : []))
+    .filter((c) => c.km <= radiusKm)
+    .sort((a, b) => a.km - b.km || a.code.localeCompare(b.code))
+    .map((c) => c.code);
+}
