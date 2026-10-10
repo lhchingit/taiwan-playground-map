@@ -1,10 +1,13 @@
 """檢查新竹市政府的三份開放資料（清冊、公園、公廁）有沒有更新，有就產生差異報告。只讀，不改任何檔案。
 
   python3 scripts/check_hccg_update.py                 報告印到 stdout
-  python3 scripts/check_hccg_update.py --report x.md   另外寫成檔案（GitHub Actions 用來開 issue）
+  python3 scripts/check_hccg_update.py --report x.md   另外寫成檔案
+  python3 scripts/check_hccg_update.py --meta-only     只看 data.gov.tw 的更新時間與下載網址，不下載資料
 
 結束碼：0 沒有變動／1 有變動／2 下載或讀取失敗。
-每季由 .github/workflows/hccg-update.yml 自動執行；收到 issue 後的處理步驟見 docs/operations.md「政府資料更新」。
+每季由 .github/workflows/hccg-update.yml 用 --meta-only 自動執行：GitHub Actions 連不到市府的下載主機
+（odws.hccg.gov.tw，逾時），只讀得到 data.gov.tw。平台更新時間晚於我們的擷取日期就開 issue，再由人在本機跑完整檢查。
+收到 issue 後的處理步驟見 docs/operations.md「政府資料更新」。
 
 比對方式：
   - 清冊：TSV 沒有存原始檔雜湊，逐筆比內容。依公園名稱配對，同名的再用編號區分。
@@ -36,10 +39,16 @@ class Net:
     """連網路的部分集中在這裡；測試時換成假的"""
 
     def meta(self, dataset_id):
-        return dataset_meta(dataset_id)
+        try:
+            return dataset_meta(dataset_id)
+        except OSError as e:
+            raise OSError(f"讀取 data.gov.tw 資料集 {dataset_id} 的 metadata 失敗：{e}") from e
 
     def get(self, url):
-        return download(url)
+        try:
+            return download(url)
+        except OSError as e:
+            raise OSError(f"下載 {url} 失敗：{e}") from e
 
 
 # ---------- 配對與比對（純函式） ----------
@@ -157,7 +166,8 @@ def tsv_fetched(path):
 
 # ---------- 檢查 ----------
 
-def check(root, net):
+def check(root, net, meta_only=False):
+    """meta_only：不下載資料，平台更新時間（日期）晚於我們的擷取日期，或下載網址換了，就算有變動"""
     results = []
     refs = load_refs(root)
     for name, ds in DATASETS.items():
@@ -170,8 +180,20 @@ def check(root, net):
             r["url_changed"] = True
             r["notes"].append(f"**下載網址換了**：`{ds['url']}` → `{meta['json_url']}`，"
                               "請更新 `scripts/sources/hccg_datasets.py`")
-        raw = net.get(url)
         path = root / ds["path"]
+        if meta_only:
+            stored = None if ds["kind"] == "tsv" else read_json(path)
+            r["fetched"] = tsv_fetched(path) if stored is None else stored.get("fetched", "")
+            r["counts"] = (len(read_tsv(path)) if stored is None else len(stored["records"]), None)
+            r["diff"] = {}
+            newer = bool(r["modified"]) and r["modified"][:10] > r["fetched"]
+            if newer:
+                r["notes"].append(f"平台更新時間（{r['modified']}）晚於我們的擷取日期（{r['fetched']}）。"
+                                  "內容不一定有變，要在本機跑完整檢查才知道")
+            r["changed"] = r["url_changed"] or newer
+            results.append(r)
+            continue
+        raw = net.get(url)
         if ds["kind"] == "tsv":
             r["fetched"] = tsv_fetched(path)
             old = [dict(zip(PLAYGROUND_FIELDS, row)) for row in read_tsv(path)]
@@ -258,15 +280,16 @@ def render_records(d, key, watch):
     return out
 
 
-def render_report(results, today, labels):
+def render_report(results, today, labels, meta_only=False):
     changed = any(r["changed"] for r in results)
     out = [f"## 新竹市政府資料更新檢查（{today}）", "",
            "| 資料 | 平台更新時間 | 我們的擷取日期 | 筆數（舊 → 新） | 結果 |", "|---|---|---|---|---|"]
     for r in results:
         ds = r["ds"]
         old_n, new_n = r["counts"]
+        counts = f"{old_n} → {new_n}" if new_n is not None else f"{old_n} → （未下載）"
         out.append(f"| [{ds['label']}]({dataset_page(ds)}) | {r['modified'] or '—'} | {r['fetched'] or '—'} | "
-                   f"{old_n} → {new_n} | {'**有變動**' if r['changed'] else '沒有變動'} |")
+                   f"{counts} | {'**有變動**' if r['changed'] else '沒有變動'} |")
     for r in results:
         if not (r["changed"] or r["notes"]):
             continue
@@ -278,25 +301,29 @@ def render_report(results, today, labels):
                     else render_records(r["diff"], ds["key"], ds.get("watch", [])))
     if changed:
         fetches = " && ".join(f"python3 {DATASETS[r['name']]['fetch']}" for r in results if r["changed"])
-        out += ["", "### 處理步驟（詳見 docs/operations.md「政府資料更新」）", "",
-                "1. 先處理上面標「注意」「要跟著處理」的項目（編號變動、被引用的刪除）",
-                f"2. 下載：`{fetches}`",
-                "3. 重新匯入：`python3 scripts/build_seed.py && python3 scripts/import_hccg.py`，"
-                "檢查 `data/review/hsc/` 的變化（尤其 conflicts、unmapped-items）",
-                "4. `pnpm regen:filter-cases`，跑完整測試後開 PR；合併後用「資料作業」workflow 匯入正式環境"]
+        steps = ["在本機執行 `python3 scripts/check_hccg_update.py` 取得完整差異報告"
+                 "（GitHub Actions 連不到市府的下載主機，只看了平台更新時間）；沒有變動就關閉這個 issue"] if meta_only else []
+        steps += ["先處理上面標「注意」「要跟著處理」的項目（編號變動、被引用的刪除）",
+                  f"下載：`{fetches}`",
+                  "重新匯入：`python3 scripts/build_seed.py && python3 scripts/import_hccg.py`，"
+                  "檢查 `data/review/hsc/` 的變化（尤其 conflicts、unmapped-items）",
+                  "`pnpm regen:filter-cases`，跑完整測試後開 PR；合併後用「資料作業」workflow 匯入正式環境"]
+        out += ["", "### 處理步驟（詳見 docs/operations.md「政府資料更新」）", ""]
+        out += [f"{i}. {t}" for i, t in enumerate(steps, 1)]
     return changed, "\n".join(out) + "\n"
 
 
 def main(argv=None, root=ROOT, net=None, today=None):
     ap = argparse.ArgumentParser(description="檢查新竹市政府開放資料是否更新")
     ap.add_argument("--report", help="另外把報告寫到這個檔案")
+    ap.add_argument("--meta-only", action="store_true", help="只看 data.gov.tw 的更新時間與下載網址，不下載資料")
     args = ap.parse_args(argv)
     try:
-        results = check(root, net or Net())
+        results = check(root, net or Net(), meta_only=args.meta_only)
     except (OSError, ValueError, KeyError) as e:  # 網路錯誤（URLError 是 OSError）、JSON 格式錯誤、欄位不見
         print(f"檢查失敗：{type(e).__name__}: {e}", file=sys.stderr)
         return 2
-    changed, report = render_report(results, today or date.today().isoformat(), load_labels(root))
+    changed, report = render_report(results, today or date.today().isoformat(), load_labels(root), args.meta_only)
     print(report)
     if args.report:
         Path(args.report).write_text(report, encoding="utf-8", newline="\n")

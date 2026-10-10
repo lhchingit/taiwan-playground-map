@@ -1,4 +1,6 @@
 # 每季檢查新竹市政府的開放資料（清冊、公園、公廁）有沒有更新。
+# GitHub Actions 連不到市府的下載主機（odws.hccg.gov.tw，逾時），所以用 --meta-only：只看 data.gov.tw 上的
+# 更新時間與下載網址。更新時間晚於我們的擷取日期就開 issue，再由人在本機跑完整的差異報告。
 # 只讀公開資料：不碰資料庫、不用任何 secret（只有內建的 GITHUB_TOKEN）、不改 repo。
 # 有變動就開 issue（已經有開著的「資料更新」issue 時改成留言）；處理步驟見 docs/operations.md「政府資料更新」。
 name: 政府資料更新檢查
@@ -35,7 +37,7 @@ jobs:
         id: check
         run: |
           set +e
-          python scripts/check_hccg_update.py --report report.md
+          python scripts/check_hccg_update.py --meta-only --report report.md
           code=$?
           set -e
           if [ -f report.md ]; then cat report.md >> "$GITHUB_STEP_SUMMARY"; fi
@@ -55,5 +57,5 @@ jobs:
           if [ -n "$existing" ]; then
             gh issue comment "$existing" --body-file report.md
           else
-            gh issue create --title "新竹市政府資料有更新（$(date -u +%F)）" --label "$label" --body-file report.md
+            gh issue create --title "新竹市政府資料可能有更新（$(date -u +%F)）" --label "$label" --body-file report.md
           fi
