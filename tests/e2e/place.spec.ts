@@ -5,7 +5,7 @@ const LUGUANG = '/hsinchu-city/places/hsc-luguang-park';
 const EXAMPLE_ORIGIN = '24.80163,120.97163';
 
 test.beforeEach(async ({ page }) => {
-  await page.route(/tiles\.openfreemap\.org|basemaps\.cartocdn\.com|nominatim/, (r) => r.abort());
+  await page.route(/tiles\.openfreemap\.org|tile\.openstreetmap\.org|nominatim/, (r) => r.abort());
 });
 
 const panel = (page: Page) => page.getByTestId('place-panel');

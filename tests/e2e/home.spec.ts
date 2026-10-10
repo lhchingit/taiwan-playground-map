@@ -6,7 +6,7 @@ import { expect, test, type Page } from '@playwright/test';
 const BORDER = { lat: 24.8215, lng: 121.0105 };
 
 async function setup(page: Page) {
-  await page.route(/tiles\.openfreemap\.org|basemaps\.cartocdn\.com/, (r) => r.abort());
+  await page.route(/tiles\.openfreemap\.org|tile\.openstreetmap\.org/, (r) => r.abort());
   await page.route(/nominatim\.openstreetmap\.org/, (r) =>
     r.fulfill({
       json: [
@@ -34,6 +34,32 @@ async function expectMarkersMatchList(page: Page) {
 }
 
 test.beforeEach(async ({ page }) => setup(page));
+
+test('OpenFreeMap 失敗時改用 OSM 官方圖磚；版權標示連到 osm.org/copyright', async ({ browser }) => {
+  // 用新的 context，不套用上面攔截全部圖磚的設定
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  // 1×1 透明 PNG
+  const png = Buffer.from(
+    'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+    'base64',
+  );
+  await page.route(/tiles\.openfreemap\.org/, (r) => r.abort());
+  await page.route(/basemaps\.cartocdn\.com/, (r) => r.abort());
+  const osmTile = page.waitForRequest(/^https:\/\/tile\.openstreetmap\.org\/\d+\/\d+\/\d+\.png$/);
+  await page.route(/tile\.openstreetmap\.org/, (r) =>
+    r.fulfill({ status: 200, contentType: 'image/png', body: png }),
+  );
+
+  await page.goto('/hsinchu-city');
+  await osmTile;
+  const credit = page.locator(
+    '.maplibregl-ctrl-attrib a[href="https://www.openstreetmap.org/copyright"]',
+  );
+  await expect(credit).toHaveText('© OpenStreetMap contributors');
+  await expect(page.locator('.maplibregl-ctrl-attrib')).not.toContainText(/CARTO/i);
+  await ctx.close();
+});
 
 test.describe('桌機', () => {
   test.skip(({ isMobile }) => isMobile, '桌機版面');
