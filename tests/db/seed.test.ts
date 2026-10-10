@@ -9,6 +9,8 @@ import { adminSql, anonClient } from './helpers';
 
 const sql = adminSql();
 const seed = JSON.parse(readFileSync('data/seed/hsc/places.json', 'utf8')) as SeedFile;
+// 筆數從種子資料算，補資料後不用改測試
+const withArea = seed.places.filter((p) => p.area_ha !== null && p.area_ha !== undefined).length;
 
 afterAll(() => sql.end());
 
@@ -30,7 +32,7 @@ describe('pnpm seed', () => {
     expect(await snapshot()).toMatchObject({
       sources: 9, // P0 的 8 個＋公園管理維護地點（hccg_parks，P2(a)）
       attribute_defs: 38,
-      places: 72,
+      places: seed.places.length,
       place_parking: 72,
     });
   });
@@ -98,24 +100,26 @@ describe('pnpm seed', () => {
     const rows = await sql`
       SELECT coalesce(fee, 'null') AS fee, count(*)::int AS n FROM places
       WHERE id LIKE 'hsc-hccg-%' GROUP BY 1`;
-    expect(rows).toEqual([{ fee: 'null', n: 62 }]);
+    const hccg = seed.places.filter((p) => p.id.startsWith('hsc-hccg-')).length;
+    expect(rows).toEqual([{ fee: 'null', n: hccg }]);
   });
 
-  it('面積：43 處來自公園管理維護地點（完全相同的名稱），其他是未知', async () => {
+  it('面積：來自公園管理維護地點（完全相同的名稱），其他是未知', async () => {
     const [r] = await sql`
       SELECT count(*) FILTER (WHERE area_ha IS NOT NULL)::int AS known,
              count(*) FILTER (WHERE area_ha IS NULL)::int AS unknown
       FROM places WHERE id NOT LIKE 'test-%'`;
-    expect(r).toEqual({ known: 43, unknown: 29 });
+    expect(r).toEqual({ known: withArea, unknown: seed.places.length - withArea });
     const [park] = await sql`SELECT area_ha::float8 AS a FROM places WHERE id = 'hsc-hsinchu-park'`;
     expect(park?.a).toBe(13.86);
   });
 
-  it('每個場地都有座標來源，而且都來自 OpenStreetMap（不可以是 Google）', async () => {
+  it('每個場地都有座標來源：OpenStreetMap 或人工定位（不可以是 Google）', async () => {
     const [r] = await sql`
       SELECT count(*) FILTER (WHERE coord_source IS NULL)::int AS missing,
              count(*) FILTER (WHERE coord_source ILIKE '%google%')::int AS google,
-             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS other
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %'
+                                AND coord_source NOT LIKE '人工定位（%')::int AS other
       FROM places WHERE id NOT LIKE 'test-%'`;
     expect(r).toEqual({ missing: 0, google: 0, other: 0 });
   });

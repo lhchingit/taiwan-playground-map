@@ -19,6 +19,8 @@ class DryRunRollback extends Error {
 export interface SeedOptions {
   /** 在交易裡做完全部步驟，最後回滾，不寫入 */
   dryRun?: boolean;
+  /** 刪除資料庫有、places.json 沒有的場地（有使用者回報資料的拒絕刪除） */
+  prune?: boolean;
 }
 
 export interface SeedSummary {
@@ -34,6 +36,10 @@ export interface SeedSummary {
   bboxes: { code: string; bbox: number[]; source: 'places' | 'osm' }[];
   /** 資料庫裡有、places.json 沒有的場地（不自動刪除，交給人工確認） */
   orphanPlaces: string[];
+  /** --prune 刪除的場地 */
+  pruned: string[];
+  /** --prune 時因為有使用者回報資料而拒絕刪除的場地（要人工處理） */
+  pruneBlocked: string[];
 }
 
 export async function runSeed(
@@ -178,6 +184,23 @@ export async function runSeed(
                         WHERE pp.place_id = x.place_id AND pp.source_id IS DISTINCT FROM ${USER_SOURCE})`
     ).count;
 
+    // 6.5 從種子資料拿掉的場地（--prune 才刪除；有使用者回報資料的不刪，交給人工）
+    const orphanRows = await sql<{ id: string; protected: boolean }[]>`
+      SELECT p.id,
+             (EXISTS (SELECT 1 FROM place_attributes a WHERE a.place_id = p.id AND a.source_id = ${USER_SOURCE})
+              OR EXISTS (SELECT 1 FROM place_parking pp WHERE pp.place_id = p.id AND pp.source_id = ${USER_SOURCE})
+              OR EXISTS (SELECT 1 FROM edit_suggestions e WHERE e.place_id = p.id)) AS protected
+      FROM places p
+      WHERE p.city = ANY(${seedCities}) AND NOT (p.id = ANY(${placeIds})) AND p.id NOT LIKE 'test-%'
+      ORDER BY p.id`;
+    const pruned = options.prune ? orphanRows.filter((o) => !o.protected).map((o) => o.id) : [];
+    const pruneBlocked = options.prune
+      ? orphanRows.filter((o) => o.protected).map((o) => o.id)
+      : [];
+    // 屬性、停車會跟著刪（ON DELETE CASCADE）
+    changes.places_pruned =
+      pruned.length > 0 ? (await sql`DELETE FROM places WHERE id = ANY(${pruned})`).count : 0;
+
     // 7. 檢查 places.attrs 與 place_attributes 一致（trigger 負責同步，這裡只驗證）
     const drift = await sql<{ id: string }[]>`
       SELECT p.id FROM places p
@@ -204,10 +227,6 @@ export async function runSeed(
       GROUP BY p.id, p.name ORDER BY y DESC, p.id`;
     const bboxes = await sql<{ code: string; bbox: number[] }[]>`
       SELECT code, bbox::float8[] AS bbox FROM cities WHERE code = ANY(${allCities}) ORDER BY code`;
-    const orphans = await sql<{ id: string }[]>`
-      SELECT id FROM places
-      WHERE city = ANY(${seedCities}) AND NOT (id = ANY(${placeIds})) AND id NOT LIKE 'test-%'
-      ORDER BY id`;
 
     const sourceOf = new Map(rows.cities.map((c) => [c.code, c.bboxSource]));
     const summary: SeedSummary = {
@@ -218,7 +237,9 @@ export async function runSeed(
       launched,
       knownAttrs,
       bboxes: bboxes.map((b) => ({ ...b, source: sourceOf.get(b.code) ?? 'places' })),
-      orphanPlaces: orphans.map((o) => o.id),
+      orphanPlaces: orphanRows.map((o) => o.id).filter((id) => !pruned.includes(id)),
+      pruned,
+      pruneBlocked,
     };
     // 試跑：丟出特殊錯誤讓交易回滾，摘要照樣回傳
     if (options.dryRun) throw new DryRunRollback(summary);

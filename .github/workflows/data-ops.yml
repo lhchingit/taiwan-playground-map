@@ -15,6 +15,10 @@ on:
         type: choice
         options: [status, dry-run, seed, launch, unlaunch]
         required: true
+      prune:
+        description: 試跑／匯入時也刪除 places.json 已經沒有的場地（有使用者回報資料的不會刪）
+        type: boolean
+        default: false
 
 # 同時只能有一個資料作業在跑，不取消正在進行的
 concurrency:
@@ -39,6 +43,7 @@ jobs:
       REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
       CITY: ${{ inputs.city }}
       ACTION: ${{ inputs.action }}
+      PRUNE: ${{ inputs.prune }}
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
@@ -63,20 +68,24 @@ jobs:
       - name: 試跑
         if: inputs.action == 'dry-run' || inputs.action == 'seed'
         run: |
+          args=(--city "$CITY" --allow-remote)
+          if [ "$PRUNE" = true ]; then args+=(--prune); fi
           {
-            echo "## 試跑：$CITY"
+            echo "## 試跑：$CITY（prune：$PRUNE）"
             echo '```'
-            pnpm --silent seed --city "$CITY" --dry-run --allow-remote
+            pnpm --silent seed "${args[@]}" --dry-run
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: 匯入
         if: inputs.action == 'seed'
         run: |
+          args=(--city "$CITY" --allow-remote)
+          if [ "$PRUNE" = true ]; then args+=(--prune); fi
           {
-            echo "## 匯入：$CITY"
+            echo "## 匯入：$CITY（prune：$PRUNE）"
             echo '```'
-            pnpm --silent seed --city "$CITY" --allow-remote
+            pnpm --silent seed "${args[@]}"
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
 

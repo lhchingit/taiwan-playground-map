@@ -1,6 +1,7 @@
 // 首頁 e2e。地圖圖磚與 Nominatim 在測試中攔截，不連外網；定位權限未授予，出發點維持範例（新竹火車站）。
 // 前提：本機 Supabase 已 db reset + seed，並執行過 pnpm env:local。
 import { expect, test, type Page } from '@playwright/test';
+import { expected, TOTAL } from './expected';
 
 /** 新竹市與新竹縣交界附近（竹北市與新竹市東區之間）。只用在攔截的 Nominatim 回應。 */
 const BORDER = { lat: 24.8215, lng: 121.0105 };
@@ -68,20 +69,22 @@ test.describe('桌機', () => {
     await page.goto('/');
     await expect(page).toHaveURL(/\/hsinchu-city$/);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('全台放電地圖');
-    await expect(count(page)).toHaveText('72');
+    await expect(count(page)).toHaveText(String(TOTAL));
     await expect(page.getByTestId('origin-name')).toHaveText('新竹火車站（範例）');
   });
 
-  test('沙坑＋廁所 → 1 處，另有 69 處資料未知；包含未知 → 70 處', async ({ page }) => {
+  test('沙坑＋廁所：顯示「另有 N 處資料未知」；包含未知後筆數照標準答案', async ({ page }) => {
+    const strict = expected('沙坑＋廁所');
+    const loose = expected('沙坑＋廁所（包含未知）');
     await page.goto('/hsinchu-city');
     await chip(page, '沙坑').click();
     await chip(page, '廁所').click();
-    await expect(count(page)).toHaveText('1');
-    await expect(page.getByText('另有 69 處資料未知')).toBeVisible();
+    await expect(count(page)).toHaveText(String(strict.expected_count));
+    await expect(page.getByText(`另有 ${strict.unknown_hint} 處資料未知`)).toBeVisible();
     await expectMarkersMatchList(page);
 
     await page.getByLabel('包含資料未知的場地').check();
-    await expect(count(page)).toHaveText('70');
+    await expect(count(page)).toHaveText(String(loose.expected_count));
     await expect(page.getByText(/另有 \d+ 處資料未知/)).toHaveCount(0);
     await expectMarkersMatchList(page);
   });
@@ -100,23 +103,24 @@ test.describe('桌機', () => {
     await expectMarkersMatchList(page);
   });
 
-  test('只看免費 → 10 處，另有 62 處資料未知（清冊場地的收費未知）', async ({ page }) => {
+  test('只看免費：清冊場地的收費未知，算在「另有 N 處資料未知」', async ({ page }) => {
+    const free = expected('只看免費');
     await page.goto('/hsinchu-city');
     await page.getByLabel('只看免費').check();
-    await expect(count(page)).toHaveText('10');
-    await expect(page.getByText('另有 62 處資料未知')).toBeVisible();
+    await expect(count(page)).toHaveText(String(free.expected_count));
+    await expect(page.getByText(`另有 ${free.unknown_hint} 處資料未知`)).toBeVisible();
     await expect(page).toHaveURL(/\?free=1$/);
     await expectMarkersMatchList(page);
   });
 
-  test('停車場＋付費 → 1 處（南寮兒童挖沙玩水區）', async ({ page }) => {
+  test('停車場＋付費：南寮兒童挖沙玩水區', async ({ page }) => {
     await page.goto('/hsinchu-city');
     await chip(page, '停車場').click();
     await page
       .getByRole('group', { name: '停車費用' })
       .getByRole('button', { name: '付費' })
       .click();
-    await expect(count(page)).toHaveText('1');
+    await expect(count(page)).toHaveText(String(expected('停車場＋付費').expected_count));
     await expect(cards(page)).toHaveCount(1);
     await expect(cards(page).first()).toContainText('南寮兒童挖沙玩水區');
     await expect(cards(page).first()).toContainText('停車：停車場．付費');
@@ -127,7 +131,7 @@ test.describe('桌機', () => {
     await page.goto('/hsinchu-city');
     await expectMarkersMatchList(page);
     await page.getByRole('slider', { name: '距離上限（直線）' }).fill('3');
-    await expect(count(page)).toHaveText('42');
+    await expect(count(page)).toHaveText(String(expected('3 公里內').expected_count));
     await expectMarkersMatchList(page);
 
     const first = cards(page).first();
@@ -140,19 +144,19 @@ test.describe('桌機', () => {
 
   test('帶 query string 打開會還原篩選；改條件後網址更新，且不含出發點', async ({ page }) => {
     await page.goto('/hsinchu-city?play=sandpit&amen=toilet');
-    await expect(count(page)).toHaveText('1');
+    await expect(count(page)).toHaveText(String(expected('沙坑＋廁所').expected_count));
     await expect(chip(page, '沙坑')).toHaveAttribute('aria-pressed', 'true');
     await expect(chip(page, '廁所')).toHaveAttribute('aria-pressed', 'true');
 
     await page.getByLabel('包含資料未知的場地').check();
     await expect(page).toHaveURL(/\?play=sandpit&amen=toilet&unk=1$/);
     await page.reload();
-    await expect(count(page)).toHaveText('70');
+    await expect(count(page)).toHaveText(String(expected('沙坑＋廁所（包含未知）').expected_count));
     await expect(page.getByLabel('包含資料未知的場地')).toBeChecked();
 
     await page.getByRole('button', { name: '清除篩選' }).click();
     await expect(page).toHaveURL(/\/hsinchu-city$/);
-    await expect(count(page)).toHaveText('72');
+    await expect(count(page)).toHaveText(String(TOTAL));
   });
 
   test('出發點在新竹市與新竹縣交界：會載入新竹縣（未上線，空資料）且不出錯', async ({ page }) => {
@@ -170,7 +174,7 @@ test.describe('桌機', () => {
     expect(res.status()).toBe(200);
     expect(await res.json()).toEqual([]);
 
-    await expect(count(page)).toHaveText('72');
+    await expect(count(page)).toHaveText(String(TOTAL));
     const ids = await cards(page).evaluateAll((els) => els.map((e) => e.getAttribute('data-id')));
     expect(ids.every((id) => id?.startsWith('hsc-'))).toBe(true);
     await expect(page.getByText(/載入失敗/)).toHaveCount(0);
@@ -184,7 +188,7 @@ test.describe('手機', () => {
 
   test('400px 寬沒有水平捲動（篩選面板打開時也一樣）', async ({ page }) => {
     await page.goto('/hsinchu-city');
-    await expect(count(page)).toHaveText('72');
+    await expect(count(page)).toHaveText(String(TOTAL));
     const noHScroll = () =>
       page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth);
     expect(await noHScroll()).toBe(true);
@@ -208,7 +212,7 @@ test.describe('手機', () => {
 
   test('手機也能篩選，標記數量等於清單數量', async ({ page }) => {
     await page.goto('/hsinchu-city?play=sandpit');
-    await expect(count(page)).toHaveText('8');
+    await expect(count(page)).toHaveText(String(expected('沙坑').expected_count));
     await expectMarkersMatchList(page);
   });
 });

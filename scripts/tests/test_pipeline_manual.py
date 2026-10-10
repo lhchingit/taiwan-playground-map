@@ -51,6 +51,56 @@ class ManualReviewTest(unittest.TestCase):
         self.assertTrue(all(r["review_status"] == "" for r in self.before.values()))
 
 
+class DuplicateMergeTest(unittest.TestCase):
+    """範例檔：#32 吉羊公園標成重複，同 #15"""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.recs, _ = records_with(ROOT / "tests/fixtures/manual-review-sample.tsv")
+
+    def test_attrs_are_merged_into_target(self):
+        t = self.recs["15"]
+        self.assertIn("slide", t["attrs"])          # #15：組合遊具組溜滑梯1組
+        self.assertIn("spring_rider", t["attrs"])   # #32：搖搖馬2組
+        self.assertEqual(t["items"], ["組合遊具組溜滑梯1組", "組合遊具組1組", "搖搖馬2組"])
+
+    def test_raw_text_and_refs_are_kept(self):
+        t = self.recs["15"]
+        self.assertTrue(t["summary"].endswith("；組合遊具組1組、搖搖馬2組（清冊編號 32）"))
+        self.assertEqual([r["hccg_no"] for r in [t["official_ref"], *t["merged_refs"]]], [15, 32])
+
+    def test_estimate_uses_merged_items(self):
+        self.assertEqual((self.recs["15"]["stay"], self.recs["15"]["size"]), ("30_60", "M"))
+
+    def test_duplicate_itself_stays_off_map(self):
+        self.assertIsNone(self.recs["32"]["coord"])
+        self.assertTrue(self.recs["32"]["review_status"].startswith("重複（同 #15）"))
+
+
+class DuplicateErrorTest(unittest.TestCase):
+    HEAD = "\t".join(["清冊編號", "狀態", "緯度", "經度", "定位依據", "對應編號", "說明", "定位者", "日期"]) + "\n"
+
+    def run_with(self, rows):
+        with tempfile.TemporaryDirectory() as d:
+            f = Path(d) / "m.tsv"
+            body = "".join("\t".join([no, "duplicate", "", "", "", ref, "", "測試者", "2026-10-11"]) + "\n"
+                           for no, ref in rows)
+            f.write_text(self.HEAD + body, encoding="utf-8")
+            records_with(f)
+
+    def test_self_reference(self):
+        with self.assertRaisesRegex(ValueError, "自己"):
+            self.run_with([("32", "32")])
+
+    def test_missing_target(self):
+        with self.assertRaisesRegex(ValueError, "不存在"):
+            self.run_with([("32", "9999")])
+
+    def test_chain_or_cycle(self):
+        with self.assertRaisesRegex(ValueError, "也標成重複"):
+            self.run_with([("15", "32"), ("32", "15")])
+
+
 class AreaTest(unittest.TestCase):
     def test_exact_name_then_official_name_else_review(self):
         parks = {"甲公園": {"area": 1.5}, "乙公園": {"area": 0.2}, "丙公園": {"area": 0.3}}

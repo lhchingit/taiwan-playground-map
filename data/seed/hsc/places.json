@@ -3080,273 +3080,6 @@
    "city": "hsc"
   },
   {
-   "id": "hsc-hccg-002",
-   "name": "金雅重劃區滯洪池1",
-   "district": "北區",
-   "address": null,
-   "lat": 24.825384,
-   "lng": 120.965766,
-   "size": "S",
-   "stay": "lt30",
-   "stay_src": "est",
-   "age_min": null,
-   "age_max": null,
-   "fee": null,
-   "indoor": false,
-   "hours": null,
-   "surface": null,
-   "status": "open",
-   "summary": "清冊列出的遊具：組合遊具組溜滑梯1組、雙人翹翹板2組",
-   "attrs": {
-    "slide": {
-     "v": "y",
-     "src": "hccg",
-     "note": "組合遊具組溜滑梯1組",
-     "at": "2026-10-10"
-    },
-    "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "seesaw": {
-     "v": "y",
-     "src": "hccg",
-     "note": "雙人翹翹板2組",
-     "at": "2026-10-10"
-    },
-    "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "suspension_bridge": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "tree_house": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "water_pump": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "skatepark": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "music": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "chalk_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "toddler_zone": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "footwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "transit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "stroller": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "nursing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "lighting": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "food": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    },
-    "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
-    }
-   },
-   "parking": {
-    "type": "u",
-    "fee": "u",
-    "spaces": null,
-    "src": null,
-    "note": null,
-    "at": null
-   },
-   "source_coords": "OpenStreetMap w1023876115（比對方式：review）",
-   "official_ref": [
-    {
-     "hccg_no": 2,
-     "name": "金雅重劃區滯洪池1",
-     "items": "組合遊具組溜滑梯1組、雙人翹翹板2組"
-    }
-   ],
-   "area_ha": null,
-   "city": "hsc"
-  },
-  {
    "id": "hsc-hccg-003",
    "name": "金雅重劃區兒1",
    "district": "北區",
@@ -8684,6 +8417,278 @@
     }
    ],
    "area_ha": 1.3,
+   "city": "hsc"
+  },
+  {
+   "id": "hsc-hccg-032",
+   "name": "吉羊公園",
+   "district": "北區",
+   "address": null,
+   "lat": 24.824345,
+   "lng": 120.954888,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "清冊列出的遊具：組合遊具組1組、搖搖馬2組；組合遊具組溜滑梯1組（清冊編號 15）",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "hccg",
+     "note": "組合遊具組溜滑梯1組",
+     "at": "2026-10-10"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "hccg",
+     "note": "搖搖馬2組",
+     "at": "2026-10-10"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "人工定位（實地確認，LHCHIN，2026-10-10）",
+   "official_ref": [
+    {
+     "hccg_no": 32,
+     "name": "吉羊公園",
+     "items": "組合遊具組1組、搖搖馬2組。"
+    },
+    {
+     "hccg_no": 15,
+     "name": "吉羊公園",
+     "items": "組合遊具組溜滑梯1組"
+    }
+   ],
+   "area_ha": 0.2,
    "city": "hsc"
   },
   {

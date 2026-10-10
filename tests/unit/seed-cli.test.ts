@@ -15,12 +15,18 @@ import { parseEnvFile, siteConfig } from '../../scripts/seed/revalidate-site';
 
 describe('parseSeedArgs', () => {
   it('預設：全部縣市、真的寫入、只連本機', () => {
-    expect(parseSeedArgs([])).toEqual({ city: null, dryRun: false, allowRemote: false });
+    expect(parseSeedArgs([])).toEqual({
+      city: null,
+      dryRun: false,
+      prune: false,
+      allowRemote: false,
+    });
   });
   it('--city、--dry-run、--allow-remote', () => {
-    expect(parseSeedArgs(['--city', 'hsq', '--dry-run', '--allow-remote'])).toEqual({
+    expect(parseSeedArgs(['--city', 'hsq', '--dry-run', '--prune', '--allow-remote'])).toEqual({
       city: 'hsq',
       dryRun: true,
+      prune: true,
       allowRemote: true,
     });
   });

@@ -71,11 +71,39 @@ def estimate(items):
     return stay, size
 
 
+def merge_duplicates(recs, manual):
+    """標成「重複」的清冊資料：遊具合併到對應的那一筆（不遺失任何遊具），清冊原文兩筆都保留。
+    對應的編號不存在、指向自己，或對應的那筆本身也是重複（含循環）時中止匯入。"""
+    by_no = {r["ext_no"]: r for r in recs}
+    for no, man in manual.items():
+        if man["狀態"] != "duplicate":
+            continue
+        ref = man["對應編號"]
+        if ref == no:
+            raise ValueError(f"manual-review.tsv：#{no} 標成重複，但對應的是自己")
+        if ref not in by_no or no not in by_no:
+            raise ValueError(f"manual-review.tsv：#{no} 對應的清冊編號 #{ref} 不存在")
+        if manual.get(ref, {}).get("狀態") == "duplicate":
+            raise ValueError(f"manual-review.tsv：#{no} 對應的 #{ref} 也標成重複，請直接對應到要保留的那一筆")
+        dup, target = by_no[no], by_no[ref]
+        if not target["items"]:
+            raise ValueError(f"manual-review.tsv：#{no} 對應的 #{ref} 清冊沒有遊具")
+        for k, note in dup["attrs"].items():
+            old = target["attrs"].get(k)
+            target["attrs"][k] = note if not old or note in old.split("、") else f"{old}、{note}"
+        target["items"] = target["items"] + dup["items"]
+        target["stay"], target["size"] = estimate(target["items"])
+        target["summary"] += f"；{dup['raw_text'].rstrip('。、')}（{SOURCE_SHORT}編號 {no}）"
+        target.setdefault("merged_refs", []).append(dup["official_ref"])
+    return recs
+
+
 def records(root, review):
     hccg = read_tsv(root / "data/raw/hsc/hccg-playgrounds.tsv")
     osm = {r[0]: r for r in read_tsv(root / "data/raw/hsc/osm-matches.tsv")}
     manual = read_manual(root / "data/raw/hsc/manual-review.tsv")
 
+    recs = []
     for no, name, district, text in hccg:
         district = district.replace("公所", "")
         items = parse_items(text)
@@ -102,7 +130,7 @@ def records(root, review):
                            [no, name, method, m[3] if len(m) > 3 else "", *(osm_coord or ("", "")), status])
 
         stay, size = estimate(items)
-        yield {
+        recs.append({
             "ext_no": no, "name": name, "district": district, "raw_text": text,
             "items": items, "attrs": mapped,
             "coord": coord, "coord_ref": m[3] if len(m) > 3 else "", "match_method": method,
@@ -110,4 +138,7 @@ def records(root, review):
             "coord_label": label, "review_status": status,
             "summary": f"清冊列出的遊具：{text.rstrip('。、')}", "stay": stay, "size": size,
             "official_ref": {"hccg_no": int(no), "name": name, "items": text},
-        }
+        })
+
+    # 先全部讀完，才能把重複的遊具合併到後面（或前面）的那一筆
+    yield from merge_duplicates(recs, manual)
