@@ -1,0 +1,47 @@
+{
+ "source": "OpenStreetMap Nominatim（© OpenStreetMap contributors, ODbL）",
+ "fetched": "2026-10-10",
+ "note": "bbox 為 [西, 南, 東, 北]；只用在沒有場地的縣市（scripts/seed/transform.ts）",
+ "cities": {
+  "hsc": {
+   "name": "新竹市",
+   "osm": "relation/2849488",
+   "bbox": [
+    120.8794247,
+    24.712573,
+    121.0335407,
+    24.8532113
+   ]
+  },
+  "hsq": {
+   "name": "新竹縣",
+   "osm": "relation/2912613",
+   "bbox": [
+    120.9295886,
+    24.42737,
+    121.4123319,
+    24.9463688
+   ]
+  },
+  "tyc": {
+   "name": "桃園市",
+   "osm": "relation/2770986",
+   "bbox": [
+    120.9858116,
+    24.5864468,
+    121.4798532,
+    25.1227025
+   ]
+  },
+  "mlc": {
+   "name": "苗栗縣",
+   "osm": "relation/2915592",
+   "bbox": [
+    120.6224441,
+    24.28852,
+    121.262639,
+    24.7410688
+   ]
+  }
+ }
+}

@@ -2,6 +2,7 @@
 // 可以重複執行：只有內容有變的列才會更新，重跑不會產生重複資料，也不會觸發多餘的 attrs 同步。
 import type { Sql } from 'postgres';
 import type { SeedFile } from '../../src/types/place';
+import type { Bbox } from './bbox';
 import { toSeedRows } from './transform';
 
 /** seed 時設為已上線的縣市（decisions D12）；其他縣市的 launched_at 保持原狀 */
@@ -13,15 +14,21 @@ const USER_SOURCE = 'user';
 export interface SeedSummary {
   counts: Record<string, number>;
   knownAttrs: { id: string; name: string; y: number; n: number }[];
-  bboxes: { code: string; bbox: number[] }[];
+  bboxes: { code: string; bbox: number[]; source: 'places' | 'osm' }[];
   /** 資料庫裡有、places.json 沒有的場地（不自動刪除，交給人工確認） */
   orphanPlaces: string[];
 }
 
-export async function runSeed(db: Sql, seed: SeedFile): Promise<SeedSummary> {
-  const rows = toSeedRows(seed);
+export async function runSeed(
+  db: Sql,
+  seed: SeedFile,
+  osmBounds: Readonly<Record<string, Bbox>> = {},
+): Promise<SeedSummary> {
+  const rows = toSeedRows(seed, osmBounds);
   const placeIds = rows.places.map((p) => p.id);
-  const seedCities = rows.cities.map((c) => c.code);
+  const allCities = rows.cities.map((c) => c.code);
+  // 有場地的縣市（用來找資料庫裡多出來的場地）
+  const seedCities = rows.cities.filter((c) => c.bboxSource === 'places').map((c) => c.code);
 
   return db.begin(async (sql) => {
     // 1. 來源
@@ -150,12 +157,18 @@ export async function runSeed(db: Sql, seed: SeedFile): Promise<SeedSummary> {
       WHERE p.id = ANY(${placeIds})
       GROUP BY p.id, p.name ORDER BY y DESC, p.id`;
     const bboxes = await sql<{ code: string; bbox: number[] }[]>`
-      SELECT code, bbox::float8[] AS bbox FROM cities WHERE code = ANY(${seedCities}) ORDER BY code`;
+      SELECT code, bbox::float8[] AS bbox FROM cities WHERE code = ANY(${allCities}) ORDER BY code`;
     const orphans = await sql<{ id: string }[]>`
       SELECT id FROM places
       WHERE city = ANY(${seedCities}) AND NOT (id = ANY(${placeIds})) AND id NOT LIKE 'test-%'
       ORDER BY id`;
 
-    return { counts: counts ?? {}, knownAttrs, bboxes, orphanPlaces: orphans.map((o) => o.id) };
+    const sourceOf = new Map(rows.cities.map((c) => [c.code, c.bboxSource]));
+    return {
+      counts: counts ?? {},
+      knownAttrs,
+      bboxes: bboxes.map((b) => ({ ...b, source: sourceOf.get(b.code) ?? 'places' })),
+      orphanPlaces: orphans.map((o) => o.id),
+    };
   });
 }
