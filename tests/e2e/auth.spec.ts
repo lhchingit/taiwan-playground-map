@@ -97,6 +97,17 @@ test('未登入按「回報修正」跳出登入視窗；登入後回到場地�
   await expect(page.getByText('回報修正功能即將開放')).toBeVisible();
 });
 
+test('登入狀態還在查詢時按「回報修正」，等查完仍然跳出登入視窗', async ({ page }) => {
+  // 模擬網路慢：/api/session 晚 1.5 秒回應，頁面一打開就按
+  await page.route('**/api/session', async (route) => {
+    await new Promise((r) => setTimeout(r, 1500));
+    await route.continue();
+  });
+  await page.goto(PLACE);
+  await page.getByRole('button', { name: '回報修正' }).click();
+  await expect(page.getByRole('dialog', { name: '登入' })).toBeVisible();
+});
+
 test('登入視窗可以用 Esc 關閉，不影響瀏覽', async ({ page }) => {
   await page.goto(PLACE);
   await page.getByRole('button', { name: '回報修正' }).click();

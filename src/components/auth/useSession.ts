@@ -10,7 +10,8 @@ export interface SessionInfo {
 
 let pending: Promise<SessionInfo> | null = null;
 
-function load(): Promise<SessionInfo> {
+/** 查詢登入狀態（同一頁共用同一次查詢） */
+export function loadSession(): Promise<SessionInfo> {
   pending ??= fetch('/api/session', { cache: 'no-store', credentials: 'same-origin' })
     .then((r) =>
       r.ok ? (r.json() as Promise<SessionInfo>) : Promise.reject(new Error(String(r.status))),
@@ -28,7 +29,7 @@ export function useSession(): SessionInfo | undefined {
   useEffect(() => {
     let alive = true;
     const update = () =>
-      void load().then((s) => {
+      void loadSession().then((s) => {
         if (alive) setInfo(s);
       });
     update();

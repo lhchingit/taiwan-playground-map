@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { LoginDialog } from '@/components/auth/LoginDialog';
-import { currentPath, useCurrentPath, useSession } from '@/components/auth/useSession';
+import { currentPath, loadSession, useCurrentPath, useSession } from '@/components/auth/useSession';
 import { withReport } from '@/lib/auth/next-path';
 
 /**
@@ -23,9 +23,10 @@ export function ReportButton() {
     if (autoOpen) ref.current?.scrollIntoView({ block: 'center' });
   }, [autoOpen]);
 
-  function open() {
-    if (!session) return; // 還在確認登入狀態
-    if (!session.user) setLogin(withReport(currentPath()));
+  async function open() {
+    // 頁面剛打開、還在確認登入狀態時，等查詢完成再決定（不能忽略這次點擊）
+    const s = session ?? (await loadSession());
+    if (!s.user) setLogin(withReport(currentPath()));
     else setClicked(true);
   }
 
