@@ -74,6 +74,15 @@ test.describe('桌機', () => {
     await expectMarkersMatchList(page);
   });
 
+  test('只看免費 → 10 處，另有 62 處資料未知（清冊場地的收費未知）', async ({ page }) => {
+    await page.goto('/hsinchu-city');
+    await page.getByLabel('只看免費').check();
+    await expect(count(page)).toHaveText('10');
+    await expect(page.getByText('另有 62 處資料未知')).toBeVisible();
+    await expect(page).toHaveURL(/\?free=1$/);
+    await expectMarkersMatchList(page);
+  });
+
   test('停車場＋付費 → 1 處（南寮兒童挖沙玩水區）', async ({ page }) => {
     await page.goto('/hsinchu-city');
     await chip(page, '停車場').click();

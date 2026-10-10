@@ -42,7 +42,8 @@ def new_place(rec, uid, display_name, keys, src_id, today):
         id=uid, name=display_name, district=rec["district"], address=None,
         lat=rec["coord"][0], lng=rec["coord"][1],
         size=rec["size"], stay=rec["stay"], stay_src="est", age_min=None, age_max=None,
-        fee="free", indoor=False, hours=None, surface=None, status="open",
+        # 清冊沒有收費資訊，不推測：fee 為 None（未知）
+        fee=None, indoor=False, hours=None, surface=None, status="open",
         summary=rec["summary"],
         attrs=attrs,
         parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},

@@ -51,6 +51,25 @@ test.describe('場地頁', () => {
     expect(ld.amenityFeature.map((a: { name: string }) => a.name)).toContain('溜索');
   });
 
+  test('收費：手工整理的場地是免費；清冊場地是未知，JSON-LD 不寫 isAccessibleForFree', async ({
+    page,
+  }) => {
+    await page.goto(LUGUANG);
+    const fee = (p: Page) =>
+      p
+        .locator('.facts dt', { hasText: /^費用$/ })
+        .first()
+        .locator('+ dd');
+    await expect(fee(page)).toHaveText('免費');
+
+    await page.goto('/hsinchu-city/places/hsc-hccg-001');
+    await expect(fee(page)).toHaveText('未知');
+    const ld = JSON.parse(
+      (await page.locator('script[type="application/ld+json"]').textContent()) ?? '{}',
+    );
+    expect(ld).not.toHaveProperty('isAccessibleForFree');
+  });
+
   test('還沒有資料的項目收成一行', async ({ page }) => {
     await page.goto(LUGUANG);
     const play = page.getByRole('region', { name: '遊樂設施' });
