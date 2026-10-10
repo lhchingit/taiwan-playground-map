@@ -47,6 +47,6 @@ def new_place(rec, uid, display_name, keys, src_id, today):
         summary=rec["summary"],
         attrs=attrs,
         parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
-        source_coords=f"OpenStreetMap {rec['coord_ref']}（比對方式：{rec['match_method']}）",
+        source_coords=rec.get("coord_label") or f"OpenStreetMap {rec['coord_ref']}（比對方式：{rec['match_method']}）",
         official_ref=[rec["official_ref"]],
     )

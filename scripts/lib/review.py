@@ -2,11 +2,12 @@
 from .io import write_csv
 
 HEADS = {
-    "unmatched": ["清冊編號", "公園", "行政區", "設施內容"],
-    "match-review": ["清冊編號", "公園", "比對方式", "OSM id", "緯度", "經度"],
+    "unmatched": ["清冊編號", "公園", "行政區", "設施內容", "處理狀態"],
+    "match-review": ["清冊編號", "公園", "比對方式", "OSM id", "緯度", "經度", "處理狀態"],
     "conflicts": ["場地", "屬性", "現有資料", "清冊"],
     "no-playground": ["清冊編號", "公園", "行政區", "設施內容"],
     "unmapped-items": ["清冊編號", "公園", "未對應的遊具文字"],
+    "parks-unmatched": ["場地 id", "名稱", "原因"],
 }
 
 

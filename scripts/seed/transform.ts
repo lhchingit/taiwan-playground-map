@@ -35,6 +35,7 @@ export type PlaceRow = {
   lat: number;
   lng: number;
   size_class: string | null;
+  area_ha: number | null;
   stay_bucket: string | null;
   stay_source: string | null;
   age_min: number | null;
@@ -148,6 +149,7 @@ export function toSeedRows(
     lat: p.lat,
     lng: p.lng,
     size_class: p.size,
+    area_ha: p.area_ha ?? null,
     stay_bucket: p.stay,
     stay_source: p.stay_src,
     age_min: p.age_min,

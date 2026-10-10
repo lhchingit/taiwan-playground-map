@@ -28,7 +28,7 @@ async function snapshot() {
 describe('pnpm seed', () => {
   it('各表筆數符合完成標準', async () => {
     expect(await snapshot()).toMatchObject({
-      sources: 8,
+      sources: 9, // P0 的 8 個＋公園管理維護地點（hccg_parks，P2(a)）
       attribute_defs: 38,
       places: 72,
       place_parking: 72,
@@ -99,6 +99,16 @@ describe('pnpm seed', () => {
       SELECT coalesce(fee, 'null') AS fee, count(*)::int AS n FROM places
       WHERE id LIKE 'hsc-hccg-%' GROUP BY 1`;
     expect(rows).toEqual([{ fee: 'null', n: 62 }]);
+  });
+
+  it('面積：43 處來自公園管理維護地點（完全相同的名稱），其他是未知', async () => {
+    const [r] = await sql`
+      SELECT count(*) FILTER (WHERE area_ha IS NOT NULL)::int AS known,
+             count(*) FILTER (WHERE area_ha IS NULL)::int AS unknown
+      FROM places WHERE id NOT LIKE 'test-%'`;
+    expect(r).toEqual({ known: 43, unknown: 29 });
+    const [park] = await sql`SELECT area_ha::float8 AS a FROM places WHERE id = 'hsc-hsinchu-park'`;
+    expect(park?.a).toBe(13.86);
   });
 
   it('每個場地都有座標來源，而且都來自 OpenStreetMap（不可以是 Google）', async () => {

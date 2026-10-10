@@ -20,7 +20,8 @@ CITIES = {
         "scripts": ["scripts/build_seed.py", "scripts/import_hccg.py"],
         "outputs": ["data/seed/hsc/places.json", "data/seed/hsc/places.csv"]
         + [f"data/review/hsc/{k}.csv" for k in
-           ["conflicts", "match-review", "no-playground", "unmapped-items", "unmatched"]],
+           ["conflicts", "match-review", "no-playground", "unmapped-items", "unmatched",
+            "parks-unmatched"]],
     },
 }
 
