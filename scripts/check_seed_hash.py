@@ -21,7 +21,7 @@ CITIES = {
         "outputs": ["data/seed/hsc/places.json", "data/seed/hsc/places.csv"]
         + [f"data/review/hsc/{k}.csv" for k in
            ["conflicts", "match-review", "no-playground", "unmapped-items", "unmatched",
-            "parks-unmatched"]],
+            "parks-unmatched", "toilets-unmatched"]],
     },
 }
 

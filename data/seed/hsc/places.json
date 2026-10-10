@@ -47,6 +47,11 @@
    "label": "新竹市公園管理維護地點（養護工程處，政府資料開放平台）",
    "url": "https://data.gov.tw/dataset/67762",
    "kind": "open_data"
+  },
+  "hccg_toilets": {
+   "label": "新竹市公廁地點資訊（養護工程處，政府資料開放平台）",
+   "url": "https://data.gov.tw/dataset/67757",
+   "kind": "open_data"
   }
  },
  "labels": {
@@ -1405,10 +1410,10 @@
      "at": "2026-10-10"
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "港南運河公園",
+     "at": "2026-10-10"
     },
     "handwash": {
      "v": "u",
@@ -1441,10 +1446,10 @@
      "at": null
     },
     "nursing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "公廁育嬰台 1 座（港南運河公園）",
+     "at": "2026-10-10"
     },
     "lighting": {
      "v": "u",
@@ -3000,10 +3005,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "湳雅公園公廁",
+     "at": "2026-10-10"
     },
     "handwash": {
      "v": "u",
@@ -7539,10 +7544,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "南寮運動公園(足球場)、南寮運動公園(停車場)",
+     "at": "2026-10-10"
     },
     "handwash": {
      "v": "u",
@@ -7575,10 +7580,10 @@
      "at": null
     },
     "nursing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "公廁育嬰台 2 座（南寮運動公園(足球場)、南寮運動公園(停車場)）",
+     "at": "2026-10-10"
     },
     "lighting": {
      "v": "u",
@@ -11816,10 +11821,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "青青草原公廁(1)～青青草原公廁(6)（共 6 處）",
+     "at": "2026-10-10"
     },
     "handwash": {
      "v": "u",
@@ -11852,10 +11857,10 @@
      "at": null
     },
     "nursing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "公廁育嬰台 2 座（青青草原公廁(6)）",
+     "at": "2026-10-10"
     },
     "lighting": {
      "v": "u",
@@ -12083,10 +12088,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "hccg_toilets",
+     "note": "三民公園公廁",
+     "at": "2026-10-10"
     },
     "handwash": {
      "v": "u",
