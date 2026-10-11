@@ -100,6 +100,7 @@ export async function runSeed(
     }
 
     // 4. 場地（attrs 不寫，由 place_attributes 的 trigger 同步）
+    //    開放時間、地面材質、狀態的來源是使用者回報（審核後套用）時保留現有的值，跟屬性的規則一樣
     changes.places_upserted = (
       await sql`
       INSERT INTO places (id, name, city, district, address, geom, size_class, area_ha, stay_bucket, stay_source,
@@ -116,8 +117,11 @@ export async function runSeed(
         name = EXCLUDED.name, city = EXCLUDED.city, district = EXCLUDED.district, address = EXCLUDED.address,
         geom = EXCLUDED.geom, size_class = EXCLUDED.size_class, area_ha = EXCLUDED.area_ha, stay_bucket = EXCLUDED.stay_bucket,
         stay_source = EXCLUDED.stay_source, age_min = EXCLUDED.age_min, age_max = EXCLUDED.age_max,
-        fee = EXCLUDED.fee, indoor = EXCLUDED.indoor, hours = EXCLUDED.hours, surface = EXCLUDED.surface,
-        status = EXCLUDED.status, summary = EXCLUDED.summary, coord_source = EXCLUDED.coord_source,
+        fee = EXCLUDED.fee, indoor = EXCLUDED.indoor,
+        hours = CASE WHEN places.hours_source = ${USER_SOURCE} THEN places.hours ELSE EXCLUDED.hours END,
+        surface = CASE WHEN places.surface_source = ${USER_SOURCE} THEN places.surface ELSE EXCLUDED.surface END,
+        status = CASE WHEN places.status_source = ${USER_SOURCE} THEN places.status ELSE EXCLUDED.status END,
+        summary = EXCLUDED.summary, coord_source = EXCLUDED.coord_source,
         updated_at = now()
       WHERE (places.name, places.city, places.district, places.address, ST_AsEWKT(places.geom),
              places.size_class, places.area_ha, places.stay_bucket, places.stay_source, places.age_min, places.age_max,
@@ -126,8 +130,11 @@ export async function runSeed(
         IS DISTINCT FROM
             (EXCLUDED.name, EXCLUDED.city, EXCLUDED.district, EXCLUDED.address, ST_AsEWKT(EXCLUDED.geom),
              EXCLUDED.size_class, EXCLUDED.area_ha, EXCLUDED.stay_bucket, EXCLUDED.stay_source, EXCLUDED.age_min, EXCLUDED.age_max,
-             EXCLUDED.fee, EXCLUDED.indoor, EXCLUDED.hours, EXCLUDED.surface, EXCLUDED.status, EXCLUDED.summary,
-             EXCLUDED.coord_source)`
+             EXCLUDED.fee, EXCLUDED.indoor,
+             CASE WHEN places.hours_source = ${USER_SOURCE} THEN places.hours ELSE EXCLUDED.hours END,
+             CASE WHEN places.surface_source = ${USER_SOURCE} THEN places.surface ELSE EXCLUDED.surface END,
+             CASE WHEN places.status_source = ${USER_SOURCE} THEN places.status ELSE EXCLUDED.status END,
+             EXCLUDED.summary, EXCLUDED.coord_source)`
     ).count;
 
     // 5. 屬性：先刪掉 places.json 已經沒有的列（不動使用者回報的資料），再 upsert
@@ -189,7 +196,8 @@ export async function runSeed(
       SELECT p.id,
              (EXISTS (SELECT 1 FROM place_attributes a WHERE a.place_id = p.id AND a.source_id = ${USER_SOURCE})
               OR EXISTS (SELECT 1 FROM place_parking pp WHERE pp.place_id = p.id AND pp.source_id = ${USER_SOURCE})
-              OR EXISTS (SELECT 1 FROM edit_suggestions e WHERE e.place_id = p.id)) AS protected
+              OR EXISTS (SELECT 1 FROM edit_suggestions e WHERE e.place_id = p.id)
+              OR ${USER_SOURCE} IN (p.hours_source, p.surface_source, p.status_source)) AS protected
       FROM places p
       WHERE p.city = ANY(${seedCities}) AND NOT (p.id = ANY(${placeIds})) AND p.id NOT LIKE 'test-%'
       ORDER BY p.id`;

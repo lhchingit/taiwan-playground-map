@@ -43,6 +43,7 @@ afterAll(async () => {
   await people.cleanup();
   await sql`DELETE FROM places WHERE id IN (${HSC}, ${HSQ})`; // 建議、屬性、照片跟著刪
   await sql`DELETE FROM place_attribute_history WHERE place_id IN (${HSC}, ${HSQ})`;
+  await sql`DELETE FROM place_field_history WHERE place_id IN (${HSC}, ${HSQ})`;
   await sql`DELETE FROM edit_suggestions WHERE place_id IS NULL AND payload->>'name' LIKE 'test-%'`;
   await sql.end();
 });
@@ -516,6 +517,151 @@ describe('審核員', () => {
   });
 
   it('不能直接寫場地資料表', () => expectNoDirectWrites(modHsc));
+});
+
+describe('核准時套用基本資料與封閉（0007）', () => {
+  // 用新的提交者：member 在前面的測試已經有同一個場地的待審建議（同一個項目只能有一筆）
+  let submitter: Actor;
+  beforeAll(async () => {
+    submitter = await people.create('member');
+  });
+  const review5 = (a: Actor, id: number, accept: boolean, payload?: Json, reason?: string) =>
+    a.client.rpc('review_suggestion', {
+      p_id: id,
+      p_accept: accept,
+      p_reason: reason,
+      p_payload: payload,
+    });
+
+  it('基本資料：審核員修改後套用，原始建議不變，留下來源與修改紀錄', async () => {
+    const { data } = await suggest(submitter, {
+      kind: 'field',
+      payload: { field: 'hours', value: '06:00–22:00' },
+    });
+    const applied = { field: 'hours', value: '05:30–22:00' };
+    expect((await review5(modHsc, data!.id, true, applied)).error).toBeNull();
+
+    const [p] =
+      await sql`SELECT hours, hours_source, hours_verified_at FROM places WHERE id = ${HSC}`;
+    expect(p).toMatchObject({ hours: '05:30–22:00', hours_source: 'user' });
+    expect(p?.hours_verified_at).not.toBeNull();
+    const [s] =
+      await sql`SELECT payload, applied_payload FROM edit_suggestions WHERE id = ${data!.id}`;
+    expect(s).toEqual({
+      payload: { field: 'hours', value: '06:00–22:00' },
+      applied_payload: applied,
+    });
+    const [h] = await sql`SELECT field, new_value, new_source, suggestion_id, changed_by
+                          FROM place_field_history WHERE suggestion_id = ${data!.id}`;
+    expect(h).toMatchObject({
+      field: 'hours',
+      new_value: '05:30–22:00',
+      new_source: 'user',
+      changed_by: modHsc.id,
+    });
+  });
+
+  it('審核員修改的內容也要符合格式', async () => {
+    const { data } = await suggest(submitter, {
+      kind: 'field',
+      payload: { field: 'surface', value: '人工草皮' },
+    });
+    expect(
+      (await review5(modHsc, data!.id, true, { field: 'name', value: '改名' })).error?.message,
+    ).toContain('不能回報');
+    expect(
+      (await review5(modHsc, data!.id, true, { field: 'surface', value: ' ' })).error?.message,
+    ).toContain('1～100');
+    const [s] = await sql`SELECT status FROM edit_suggestions WHERE id = ${data!.id}`;
+    expect(s?.status).toBe('pending');
+  });
+
+  it('封閉：狀態改成已封閉並記錄預計恢復日期；恢復開放只有負責的審核員可以', async () => {
+    const { data } = await suggest(submitter, {
+      kind: 'closure',
+      payload: { reason: '遊具維修中', until: '2026-12-31' },
+    });
+    expect(
+      (
+        await review5(modHsc, data!.id, true, {
+          reason: '整修封閉',
+          until: '2027-01-15',
+          status: 'closed',
+        })
+      ).error,
+    ).toBeNull();
+    const [p] =
+      await sql`SELECT status, status_until::text, status_note, status_source FROM places WHERE id = ${HSC}`;
+    expect(p).toEqual({
+      status: 'closed',
+      status_until: '2027-01-15',
+      status_note: '整修封閉',
+      status_source: 'user',
+    });
+
+    expect((await member.client.rpc('reopen_place', { p_place_id: HSC })).error?.message).toContain(
+      '沒有審核權限',
+    );
+    expect((await modHsq.client.rpc('reopen_place', { p_place_id: HSC })).error?.message).toContain(
+      '沒有審核權限',
+    );
+    expect((await anon.rpc('reopen_place', { p_place_id: HSC })).error).not.toBeNull();
+    expect(
+      (await modHsc.client.rpc('reopen_place', { p_place_id: HSC, p_note: '已恢復' })).error,
+    ).toBeNull();
+    const [q] = await sql`SELECT status, status_until, status_note FROM places WHERE id = ${HSC}`;
+    expect(q).toEqual({ status: 'open', status_until: null, status_note: null });
+    expect((await modHsc.client.rpc('reopen_place', { p_place_id: HSC })).error?.message).toContain(
+      '沒有標示',
+    );
+    const hist = await sql`SELECT old_value, new_value FROM place_field_history
+                           WHERE place_id = ${HSC} AND field = 'status' ORDER BY id`;
+    expect(hist.map((r) => `${r.old_value}→${r.new_value}`)).toEqual([
+      'open→closed',
+      'closed→open',
+    ]);
+  });
+
+  it('封閉的預計恢復日期不存在時被拒絕（例如 2 月 30 日）', async () => {
+    const { error } = await suggest(submitter, {
+      kind: 'closure',
+      payload: { reason: '維修', until: '2026-02-30' },
+    });
+    expect(error?.message).toContain('日期格式錯誤');
+  });
+
+  it('新增場地的建議目前不能核准，只能退回', async () => {
+    const [r] = await sql`
+      INSERT INTO edit_suggestions (place_id, user_id, kind, payload)
+      VALUES (NULL, ${submitter.id}, 'new_place', '{"name":"test-新場地","lat":24.8,"lng":120.97,"city":"hsc"}')
+      RETURNING id`;
+    const id = Number(r!.id);
+    expect((await review5(modHsc, id, true)).error?.message).toContain('新增場地的核准還沒開放');
+    expect((await review5(modHsc, id, false, undefined, 'other')).error).toBeNull();
+  });
+
+  it('負責的審核員讀得到未上線縣市的場地、屬性、停車；其他人讀不到', async () => {
+    await sql`INSERT INTO place_attributes (place_id, key, value, source_id, verified_at)
+              VALUES (${HSQ}, 'slide', 'y', 'user', '2026-10-11') ON CONFLICT DO NOTHING`;
+    await sql`INSERT INTO place_parking (place_id, type) VALUES (${HSQ}, 'u')`;
+    const read = async (c: ReturnType<typeof anonClient>) => [
+      (await c.from('places').select('id').eq('id', HSQ)).data?.length ?? 0,
+      (await c.from('place_attributes').select('key').eq('place_id', HSQ)).data?.length ?? 0,
+      (await c.from('place_parking').select('id').eq('place_id', HSQ)).data?.length ?? 0,
+    ];
+    expect(await read(modHsq.client)).toEqual([1, 1, 1]);
+    expect(await read(admin.client)).toEqual([1, 1, 1]);
+    expect(await read(modHsc.client)).toEqual([0, 0, 0]);
+    expect(await read(member.client)).toEqual([0, 0, 0]);
+    expect(await read(anon)).toEqual([0, 0, 0]);
+  });
+
+  it('基本欄位的修改紀錄：負責的審核員讀得到，會員讀不到', async () => {
+    const mod = await modHsc.client.from('place_field_history').select('id').eq('place_id', HSC);
+    expect(mod.data?.length).toBeGreaterThan(0);
+    const mem = await member.client.from('place_field_history').select('id').eq('place_id', HSC);
+    expect(mem.data).toEqual([]);
+  });
 });
 
 describe('管理員', () => {

@@ -986,3 +986,124 @@ form.report .check {
 .legal .dsec p {
   margin: 0 0 6px;
 }
+
+/* 場地狀態（P3(e1)：使用者回報的維修中／已封閉） */
+.status-notice {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border: 1px solid var(--slide);
+  border-radius: 8px;
+  background: var(--slide-soft);
+}
+.pill.maintenance,
+.pill.closed {
+  background: var(--slide-soft);
+  color: var(--slide);
+}
+
+/* 審核後台（P3(e1)） */
+.admin-page {
+  max-width: 960px;
+}
+.admin-closed {
+  margin-top: 12px;
+}
+.admin-filter,
+.admin-batch,
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+}
+.admin-filter label,
+.admin-review label {
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+}
+.admin-filter select,
+.admin-review input,
+.admin-review select,
+.admin-batch select,
+.admin-actions select {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.admin-groups,
+.admin-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.admin-groups {
+  margin-top: 10px;
+}
+.admin-group.conflict {
+  border: 2px solid var(--slide);
+  border-radius: var(--r);
+  padding: 8px;
+}
+.admin-conflict {
+  margin: 0 0 8px;
+  color: var(--slide);
+  font-weight: 600;
+}
+.admin-card {
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 10px 12px;
+  display: grid;
+  gap: 8px;
+}
+.admin-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+.admin-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.admin-compare h4 {
+  margin: 0 0 4px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.admin-compare p {
+  margin: 0 0 4px;
+}
+.admin-review {
+  display: grid;
+  gap: 8px;
+}
+.admin-review fieldset {
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+}
+.admin-results {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+}
+.admin-results .ok {
+  color: var(--teal);
+}
+.admin-results .err {
+  color: var(--slide);
+}
+@media (max-width: 640px) {
+  .admin-compare {
+    grid-template-columns: 1fr;
+  }
+}

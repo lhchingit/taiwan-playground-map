@@ -151,6 +151,30 @@ describe('pnpm seed', () => {
     );
   });
 
+  it('重新匯入不覆蓋使用者回報（已審核）的開放時間、地面材質、狀態', async () => {
+    const target = seed.places[0]!;
+    const [before] =
+      await sql`SELECT hours, surface, status, updated_at FROM places WHERE id = ${target.id}`;
+    await sql`UPDATE places SET hours = '使用者時間', hours_source = 'user', surface = '使用者地面', surface_source = 'user',
+                               status = 'maintenance', status_source = 'user'
+              WHERE id = ${target.id}`;
+    try {
+      await runSeed(sql, seed);
+      const [after] = await sql`SELECT hours, surface, status FROM places WHERE id = ${target.id}`;
+      expect(after).toEqual({ hours: '使用者時間', surface: '使用者地面', status: 'maintenance' });
+      // 再匯入一次也不會再更新（不會每次都改 updated_at）
+      const [t1] = await sql`SELECT updated_at FROM places WHERE id = ${target.id}`;
+      await runSeed(sql, seed);
+      const [t2] = await sql`SELECT updated_at FROM places WHERE id = ${target.id}`;
+      expect(t2?.updated_at).toEqual(t1?.updated_at);
+    } finally {
+      await sql`UPDATE places SET hours = ${before!.hours}, surface = ${before!.surface}, status = ${before!.status},
+                                 hours_source = NULL, surface_source = NULL, status_source = NULL,
+                                 updated_at = ${before!.updated_at}
+                WHERE id = ${target.id}`;
+    }
+  });
+
   it('匿名使用者讀得到新竹市全部場地', async () => {
     const { count, error } = await anonClient()
       .from('places')

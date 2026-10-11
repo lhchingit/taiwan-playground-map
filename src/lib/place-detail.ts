@@ -39,9 +39,24 @@ export interface PlaceDetail extends CityPlace {
   staySource: SourceRef | null;
   /** 座標來源說明，例：OpenStreetMap w448662016（清冊編號 94） */
   coordSource: string | null;
+  /** 開放時間、地面材質的來源（使用者回報經審核後套用時才有） */
+  hoursRef: FieldRef | null;
+  surfaceRef: FieldRef | null;
+  /** 維修中／已封閉的說明（status 在 CityPlace） */
+  statusInfo: StatusInfo | null;
   facts: AttrFact[];
   /** 至少一列；沒有資料時是一列 type u */
   parkingRows: ParkingFact[];
+}
+
+export interface FieldRef {
+  source: SourceRef | null;
+  verifiedAt: string | null;
+}
+
+export interface StatusInfo extends FieldRef {
+  until: string | null;
+  note: string | null;
 }
 
 export interface FactRow extends AttrFact {
@@ -154,6 +169,10 @@ export function toPlaceDetail(input: {
     verifiedAt: str(p.verified_at),
   }));
   const stayId = str(place.stay_source);
+  const source = (id: unknown) => input.sources.find((s) => s.id === str(id)) ?? null;
+  const ref = (src: unknown, at: unknown): FieldRef | null =>
+    str(src) ? { source: source(src), verifiedAt: str(at) } : null;
+  const closed = card.status === 'maintenance' || card.status === 'closed';
   return {
     ...card,
     address: str(place.address),
@@ -163,6 +182,16 @@ export function toPlaceDetail(input: {
     areaHa: num(place.area_ha),
     staySource: input.sources.find((s) => s.id === stayId) ?? null,
     coordSource: str(place.coord_source),
+    hoursRef: ref(place.hours_source, place.hours_verified_at),
+    surfaceRef: ref(place.surface_source, place.surface_verified_at),
+    statusInfo: closed
+      ? {
+          until: str(place.status_until),
+          note: str(place.status_note),
+          source: source(place.status_source),
+          verifiedAt: str(place.status_verified_at),
+        }
+      : null,
     facts,
     parkingRows:
       parkingRows.length > 0
@@ -180,6 +209,24 @@ export function toPlaceDetail(input: {
             },
           ],
   };
+}
+
+const STATUS_LABEL: Record<string, string> = { maintenance: '維修中', closed: '已封閉' };
+
+/** 場地狀態的提醒（維修中、已封閉）；開放或季節性開放時是 null。today：YYYY-MM-DD（台灣時間） */
+export function statusNotice(
+  status: string,
+  info: Pick<StatusInfo, 'until' | 'note'> | null,
+  today: string,
+): string | null {
+  const label = STATUS_LABEL[status];
+  if (!label) return null;
+  let text = info?.note ? `${label}：${info.note}` : label;
+  if (info?.until) {
+    text += `（預計 ${info.until} 恢復）`;
+    if (info.until < today) text += '。已過預計恢復日期，可能已經恢復，出發前請先確認';
+  }
+  return text;
 }
 
 export function feeText(fee: 'free' | 'paid' | null): string {
