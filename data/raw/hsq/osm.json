@@ -1,0 +1,1537 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-HSQ\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-11",
+ "osm_base": "2026-10-11T04:32:45Z",
+ "sha256": "4956a6a42126c40dec4e276d9412c295faa90875fc7dcd5f397a049f28c25041",
+ "playgrounds": [
+  {
+   "ref": "n2632373343",
+   "lat": 24.7522268,
+   "lng": 121.0986782,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n4279961090",
+   "lat": 24.8683242,
+   "lng": 120.9800018,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n4631680445",
+   "lat": 24.8366024,
+   "lng": 121.0120577,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 330471065,
+     "name": "仁德公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "n5875360685",
+   "lat": 24.8094377,
+   "lng": 121.0302566,
+   "tags": {
+    "internet_access": "wlan",
+    "leisure": "playground",
+    "opening_hours": "Mo-Su 11:00-15:00, 17:00-20:30"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "n7822859035",
+   "lat": 24.688249,
+   "lng": 121.0544003,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "北埔鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n10573719712",
+   "lat": 24.7318271,
+   "lng": 121.0833452,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 328318294,
+     "name": "竹東森林公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w145505073",
+   "lat": 24.7736991,
+   "lng": 121.0479046,
+   "tags": {
+    "access": "customers",
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w166841510",
+   "lat": 24.8285385,
+   "lng": 121.0979853,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 779315203,
+     "name": "龍尾運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新埔鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w323261949",
+   "lat": 24.8434085,
+   "lng": 121.0000913,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323570749",
+   "lat": 24.839413,
+   "lng": 121.0023631,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323570753",
+   "lat": 24.8382535,
+   "lng": 121.002624,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323570754",
+   "lat": 24.8415357,
+   "lng": 121.0024258,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321406625,
+     "name": "兒8公園(新社公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323570755",
+   "lat": 24.8434612,
+   "lng": 120.9981123,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323570774",
+   "lat": 24.8259939,
+   "lng": 121.0099667,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323575763",
+   "lat": 24.8354985,
+   "lng": 120.9977686,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 323575801,
+     "name": "兒26公園(廖茶公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323575802",
+   "lat": 24.8463955,
+   "lng": 120.9988365,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321416409,
+     "name": "公2公園(旗杆厝公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w323598305",
+   "lat": 24.8092897,
+   "lng": 121.025066,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 318662287,
+     "name": "童話公園(兒四公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w371450847",
+   "lat": 24.7795072,
+   "lng": 121.036295,
+   "tags": {
+    "leisure": "playground",
+    "name": "親子公園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w441724977",
+   "lat": 24.8485324,
+   "lng": 121.0038565,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321416048,
+     "name": "新工公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w447166709",
+   "lat": 24.8333102,
+   "lng": 121.0207755,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 447166711,
+     "name": "文忠路公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w447166710",
+   "lat": 24.8332073,
+   "lng": 121.0206582,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 447166711,
+     "name": "文忠路公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w448762619",
+   "lat": 24.8699062,
+   "lng": 120.9916431,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 254296845,
+     "name": "松林兒童遊樂場"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w492346303",
+   "lat": 24.8186768,
+   "lng": 121.0131003,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321782402,
+     "name": "公24興隆公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w519484864",
+   "lat": 24.8984181,
+   "lng": 121.0464345,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 369610953,
+     "name": "公兒五公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w544097820",
+   "lat": 24.7237371,
+   "lng": 121.0934466,
+   "tags": {
+    "description": "很小的公園",
+    "leisure": "playground",
+    "name": "惠安社區遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w783315985",
+   "lat": 24.8458605,
+   "lng": 120.9939151,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 441724995,
+     "name": "中正1號公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w783315986",
+   "lat": 24.8460725,
+   "lng": 120.9940868,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 441724995,
+     "name": "中正1號公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w878838483",
+   "lat": 24.7284807,
+   "lng": 121.0932804,
+   "tags": {
+    "leisure": "playground",
+    "name": "台泥公園遊樂場"
+   },
+   "parks": [
+    {
+     "area": 756953555,
+     "name": "竹東台泥公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w912262890",
+   "lat": 24.7769913,
+   "lng": 121.0743772,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230670,
+     "name": "公三公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w929241684",
+   "lat": 24.814067,
+   "lng": 121.0208675,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 323598301,
+     "name": "公27公園(八張犁公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w929535676",
+   "lat": 24.7968113,
+   "lng": 121.1747547,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 929535675,
+     "name": "北斗親子公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "關西鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w947708607",
+   "lat": 24.8296947,
+   "lng": 121.0080303,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 323384369,
+     "name": "博愛公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w947708775",
+   "lat": 24.8953431,
+   "lng": 121.0398728,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 617295344,
+     "name": "公三親子公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w974869027",
+   "lat": 24.8314777,
+   "lng": 121.0226299,
+   "tags": {
+    "leisure": "playground",
+    "name": "滑梯遊戲區"
+   },
+   "parks": [
+    {
+     "area": 323413325,
+     "name": "AI智慧園區公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w974869028",
+   "lat": 24.8317272,
+   "lng": 121.0224932,
+   "tags": {
+    "leisure": "playground",
+    "name": "滑步車遊戲場"
+   },
+   "parks": [
+    {
+     "area": 323413325,
+     "name": "AI智慧園區公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w974869030",
+   "lat": 24.8308449,
+   "lng": 121.0225481,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 323413325,
+     "name": "AI智慧園區公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w974869032",
+   "lat": 24.8307202,
+   "lng": 121.0228724,
+   "tags": {
+    "leisure": "playground",
+    "name": "體健廣場1（静態）"
+   },
+   "parks": [
+    {
+     "area": 323413325,
+     "name": "AI智慧園區公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w974869033",
+   "lat": 24.8320053,
+   "lng": 121.0222464,
+   "tags": {
+    "leisure": "playground",
+    "name": "體健廣場2（動態）"
+   },
+   "parks": [
+    {
+     "area": 323413325,
+     "name": "AI智慧園區公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w974869034",
+   "lat": 24.83218,
+   "lng": 121.022569,
+   "tags": {
+    "leisure": "playground",
+    "name": "林間遊戲場"
+   },
+   "parks": [
+    {
+     "area": 323413325,
+     "name": "AI智慧園區公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1013686841",
+   "lat": 24.7824728,
+   "lng": 121.0341849,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1157369147",
+   "lat": 24.8361788,
+   "lng": 120.9881323,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1164597855",
+   "lat": 24.8683586,
+   "lng": 121.0267467,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 329802576,
+     "name": "勝利運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1164815603",
+   "lat": 24.8177402,
+   "lng": 121.0198345,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1183380153",
+   "lat": 24.8397765,
+   "lng": 121.00732,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 466569883,
+     "name": "新泰公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1191732350",
+   "lat": 24.7906654,
+   "lng": 121.0648653,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1004216000,
+     "name": "金獅公一公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1227114582",
+   "lat": 24.8223487,
+   "lng": 121.0100608,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321778945,
+     "name": "福興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1227114626",
+   "lat": 24.8334658,
+   "lng": 121.0160198,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1231034544",
+   "lat": 24.8873218,
+   "lng": 121.0947708,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1231034561",
+   "lat": 24.9268325,
+   "lng": 121.0391173,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1231303559",
+   "lat": 24.790392,
+   "lng": 121.183784,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "關西鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1231303560",
+   "lat": 24.7902346,
+   "lng": 121.1841088,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "關西鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1231303561",
+   "lat": 24.7901571,
+   "lng": 121.1842659,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "關西鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1231883790",
+   "lat": 24.7658805,
+   "lng": 121.0777597,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1250192875",
+   "lat": 24.8333766,
+   "lng": 121.0003568,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 528384882,
+     "name": "新崙公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1253186975",
+   "lat": 24.8501924,
+   "lng": 120.9433611,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 991508225,
+     "name": "新港休憩公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1261791798",
+   "lat": 24.8438177,
+   "lng": 120.9920009,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 805993374,
+     "name": "中正4號公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737888",
+   "lat": 24.775394,
+   "lng": 121.0766984,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230669,
+     "name": "公四水霧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737889",
+   "lat": 24.774855,
+   "lng": 121.0773851,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230669,
+     "name": "公四水霧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737890",
+   "lat": 24.7751386,
+   "lng": 121.0770727,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230669,
+     "name": "公四水霧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737891",
+   "lat": 24.7751091,
+   "lng": 121.0771211,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230669,
+     "name": "公四水霧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737892",
+   "lat": 24.7750762,
+   "lng": 121.0771695,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230669,
+     "name": "公四水霧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737893",
+   "lat": 24.7750151,
+   "lng": 121.0772372,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230669,
+     "name": "公四水霧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737894",
+   "lat": 24.7749509,
+   "lng": 121.0773022,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230669,
+     "name": "公四水霧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737895",
+   "lat": 24.7804845,
+   "lng": 121.0745274,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230680,
+     "name": "公一方口獅公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1294737896",
+   "lat": 24.7806239,
+   "lng": 121.0743542,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 556230680,
+     "name": "公一方口獅公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "芎林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1296254259",
+   "lat": 24.8253829,
+   "lng": 121.0799847,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 438776072,
+     "name": "公二公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新埔鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1347535690",
+   "lat": 24.844152,
+   "lng": 120.9997782,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321415653,
+     "name": "兒15公園(樹網公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1351534499",
+   "lat": 24.7877693,
+   "lng": 121.1838972,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 662534741,
+     "name": "鳴鳳公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "關西鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1363504028",
+   "lat": 24.8153086,
+   "lng": 121.0303745,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 243744947,
+     "name": "兒一繩索公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1387488174",
+   "lat": 24.8282217,
+   "lng": 121.0059098,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 323413310,
+     "name": "公16公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1393769400",
+   "lat": 24.7689686,
+   "lng": 121.0055335,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "寶山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1442257774",
+   "lat": 24.8416091,
+   "lng": 120.9635201,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1442257781",
+   "lat": 24.8462315,
+   "lng": 120.9774461,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1442257793",
+   "lat": 24.837455,
+   "lng": 121.0141699,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1449305011",
+   "lat": 24.8302958,
+   "lng": 121.0255328,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 327708856,
+     "name": "長橋公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1449305027",
+   "lat": 24.8324331,
+   "lng": 121.0266817,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 557586087,
+     "name": "兒童公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1449935708",
+   "lat": 24.862023,
+   "lng": 120.9640929,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1464042449",
+   "lat": 24.8624631,
+   "lng": 120.9571203,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1464500230",
+   "lat": 24.8577686,
+   "lng": 121.0140296,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1472862933",
+   "lat": 24.8169403,
+   "lng": 121.0140948,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321782404,
+     "name": "公25公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1542787146",
+   "lat": 24.8341668,
+   "lng": 121.0009629,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 321426045,
+     "name": "兒17公園(社崙公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1542787149",
+   "lat": 24.8366474,
+   "lng": 121.0190023,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1308727504,
+     "name": "公14公園(惟馨公園)"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1542787155",
+   "lat": 24.8020084,
+   "lng": 121.038854,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 805993388,
+     "name": "高鐵4號公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  }
+ ]
+}

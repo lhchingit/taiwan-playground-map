@@ -39,6 +39,14 @@ OpenStreetMap 上各縣市的公園與遊戲場數量見本文件最後的附錄
 - 沒有官方清單，起步資料：OSM 的 `leisure=park` 與 `leisure=playground`、網路文章（只當線索，事實要重新查證並標來源）。
 - 優先範圍：竹北市、竹東鎮、湖口鄉、新豐鄉（人口集中、與新竹市生活圈重疊）。
 - 可以發公文或寫信向縣府（工務處或城鄉發展處）索取兒童遊戲場清冊，或透過政府資料開放平台的「我想要更多」提出資料集需求。這件事由人來做，不是 Claude Code 的任務。
+- **進度（2026-10-11）：** 資料已準備好、**未上線**（decisions D20）。
+  - 42 處場地：名稱來自 OSM 的公園或遊戲場名稱，遊具全部未知。
+  - **人工確認**：`data/review/hsq/unnamed.csv` 有 27 個沒有名稱的遊戲場。優先處理竹北、竹東、湖口、新豐：
+    1. 打開 OSM 連結確認。
+    2. 在 `data/raw/hsq/manual-names.tsv` 填名稱或「（排除）」，並填依據與確認者。
+    3. 重新執行 `python3 scripts/import_osm_city.py hsq`。
+  - `data/review/hsq/merged.csv` 列出合併成同一處的遊戲區，可以順便確認。
+  - 上線前在本機 `pnpm city launch hsq` 看過，再依 `docs/operations.md` 在正式環境上線。
 
 ### 桃園市（tyc）
 
@@ -58,7 +66,7 @@ OpenStreetMap 上各縣市的公園與遊戲場數量見本文件最後的附錄
 - [ ] 該縣市的轉接器、設施對照與測試已合併。
 - [ ] 所有場地座標來自 OSM、TGOS 或人工定位，`data/` 內沒有任何來自 Google 的座標或內容。
 - [ ] review 清單都處理過或註記原因。
-- [ ] 跨縣市距離篩選的測試通過。
+- [ ] 跨縣市距離篩選的測試通過。（新竹縣：`tests/unit/cross-city.test.ts`）
 - [ ] `cities.launched_at` 已設定，該縣市首頁與場地頁可以公開瀏覽。
 
 ## 附錄：OpenStreetMap 上的公園與遊戲場數量（2026-10-10，Overpass API）

@@ -133,18 +133,18 @@ describe('匿名使用者不能寫入', () => {
   }
 });
 
-describe('縣市上線狀態控制匿名讀取（以新竹縣測試）', () => {
+describe('縣市上線狀態控制匿名讀取（以苗栗縣測試：沒有真的資料、未上線）', () => {
   const rows = toSeedRows(fixture as SeedFile);
   const ids = rows.places.map((p) => p.id);
 
   const setLaunched = (on: boolean) =>
-    sql`UPDATE cities SET launched_at = ${on ? sql`now()` : null} WHERE code = 'hsq'`;
+    sql`UPDATE cities SET launched_at = ${on ? sql`now()` : null} WHERE code = 'mlc'`;
 
   async function anonSees() {
     const places = await anon.from('places').select('id').in('id', ids);
     const attrs = await anon.from('place_attributes').select('place_id').in('place_id', ids);
     const parking = await anon.from('place_parking').select('place_id').in('place_id', ids);
-    const city = await anon.from('cities').select('code').eq('code', 'hsq');
+    const city = await anon.from('cities').select('code').eq('code', 'mlc');
     const cards = await anon.from('place_cards').select('id').in('id', ids);
     for (const r of [places, attrs, parking, city, cards]) expect(r.error).toBeNull();
     return {
@@ -194,10 +194,10 @@ describe('縣市上線狀態控制匿名讀取（以新竹縣測試）', () => {
   });
 
   it('未上線時 city_bounds 仍看得到範圍（前端靠它判斷要不要載入）', async () => {
-    const { data, error } = await anon.from('city_bounds').select('*').eq('code', 'hsq');
+    const { data, error } = await anon.from('city_bounds').select('*').eq('code', 'mlc');
     expect(error).toBeNull();
     expect(data).toEqual([
-      expect.objectContaining({ code: 'hsq', slug: 'hsinchu-county', launched: false }),
+      expect.objectContaining({ code: 'mlc', slug: 'miaoli', launched: false }),
     ]);
     expect(data?.[0]?.bbox).toHaveLength(4);
   });

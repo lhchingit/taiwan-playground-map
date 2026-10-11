@@ -11,15 +11,15 @@ describe('toSeedRows', () => {
 
   it('未知且沒有來源的屬性不寫入；y、n、有來源的 u 都寫入', () => {
     expect(rows.placeAttributes.map((a) => `${a.place_id}.${a.key}=${a.value}`)).toEqual([
-      'test-hsq-known.slide=y',
-      'test-hsq-known.toilet=n',
-      'test-hsq-known.shade=u',
+      'test-mlc-known.slide=y',
+      'test-mlc-known.toilet=n',
+      'test-mlc-known.shade=u',
     ]);
   });
 
   it('寫入的屬性保留來源與確認日期', () => {
     expect(rows.placeAttributes[0]).toEqual({
-      place_id: 'test-hsq-known',
+      place_id: 'test-mlc-known',
       key: 'slide',
       value: 'y',
       note: '測試',
@@ -31,7 +31,7 @@ describe('toSeedRows', () => {
   it('停車每個場地一列，未知也要有一列 type = u', () => {
     expect(rows.parking).toHaveLength(2);
     expect(rows.parking[1]).toMatchObject({
-      place_id: 'test-hsq-unknown',
+      place_id: 'test-mlc-unknown',
       type: 'u',
       fee: 'u',
       spaces: null,
@@ -40,8 +40,8 @@ describe('toSeedRows', () => {
 
   it('場地欄位改成資料表欄位名稱，未知維持 null', () => {
     expect(rows.places[1]).toMatchObject({
-      id: 'test-hsq-unknown',
-      city: 'hsq',
+      id: 'test-mlc-unknown',
+      city: 'mlc',
       size_class: null,
       stay_bucket: null,
       age_min: null,
@@ -51,28 +51,28 @@ describe('toSeedRows', () => {
   });
 
   it('依縣市產生範圍', () => {
-    expect(rows.cities.map((c) => c.code)).toEqual(['hsq']);
+    expect(rows.cities.map((c) => c.code)).toEqual(['mlc']);
   });
 });
 
 describe('toCityRows', () => {
   const osm = {
-    hsq: [120.9, 24.4, 121.4, 24.9] as [number, number, number, number],
+    mlc: [120.6, 24.2, 121.2, 24.8] as [number, number, number, number],
     tyc: [121.0, 24.6, 121.5, 25.1] as [number, number, number, number],
   };
 
   it('有場地的縣市用場地座標外擴，沒有場地的才用 OSM 行政界', () => {
     const cities = toCityRows(seed.places, osm);
     expect(cities.map((c) => [c.code, c.bboxSource])).toEqual([
-      ['hsq', 'places'],
+      ['mlc', 'places'],
       ['tyc', 'osm'],
     ]);
-    expect(cities[0]?.bbox).not.toEqual(osm.hsq);
+    expect(cities[0]?.bbox).not.toEqual(osm.mlc);
     expect(cities[1]?.bbox).toEqual(osm.tyc);
   });
 
   it('沒有 OSM 資料時只產生有場地的縣市', () => {
-    expect(toCityRows(seed.places, {}).map((c) => c.code)).toEqual(['hsq']);
+    expect(toCityRows(seed.places, {}).map((c) => c.code)).toEqual(['mlc']);
   });
 });
 

@@ -63,13 +63,13 @@ describe('pnpm city', () => {
   afterAll(async () => {
     await sql`DELETE FROM places WHERE id = ANY(${ids})`;
     await sql`DELETE FROM place_attribute_history WHERE place_id = ANY(${ids})`;
-    await sql`UPDATE cities SET launched_at = NULL WHERE code = 'hsq'`;
+    await sql`UPDATE cities SET launched_at = NULL WHERE code = 'mlc'`;
   });
 
   it('沒有場地的縣市不能上線', async () => {
-    await expect(launchCity(sql, 'mlc')).rejects.toThrow('還沒有任何場地');
-    const [mlc] = await sql`SELECT launched_at FROM cities WHERE code = 'mlc'`;
-    expect(mlc?.launched_at).toBeNull();
+    await expect(launchCity(sql, 'tyc')).rejects.toThrow('還沒有任何場地');
+    const [tyc] = await sql`SELECT launched_at FROM cities WHERE code = 'tyc'`;
+    expect(tyc?.launched_at).toBeNull();
   });
 
   it('不存在的縣市 → 丟錯', async () => {
@@ -82,16 +82,16 @@ describe('pnpm city', () => {
       await sql`INSERT INTO places (id, name, city, geom)
                 VALUES (${p.id}, ${p.name}, ${p.city}, ST_SetSRID(ST_MakePoint(${p.lng}, ${p.lat}), 4326))`;
     }
-    const first = await launchCity(sql, 'hsq');
+    const first = await launchCity(sql, 'mlc');
     expect(first).not.toBe('');
-    expect(await launchCity(sql, 'hsq')).toBe(first);
+    expect(await launchCity(sql, 'mlc')).toBe(first);
 
-    const status = (await cityStatus(sql)).find((c) => c.code === 'hsq');
-    expect(status).toMatchObject({ code: 'hsq', places: 2, launchedAt: first });
+    const status = (await cityStatus(sql)).find((c) => c.code === 'mlc');
+    expect(status).toMatchObject({ code: 'mlc', places: 2, launchedAt: first });
 
-    await unlaunchCity(sql, 'hsq');
-    const [hsq] = await sql`SELECT launched_at FROM cities WHERE code = 'hsq'`;
-    expect(hsq?.launched_at).toBeNull();
+    await unlaunchCity(sql, 'mlc');
+    const [mlc] = await sql`SELECT launched_at FROM cities WHERE code = 'mlc'`;
+    expect(mlc?.launched_at).toBeNull();
   });
 });
 

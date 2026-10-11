@@ -67,18 +67,18 @@ describe('resolveDatabaseUrl', () => {
 });
 
 describe('crossCheck（跨縣市檔案一致性）', () => {
-  const hsq = fixture as SeedFile; // 測試資料的場地都在 hsq
+  const mlc = fixture as SeedFile; // 測試資料的場地都在 mlc
   const clone = (f: (s: SeedFile) => void) => {
-    const s = structuredClone(hsq);
+    const s = structuredClone(mlc);
     f(s);
     return s;
   };
 
   it('一致時沒有錯誤', () => {
-    expect(crossCheck([['hsq', hsq]])).toEqual([]);
+    expect(crossCheck([['mlc', mlc]])).toEqual([]);
   });
   it('場地的 city 跟資料夾不符', () => {
-    expect(crossCheck([['tyc', hsq]]).join()).toContain('跟資料夾不符');
+    expect(crossCheck([['tyc', mlc]]).join()).toContain('跟資料夾不符');
   });
   it('屬性字典不同', () => {
     const other = clone((s) => {
@@ -87,7 +87,7 @@ describe('crossCheck（跨縣市檔案一致性）', () => {
     });
     expect(
       crossCheck([
-        ['hsq', hsq],
+        ['mlc', mlc],
         ['tyc', other],
       ]).join(),
     ).toContain('屬性字典');
@@ -99,7 +99,7 @@ describe('crossCheck（跨縣市檔案一致性）', () => {
     });
     expect(
       crossCheck([
-        ['hsq', hsq],
+        ['mlc', mlc],
         ['tyc', other],
       ]).join(),
     ).toContain('來源 est');
