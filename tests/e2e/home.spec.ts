@@ -227,3 +227,45 @@ test('到登入頁再按上一頁回來，地圖上的標記還在', async ({ pa
   await expect(page).toHaveURL(/\/hsinchu-city$/);
   await expect(markers(page)).toHaveCount(TOTAL);
 });
+
+// 主要圖磚（灰階）已經載入過，按「上一頁」回來重建地圖時，即使請求失敗或被中斷也不改用備援（OSM，彩色）
+test('到登入頁再按上一頁回來，地圖不會換成備援圖磚', async ({ page }) => {
+  // 用本機的簡單樣式代替 OpenFreeMap（不連外網）；備援圖磚只計數
+  let fallback = 0;
+  await page.route(/tile\.openstreetmap\.org/, (r) => {
+    fallback++;
+    return r.abort();
+  });
+  await page.route(/tiles\.openfreemap\.org/, (r) =>
+    r.fulfill({
+      json: {
+        version: 8,
+        sources: {},
+        layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#eeeeee' } }],
+      },
+    }),
+  );
+  await page.goto('/hsinchu-city');
+  await expect(markers(page)).toHaveCount(TOTAL);
+  await expect(page.getByText('地圖載入中…')).toHaveCount(0);
+  await page.getByRole('link', { name: '登入', exact: true }).click();
+  await expect(page).toHaveURL(/\/login\?next=/);
+  // 回來時主要圖磚的請求失敗（模擬被中斷或網路不穩）
+  await page.route(/tiles\.openfreemap\.org/, (r) => r.abort());
+  await page.goBack();
+  await expect(markers(page)).toHaveCount(TOTAL);
+  await page.waitForTimeout(1500);
+  expect(fallback).toBe(0);
+});
+
+test('主要圖磚第一次就載入失敗時，改用備援圖磚', async ({ page }) => {
+  let fallback = 0;
+  await page.route(/tile\.openstreetmap\.org/, (r) => {
+    fallback++;
+    return r.abort();
+  });
+  await page.route(/tiles\.openfreemap\.org/, (r) => r.abort());
+  await page.goto('/hsinchu-city');
+  await expect(markers(page)).toHaveCount(TOTAL);
+  await expect.poll(() => fallback).toBeGreaterThan(0);
+});
