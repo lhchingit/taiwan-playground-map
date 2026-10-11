@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AuthButton } from '@/components/auth/AuthButton';
 import { LoginDialog } from '@/components/auth/LoginDialog';
@@ -254,6 +255,12 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
           </div>
           <p className="sub">
             {city.name}親子遊樂場與公園．資料 {places.length} 處
+            {/* 兩個以上縣市上線時才有縣市選單（只有一個時 / 直接導向該縣市） */}
+            {cities.filter((c) => c.launched).length > 1 && (
+              <>
+                ．<Link href="/">切換縣市</Link>
+              </>
+            )}
           </p>
           <OriginControls
             origin={origin}

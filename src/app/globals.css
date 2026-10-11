@@ -1203,3 +1203,8 @@ table.history th {
   cursor: pointer;
   font: inherit;
 }
+
+/* 縣市首頁的「切換縣市」 */
+.sub a {
+  color: var(--teal);
+}

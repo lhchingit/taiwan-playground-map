@@ -43,9 +43,11 @@ test('清快取 API：密鑰錯誤 401、縣市代碼不對 400、正確 200', a
   expect((await ok.json()).revalidated).toContain('city:hsc');
 });
 
-test('只有新竹市上線時，/ 直接導向新竹市', async ({ page }) => {
+test('只有新竹市上線時，/ 直接導向新竹市，也沒有「切換縣市」', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveURL(/\/hsinchu-city$/);
+  await expect(page.getByText(/資料 \d+ 處/)).toBeVisible();
+  await expect(page.getByRole('link', { name: '切換縣市' })).toHaveCount(0);
 });
 
 test('苗栗縣上線並清快取後：/ 是縣市選單，苗栗縣的頁面可以瀏覽', async ({ page, request }) => {
@@ -67,6 +69,11 @@ test('苗栗縣上線並清快取後：/ 是縣市選單，苗栗縣的頁面可
   await list.getByRole('link', { name: '苗栗縣' }).click();
   await expect(page).toHaveURL(/\/miaoli$/);
   await expect(page.locator('a.card[data-id="test-mlc-known"]')).toBeVisible();
+
+  // 兩個縣市上線：縣市首頁有「切換縣市」，回到縣市選單
+  await page.getByRole('link', { name: '切換縣市' }).click();
+  await expect(page).toHaveURL(/\/$/);
+  await expect(page.locator('.city-list')).toBeVisible();
 
   const res = await page.goto('/miaoli/places/test-mlc-known');
   expect(res?.status()).toBe(200);
