@@ -73,6 +73,7 @@ pnpm docker:down   # 停止並移除容器
 | `python3 scripts/fetch_hccg_toilets.py` | 重新下載新竹市公廁地點資訊到 `data/raw/hsc/hccg-toilets.json`；名稱對不到的公廁列在 `data/review/hsc/toilets-unmatched.csv`，人工確認後填 `data/raw/hsc/toilet-aliases.tsv` |
 | `python3 scripts/fetch_hccg_parks.py` | 重新下載新竹市公園管理維護地點（面積與地點提示）到 `data/raw/hsc/hccg-parks.json` |
 | `python -m unittest discover -s scripts/tests -t scripts` | 匯入腳本（Python）的測試 |
+| `python3 scripts/fetch_osm_city.py hsq`、`python3 scripts/import_osm_city.py hsq` | 沒有官方清單的縣市：下載 OSM 遊戲場（含所在公園、鄉鎮市），再產生 `data/seed/hsq/`（decisions D20）；沒有名稱的列在 `data/review/hsq/unnamed.csv`，人工確認後填 `data/raw/hsq/manual-names.tsv` |
 | `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
 | `pnpm screenshots p1b`／`p1c` | 原型與正式版並排截圖（正式版要先在 3100 埠執行）：p1b 首頁篩選、p1c 場地詳情，輸出到 `docs/screenshots/<組別>/` |
 

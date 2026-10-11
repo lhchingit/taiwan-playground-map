@@ -9,7 +9,15 @@ import { adminSql, anonClient } from './helpers';
 
 const sql = adminSql();
 const seed = JSON.parse(readFileSync('data/seed/hsc/places.json', 'utf8')) as SeedFile;
-// 筆數從種子資料算，補資料後不用改測試
+// 全部縣市的種子資料（新竹市＋新竹縣…）；筆數從種子資料算，補資料後不用改測試
+const seedCities = listSeedCities();
+const allSeeds = seedCities.map(
+  (c) => JSON.parse(readFileSync(`data/seed/${c}/places.json`, 'utf8')) as SeedFile,
+);
+const allPlaces = allSeeds.flatMap((s) => s.places);
+const allSources = new Set(allSeeds.flatMap((s) => Object.keys(s.sources)));
+const hsq = allSeeds.find((s) => s.places[0]?.city === 'hsq');
+// 新竹市的面積
 const withArea = seed.places.filter((p) => p.area_ha !== null && p.area_ha !== undefined).length;
 
 afterAll(() => sql.end());
@@ -31,10 +39,11 @@ describe('pnpm seed', () => {
   it('各表筆數符合完成標準', async () => {
     expect(await snapshot()).toMatchObject({
       // 'user'（使用者回報）由 migration 0004 建立，不在種子資料裡
-      sources: new Set([...Object.keys(seed.sources), 'user']).size,
+      sources: new Set([...allSources, 'user']).size,
       attribute_defs: 38,
-      places: seed.places.length,
-      place_parking: 72,
+      places: allPlaces.length,
+      // 每個場地剛好一列停車資料
+      place_parking: allPlaces.length,
     });
   });
 
@@ -86,9 +95,9 @@ describe('pnpm seed', () => {
     expect(rows).toEqual([]);
   });
 
-  it('場地的 city 存縣市代碼；新竹市已上線並有範圍', async () => {
-    const cities = await sql`SELECT DISTINCT city FROM places`;
-    expect(cities.map((c) => c.city)).toEqual(['hsc']);
+  it('場地的 city 存縣市代碼；新竹市已上線並有範圍，其他縣市都還沒上線', async () => {
+    const cities = await sql`SELECT DISTINCT city FROM places ORDER BY city`;
+    expect(cities.map((c) => c.city)).toEqual([...seedCities].sort());
     const [hsc] = await sql`SELECT launched_at, bbox FROM cities WHERE code = 'hsc'`;
     expect(hsc?.launched_at).not.toBeNull();
     expect(hsc?.bbox).toHaveLength(4);
@@ -109,7 +118,7 @@ describe('pnpm seed', () => {
     const [r] = await sql`
       SELECT count(*) FILTER (WHERE area_ha IS NOT NULL)::int AS known,
              count(*) FILTER (WHERE area_ha IS NULL)::int AS unknown
-      FROM places WHERE id NOT LIKE 'test-%'`;
+      FROM places WHERE city = 'hsc' AND id NOT LIKE 'test-%'`;
     expect(r).toEqual({ known: withArea, unknown: seed.places.length - withArea });
     const [park] = await sql`SELECT area_ha::float8 AS a FROM places WHERE id = 'hsc-hsinchu-park'`;
     expect(park?.a).toBe(13.86);
@@ -142,10 +151,10 @@ describe('pnpm seed', () => {
   it('沒有場地的縣市也有範圍（OSM 行政界），前端才能判斷要不要載入', async () => {
     const osm = loadOsmBounds();
     const bounds = await sql`
-      SELECT code, bbox::float8[] AS bbox FROM cities WHERE code <> 'hsc' ORDER BY code`;
+      SELECT code, bbox::float8[] AS bbox FROM cities WHERE NOT (code = ANY(${seedCities})) ORDER BY code`;
     expect(bounds).toEqual(
       Object.keys(osm)
-        .filter((c) => c !== 'hsc')
+        .filter((c) => !seedCities.includes(c))
         .sort()
         .map((code) => ({ code, bbox: osm[code] })),
     );
@@ -186,6 +195,23 @@ describe('pnpm seed', () => {
     } finally {
       await sql`DELETE FROM places WHERE id = ${id}`;
     }
+  });
+
+  it('新竹縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
+    expect(hsq?.places.length).toBeGreaterThan(0);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE attrs <> '{}'::jsonb)::int AS with_attrs,
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
+      FROM places WHERE city = 'hsq' AND id NOT LIKE 'test-%'`;
+    expect(r).toEqual({ n: hsq!.places.length, with_attrs: 0, not_osm: 0 });
+    const [a] =
+      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'hsq-osm-%'`;
+    expect(a?.n).toBe(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'hsq'`;
+    expect(c?.launched_at).toBeNull();
+    const pub = await anonClient().from('places').select('id').eq('city', 'hsq');
+    expect(pub.data).toEqual([]);
   });
 
   it('匿名使用者讀得到新竹市全部場地', async () => {

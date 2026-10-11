@@ -23,6 +23,12 @@ CITIES = {
            ["conflicts", "match-review", "no-playground", "unmapped-items", "unmatched",
             "parks-unmatched", "toilets-unmatched"]],
     },
+    # 新竹縣：OpenStreetMap 的遊戲場（decisions D20）
+    "hsq": {
+        "scripts": [["scripts/import_osm_city.py", "hsq"]],
+        "outputs": ["data/seed/hsq/places.json", "data/seed/hsq/places.csv"]
+        + [f"data/review/hsq/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
+    },
 }
 
 
@@ -40,7 +46,9 @@ def main():
         for city, spec in CITIES.items():
             (work / "data/seed" / city).mkdir(parents=True)
             for script in spec["scripts"]:
-                subprocess.run([sys.executable, script], cwd=work, env=env, check=True,
+                # 腳本可以帶參數：["scripts/import_osm_city.py", "hsq"]
+                args = script if isinstance(script, list) else [script]
+                subprocess.run([sys.executable, *args], cwd=work, env=env, check=True,
                                stdout=subprocess.DEVNULL)
         for rel in [o for spec in CITIES.values() for o in spec["outputs"]]:
             got, want = sha256(work / rel), sha256(ROOT / rel)

@@ -83,6 +83,7 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
    - 寫資料來源轉接器 `scripts/sources/<來源>.py`，輸出到 `data/seed/hsq/places.json`。
    - 原始資料放 `data/raw/hsq/`，需要人工確認的清單在 `data/review/hsq/`。
    - 本機匯入檢查：`pnpm seed --city hsq` → `pnpm city launch hsq` → `pnpm dev` 實際看過。
+   - 沒有官方清單、用 OpenStreetMap 起步的縣市（decisions D20，例如新竹縣）：上線前確認 `data/review/<縣市>/unnamed.csv` 都處理過（命名或排除），合併清單 `merged.csv` 也看過。
    - 開 PR、CI 綠燈、合併到 `main`。
 2. **schema 有改的話，先套用 migration**
    ```bash
