@@ -81,3 +81,46 @@ test('標註重複：吉羊公園 #32 同 #15；清除結果', async ({ page }) 
   await expect(page.locator('#detail')).not.toContainText('目前結果');
   expect(readFileSync(reviewFile(), 'utf8')).not.toContain('\n32\t');
 });
+
+// 其他縣市：pnpm tool:locate -- --city tyc（讀 data/review/tyc/to-locate.json，寫 data/raw/tyc/manual-review.tsv）
+test.describe('桃園市（--city tyc）', () => {
+  let tycRoot = '';
+  let tycServer: Server;
+  let tycUrl = '';
+  const tycReview = () => join(tycRoot, 'data/raw/tyc/manual-review.tsv');
+  const toLocate = JSON.parse(readFileSync('data/review/tyc/to-locate.json', 'utf8')) as {
+    items: { no: string; name: string; kind: string }[];
+  };
+
+  test.beforeAll(async () => {
+    tycRoot = mkdtempSync(join(tmpdir(), 'locate-tyc-'));
+    for (const dir of ['data/raw/tyc', 'data/seed/tyc', 'data/review/tyc'])
+      cpSync(dir, join(tycRoot, dir), { recursive: true });
+    rmSync(tycReview(), { force: true });
+    tycServer = createLocateServer(tycRoot, 'tyc');
+    await new Promise<void>((r) => tycServer.listen(0, '127.0.0.1', r));
+    tycUrl = `http://127.0.0.1:${(tycServer.address() as AddressInfo).port}`;
+  });
+
+  test.afterAll(async () => {
+    await new Promise((r) => tycServer.close(r));
+    rmSync(tycRoot, { recursive: true, force: true });
+  });
+
+  test('列出桃園市待定位、待確認的公園；人工定位寫進 data/raw/tyc/manual-review.tsv', async ({
+    page,
+  }) => {
+    await page.goto(tycUrl);
+    await expect(page.locator('#progress')).toHaveText(`已處理 0／${toLocate.items.length}`);
+    const item = toLocate.items.find((i) => i.kind === 'unmatched')!;
+    await page.getByRole('button', { name: new RegExp(`#${item.no} ${item.name}`) }).click();
+    await page.locator('#map').click({ position: { x: 400, y: 300 } });
+    await expect(page.locator('#coords')).toHaveText(/^2[45]\.\d+, 12[01]\.\d+$/);
+    await page.getByLabel('定位依據').selectOption('OSM 地圖上可見的公園範圍');
+    await page.getByLabel('定位者').fill('測試者');
+    await page.getByRole('button', { name: '儲存' }).click();
+    await expect(page.locator('#msg')).toHaveText('已儲存到 data/raw/tyc/manual-review.tsv');
+    const [, line] = readFileSync(tycReview(), 'utf8').trimEnd().split('\n');
+    expect(line).toMatch(new RegExp(`^${item.no}\tlocated\t`));
+  });
+});

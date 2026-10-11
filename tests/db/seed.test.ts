@@ -214,6 +214,28 @@ describe('pnpm seed', () => {
     expect(pub.data).toEqual([]);
   });
 
+  it('桃園市（桃園市公園資料）：未上線；廁所、停車只有「有」或未知，沒有「無」', async () => {
+    const tyc = allSeeds.find((s) => s.places[0]?.city === 'tyc');
+    expect(tyc?.places.length).toBeGreaterThan(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'tyc'`;
+    expect(c?.launched_at).toBeNull();
+    const toilet = await sql`SELECT DISTINCT value, source_id FROM place_attributes
+                             WHERE place_id LIKE 'tyc-%' AND key = 'toilet'`;
+    expect(toilet).toEqual([{ value: 'y', source_id: 'tycg' }]);
+    const [n] =
+      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'tyc-%' AND value = 'n'`;
+    expect(n?.n).toBe(0);
+    const parking =
+      await sql`SELECT DISTINCT type, source_id FROM place_parking WHERE place_id LIKE 'tyc-%'
+                              ORDER BY source_id NULLS LAST`;
+    expect(parking).toEqual([
+      { type: 'u', source_id: 'tycg' },
+      { type: 'u', source_id: null },
+    ]);
+    const pub = await anonClient().from('places').select('id').eq('city', 'tyc');
+    expect(pub.data).toEqual([]);
+  });
+
   it('匿名使用者讀得到新竹市全部場地', async () => {
     const { count, error } = await anonClient()
       .from('places')

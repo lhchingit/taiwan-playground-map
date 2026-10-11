@@ -11,37 +11,14 @@
 import hashlib
 import json
 import sys
-import time
-import urllib.error
-import urllib.parse
-import urllib.request
 from datetime import date
 from pathlib import Path
 
-from lib.opendata import USER_AGENT
+from lib.overpass import overpass, within
 
 ROOT = Path(__file__).resolve().parent.parent
-OVERPASS = "https://overpass-api.de/api/interpreter"
 # 縣市代碼 → OSM 行政區的 ISO 3166-2 代碼
 ISO = {"hsq": "TW-HSQ", "tyc": "TW-TAO", "mlc": "TW-MIA"}
-BATCH = 10
-
-
-def overpass(q, tries=4):
-    """公開的 Overpass 主機忙碌時會回 429／504：等一下再試"""
-    for i in range(tries):
-        req = urllib.request.Request(
-            OVERPASS, data=urllib.parse.urlencode({"data": q}).encode(), headers={"User-Agent": USER_AGENT}
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=240) as r:
-                raw = r.read()
-            return raw, json.loads(raw.decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            if e.code not in (429, 502, 503, 504) or i == tries - 1:
-                raise
-            time.sleep(15 * (i + 1))
-    raise RuntimeError("unreachable")
 
 
 def playground_query(iso):
@@ -58,33 +35,6 @@ def center(e):
     return e["center"]["lat"], e["center"]["lon"]
 
 
-def is_in_query(points):
-    """每個點前面放一個 marker，回應依序是 marker、所在的公園、所在的鄉鎮市"""
-    parts = ["[out:json][timeout:180];"]
-    for r, (lat, lon) in points:
-        parts.append(
-            f'make marker ref="{r}";out;'
-            f"is_in({lat},{lon})->.x;"
-            'area.x["leisure"="park"]["name"];out tags;'
-            'area.x["boundary"="administrative"]["admin_level"~"^(7|8)$"];out tags;'
-        )
-    return "".join(parts)
-
-
-def parse_is_in(elements):
-    """{遊戲場 ref: {"parks": [{"area", "name"}], "districts": [{"level", "name"}]}}"""
-    out, cur = {}, None
-    for e in elements:
-        t = e.get("tags", {})
-        if e["type"] == "marker":
-            cur = out.setdefault(t["ref"], {"parks": [], "districts": []})
-        elif cur is not None and t.get("leisure") == "park":
-            cur["parks"].append({"area": e["id"], "name": t.get("name", "")})
-        elif cur is not None and t.get("boundary") == "administrative":
-            cur["districts"].append({"level": int(t.get("admin_level", 0)), "name": t.get("name", "")})
-    return out
-
-
 def main():
     if len(sys.argv) != 2 or sys.argv[1] not in ISO:
         sys.exit(f"用法：python3 scripts/fetch_osm_city.py <{'|'.join(ISO)}>")
@@ -93,12 +43,8 @@ def main():
     raw1, data = overpass(q1)
     playgrounds = sorted(data["elements"], key=lambda e: (e["type"], e["id"]))
     points = [(ref(e), center(e)) for e in playgrounds]
-    within = {}
-    for i in range(0, len(points), BATCH):
-        time.sleep(2)  # Overpass 的使用規範：不要連續大量查詢
-        _, d = overpass(is_in_query(points[i:i + BATCH]))
-        within.update(parse_is_in(d["elements"]))
-    missing = [r for r, _ in points if r not in within]
+    inside = within(points)
+    missing = [r for r, _ in points if r not in inside]
     if missing:
         sys.exit(f"is_in 查詢沒有回傳：{missing[:5]}…（共 {len(missing)} 筆），請稍後再試")
 
@@ -110,7 +56,7 @@ def main():
         "osm_base": data.get("osm3s", {}).get("timestamp_osm_base"),
         "sha256": hashlib.sha256(raw1).hexdigest(),
         "playgrounds": [
-            {"ref": ref(e), "lat": center(e)[0], "lng": center(e)[1], "tags": e.get("tags", {}), **within[ref(e)]}
+            {"ref": ref(e), "lat": center(e)[0], "lng": center(e)[1], "tags": e.get("tags", {}), **inside[ref(e)]}
             for e in playgrounds
         ],
     }

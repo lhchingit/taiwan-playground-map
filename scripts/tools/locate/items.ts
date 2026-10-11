@@ -1,4 +1,5 @@
-// 人工定位工具要處理的清單：直接從原始資料算（不讀 review CSV），
+// 人工定位工具要處理的清單。
+// 新竹市：直接從清冊原始資料算（不讀 review CSV），
 // 這樣已經定位、重新匯入之後，項目也不會從工具裡消失。
 // 規則跟 scripts/sources/hccg.py 相同：清冊有遊具、而且 OSM 沒有座標 → 找不到座標；
 // 有座標但比對方式不確定（review*／*spread／contains）→ 待確認比對。
@@ -43,12 +44,53 @@ const hasItems = (text: string) => !['', '無'].includes(text.trim().replace(/�
 const uncertain = (method: string) =>
   method.startsWith('review') || method.endsWith('spread') || method === 'contains';
 
-export function readReviewEntries(root: string): ReviewEntry[] {
-  const path = join(root, PATHS.review);
+/** 每個縣市的檔案位置（新竹市的清冊相關檔案見上面的 PATHS） */
+export function cityPaths(city: string) {
+  return {
+    review: `data/raw/${city}/manual-review.tsv`,
+    seed: `data/seed/${city}/places.json`,
+    toLocate: `data/review/${city}/to-locate.json`,
+  };
+}
+
+export function readReviewEntries(root: string, city = 'hsc'): ReviewEntry[] {
+  const path = join(root, cityPaths(city).review);
   return existsSync(path) ? parseReviewFile(readFileSync(path, 'utf8')) : [];
 }
 
-export function loadItems(root: string): LocateItem[] {
+/**
+ * 其他縣市：讀轉接器輸出的 data/review/<縣市>/to-locate.json
+ * （例：scripts/import_tycg.py 產生的桃園市待定位、待確認比對清單）
+ */
+function loadCityItems(root: string, city: string): LocateItem[] {
+  const path = join(root, cityPaths(city).toLocate);
+  if (!existsSync(path)) return [];
+  const data = JSON.parse(readFileSync(path, 'utf8')) as {
+    items: {
+      no: string;
+      name: string;
+      district: string;
+      items: string;
+      address: string;
+      kind: LocateItem['kind'];
+      osm: LocateItem['osm'];
+    }[];
+  };
+  const reviews = new Map(readReviewEntries(root, city).map((e) => [e.no, e]));
+  return data.items.map((i) => ({
+    no: i.no,
+    name: i.name,
+    district: i.district,
+    items: i.items,
+    kind: i.kind,
+    osm: i.osm,
+    hint: { location: i.address, village: '', district: i.district, areaHa: '' },
+    review: reviews.get(i.no) ?? null,
+  }));
+}
+
+export function loadItems(root: string, city = 'hsc'): LocateItem[] {
+  if (city !== 'hsc') return loadCityItems(root, city);
   const osm = new Map(readTsv(join(root, PATHS.osm)).map((r) => [r[0], r]));
   const parks = new Map<string, ParkHint>();
   const parksPath = join(root, PATHS.parks);
@@ -90,8 +132,13 @@ export function loadItems(root: string): LocateItem[] {
 }
 
 /** 地圖上的參考點：已經上地圖的場地（避免重複定位） */
-export function loadPlaces(root: string): { id: string; name: string; lat: number; lng: number }[] {
-  const seed = JSON.parse(readFileSync(join(root, PATHS.seed), 'utf8')) as {
+export function loadPlaces(
+  root: string,
+  city = 'hsc',
+): { id: string; name: string; lat: number; lng: number }[] {
+  const path = join(root, cityPaths(city).seed);
+  if (!existsSync(path)) return [];
+  const seed = JSON.parse(readFileSync(path, 'utf8')) as {
     places: { id: string; name: string; lat: number; lng: number }[];
   };
   return seed.places.map(({ id, name, lat, lng }) => ({ id, name, lat, lng }));

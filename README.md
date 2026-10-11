@@ -67,13 +67,14 @@ pnpm docker:down   # 停止並移除容器
 | `pnpm docker:up`／`docker:down` | 用 Docker Compose 建置並啟動／停止網站（見上方） |
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生新竹市的 `data/seed/hsc/`、`data/review/hsc/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
-| `pnpm tool:locate` | 人工定位工具（只在本機）：http://localhost:4100，處理找不到座標與待確認比對的清冊資料，結果寫進 `data/raw/hsc/manual-review.tsv`；之後重新執行上一列的兩個腳本套用 |
+| `pnpm tool:locate`（`-- --city tyc`） | 人工定位工具（只在本機）：http://localhost:4100，處理找不到座標與待確認比對的資料，結果寫進 `data/raw/<縣市>/manual-review.tsv`；預設新竹市，之後重新執行該縣市的匯入腳本套用 |
 | `python3 scripts/check_hccg_update.py` | 檢查新竹市政府的三份開放資料（清冊、公園、公廁）有沒有更新，印出差異報告（只讀；結束碼 0 沒變動／1 有變動／2 失敗）。`--meta-only` 只看 data.gov.tw 的更新時間（GitHub Actions 每季用這個模式自動檢查，因為連不到市府的下載主機），可能有更新時開 issue |
 | `python3 scripts/fetch_hccg_playgrounds.py` | 重新下載新竹市兒童遊戲場清冊到 `data/raw/hsc/hccg-playgrounds.tsv`（原文照錄） |
 | `python3 scripts/fetch_hccg_toilets.py` | 重新下載新竹市公廁地點資訊到 `data/raw/hsc/hccg-toilets.json`；名稱對不到的公廁列在 `data/review/hsc/toilets-unmatched.csv`，人工確認後填 `data/raw/hsc/toilet-aliases.tsv` |
 | `python3 scripts/fetch_hccg_parks.py` | 重新下載新竹市公園管理維護地點（面積與地點提示）到 `data/raw/hsc/hccg-parks.json` |
 | `python -m unittest discover -s scripts/tests -t scripts` | 匯入腳本（Python）的測試 |
 | `python3 scripts/fetch_osm_city.py hsq`、`python3 scripts/import_osm_city.py hsq` | 沒有官方清單的縣市：下載 OSM 遊戲場（含所在公園、鄉鎮市），再產生 `data/seed/hsq/`（decisions D20）；沒有名稱的列在 `data/review/hsq/unnamed.csv`，人工確認後填 `data/raw/hsq/manual-names.tsv` |
+| `python3 scripts/fetch_tycg_parks.py` → `python3 scripts/locate_tyc.py` → `python3 scripts/import_tycg.py` | 桃園市：下載桃園市公園資料（不存 Google 連結、維護穩定編號）→ OSM 名稱比對與地址定位 → 產生 `data/seed/tyc/`；待定位、待確認的用 `pnpm tool:locate -- --city tyc` 處理 |
 | `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
 | `pnpm screenshots p1b`／`p1c` | 原型與正式版並排截圖（正式版要先在 3100 埠執行）：p1b 首頁篩選、p1c 場地詳情，輸出到 `docs/screenshots/<組別>/` |
 

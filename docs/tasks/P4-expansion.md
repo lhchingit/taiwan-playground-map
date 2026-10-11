@@ -54,6 +54,16 @@ OpenStreetMap 上各縣市的公園與遊戲場數量見本文件最後的附錄
 - 「停車」「廁所」欄位用「˙」表示有、空白表示未提供 → 「˙」對應 `y`，空白對應 `u`（**不是** `n`）。
 - 遊具用語範例與對應：鞍式鞦韆 → swing、親子鞦韆 → swing、高低單槓 → bars、滑索 → zipline、梅花樁 → balance、隧道 → tunnel、攀爬牆 → climbing_wall、低齡兒童遊具組 → toddler_zone。
 - 一般社區遊戲場（特色公園以外）沒有開放資料，第二階段再用 OSM＋家長回報補。
+- **進度（2026-10-11）：** 資料已準備好、**未上線**。
+  - 「桃園市公園」54 個公園（特色遊戲場 45、埤塘公園 10，鑊篤陂塘生態公園兩份都有）：
+    - **上地圖 34 處**：自動定位 36 處（OSM 名稱相同 34，加上同名多處、但只有一處在同一區的 2），扣除其中 2 處沒有遊具
+    - **待人工定位 5**：`data/review/tyc/unmatched.csv`
+    - **待確認比對 8**：`match-review.csv`，名稱只是互相包含，或同名多處
+    - **沒有遊具 7**：6 個埤塘公園，以及單車與滑板用的汴洲公園
+  - **人工確認**：`pnpm tool:locate -- --city tyc` → 結果寫進 `data/raw/tyc/manual-review.tsv` → `python3 scripts/import_tycg.py`。
+  - **對不到屬性的設施用語**列在 `unmapped-items.csv`，例如城堡遊戲組、組合遊具、擺盪大索、極限飛輪；**不推測**，需要時再加對照規則。
+  - **Nominatim 依地址定位**：這次 9 筆都查不到，中文地址支援很弱，所以主要靠 OSM 名稱比對與人工定位。
+  - 「地標」欄（Google 地圖連結）不使用、不存進 repo。
 - 資料量最大，上線前用 Lighthouse 與實機確認載入效能（decisions D4 的 3,000 筆門檻）。
 
 ### 苗栗縣（mlc）
@@ -66,7 +76,7 @@ OpenStreetMap 上各縣市的公園與遊戲場數量見本文件最後的附錄
 - [ ] 該縣市的轉接器、設施對照與測試已合併。
 - [ ] 所有場地座標來自 OSM、TGOS 或人工定位，`data/` 內沒有任何來自 Google 的座標或內容。
 - [ ] review 清單都處理過或註記原因。
-- [ ] 跨縣市距離篩選的測試通過。（新竹縣：`tests/unit/cross-city.test.ts`）
+- [ ] 跨縣市距離篩選的測試通過。（新竹縣、桃園市：`tests/unit/cross-city.test.ts`）
 - [ ] `cities.launched_at` 已設定，該縣市首頁與場地頁可以公開瀏覽。
 
 ## 附錄：OpenStreetMap 上的公園與遊戲場數量（2026-10-10，Overpass API）
