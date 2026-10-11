@@ -23,6 +23,9 @@ let admin: Actor;
 beforeAll(async () => {
   const [launched] = await sql`SELECT launched_at IS NOT NULL AS on FROM cities WHERE code = 'hsc'`;
   if (!launched?.on) throw new Error('新竹市要先上線：pnpm city launch hsc');
+  rotation = (
+    await sql`SELECT key FROM attribute_defs WHERE key NOT IN ('footwash', 'shade', 'toilet') ORDER BY key`
+  ).map((r) => r.key as string);
   await sql`
     INSERT INTO places (id, name, city, geom) VALUES
       (${HSC}, '權限測試（新竹市）', 'hsc', 'SRID=4326;POINT(120.97 24.80)'),
@@ -46,6 +49,19 @@ afterAll(async () => {
 
 type Kind = 'attribute' | 'parking' | 'field' | 'closure' | 'new_place';
 
+// 同一個人對同一個場地的同一個項目只能有一筆待審建議（0006），預設的建議輪流用不同的設施項目。
+// footwash、shade、toilet 留給明確指定的測試使用。
+let rotation: string[] = [];
+const turns = new Map<string, number>();
+function nextPayload(userId: string, placeId: string | null | undefined): Json {
+  const k = `${userId}:${placeId}`;
+  const n = turns.get(k) ?? 0;
+  if (n >= rotation.length)
+    throw new Error(`${k} 的待審建議超過 ${rotation.length} 筆，測試要換人或換場地`);
+  turns.set(k, n + 1);
+  return { key: rotation[n]!, value: 'y' };
+}
+
 /** 用某個身分新增一筆建議（預設：自己的、待審） */
 function suggest(
   a: Actor,
@@ -56,7 +72,7 @@ function suggest(
     .insert({
       user_id: a.id,
       kind: 'attribute',
-      payload: { key: 'footwash', value: 'y' },
+      payload: nextPayload(a.id, row.place_id === undefined ? HSC : row.place_id),
       place_id: HSC,
       ...row,
     } as never)
@@ -68,7 +84,7 @@ function suggest(
 async function seedSuggestion(
   userId: string,
   placeId: string,
-  payload: Json = { key: 'footwash', value: 'y' },
+  payload: Json = nextPayload(userId, placeId),
 ) {
   const [r] = await sql`
     INSERT INTO edit_suggestions (place_id, user_id, kind, payload)
@@ -350,12 +366,45 @@ describe('會員', () => {
   });
 });
 
+describe('重複回報（0006）', () => {
+  it('同一個人、同一個場地、同一個項目只能有一筆待審建議', async () => {
+    const dup = await people.create('member');
+    const first = await suggest(dup, { payload: { key: 'footwash', value: 'y' } });
+    expect(first.error).toBeNull();
+    // 值不同也算同一個項目
+    const again = await suggest(dup, { payload: { key: 'footwash', value: 'n' } });
+    expect(again.error?.code).toBe('23505');
+    // 不同項目、停車、封閉、基本資料各自可以有一筆
+    expect((await suggest(dup, { payload: { key: 'shade', value: 'y' } })).error).toBeNull();
+    for (const [kind, payload] of [
+      ['parking', { type: 'lot' }],
+      ['closure', { reason: '維修' }],
+      ['field', { field: 'hours', value: '24 小時' }],
+    ] as const) {
+      expect((await suggest(dup, { kind, payload })).error, kind).toBeNull();
+      expect((await suggest(dup, { kind, payload })).error?.code, kind).toBe('23505');
+    }
+    expect(
+      (await suggest(dup, { kind: 'field', payload: { field: 'surface', value: '人工草皮' } }))
+        .error,
+    ).toBeNull();
+    // 別人不受影響
+    const other2 = await people.create('member');
+    expect((await suggest(other2, { payload: { key: 'footwash', value: 'y' } })).error).toBeNull();
+    // 審核過之後可以再提交
+    expect((await review(modHsc, first.data!.id, false, 'unverifiable')).error).toBeNull();
+    expect((await suggest(dup, { payload: { key: 'footwash', value: 'y' } })).error).toBeNull();
+  });
+});
+
 describe('每日上限', () => {
   it('24 小時內第 31 筆建議被拒絕', async () => {
     const heavy = await people.create('member');
+    // 先放 29 筆已退回的（上限不分狀態都算；待審的同一項目只能有一筆）
     await sql`
-      INSERT INTO edit_suggestions (place_id, user_id, kind, payload)
-      SELECT ${HSC}, ${heavy.id}, 'attribute', '{"key":"footwash","value":"y"}'::jsonb FROM generate_series(1, 29)`;
+      INSERT INTO edit_suggestions (place_id, user_id, kind, payload, status, reject_reason)
+      SELECT ${HSC}, ${heavy.id}, 'attribute', '{"key":"footwash","value":"y"}'::jsonb, 'rejected', 'other'
+      FROM generate_series(1, 29)`;
     expect((await suggest(heavy, {})).error).toBeNull(); // 第 30 筆
     const { error } = await suggest(heavy, {}); // 第 31 筆
     expect(error?.message).toContain('今天的回報次數已達上限');

@@ -24,6 +24,9 @@ const lines = [
   '# 本機網站的網址與清快取密鑰（只在本機使用）',
   `SITE_URL=${keep('SITE_URL') ?? 'http://localhost:3000'}`,
   `REVALIDATE_SECRET=${keep('REVALIDATE_SECRET') ?? randomBytes(24).toString('hex')}`,
+  '# Cloudflare Turnstile：預設是官方的測試金鑰（一定通過，只能在本機與 CI 使用）',
+  `TURNSTILE_SITE_KEY=${keep('TURNSTILE_SITE_KEY') ?? '1x00000000000000000000AA'}`,
+  `TURNSTILE_SECRET_KEY=${keep('TURNSTILE_SECRET_KEY') ?? '1x0000000000000000000000000000000AA'}`,
   '',
 ];
 writeFileSync('.env.local', lines.join('\n'));

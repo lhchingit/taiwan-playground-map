@@ -82,6 +82,13 @@ export function PlaceDetailView({
   const Sub = headingLevel === 1 ? 'h2' : 'h3';
   const Group = headingLevel === 1 ? 'h3' : 'h4';
   const minutes = trip ? estimateMinutes(trip.km, trip.mode) : null;
+  // 回報修正可以選的項目：遊樂設施在前、生活機能在後，附上目前的狀態
+  const current = new Map(d.facts.map((f) => [f.key, f.v]));
+  const reportOptions = catalog.order.map((key) => ({
+    key,
+    label: catalog.labels[key] ?? key,
+    current: current.get(key) ?? ('u' as const),
+  }));
 
   return (
     <>
@@ -93,7 +100,7 @@ export function PlaceDetailView({
         {d.summary && <div>{d.summary}</div>}
         <div className="actions">
           <RouteLink dest={{ lat: d.lat, lng: d.lng }} origin={trip?.origin} mode={trip?.mode} />
-          <ReportButton />
+          <ReportButton placeId={d.id} options={reportOptions} />
         </div>
       </div>
 

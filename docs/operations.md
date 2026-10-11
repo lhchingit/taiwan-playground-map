@@ -56,6 +56,11 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
    - 連結格式是 `{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=email`，網站在 `/auth/confirm` 驗證。
 4. **寄信服務（SMTP）**：Supabase 內建的寄信服務每小時只能寄很少封，只適合測試，**上線前一定要設定自訂 SMTP**（Authentication → Emails → SMTP Settings），例如 Amazon SES、Resend、Postmark。寄件人用自己網域的信箱，並設定 SPF／DKIM，避免被當成垃圾信。
 5. **頻率限制**：Authentication → Rate Limits 的寄信上限依 SMTP 方案調整。
+6. **Cloudflare Turnstile**（送出修正建議前的機器人驗證）
+   - 在 Cloudflare 後台 → Turnstile 新增網站，網域填正式網域，模式選「Managed」。
+   - 把 site key、secret key 設成網站的環境變數 `TURNSTILE_SITE_KEY`、`TURNSTILE_SECRET_KEY`。
+   - **沒有設定時，網站會拒絕所有回報**（不會略過驗證）。
+   - 本機與 CI 用 Cloudflare 官方的測試金鑰（`pnpm env:local` 自動寫入），一定通過；**不要用在正式環境**。
 
 本機開發：Google 預設關閉（登入頁顯示「尚未設定」）；Email 登入信可以在 Mailpit（http://127.0.0.1:54324）看到。
 

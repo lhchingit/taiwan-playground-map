@@ -29,6 +29,9 @@ export default function MePage() {
   );
 }
 
+// 照片上傳先不開放（decisions D17）；開放時改成 true，「我的照片」區塊就會出現
+const PHOTOS_ENABLED = false;
+
 const DATE = new Intl.DateTimeFormat('zh-TW', { dateStyle: 'medium', timeZone: 'Asia/Taipei' });
 
 async function MeContent() {
@@ -102,28 +105,30 @@ async function MeContent() {
         )}
       </section>
 
-      <section className="dsec" aria-labelledby="me-photos">
-        <h2 id="me-photos" className="dsec-title">
-          我的照片
-        </h2>
-        {photos.data?.length ? (
-          <ul className="me-list">
-            {photos.data.map((p) => (
-              <li key={p.id}>
-                <div>{p.places?.name}</div>
-                <div className="cmeta">
-                  <span className={`me-status ${p.status}`}>
-                    {statusText(p.status === 'approved' ? 'accepted' : p.status, p.reject_reason)}
-                  </span>
-                  ．{DATE.format(new Date(p.created_at))}
-                </div>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="note">還沒有資料。</p>
-        )}
-      </section>
+      {PHOTOS_ENABLED && (
+        <section className="dsec" aria-labelledby="me-photos">
+          <h2 id="me-photos" className="dsec-title">
+            我的照片
+          </h2>
+          {photos.data?.length ? (
+            <ul className="me-list">
+              {photos.data.map((p) => (
+                <li key={p.id}>
+                  <div>{p.places?.name}</div>
+                  <div className="cmeta">
+                    <span className={`me-status ${p.status}`}>
+                      {statusText(p.status === 'approved' ? 'accepted' : p.status, p.reject_reason)}
+                    </span>
+                    ．{DATE.format(new Date(p.created_at))}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="note">還沒有資料。</p>
+          )}
+        </section>
+      )}
 
       <section className="dsec" aria-labelledby="me-delete">
         <h2 id="me-delete" className="dsec-title">

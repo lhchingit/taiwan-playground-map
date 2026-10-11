@@ -1,5 +1,6 @@
 'use client';
 // 登入方式：Google、Email 登入連結（/login 頁與登入視窗共用）。不要求密碼。
+import Link from 'next/link';
 import { useActionState } from 'react';
 import { type MagicLinkState, sendMagicLink, signInWithGoogle } from '@/app/auth/actions';
 
@@ -9,7 +10,7 @@ export function LoginPanel({ next, google }: { next: string; google: boolean }) 
   const [state, action, pending] = useActionState(sendMagicLink, IDLE);
   return (
     <div className="login-panel">
-      <p className="note">登入後可以回報修正、上傳照片。瀏覽地圖與場地資料不需要登入。</p>
+      <p className="note">登入後可以回報修正。瀏覽地圖與場地資料不需要登入。</p>
       <form action={signInWithGoogle}>
         <input type="hidden" name="next" value={next} />
         <button className="btn login-btn" type="submit" disabled={!google}>
@@ -47,7 +48,10 @@ export function LoginPanel({ next, google }: { next: string; google: boolean }) 
           </p>
         </form>
       )}
-      <p className="note small">其他人只看得到你的暱稱，不會看到 Email。</p>
+      <p className="note small">
+        其他人只看得到你的暱稱，不會看到 Email。見<Link href="/terms">服務條款</Link>與
+        <Link href="/privacy">隱私權政策</Link>（草稿）。
+      </p>
     </div>
   );
 }
