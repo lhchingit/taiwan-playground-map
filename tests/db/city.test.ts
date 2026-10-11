@@ -66,10 +66,11 @@ describe('pnpm city', () => {
     await sql`UPDATE cities SET launched_at = NULL WHERE code = 'mlc'`;
   });
 
+  // 苗栗縣：沒有真的資料（測試資料在下一個測試才放進去）
   it('沒有場地的縣市不能上線', async () => {
-    await expect(launchCity(sql, 'tyc')).rejects.toThrow('還沒有任何場地');
-    const [tyc] = await sql`SELECT launched_at FROM cities WHERE code = 'tyc'`;
-    expect(tyc?.launched_at).toBeNull();
+    await expect(launchCity(sql, 'mlc')).rejects.toThrow('還沒有任何場地');
+    const [mlc] = await sql`SELECT launched_at FROM cities WHERE code = 'mlc'`;
+    expect(mlc?.launched_at).toBeNull();
   });
 
   it('不存在的縣市 → 丟錯', async () => {

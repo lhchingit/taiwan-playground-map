@@ -1,10 +1,11 @@
 // 人工定位工具（只在本機使用）：pnpm tool:locate → http://localhost:4100
-// 列出找不到座標、比對不確定的清冊資料，點地圖記下座標或標註處理狀態，寫入 data/raw/hsc/manual-review.tsv。
-// 只綁定 127.0.0.1，不是網站的一部分，不會部署。之後執行 build_seed.py && import_hccg.py 套用結果。
+// 列出找不到座標、比對不確定的資料，點地圖記下座標或標註處理狀態，寫入 data/raw/<縣市>/manual-review.tsv。
+// 預設是新竹市（清冊）；pnpm tool:locate -- --city tyc 處理桃園市。
+// 只綁定 127.0.0.1，不是網站的一部分，不會部署。之後重新執行該縣市的匯入腳本套用結果。
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from 'node:http';
 import { join, resolve } from 'node:path';
-import { loadItems, loadPlaces, PATHS, readReviewEntries } from './items';
+import { cityPaths, loadItems, loadPlaces, readReviewEntries } from './items';
 import { serializeReviewFile, upsertEntry, validateEntry, type ReviewEntry } from './review-file';
 
 const HERE = resolve('scripts/tools/locate');
@@ -35,9 +36,10 @@ function send(res: ServerResponse, status: number, body: unknown, type = 'applic
   res.end(type === 'application/json' ? JSON.stringify(body) : (body as Buffer));
 }
 
-/** root：資料所在的資料夾（測試時指向暫存副本） */
-export function createLocateServer(root: string): Server {
-  const reviewPath = join(root, PATHS.review);
+/** root：資料所在的資料夾（測試時指向暫存副本）；city：縣市代碼 */
+export function createLocateServer(root: string, city = 'hsc'): Server {
+  const reviewFile = cityPaths(city).review;
+  const reviewPath = join(root, reviewFile);
   const save = (entries: ReviewEntry[]) => writeFileSync(reviewPath, serializeReviewFile(entries));
 
   return createServer(async (req, res) => {
@@ -47,7 +49,12 @@ export function createLocateServer(root: string): Server {
       if (req.method === 'GET' && file) return send(res, 200, readFileSync(file[0]), file[1]);
 
       if (req.method === 'GET' && url.pathname === '/api/items') {
-        return send(res, 200, { items: loadItems(root), places: loadPlaces(root) });
+        return send(res, 200, {
+          city,
+          reviewFile,
+          items: loadItems(root, city),
+          places: loadPlaces(root, city),
+        });
       }
 
       if (req.method === 'POST' && url.pathname === '/api/review') {
@@ -64,18 +71,18 @@ export function createLocateServer(root: string): Server {
           by: String(b.by ?? ''),
           date: today(),
         };
-        if (!loadItems(root).some((i) => i.no === entry.no)) {
+        if (!loadItems(root, city).some((i) => i.no === entry.no)) {
           return send(res, 400, { errors: [`清單裡沒有清冊編號 ${entry.no}`] });
         }
         const errors = validateEntry(entry);
         if (errors.length > 0) return send(res, 400, { errors });
-        save(upsertEntry(readReviewEntries(root), entry));
+        save(upsertEntry(readReviewEntries(root, city), entry));
         return send(res, 200, { ok: true, entry });
       }
 
       const del = url.pathname.match(/^\/api\/review\/(\d+)$/);
       if (req.method === 'DELETE' && del) {
-        save(readReviewEntries(root).filter((e) => e.no !== del[1]));
+        save(readReviewEntries(root, city).filter((e) => e.no !== del[1]));
         return send(res, 200, { ok: true });
       }
 

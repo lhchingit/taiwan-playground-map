@@ -117,6 +117,7 @@
 | 新竹市兒童遊戲場清冊（[132713](https://data.gov.tw/dataset/132713)） | 新竹市政府養護工程處 | 場地與遊具（`sources.hccg`） | 沒有座標、未註明調查年份 |
 | 新竹市公園管理維護地點（[67762](https://data.gov.tw/dataset/67762)） | 新竹市政府養護工程處 | 面積 `area_ha`（只用完全相同的名稱）；人工定位工具的地點提示（`sources.hccg_parks`） | **沒有座標**；原始資料在 `data/raw/hsc/hccg-parks.json` |
 | 新竹市公廁地點資訊（[67757](https://data.gov.tw/dataset/67757)） | 新竹市政府養護工程處 | 廁所「有」、育嬰台 > 0 時哺乳室／尿布台「有」（`sources.hccg_toilets`）；只用完全相同的名稱或人工對應表 `data/raw/hsc/toilet-aliases.tsv` | **沒有座標**，無法用距離判斷；育嬰台 0 不代表場地沒有，維持未知 |
+| 桃園市公園（[148726](https://data.gov.tw/dataset/148726)） | 桃園市政府工務局 | 特色遊戲場與有遊具的埤塘公園：遊具、廁所與停車（「˙」= 有，空白 = 未知）（`sources.tycg`） | **沒有座標**，「地標」欄是 Google 地圖連結，**不使用也不存進 repo**；座標用 OSM 名稱比對或人工定位（`scripts/locate_tyc.py`、`pnpm tool:locate -- --city tyc`） |
 
 - 新增資料集前要先確認授權；**授權不明的不使用**。
 - 座標仍然只能來自 OpenStreetMap、TGOS 或實地測量（D9）；政府資料沒有座標時不從其他地圖服務補。

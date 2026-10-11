@@ -19,7 +19,7 @@ const STATUSES = {
 const BASES = ['實地確認', 'OSM 地圖上可見的公園範圍', '政府公告的地址'];
 const OSM_TYPE = { w: 'way', n: 'node', r: 'relation' };
 
-const state = { items: [], places: [], filter: 'todo', selected: null, pick: null };
+const state = { items: [], places: [], filter: 'todo', selected: null, pick: null, reviewFile: '' };
 const $ = (s) => document.querySelector(s);
 const esc = (s) =>
   String(s ?? '').replace(
@@ -230,7 +230,7 @@ async function save(e) {
   await load();
   select(state.selected);
   $('#msg').className = 'ok';
-  $('#msg').textContent = '已儲存到 data/raw/hsc/manual-review.tsv';
+  $('#msg').textContent = `已儲存到 ${state.reviewFile}`;
 }
 
 async function clear() {
@@ -276,9 +276,22 @@ $('#search').addEventListener('submit', async (e) => {
 async function load() {
   const data = await (await fetch('/api/items')).json();
   state.items = data.items;
+  state.reviewFile = data.reviewFile;
   if (state.places.length === 0) {
     state.places = data.places;
     drawPlaces();
+    // 地圖移到這個縣市（已經上地圖的場地範圍）
+    if (data.places.length > 0) {
+      const lngs = data.places.map((p) => p.lng);
+      const lats = data.places.map((p) => p.lat);
+      map.fitBounds(
+        [
+          [Math.min(...lngs), Math.min(...lats)],
+          [Math.max(...lngs), Math.max(...lats)],
+        ],
+        { padding: 40, duration: 0 },
+      );
+    }
   }
   renderList();
 }

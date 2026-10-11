@@ -1,0 +1,9304 @@
+{
+ "version": "0.2",
+ "city": "桃園市",
+ "generated": "2026-10-11",
+ "sources": {
+  "tycg": {
+   "label": "桃園市公園（工務局，政府資料開放平台）",
+   "url": "https://data.gov.tw/dataset/148726",
+   "kind": "open_data"
+  },
+  "osm": {
+   "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
+   "url": "https://www.openstreetmap.org/copyright",
+   "kind": "open_data"
+  },
+  "est": {
+   "label": "依面積與設施推估",
+   "url": null,
+   "kind": "estimate"
+  }
+ },
+ "labels": {
+  "play": {
+   "slide": "溜滑梯",
+   "swing": "盪鞦韆",
+   "baby_swing": "嬰兒鞦韆",
+   "nest_swing": "鳥巢鞦韆",
+   "zipline": "溜索",
+   "seesaw": "蹺蹺板",
+   "spring_rider": "搖搖馬",
+   "spinner": "旋轉盤",
+   "climbing": "攀爬架",
+   "climbing_wall": "攀岩牆",
+   "rope_net": "攀爬繩網",
+   "balance": "平衡木",
+   "suspension_bridge": "吊橋",
+   "tunnel": "鑽洞隧道",
+   "tree_house": "樹屋／高架平台",
+   "sandpit": "沙坑",
+   "sand_table": "玩沙桌",
+   "water_play": "戲水池／噴水",
+   "water_pump": "汲水器",
+   "trampoline": "彈跳床",
+   "pushbike": "滑步車道",
+   "open_lawn": "大草坪",
+   "ball_court": "球場",
+   "skatepark": "滑板場",
+   "bars": "單槓",
+   "music": "音樂遊具",
+   "chalk_wall": "塗鴉牆",
+   "toddler_zone": "幼兒專區"
+  },
+  "play_groups": [
+   {
+    "name": "滑行擺盪",
+    "keys": [
+     "slide",
+     "swing",
+     "baby_swing",
+     "nest_swing",
+     "zipline",
+     "seesaw",
+     "spring_rider",
+     "spinner"
+    ]
+   },
+   {
+    "name": "攀爬平衡",
+    "keys": [
+     "climbing",
+     "climbing_wall",
+     "rope_net",
+     "balance",
+     "suspension_bridge",
+     "tunnel",
+     "tree_house"
+    ]
+   },
+   {
+    "name": "玩沙玩水",
+    "keys": [
+     "sandpit",
+     "sand_table",
+     "water_play",
+     "water_pump"
+    ]
+   },
+   {
+    "name": "跑跳體能",
+    "keys": [
+     "trampoline",
+     "pushbike",
+     "open_lawn",
+     "ball_court",
+     "skatepark",
+     "bars"
+    ]
+   },
+   {
+    "name": "感官創意",
+    "keys": [
+     "music",
+     "chalk_wall",
+     "toddler_zone"
+    ]
+   }
+  ],
+  "amenity": {
+   "toilet": "廁所",
+   "handwash": "洗手台",
+   "footwash": "洗腳池",
+   "shade": "遮蔭",
+   "transit": "大眾運輸",
+   "stroller": "嬰兒車友善",
+   "nursing": "哺乳室／尿布台",
+   "lighting": "夜間照明",
+   "food": "周邊餐飲",
+   "inclusive": "共融遊具"
+  }
+ },
+ "places": [
+  {
+   "id": "tyc-tycg-001",
+   "name": "大有梯田生態公園",
+   "district": "桃園區",
+   "address": "桃園區民有十街88號(大有消防隊旁)",
+   "lat": 25.0123972,
+   "lng": 121.3208851,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：親子鞦韆、軟墊盪鞦韆、木板盪鞦韆、粗繩盪鞦韆、城堡遊戲組、全齡式森林遊戲場、滑索、磨石子溜滑梯、沙坑",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "親子鞦韆、軟墊盪鞦韆、木板盪鞦韆、粗繩盪鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "y",
+     "src": "tycg",
+     "note": "滑索",
+     "at": "2026-10-11"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w911543883（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 1,
+     "name": "大有梯田生態公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "親子鞦韆、軟墊盪鞦韆、木板盪鞦韆、粗繩盪鞦韆、城堡遊戲組、全齡式森林遊戲場、滑索、磨石子溜滑梯、沙坑"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-004",
+   "name": "陽明運動公園",
+   "district": "桃園區",
+   "address": "桃園區長沙街十一號",
+   "lat": 24.9812433,
+   "lng": 121.3093003,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：塑膠(彎曲)溜滑梯、磨石子(直道)溜滑梯、低齡兒童遊具組、攀爬牆、隧道、搖搖馬、一般鞦韆、鞍式鞦韆",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "塑膠(彎曲)溜滑梯、磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、鞍式鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖馬",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tycg",
+     "note": "隧道",
+     "at": "2026-10-11"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "y",
+     "src": "tycg",
+     "note": "低齡兒童遊具組",
+     "at": "2026-10-11"
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w170132360（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 4,
+     "name": "陽明運動公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "塑膠(彎曲)溜滑梯、磨石子(直道)溜滑梯、低齡兒童遊具組、攀爬牆、隧道、搖搖馬、一般鞦韆、鞍式鞦韆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-006",
+   "name": "溫州公園",
+   "district": "桃園區",
+   "address": "桃園區溫州街",
+   "lat": 25.0073378,
+   "lng": 121.2980942,
+   "size": "M",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆、低齡兒童遊具組、搖搖馬、磨石子(直道、彎道)溜滑梯、平衡木",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道、彎道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖馬",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "y",
+     "src": "tycg",
+     "note": "平衡木",
+     "at": "2026-10-11"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "y",
+     "src": "tycg",
+     "note": "低齡兒童遊具組",
+     "at": "2026-10-11"
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w431615317（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 6,
+     "name": "溫州公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬牆、低齡兒童遊具組、搖搖馬、磨石子(直道、彎道)溜滑梯、平衡木"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-007",
+   "name": "玉山公園",
+   "district": "桃園區",
+   "address": "桃園區漢中街、南豐二街口",
+   "lat": 24.9805053,
+   "lng": 121.3019312,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆、低齡兒童遊具組、搖搖馬、磨石子(直道)溜滑梯、一般鞦韆、鞍式鞦韆",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、鞍式鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖馬",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "y",
+     "src": "tycg",
+     "note": "低齡兒童遊具組",
+     "at": "2026-10-11"
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap r3789389（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 7,
+     "name": "玉山公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬牆、低齡兒童遊具組、搖搖馬、磨石子(直道)溜滑梯、一般鞦韆、鞍式鞦韆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-008",
+   "name": "永康公園",
+   "district": "桃園區",
+   "address": "桃園區中正五街、永康街口",
+   "lat": 25.0011477,
+   "lng": 121.3036837,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆、(長型、球型)攀爬架、低齡兒童遊具組、搖搖馬、磨石子(直道)溜滑梯、一般鞦韆、鞍式鞦韆、多人座翹翹板",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、鞍式鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "tycg",
+     "note": "多人座翹翹板",
+     "at": "2026-10-11"
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖馬",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆、(長型、球型)攀爬架",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "y",
+     "src": "tycg",
+     "note": "低齡兒童遊具組",
+     "at": "2026-10-11"
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap r10218563（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 8,
+     "name": "永康公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬牆、(長型、球型)攀爬架、低齡兒童遊具組、搖搖馬、磨石子(直道)溜滑梯、一般鞦韆、鞍式鞦韆、多人座翹翹板"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-009",
+   "name": "延平公園",
+   "district": "桃園區",
+   "address": "桃園區延平路、大豐路口",
+   "lat": 24.9810576,
+   "lng": 121.3156423,
+   "size": "M",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：旋轉攀爬架、磨石子(直道)溜滑梯、一般鞦韆、鞍式鞦韆、多人座搖椅",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、鞍式鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tycg",
+     "note": "旋轉攀爬架",
+     "at": "2026-10-11"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "旋轉攀爬架",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w170179596（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 9,
+     "name": "延平公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "旋轉攀爬架、磨石子(直道)溜滑梯、一般鞦韆、鞍式鞦韆、多人座搖椅"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-010",
+   "name": "同安親子公園",
+   "district": "桃園區",
+   "address": "桃園區新埔六街140號",
+   "lat": 25.0170414,
+   "lng": 121.3019554,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：巨型攀爬網架與(直道)溜滑梯、長型攀爬架、組合遊具、搖搖馬、船型組合由具、翹翹板、一般鞦韆、鞍式鞦韆、平衡木、沙坑",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "巨型攀爬網架與(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、鞍式鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "tycg",
+     "note": "翹翹板",
+     "at": "2026-10-11"
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖馬",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "巨型攀爬網架與(直道)溜滑梯、長型攀爬架",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "巨型攀爬網架與(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "y",
+     "src": "tycg",
+     "note": "平衡木",
+     "at": "2026-10-11"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w129526392（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 10,
+     "name": "同安親子公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "巨型攀爬網架與(直道)溜滑梯、長型攀爬架、組合遊具、搖搖馬、船型組合由具、翹翹板、一般鞦韆、鞍式鞦韆、平衡木、沙坑"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-011",
+   "name": "民族公園",
+   "district": "桃園區",
+   "address": "桃園區民族路305號",
+   "lat": 24.9962669,
+   "lng": 121.3063552,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆、攀爬網、攀爬繩、磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯、鑽籠、梅花樁、雲梯吊環、戲水池、水柱",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆、攀爬網、攀爬繩",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬網",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "y",
+     "src": "tycg",
+     "note": "梅花樁",
+     "at": "2026-10-11"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鑽籠",
+     "at": "2026-10-11"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "tycg",
+     "note": "戲水池、水柱",
+     "at": "2026-10-11"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "y",
+     "src": "tycg",
+     "note": "雲梯吊環",
+     "at": "2026-10-11"
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w285753702（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 11,
+     "name": "民族公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬牆、攀爬網、攀爬繩、磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯、鑽籠、梅花樁、雲梯吊環、戲水池、水柱"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-012",
+   "name": "福元公園",
+   "district": "桃園區",
+   "address": "桃園市民光東路與福元街交界",
+   "lat": 25.0084641,
+   "lng": 121.3171827,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬網、瞭望台、塑膠(直道)溜滑梯",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "塑膠(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬網",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬網",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "y",
+     "src": "tycg",
+     "note": "瞭望台",
+     "at": "2026-10-11"
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w929972596（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 12,
+     "name": "福元公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬網、瞭望台、塑膠(直道)溜滑梯"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-013",
+   "name": "風禾公園",
+   "district": "桃園區",
+   "address": "桃園區慈文路688號",
+   "lat": 25.0017875,
+   "lng": 121.2915367,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：滾輪(彎道)溜滑梯、磨石子(彎道、直道)溜滑梯、滑桿、攀爬牆、木樁爬坡、一般鞦韆、共融式沙坑",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "滾輪(彎道)溜滑梯、磨石子(彎道、直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "共融式沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "tycg",
+     "note": "共融式沙坑",
+     "at": "2026-10-11"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w377403891（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 13,
+     "name": "風禾公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "滾輪(彎道)溜滑梯、磨石子(彎道、直道)溜滑梯、滑桿、攀爬牆、木樁爬坡、一般鞦韆、共融式沙坑"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-015",
+   "name": "仁祥公園",
+   "district": "中壢區",
+   "address": "中壢區仁祥里華勛街",
+   "lat": 24.9486761,
+   "lng": 121.2607047,
+   "size": "S",
+   "stay": "lt30",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆與(直道)溜滑梯、多人翹翹板",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆與(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "tycg",
+     "note": "多人翹翹板",
+     "at": "2026-10-11"
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆與(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆與(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w113804041（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 15,
+     "name": "仁祥公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬牆與(直道)溜滑梯、多人翹翹板"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-016",
+   "name": "中壢藝術園區",
+   "district": "中壢區",
+   "address": "中壢區南園二路62號",
+   "lat": 24.9725018,
+   "lng": 121.2328701,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：立體攀爬網、攀爬牆、磨石子(直道)溜滑梯、隧道、一般鞦韆、親子鞦韆、旋轉攀爬網",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、親子鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tycg",
+     "note": "旋轉攀爬網",
+     "at": "2026-10-11"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "立體攀爬網、攀爬牆、旋轉攀爬網",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "立體攀爬網、旋轉攀爬網",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tycg",
+     "note": "隧道",
+     "at": "2026-10-11"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w110273886（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 16,
+     "name": "中壢藝術園區",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "立體攀爬網、攀爬牆、磨石子(直道)溜滑梯、隧道、一般鞦韆、親子鞦韆、旋轉攀爬網"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-018",
+   "name": "青埔公七公園",
+   "district": "中壢區",
+   "address": "中壢區青商路228號",
+   "lat": 25.0090077,
+   "lng": 121.2196419,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀岩坡、金屬(螺旋)溜滑梯、磨石子(直道)溜滑梯、攀爬架",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "金屬(螺旋)溜滑梯、磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬架",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀岩坡",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w565220840（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 18,
+     "name": "青埔公七公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀岩坡、金屬(螺旋)溜滑梯、磨石子(直道)溜滑梯、攀爬架"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-020",
+   "name": "星河親子公園",
+   "district": "中壢區",
+   "address": "內壢元生公園旁邊",
+   "lat": 24.9734055,
+   "lng": 121.25174,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：有三座大型遊樂設施、盪鞦韆、溜滑梯、攀岩、獨木橋、單槓及蹺蹺板",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "盪鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "tycg",
+     "note": "單槓及蹺蹺板",
+     "at": "2026-10-11"
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀岩",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "y",
+     "src": "tycg",
+     "note": "獨木橋",
+     "at": "2026-10-11"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "y",
+     "src": "tycg",
+     "note": "單槓及蹺蹺板",
+     "at": "2026-10-11"
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w715095656（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 20,
+     "name": "星河親子公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "有三座大型遊樂設施、盪鞦韆、溜滑梯、攀岩、獨木橋、單槓及蹺蹺板"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-023",
+   "name": "雙連坡碉堡公園",
+   "district": "平鎮區",
+   "address": "平鎮區陸光路14巷96弄",
+   "lat": 24.9561215,
+   "lng": 121.1842736,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬障礙物坡道、攀爬繩、磨石子(直道)溜滑梯、旋轉盤、一般鞦韆、鞍式鞦韆、鳥巢鞦韆、沙坑、",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、鞍式鞦韆、鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tycg",
+     "note": "旋轉盤",
+     "at": "2026-10-11"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬障礙物坡道、攀爬繩",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w984188503（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 23,
+     "name": "雙連坡碉堡公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬障礙物坡道、攀爬繩、磨石子(直道)溜滑梯、旋轉盤、一般鞦韆、鞍式鞦韆、鳥巢鞦韆、沙坑、"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-024",
+   "name": "新勢公園",
+   "district": "平鎮區",
+   "address": "平鎮區延平路一段及中原路交叉",
+   "lat": 24.9518119,
+   "lng": 121.2166681,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆、攀爬繩、木箱階梯、木樁攀爬坡、磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯、平衡木、沙坑、挖土機、玩沙台、旋轉擺盪椅、一般鞦韆、鞍式鞦韆、座椅式鞦韆、攀岩牆、搖搖馬",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、鞍式鞦韆、座椅式鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖馬",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tycg",
+     "note": "旋轉擺盪椅",
+     "at": "2026-10-11"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆、攀爬繩、木樁攀爬坡",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆、攀岩牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "y",
+     "src": "tycg",
+     "note": "平衡木",
+     "at": "2026-10-11"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "y",
+     "src": "tycg",
+     "note": "玩沙台",
+     "at": "2026-10-11"
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w109839354（比對方式：exact-district）",
+   "official_ref": [
+    {
+     "tycg_no": 24,
+     "name": "新勢公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬牆、攀爬繩、木箱階梯、木樁攀爬坡、磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯、平衡木、沙坑、挖土機、玩沙台、旋轉擺盪椅、一般鞦韆、鞍式鞦韆、座椅式鞦韆、攀岩牆、搖搖馬"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-025",
+   "name": "鑊篤陂塘生態公園",
+   "district": "平鎮區",
+   "address": "平鎮區新光路五段與天津街交叉路口",
+   "lat": 24.9077522,
+   "lng": 121.2022973,
+   "size": "M",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（埤塘公園、特色遊戲場）列出的設施：10米高透明管狀溜滑梯、複合式攀爬網、沙坑、步道、遊戲場",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "10米高透明管狀溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "複合式攀爬網",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "複合式攀爬網",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1038770436（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 25,
+     "name": "鑊篤陂塘生態公園",
+     "kinds": [
+      "特色遊戲場",
+      "埤塘公園"
+     ],
+     "items": "10米高透明管狀溜滑梯、複合式攀爬網、沙坑、步道、遊戲場"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-026",
+   "name": "新富公園",
+   "district": "平鎮區",
+   "address": "平鎮區中豐路與環南路交叉口附近",
+   "lat": 24.9389378,
+   "lng": 121.2173978,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大型沙坑、恐龍化石、沙坑挖土機、戲沙盤、攀岩牆、共融鞦韆",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "共融鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀岩牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "大型沙坑、沙坑挖土機",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "y",
+     "src": "tycg",
+     "note": "戲沙盤",
+     "at": "2026-10-11"
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "tycg",
+     "note": "共融鞦韆",
+     "at": "2026-10-11"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w203548584（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 26,
+     "name": "新富公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "大型沙坑、恐龍化石、沙坑挖土機、戲沙盤、攀岩牆、共融鞦韆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-027",
+   "name": "漢口環保公園",
+   "district": "平鎮區",
+   "address": "平鎮區漢口街26號對面",
+   "lat": 24.9098846,
+   "lng": 121.2087451,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：小花傳聲筒、搖搖樂、敲擊鍵盤、學習轉盤、遊戲小火車、轉轉椅",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖樂",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "y",
+     "src": "tycg",
+     "note": "小花傳聲筒、敲擊鍵盤",
+     "at": "2026-10-11"
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w548729466（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 27,
+     "name": "漢口環保公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "小花傳聲筒、搖搖樂、敲擊鍵盤、學習轉盤、遊戲小火車、轉轉椅"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-028",
+   "name": "傑克冒險公園",
+   "district": "八德區",
+   "address": "桃園市八德區高城八街與永興街交叉口",
+   "lat": 24.9774574,
+   "lng": 121.2728009,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：藤蔓遊戲區包含波浪流滑梯及大葉攀爬網、彈跳床、鳥巢鞦韆、親子鞦韆",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "藤蔓遊戲區包含波浪流滑梯及大葉攀爬網",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鳥巢鞦韆、親子鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "藤蔓遊戲區包含波浪流滑梯及大葉攀爬網",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "藤蔓遊戲區包含波浪流滑梯及大葉攀爬網",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "tycg",
+     "note": "彈跳床",
+     "at": "2026-10-11"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1019638090（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 28,
+     "name": "傑克冒險公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "藤蔓遊戲區包含波浪流滑梯及大葉攀爬網、彈跳床、鳥巢鞦韆、親子鞦韆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-030",
+   "name": "海湖地景公園",
+   "district": "蘆竹區",
+   "address": "蘆竹區海湖里海山路二段與濱海一段路口",
+   "lat": 25.1089133,
+   "lng": 121.2541777,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：磨石子溜滑梯、低齡兒童遊具組、大齡兒童遊具組、翹翹板、搖搖馬、盤爬組、高低單槓",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "tycg",
+     "note": "翹翹板",
+     "at": "2026-10-11"
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "tycg",
+     "note": "搖搖馬",
+     "at": "2026-10-11"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "盤爬組",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "y",
+     "src": "tycg",
+     "note": "高低單槓",
+     "at": "2026-10-11"
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "y",
+     "src": "tycg",
+     "note": "低齡兒童遊具組",
+     "at": "2026-10-11"
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w940944025（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 30,
+     "name": "海湖地景公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "磨石子溜滑梯、低齡兒童遊具組、大齡兒童遊具組、翹翹板、搖搖馬、盤爬組、高低單槓"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-031",
+   "name": "南興水岸遊憩公園(光明郵局公園)",
+   "district": "蘆竹區",
+   "address": "蘆竹區南福街187號旁(光明郵局後方)",
+   "lat": 25.0388216,
+   "lng": 121.2938076,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：樹屋、遊戲沙坑、一般鞦韆、親子鞦韆",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、親子鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "y",
+     "src": "tycg",
+     "note": "樹屋",
+     "at": "2026-10-11"
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "遊戲沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1049819717（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 31,
+     "name": "南興水岸遊憩公園(光明郵局公園)",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "樹屋、遊戲沙坑、一般鞦韆、親子鞦韆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-032",
+   "name": "中正公園",
+   "district": "龜山區",
+   "address": "桃園市龜山區自強北路38號",
+   "lat": 24.9994154,
+   "lng": 121.3431783,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：冒險遊戲溜滑梯塔、沙坑、彈跳床、極限飛輪、攀爬、親子鞦韆、鳥巢鞦韆",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "冒險遊戲溜滑梯塔",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "親子鞦韆、鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "tycg",
+     "note": "彈跳床",
+     "at": "2026-10-11"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w572283012（比對方式：exact-district）",
+   "official_ref": [
+    {
+     "tycg_no": 32,
+     "name": "中正公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "冒險遊戲溜滑梯塔、沙坑、彈跳床、極限飛輪、攀爬、親子鞦韆、鳥巢鞦韆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-034",
+   "name": "伯公岡公園",
+   "district": "楊梅區",
+   "address": "楊梅區民生街135號左右與富豐北路交叉口",
+   "lat": 24.9390237,
+   "lng": 121.0847659,
+   "size": "S",
+   "stay": "lt30",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大型戲水池、低齡兒童遊具組",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "tycg",
+     "note": "大型戲水池",
+     "at": "2026-10-11"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "y",
+     "src": "tycg",
+     "note": "低齡兒童遊具組",
+     "at": "2026-10-11"
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w287048271（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 34,
+     "name": "伯公岡公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "大型戲水池、低齡兒童遊具組"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-036",
+   "name": "甡甡兒童公園",
+   "district": "楊梅區",
+   "address": "楊梅區東流里甡甡路625號旁",
+   "lat": 24.8930129,
+   "lng": 121.1259903,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：沙坑、塑膠(直道)溜滑梯、木造船型遊戲平台、攀爬網",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "塑膠(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬網",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬網",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w610516306（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 36,
+     "name": "甡甡兒童公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "沙坑、塑膠(直道)溜滑梯、木造船型遊戲平台、攀爬網"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-037",
+   "name": "富岡運動公園",
+   "district": "楊梅區",
+   "address": "楊梅區新富七街73號",
+   "lat": 24.937227,
+   "lng": 121.0888965,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：沙坑、磨石子(直道)溜滑梯、攀爬牆",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "磨石子(直道)溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w314373265（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 37,
+     "name": "富岡運動公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "沙坑、磨石子(直道)溜滑梯、攀爬牆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-038",
+   "name": "頭重溪柚子公園(原三民公園)",
+   "district": "楊梅區",
+   "address": "桃園市楊梅區瑞溪路1段256巷",
+   "lat": 24.906707,
+   "lng": 121.1748928,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬架、大小彈跳床、一般鞦韆、座椅鞦韆、鳥巢鞦韆、親子鞦韆、沙坑",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、座椅鞦韆、鳥巢鞦韆、親子鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬架",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "tycg",
+     "note": "大小彈跳床",
+     "at": "2026-10-11"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w771842841（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 38,
+     "name": "頭重溪柚子公園(原三民公園)",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "攀爬架、大小彈跳床、一般鞦韆、座椅鞦韆、鳥巢鞦韆、親子鞦韆、沙坑"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-039",
+   "name": "舞動園區(國三橋下)",
+   "district": "龍潭區",
+   "address": "龍潭區國三橋下中正路旁",
+   "lat": 24.860538,
+   "lng": 121.2186094,
+   "size": "M",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：鑽石旋轉盤、極限飛輪、彩虹山丘、大型攀爬網、擺盪大索",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鑽石旋轉盤",
+     "at": "2026-10-11"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "大型攀爬網",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tycg",
+     "note": "大型攀爬網",
+     "at": "2026-10-11"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w1105556818（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 39,
+     "name": "舞動園區(國三橋下)",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "鑽石旋轉盤、極限飛輪、彩虹山丘、大型攀爬網、擺盪大索"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-040",
+   "name": "大溪河濱公園",
+   "district": "大溪區",
+   "address": "大溪區缺仔堤防旁",
+   "lat": 24.8924637,
+   "lng": 121.2838239,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大齡兒童體能遊具組、塑膠(直道)溜滑梯、攀爬牆、腳踏車越野場、船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)、共融式旋轉盤、聲音遊戲板、一般鞦韆、座椅鞦韆、鳥巢鞦韆",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "塑膠(直道)溜滑梯、船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "一般鞦韆、座椅鞦韆、鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "鳥巢鞦韆",
+     "at": "2026-10-11"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tycg",
+     "note": "共融式旋轉盤",
+     "at": "2026-10-11"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tycg",
+     "note": "攀爬牆",
+     "at": "2026-10-11"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "y",
+     "src": "tycg",
+     "note": "船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)",
+     "at": "2026-10-11"
+    },
+    "suspension_bridge": {
+     "v": "y",
+     "src": "tycg",
+     "note": "船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)",
+     "at": "2026-10-11"
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tycg",
+     "note": "船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)",
+     "at": "2026-10-11"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "y",
+     "src": "tycg",
+     "note": "船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)",
+     "at": "2026-10-11"
+    },
+    "music": {
+     "v": "y",
+     "src": "tycg",
+     "note": "聲音遊戲板",
+     "at": "2026-10-11"
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "tycg",
+     "note": "共融式旋轉盤",
+     "at": "2026-10-11"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w514669037（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 40,
+     "name": "大溪河濱公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "大齡兒童體能遊具組、塑膠(直道)溜滑梯、攀爬牆、腳踏車越野場、船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)、共融式旋轉盤、聲音遊戲板、一般鞦韆、座椅鞦韆、鳥巢鞦韆"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-043",
+   "name": "水之丘公園",
+   "district": "觀音區",
+   "address": "桃園市觀音區台15線402號",
+   "lat": 25.0516975,
+   "lng": 121.1474444,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：三層樓高度滑道/礫石沙坑/迷宮",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "三層樓高度滑道",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "礫石沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1006770810（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 43,
+     "name": "水之丘公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "三層樓高度滑道/礫石沙坑/迷宮"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-045",
+   "name": "頭洲魅力公園",
+   "district": "新屋區",
+   "address": "台66線12K+800~12K+900處高架橋下",
+   "lat": 24.9576108,
+   "lng": 121.1442516,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：溜滑梯、盪鞦韆、涵管、溜索、沙坑、挖土機等遊具、溜冰場及籃球場",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tycg",
+     "note": "溜滑梯",
+     "at": "2026-10-11"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tycg",
+     "note": "盪鞦韆",
+     "at": "2026-10-11"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "y",
+     "src": "tycg",
+     "note": "溜索",
+     "at": "2026-10-11"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tycg",
+     "note": "涵管",
+     "at": "2026-10-11"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tycg",
+     "note": "沙坑",
+     "at": "2026-10-11"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "y",
+     "src": "tycg",
+     "note": "溜冰場及籃球場",
+     "at": "2026-10-11"
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w1058058564（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 45,
+     "name": "頭洲魅力公園",
+     "kinds": [
+      "特色遊戲場"
+     ],
+     "items": "溜滑梯、盪鞦韆、涵管、溜索、沙坑、挖土機等遊具、溜冰場及籃球場"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-050",
+   "name": "茄苳埤塘公園",
+   "district": "八德區",
+   "address": "桃園市八德區東泰街",
+   "lat": 24.9655563,
+   "lng": 121.2721892,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（埤塘公園）列出的設施：步道、涼亭、體健設施、遊戲場",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w437937377（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 50,
+     "name": "茄苳埤塘公園",
+     "kinds": [
+      "埤塘公園"
+     ],
+     "items": "步道、涼亭、體健設施、遊戲場"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-053",
+   "name": "龍潭大池公園",
+   "district": "龍潭區",
+   "address": "桃園市龍潭區上林里中豐路上林段115巷11號",
+   "lat": 24.8612678,
+   "lng": 121.2101198,
+   "size": "L",
+   "stay": "60_120",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（埤塘公園）列出的設施：公車站、單車驛站、環湖步道、湖景木棧道、觀光吊橋、腳踏船",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "y",
+     "src": "tycg",
+     "note": "觀光吊橋",
+     "at": "2026-10-11"
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w542806663（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 53,
+     "name": "龍潭大池公園",
+     "kinds": [
+      "埤塘公園"
+     ],
+     "items": "公車站、單車驛站、環湖步道、湖景木棧道、觀光吊橋、腳踏船"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  },
+  {
+   "id": "tyc-tycg-054",
+   "name": "三坑自然生態公園",
+   "district": "龍潭區",
+   "address": "-",
+   "lat": 24.8379463,
+   "lng": 121.2565301,
+   "size": "M",
+   "stay": "30_60",
+   "stay_src": "est",
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "桃園市公園資料（埤塘公園）列出的設施：涼亭、木拱橋、戲水渠道",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "tycg",
+     "note": "戲水渠道",
+     "at": "2026-10-11"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tycg",
+     "note": "公園資料標示有廁所",
+     "at": "2026-10-11"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": "tycg",
+    "note": "公園資料標示有停車（類型未提供）",
+    "at": "2026-10-11"
+   },
+   "source_coords": "OpenStreetMap w529845212（比對方式：exact）",
+   "official_ref": [
+    {
+     "tycg_no": 54,
+     "name": "三坑自然生態公園",
+     "kinds": [
+      "埤塘公園"
+     ],
+     "items": "涼亭、木拱橋、戲水渠道"
+    }
+   ],
+   "area_ha": null,
+   "city": "tyc"
+  }
+ ]
+}
