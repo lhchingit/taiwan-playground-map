@@ -81,5 +81,8 @@ jobs:
         if: failure()
         with:
           name: playwright-report
-          path: playwright-report/
+          # test-results 裡有失敗當下的畫面（error-context.md），診斷用
+          path: |
+            playwright-report/
+            test-results/
           retention-days: 7

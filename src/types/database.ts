@@ -35,14 +35,14 @@ export type Database = {
                   ]
                 },"edit_suggestions": {
                   Row: {
-                    "created_at": string,"field": string | null,"id": number,"key": string | null,"kind": string,"note": string | null,"payload": NonNullable<Json>,"place_id": string | null,"proposed": string | null,"reject_reason": string | null,"review_note": string | null,"reviewed_at": string | null,"reviewed_by": string | null,"status": string,"user_id": string | null
+                    "applied_payload": Json | null,"created_at": string,"field": string | null,"id": number,"key": string | null,"kind": string,"note": string | null,"payload": NonNullable<Json>,"place_id": string | null,"proposed": string | null,"reject_reason": string | null,"review_note": string | null,"reviewed_at": string | null,"reviewed_by": string | null,"status": string,"user_id": string | null
                   }
                   ComputedFields: never
                   Insert: {
-                    "created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"kind"?: string,"note"?: string | null,"payload"?: NonNullable<Json>,"place_id"?: string | null,"proposed"?: string | null,"reject_reason"?: string | null,"review_note"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
+                    "applied_payload"?: Json | null,"created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"kind"?: string,"note"?: string | null,"payload"?: NonNullable<Json>,"place_id"?: string | null,"proposed"?: string | null,"reject_reason"?: string | null,"review_note"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
                   }
                   Update: {
-                    "created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"kind"?: string,"note"?: string | null,"payload"?: NonNullable<Json>,"place_id"?: string | null,"proposed"?: string | null,"reject_reason"?: string | null,"review_note"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
+                    "applied_payload"?: Json | null,"created_at"?: string,"field"?: string | null,"id"?: number,"key"?: string | null,"kind"?: string,"note"?: string | null,"payload"?: NonNullable<Json>,"place_id"?: string | null,"proposed"?: string | null,"reject_reason"?: string | null,"review_note"?: string | null,"reviewed_at"?: string | null,"reviewed_by"?: string | null,"status"?: string,"user_id"?: string | null
                   }
                   Relationships: [
                     {
@@ -187,6 +187,20 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"place_field_history": {
+                  Row: {
+                    "changed_at": string,"changed_by": string | null,"field": string,"id": number,"new_source": string | null,"new_value": string | null,"note": string | null,"old_source": string | null,"old_value": string | null,"place_id": string,"suggestion_id": number | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "changed_at"?: string,"changed_by"?: string | null,"field": string,"id"?: number,"new_source"?: string | null,"new_value"?: string | null,"note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id": string,"suggestion_id"?: number | null
+                  }
+                  Update: {
+                    "changed_at"?: string,"changed_by"?: string | null,"field"?: string,"id"?: number,"new_source"?: string | null,"new_value"?: string | null,"note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id"?: string,"suggestion_id"?: number | null
+                  }
+                  Relationships: [
+                    
+                  ]
                 },"place_parking": {
                   Row: {
                     "distance_m": number | null,"fee": string,"fee_note": string | null,"id": number,"note": string | null,"place_id": string | null,"source_id": string | null,"spaces": number | null,"type": string,"verified_at": string | null
@@ -221,14 +235,14 @@ isOneToOne: false
                   ]
                 },"places": {
                   Row: {
-                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"coord_source": string | null,"created_at": string,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"id": string,"indoor": boolean,"name": string,"size_class": string | null,"status": string,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"updated_at": string
+                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"coord_source": string | null,"created_at": string,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"hours_source": string | null,"hours_verified_at": string | null,"id": string,"indoor": boolean,"name": string,"size_class": string | null,"status": string,"status_note": string | null,"status_source": string | null,"status_until": string | null,"status_verified_at": string | null,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"surface_source": string | null,"surface_verified_at": string | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"coord_source"?: string | null,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"id": string,"indoor"?: boolean,"name": string,"size_class"?: string | null,"status"?: string,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"coord_source"?: string | null,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id": string,"indoor"?: boolean,"name": string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
                   }
                   Update: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"coord_source"?: string | null,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"id"?: string,"indoor"?: boolean,"name"?: string,"size_class"?: string | null,"status"?: string,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"coord_source"?: string | null,"created_at"?: string,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id"?: string,"indoor"?: boolean,"name"?: string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -243,6 +257,24 @@ isOneToOne: false
 isOneToOne: false
       referencedRelation: "city_bounds"
       referencedColumns: ["code"]
+    },{
+      foreignKeyName: "places_hours_source_fkey"
+      columns: ["hours_source"]
+isOneToOne: false
+      referencedRelation: "sources"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "places_status_source_fkey"
+      columns: ["status_source"]
+isOneToOne: false
+      referencedRelation: "sources"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "places_surface_source_fkey"
+      columns: ["surface_source"]
+isOneToOne: false
+      referencedRelation: "sources"
+      referencedColumns: ["id"]
     }
                   ]
                 },"profiles": {
@@ -441,6 +473,9 @@ isOneToOne: false
 "can_moderate":
 { Args: { "p_city": string }; Returns: boolean
                            },
+"check_suggestion_payload":
+{ Args: { "p": Json,"p_kind": string,"p_place_id": string }; Returns: undefined
+                           },
 "city_launched":
 { Args: { "p_city": string }; Returns: boolean
                            },
@@ -631,8 +666,11 @@ isOneToOne: false
 "postgis_wagyu_version":
 { Args: Record<PropertyKey, never>; Returns: string
                            },
+"reopen_place":
+{ Args: { "p_note"?: string,"p_place_id": string }; Returns: undefined
+                           },
 "review_suggestion":
-{ Args: { "p_accept": boolean,"p_id": number,"p_note"?: string,"p_reason"?: string }; Returns: undefined
+{ Args: { "p_accept": boolean,"p_id": number,"p_note"?: string,"p_payload"?: Json,"p_reason"?: string }; Returns: undefined
                            },
 "st_3dclosestpoint":
 { Args: { "geom1": unknown,"geom2": unknown }; Returns: unknown

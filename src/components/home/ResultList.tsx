@@ -13,6 +13,13 @@ import {
 } from '@/lib/format';
 import type { AttributeCatalog, CityPlace } from '@/lib/places';
 
+/** 清單卡片的狀態標籤（開放中不標示） */
+const STATUS_PILL: Partial<Record<string, string>> = {
+  seasonal: '季節性開放',
+  maintenance: '維修中',
+  closed: '已封閉',
+};
+
 interface Props {
   results: (CityPlace & { km: number })[];
   unknownHint: number;
@@ -77,10 +84,10 @@ export function ResultList({
                 </div>
                 <div className="cmeta">
                   {p.district ?? ''}．{ageText(p)}．停留 {stayText(p.stay)}
-                  {p.status === 'seasonal' && (
+                  {STATUS_PILL[p.status] && (
                     <>
                       {' '}
-                      ．<span className="pill">季節性開放</span>
+                      ．<span className={`pill ${p.status}`}>{STATUS_PILL[p.status]}</span>
                     </>
                   )}
                 </div>

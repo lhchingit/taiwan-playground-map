@@ -14,6 +14,7 @@ import {
   addressText,
   factSections,
   feeText,
+  type FieldRef,
   pageSources,
   type PlaceDetail,
   type SourceRef,
@@ -22,6 +23,7 @@ import type { AttributeCatalog } from '@/lib/places';
 import type { Tri } from '@/types/place';
 import { ReportButton } from './ReportButton';
 import { RouteLink } from './RouteLink';
+import { StatusNotice } from './StatusNotice';
 
 const ICON: Record<Tri, string> = { y: '✓', n: '–', u: '?' };
 
@@ -55,6 +57,18 @@ function Provenance(p: {
         <SourceText source={p.source} />
         {p.verifiedAt && `．${p.verifiedAt}`}
       </span>
+    </span>
+  );
+}
+
+/** 基本欄位的來源（使用者回報經審核後套用時才有） */
+function FieldSource({ field }: { field: FieldRef | null }) {
+  if (!field?.source) return null;
+  return (
+    <span className="asrc">
+      {' '}
+      <SourceText source={field.source} />
+      {field.verifiedAt && `．${field.verifiedAt}`}
     </span>
   );
 }
@@ -97,6 +111,7 @@ export function PlaceDetailView({
           {d.name}
         </Heading>
         <div className="cmeta">{addressText(d)}</div>
+        <StatusNotice status={d.status} info={d.statusInfo} />
         {d.summary && <div>{d.summary}</div>}
         <div className="actions">
           <RouteLink dest={{ lat: d.lat, lng: d.lng }} origin={trip?.origin} mode={trip?.mode} />
@@ -139,9 +154,15 @@ export function PlaceDetailView({
           <dt>費用</dt>
           <dd>{feeText(d.fee)}</dd>
           <dt>開放時間</dt>
-          <dd>{d.hours ?? '未知'}</dd>
+          <dd>
+            {d.hours ?? '未知'}
+            <FieldSource field={d.hoursRef} />
+          </dd>
           <dt>地面材質</dt>
-          <dd>{d.surface ?? '未知'}</dd>
+          <dd>
+            {d.surface ?? '未知'}
+            <FieldSource field={d.surfaceRef} />
+          </dd>
           <dt>座標來源</dt>
           <dd className="asrc">{d.coordSource ?? '未知'}</dd>
         </dl>

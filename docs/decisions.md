@@ -129,6 +129,13 @@
   - 匯入（`pnpm seed`）走資料庫直連，不經過 API。
 - **理由：** 直接寫入可以繞過「每筆事實都要有來源」（CLAUDE.md 資料規則 3），例如寫入沒有 `source_id` 的屬性，或任意改來源。集中在函式裡，規則只要寫一次、測一次。
 - **測試：** `tests/db/auth.test.ts`：匿名、會員、審核員、管理員直接寫入都失敗。
+- **核准時修改後套用（2026-10-11，P3(e1)）：**
+  - 基本資料（開放時間、地面材質）與封閉或維修的建議，審核員可以在核准畫面先修改內容，再由 `review_suggestion(…, p_payload)` 在同一個交易裡套用。
+  - 修改後的內容一樣經過 `check_suggestion_payload()` 檢查。實際套用的內容存在 `edit_suggestions.applied_payload`，原始建議不變。
+- **基本欄位的來源（P3(e1)）：** `places` 的開放時間、地面材質、狀態各有來源與確認日期欄位（`*_source`、`*_verified_at`），修改紀錄存在 `place_field_history`。
+  - 封閉時記錄 `status_until`（預計恢復日期）與 `status_note`（原因）。
+  - `reopen_place()` 恢復開放。
+  - 重新匯入（`pnpm seed`）時，來源是 `user` 的值不被覆蓋，跟屬性的規則一樣。
 
 ## D16 預設暱稱用「家長＋4 位數」，不用社群帳號名稱（2026-10 決定）
 

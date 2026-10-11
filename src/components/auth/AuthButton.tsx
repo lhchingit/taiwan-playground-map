@@ -7,8 +7,8 @@ import { useCurrentPath, useSession } from './useSession';
 export function AuthButton() {
   const session = useSession();
   const path = useCurrentPath();
-  // /me 需要登入，從那裡登出要回首頁
-  const here = path.startsWith('/me') ? '/' : path;
+  // /me、/admin 需要登入，從那裡登出要回首頁
+  const here = path.startsWith('/me') || path.startsWith('/admin') ? '/' : path;
 
   if (!session) return <span className="auth-slot" aria-hidden="true" />;
   if (!session.user) {
@@ -31,6 +31,11 @@ export function AuthButton() {
         <Link href="/me" prefetch={false}>
           我的貢獻
         </Link>
+        {['moderator', 'admin'].includes(session.user.role) && !session.user.banned && (
+          <Link href="/admin" prefetch={false}>
+            審核後台
+          </Link>
+        )}
         <form action="/auth/signout" method="post">
           <input type="hidden" name="next" value={here} />
           <button type="submit">登出</button>
