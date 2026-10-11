@@ -30,6 +30,8 @@ export interface PlaceMapProps {
   fitKey: string;
   /** 改變時把地圖移到這個場地 */
   focus: { id: string; seq: number } | null;
+  /** 回報新場地時標的點 */
+  pin?: Origin | null;
 }
 
 export default function PlaceMap(props: PlaceMapProps) {
@@ -130,6 +132,11 @@ export default function PlaceMap(props: PlaceMapProps) {
         <Marker longitude={props.origin.lng} latitude={props.origin.lat}>
           <div className="origin-mk" title="出發點" />
         </Marker>
+        {props.pin && (
+          <Marker longitude={props.pin.lng} latitude={props.pin.lat} anchor="bottom">
+            <div className="newplace-mk" title="新場地的位置" data-testid="newplace-pin" />
+          </Marker>
+        )}
       </MapGL>
     </>
   );

@@ -1147,3 +1147,59 @@ table.history th {
   display: flex;
   gap: 16px;
 }
+
+/* 回報新場地（P3(c2)） */
+.newplace-entry {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.newplace {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--teal-soft);
+}
+.newplace-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newplace-head h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 18px;
+}
+.newplace .field {
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+}
+.newplace input:not([type='checkbox']) {
+  font: inherit;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.newplace-mk {
+  width: 18px;
+  height: 18px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: var(--slide);
+  border: 2px solid var(--panel);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+}
+.linkbtn {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--teal);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+}

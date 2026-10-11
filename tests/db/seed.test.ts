@@ -175,6 +175,19 @@ describe('pnpm seed', () => {
     }
   });
 
+  it('由使用者建議建立的場地不在 places.json：不警告、--prune 也不刪除', async () => {
+    const id = 'hsc-user-test';
+    await sql`INSERT INTO places (id, name, city, geom, created_from_suggestion)
+              VALUES (${id}, 'test-使用者新增', 'hsc', 'SRID=4326;POINT(120.97 24.8)', 1)`;
+    try {
+      const s = await runSeed(sql, seed, {}, { prune: true, dryRun: true });
+      expect(s.orphanPlaces).not.toContain(id);
+      expect(s.pruned).not.toContain(id);
+    } finally {
+      await sql`DELETE FROM places WHERE id = ${id}`;
+    }
+  });
+
   it('匿名使用者讀得到新竹市全部場地', async () => {
     const { count, error } = await anonClient()
       .from('places')

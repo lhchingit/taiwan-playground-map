@@ -159,24 +159,51 @@ function Card({
             </label>
           </fieldset>
         )}
+        {c.kind === 'new_place' && c.edit && (
+          <fieldset>
+            <legend>核准前可以修改（核准後立即出現在地圖上）</legend>
+            <p className="note">
+              <a
+                href={`https://www.openstreetmap.org/?mlat=${c.edit.lat}&mlon=${c.edit.lng}#map=18/${c.edit.lat}/${c.edit.lng}`}
+                target="_blank"
+                rel="noopener"
+              >
+                在 OpenStreetMap 上確認位置
+              </a>
+              ：位置要在公園或遊戲場範圍內；不可以用 Google 地圖修正。
+            </p>
+            <input type="hidden" name="edit_city" value={c.edit.city} />
+            <label>
+              名稱
+              <input name="edit_name" defaultValue={c.edit.name} maxLength={50} />
+            </label>
+            <label>
+              地址
+              <input name="edit_address" defaultValue={c.edit.address} maxLength={100} />
+            </label>
+            <label>
+              緯度
+              <input name="edit_lat" defaultValue={c.edit.lat} inputMode="decimal" />
+            </label>
+            <label>
+              經度
+              <input name="edit_lng" defaultValue={c.edit.lng} inputMode="decimal" />
+            </label>
+          </fieldset>
+        )}
         <label>
           審核說明（選填）
           <input name="review_note" maxLength={500} />
         </label>
         <div className="admin-actions">
-          {c.kind !== 'new_place' && (
-            <button className="btn primary" name="decision" value="accept" disabled={pending}>
-              核准
-            </button>
-          )}
+          <button className="btn primary" name="decision" value="accept" disabled={pending}>
+            核准
+          </button>
           <ReasonSelect id={`reason-${c.id}`} />
           <button className="btn danger" name="decision" value="reject" disabled={pending}>
             退回
           </button>
         </div>
-        {c.kind === 'new_place' && (
-          <p className="note">新增場地的核准還沒開放，目前只能保留或退回。</p>
-        )}
       </form>
     </li>
   );

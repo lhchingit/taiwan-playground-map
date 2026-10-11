@@ -109,6 +109,52 @@ export function parseSuggestion(f: Fields, keys: readonly string[]): ParseResult
   return fail('請選擇要回報的類型。');
 }
 
+export const NEW_PLACE_LIMITS = { name: 50, address: 100, note: 200 } as const;
+
+export interface NewPlacePayload {
+  name: string;
+  lat: number;
+  lng: number;
+  city: string;
+  address?: string;
+  note?: string;
+}
+
+/** 回報新場地的表單 → new_place 的 payload。city：依位置判斷出的已上線縣市（沒有時是 null） */
+export function parseNewPlace(
+  f: Fields,
+  city: string | null,
+): { ok: true; payload: NewPlacePayload } | { ok: false; error: string } {
+  const fail = (error: string) => ({ ok: false as const, error });
+  const lat = Number(f.lat);
+  const lng = Number(f.lng);
+  if (!f.lat || !f.lng || !Number.isFinite(lat) || !Number.isFinite(lng)) {
+    return fail('請在地圖上點出場地的位置。');
+  }
+  if (!city) return fail('這個位置不在目前開放的縣市。');
+  const name = text(f.name);
+  if (!name) return fail('請填寫場地名稱。');
+  const address = text(f.address);
+  const note = text(f.note);
+  const long =
+    tooLong(name, NEW_PLACE_LIMITS.name, '場地名稱') ??
+    tooLong(address, NEW_PLACE_LIMITS.address, '地址') ??
+    tooLong(note, NEW_PLACE_LIMITS.note, '補充說明');
+  if (long) return fail(long);
+  return {
+    ok: true,
+    payload: {
+      name,
+      // 7 位小數約 1 公分，足夠且不洩漏多餘的精度
+      lat: Math.round(lat * 1e7) / 1e7,
+      lng: Math.round(lng * 1e7) / 1e7,
+      city,
+      ...(address && { address }),
+      ...(note && { note }),
+    },
+  };
+}
+
 /** 資料庫錯誤 → 給使用者的訊息 */
 export function submitErrorMessage(err: { code?: string; message?: string }): string {
   if (err.code === '23505') return '你已經回報過，正在審核中。';

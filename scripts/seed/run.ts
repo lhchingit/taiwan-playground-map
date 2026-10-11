@@ -200,6 +200,8 @@ export async function runSeed(
               OR ${USER_SOURCE} IN (p.hours_source, p.surface_source, p.status_source)) AS protected
       FROM places p
       WHERE p.city = ANY(${seedCities}) AND NOT (p.id = ANY(${placeIds})) AND p.id NOT LIKE 'test-%'
+        -- 由使用者建議建立的場地本來就不在 places.json（decisions D19）：不警告、不刪除
+        AND p.created_from_suggestion IS NULL
       ORDER BY p.id`;
     const pruned = options.prune ? orphanRows.filter((o) => !o.protected).map((o) => o.id) : [];
     const pruneBlocked = options.prune

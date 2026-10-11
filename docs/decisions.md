@@ -141,6 +141,10 @@
   - 使用者管理：`admin_set_role()`、`admin_set_cities()`、`admin_ban()`、`admin_unban()`。
   - 管理員也不能直接寫 `profiles` 的角色與停權欄位、`moderator_cities`，所有角色變更都記在 `admin_log`。
   - 不能對自己的帳號操作，避免管理員把自己鎖在外面。
+- **新增場地（2026-10-11，P3(c2)）：** `new_place` 的核准由 `review_suggestion()` 建立場地，審核員可以先修改名稱、地址、座標。
+  - 新場地的 id 是 `<縣市>-user-<編號>`。
+  - 停車一列（類型未知），屬性全是未知。
+  - `places.created_from_suggestion` 記錄是由哪一筆建議建立的。`pnpm seed` 不把這些場地列為多出來的場地，`--prune` 也不刪。
 
 ## D16 預設暱稱用「家長＋4 位數」，不用社群帳號名稱（2026-10 決定）
 
@@ -176,3 +180,14 @@
   - 只用於處理帳號問題。
   - 管理員的操作都記在 `admin_log`。
   - 已寫進隱私權政策。
+
+## D19 使用者在本站 OpenStreetMap 底圖上標示的座標（2026-10-11 決定）
+
+- **做法：**
+  - 家長回報新場地時，在本站的 OpenStreetMap 底圖上點出位置。
+  - 審核員用「在 OpenStreetMap 上確認位置」連結對照公園範圍，必要時修正座標，再核准。
+  - `coord_source` 記錄「使用者在 OpenStreetMap 地圖上標示，審核員確認（建議 #id）」。
+- **跟 CLAUDE.md 座標規則（D9）的關係：** 這是在 OSM 底圖上的實地確認，等同「實地測量＋OSM 定位」，所以允許。
+  - 介面提醒「不要照 Google 地圖的位置標」。
+  - 審核員也不可以用 Google 地圖修正。
+- **範圍：** 只限新增場地的位置。既有場地的座標仍然只來自 OSM、TGOS 或人工定位工具（`pnpm tool:locate`）。

@@ -47,3 +47,17 @@ export function nearestCity<C extends CityBounds>(origin: Origin, cities: readon
   }
   return best?.city ?? null;
 }
+
+/** 這個位置在哪個已上線縣市的範圍裡（回報新場地用）；都不在時回傳 null */
+export function launchedCityAt<C extends CityBounds>(
+  point: Origin,
+  cities: readonly C[],
+): C | null {
+  return (
+    cities.find((c) => {
+      if (!c.launched || !c.bbox) return false;
+      const [west, south, east, north] = c.bbox as [number, number, number, number];
+      return point.lng >= west && point.lng <= east && point.lat >= south && point.lat <= north;
+    }) ?? null
+  );
+}
