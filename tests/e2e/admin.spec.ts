@@ -328,18 +328,30 @@ async function pickOnMap(page: Page) {
   // 等地圖載入完成（「地圖載入中…」消失）才點
   await expect(page.getByText('地圖載入中…')).toHaveCount(0, { timeout: 15_000 });
   const box = (await map.boundingBox())!;
-  for (const [dx, dy] of [
-    [30, -30],
-    [-40, 35],
-    [55, 45],
-    [-60, -50],
-  ] as const) {
-    await map.click({ position: { x: box.width / 2 + dx, y: box.height / 2 + dy } });
-    try {
-      await page.getByTestId('newplace-pin').waitFor({ timeout: 2_000 });
-      return;
-    } catch {
-      // 點到既有的標記或出發點：換個位置再試
+  // 從地圖中心附近往外找一個沒有標記（場地、出發點）的位置再點：場地多的時候中心附近常被標記蓋住
+  for (const r of [30, 60, 90, 120]) {
+    for (const [ux, uy] of [
+      [1, -1],
+      [-1, 1],
+      [1, 1],
+      [-1, -1],
+      [0, 1],
+      [1, 0],
+    ] as const) {
+      const x = box.x + box.width / 2 + ux * r;
+      const y = box.y + box.height / 2 + uy * r;
+      const covered = await page.evaluate(
+        ([px, py]) => !!document.elementFromPoint(px!, py!)?.closest('.maplibregl-marker'),
+        [x, y],
+      );
+      if (covered) continue;
+      await page.mouse.click(x, y);
+      try {
+        await page.getByTestId('newplace-pin').waitFor({ timeout: 2_000 });
+        return;
+      } catch {
+        // 沒有標到：換個位置再試
+      }
     }
   }
   throw new Error('沒有標到新場地的位置');
