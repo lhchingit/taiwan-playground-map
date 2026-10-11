@@ -22,6 +22,9 @@ services:
       SITE_URL: ${SITE_URL:-http://localhost:3000}
       # pnpm seed／pnpm city 改資料後用它清除容器的快取（不需要重新建置）
       REVALIDATE_SECRET: ${REVALIDATE_SECRET:-}
+      # 回報修正的機器人驗證（本機是 Cloudflare 的測試金鑰；沒有設定時網站拒絕回報）
+      TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:-}
+      TURNSTILE_SECRET_KEY: ${TURNSTILE_SECRET_KEY:-}
     extra_hosts:
       - host.docker.internal:host-gateway
     ports:

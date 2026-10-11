@@ -2,8 +2,9 @@
 // 登入信由本機 Supabase 的 Mailpit 收；測試帳號一律是 test-e2e-…@example.test，跑完刪除。
 // Google 登入在本機預設沒有設定金鑰，只檢查按鈕顯示「尚未設定」。
 import { randomUUID } from 'node:crypto';
-import { expect, test, type Page } from '@playwright/test';
-import { adminSql, MAILPIT_URL } from '../db/helpers';
+import { expect, test } from '@playwright/test';
+import { adminSql } from '../db/helpers';
+import { loginWithEmail } from './login';
 
 test.skip(!!process.env.PLAYWRIGHT_BASE_URL, '外部伺服器（例如 Docker）的登入導回網址不同');
 
@@ -27,34 +28,6 @@ function newEmail() {
   const email = `test-e2e-${randomUUID().slice(0, 8)}@example.test`;
   created.push(email);
   return email;
-}
-
-/** 從 Mailpit 讀這個信箱最新的一封信，取出登入連結 */
-async function loginLink(email: string): Promise<string> {
-  for (let i = 0; i < 40; i++) {
-    const res = await fetch(
-      `${MAILPIT_URL}/api/v1/search?query=${encodeURIComponent(`to:"${email}"`)}&limit=1`,
-    );
-    const list = (await res.json()) as { messages: { ID: string }[] };
-    const id = list.messages[0]?.ID;
-    if (id) {
-      const msg = (await (await fetch(`${MAILPIT_URL}/api/v1/message/${id}`)).json()) as {
-        HTML: string;
-      };
-      const href = /href="([^"]+)"/.exec(msg.HTML)?.[1];
-      if (href) return href.replaceAll('&amp;', '&');
-    }
-    await new Promise((r) => setTimeout(r, 250));
-  }
-  throw new Error(`Mailpit 沒有收到寄給 ${email} 的信`);
-}
-
-/** 在畫面上的登入表單（登入頁或登入視窗）用 Email 登入，打開信裡的連結 */
-async function loginWithEmail(page: Page, email: string) {
-  await page.getByLabel('用 Email 登入連結（不需要密碼）').fill(email);
-  await page.getByRole('button', { name: '寄登入連結' }).click();
-  await expect(page.getByText(`登入連結已寄到 ${email}`)).toBeVisible();
-  await page.goto(await loginLink(email));
 }
 
 const userId = async (email: string) =>
@@ -94,7 +67,7 @@ test('未登入按「回報修正」跳出登入視窗；登入後回到場地�
 
   await loginWithEmail(page, newEmail());
   await expect(page).toHaveURL(new RegExp(`${PLACE}\\?report=1$`));
-  await expect(page.getByText('回報修正功能即將開放')).toBeVisible();
+  await expect(page.getByRole('form', { name: '回報修正' })).toBeVisible();
 });
 
 test('登入狀態還在查詢時按「回報修正」，等查完仍然跳出登入視窗', async ({ page }) => {

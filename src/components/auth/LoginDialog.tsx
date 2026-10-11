@@ -1,5 +1,5 @@
 'use client';
-// 登入視窗：按「回報修正」「上傳照片」但還沒登入時跳出。用原生 <dialog>（Esc 關閉、焦點留在視窗內）。
+// 登入視窗：按「回報修正」但還沒登入時跳出。用原生 <dialog>（Esc 關閉、焦點留在視窗內）。
 import { useEffect, useRef } from 'react';
 import { LoginPanel } from './LoginPanel';
 

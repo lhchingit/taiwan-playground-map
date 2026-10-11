@@ -4,8 +4,9 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
 
 export interface SessionInfo {
-  user: { name: string; role: string; banned: boolean } | null;
+  user: { name: string; role: string; banned: boolean; termsAccepted: boolean } | null;
   providers: { google: boolean; email: boolean };
+  turnstileSiteKey: string | null;
 }
 
 let pending: Promise<SessionInfo> | null = null;
@@ -18,7 +19,7 @@ export function loadSession(): Promise<SessionInfo> {
     )
     .catch(() => {
       pending = null; // 下次再試
-      return { user: null, providers: { google: false, email: true } };
+      return { user: null, providers: { google: false, email: true }, turnstileSiteKey: null };
     });
   return pending;
 }

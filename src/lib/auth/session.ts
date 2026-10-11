@@ -7,6 +7,8 @@ export interface SessionUser {
   role: string;
   banned: boolean;
   banReason: string | null;
+  /** 是否已同意服務條款（第一次提交前要同意） */
+  termsAccepted: boolean;
 }
 
 export async function currentUser(supabase: AuthClient): Promise<SessionUser | null> {
@@ -15,7 +17,7 @@ export async function currentUser(supabase: AuthClient): Promise<SessionUser | n
   if (!id) return null;
   const { data: p } = await supabase
     .from('profiles')
-    .select('display_name, role, banned_at, ban_reason')
+    .select('display_name, role, banned_at, ban_reason, terms_accepted_at')
     .eq('id', id)
     .maybeSingle();
   if (!p) return null;
@@ -25,5 +27,6 @@ export async function currentUser(supabase: AuthClient): Promise<SessionUser | n
     role: p.role,
     banned: p.banned_at !== null,
     banReason: p.ban_reason,
+    termsAccepted: p.terms_accepted_at !== null,
   };
 }
