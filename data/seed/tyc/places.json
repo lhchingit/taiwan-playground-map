@@ -1525,10 +1525,10 @@
      "at": null
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycg",
+     "note": "多人座搖椅",
+     "at": "2026-10-11"
     },
     "spinner": {
      "v": "y",
@@ -2619,7 +2619,7 @@
     "climbing": {
      "v": "y",
      "src": "tycg",
-     "note": "攀爬牆",
+     "note": "攀爬牆、木樁爬坡",
      "at": "2026-10-11"
     },
     "climbing_wall": {
@@ -4239,7 +4239,7 @@
     "climbing": {
      "v": "y",
      "src": "tycg",
-     "note": "攀爬牆、攀爬繩、木樁攀爬坡",
+     "note": "攀爬牆、攀爬繩、木樁攀爬坡、木箱階梯",
      "at": "2026-10-11"
     },
     "climbing_wall": {
@@ -5042,10 +5042,10 @@
      "at": "2026-10-11"
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycg",
+     "note": "轉轉椅",
+     "at": "2026-10-11"
     },
     "climbing": {
      "v": "u",

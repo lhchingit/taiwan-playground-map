@@ -3,12 +3,15 @@
 輸入：data/raw/tyc/tycg-parks.json（fetch_tycg_parks.py）、data/raw/tyc/osm-matches.tsv（locate_tyc.py）、
       data/raw/tyc/manual-review.tsv（人工定位工具 pnpm tool:locate -- --city tyc）
 規則（不推測）：
-  - 設施文字對照到屬性 key；對不到的列在 unmapped-items.csv
+  - 設施文字對照到屬性 key（RULES）；RULES 對不到的，看人工決定的清單 data/raw/tyc/item-decisions.tsv
+    （對照到某個屬性，或「不對照」）；都沒有的才列在 unmapped-items.csv 等人決定
   - 有遊具才上地圖：對到兒童遊具類的屬性，或寫了「遊戲場」「遊具」；只有步道、涼亭、球場的不上地圖（D13）
   - 停車、廁所：「˙」是有（y），空白是未提供（u，不是 n）
   - 同名的公園（特色遊戲場與埤塘公園都有）合併成一處
 """
+import csv
 import re
+from pathlib import Path
 
 from lib.attrs import map_items
 
@@ -71,9 +74,42 @@ def split_items(text):
     return [i.strip().rstrip("。") for i in items if i.strip().rstrip("。")]
 
 
-def map_facilities(text):
-    """({屬性 key: 原文}, [對不到的原文])"""
-    return map_items(split_items(text), RULES)
+NO_MAP = "不對照"
+DECISION_COLUMNS = ["用語", "決定", "理由", "決定者", "日期"]
+
+
+def load_decisions(path, keys):
+    """{用語: 屬性 key 或「不對照」}；決定不是已知的屬性、或沒有理由與決定者時中止匯入"""
+    path = Path(path)
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f, delimiter="\t"))
+    errors = []
+    for r in rows:
+        term, decision = (r.get("用語") or "").strip(), (r.get("決定") or "").strip()
+        if not term:
+            errors.append("有一列沒有用語")
+        if decision != NO_MAP and decision not in keys:
+            errors.append(f"{term}：決定要是屬性 key 或「{NO_MAP}」（{decision}）")
+        if not r.get("理由") or not r.get("決定者"):
+            errors.append(f"{term}：要填理由與決定者")
+    if errors:
+        raise ValueError(f"{path} 有 {len(errors)} 個問題：\n- " + "\n- ".join(errors))
+    return {r["用語"].strip(): r["決定"].strip() for r in rows}
+
+
+def map_facilities(text, decisions=None):
+    """({屬性 key: 原文}, [還沒決定的原文])。RULES 對不到的，再看人工決定"""
+    attrs, unmapped = map_items(split_items(text), RULES)
+    pending = []
+    for item in unmapped:
+        decision = (decisions or {}).get(item)
+        if decision is None:
+            pending.append(item)
+        elif decision != NO_MAP:
+            attrs[decision] = f"{attrs[decision]}、{item}" if decision in attrs else item
+    return attrs, pending
 
 
 def has_playground(attrs, items):
