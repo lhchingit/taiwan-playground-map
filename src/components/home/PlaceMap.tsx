@@ -42,13 +42,12 @@ export default function PlaceMap(props: PlaceMapProps) {
   // 換頁時 Next.js 把上一頁藏起來（React <Activity>）而不是卸載；藏起來時地圖被拆掉，
   // 按「上一頁」回來會建立新的地圖，但標記仍綁在舊的地圖上（全部消失）。
   // 偵測到「重新顯示」就換 key，地圖與標記整組重新建立。
+  // loaded 不歸零：主要圖磚在這一頁已經成功載入過，重建時的錯誤（例如被中斷的請求）不代表圖磚壞了，
+  // 不能因此改用備援（OSM 點陣圖磚，彩色）。
   const [generation, setGeneration] = useState(0);
   const shownBefore = useRef(false);
   useEffect(() => {
-    if (shownBefore.current) {
-      loaded.current = false;
-      setGeneration((g) => g + 1);
-    }
+    if (shownBefore.current) setGeneration((g) => g + 1);
     shownBefore.current = true;
   }, []);
 
@@ -58,7 +57,9 @@ export default function PlaceMap(props: PlaceMapProps) {
     latest.current = props;
   });
 
+  // 主要圖磚多久沒載入完成就改用備援；已經載入過（例如按「上一頁」回來）就不用再等
   useEffect(() => {
+    if (loaded.current) return;
     const t = setTimeout(() => {
       if (!loaded.current) setStyle(FALLBACK_STYLE);
     }, FALLBACK_AFTER_MS);
@@ -112,8 +113,10 @@ export default function PlaceMap(props: PlaceMapProps) {
           setReady(true);
           fitAll();
         }}
-        onError={() => {
-          if (!loaded.current) setStyle(FALLBACK_STYLE);
+        onError={(e) => {
+          // 只有主要圖磚從來沒載入成功時才改用備援；被中斷的請求（換頁、重建地圖）不算失敗
+          if (loaded.current || e.error?.name === 'AbortError') return;
+          setStyle(FALLBACK_STYLE);
         }}
         onClick={(e) => {
           if (props.picking) props.onPick({ lat: e.lngLat.lat, lng: e.lngLat.lng });
