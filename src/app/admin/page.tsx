@@ -220,6 +220,11 @@ async function AdminContent({ searchParams }: Props) {
       <article className="place-article">
         <div className="dhead">
           <h1>審核後台</h1>
+          {user.role === 'admin' && (
+            <p>
+              <Link href="/admin/users">使用者管理</Link>
+            </p>
+          )}
           <p className="cmeta">
             {user.role === 'admin'
               ? '管理員：全部縣市'

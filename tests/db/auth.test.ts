@@ -44,6 +44,7 @@ afterAll(async () => {
   await sql`DELETE FROM places WHERE id IN (${HSC}, ${HSQ})`; // 建議、屬性、照片跟著刪
   await sql`DELETE FROM place_attribute_history WHERE place_id IN (${HSC}, ${HSQ})`;
   await sql`DELETE FROM place_field_history WHERE place_id IN (${HSC}, ${HSQ})`;
+  await sql`DELETE FROM admin_log WHERE actor = ${admin.id}`;
   await sql`DELETE FROM edit_suggestions WHERE place_id IS NULL AND payload->>'name' LIKE 'test-%'`;
   await sql.end();
 });
@@ -661,6 +662,195 @@ describe('核准時套用基本資料與封閉（0007）', () => {
     expect(mod.data?.length).toBeGreaterThan(0);
     const mem = await member.client.from('place_field_history').select('id').eq('place_id', HSC);
     expect(mem.data).toEqual([]);
+  });
+});
+
+describe('修改紀錄的還原（0008）', () => {
+  let sub: Actor;
+  beforeAll(async () => {
+    sub = await people.create('member');
+  });
+  const approve = async (payload: Json, kind: Kind = 'attribute') => {
+    const { data, error } = await suggest(sub, { kind, payload });
+    expect(error).toBeNull();
+    expect((await review(modHsc, data!.id, true)).error).toBeNull();
+    return data!.id;
+  };
+  const lastAttrHistory = async (key: string) =>
+    Number(
+      (
+        await sql`SELECT max(id) AS id FROM place_attribute_history WHERE place_id = ${HSC} AND key = ${key}`
+      )[0]!.id,
+    );
+  const restoreAttr = (a: Actor | null, id: number) =>
+    (a?.client ?? anon).rpc('restore_attribute', { p_history_id: id });
+
+  it('回到新增之前：那一列刪除、屬性回到未知；再還原一次是「已經是這個版本」', async () => {
+    await approve({ key: 'handwash', value: 'y' });
+    const h = await lastAttrHistory('handwash');
+    expect((await restoreAttr(modHsc, h)).error).toBeNull();
+    expect(
+      await sql`SELECT 1 FROM place_attributes WHERE place_id = ${HSC} AND key = 'handwash'`,
+    ).toHaveLength(0);
+    const [p] = await sql`SELECT attrs FROM places WHERE id = ${HSC}`;
+    expect(p?.attrs).not.toHaveProperty('handwash');
+    const [last] = await sql`SELECT old_value, new_value, changed_by FROM place_attribute_history
+                             WHERE place_id = ${HSC} AND key = 'handwash' ORDER BY id DESC LIMIT 1`;
+    expect(last).toMatchObject({ old_value: 'y', new_value: null, changed_by: modHsc.id });
+    expect((await restoreAttr(modHsc, h)).error?.message).toContain('已經是這個版本');
+  });
+
+  it('回到修改之前：值、來源、確認日期都恢復', async () => {
+    await sql`INSERT INTO place_attributes (place_id, key, value, note, source_id, verified_at)
+              VALUES (${HSC}, 'stroller', 'y', '清冊', 'hccg', '2026-01-02')`;
+    await approve({ key: 'stroller', value: 'n', note: '有階梯' });
+    const h = await lastAttrHistory('stroller');
+    expect((await restoreAttr(modHsc, h)).error).toBeNull();
+    const [a] = await sql`SELECT value, note, source_id, verified_at::text FROM place_attributes
+                          WHERE place_id = ${HSC} AND key = 'stroller'`;
+    expect(a).toEqual({ value: 'y', note: '清冊', source_id: 'hccg', verified_at: '2026-01-02' });
+  });
+
+  it('基本欄位與狀態：回到修改之前，留下還原紀錄', async () => {
+    const fieldId = await approve({ field: 'surface', value: 'PU 地墊' }, 'field');
+    const [fh] = await sql`SELECT id FROM place_field_history WHERE suggestion_id = ${fieldId}`;
+    const restoreField = (id: unknown) =>
+      modHsc.client.rpc('restore_field', { p_history_id: Number(id) });
+    expect((await restoreField(fh!.id)).error).toBeNull();
+    const [p] = await sql`SELECT surface, surface_source FROM places WHERE id = ${HSC}`;
+    expect(p).toEqual({ surface: null, surface_source: null });
+    const [r] =
+      await sql`SELECT restored_from, changed_by FROM place_field_history ORDER BY id DESC LIMIT 1`;
+    expect(r).toEqual({ restored_from: fh!.id, changed_by: modHsc.id });
+
+    const closureId = await approve(
+      { reason: '整修', until: '2027-02-01', status: 'closed' },
+      'closure',
+    );
+    const [ch] = await sql`SELECT id FROM place_field_history WHERE suggestion_id = ${closureId}`;
+    expect((await restoreField(ch!.id)).error).toBeNull();
+    const [q] = await sql`SELECT status, status_until, status_note FROM places WHERE id = ${HSC}`;
+    expect(q).toEqual({ status: 'open', status_until: null, status_note: null });
+    expect((await restoreField(ch!.id)).error?.message).toContain('已經是這個版本');
+  });
+
+  it('會員、其他縣市的審核員、匿名不能還原；管理員可以', async () => {
+    await approve({ key: 'food', value: 'y' });
+    const h = await lastAttrHistory('food');
+    for (const a of [member, modHsq]) {
+      expect((await restoreAttr(a, h)).error?.message).toContain('沒有審核權限');
+    }
+    expect((await restoreAttr(null, h)).error).not.toBeNull();
+    expect((await restoreAttr(admin, h)).error).toBeNull();
+  });
+});
+
+describe('管理員的使用者管理（0008）', () => {
+  let target: Actor;
+  beforeAll(async () => {
+    target = await people.create('member');
+  });
+  const call = (a: Actor | null, fn: string, args: Record<string, unknown>) =>
+    (a?.client ?? anon).rpc(fn as 'admin_unban', args as never);
+
+  it('使用者列表（含 Email）只有管理員能看，可以用 Email 搜尋', async () => {
+    const { data, error } = await admin.client.rpc('admin_list_users', {
+      p_query: target.email.slice(0, 18),
+    });
+    expect(error).toBeNull();
+    const row = data?.find((r) => r.id === target.id);
+    expect(row).toMatchObject({ email: target.email, role: 'member', cities: [] });
+    expect(row?.display_name).toMatch(/^家長 \d{4}$/);
+    for (const a of [modHsc, member, null]) {
+      expect((await call(a, 'admin_list_users', {})).error).not.toBeNull();
+    }
+    // 搜尋字串不當成萬用字元
+    const pct = await admin.client.rpc('admin_list_users', { p_query: '%' });
+    expect(pct.data?.some((r) => r.id === target.id)).toBe(false);
+  });
+
+  it('改成審核員並指派新竹市後可以審核；改回會員時負責縣市清掉', async () => {
+    const set = (args: Record<string, unknown>) => call(admin, 'admin_set_cities', args);
+    expect(
+      (await call(admin, 'admin_set_role', { p_user: target.id, p_role: 'moderator' })).error,
+    ).toBeNull();
+    expect((await set({ p_user: target.id, p_cities: ['zzz'] })).error?.message).toContain(
+      '沒有這個縣市',
+    );
+    expect((await set({ p_user: target.id, p_cities: ['hsc'] })).error).toBeNull();
+    const id = await seedSuggestion(member.id, HSC);
+    expect((await review(target, id, false, 'other')).error).toBeNull();
+
+    expect(
+      (await call(admin, 'admin_set_role', { p_user: target.id, p_role: 'member' })).error,
+    ).toBeNull();
+    expect(await sql`SELECT 1 FROM moderator_cities WHERE user_id = ${target.id}`).toHaveLength(0);
+    expect(
+      (await call(admin, 'admin_set_role', { p_user: target.id, p_role: 'trusted' })).error,
+    ).not.toBeNull();
+    expect((await set({ p_user: target.id, p_cities: ['hsc'] })).error?.message).toContain(
+      '只有審核員',
+    );
+  });
+
+  it('停權原因必填；停權後寫入失敗，解除後恢復', async () => {
+    const ban = (reason: string) =>
+      call(admin, 'admin_ban', { p_user: target.id, p_reason: reason });
+    expect((await ban('  ')).error?.message).toContain('停權原因');
+    expect((await ban('大量灌水')).error).toBeNull();
+    expect((await suggest(target, {})).error?.code).toBe('42501');
+    const [p] = await sql`SELECT ban_reason FROM profiles WHERE id = ${target.id}`;
+    expect(p?.ban_reason).toBe('大量灌水');
+    expect((await call(admin, 'admin_unban', { p_user: target.id })).error).toBeNull();
+    expect((await suggest(target, {})).error).toBeNull();
+  });
+
+  it('不能對自己操作；審核員、會員不能呼叫管理員函式', async () => {
+    const self = await call(admin, 'admin_set_role', { p_user: admin.id, p_role: 'member' });
+    expect(self.error?.message).toContain('不能對自己');
+    const selfBan = await call(admin, 'admin_ban', { p_user: admin.id, p_reason: 'x' });
+    expect(selfBan.error?.message).toContain('不能對自己');
+    for (const a of [modHsc, member]) {
+      const r1 = await call(a, 'admin_set_role', { p_user: target.id, p_role: 'admin' });
+      expect(r1.error?.message).toContain('只有管理員');
+      const r2 = await call(a, 'admin_ban', { p_user: target.id, p_reason: 'x' });
+      expect(r2.error?.message).toContain('只有管理員');
+    }
+    const [p] = await sql`SELECT role, banned_at FROM profiles WHERE id = ${target.id}`;
+    expect(p).toEqual({ role: 'member', banned_at: null });
+  });
+
+  it('管理員也不能直接改別人的角色或負責縣市，也不能直接改自己的角色', async () => {
+    const upd = await admin.client
+      .from('profiles')
+      .update({ role: 'admin' })
+      .eq('id', target.id)
+      .select();
+    expect(upd.error === null ? upd.data : []).toEqual([]);
+    const own = await admin.client.from('profiles').update({ role: 'member' }).eq('id', admin.id);
+    expect(own.error).not.toBeNull();
+    const ins = await admin.client
+      .from('moderator_cities')
+      .insert({ user_id: target.id, city: 'hsc' });
+    expect(ins.error?.code).toBe('42501');
+  });
+
+  it('每個管理員操作都有紀錄，只有管理員讀得到', async () => {
+    const { data } = await admin.client
+      .from('admin_log')
+      .select('action, actor, before, after')
+      .eq('target', target.id)
+      .order('id');
+    expect(data?.map((r) => r.action)).toEqual([
+      'set_role',
+      'set_cities',
+      'set_role',
+      'ban',
+      'unban',
+    ]);
+    expect(data?.every((r) => r.actor === admin.id)).toBe(true);
+    expect(data?.[3]?.after).toEqual({ reason: '大量灌水' });
+    expect((await modHsc.client.from('admin_log').select('id')).data).toEqual([]);
   });
 });
 

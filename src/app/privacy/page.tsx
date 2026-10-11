@@ -37,7 +37,9 @@ export default function PrivacyPage() {
         <section className="dsec">
           <h2 className="dsec-title">二、登入後蒐集的資料</h2>
           <ul>
-            <li>Email：用來登入，不會公開，也不會用來寄廣告。</li>
+            <li>
+              Email：用來登入，不會公開，也不會用來寄廣告。只有網站管理員為了協助處理帳號問題（例如你來信要求協助或刪除資料）時看得到。
+            </li>
             <li>暱稱：公開顯示在你的貢獻旁。預設是「家長」加 4 位數字，可以隨時修改。</li>
             <li>你提交的修正建議、提交時間、審核結果。</li>
             <li>同意服務條款的時間。</li>

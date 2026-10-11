@@ -44,6 +44,9 @@ test.afterAll(async ({ request }) => {
     await sql`DELETE FROM edit_suggestions
               WHERE user_id IN (SELECT id FROM auth.users WHERE email = ANY(${created}))
                  OR reviewed_by IN (SELECT id FROM auth.users WHERE email = ANY(${created}))`;
+    await sql`DELETE FROM admin_log
+              WHERE actor IN (SELECT id FROM auth.users WHERE email = ANY(${created}))
+                 OR target IN (SELECT id FROM auth.users WHERE email = ANY(${created}))`;
     await sql`DELETE FROM auth.users WHERE email = ANY(${created})`;
   }
   await request.post('/api/revalidate', {
@@ -54,7 +57,7 @@ test.afterAll(async ({ request }) => {
 });
 
 /** 新的瀏覽器分頁＋登入；role 是 moderator 時指派新竹市 */
-async function person(browser: Browser, role: 'member' | 'moderator') {
+async function person(browser: Browser, role: 'member' | 'moderator' | 'admin') {
   const email = `test-e2e-${role}-${randomUUID().slice(0, 8)}@example.test`;
   created.push(email);
   const page = await (await browser.newContext()).newPage();
@@ -65,6 +68,7 @@ async function person(browser: Browser, role: 'member' | 'moderator') {
   const [u] = await sql`SELECT id FROM auth.users WHERE email = ${email}`;
   const id = u!.id as string;
   await sql`UPDATE profiles SET terms_accepted_at = now() WHERE id = ${id}`;
+  if (role === 'admin') await sql`UPDATE profiles SET role = 'admin' WHERE id = ${id}`;
   if (role === 'moderator') {
     await sql`UPDATE profiles SET role = 'moderator' WHERE id = ${id}`;
     await sql`INSERT INTO moderator_cities (user_id, city) VALUES (${id}, 'hsc')`;
@@ -210,4 +214,102 @@ test('會員打開審核後台會被導回首頁；頁首沒有審核後台的�
     .click();
   await expect(member.page.getByRole('link', { name: '我的貢獻' })).toBeVisible();
   await expect(member.page.getByRole('link', { name: '審核後台' })).toHaveCount(0);
+});
+
+test('修改紀錄：核准後從紀錄頁回到修改之前，場地頁恢復原本的值與來源', async ({ browser }) => {
+  const member = await person(browser, 'member');
+  // 綠光公園的洗手台原本是「有」（網友評論線索）；改成「沒有」再還原
+  const id = await pending(member.id, 'attribute', { key: 'handwash', value: 'n' });
+  const mod = await person(browser, 'moderator');
+  await mod.page.goto('/admin');
+  await card(mod.page, id).getByRole('button', { name: '核准' }).click();
+  await expect(mod.page.getByText(`#${id}：已核准並套用`)).toBeVisible();
+
+  const handwash = () =>
+    member.page.getByRole('region', { name: '生活機能' }).locator('.arow', { hasText: '洗手台' });
+  await member.page.goto(PLACE);
+  await expect(handwash()).toContainText('使用者回報（已審核）');
+
+  await mod.page.goto(`/admin/places/${PLACE_ID}`);
+  await expect(mod.page.getByRole('heading', { name: '修改紀錄：綠光公園' })).toBeVisible();
+  const table = mod.page.getByRole('region', { name: '設施與生活機能' });
+  const row = table.getByRole('row').filter({ hasText: '洗手台' }).first();
+  await expect(row).toContainText('有（網友評論線索');
+  await expect(row).toContainText('無（使用者回報（已審核））');
+  await row.getByRole('button', { name: '回到這筆修改之前' }).click();
+  await expect(mod.page.getByText(/已還原到紀錄 #\d+ 之前的狀態/)).toBeVisible();
+  // 還原本身也是一筆紀錄（最新的在最上面）
+  await expect(table.getByRole('row').filter({ hasText: '洗手台' }).first()).toContainText(
+    '有（網友評論線索',
+  );
+
+  await member.page.goto(PLACE);
+  await expect(handwash()).not.toContainText('使用者回報（已審核）');
+  await expect(handwash()).toContainText('網友評論線索');
+});
+
+test('管理員：用 Email 搜尋、改成審核員並指派新竹市、停權與解除停權', async ({ browser }) => {
+  const target = await person(browser, 'member');
+  const [t] = await sql`SELECT email FROM auth.users WHERE id = ${target.id}`;
+  const admin = await person(browser, 'admin');
+
+  await admin.page.goto('/admin');
+  await admin.page.getByRole('link', { name: '使用者管理' }).click();
+  await expect(admin.page).toHaveURL(/\/admin\/users$/);
+  await admin.page.getByLabel('搜尋暱稱或 Email').fill(String(t!.email));
+  await admin.page.getByRole('button', { name: '搜尋' }).click();
+  const row = admin.page.getByRole('listitem', { name: /^使用者 家長 \d{4}$/ });
+  await expect(row).toHaveCount(1);
+  await expect(row).toContainText(String(t!.email));
+
+  await row.getByLabel('角色').selectOption('moderator');
+  await row.getByRole('button', { name: '儲存角色' }).click();
+  await expect(admin.page.getByText(/已更新.*的角色/)).toBeVisible();
+  await row.getByRole('checkbox', { name: '新竹市' }).check();
+  await row.getByRole('button', { name: '儲存負責縣市' }).click();
+  await expect(admin.page.getByText(/已更新.*的負責縣市/)).toBeVisible();
+  await expect(row).toContainText('負責：新竹市');
+
+  // 對方的頁首出現審核後台
+  await target.page.goto(PLACE);
+  await target.page
+    .getByRole('navigation', { name: '導覽' })
+    .getByText(/^家長 \d{4}$/)
+    .click();
+  await expect(target.page.getByRole('link', { name: '審核後台' })).toBeVisible();
+
+  await row.getByLabel('停權原因').fill('測試停權');
+  await row.getByRole('button', { name: '停權' }).click();
+  await expect(admin.page.getByText(/已停權/)).toBeVisible();
+  await expect(row).toContainText('停權中');
+  await target.page.goto('/me');
+  await expect(target.page.getByText('帳號已停權：測試停權')).toBeVisible();
+
+  await row.getByRole('button', { name: '解除停權' }).click();
+  await expect(admin.page.getByText(/已解除.*的停權/)).toBeVisible();
+  await target.page.reload();
+  await expect(target.page.getByText('帳號已停權')).toHaveCount(0);
+
+  // 操作紀錄
+  const log = admin.page.getByRole('region', { name: '最近的管理員操作' });
+  await expect(log).toContainText('角色：會員 → 審核員');
+  await expect(log).toContainText('負責縣市：無 → 新竹市');
+  await expect(log).toContainText('停權：測試停權');
+  await expect(log).toContainText('解除停權');
+
+  // 自己那一列不能操作
+  await admin.page.getByLabel('搜尋暱稱或 Email').fill('');
+  const [a] = await sql`SELECT email FROM auth.users WHERE id = ${admin.id}`;
+  await admin.page.getByLabel('搜尋暱稱或 Email').fill(String(a!.email));
+  await admin.page.getByRole('button', { name: '搜尋' }).click();
+  await expect(admin.page.getByText('不能修改自己的角色或停權自己')).toBeVisible();
+});
+
+test('審核員看不到使用者管理；打開 /admin/users 會被導回審核後台', async ({ browser }) => {
+  const mod = await person(browser, 'moderator');
+  await mod.page.goto('/admin');
+  await expect(mod.page.getByRole('heading', { name: '審核後台' })).toBeVisible();
+  await expect(mod.page.getByRole('link', { name: '使用者管理' })).toHaveCount(0);
+  await mod.page.goto('/admin/users');
+  await expect(mod.page).toHaveURL(/\/admin$/);
 });

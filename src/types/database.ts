@@ -5,7 +5,21 @@ export type Database = {
   
   "public": {
           Tables: {
-            "attribute_defs": {
+            "admin_log": {
+                  Row: {
+                    "action": string,"actor": string,"after": Json | null,"before": Json | null,"created_at": string,"id": number,"target": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "action": string,"actor": string,"after"?: Json | null,"before"?: Json | null,"created_at"?: string,"id"?: number,"target"?: string | null
+                  }
+                  Update: {
+                    "action"?: string,"actor"?: string,"after"?: Json | null,"before"?: Json | null,"created_at"?: string,"id"?: number,"target"?: string | null
+                  }
+                  Relationships: [
+                    
+                  ]
+                },"attribute_defs": {
                   Row: {
                     "category": string,"group_name": string | null,"key": string,"label": string,"sort_order": number
                   }
@@ -137,14 +151,14 @@ isOneToOne: false
                   ]
                 },"place_attribute_history": {
                   Row: {
-                    "changed_at": string,"changed_by": string | null,"id": number,"key": string,"new_note": string | null,"new_source": string | null,"new_value": string | null,"old_note": string | null,"old_source": string | null,"old_value": string | null,"place_id": string
+                    "changed_at": string,"changed_by": string | null,"id": number,"key": string,"new_note": string | null,"new_source": string | null,"new_value": string | null,"new_verified_at": string | null,"old_note": string | null,"old_source": string | null,"old_value": string | null,"old_verified_at": string | null,"place_id": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "changed_at"?: string,"changed_by"?: string | null,"id"?: number,"key": string,"new_note"?: string | null,"new_source"?: string | null,"new_value"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id": string
+                    "changed_at"?: string,"changed_by"?: string | null,"id"?: number,"key": string,"new_note"?: string | null,"new_source"?: string | null,"new_value"?: string | null,"new_verified_at"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"old_verified_at"?: string | null,"place_id": string
                   }
                   Update: {
-                    "changed_at"?: string,"changed_by"?: string | null,"id"?: number,"key"?: string,"new_note"?: string | null,"new_source"?: string | null,"new_value"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id"?: string
+                    "changed_at"?: string,"changed_by"?: string | null,"id"?: number,"key"?: string,"new_note"?: string | null,"new_source"?: string | null,"new_value"?: string | null,"new_verified_at"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"old_verified_at"?: string | null,"place_id"?: string
                   }
                   Relationships: [
                     
@@ -189,14 +203,14 @@ isOneToOne: false
                   ]
                 },"place_field_history": {
                   Row: {
-                    "changed_at": string,"changed_by": string | null,"field": string,"id": number,"new_source": string | null,"new_value": string | null,"note": string | null,"old_source": string | null,"old_value": string | null,"place_id": string,"suggestion_id": number | null
+                    "changed_at": string,"changed_by": string | null,"field": string,"id": number,"new_source": string | null,"new_until": string | null,"new_value": string | null,"new_verified_at": string | null,"note": string | null,"old_note": string | null,"old_source": string | null,"old_until": string | null,"old_value": string | null,"old_verified_at": string | null,"place_id": string,"restored_from": number | null,"suggestion_id": number | null
                   }
                   ComputedFields: never
                   Insert: {
-                    "changed_at"?: string,"changed_by"?: string | null,"field": string,"id"?: number,"new_source"?: string | null,"new_value"?: string | null,"note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id": string,"suggestion_id"?: number | null
+                    "changed_at"?: string,"changed_by"?: string | null,"field": string,"id"?: number,"new_source"?: string | null,"new_until"?: string | null,"new_value"?: string | null,"new_verified_at"?: string | null,"note"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_until"?: string | null,"old_value"?: string | null,"old_verified_at"?: string | null,"place_id": string,"restored_from"?: number | null,"suggestion_id"?: number | null
                   }
                   Update: {
-                    "changed_at"?: string,"changed_by"?: string | null,"field"?: string,"id"?: number,"new_source"?: string | null,"new_value"?: string | null,"note"?: string | null,"old_source"?: string | null,"old_value"?: string | null,"place_id"?: string,"suggestion_id"?: number | null
+                    "changed_at"?: string,"changed_by"?: string | null,"field"?: string,"id"?: number,"new_source"?: string | null,"new_until"?: string | null,"new_value"?: string | null,"new_verified_at"?: string | null,"note"?: string | null,"old_note"?: string | null,"old_source"?: string | null,"old_until"?: string | null,"old_value"?: string | null,"old_verified_at"?: string | null,"place_id"?: string,"restored_from"?: number | null,"suggestion_id"?: number | null
                   }
                   Relationships: [
                     
@@ -467,6 +481,23 @@ isOneToOne: false
                            } |
 { Args: { "column_name": string,"new_dim": number,"new_srid": number,"new_type": string,"table_name": string,"use_typmod"?: boolean }; Returns: string
                            },
+"admin_ban":
+{ Args: { "p_reason": string,"p_user": string }; Returns: undefined
+                           },
+"admin_list_users":
+{ Args: { "p_limit"?: number,"p_offset"?: number,"p_query"?: string }; Returns: {
+              "accepted_count": number,"ban_reason": string,"banned_at": string,"cities": (string)[],"created_at": string,"display_name": string,"email": string,"id": string,"role": string,"suggestions": number,"total": number
+            }[]
+                           },
+"admin_set_cities":
+{ Args: { "p_cities": (string)[],"p_user": string }; Returns: undefined
+                           },
+"admin_set_role":
+{ Args: { "p_role": string,"p_user": string }; Returns: undefined
+                           },
+"admin_unban":
+{ Args: { "p_user": string }; Returns: undefined
+                           },
 "app_role":
 { Args: Record<PropertyKey, never>; Returns: string
                            },
@@ -592,6 +623,9 @@ isOneToOne: false
 "is_admin":
 { Args: Record<PropertyKey, never>; Returns: boolean
                            },
+"log_field_change":
+{ Args: { "p_comment"?: string,"p_field": string,"p_new": Omit<Database["public"]['Tables']["places"]['Row'], Database["public"]['Tables']["places"]['ComputedFields']>,"p_old": Omit<Database["public"]['Tables']["places"]['Row'], Database["public"]['Tables']["places"]['ComputedFields']>,"p_place_id": string,"p_restored_from"?: number,"p_suggestion_id"?: number }; Returns: undefined
+                           },
 "longtransactionsenabled":
 { Args: Record<PropertyKey, never>; Returns: boolean
                            },
@@ -668,6 +702,29 @@ isOneToOne: false
                            },
 "reopen_place":
 { Args: { "p_note"?: string,"p_place_id": string }; Returns: undefined
+                           },
+"require_admin_on":
+{ Args: { "p_user": string }; Returns: {
+              "accepted_count": number,
+"ban_reason": string | null,
+"banned_at": string | null,
+"created_at": string,
+"display_name": string | null,
+"id": string,
+"role": string,
+"terms_accepted_at": string | null
+            }
+                          SetofOptions: {
+        from: "*"
+        to: "profiles"
+        isOneToOne: true
+        isSetofReturn: false
+      } },
+"restore_attribute":
+{ Args: { "p_history_id": number }; Returns: undefined
+                           },
+"restore_field":
+{ Args: { "p_history_id": number }; Returns: undefined
                            },
 "review_suggestion":
 { Args: { "p_accept": boolean,"p_id": number,"p_note"?: string,"p_payload"?: Json,"p_reason"?: string }; Returns: undefined

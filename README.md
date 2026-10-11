@@ -97,7 +97,7 @@ pnpm docker:down   # 停止並移除容器
 | `supabase/migrations/0002_public_views.sql` | 首頁用的公開 view：`city_bounds`（縣市範圍）、`place_cards`（清單與地圖） |
 | `supabase/migrations/0003_place_coord_source.sql` | 場地的座標來源說明（`coord_source`） |
 | `supabase/migrations/0004_auth_roles.sql` | 會員角色、修正建議與審核（`review_suggestion()`）、修改紀錄、照片紀錄、權限（P3）；權限測試在 `tests/db/auth.test.ts` |
-| `src/app/` | 頁面：`/` 導向 `/hsinchu-city`；`/[city]` 首頁；`/[city]/places/[id]` 場地頁；`/api/cities/[code]/places`、`/api/places/[id]`（快取 1 小時）；`sitemap.xml`、`robots.txt`；`/login` 登入、`/me` 我的貢獻、`/auth/*` 登入流程、`/terms` 服務條款、`/privacy` 隱私權政策（草稿）、`/admin` 審核後台（審核員、管理員）；場地頁的「回報修正」送到 `src/app/report/actions.ts`（P3） |
+| `src/app/` | 頁面：`/` 導向 `/hsinchu-city`；`/[city]` 首頁；`/[city]/places/[id]` 場地頁；`/api/cities/[code]/places`、`/api/places/[id]`（快取 1 小時）；`sitemap.xml`、`robots.txt`；`/login` 登入、`/me` 我的貢獻、`/auth/*` 登入流程、`/terms` 服務條款、`/privacy` 隱私權政策（草稿）、`/admin` 審核後台、`/admin/places/[id]` 修改紀錄與還原（審核員、管理員）、`/admin/users` 使用者管理（管理員）；場地頁的「回報修正」送到 `src/app/report/actions.ts`（P3） |
 | `src/components/home/` | 首頁元件：篩選面板、出發點、清單、地圖、詳情面板 |
 | `src/components/place/` | 場地詳情內容（場地頁與首頁面板共用） |
 | `src/lib/filter/` | 篩選、距離、時間估算、網址轉換（純函式） |

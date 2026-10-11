@@ -1107,3 +1107,43 @@ form.report .check {
     grid-template-columns: 1fr;
   }
 }
+
+/* 修改紀錄、使用者管理（P3(e2)） */
+.history-scroll {
+  overflow-x: auto;
+}
+table.history {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.history th,
+table.history td {
+  text-align: left;
+  vertical-align: top;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+}
+table.history th {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-flash {
+  margin: 0 0 8px;
+}
+.admin-user-ops {
+  display: grid;
+  gap: 8px;
+}
+.admin-user-ops fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+}
+.admin-pages {
+  display: flex;
+  gap: 16px;
+}
