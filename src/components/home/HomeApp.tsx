@@ -3,6 +3,15 @@
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AuthButton } from '@/components/auth/AuthButton';
+import { LoginDialog } from '@/components/auth/LoginDialog';
+import {
+  currentPath,
+  loadSession,
+  useSession,
+  type SessionInfo,
+} from '@/components/auth/useSession';
+import { NewPlacePanel } from '@/components/report/NewPlacePanel';
+import { withFlag } from '@/lib/auth/next-path';
 import { citiesToLoad, type CityBounds } from '@/lib/cities';
 import { loadCityPlaces } from '@/lib/city-cache';
 import { loadPlaceDetail } from '@/lib/detail-cache';
@@ -13,6 +22,7 @@ import {
   passes,
   queryToFilters,
   type Filters,
+  type Origin,
 } from '@/lib/filter';
 import { exampleOrigin, type NamedOrigin } from '@/lib/origin';
 import type { PlaceDetail } from '@/lib/place-detail';
@@ -57,6 +67,13 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
   const [locating, setLocating] = useState(false);
   const [originMsg, setOriginMsg] = useState<string | null>(null);
   const [picking, setPicking] = useState(false);
+  // 回報新場地：point 是 null 時在等使用者在地圖上點選位置
+  const [newPlace, setNewPlace] = useState<{ point: Origin | null; session: SessionInfo } | null>(
+    null,
+  );
+  const [newPlaceLogin, setNewPlaceLogin] = useState<string | null>(null);
+  const [newPlaceMsg, setNewPlaceMsg] = useState<string | null>(null);
+  const session = useSession();
   const [mode, setMode] = useTravelMode();
   const [selected, setSelected] = useState<string | null>(null);
   const [focus, setFocus] = useState<{ id: string; seq: number } | null>(null);
@@ -64,6 +81,25 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
   const [failed, setFailed] = useState<string[]>([]);
   const [details, setDetails] = useState<Record<string, PlaceDetail | 'error'>>({});
   const lastOpened = useRef<string | null>(null);
+
+  const startNewPlace = useCallback(async () => {
+    setNewPlaceMsg(null);
+    const s = await loadSession();
+    if (!s.user) setNewPlaceLogin(withFlag(currentPath(), 'newplace'));
+    else if (s.user.banned) setNewPlaceMsg('帳號已停權，暫時不能回報。');
+    else {
+      setPicking(false);
+      setNewPlace({ point: null, session: s });
+    }
+  }, []);
+
+  // 登入後回到首頁（?newplace=1）：直接進入標點模式
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('newplace') !== '1') return;
+    void loadSession().then((s) => {
+      if (s.user && !s.user.banned) setNewPlace({ point: null, session: s });
+    });
+  }, []);
 
   const setOrigin = useCallback((o: NamedOrigin) => {
     setOriginState(o);
@@ -230,7 +266,32 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
             mode={mode}
             onMode={setMode}
           />
+          <div className="newplace-entry">
+            <button className="btn" type="button" onClick={() => void startNewPlace()}>
+              回報新場地
+            </button>
+            {newPlaceMsg && (
+              <span className="note err" role="status">
+                {newPlaceMsg}
+              </span>
+            )}
+          </div>
         </header>
+        {newPlace && (
+          <NewPlacePanel
+            point={newPlace.point}
+            cities={cities}
+            session={newPlace.session}
+            onRepick={() => setNewPlace({ ...newPlace, point: null })}
+            onClose={() => setNewPlace(null)}
+          />
+        )}
+        <LoginDialog
+          open={newPlaceLogin !== null}
+          onClose={() => setNewPlaceLogin(null)}
+          next={newPlaceLogin ?? '/'}
+          google={session?.providers.google ?? false}
+        />
         <div className="scroll">
           <FilterPanel filters={filters} onChange={changeFilters} catalog={catalog} />
           {failedNames.length > 0 && (
@@ -256,9 +317,14 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
           origin={origin}
           center={exampleOrigin(city)}
           selected={selectedId}
-          picking={picking}
+          picking={picking || (newPlace !== null && newPlace.point === null)}
+          pin={newPlace?.point ?? null}
           onSelect={(id) => openPlace(id, false)}
           onPick={(o) => {
+            if (newPlace && !newPlace.point) {
+              setNewPlace({ ...newPlace, point: o });
+              return;
+            }
             setPicking(false);
             setOrigin({
               ...o,

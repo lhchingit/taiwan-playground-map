@@ -22,3 +22,10 @@ export function withReport(path: string): string {
   u.searchParams.set('report', '1');
   return u.pathname + u.search + u.hash;
 }
+
+/** 在站內路徑加上 ?<key>=1（例：登入後自動進入「回報新場地」的標點模式） */
+export function withFlag(path: string, key: string): string {
+  const u = new URL(safeNext(path), 'http://n');
+  u.searchParams.set(key, '1');
+  return u.pathname + u.search + u.hash;
+}

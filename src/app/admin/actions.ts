@@ -45,6 +45,15 @@ function editedPayload(kind: string, f: FormData): Json | undefined {
       status: get('edit_status') === 'closed' ? 'closed' : 'maintenance',
     };
   }
+  if (kind === 'new_place' && f.has('edit_name')) {
+    return {
+      name: get('edit_name'),
+      address: get('edit_address') || null,
+      lat: Number(get('edit_lat')),
+      lng: Number(get('edit_lng')),
+      city: get('edit_city'),
+    };
+  }
   return undefined;
 }
 
@@ -69,7 +78,15 @@ async function reviewOne(
     p_payload: payload,
   });
   if (error) return { id, ok: false, message: error.message };
-  if (accept && s?.place_id) expirePlace(s.place_id, await placeCity(supabase, s.place_id));
+  if (accept) {
+    // 新增場地核准後才有 place_id（新建立的場地）；場地清單、sitemap 也要更新
+    const placeId =
+      s?.place_id ??
+      (await supabase.from('edit_suggestions').select('place_id').eq('id', id).maybeSingle()).data
+        ?.place_id;
+    if (placeId) expirePlace(placeId, await placeCity(supabase, placeId));
+    if (!s?.place_id) updateTag('places');
+  }
   return { id, ok: true, message: accept ? '已核准並套用' : '已退回' };
 }
 

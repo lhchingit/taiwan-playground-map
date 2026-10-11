@@ -71,7 +71,7 @@
 - **衝突提示**：同一個場地同一個屬性有多筆待審建議且內容不同時，放在一起顯示。
 - **核准／退回**：呼叫 `review_suggestion(id, accept, reason, note)`；退回原因從清單選：重複、無法查證、不當內容、資訊過時、其他。
 - **批次操作**：勾選多筆一次核准或退回。
-- `field`、`closure`、`new_place` 三種不會自動套用：審核員在後台編輯場地資料後，再按核准。
+- `field`、`closure`、`new_place` 三種不會自動套用：審核員在後台編輯場地資料後，再按核准。（實作：核准畫面可以先修改內容，再由 `review_suggestion()` 一次套用；`new_place` 核准後建立場地，見 decisions D15、D19）
 - **照片審核**：縮圖列表，核准或退回。
 - **修改紀錄**：場地頁的後台檢視可以看到 `place_attribute_history`，並可「還原到這個版本」（還原也會留下一筆紀錄）。
 
@@ -117,5 +117,5 @@ Facebook／Apple 登入、資深貢獻者自動通過、資料完整度儀表板
 
 建議拆成五個 PR，依序進行：
 （a）權限測試框架＋ 0002 migration 調整，先讓上面的權限測試全部通過（已完成：`supabase/migrations/0004_auth_roles.sql`、`tests/db/auth.test.ts`）；
-（b）登入與 `/me`；（c）提交建議（場地頁的 attribute、parking、field、closure，已完成）；（c2）首頁地圖標點新增場地（`new_place`）；（d）照片上傳（延後，D17）；（e1）審核後台（已完成）；（e2）修改紀錄與還原、管理員的使用者管理（已完成）。
+（b）登入與 `/me`；（c）提交建議（場地頁的 attribute、parking、field、closure，已完成）；（c2）首頁地圖標點新增場地（`new_place`，已完成，decisions D19）；（d）照片上傳（延後，D17）；（e1）審核後台（已完成）；（e2）修改紀錄與還原、管理員的使用者管理（已完成）。
 每個 PR 開工前先用 plan mode 提計畫。遇到權限設計上的取捨，先問我再決定。

@@ -6,6 +6,7 @@ import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 import { AuthButton } from '@/components/auth/AuthButton';
 import { groupQueue } from '@/lib/admin/queue';
+import { haversineKm } from '@/lib/filter';
 import { KIND_LABEL, suggestionSummary } from '@/lib/auth/labels';
 import { currentUser } from '@/lib/auth/session';
 import { getAttributeCatalog, getCityBounds, getSources } from '@/lib/data';
@@ -64,6 +65,15 @@ function editDefaults(
   if (kind === 'closure') {
     return { reason: s(p.reason), until: s(p.until), status: s(p.status) || 'maintenance' };
   }
+  if (kind === 'new_place') {
+    return {
+      name: s(p.name),
+      address: s(p.address),
+      lat: s(p.lat),
+      lng: s(p.lng),
+      city: s(p.city),
+    };
+  }
   return null;
 }
 
@@ -108,7 +118,11 @@ async function AdminContent({ searchParams }: Props) {
 
   // 目前的值：屬性與停車另外查（審核員讀得到負責縣市的資料，含未上線縣市）
   const placeIds = [...new Set(filtered.map((r) => r.place_id).filter((x): x is string => !!x))];
-  const [attrs, parking, closedPlaces] = await Promise.all([
+  // 新增場地：同縣市已有的場地（附近 300 公尺內的列出來，當作重複的提示）
+  const newPlaceCities = [
+    ...new Set(filtered.filter((r) => r.kind === 'new_place').map((r) => r.city)),
+  ];
+  const [attrs, parking, closedPlaces, cityCards] = await Promise.all([
     placeIds.length
       ? supabase
           .from('place_attributes')
@@ -128,6 +142,9 @@ async function AdminContent({ searchParams }: Props) {
       .in('status', ['maintenance', 'closed'])
       .in('city', allowed.length ? allowed : ['-'])
       .order('name'),
+    newPlaceCities.length
+      ? supabase.from('place_cards').select('id, name, lat, lng').in('city', newPlaceCities)
+      : Promise.resolve({ data: [] as never[] }),
   ]);
 
   const current = (r: (typeof filtered)[number]): CurrentLine[] => {
@@ -186,7 +203,24 @@ async function AdminContent({ searchParams }: Props) {
         },
       ];
     }
-    return [{ text: '（新增場地，目前沒有資料）', source: null, verifiedAt: null }];
+    if (r.kind === 'new_place') {
+      const at = { lat: Number(p.lat), lng: Number(p.lng) };
+      const near = (cityCards.data ?? [])
+        .map((c) => ({
+          name: c.name,
+          m: Math.round(haversineKm(at, { lat: Number(c.lat), lng: Number(c.lng) }) * 1000),
+        }))
+        .filter((c) => c.m <= 300)
+        .sort((a, b) => a.m - b.m);
+      if (!near.length)
+        return [{ text: '附近 300 公尺內沒有已知的場地', source: null, verifiedAt: null }];
+      return near.map((c) => ({
+        text: `附近已有：${c.name}（約 ${c.m} 公尺）`,
+        source: null,
+        verifiedAt: null,
+      }));
+    }
+    return [{ text: '（沒有資料）', source: null, verifiedAt: null }];
   };
 
   const cards: CardData[] = filtered.map((r) => {

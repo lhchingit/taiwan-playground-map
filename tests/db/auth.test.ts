@@ -40,6 +40,14 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
+  // 新增場地的測試建立的場地（名稱一律 test- 開頭）
+  const made =
+    await sql`SELECT id FROM places WHERE created_from_suggestion IS NOT NULL AND name LIKE 'test-%'`;
+  const madeIds = made.map((r) => r.id as string);
+  if (madeIds.length) {
+    await sql`DELETE FROM places WHERE id = ANY(${madeIds})`;
+    await sql`DELETE FROM place_field_history WHERE place_id = ANY(${madeIds})`;
+  }
   await people.cleanup();
   await sql`DELETE FROM places WHERE id IN (${HSC}, ${HSQ})`; // 建議、屬性、照片跟著刪
   await sql`DELETE FROM place_attribute_history WHERE place_id IN (${HSC}, ${HSQ})`;
@@ -631,16 +639,6 @@ describe('核准時套用基本資料與封閉（0007）', () => {
     expect(error?.message).toContain('日期格式錯誤');
   });
 
-  it('新增場地的建議目前不能核准，只能退回', async () => {
-    const [r] = await sql`
-      INSERT INTO edit_suggestions (place_id, user_id, kind, payload)
-      VALUES (NULL, ${submitter.id}, 'new_place', '{"name":"test-新場地","lat":24.8,"lng":120.97,"city":"hsc"}')
-      RETURNING id`;
-    const id = Number(r!.id);
-    expect((await review5(modHsc, id, true)).error?.message).toContain('新增場地的核准還沒開放');
-    expect((await review5(modHsc, id, false, undefined, 'other')).error).toBeNull();
-  });
-
   it('負責的審核員讀得到未上線縣市的場地、屬性、停車；其他人讀不到', async () => {
     await sql`INSERT INTO place_attributes (place_id, key, value, source_id, verified_at)
               VALUES (${HSQ}, 'slide', 'y', 'user', '2026-10-11') ON CONFLICT DO NOTHING`;
@@ -851,6 +849,95 @@ describe('管理員的使用者管理（0008）', () => {
     expect(data?.every((r) => r.actor === admin.id)).toBe(true);
     expect(data?.[3]?.after).toEqual({ reason: '大量灌水' });
     expect((await modHsc.client.from('admin_log').select('id')).data).toEqual([]);
+  });
+});
+
+describe('新增場地（0009）', () => {
+  let sub: Actor;
+  beforeAll(async () => {
+    sub = await people.create('member');
+  });
+  const newPlace = async (payload: Record<string, unknown>) => {
+    const { data, error } = await suggest(sub, {
+      place_id: null,
+      kind: 'new_place',
+      payload: { city: 'hsc', lat: 24.8, lng: 120.97, ...payload } as Json,
+    });
+    expect(error).toBeNull();
+    return data!.id;
+  };
+  const approve = (a: Actor, id: number, payload?: Json) =>
+    a.client.rpc('review_suggestion', { p_id: id, p_accept: true, p_payload: payload });
+
+  it('核准：建立 <縣市>-user-NNN，座標來源、停車一列未知、建議指向新場地、採納次數加 1', async () => {
+    const id = await newPlace({ name: 'test-新公園', address: '新竹市東區某路 1 號' });
+    expect((await approve(modHsc, id)).error).toBeNull();
+
+    const [s] = await sql`SELECT place_id, status FROM edit_suggestions WHERE id = ${id}`;
+    expect(s?.status).toBe('accepted');
+    expect(String(s?.place_id)).toMatch(/^hsc-user-\d{3,}$/);
+    const [p] = await sql`SELECT name, city, address, status, coord_source, created_from_suggestion,
+                                 ST_Y(geom::geometry) AS lat, ST_X(geom::geometry) AS lng, attrs
+                          FROM places WHERE id = ${s!.place_id}`;
+    expect(p).toMatchObject({
+      name: 'test-新公園',
+      city: 'hsc',
+      address: '新竹市東區某路 1 號',
+      status: 'open',
+      created_from_suggestion: String(id),
+      attrs: {},
+    });
+    expect(p?.coord_source).toContain('使用者在 OpenStreetMap 地圖上標示，審核員確認');
+    expect(Number(p?.lat)).toBeCloseTo(24.8, 6);
+    const parking = await sql`SELECT type, fee FROM place_parking WHERE place_id = ${s!.place_id}`;
+    expect(parking).toEqual([{ type: 'u', fee: 'u' }]);
+    const [h] =
+      await sql`SELECT note, suggestion_id FROM place_field_history WHERE place_id = ${s!.place_id}`;
+    expect(h).toMatchObject({ note: '新增場地', suggestion_id: String(id) });
+    const [u] = await sql`SELECT accepted_count FROM profiles WHERE id = ${sub.id}`;
+    expect(u?.accepted_count).toBe(1);
+    // 公開讀得到（新竹市已上線）
+    const pub = await anon.from('place_cards').select('id, name').eq('id', String(s!.place_id));
+    expect(pub.data).toEqual([{ id: s!.place_id, name: 'test-新公園' }]);
+  });
+
+  it('審核員修改過的名稱與座標才是實際使用的值；不能改成別的縣市', async () => {
+    const id = await newPlace({ name: 'test-原本的名稱' });
+    const moved = { city: 'hsc', name: 'test-修正後的名稱', lat: 24.801, lng: 120.971 };
+    expect((await approve(modHsc, id, { ...moved, city: 'hsq' })).error?.message).toContain(
+      '不能改成別的縣市',
+    );
+    expect((await approve(modHsc, id, moved)).error).toBeNull();
+    const [p] = await sql`SELECT p.name, ST_Y(p.geom::geometry) AS lat FROM places p
+                          JOIN edit_suggestions e ON e.place_id = p.id WHERE e.id = ${id}`;
+    expect(p?.name).toBe('test-修正後的名稱');
+    expect(Number(p?.lat)).toBeCloseTo(24.801, 6);
+  });
+
+  it('位置不在縣市範圍內、名稱空白都被拒絕', async () => {
+    const far = await suggest(sub, {
+      place_id: null,
+      kind: 'new_place',
+      payload: { city: 'hsc', name: 'test-台北', lat: 25.03, lng: 121.56 },
+    });
+    expect(far.error?.message).toContain('不在這個縣市的範圍內');
+    const blank = await suggest(sub, {
+      place_id: null,
+      kind: 'new_place',
+      payload: { city: 'hsc', name: '  ', lat: 24.8, lng: 120.97 },
+    });
+    expect(blank.error?.message).toContain('要填場地名稱');
+  });
+
+  it('其他縣市的審核員不能核准，也不能核准自己的', async () => {
+    const id = await newPlace({ name: 'test-權限' });
+    expect((await approve(modHsq, id)).error?.message).toContain('沒有審核權限');
+    const { data } = await suggest(modHsc, {
+      place_id: null,
+      kind: 'new_place',
+      payload: { city: 'hsc', name: 'test-自己的', lat: 24.8, lng: 120.97 },
+    });
+    expect((await approve(modHsc, data!.id)).error?.message).toContain('不能審核自己的建議');
   });
 });
 

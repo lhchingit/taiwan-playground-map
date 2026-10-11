@@ -35,6 +35,14 @@ test.beforeEach(async ({ page }) => {
 
 test.afterAll(async ({ request }) => {
   // 還原綠光公園：使用者來源的屬性、停車、基本欄位
+  // 新增場地的測試建立的場地（名稱一律 test- 開頭）
+  const made =
+    await sql`SELECT id FROM places WHERE created_from_suggestion IS NOT NULL AND name LIKE 'test-%'`;
+  const madeIds = made.map((r) => r.id as string);
+  if (madeIds.length) {
+    await sql`DELETE FROM places WHERE id = ANY(${madeIds})`;
+    await sql`DELETE FROM place_field_history WHERE place_id = ANY(${madeIds})`;
+  }
   await sql`DELETE FROM place_attributes WHERE place_id = ${PLACE_ID} AND source_id = 'user'`;
   await sql`DELETE FROM place_parking WHERE place_id = ${PLACE_ID} AND source_id = 'user'`;
   await sql`UPDATE places SET ${sql(original)} WHERE id = ${PLACE_ID}`;
@@ -312,4 +320,107 @@ test('審核員看不到使用者管理；打開 /admin/users 會被導回審核
   await expect(mod.page.getByRole('link', { name: '使用者管理' })).toHaveCount(0);
   await mod.page.goto('/admin/users');
   await expect(mod.page).toHaveURL(/\/admin$/);
+});
+
+/** 在首頁地圖上點一下標出新場地；點到既有的標記時換個位置再試 */
+async function pickOnMap(page: Page) {
+  const map = page.getByRole('region', { name: '地圖' });
+  // 等地圖載入完成（「地圖載入中…」消失）才點
+  await expect(page.getByText('地圖載入中…')).toHaveCount(0, { timeout: 15_000 });
+  const box = (await map.boundingBox())!;
+  for (const [dx, dy] of [
+    [30, -30],
+    [-40, 35],
+    [55, 45],
+    [-60, -50],
+  ] as const) {
+    await map.click({ position: { x: box.width / 2 + dx, y: box.height / 2 + dy } });
+    try {
+      await page.getByTestId('newplace-pin').waitFor({ timeout: 2_000 });
+      return;
+    } catch {
+      // 點到既有的標記或出發點：換個位置再試
+    }
+  }
+  throw new Error('沒有標到新場地的位置');
+}
+
+test('回報新場地 → 審核員修改名稱後核准 → 地圖、場地頁、我的貢獻', async ({ browser }) => {
+  const member = await person(browser, 'member');
+  await member.page.goto('/hsinchu-city');
+  await member.page.getByRole('button', { name: '回報新場地' }).click();
+  const panel = member.page.getByRole('region', { name: '回報新場地' });
+  await expect(panel).toContainText('在地圖上點出場地的位置');
+  await expect(panel).toContainText('不要照 Google 地圖的位置標');
+  await pickOnMap(member.page);
+  const form = member.page.getByRole('form', { name: '新場地' });
+  await expect(form).toContainText('新竹市');
+  await form.getByLabel('場地名稱').fill('test-e2e 新公園');
+  await form.getByLabel('地址（選填）').fill('新竹市測試路 1 號');
+  await expect(member.page.locator('input[name="cf-turnstile-response"]')).toHaveValue(/.+/, {
+    timeout: 15_000,
+  });
+  await form.getByRole('button', { name: '送出新場地' }).click();
+  await expect(panel.getByText('已收到你的回報，審核通過後會出現在地圖上。')).toBeVisible();
+  const [s] = await sql`SELECT id, payload FROM edit_suggestions
+                        WHERE user_id = ${member.id} AND kind = 'new_place'`;
+  const id = Number(s!.id);
+  expect(s!.payload).toMatchObject({ name: 'test-e2e 新公園', city: 'hsc' });
+
+  await member.page.goto('/me');
+  const mine = member.page.getByRole('region', { name: '我的修正建議' });
+  await expect(mine).toContainText('test-e2e 新公園');
+  await expect(mine.getByText('審核中', { exact: true })).toBeVisible();
+
+  const mod = await person(browser, 'moderator');
+  await mod.page.goto('/admin');
+  const c = card(mod.page, id);
+  await expect(c).toContainText('新增場地');
+  await expect(c.getByRole('link', { name: '在 OpenStreetMap 上確認位置' })).toHaveAttribute(
+    'href',
+    /openstreetmap\.org\/\?mlat=/,
+  );
+  await c.getByLabel('名稱').fill('test-e2e 新公園（修正）');
+  await c.getByRole('button', { name: '核准' }).click();
+  await expect(mod.page.getByText(`#${id}：已核准並套用`)).toBeVisible();
+
+  const [p] = await sql`SELECT place_id FROM edit_suggestions WHERE id = ${id}`;
+  const placeId = String(p!.place_id);
+  expect(placeId).toMatch(/^hsc-user-\d{3,}$/);
+
+  // 首頁的場地清單 API 與場地頁
+  const api = await member.page.request.get('/api/cities/hsc/places');
+  expect(((await api.json()) as { id: string }[]).some((x) => x.id === placeId)).toBe(true);
+  await member.page.goto(`/hsinchu-city/places/${placeId}`);
+  await expect(member.page.getByRole('heading', { level: 1 })).toHaveText(
+    'test-e2e 新公園（修正）',
+  );
+  await expect(
+    member.page.getByText(/使用者在 OpenStreetMap 地圖上標示，審核員確認/),
+  ).toBeVisible();
+  await expect(member.page.getByRole('region', { name: '遊樂設施' })).toContainText('還沒有資料');
+
+  // 我的貢獻連到新場地
+  await member.page.goto('/me');
+  await expect(
+    member.page.getByRole('region', { name: '我的修正建議' }).getByRole('link', {
+      name: 'test-e2e 新公園（修正）',
+    }),
+  ).toHaveAttribute('href', `/hsinchu-city/places/${placeId}`);
+});
+
+test('未登入按「回報新場地」→ 登入視窗 → 登入後直接進入標點模式', async ({ browser }) => {
+  const page = await (await browser.newContext()).newPage();
+  await page.route(/tiles\.openfreemap\.org|tile\.openstreetmap\.org|nominatim/, (r) => r.abort());
+  await page.goto('/hsinchu-city');
+  await page.getByRole('button', { name: '回報新場地' }).click();
+  await expect(page.getByRole('dialog', { name: '登入' })).toBeVisible();
+  const email = `test-e2e-newplace-${randomUUID().slice(0, 8)}@example.test`;
+  created.push(email);
+  await loginWithEmail(page, email);
+  // ?newplace=1 只用來觸發一次；首頁把篩選條件同步到網址時會拿掉它（重新整理不會再進入標點模式）
+  await expect(page).toHaveURL(/\/hsinchu-city/);
+  await expect(page.getByRole('region', { name: '回報新場地' })).toContainText(
+    '在地圖上點出場地的位置',
+  );
 });
