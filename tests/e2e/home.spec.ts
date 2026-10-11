@@ -216,3 +216,14 @@ test.describe('手機', () => {
     await expectMarkersMatchList(page);
   });
 });
+
+// Next.js 換頁時把上一頁藏起來（React <Activity>）；按「上一頁」回來時地圖會重建，標記要跟著重建
+test('到登入頁再按上一頁回來，地圖上的標記還在', async ({ page }) => {
+  await page.goto('/hsinchu-city');
+  await expect(markers(page)).toHaveCount(TOTAL);
+  await page.getByRole('link', { name: '登入', exact: true }).click();
+  await expect(page).toHaveURL(/\/login\?next=/);
+  await page.goBack();
+  await expect(page).toHaveURL(/\/hsinchu-city$/);
+  await expect(markers(page)).toHaveCount(TOTAL);
+});
