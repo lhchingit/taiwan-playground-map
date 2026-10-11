@@ -46,6 +46,46 @@ class ItemsTest(unittest.TestCase):
         self.assertEqual(tycg.flag(""), "u")  # 未提供，不是沒有
 
 
+class DecisionsTest(unittest.TestCase):
+    def write(self, text):
+        import tempfile
+        path = Path(tempfile.mkdtemp()) / "item-decisions.tsv"
+        path.write_text(text, encoding="utf-8")
+        return path
+
+    HEAD = "用語\t決定\t理由\t決定者\t日期\n"
+
+    def test_decisions_apply(self):
+        decisions = {"多人座搖椅": "spring_rider", "擺盪大索": tycg.NO_MAP}
+        attrs, pending = tycg.map_facilities("多人座搖椅、擺盪大索、城堡遊戲組、溜滑梯", decisions)
+        self.assertEqual(attrs, {"spring_rider": "多人座搖椅", "slide": "溜滑梯"})
+        self.assertEqual(pending, ["城堡遊戲組"])  # 只剩還沒決定的
+
+    def test_decision_adds_to_existing_attr(self):
+        attrs, _ = tycg.map_facilities("搖搖馬、多人座搖椅", {"多人座搖椅": "spring_rider"})
+        self.assertEqual(attrs["spring_rider"], "搖搖馬、多人座搖椅")
+
+    def test_load_and_validate(self):
+        ok = self.write(self.HEAD + "轉轉椅\tspinner\t會轉\tA\t2026-10-11\n")
+        self.assertEqual(tycg.load_decisions(ok, ["spinner"]), {"轉轉椅": "spinner"})
+        bad = self.write(self.HEAD + "某物\tnot_a_key\t\t\t\n")
+        with self.assertRaises(ValueError) as e:
+            tycg.load_decisions(bad, ["spinner"])
+        self.assertIn("屬性 key", str(e.exception))
+        self.assertIn("理由與決定者", str(e.exception))
+
+    def test_repo_decisions_are_valid_and_cover_all_terms(self):
+        # repo 裡的決定清單合法；目前所有對不到的用語都已經決定（unmapped-items.csv 是空的）
+        from lib.attrs import attr_keys
+        from lib.labels import labels_json
+        keys = attr_keys(labels_json())
+        decisions = tycg.load_decisions(ROOT / "data/raw/tyc/item-decisions.tsv", keys)
+        self.assertEqual(decisions["擺盪大索"], tycg.NO_MAP)
+        self.assertEqual(decisions["極限飛輪"], tycg.NO_MAP)
+        rows = (ROOT / "data/review/tyc/unmapped-items.csv").read_text(encoding="utf-8-sig").strip().splitlines()
+        self.assertEqual(len(rows), 1, rows)
+
+
 class NumbersTest(unittest.TestCase):
     def test_stable_numbers(self):
         first = assign_numbers([{"公園名稱": "甲公園"}, {"公園名稱": "乙公園"}], {})

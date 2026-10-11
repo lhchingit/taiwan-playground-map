@@ -2,7 +2,8 @@
 
   python3 scripts/import_tycg.py
 
-輸入：data/raw/tyc/tycg-parks.json、osm-matches.tsv、manual-review.tsv（人工定位工具）
+輸入：data/raw/tyc/tycg-parks.json、osm-matches.tsv、manual-review.tsv（人工定位工具）、
+      item-decisions.tsv（對不到的設施用語，人工決定怎麼處理）
 輸出：data/seed/tyc/places.json、places.csv；data/review/tyc/ 的 unmatched、match-review、unmapped-items、
       no-playground（CSV），以及人工定位工具讀的 to-locate.json
 不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
@@ -65,13 +66,14 @@ def main():
     manual = read_manual(RAW / "manual-review.tsv")
     labels = labels_json()
     keys = attr_keys(labels)
+    decisions = tycg.load_decisions(RAW / "item-decisions.tsv", keys)
 
     places, review = [], {"unmatched": [], "match-review": [], "unmapped-items": [], "no-playground": []}
     to_locate = []
     for park in merge_records(data["records"]):
         no = str(park["no"])
         items = tycg.split_items(park["facilities"])
-        mapped, unmapped = tycg.map_facilities(park["facilities"])
+        mapped, unmapped = tycg.map_facilities(park["facilities"], decisions)
         if not tycg.has_playground(mapped, items):
             review["no-playground"].append([no, park["name"], park["district"], park["facilities"]])
             continue
