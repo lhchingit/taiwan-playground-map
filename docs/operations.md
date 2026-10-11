@@ -64,6 +64,19 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
 
 本機開發：Google 預設關閉（登入頁顯示「尚未設定」）；Email 登入信可以在 Mailpit（http://127.0.0.1:54324）看到。
 
+### 5. 第一位管理員（P3）
+
+管理員的角色只能由另一位管理員在 `/admin/users` 設定，所以第一位要直接在資料庫設定，只做一次：
+
+1. 用自己的 Email 或 Google 在正式網站登入一次，系統會建立 profile。
+2. Supabase Studio → SQL Editor 執行（換成自己的 Email）：
+   ```sql
+   UPDATE profiles SET role = 'admin'
+   WHERE id = (SELECT id FROM auth.users WHERE email = 'you@example.com');
+   ```
+3. 重新整理網站，頁首選單會出現「審核後台」，`/admin` 裡有「使用者管理」。
+4. 之後的審核員、管理員都在 `/admin/users` 設定，操作會記在 `admin_log`。
+
 ## 匯入一個新縣市（以新竹縣 `hsq` 為例）
 
 1. **本機準備資料**（P4 任務，見 `docs/tasks/P4-expansion.md`）
