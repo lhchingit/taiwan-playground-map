@@ -1,5 +1,6 @@
 'use client';
 // 審核後台的互動：每筆建議的對照與核准／退回、勾選批次處理、恢復開放。
+import Link from 'next/link';
 import { useActionState } from 'react';
 import type { QueueGroup } from '@/lib/admin/queue';
 import { REJECT_REASON_LABEL } from '@/lib/auth/labels';
@@ -75,7 +76,17 @@ function Card({
         <label className="check">
           <input type="checkbox" name="ids" value={c.id} form="batch" />
           <span>
-            #{c.id}．<strong>{c.placeName}</strong>（{c.cityName}）．{c.kindLabel}
+            #{c.id}．
+            <strong>
+              {c.placeId ? (
+                <Link href={`/admin/places/${c.placeId}`} title="修改紀錄">
+                  {c.placeName}
+                </Link>
+              ) : (
+                c.placeName
+              )}
+            </strong>
+            （{c.cityName}）．{c.kindLabel}
           </span>
         </label>
         <span className="cmeta">{c.createdText}</span>
@@ -233,7 +244,12 @@ export function ReopenList({ places }: { places: { id: string; name: string; tex
         {places.map((p) => (
           <li key={p.id}>
             <div>
-              <strong>{p.name}</strong>．{p.text}
+              <strong>
+                <Link href={`/admin/places/${p.id}`} title="修改紀錄">
+                  {p.name}
+                </Link>
+              </strong>
+              ．{p.text}
             </div>
             <form action={action} className="me-row">
               <input type="hidden" name="place_id" value={p.id} />
