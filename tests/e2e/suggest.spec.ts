@@ -36,6 +36,12 @@ async function login(page: Page) {
   return u!.id as string;
 }
 
+/** 已經同意過條款（直接寫資料庫）。登入時頁面已經查過一次登入狀態，要重新載入才會拿到新的狀態 */
+async function acceptTerms(page: Page, id: string) {
+  await sql`UPDATE profiles SET terms_accepted_at = now() WHERE id = ${id}`;
+  await page.reload();
+}
+
 async function openForm(page: Page) {
   await page.getByRole('button', { name: '回報修正' }).click();
   const form = page.getByRole('form', { name: '回報修正' });
@@ -94,7 +100,7 @@ test('回報「洗腳池：有」：第一次同意條款、我的貢獻顯示�
 
 test('停車、基本資料、封閉或維修', async ({ page }) => {
   const id = await login(page);
-  await sql`UPDATE profiles SET terms_accepted_at = now() WHERE id = ${id}`;
+  await acceptTerms(page, id);
 
   let form = await openForm(page);
   await form.getByRole('button', { name: '停車' }).click();
@@ -134,7 +140,7 @@ test('停車、基本資料、封閉或維修', async ({ page }) => {
 
 test('格式錯誤時顯示原因，不會送出', async ({ page }) => {
   const id = await login(page);
-  await sql`UPDATE profiles SET terms_accepted_at = now() WHERE id = ${id}`;
+  await acceptTerms(page, id);
   const form = await openForm(page);
   await form.getByRole('button', { name: '停車' }).click();
   // 瀏覽器的數字欄位會先擋掉小數；關掉瀏覽器的檢查，確認伺服器端也會檢查
@@ -147,7 +153,7 @@ test('格式錯誤時顯示原因，不會送出', async ({ page }) => {
 
 test('Turnstile 驗證沒有通過時不會送出', async ({ page }) => {
   const id = await login(page);
-  await sql`UPDATE profiles SET terms_accepted_at = now() WHERE id = ${id}`;
+  await acceptTerms(page, id);
   // 擋掉 Turnstile：沒有 token
   await page.route(/challenges\.cloudflare\.com/, (r) => r.abort());
   await page.reload();

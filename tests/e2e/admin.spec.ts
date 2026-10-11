@@ -69,6 +69,8 @@ async function person(browser: Browser, role: 'member' | 'moderator') {
     await sql`UPDATE profiles SET role = 'moderator' WHERE id = ${id}`;
     await sql`INSERT INTO moderator_cities (user_id, city) VALUES (${id}, 'hsc')`;
   }
+  // 登入時頁面已經查過一次登入狀態（同意條款、角色），重新載入才會拿到剛設定的
+  await page.reload();
   return { page, id };
 }
 
