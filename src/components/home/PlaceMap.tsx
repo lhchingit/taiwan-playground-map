@@ -39,6 +39,18 @@ export default function PlaceMap(props: PlaceMapProps) {
   const loaded = useRef(false);
   const [ready, setReady] = useState(false);
   const [style, setStyle] = useState<string | StyleSpecification>(VECTOR_STYLE);
+  // 換頁時 Next.js 把上一頁藏起來（React <Activity>）而不是卸載；藏起來時地圖被拆掉，
+  // 按「上一頁」回來會建立新的地圖，但標記仍綁在舊的地圖上（全部消失）。
+  // 偵測到「重新顯示」就換 key，地圖與標記整組重新建立。
+  const [generation, setGeneration] = useState(0);
+  const shownBefore = useRef(false);
+  useEffect(() => {
+    if (shownBefore.current) {
+      loaded.current = false;
+      setGeneration((g) => g + 1);
+    }
+    shownBefore.current = true;
+  }, []);
 
   // 最新的出發點與結果，給縮放用（不讓結果變化觸發縮放，跟原型一樣只在出發點改變時縮放）
   const latest = useRef(props);
@@ -88,6 +100,7 @@ export default function PlaceMap(props: PlaceMapProps) {
     <>
       {!ready && <div className="mapmsg">地圖載入中…</div>}
       <MapGL
+        key={generation}
         ref={map}
         initialViewState={{ longitude: props.center.lng, latitude: props.center.lat, zoom: 12 }}
         style={{ position: 'absolute', inset: 0 }}
