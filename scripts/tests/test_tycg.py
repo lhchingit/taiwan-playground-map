@@ -133,6 +133,69 @@ class ImportTest(unittest.TestCase):
         self.assertIsNone(coord)
 
 
+class SplitOsmTest(unittest.TestCase):
+    """OSM 遊戲場補充：官方場地已涵蓋的不重複、太近又不同名的等人工判斷"""
+    OFFICIAL = [{"id": "tyc-tycg-001", "name": "大有梯田生態公園", "lat": 25.0, "lng": 121.3, "osm": "w100"},
+                {"id": "tyc-tycg-002", "name": "人工定位公園", "lat": 24.9, "lng": 121.2, "osm": None}]
+
+    def pg(self, ref, lat, lng, parks=(), name=None):
+        return {"ref": ref, "lat": lat, "lng": lng, "tags": {"name": name} if name else {},
+                "parks": [{"area": a, "name": n} for a, n in parks], "districts": []}
+
+    def split(self, pgs, manual=None):
+        extra, covered, near = tycg.split_osm(pgs, self.OFFICIAL, manual or {})
+        return ([p["ref"] for p in extra], [(p["ref"], o["id"], why) for p, o, why in covered],
+                [(p["ref"], o["id"]) for p, o, _ in near])
+
+    def test_same_osm_object(self):
+        # 遊戲場在官方場地比對到的公園（w100 → area 2400000100）裡；或遊戲場本身就是那個物件
+        _, covered, _ = self.split([self.pg("n1", 25.01, 121.31, parks=[(2400000100, "別名公園")]),
+                                    self.pg("w100", 25.0, 121.3)])
+        self.assertEqual(covered, [("n1", "tyc-tycg-001", "同一個 OSM 物件"), ("w100", "tyc-tycg-001", "同一個 OSM 物件")])
+
+    def test_same_name(self):
+        _, covered, _ = self.split([self.pg("n2", 24.903, 121.2, parks=[(9, "人工定位 公園")])])  # 約 330 公尺
+        self.assertEqual(covered, [("n2", "tyc-tycg-002", "名稱相同")])
+
+    def test_same_name_far_away_is_another_park(self):
+        # 同名但相距很遠（約 11 公里）：是別的公園，不算涵蓋
+        extra, covered, _ = self.split([self.pg("n5", 25.0, 121.2, parks=[(9, "人工定位公園")])])
+        self.assertEqual((extra, covered), (["n5"], []))
+
+    def test_near_with_other_name_waits_for_review(self):
+        # 約 100 公尺、名稱不同：不推測是不是同一處
+        pgs = [self.pg("n3", 24.9009, 121.2, parks=[(8, "隔壁公園")])]
+        extra, covered, near = self.split(pgs)
+        self.assertEqual((extra, covered, near), ([], [], [("n3", "tyc-tycg-002")]))
+        # 人工判斷過（填名稱或「（排除）」）就照一般規則
+        extra, _, near = self.split(pgs, {"n3": "（排除）"})
+        self.assertEqual((extra, near), (["n3"], []))
+
+    def test_far_is_extra(self):
+        extra, covered, near = self.split([self.pg("n4", 24.92, 121.2, parks=[(8, "遠方公園")])])
+        self.assertEqual((extra, covered, near), (["n4"], [], []))
+
+    def test_area_id(self):
+        self.assertEqual(tycg.area_id("w447066447"), 2400000000 + 447066447)
+        self.assertEqual(tycg.area_id("r5"), 3600000005)
+        self.assertIsNone(tycg.area_id("n1"))
+        self.assertIsNone(tycg.area_id(None))
+
+
+class RepoSeedTest(unittest.TestCase):
+    def test_official_places_keep_ids_and_osm_places_are_unknown(self):
+        seed = json.loads((ROOT / "data/seed/tyc/places.json").read_text(encoding="utf-8"))
+        official = [p for p in seed["places"] if p["id"].startswith("tyc-tycg-")]
+        extra = [p for p in seed["places"] if p["id"].startswith("tyc-osm-")]
+        self.assertEqual(len(official) + len(extra), len(seed["places"]))
+        self.assertEqual(len(official), 34)
+        self.assertTrue(extra)
+        for p in extra:
+            self.assertEqual({a["v"] for a in p["attrs"].values()}, {"u"}, p["id"])
+        names = [p["name"] for p in seed["places"]]
+        self.assertEqual(len(names), len(set(names)))
+
+
 class NoGoogleTest(unittest.TestCase):
     def test_repo_data_has_no_google_links(self):
         # 原始資料的「地標」是 Google 地圖連結，不可以存進 repo

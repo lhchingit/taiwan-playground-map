@@ -1,11 +1,14 @@
-"""匯入桃園市公園（特色遊戲場＋有遊具的埤塘公園），產生 data/seed/tyc/（P4，規則見 scripts/sources/tycg.py）。
+"""匯入桃園市公園（特色遊戲場＋有遊具的埤塘公園），再用 OpenStreetMap 的遊戲場補上一般社區遊戲場，
+產生 data/seed/tyc/（P4，規則見 scripts/sources/tycg.py、scripts/sources/osm_playgrounds.py）。
 
   python3 scripts/import_tycg.py
 
 輸入：data/raw/tyc/tycg-parks.json、osm-matches.tsv、manual-review.tsv（人工定位工具）、
-      item-decisions.tsv（對不到的設施用語，人工決定怎麼處理）
+      item-decisions.tsv（對不到的設施用語，人工決定怎麼處理）、
+      osm.json（scripts/fetch_osm_city.py tyc）、manual-names.tsv（OSM 遊戲場的人工命名或排除）
 輸出：data/seed/tyc/places.json、places.csv；data/review/tyc/ 的 unmatched、match-review、unmapped-items、
-      no-playground（CSV），以及人工定位工具讀的 to-locate.json
+      no-playground（官方資料）、unnamed、merged、excluded、osm-covered、osm-near-official（OSM 遊戲場）（CSV），
+      以及人工定位工具讀的 to-locate.json
 不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
 """
 from pathlib import Path
@@ -15,6 +18,7 @@ from lib.io import read_json, read_tsv, write_csv, write_json
 from lib.labels import labels_json
 from lib.manual import coord_label, read_manual, status_text
 from sources import hccg, tycg
+from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data/raw/tyc"
@@ -69,7 +73,7 @@ def main():
     decisions = tycg.load_decisions(RAW / "item-decisions.tsv", keys)
 
     places, review = [], {"unmatched": [], "match-review": [], "unmapped-items": [], "no-playground": []}
-    to_locate = []
+    to_locate, officials = [], []
     for park in merge_records(data["records"]):
         no = str(park["no"])
         items = tycg.split_items(park["facilities"])
@@ -103,6 +107,8 @@ def main():
             attrs[k] = {"v": "y", "src": tycg.SOURCE_ID, "note": note, "at": fetched}
         if park["toilet"] == "y":
             attrs["toilet"] = {"v": "y", "src": tycg.SOURCE_ID, "note": "公園資料標示有廁所", "at": fetched}
+        officials.append({"id": f"tyc-tycg-{park['no']:03d}", "name": park["name"], "lat": coord[0],
+                          "lng": coord[1], "osm": match[3] if label.startswith("OpenStreetMap") else None})
         stay, size = hccg.estimate(items)
         places.append(dict(
             id=f"tyc-tycg-{park['no']:03d}", name=park["name"], district=park["district"],
@@ -120,6 +126,19 @@ def main():
                            "items": park["facilities"]}],
             area_ha=None, city=tycg.CITY,
         ))
+
+    # OSM 遊戲場：官方場地已涵蓋的不重複建立（規則見 tycg.split_osm）
+    osm_raw = read_json(RAW / "osm.json")
+    playgrounds = osm_raw["playgrounds"]
+    names = osm.load_manual(RAW / "manual-names.tsv", {p["ref"] for p in playgrounds})
+    extra, covered, near = tycg.split_osm(playgrounds, officials, names)
+    groups, unnamed, excluded = osm.group_playgrounds(extra, names)
+    osm_places = osm.to_places(groups, tycg.CITY, keys)
+    taken = {p["name"] for p in places}
+    for p in osm_places:
+        if p["name"] in taken:  # 跟官方場地同名、但不是同一處（不同公園）：加上行政區
+            p["name"] = f"{p['name']}（{p['district'] or '行政區未知'}）"
+    places += osm_places
 
     sources = {**tycg.SOURCES, **{k: v for k, v in hccg.SOURCES.items() if k == "osm"},
                "est": {"label": "依面積與設施推估", "url": None, "kind": "estimate"}}
@@ -143,8 +162,31 @@ def main():
         write_csv(out / f"{name}.csv", heads[name], rows)
     write_json(out / "to-locate.json", {"city": "tyc", "generated": fetched, "items": to_locate})
 
+    kinds = {"n": "node", "w": "way", "r": "relation"}
+    link = lambda ref: f"https://www.openstreetmap.org/{kinds[ref[0]]}/{ref[1:]}"  # noqa: E731
+    write_csv(out / "unnamed.csv", ["OSM", "行政區", "緯度", "經度", "OSM 連結", "處理方式"],
+              [[p["ref"], osm.district_of(p) or "", p["lat"], p["lng"], link(p["ref"]),
+                "確認後在 manual-names.tsv 填名稱或「（排除）」"] for p in unnamed])
+    write_csv(out / "merged.csv", ["場地 id", "名稱", "合併的 OSM 遊戲場", "各遊戲場自己的名稱"],
+              [[p["id"], p["name"], p["official_ref"][0]["osm"],
+                "、".join(m["tags"].get("name", "") for m in g["members"] if m["tags"].get("name"))]
+               for p, g in zip(osm_places, sorted(groups, key=lambda g: osm.ref_key(g["members"][0]["ref"])))
+               if len(g["members"]) > 1])
+    write_csv(out / "excluded.csv", ["OSM", "行政區", "OSM 連結"],
+              [[p["ref"], osm.district_of(p) or "", link(p["ref"])] for p in excluded])
+    write_csv(out / "osm-covered.csv", ["OSM", "所在公園", "官方場地 id", "官方場地", "依據", "OSM 連結"],
+              [[p["ref"], "、".join(x["name"] for x in p["parks"]), o["id"], o["name"], why, link(p["ref"])]
+               for p, o, why in covered])
+    write_csv(out / "osm-near-official.csv",
+              ["OSM", "所在公園", "OSM 名稱", "官方場地 id", "官方場地", "距離", "OSM 連結", "處理方式"],
+              [[p["ref"], "、".join(x["name"] for x in p["parks"]), p["tags"].get("name", ""), o["id"], o["name"],
+                dist, link(p["ref"]), "同一處就在 manual-names.tsv 填「（排除）」，不同處就填名稱"]
+               for p, o, dist in near])
+
     print(f"桃園市：上地圖 {len(places)}｜待定位 {len(review['unmatched'])}｜待確認比對 {len(review['match-review'])}"
           f"｜沒有遊具 {len(review['no-playground'])}｜有對不到的設施文字 {len(review['unmapped-items'])} 處")
+    print(f"  OSM 遊戲場 {len(playgrounds)}：官方已涵蓋 {len(covered)}｜待判斷 {len(near)}｜"
+          f"補充場地 {len(osm_places)}｜沒有名稱 {len(unnamed)}｜排除 {len(excluded)}")
 
 
 if __name__ == "__main__":
