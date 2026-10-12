@@ -1,0 +1,3 @@
+﻿OSM,所在公園,OSM 名稱,官方場地 id,官方場地,距離,OSM 連結,處理方式
+w1049819725,南興水岸遊憩公園,遊樂場,tyc-tycg-031,南興水岸遊憩公園(光明郵局公園),35 公尺,https://www.openstreetmap.org/way/1049819725,同一處就在 manual-names.tsv 填「（排除）」，不同處就填名稱
+w1353627246,福民公園,,tyc-tycg-012,福元公園,122 公尺,https://www.openstreetmap.org/way/1353627246,同一處就在 manual-names.tsv 填「（排除）」，不同處就填名稱

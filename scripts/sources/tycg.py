@@ -10,6 +10,7 @@
   - 同名的公園（特色遊戲場與埤塘公園都有）合併成一處
 """
 import csv
+import math
 import re
 from pathlib import Path
 
@@ -119,6 +120,66 @@ def has_playground(attrs, items):
 def flag(value):
     """「˙」→ y；空白 → u（未提供，不是沒有）"""
     return "y" if value.strip() == YES else "u"
+
+
+# OSM 遊戲場離官方場地多近（公尺）、名稱又不同時，要人工判斷是不是同一處
+NEAR_M = 150
+# 名稱相同也要在這個距離內才算同一處：桃園有好幾個「中正公園」
+SAME_NAME_M = 500
+# Overpass 的 area id：way 加 2400000000、relation 加 3600000000
+AREA_OFFSET = {"w": 2400000000, "r": 3600000000}
+
+
+def area_id(ref):
+    return AREA_OFFSET[ref[0]] + int(ref[1:]) if ref and ref[0] in AREA_OFFSET else None
+
+
+def distance_m(a, b):
+    lat1, lng1, lat2, lng2 = map(math.radians, (a[0], a[1], b[0], b[1]))
+    h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lng2 - lng1) / 2) ** 2
+    return 2 * 6371000 * math.asin(math.sqrt(h))
+
+
+def name_key(name):
+    return "".join((name or "").split())
+
+
+def split_osm(playgrounds, officials, manual):
+    """OSM 遊戲場分成（補充的, 已涵蓋的, 待判斷的）（P4 桃園第二階段，decisions D20）。
+
+    officials：[{id, name, lat, lng, osm}]，osm 是官方場地座標所用的 OSM 物件（人工定位的是 None）。
+    依序判斷，不推測：
+      1. 所在公園（或遊戲場本身）就是官方場地比對到的 OSM 物件 → 涵蓋
+      2. 所在公園或遊戲場的名稱與官方場地相同，且在 SAME_NAME_M 公尺內 → 涵蓋（同名但很遠的是別的公園）
+      3. 離官方場地 NEAR_M 公尺內、名稱不同：manual-names.tsv 還沒判斷 → 待判斷；判斷過就照一般規則
+      4. 其他 → 補充
+    已涵蓋與待判斷的每一筆是 (遊戲場, 官方場地, 依據)。
+    """
+    by_area = {area_id(o["osm"]): o for o in officials if area_id(o["osm"])}
+    by_ref = {o["osm"]: o for o in officials if o["osm"]}
+    by_name = {}
+    for o in officials:
+        by_name.setdefault(name_key(o["name"]), []).append(o)
+    extra, covered, near = [], [], []
+    for pg in playgrounds:
+        parks = pg.get("parks", [])
+        hit = by_ref.get(pg["ref"]) or next((by_area[p["area"]] for p in parks if p["area"] in by_area), None)
+        if hit:
+            covered.append((pg, hit, "同一個 OSM 物件"))
+            continue
+        names = [p["name"] for p in parks] + [pg.get("tags", {}).get("name", "")]
+        here = (pg["lat"], pg["lng"])
+        hit = next((o for n in names for o in by_name.get(name_key(n), [])
+                    if distance_m(here, (o["lat"], o["lng"])) <= SAME_NAME_M), None)
+        if hit:
+            covered.append((pg, hit, "名稱相同"))
+            continue
+        close = sorted((distance_m(here, (o["lat"], o["lng"])), o["id"], o) for o in officials)
+        if close and close[0][0] <= NEAR_M and pg["ref"] not in manual:
+            near.append((pg, close[0][2], f"{close[0][0]:.0f} 公尺"))
+            continue
+        extra.append(pg)
+    return extra, covered, near
 
 
 def summary(rec):
