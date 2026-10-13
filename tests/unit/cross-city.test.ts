@@ -1,4 +1,4 @@
-// 跨縣市的距離篩選（P4 完成標準）：用新竹市、新竹縣、桃園市的種子資料，從交界附近出發
+// 跨縣市的距離篩選（P4 完成標準）：用新竹市、新竹縣、桃園市、苗栗縣的種子資料，從交界附近出發
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_FILTERS, filterPlaces, type FilterPlace, type Filters } from '@/lib/filter';
@@ -13,7 +13,7 @@ function load(city: string): FilterPlace[] {
   });
 }
 
-const places = [...load('hsc'), ...load('hsq'), ...load('tyc')];
+const places = [...load('hsc'), ...load('hsq'), ...load('tyc'), ...load('mlc')];
 // 新竹市東區與竹北市交界附近（新竹市的東區、北區與竹北市的場地都在 10 公里內）
 const ORIGIN = { lat: 24.815, lng: 121.0 };
 const run = (f: Partial<Filters>) => filterPlaces(places, { ...DEFAULT_FILTERS, ...f }, ORIGIN);
@@ -62,5 +62,16 @@ describe('跨縣市距離篩選（桃園市）', () => {
     const { results } = filterPlaces(places, { ...DEFAULT_FILTERS, play: ['sandpit'] }, BORDER);
     expect(results.some((p) => cityOf(p.id) === 'tyc')).toBe(true);
     expect(results.every((p) => p.attrs.sandpit === 'y')).toBe(true);
+  });
+});
+
+describe('跨縣市距離篩選（苗栗縣）', () => {
+  // 新竹市香山區與苗栗縣竹南鎮交界附近
+  const BORDER = { lat: 24.73, lng: 120.92 };
+  it('10 公里內同時有新竹市與苗栗縣（竹南）的場地', () => {
+    const { results } = filterPlaces(places, { ...DEFAULT_FILTERS, maxKm: 10 }, BORDER);
+    const cities = new Set(results.map((p) => cityOf(p.id)));
+    expect(cities.has('hsc')).toBe(true);
+    expect(cities.has('mlc')).toBe(true);
   });
 });

@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { SeedFile } from '@/types/place';
 import fixture from '../fixtures/seed-test.json';
+import { dropTestCity, ensureTestCity } from './test-city';
 import { toSeedRows } from '../../scripts/seed/transform';
 import { adminSql, anonClient } from './helpers';
 
@@ -133,18 +134,18 @@ describe('匿名使用者不能寫入', () => {
   }
 });
 
-describe('縣市上線狀態控制匿名讀取（以苗栗縣測試：沒有真的資料、未上線）', () => {
+describe('縣市上線狀態控制匿名讀取（以測試縣 tst 測試：沒有真的資料、未上線）', () => {
   const rows = toSeedRows(fixture as SeedFile);
   const ids = rows.places.map((p) => p.id);
 
   const setLaunched = (on: boolean) =>
-    sql`UPDATE cities SET launched_at = ${on ? sql`now()` : null} WHERE code = 'mlc'`;
+    sql`UPDATE cities SET launched_at = ${on ? sql`now()` : null} WHERE code = 'tst'`;
 
   async function anonSees() {
     const places = await anon.from('places').select('id').in('id', ids);
     const attrs = await anon.from('place_attributes').select('place_id').in('place_id', ids);
     const parking = await anon.from('place_parking').select('place_id').in('place_id', ids);
-    const city = await anon.from('cities').select('code').eq('code', 'mlc');
+    const city = await anon.from('cities').select('code').eq('code', 'tst');
     const cards = await anon.from('place_cards').select('id').in('id', ids);
     for (const r of [places, attrs, parking, city, cards]) expect(r.error).toBeNull();
     return {
@@ -157,6 +158,7 @@ describe('縣市上線狀態控制匿名讀取（以苗栗縣測試：沒有真�
   }
 
   beforeAll(async () => {
+    await ensureTestCity(sql);
     for (const p of rows.places) {
       await sql`INSERT INTO places (id, name, city, geom)
                 VALUES (${p.id}, ${p.name}, ${p.city}, ST_SetSRID(ST_MakePoint(${p.lng}, ${p.lat}), 4326))`;
@@ -168,7 +170,7 @@ describe('縣市上線狀態控制匿名讀取（以苗栗縣測試：沒有真�
   afterAll(async () => {
     await sql`DELETE FROM places WHERE id = ANY(${ids})`;
     await sql`DELETE FROM place_attribute_history WHERE place_id = ANY(${ids})`;
-    await setLaunched(false);
+    await dropTestCity(sql);
   });
 
   const hidden = { places: 0, attrs: 0, parking: 0, city: 0, cards: 0 };
@@ -194,10 +196,10 @@ describe('縣市上線狀態控制匿名讀取（以苗栗縣測試：沒有真�
   });
 
   it('未上線時 city_bounds 仍看得到範圍（前端靠它判斷要不要載入）', async () => {
-    const { data, error } = await anon.from('city_bounds').select('*').eq('code', 'mlc');
+    const { data, error } = await anon.from('city_bounds').select('*').eq('code', 'tst');
     expect(error).toBeNull();
     expect(data).toEqual([
-      expect.objectContaining({ code: 'mlc', slug: 'miaoli', launched: false }),
+      expect.objectContaining({ code: 'tst', slug: 'test-city', launched: false }),
     ]);
     expect(data?.[0]?.bbox).toHaveLength(4);
   });
@@ -219,7 +221,7 @@ describe('首頁用的公開 view', () => {
       ]);
   });
 
-  it('city_bounds：4 個縣市都有範圍，只公開這幾個欄位', async () => {
+  it('city_bounds：4 個縣市都有範圍，只公開這幾個欄位（測試縣不在 migration 裡）', async () => {
     const { data, error } = await anon.from('city_bounds').select('*').order('code');
     expect(error).toBeNull();
     expect(data?.map((c) => [c.code, c.launched])).toEqual([

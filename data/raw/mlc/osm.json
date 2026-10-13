@@ -1,0 +1,307 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-MIA\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-12",
+ "osm_base": "2026-10-12T13:29:57Z",
+ "sha256": "4a60a894b6820f94f83fa2fbe43fd1e9b03281fbba7a7f99929717e890209cce",
+ "playgrounds": [
+  {
+   "ref": "n5340542200",
+   "lat": 24.5024564,
+   "lng": 120.8240978,
+   "tags": {
+    "leisure": "playground",
+    "max_age": "70",
+    "min_age": "10",
+    "name": "館二休閒運動器材",
+    "operator": "公家營運"
+   },
+   "parks": [
+    {
+     "area": 553257741,
+     "name": "玉新公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "公館鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6319049869",
+   "lat": 24.4894667,
+   "lng": 120.7910737,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "銅鑼鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w374539076",
+   "lat": 24.5558331,
+   "lng": 120.8117577,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 367977358,
+     "name": "貓貍山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "苗栗市"
+    }
+   ]
+  },
+  {
+   "ref": "w485040090",
+   "lat": 24.6879819,
+   "lng": 120.8863262,
+   "tags": {
+    "leisure": "playground",
+    "name": "溜滑梯"
+   },
+   "parks": [
+    {
+     "area": 265600398,
+     "name": "竹南運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w485040123",
+   "lat": 24.6882346,
+   "lng": 120.8860152,
+   "tags": {
+    "leisure": "playground",
+    "name": "溜滑梯"
+   },
+   "parks": [
+    {
+     "area": 265600398,
+     "name": "竹南運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w521157144",
+   "lat": 24.4984466,
+   "lng": 120.8259715,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "公館鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w542178095",
+   "lat": 24.7036763,
+   "lng": 120.9112275,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1013501632",
+   "lat": 24.6170317,
+   "lng": 120.810932,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "後龍鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1016901417",
+   "lat": 24.5996138,
+   "lng": 120.8351028,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "頭屋鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1017036807",
+   "lat": 24.5608202,
+   "lng": 120.8359622,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "苗栗市"
+    }
+   ]
+  },
+  {
+   "ref": "w1017367999",
+   "lat": 24.6094452,
+   "lng": 120.8020274,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "後龍鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1026878239",
+   "lat": 24.6778175,
+   "lng": 120.8700404,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊樂場"
+   },
+   "parks": [
+    {
+     "area": 762225401,
+     "name": "獅山多功能運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1026878242",
+   "lat": 24.5636439,
+   "lng": 120.8381462,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 762496671,
+     "name": "貓裏喵親子公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "苗栗市"
+    }
+   ]
+  },
+  {
+   "ref": "w1026878243",
+   "lat": 24.5638321,
+   "lng": 120.8376911,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 762496671,
+     "name": "貓裏喵親子公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "苗栗市"
+    }
+   ]
+  },
+  {
+   "ref": "w1121055344",
+   "lat": 24.5423907,
+   "lng": 120.6948081,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "通霄鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1214285819",
+   "lat": 24.6659079,
+   "lng": 120.8429584,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1385569981",
+   "lat": 24.4903864,
+   "lng": 120.6764194,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "通霄鎮"
+    }
+   ]
+  }
+ ]
+}
