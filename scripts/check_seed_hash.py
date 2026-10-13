@@ -29,6 +29,12 @@ CITIES = {
         "outputs": ["data/seed/hsq/places.json", "data/seed/hsq/places.csv"]
         + [f"data/review/hsq/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
     },
+    # 苗栗縣：同新竹縣（沒有官方清單）
+    "mlc": {
+        "scripts": [["scripts/import_osm_city.py", "mlc"]],
+        "outputs": ["data/seed/mlc/places.json", "data/seed/mlc/places.csv"]
+        + [f"data/review/mlc/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
+    },
     # 桃園市：桃園市公園（特色遊戲場＋有遊具的埤塘公園），再用 OSM 遊戲場補充
     "tyc": {
         "scripts": ["scripts/import_tycg.py"],

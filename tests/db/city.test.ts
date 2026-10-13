@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { SeedFile } from '@/types/place';
 import fixture from '../fixtures/seed-test.json';
+import { dropTestCity, ensureTestCity } from './test-city';
 import { cityStatus, launchCity, unlaunchCity } from '../../scripts/seed/city';
 import { runSeed } from '../../scripts/seed/run';
 import { toSeedRows } from '../../scripts/seed/transform';
@@ -60,17 +61,18 @@ describe('pnpm city', () => {
   const rows = toSeedRows(fixture as SeedFile);
   const ids = rows.places.map((p) => p.id);
 
+  beforeAll(() => ensureTestCity(sql));
   afterAll(async () => {
     await sql`DELETE FROM places WHERE id = ANY(${ids})`;
     await sql`DELETE FROM place_attribute_history WHERE place_id = ANY(${ids})`;
-    await sql`UPDATE cities SET launched_at = NULL WHERE code = 'mlc'`;
+    await dropTestCity(sql);
   });
 
-  // 苗栗縣：沒有真的資料（測試資料在下一個測試才放進去）
+  // 測試縣：沒有真的資料（測試資料在下一個測試才放進去）
   it('沒有場地的縣市不能上線', async () => {
-    await expect(launchCity(sql, 'mlc')).rejects.toThrow('還沒有任何場地');
-    const [mlc] = await sql`SELECT launched_at FROM cities WHERE code = 'mlc'`;
-    expect(mlc?.launched_at).toBeNull();
+    await expect(launchCity(sql, 'tst')).rejects.toThrow('還沒有任何場地');
+    const [tst] = await sql`SELECT launched_at FROM cities WHERE code = 'tst'`;
+    expect(tst?.launched_at).toBeNull();
   });
 
   it('不存在的縣市 → 丟錯', async () => {
@@ -83,16 +85,16 @@ describe('pnpm city', () => {
       await sql`INSERT INTO places (id, name, city, geom)
                 VALUES (${p.id}, ${p.name}, ${p.city}, ST_SetSRID(ST_MakePoint(${p.lng}, ${p.lat}), 4326))`;
     }
-    const first = await launchCity(sql, 'mlc');
+    const first = await launchCity(sql, 'tst');
     expect(first).not.toBe('');
-    expect(await launchCity(sql, 'mlc')).toBe(first);
+    expect(await launchCity(sql, 'tst')).toBe(first);
 
-    const status = (await cityStatus(sql)).find((c) => c.code === 'mlc');
-    expect(status).toMatchObject({ code: 'mlc', places: 2, launchedAt: first });
+    const status = (await cityStatus(sql)).find((c) => c.code === 'tst');
+    expect(status).toMatchObject({ code: 'tst', places: 2, launchedAt: first });
 
-    await unlaunchCity(sql, 'mlc');
-    const [mlc] = await sql`SELECT launched_at FROM cities WHERE code = 'mlc'`;
-    expect(mlc?.launched_at).toBeNull();
+    await unlaunchCity(sql, 'tst');
+    const [tst] = await sql`SELECT launched_at FROM cities WHERE code = 'tst'`;
+    expect(tst?.launched_at).toBeNull();
   });
 });
 

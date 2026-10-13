@@ -2,7 +2,7 @@
  "version": "test",
  "city": "測試用",
  "generated": "2026-10-10",
- "note": "測試用假資料，不可進入 seed。場地放在苗栗縣（mlc，沒有真的資料、未上線），用來測試未上線縣市的權限。",
+ "note": "測試用假資料，不可進入 seed。場地放在測試縣（tst，只存在於測試、未上線，見 tests/db/test-city.ts），用來測試未上線縣市的權限。",
  "sources": {
   "est": {"label": "依面積與設施推估", "url": null, "kind": "estimate"}
  },
@@ -16,9 +16,9 @@
  },
  "places": [
   {
-   "id": "test-mlc-known",
+   "id": "test-tst-known",
    "name": "測試場地（有資料）",
-   "city": "mlc",
+   "city": "tst",
    "district": "竹北市",
    "address": null,
    "lat": 24.686,
@@ -43,9 +43,9 @@
    "parking": {"type": "lot", "fee": "free", "spaces": 10, "src": "est", "note": null, "at": "2026-10-10"}
   },
   {
-   "id": "test-mlc-unknown",
+   "id": "test-tst-unknown",
    "name": "測試場地（全部未知）",
-   "city": "mlc",
+   "city": "tst",
    "district": "竹北市",
    "address": null,
    "lat": 24.69,

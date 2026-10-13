@@ -193,7 +193,7 @@
   - 審核員也不可以用 Google 地圖修正。
 - **範圍：** 只限新增場地的位置。既有場地的座標仍然只來自 OSM、TGOS 或人工定位工具（`pnpm tool:locate`）。
 
-## D20 沒有官方清單的縣市：用 OpenStreetMap 遊戲場起步（2026-10-11 決定，先用於新竹縣）
+## D20 沒有官方清單的縣市：用 OpenStreetMap 遊戲場起步（2026-10-11 決定，用於新竹縣、苗栗縣）
 
 - **資料：** 只收 OSM 的 `leisure=playground`（`scripts/fetch_osm_city.py`）。
   - 用 Overpass 的 `is_in` 查每個遊戲場位在哪個有名稱的公園、哪個鄉鎮市（台灣的鄉鎮市是 `admin_level=8`）。
