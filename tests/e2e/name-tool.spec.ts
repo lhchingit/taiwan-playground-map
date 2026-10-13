@@ -86,10 +86,10 @@ test('排除一筆；刪除結果', async ({ page }) => {
   await page.goto(url);
   await page.locator('#list li', { hasText: 'n2' }).click();
   await page.getByLabel('確認者').fill('測試者');
-  await page.getByLabel('排除的理由').selectOption('私人社區');
+  await page.getByLabel('排除的理由').selectOption('在學校或機關內');
   await page.getByRole('button', { name: '排除（E）' }).click();
   await expect(page.locator('#list li', { hasText: 'n2' })).toContainText('✓ （排除）');
-  expect(names('mlc')[2]).toMatch(/^n2\t（排除）\t私人社區\t測試者\t/);
+  expect(names('mlc')[2]).toMatch(/^n2\t（排除）\t在學校或機關內\t測試者\t/);
 
   await page.locator('#list li', { hasText: 'n2' }).click();
   await page.getByRole('button', { name: '刪除這筆結果' }).click();

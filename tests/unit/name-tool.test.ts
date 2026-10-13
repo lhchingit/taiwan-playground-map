@@ -67,6 +67,7 @@ describe('validateName', () => {
   it('正確的命名與排除', () => {
     expect(validateName(ok, allow)).toEqual([]);
     expect(validateName({ ...ok, name: EXCLUDE, basis: '私人社區' }, allow)).toEqual([]);
+    expect(validateName({ ...ok, name: EXCLUDE, basis: '在學校或機關內' }, allow)).toEqual([]);
   });
   it('依據只能是三種（不可以用 Google）', () => {
     expect(validateName({ ...ok, basis: 'Google 地圖' }, allow).join()).toContain('命名依據要是');

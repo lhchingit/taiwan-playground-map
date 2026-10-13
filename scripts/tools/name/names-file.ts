@@ -9,8 +9,13 @@ export const columns = (key: KeyColumn) => [key, '名稱', '依據', '確認者'
 export const EXCLUDE = '（排除）';
 /** 命名的依據只能是這三種（decisions D20；不可以用 Google 地圖查名稱） */
 export const BASES = ['OSM 地圖上可見的名稱', '實地確認', '政府公告'] as const;
-/** 排除的理由 */
-export const EXCLUDE_REASONS = ['OSM 標錯／不是遊戲場', '私人社區', '與官方場地是同一處'] as const;
+/** 排除的理由（學校、幼兒園、機關裡的遊戲場上課或上班時間通常不對外開放，一律排除） */
+export const EXCLUDE_REASONS = [
+  'OSM 標錯／不是遊戲場',
+  '私人社區',
+  '在學校或機關內',
+  '與官方場地是同一處',
+] as const;
 
 export interface NameEntry {
   key: string;
