@@ -43,7 +43,7 @@ PLACES = [
          fee="free", indoor=False, hours="24 小時", surface=None, status="open",
          summary="新竹市第一座有溜索的公園，還有攀岩牆、大沙坑與手壓汲水器，旁邊是生態滯洪池。",
          attrs=A(zipline=("y","yam","全市首座溜索"), climbing_wall=("y","yam"), balance=("y","yam"), spring_rider=("y","lead","評論提到只有一隻"), open_lawn=("y","yam","一整片大綠地"),
-                 sandpit=("y","yam"), slide=("y","yam","磨石子溜滑梯"), swing=("y","yam","圓盤鞦韆"),
+                 sandpit=("y","yam"), slide=("y","yam","磨石子溜滑梯"),
                  water_pump=("y","yam","復古手壓汲水器，可以比賽噴水"), transit=("y","yam","北新竹站步行約 8 分鐘"),
                  toilet=("n","lead","評論提到需借用附近超商廁所"), handwash=("y","lead"),
                  shade=("y","lead","樹蔭多，下午三點後較舒適"), parking=("y","lead","有少量車位，假日難停"),

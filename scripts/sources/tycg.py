@@ -28,7 +28,7 @@ SOURCES = {
 RULES = [
     (r"溜索|滑索", ["zipline"]),
     (r"溜滑梯|滑梯|滑道|流滑梯", ["slide"]),
-    (r"鳥巢", ["nest_swing", "swing"]),
+    (r"鳥巢|圓盤鞦韆", ["nest_swing", "swing"]),  # 圓盤鞦韆就是鳥巢鞦韆
     (r"鞦韆", ["swing"]),
     (r"搖搖馬|搖搖樂|搖搖椅|彈簧馬", ["spring_rider"]),
     (r"翹翹板|蹺蹺板", ["seesaw"]),
