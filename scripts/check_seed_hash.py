@@ -42,6 +42,13 @@ CITIES = {
         + [f"data/review/nwt/{k}.csv" for k in ["unnamed", "merged", "excluded", "official-matched",
                                                 "official-ambiguous"]],
     },
+    # 臺中市：OSM 遊戲場，公園綠地清冊只補地址與面積
+    "txg": {
+        "scripts": [["scripts/import_osm_city.py", "txg"]],
+        "outputs": ["data/seed/txg/places.json", "data/seed/txg/places.csv"]
+        + [f"data/review/txg/{k}.csv" for k in ["unnamed", "merged", "excluded", "official-matched",
+                                                "official-ambiguous"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],

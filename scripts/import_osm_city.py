@@ -4,7 +4,7 @@
 
 輸入：data/raw/<縣市>/osm.json（scripts/fetch_osm_city.py）、data/raw/<縣市>/manual-names.tsv（人工命名或排除）
 輸出：data/seed/<縣市>/places.json、places.csv；data/review/<縣市>/unnamed.csv、merged.csv、excluded.csv
-新北市另外用 data/raw/nwt/ntpc-parks.json（官方公園清單）補地址，輸出 official-matched.csv、official-ambiguous.csv
+新北市、臺中市另外用官方公園清單補地址（與面積），輸出 official-matched.csv、official-ambiguous.csv（sources/park_lists.py）
 規則見 scripts/sources/osm_playgrounds.py。不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
 """
 import sys
@@ -13,11 +13,11 @@ from pathlib import Path
 from lib.attrs import attr_keys
 from lib.io import read_json, write_csv, write_json
 from lib.labels import labels_json
-from sources import ntpc_parks
+from sources import park_lists
 from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市"}
+CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市", "txg": "臺中市"}
 CSV_BASE = ["id", "name", "district", "lat", "lng", "size", "stay", "age_min", "age_max", "fee", "status"]
 
 
@@ -35,11 +35,12 @@ def main():
     places = osm.to_places(groups, city, keys)
     sources = dict(osm.SOURCES)
     official = None
-    if city == "nwt":  # 官方公園清單只補地址（sources/ntpc_parks.py）
-        parks = read_json(ROOT / "data/raw/nwt/ntpc-parks.json")
+    config = park_lists.CONFIGS.get(city)
+    if config:  # 官方公園清單只補地址與面積（sources/park_lists.py）
+        parks = read_json(ROOT / config["raw"])
         ordered = sorted(groups, key=lambda g: osm.ref_key(g["members"][0]["ref"]))  # 跟 to_places 相同的順序
-        official = ntpc_parks.enrich(places, ordered, parks["records"])
-        sources.update(ntpc_parks.SOURCES)
+        official = park_lists.enrich(places, ordered, parks["records"], config)
+        sources.update(config["sources"])
     seed = {"version": "0.2", "city": CITIES[city], "generated": raw["fetched"], "sources": sources,
             "labels": labels, "places": places}
     seed_dir = ROOT / "data/seed" / city
