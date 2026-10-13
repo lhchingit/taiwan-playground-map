@@ -2,8 +2,10 @@
 
 輸入：data/raw/<縣市>/osm.json（scripts/fetch_osm_city.py 產生：每個遊戲場的中心點、標籤、所在的公園與鄉鎮市）
       data/raw/<縣市>/manual-names.tsv（人工命名或排除）
+      data/raw/<縣市>/osm-institutions.json（scripts/fetch_osm_institutions.py：位在學校、機關範圍內的遊戲場）
 
 規則（全部不推測）：
+  0. 位在學校、幼兒園、政府機關、軍營的範圍內 → 自動排除，優先於下面所有規則（上課、上班時間通常不對外開放；大學不算）
   1. 位在有名稱的公園裡 → 用公園名稱；同一個公園裡的遊戲場合併成一處（各遊戲區自己的名稱寫在說明裡）
   2. 不在公園裡、但遊戲場自己有名稱 → 用自己的名稱
   3. 都沒有 → 看人工命名表；表裡也沒有 → 列進 unnamed，不上地圖
@@ -11,6 +13,8 @@
   5. 遊具、生活機能全部是未知（OSM 幾乎沒有遊具資料）；規模、停留時間、年齡、收費也是未知
 """
 import csv
+import hashlib
+import json
 from pathlib import Path
 
 SOURCE_ID = "osm"
@@ -59,6 +63,33 @@ def load_manual(path, refs):
     if errors:
         raise ValueError(f"{path} 有 {len(errors)} 個問題：\n- " + "\n- ".join(errors))
     return {r["OSM"].strip(): r["名稱"].strip() for r in rows}
+
+
+def load_institutions(path, osm_path):
+    """{OSM ref: [{osm, kind, name}]}：位在學校、機關範圍內的遊戲場。檔案不存在或跟 osm.json 對不上時中止"""
+    path, osm_path = Path(path), Path(osm_path)
+    if not path.exists():
+        raise ValueError(f"{path} 不存在：請先執行 python scripts/fetch_osm_institutions.py <縣市>")
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data["osm_json_sha256"] != hashlib.sha256(osm_path.read_bytes()).hexdigest():
+        raise ValueError(f"{path} 跟 {osm_path.name} 對不上（osm.json 更新過）：請重新執行 fetch_osm_institutions.py")
+    return data["inside"]
+
+
+def split_institutions(playgrounds, inside):
+    """回傳 (其他遊戲場, [(遊戲場, 所在的學校／機關)])；在學校、機關範圍內的一律排除，不看名稱與人工命名"""
+    kept, out = [], []
+    for pg in playgrounds:
+        if inside.get(pg["ref"]):
+            out.append((pg, inside[pg["ref"]]))
+        else:
+            kept.append(pg)
+    return kept, out
+
+
+def institution_label(places):
+    """excluded-institution.csv 的「所在的學校／機關」欄"""
+    return "；".join(f"{x['kind']}：{x['name'] or '（沒有名稱）'}" for x in places)
 
 
 def group_playgrounds(playgrounds, manual):

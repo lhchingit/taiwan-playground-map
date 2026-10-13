@@ -20,7 +20,7 @@
 ## 新北市（nwt）
 
 - **資料：** 以 OSM 遊戲場起步（decisions D20）。官方「新北市公園」（[124566](https://data.gov.tw/dataset/124566)）只用來補地址與管理單位；它沒有座標和遊具，所以不單獨上地圖。
-- **指令：** `python3 scripts/fetch_osm_city.py nwt`、`python3 scripts/fetch_ntpc_parks.py` → `python3 scripts/import_osm_city.py nwt`
+- **指令：** `python3 scripts/fetch_osm_city.py nwt`、`python3 scripts/fetch_osm_institutions.py nwt`、`python3 scripts/fetch_ntpc_parks.py` → `python3 scripts/import_osm_city.py nwt`
 - **進度（2026-10-13）：** 資料已準備好、**未上線**。
   - OSM 遊戲場 230 處（衛福部統計 464 處）：
     - **上地圖 102 處**：同一個公園裡的 47 處遊戲區合併進去。
@@ -34,7 +34,7 @@
 - **資料：** 以 OSM 遊戲場起步（decisions D20）。建設局「臺中市公園綠地清冊」（[88288](https://data.gov.tw/dataset/88288)）只用來補地址（設置地點）與面積。
   - 清冊沒有遊具；「兒童遊樂場用地」（219 筆）是都市計畫的用地分類，不代表現場有遊具，所以不單獨上地圖。
   - 清冊的座標不使用。
-- **指令：** `python3 scripts/fetch_osm_city.py txg`、`python3 scripts/fetch_txg_parks.py` → `python3 scripts/import_osm_city.py txg`
+- **指令：** `python3 scripts/fetch_osm_city.py txg`、`python3 scripts/fetch_osm_institutions.py txg`、`python3 scripts/fetch_txg_parks.py` → `python3 scripts/import_osm_city.py txg`
 - **進度（2026-10-13）：** 資料已準備好、**未上線**。
   - OSM 遊戲場 202 處（衛福部統計 689 處）：
     - **上地圖 118 處**：同一個公園裡的 39 處遊戲區合併進去。
@@ -47,7 +47,7 @@
 
 - **資料：** 只用 OSM 遊戲場起步（decisions D20）。
   - 沒有找到可用的官方開放資料。養工處網站的「特色公園共融遊戲場」名單是網頁內容、授權不明，也沒有座標，所以不使用。
-- **指令：** `python3 scripts/fetch_osm_city.py khh` → `python3 scripts/import_osm_city.py khh`
+- **指令：** `python3 scripts/fetch_osm_city.py khh`、`python3 scripts/fetch_osm_institutions.py khh` → `python3 scripts/import_osm_city.py khh`
 - **進度（2026-10-13）：** 資料已準備好、**未上線**。
   - OSM 遊戲場 108 處（衛福部統計 432 處）：
     - **上地圖 58 處**：同一個公園裡的 16 處遊戲區合併進去。

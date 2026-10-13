@@ -27,7 +27,7 @@ CITIES = {
     "hsq": {
         "scripts": [["scripts/import_osm_city.py", "hsq"]],
         "outputs": ["data/seed/hsq/places.json", "data/seed/hsq/places.csv"]
-        + [f"data/review/hsq/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
+        + [f"data/review/hsq/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution"]],
     },
     # 臺北市：臺北市公園設施資料（decisions D21）
     "tpe": {
@@ -39,34 +39,34 @@ CITIES = {
     "nwt": {
         "scripts": [["scripts/import_osm_city.py", "nwt"]],
         "outputs": ["data/seed/nwt/places.json", "data/seed/nwt/places.csv"]
-        + [f"data/review/nwt/{k}.csv" for k in ["unnamed", "merged", "excluded", "official-matched",
-                                                "official-ambiguous"]],
+        + [f"data/review/nwt/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "official-matched", "official-ambiguous"]],
     },
     # 臺中市：OSM 遊戲場，公園綠地清冊只補地址與面積
     "txg": {
         "scripts": [["scripts/import_osm_city.py", "txg"]],
         "outputs": ["data/seed/txg/places.json", "data/seed/txg/places.csv"]
-        + [f"data/review/txg/{k}.csv" for k in ["unnamed", "merged", "excluded", "official-matched",
-                                                "official-ambiguous"]],
+        + [f"data/review/txg/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "official-matched", "official-ambiguous"]],
     },
     # 高雄市：同新竹縣（沒有找到可用的官方清單）
     "khh": {
         "scripts": [["scripts/import_osm_city.py", "khh"]],
         "outputs": ["data/seed/khh/places.json", "data/seed/khh/places.csv"]
-        + [f"data/review/khh/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
+        + [f"data/review/khh/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution"]],
     },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],
         "outputs": ["data/seed/mlc/places.json", "data/seed/mlc/places.csv"]
-        + [f"data/review/mlc/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
+        + [f"data/review/mlc/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution"]],
     },
     # 桃園市：桃園市公園（特色遊戲場＋有遊具的埤塘公園），再用 OSM 遊戲場補充
     "tyc": {
         "scripts": ["scripts/import_tycg.py"],
         "outputs": ["data/seed/tyc/places.json", "data/seed/tyc/places.csv", "data/review/tyc/to-locate.json"]
         + [f"data/review/tyc/{k}.csv" for k in ["unmatched", "match-review", "unmapped-items", "no-playground",
-                                                "unnamed", "merged", "excluded", "osm-covered",
+                                                "unnamed", "merged", "excluded", "excluded-institution", "osm-covered",
                                                 "osm-near-official"]],
     },
 }

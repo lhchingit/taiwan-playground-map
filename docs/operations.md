@@ -151,6 +151,7 @@ DATABASE_URL=... SITE_URL=... REVALIDATE_SECRET=... pnpm city launch hsq --allow
 
 OSM 匯入的遊戲場沒有名稱、也不在有名稱的公園裡時，不會上地圖（decisions D20），要人工命名或排除。
 
+0. 位在學校、幼兒園、政府機關、軍營範圍內的遊戲場，匯入時已經自動排除（decisions D20），不會出現在待命名清單。
 1. 下載附近的 OSM 名稱（提示用，可以跳過）：`python3 scripts/fetch_osm_nearby.py <縣市>`，結果是 `data/raw/<縣市>/osm-nearby.json`。
 2. 開工具：`pnpm tool:name` → http://localhost:4101。
    - 左邊選縣市與項目，右邊地圖中心就是那個遊戲場。

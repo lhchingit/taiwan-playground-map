@@ -46,5 +46,31 @@ class WithinTest(unittest.TestCase):
             overpass.within(self.POINTS, query)
 
 
+class InstitutionTest(unittest.TestCase):
+    def test_parse(self):
+        out = overpass.parse_institutions([
+            {"type": "marker", "tags": {"ref": "w1"}},
+            {"type": "area", "id": 2400000123, "tags": {"amenity": "school", "name": "某國小"}},
+            {"type": "area", "id": 2400000123, "tags": {"amenity": "school", "name": "某國小"}},  # 重複只列一次
+            {"type": "area", "id": 3600000045, "tags": {"landuse": "military"}},
+            {"type": "marker", "tags": {"ref": "w2"}},
+        ])
+        self.assertEqual(out, {
+            "w1": [{"osm": "r45", "kind": "軍營", "name": ""}, {"osm": "w123", "kind": "學校", "name": "某國小"}],
+            "w2": [],
+        })
+
+    def test_university_is_not_an_institution(self):
+        # 大學、專科多數對外開放：查詢不抓，回應裡出現也不算
+        q = overpass.institution_query([("w1", (24.8, 121.0))])
+        self.assertNotIn("university", q)
+        self.assertNotIn("college", q)
+        out = overpass.parse_institutions([
+            {"type": "marker", "tags": {"ref": "w1"}},
+            {"type": "area", "id": 2400000001, "tags": {"amenity": "university", "name": "某大學"}},
+        ])
+        self.assertEqual(out, {"w1": []})
+
+
 if __name__ == "__main__":
     unittest.main()

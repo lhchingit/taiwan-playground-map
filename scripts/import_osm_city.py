@@ -2,8 +2,10 @@
 
   python3 scripts/import_osm_city.py hsq
 
-輸入：data/raw/<縣市>/osm.json（scripts/fetch_osm_city.py）、data/raw/<縣市>/manual-names.tsv（人工命名或排除）
-輸出：data/seed/<縣市>/places.json、places.csv；data/review/<縣市>/unnamed.csv、merged.csv、excluded.csv
+輸入：data/raw/<縣市>/osm.json（scripts/fetch_osm_city.py）、data/raw/<縣市>/manual-names.tsv（人工命名或排除）、
+      data/raw/<縣市>/osm-institutions.json（scripts/fetch_osm_institutions.py：位在學校、機關範圍內的遊戲場）
+輸出：data/seed/<縣市>/places.json、places.csv；
+      data/review/<縣市>/unnamed.csv、merged.csv、excluded.csv、excluded-institution.csv
 新北市、臺中市另外用官方公園清單補地址（與面積），輸出 official-matched.csv、official-ambiguous.csv（sources/park_lists.py）
 規則見 scripts/sources/osm_playgrounds.py。不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
 """
@@ -25,13 +27,16 @@ def main():
     if len(sys.argv) != 2 or sys.argv[1] not in CITIES:
         sys.exit(f"用法：python3 scripts/import_osm_city.py <{'|'.join(CITIES)}>")
     city = sys.argv[1]
-    raw = read_json(ROOT / "data/raw" / city / "osm.json")
+    raw_dir = ROOT / "data/raw" / city
+    raw = read_json(raw_dir / "osm.json")
     playgrounds = raw["playgrounds"]
-    manual = osm.load_manual(ROOT / "data/raw" / city / "manual-names.tsv", {p["ref"] for p in playgrounds})
+    manual = osm.load_manual(raw_dir / "manual-names.tsv", {p["ref"] for p in playgrounds})
+    inside = osm.load_institutions(raw_dir / "osm-institutions.json", raw_dir / "osm.json")
+    kept, in_institution = osm.split_institutions(playgrounds, inside)
     labels = labels_json()
     keys = attr_keys(labels)
 
-    groups, unnamed, excluded = osm.group_playgrounds(playgrounds, manual)
+    groups, unnamed, excluded = osm.group_playgrounds(kept, manual)
     places = osm.to_places(groups, city, keys)
     sources = dict(osm.SOURCES)
     official = None
@@ -66,6 +71,9 @@ def main():
                if len(g["members"]) > 1])
     write_csv(review / "excluded.csv", ["OSM", "行政區", "OSM 連結"],
               [[p["ref"], osm.district_of(p) or "", link(p["ref"])] for p in excluded])
+    write_csv(review / "excluded-institution.csv", ["OSM", "行政區", "所在的學校／機關", "OSM 連結"],
+              [[p["ref"], osm.district_of(p) or "", osm.institution_label(at), link(p["ref"])]
+               for p, at in in_institution])
 
     if official is not None:
         matched, ambiguous = official
@@ -77,7 +85,8 @@ def main():
         print(f"  官方公園清單補上地址 {len(matched)}｜同一區有多個相符 {len(ambiguous)}")
 
     print(f"{CITIES[city]}：OSM 遊戲場 {len(playgrounds)}｜場地 {len(places)}"
-          f"（合併 {sum(len(g['members']) - 1 for g in groups)} 處遊戲區）｜沒有名稱 {len(unnamed)}｜排除 {len(excluded)}")
+          f"（合併 {sum(len(g['members']) - 1 for g in groups)} 處遊戲區）｜沒有名稱 {len(unnamed)}｜排除 {len(excluded)}"
+          f"｜學校／機關內 {len(in_institution)}")
 
 
 if __name__ == "__main__":

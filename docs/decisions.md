@@ -207,6 +207,14 @@
   3. 都沒有 → 人工命名表 `data/raw/<縣市>/manual-names.tsv`（要填依據與確認者）。表裡也沒有的列在 `data/review/<縣市>/unnamed.csv`，**不上地圖**。
   4. 命名表寫「（排除）」的不上地圖，例如 OSM 標錯或私人社區。
      學校、幼兒園、政府機關裡的遊戲場一律排除（2026-10-14）：上課、上班時間通常不對外開放，放上地圖容易讓家長白跑一趟。
+  5. **自動排除（2026-10-14）：** 遊戲場位在 OSM 標示的以下範圍內，匯入時自動排除，不用人工確認。
+     - 範圍：幼兒園、學校（`amenity=kindergarten|school`）、政府機關（`office=government`、`amenity=townhall|police|fire_station`）、軍營（`landuse=military`）。
+     - 優先於上面所有規則：就算在有名稱的公園裡、有自己的名稱、有人工命名，也一樣排除。
+     - 大學、專科不算，因為多數校園對外開放。
+     - 用 Overpass `is_in` 判斷（`scripts/fetch_osm_institutions.py`），結果存成 `data/raw/<縣市>/osm-institutions.json`，裡面記著 `osm.json` 的 sha256，對不上時匯入中止。
+     - 排除的列在 `data/review/<縣市>/excluded-institution.csv`。
+     - OSM 沒畫出學校範圍的，仍要在命名工具裡用「在學校或機關內」手動排除。
+     - 只影響 OSM 遊戲場；官方清單的場地（新竹市、臺北市、桃園官方場地）不受影響。
   - 命名用本機工具 `pnpm tool:name`（2026-10-13）。依據只能是「OSM 地圖上可見的名稱」「實地確認」「政府公告」，伺服器端也會擋。
     工具列出附近 150 公尺內有名稱的 OSM 地點（`fetch_osm_nearby.py`）只當提示，要人確認後才寫入；匯入不讀這些提示。
 - **屬性：** 遊具、生活機能全部是 `u`，停車類型未知；規模、停留時間、年齡、收費也是未知，**不估算**。遊具資料靠家長回報（P3）。
