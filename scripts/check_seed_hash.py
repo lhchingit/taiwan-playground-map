@@ -49,6 +49,12 @@ CITIES = {
         + [f"data/review/txg/{k}.csv" for k in ["unnamed", "merged", "excluded", "official-matched",
                                                 "official-ambiguous"]],
     },
+    # 高雄市：同新竹縣（沒有找到可用的官方清單）
+    "khh": {
+        "scripts": [["scripts/import_osm_city.py", "khh"]],
+        "outputs": ["data/seed/khh/places.json", "data/seed/khh/places.csv"]
+        + [f"data/review/khh/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],

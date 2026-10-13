@@ -8,7 +8,7 @@ on:
       city:
         description: 縣市
         type: choice
-        options: [hsc, hsq, tyc, mlc, tpe, nwt, txg]
+        options: [hsc, hsq, tyc, mlc, tpe, nwt, txg, khh]
         required: true
       action:
         description: 動作（seed 會先試跑，再真的匯入）
