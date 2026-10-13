@@ -74,6 +74,7 @@ pnpm docker:down   # 停止並移除容器
 | `python3 scripts/fetch_hccg_parks.py` | 重新下載新竹市公園管理維護地點（面積與地點提示）到 `data/raw/hsc/hccg-parks.json` |
 | `python -m unittest discover -s scripts/tests -t scripts` | 匯入腳本（Python）的測試 |
 | `python3 scripts/fetch_osm_city.py hsq`、`python3 scripts/import_osm_city.py hsq`（苗栗縣是 `mlc`） | 沒有官方清單的縣市：下載 OSM 遊戲場（含所在公園、鄉鎮市），再產生 `data/seed/hsq/`（decisions D20）；沒有名稱的列在 `data/review/hsq/unnamed.csv`，人工確認後填 `data/raw/hsq/manual-names.tsv` |
+| `python3 scripts/fetch_tpe_parks.py` → `python3 scripts/import_pkl.py` | 臺北市：下載臺北市公園設施資料（兒童遊戲場，維護穩定編號）→ 產生 `data/seed/tpe/`（TWD97 座標轉 WGS84，decisions D21） |
 | `python3 scripts/fetch_tycg_parks.py` → `python3 scripts/locate_tyc.py` → `python3 scripts/import_tycg.py` | 桃園市：下載桃園市公園資料（不存 Google 連結、維護穩定編號）→ OSM 名稱比對與地址定位 → 產生 `data/seed/tyc/`；待定位、待確認的用 `pnpm tool:locate -- --city tyc` 處理。一般遊戲場先執行 `python3 scripts/fetch_osm_city.py tyc` 下載 OSM 資料，`import_tycg.py` 會一起補上（官方已涵蓋的不重複，見 decisions D20） |
 | `python3 scripts/fetch_city_bounds.py` | 從 OSM（Nominatim）重新取得各縣市行政界範圍，存到 `data/raw/osm-city-bounds.json`（新增縣市時才需要） |
 | `pnpm screenshots p1b`／`p1c` | 原型與正式版並排截圖（正式版要先在 3100 埠執行）：p1b 首頁篩選、p1c 場地詳情，輸出到 `docs/screenshots/<組別>/` |
@@ -84,7 +85,7 @@ pnpm docker:down   # 停止並移除容器
 |---|---|
 | `CLAUDE.md` | 給 Claude Code 的專案規則（資料三態、授權、慣例） |
 | `docs/decisions.md` | 技術決策與重新檢討的條件 |
-| `docs/tasks/` | 依序實作的任務說明（P0～P4；P4 是拓展到新竹縣、桃園市、苗栗縣） |
+| `docs/tasks/` | 依序實作的任務說明（P0～P5；P4 是拓展到新竹縣、桃園市、苗栗縣，P5 是更多縣市） |
 | `docs/prototype/playmap.html` | 可直接打開的原型，介面與行為以它為準 |
 | `data/seed/<縣市>/places.json` | 種子資料，每個縣市一個資料夾（目前：`hsc` 新竹市 72 處，含來源） |
 | `data/raw/<縣市>/` | 原始資料（新竹市：養工處清冊原文、清冊與 OSM 的比對結果）；`data/raw/osm-city-bounds.json` 是各縣市 OSM 行政界範圍 |

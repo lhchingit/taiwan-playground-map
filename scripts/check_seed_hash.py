@@ -29,6 +29,12 @@ CITIES = {
         "outputs": ["data/seed/hsq/places.json", "data/seed/hsq/places.csv"]
         + [f"data/review/hsq/{k}.csv" for k in ["unnamed", "merged", "excluded"]],
     },
+    # 臺北市：臺北市公園設施資料（decisions D21）
+    "tpe": {
+        "scripts": ["scripts/import_pkl.py"],
+        "outputs": ["data/seed/tpe/places.json", "data/seed/tpe/places.csv"]
+        + [f"data/review/tpe/{k}.csv" for k in ["odd-names", "out-of-bounds", "districts-unknown"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],
