@@ -17,6 +17,18 @@
   - 河濱公園遊戲區（[122018](https://data.gov.tw/dataset/122018)，水利工程處，29 座，有座標）。
   - OSM 補充公園處資料以外的遊戲場（比照桃園，decisions D20）。OSM 上臺北市有 365 處遊戲場。
 
+## 新北市（nwt）
+
+- **資料：** 以 OSM 遊戲場起步（decisions D20）。官方「新北市公園」（[124566](https://data.gov.tw/dataset/124566)）只用來補地址與管理單位；它沒有座標和遊具，所以不單獨上地圖。
+- **指令：** `python3 scripts/fetch_osm_city.py nwt`、`python3 scripts/fetch_ntpc_parks.py` → `python3 scripts/import_osm_city.py nwt`
+- **進度（2026-10-13）：** 資料已準備好、**未上線**。
+  - OSM 遊戲場 230 處（衛福部統計 464 處）：
+    - **上地圖 102 處**：同一個公園裡的 47 處遊戲區合併進去。
+    - **沒有名稱 81 處**：`data/review/nwt/unnamed.csv`，之後跟其他縣市一起人工命名。
+  - **補上地址 48 處**：`official-matched.csv`，方便抽查。同一區有多個相符的：0。
+  - 遊具全部是 `u`，靠家長回報補。
+- **Overpass：** 新北市的遊戲場多、範圍大，查所在公園的 is_in 常逾時。`lib/overpass.py` 的 `within` 改成：一批逾時就拆成兩半再查。
+
 ## 完成標準（每個縣市）
 
 - [ ] 該縣市的轉接器、設施對照與測試已合併。

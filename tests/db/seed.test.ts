@@ -230,6 +230,21 @@ describe('pnpm seed', () => {
     expect(c?.launched_at).toBeNull();
   });
 
+  it('新北市（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
+    const nwt = allSeeds.find((s) => s.places[0]?.city === 'nwt');
+    expect(nwt?.places.length).toBeGreaterThan(0);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
+      FROM places WHERE city = 'nwt'`;
+    expect(r).toEqual({ n: nwt!.places.length, not_osm: 0 });
+    const [a] =
+      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'nwt-%'`;
+    expect(a?.n).toBe(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'nwt'`;
+    expect(c?.launched_at).toBeNull();
+  });
+
   it('臺北市（公園處設施資料，decisions D21）：未上線；遊具只有「有」或未知，沒有「無」', async () => {
     const tpe = allSeeds.find((s) => s.places[0]?.city === 'tpe');
     expect(tpe?.places.length).toBeGreaterThan(0);

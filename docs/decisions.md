@@ -118,6 +118,7 @@
 | 新竹市公園管理維護地點（[67762](https://data.gov.tw/dataset/67762)） | 新竹市政府養護工程處 | 面積 `area_ha`（只用完全相同的名稱）；人工定位工具的地點提示（`sources.hccg_parks`） | **沒有座標**；原始資料在 `data/raw/hsc/hccg-parks.json` |
 | 新竹市公廁地點資訊（[67757](https://data.gov.tw/dataset/67757)） | 新竹市政府養護工程處 | 廁所「有」、育嬰台 > 0 時哺乳室／尿布台「有」（`sources.hccg_toilets`）；只用完全相同的名稱或人工對應表 `data/raw/hsc/toilet-aliases.tsv` | **沒有座標**，無法用距離判斷；育嬰台 0 不代表場地沒有，維持未知 |
 | 桃園市公園（[148726](https://data.gov.tw/dataset/148726)） | 桃園市政府工務局 | 特色遊戲場與有遊具的埤塘公園：遊具、廁所與停車（「˙」= 有，空白 = 未知）（`sources.tycg`） | **沒有座標**，「地標」欄是 Google 地圖連結，**不使用也不存進 repo**；座標用 OSM 名稱比對或人工定位（`scripts/locate_tyc.py`、`pnpm tool:locate -- --city tyc`） |
+| 新北市公園（[124566](https://data.gov.tw/dataset/124566)） | 新北市政府農業局 | 只用來替 OSM 遊戲場補地址與管理單位（`sources.ntpc_parks`）：去掉用地編號後名稱相同、同一區、唯一相符才補 | **沒有座標也沒有遊具**，不單獨上地圖；名稱、座標不改 |
 | 臺北市公園設施資料（[136476](https://data.gov.tw/dataset/136476)） | 臺北市政府工務局公園路燈工程管理處 | 兒童遊戲場：各類遊具數量（數量 > 0 = 有，0 = 未知）（`sources.pkl`） | 附 TWD97 二度分帶座標，轉成 WGS84 使用（D21）；組合遊具、擺盪船索、其他不對照屬性 |
 
 - 新增資料集前要先確認授權；**授權不明的不使用**。
@@ -194,7 +195,7 @@
   - 審核員也不可以用 Google 地圖修正。
 - **範圍：** 只限新增場地的位置。既有場地的座標仍然只來自 OSM、TGOS 或人工定位工具（`pnpm tool:locate`）。
 
-## D20 沒有官方清單的縣市：用 OpenStreetMap 遊戲場起步（2026-10-11 決定，用於新竹縣、苗栗縣）
+## D20 沒有官方清單的縣市：用 OpenStreetMap 遊戲場起步（2026-10-11 決定，用於新竹縣、苗栗縣、新北市）
 
 - **資料：** 只收 OSM 的 `leisure=playground`（`scripts/fetch_osm_city.py`）。
   - 用 Overpass 的 `is_in` 查每個遊戲場位在哪個有名稱的公園、哪個鄉鎮市（台灣的鄉鎮市是 `admin_level=8`）。
