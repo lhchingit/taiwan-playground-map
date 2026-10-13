@@ -138,12 +138,13 @@ describe('pnpm seed', () => {
     expect(rows.every((x) => String(x.r).endsWith('=y'))).toBe(true);
   });
 
-  it('每個場地都有座標來源：OpenStreetMap 或人工定位（不可以是 Google）', async () => {
+  it('每個場地都有座標來源：OpenStreetMap、人工定位或政府開放資料（D21，不可以是 Google）', async () => {
     const [r] = await sql`
       SELECT count(*) FILTER (WHERE coord_source IS NULL)::int AS missing,
              count(*) FILTER (WHERE coord_source ILIKE '%google%')::int AS google,
              count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %'
-                                AND coord_source NOT LIKE '人工定位（%')::int AS other
+                                AND coord_source NOT LIKE '人工定位（%'
+                                AND coord_source NOT LIKE '臺北市公園設施資料（%')::int AS other
       FROM places WHERE id NOT LIKE 'test-%'`;
     expect(r).toEqual({ missing: 0, google: 0, other: 0 });
   });
@@ -227,6 +228,21 @@ describe('pnpm seed', () => {
     expect(a?.n).toBe(0);
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'mlc'`;
     expect(c?.launched_at).toBeNull();
+  });
+
+  it('臺北市（公園處設施資料，decisions D21）：未上線；遊具只有「有」或未知，沒有「無」', async () => {
+    const tpe = allSeeds.find((s) => s.places[0]?.city === 'tpe');
+    expect(tpe?.places.length).toBeGreaterThan(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'tpe'`;
+    expect(c?.launched_at).toBeNull();
+    const values = await sql`SELECT DISTINCT value, source_id FROM place_attributes
+                             WHERE place_id LIKE 'tpe-%' ORDER BY 1`;
+    expect(values).toEqual([{ value: 'y', source_id: 'pkl' }]);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE coord_source NOT LIKE '臺北市公園設施資料%')::int AS other
+      FROM places WHERE city = 'tpe'`;
+    expect(r).toEqual({ n: tpe!.places.length, other: 0 });
   });
 
   it('桃園市（桃園市公園資料）：未上線；廁所、停車只有「有」或未知，沒有「無」', async () => {

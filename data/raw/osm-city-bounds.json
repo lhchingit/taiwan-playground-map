@@ -1,6 +1,6 @@
 {
  "source": "OpenStreetMap Nominatim（© OpenStreetMap contributors, ODbL）",
- "fetched": "2026-10-10",
+ "fetched": "2026-10-13",
  "note": "bbox 為 [西, 南, 東, 北]；只用在沒有場地的縣市（scripts/seed/transform.ts）",
  "cities": {
   "hsc": {
@@ -41,6 +41,16 @@
     24.28852,
     121.262639,
     24.7410688
+   ]
+  },
+  "tpe": {
+   "name": "臺北市",
+   "osm": "relation/1293250",
+   "bbox": [
+    121.4571436,
+    24.9605158,
+    121.6659425,
+    25.2102648
    ]
   }
  }

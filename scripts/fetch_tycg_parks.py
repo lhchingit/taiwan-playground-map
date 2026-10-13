@@ -13,6 +13,7 @@ import json
 from datetime import date
 from pathlib import Path
 
+from lib.numbering import assign_numbers
 from lib.opendata import download
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -24,23 +25,6 @@ FILES = {
     "埤塘公園": BASE.format("eff0b4d8-2ef3-49ec-b894-68b92dac23f0"),
 }
 FIELDS = ["區域", "公園名稱", "特色", "設施", "地址", "停車", "廁所"]  # 不含「地標」
-
-
-def name_key(name):
-    return "".join(name.split())
-
-
-def assign_numbers(records, previous):
-    """records：[{公園名稱,…}]；previous：{名稱: 編號}（上一版）。名稱相同（忽略空白）的同一個編號。"""
-    numbers = {name_key(k): v for k, v in previous.items()}
-    nxt = max(numbers.values(), default=0) + 1
-    for r in records:
-        k = name_key(r["公園名稱"])
-        if k not in numbers:
-            numbers[k] = nxt
-            nxt += 1
-        r["no"] = numbers[k]
-    return records
 
 
 def parse_csv(raw):

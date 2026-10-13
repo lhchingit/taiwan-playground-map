@@ -18,8 +18,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data/raw/osm-city-bounds.json"
 USER_AGENT = "playmap-seed/0.1 (https://github.com/lhchingit/taiwan-playground-map)"
 
-# 與 supabase/migrations/0001_init.sql 的 cities 相同
-CITIES = [("hsc", "新竹市"), ("hsq", "新竹縣"), ("tyc", "桃園市"), ("mlc", "苗栗縣")]
+# 與 supabase/migrations 的 cities 相同（0001_init、0010_city_taipei）
+CITIES = [("hsc", "新竹市"), ("hsq", "新竹縣"), ("tyc", "桃園市"), ("mlc", "苗栗縣"), ("tpe", "臺北市")]
 
 
 def search(name):
