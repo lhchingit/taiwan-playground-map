@@ -1,0 +1,3874 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-TXG\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-13",
+ "osm_base": "2026-10-13T13:33:51Z",
+ "sha256": "8a1f7e4c3ad6b2d47fda5e01f8a2d6ae73bfffc337b71127e7a8ee247e82097f",
+ "playgrounds": [
+  {
+   "ref": "n1624767504",
+   "lat": 24.0568973,
+   "lng": 120.7029675,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "霧峰區"
+    }
+   ]
+  },
+  {
+   "ref": "n3487983296",
+   "lat": 24.1463256,
+   "lng": 120.644965,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3603403543,
+     "name": "文心森林公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n3621148026",
+   "lat": 24.0604875,
+   "lng": 120.6979916,
+   "tags": {
+    "addr:city": "台中市",
+    "addr:country": "TW",
+    "addr:district": "霧峰區",
+    "addr:full": "413台中市霧峰區育賢路1號",
+    "addr:housenumber": "1",
+    "addr:postcode": "413",
+    "addr:street": "育賢路",
+    "leisure": "playground",
+    "name": "巨人保齡球館",
+    "note": "全面禁止吸菸，附設停車場",
+    "phone": "+886 4 2339 6358"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "霧峰區"
+    }
+   ]
+  },
+  {
+   "ref": "n3864673611",
+   "lat": 24.1151834,
+   "lng": 120.678184,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 365640222,
+     "name": "大明兒童公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3868446264",
+   "lat": 24.119751,
+   "lng": 120.6884138,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3868446325",
+   "lat": 24.1195393,
+   "lng": 120.6880224,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3869419668",
+   "lat": 24.1104799,
+   "lng": 120.6805386,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3883010117",
+   "lat": 24.125716,
+   "lng": 120.6900189,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 288628114,
+     "name": "大智公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "n3883015742",
+   "lat": 24.1249185,
+   "lng": 120.6878592,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 288628112,
+     "name": "東峰公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "n3887138382",
+   "lat": 24.1122336,
+   "lng": 120.6735301,
+   "tags": {
+    "leisure": "playground",
+    "mapillary": "495888261594976"
+   },
+   "parks": [
+    {
+     "area": 303637087,
+     "name": "公六公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3887179372",
+   "lat": 24.1056186,
+   "lng": 120.6746113,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 385389848,
+     "name": "爽文公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3887380522",
+   "lat": 24.1047909,
+   "lng": 120.6795213,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 303274462,
+     "name": "環保公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3894756637",
+   "lat": 24.1096731,
+   "lng": 120.687404,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 386170517,
+     "name": "大里公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3899171940",
+   "lat": 24.1323558,
+   "lng": 120.6476592,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 109565145,
+     "name": "南苑公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n3899215594",
+   "lat": 24.1318325,
+   "lng": 120.6431352,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 87787246,
+     "name": "豐樂雕塑公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n3899229825",
+   "lat": 24.1297826,
+   "lng": 120.6419102,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 87787246,
+     "name": "豐樂雕塑公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n3899288267",
+   "lat": 24.1156008,
+   "lng": 120.6715146,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 818652320,
+     "name": "積善公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南區"
+    }
+   ]
+  },
+  {
+   "ref": "n3899917129",
+   "lat": 24.1130487,
+   "lng": 120.6848694,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 386638969,
+     "name": "東明公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3989500790",
+   "lat": 24.1747631,
+   "lng": 120.6871115,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 273403697,
+     "name": "民俗公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n3989500791",
+   "lat": 24.1748719,
+   "lng": 120.6867686,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 273403697,
+     "name": "民俗公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n3989553992",
+   "lat": 24.1130127,
+   "lng": 120.6851703,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 386638969,
+     "name": "東明公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n3993499158",
+   "lat": 24.103986,
+   "lng": 120.6845246,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n4000160377",
+   "lat": 24.1405547,
+   "lng": 120.6710417,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301626477,
+     "name": "自立公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n4025182809",
+   "lat": 24.1045725,
+   "lng": 120.6845409,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n4025957519",
+   "lat": 24.1025531,
+   "lng": 120.67528,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 303465739,
+     "name": "進士公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n4527491890",
+   "lat": 24.1644484,
+   "lng": 120.634669,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 491492674,
+     "name": "惠泰公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n4558516069",
+   "lat": 24.1699948,
+   "lng": 120.6944729,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 243381812,
+     "name": "北屯兒童公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n4558607774",
+   "lat": 24.1699981,
+   "lng": 120.6950024,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 243381812,
+     "name": "北屯兒童公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n4560276929",
+   "lat": 24.3296241,
+   "lng": 120.7411521,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "后里區"
+    }
+   ]
+  },
+  {
+   "ref": "n4560344695",
+   "lat": 24.3248116,
+   "lng": 120.7499253,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "后里區"
+    }
+   ]
+  },
+  {
+   "ref": "n4561610809",
+   "lat": 24.1676964,
+   "lng": 120.6984749,
+   "tags": {
+    "leisure": "playground",
+    "name": "溜滑梯"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n4563544024",
+   "lat": 24.2215263,
+   "lng": 120.5629763,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "沙鹿區"
+    }
+   ]
+  },
+  {
+   "ref": "n4660570790",
+   "lat": 24.0996582,
+   "lng": 120.6944688,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 200164022,
+     "name": "健康公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n5247465235",
+   "lat": 24.10709,
+   "lng": 120.6906709,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 479113801,
+     "name": "新忠公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n5544949891",
+   "lat": 24.1862571,
+   "lng": 120.6242095,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n5550274643",
+   "lat": 24.1724152,
+   "lng": 120.6521714,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n5636433434",
+   "lat": 24.1947801,
+   "lng": 120.6983773,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 424532551,
+     "name": "頭張公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "潭子區"
+    }
+   ]
+  },
+  {
+   "ref": "n5636448696",
+   "lat": 24.1847164,
+   "lng": 120.6961061,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301618022,
+     "name": "九甲公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6080560600",
+   "lat": 24.1079926,
+   "lng": 120.6715655,
+   "tags": {
+    "leisure": "playground",
+    "name": "樹王兒童遊樂區"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n6088004834",
+   "lat": 24.1167182,
+   "lng": 120.6799346,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 383574768,
+     "name": "國興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "n6094140219",
+   "lat": 24.1753287,
+   "lng": 120.6420297,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:slide": "yes"
+   },
+   "parks": [
+    {
+     "area": 447244849,
+     "name": "至善公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6094873090",
+   "lat": 24.1830106,
+   "lng": 120.6422653,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 203556435,
+     "name": "文修公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6094873096",
+   "lat": 24.177104,
+   "lng": 120.6405853,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 59450589,
+     "name": "逢甲公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6094873123",
+   "lat": 24.1785851,
+   "lng": 120.642101,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 336937937,
+     "name": "西平大魚池文化公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6098519486",
+   "lat": 24.1659297,
+   "lng": 120.6322094,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 107444047,
+     "name": "潮洋環保公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6098519487",
+   "lat": 24.1705315,
+   "lng": 120.6353226,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 261713509,
+     "name": "朝貴公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6098519493",
+   "lat": 24.1787181,
+   "lng": 120.6355829,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 224991176,
+     "name": "西大墩公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6098519509",
+   "lat": 24.1641976,
+   "lng": 120.6320913,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 389464169,
+     "name": "龍門公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6103233406",
+   "lat": 24.1672034,
+   "lng": 120.6368298,
+   "tags": {
+    "leisure": "playground",
+    "playground:slide": "yes"
+   },
+   "parks": [
+    {
+     "area": 650648926,
+     "name": "惠安公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6106605005",
+   "lat": 24.1692021,
+   "lng": 120.6442148,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 541641577,
+     "name": "上德公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6183998769",
+   "lat": 24.1451855,
+   "lng": 120.6508888,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 544063092,
+     "name": "萬壽公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n6184051249",
+   "lat": 24.146369,
+   "lng": 120.6445461,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3603403543,
+     "name": "文心森林公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6184130461",
+   "lat": 24.1432158,
+   "lng": 120.6400808,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 110679522,
+     "name": "南屯公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6184135027",
+   "lat": 24.142209,
+   "lng": 120.6403871,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 369021060,
+     "name": "犁頭公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6184408422",
+   "lat": 24.1298632,
+   "lng": 120.6416868,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "mapillary": "759075241641357"
+   },
+   "parks": [
+    {
+     "area": 87787246,
+     "name": "豐樂雕塑公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n6271886591",
+   "lat": 24.1495982,
+   "lng": 120.7009119,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 417757110,
+     "name": "新福公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "太平區"
+    }
+   ]
+  },
+  {
+   "ref": "n6380530249",
+   "lat": 24.3063526,
+   "lng": 120.7277417,
+   "tags": {
+    "leisure": "playground",
+    "name": "榕樹下的遊戲場"
+   },
+   "parks": [
+    {
+     "area": 3609330930,
+     "name": "臺中花博后里森林園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "后里區"
+    }
+   ]
+  },
+  {
+   "ref": "n6416315361",
+   "lat": 24.1504388,
+   "lng": 120.6580297,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 260308075,
+     "name": "公益公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n6447135436",
+   "lat": 24.1574035,
+   "lng": 120.67265,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 687720389,
+     "name": "育德園道"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "n6447135440",
+   "lat": 24.1573478,
+   "lng": 120.6713299,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 687720391,
+     "name": "育德園道"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "n6449044031",
+   "lat": 24.156734,
+   "lng": 120.6815979,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:swing": "yes"
+   },
+   "parks": [
+    {
+     "area": 566839534,
+     "name": "中正公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "n6449044045",
+   "lat": 24.1586358,
+   "lng": 120.6772946,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:slide": "yes"
+   },
+   "parks": [
+    {
+     "area": 301621548,
+     "name": "尚德公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "n6449044047",
+   "lat": 24.1572118,
+   "lng": 120.6816826,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:slide": "yes"
+   },
+   "parks": [
+    {
+     "area": 566839534,
+     "name": "中正公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "n6699577846",
+   "lat": 24.1891871,
+   "lng": 120.7360607,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n7826581230",
+   "lat": 24.1554138,
+   "lng": 120.6615588,
+   "tags": {
+    "is_in": "廣三SOGO百貨",
+    "leisure": "playground",
+    "level": "8",
+    "name": "貝兒絲樂園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n7836360170",
+   "lat": 24.1903332,
+   "lng": 120.7860271,
+   "tags": {
+    "leisure": "playground",
+    "name": "體訓場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n10065931719",
+   "lat": 24.1497409,
+   "lng": 120.6581055,
+   "tags": {
+    "leisure": "playground",
+    "opening_hours": "24/7"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n10593512005",
+   "lat": 24.1366927,
+   "lng": 120.6553455,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n10768770217",
+   "lat": 24.2102171,
+   "lng": 120.6333113,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 570573238,
+     "name": "鴨仔潭公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "n10936351744",
+   "lat": 24.2170308,
+   "lng": 120.6550854,
+   "tags": {
+    "leisure": "playground",
+    "name": "三人轉腰器"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "n10936351745",
+   "lat": 24.2169767,
+   "lng": 120.6550852,
+   "tags": {
+    "leisure": "playground",
+    "name": "划船器"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "n10959112017",
+   "lat": 24.2172153,
+   "lng": 120.655098,
+   "tags": {
+    "leisure": "playground",
+    "name": "單人漫步器"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "n11195257437",
+   "lat": 24.2202111,
+   "lng": 120.6188517,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "n11804589100",
+   "lat": 24.1361921,
+   "lng": 120.6912813,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "n11878597657",
+   "lat": 24.1935105,
+   "lng": 120.7339633,
+   "tags": {
+    "leisure": "playground",
+    "name": "喬木茁壯體驗區",
+    "name:en": "Arbor Prosperity Experience Space"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "n13395527976",
+   "lat": 24.2593987,
+   "lng": 120.6490306,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3619990757,
+     "name": "圳前仁愛公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "神岡區"
+    }
+   ]
+  },
+  {
+   "ref": "n13449163374",
+   "lat": 24.2486949,
+   "lng": 120.8340238,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東勢區"
+    }
+   ]
+  },
+  {
+   "ref": "n13906151840",
+   "lat": 24.2029991,
+   "lng": 120.7204613,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "潭子區"
+    }
+   ]
+  },
+  {
+   "ref": "n14184048998",
+   "lat": 24.1938963,
+   "lng": 120.7037243,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "潭子區"
+    }
+   ]
+  },
+  {
+   "ref": "n14184376278",
+   "lat": 24.1989548,
+   "lng": 120.7084408,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "潭子區"
+    }
+   ]
+  },
+  {
+   "ref": "r15453794",
+   "lat": 24.1760926,
+   "lng": 120.7308877,
+   "tags": {
+    "leisure": "playground",
+    "playground:playhouse": "yes",
+    "surface": "rubber",
+    "type": "multipolygon"
+   },
+   "parks": [
+    {
+     "area": 260566634,
+     "name": "和平公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w177501753",
+   "lat": 24.0796846,
+   "lng": 120.7203736,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "霧峰區"
+    }
+   ]
+  },
+  {
+   "ref": "w199973272",
+   "lat": 24.1316426,
+   "lng": 120.7206562,
+   "tags": {
+    "leisure": "playground",
+    "name": "太平區立運動場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "太平區"
+    }
+   ]
+  },
+  {
+   "ref": "w261034499",
+   "lat": 24.1569318,
+   "lng": 120.5388803,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 261034498,
+     "name": "日光郡靜態公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大肚區"
+    }
+   ]
+  },
+  {
+   "ref": "w264254189",
+   "lat": 24.1639166,
+   "lng": 120.5444691,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大肚區"
+    }
+   ]
+  },
+  {
+   "ref": "w264412897",
+   "lat": 24.2374082,
+   "lng": 120.5542673,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "梧棲區"
+    }
+   ]
+  },
+  {
+   "ref": "w264543752",
+   "lat": 24.2744229,
+   "lng": 120.7449775,
+   "tags": {
+    "area": "yes",
+    "leisure": "playground",
+    "name": "舒馬克賽車場",
+    "sport": "motor"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "豐原區"
+    }
+   ]
+  },
+  {
+   "ref": "w292554614",
+   "lat": 24.3151456,
+   "lng": 120.6938378,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "后里區"
+    }
+   ]
+  },
+  {
+   "ref": "w322176168",
+   "lat": 24.1024783,
+   "lng": 120.6203989,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 322176167,
+     "name": "湖日公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "烏日區"
+    }
+   ]
+  },
+  {
+   "ref": "w322820673",
+   "lat": 24.1441377,
+   "lng": 120.6826673,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3610093212,
+     "name": "臺中公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w322820674",
+   "lat": 24.1442797,
+   "lng": 120.683014,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3610093212,
+     "name": "臺中公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w322820675",
+   "lat": 24.1443588,
+   "lng": 120.6829301,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3610093212,
+     "name": "臺中公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w322820677",
+   "lat": 24.1443625,
+   "lng": 120.6827923,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3610093212,
+     "name": "臺中公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w322820678",
+   "lat": 24.144272,
+   "lng": 120.6828336,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3610093212,
+     "name": "臺中公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w322820679",
+   "lat": 24.1443361,
+   "lng": 120.6825425,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3610093212,
+     "name": "臺中公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w347997098",
+   "lat": 24.1757409,
+   "lng": 120.6221,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3605186070,
+     "name": "安和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w374841502",
+   "lat": 24.2795535,
+   "lng": 120.8725186,
+   "tags": {
+    "leisure": "playground",
+    "name": "小泰山訓練場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東勢區"
+    }
+   ]
+  },
+  {
+   "ref": "w377631014",
+   "lat": 24.1652918,
+   "lng": 120.7224619,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301635129,
+     "name": "祥和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377631015",
+   "lat": 24.1652781,
+   "lng": 120.7225707,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301635129,
+     "name": "祥和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377679531",
+   "lat": 24.170519,
+   "lng": 120.7233711,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301635128,
+     "name": "和福公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377719993",
+   "lat": 24.1738112,
+   "lng": 120.7204009,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377819223",
+   "lat": 24.1817425,
+   "lng": 120.7210577,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301625062,
+     "name": "軍功公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377954658",
+   "lat": 24.1756447,
+   "lng": 120.7327278,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377954662",
+   "lat": 24.1638662,
+   "lng": 120.7255133,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 377631451,
+     "name": "昌盛公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377959170",
+   "lat": 24.1798763,
+   "lng": 120.7151673,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301624916,
+     "name": "軍福公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w377959171",
+   "lat": 24.1798767,
+   "lng": 120.7152842,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301624916,
+     "name": "軍福公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w378117692",
+   "lat": 24.1723388,
+   "lng": 120.7084258,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301625508,
+     "name": "水景玫瑰公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w378322925",
+   "lat": 24.1716875,
+   "lng": 120.7171046,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301623162,
+     "name": "景福公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w378676301",
+   "lat": 24.1581397,
+   "lng": 120.7329032,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 317895210,
+     "name": "麗園公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w379036560",
+   "lat": 24.1779462,
+   "lng": 120.7112101,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301624324,
+     "name": "景美公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w381194752",
+   "lat": 24.1771262,
+   "lng": 120.7175747,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 315181914,
+     "name": "建功公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w384154205",
+   "lat": 24.1598287,
+   "lng": 120.7116333,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 224826198,
+     "name": "新安兒童公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "太平區"
+    }
+   ]
+  },
+  {
+   "ref": "w460522164",
+   "lat": 24.1674025,
+   "lng": 120.6972155,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w461381162",
+   "lat": 24.1638574,
+   "lng": 120.7257977,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 377631451,
+     "name": "昌盛公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w469438138",
+   "lat": 24.2333923,
+   "lng": 120.7109569,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 469438135,
+     "name": "栗林里公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "潭子區"
+    }
+   ]
+  },
+  {
+   "ref": "w506957350",
+   "lat": 24.3814835,
+   "lng": 121.3047662,
+   "tags": {
+    "leisure": "playground",
+    "name": "兒童遊戲區"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "和平區"
+    }
+   ]
+  },
+  {
+   "ref": "w519272387",
+   "lat": 24.1792194,
+   "lng": 120.706054,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 376621305,
+     "name": "南興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w519272391",
+   "lat": 24.1790571,
+   "lng": 120.7083514,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 376621305,
+     "name": "南興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w519924954",
+   "lat": 24.3499264,
+   "lng": 120.6249566,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大甲區"
+    }
+   ]
+  },
+  {
+   "ref": "w526925882",
+   "lat": 24.2580958,
+   "lng": 120.5433678,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 526925881,
+     "name": "南簡公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "梧棲區"
+    }
+   ]
+  },
+  {
+   "ref": "w527008406",
+   "lat": 24.2480012,
+   "lng": 120.5292003,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 313373003,
+     "name": "梧棲區運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "梧棲區"
+    }
+   ]
+  },
+  {
+   "ref": "w527027159",
+   "lat": 24.2547491,
+   "lng": 120.5323578,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 526931535,
+     "name": "情人公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "梧棲區"
+    }
+   ]
+  },
+  {
+   "ref": "w571825749",
+   "lat": 24.3253002,
+   "lng": 120.7005388,
+   "tags": {
+    "attraction": "big_wheel",
+    "building": "yes",
+    "leisure": "playground",
+    "name": "天空之夢摩天輪",
+    "operator": "麗寶",
+    "tourism": "attraction"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "后里區"
+    }
+   ]
+  },
+  {
+   "ref": "w572851003",
+   "lat": 24.1861548,
+   "lng": 120.6866421,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301618135,
+     "name": "仁和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w572851005",
+   "lat": 24.1861539,
+   "lng": 120.6866444,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301618135,
+     "name": "仁和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w583447363",
+   "lat": 24.176205,
+   "lng": 120.626173,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 569987770,
+     "name": "協仁公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w583449262",
+   "lat": 24.1756037,
+   "lng": 120.6191955,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 230183332,
+     "name": "協和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w583484308",
+   "lat": 24.1775432,
+   "lng": 120.6163674,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 109565740,
+     "name": "世貿公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w585327316",
+   "lat": 24.1754239,
+   "lng": 120.619145,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 230183332,
+     "name": "協和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w591456745",
+   "lat": 24.2651786,
+   "lng": 120.536691,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 639689848,
+     "name": "頂魚寮公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "梧棲區"
+    }
+   ]
+  },
+  {
+   "ref": "w611591008",
+   "lat": 24.1769062,
+   "lng": 120.6135436,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 611591007,
+     "name": "福恩公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w628195790",
+   "lat": 24.2937677,
+   "lng": 120.6108396,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 107202015,
+     "name": "清水大楊油庫休憩公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "清水區"
+    }
+   ]
+  },
+  {
+   "ref": "w628289880",
+   "lat": 24.2689328,
+   "lng": 120.5489607,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 628289876,
+     "name": "槺新公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "清水區"
+    }
+   ]
+  },
+  {
+   "ref": "w628291790",
+   "lat": 24.2757991,
+   "lng": 120.5357029,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 547656654,
+     "name": "槺海公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "清水區"
+    }
+   ]
+  },
+  {
+   "ref": "w628554431",
+   "lat": 24.2651306,
+   "lng": 120.5538617,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 526985220,
+     "name": "牛埔仔運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "清水區"
+    }
+   ]
+  },
+  {
+   "ref": "w735026101",
+   "lat": 24.339811,
+   "lng": 120.6313044,
+   "tags": {
+    "leisure": "playground",
+    "name": "溜滑梯"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大甲區"
+    }
+   ]
+  },
+  {
+   "ref": "w775871487",
+   "lat": 24.0865309,
+   "lng": 120.7031743,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3610745865,
+     "name": "921紀念公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大里區"
+    }
+   ]
+  },
+  {
+   "ref": "w782583841",
+   "lat": 24.1496224,
+   "lng": 120.7010695,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 417757110,
+     "name": "新福公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "太平區"
+    }
+   ]
+  },
+  {
+   "ref": "w808266732",
+   "lat": 24.2405631,
+   "lng": 120.7042927,
+   "tags": {
+    "leisure": "playground",
+    "name": "操場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "豐原區"
+    }
+   ]
+  },
+  {
+   "ref": "w808266733",
+   "lat": 24.2399419,
+   "lng": 120.7036821,
+   "tags": {
+    "leisure": "playground",
+    "name": "操場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "豐原區"
+    }
+   ]
+  },
+  {
+   "ref": "w850719214",
+   "lat": 24.15111,
+   "lng": 120.6666431,
+   "tags": {
+    "blind": "no",
+    "leisure": "playground",
+    "playground": "structure",
+    "wheelchair": "yes"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w918350773",
+   "lat": 24.1330529,
+   "lng": 120.6719871,
+   "tags": {
+    "access": "private",
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1039298980",
+   "lat": 24.1569274,
+   "lng": 120.6907279,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w1043671815",
+   "lat": 24.3320982,
+   "lng": 120.7417348,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "后里區"
+    }
+   ]
+  },
+  {
+   "ref": "w1051749593",
+   "lat": 24.1988426,
+   "lng": 120.5622211,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 353969853,
+     "name": "拍瀑拉水裡社公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "龍井區"
+    }
+   ]
+  },
+  {
+   "ref": "w1073527452",
+   "lat": 24.2770483,
+   "lng": 120.7768597,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "name": "運動休閒廣場",
+    "playground:theme": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "石岡區"
+    }
+   ]
+  },
+  {
+   "ref": "w1136951402",
+   "lat": 24.1739263,
+   "lng": 120.7216756,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:structure": "yes"
+   },
+   "parks": [
+    {
+     "area": 305934383,
+     "name": "寶之林園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1145582582",
+   "lat": 24.1049845,
+   "lng": 120.7263346,
+   "tags": {
+    "leisure": "playground",
+    "name": "盪鞦韆"
+   },
+   "parks": [
+    {
+     "area": 1051186692,
+     "name": "光隆國小外操場"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "太平區"
+    }
+   ]
+  },
+  {
+   "ref": "w1145582583",
+   "lat": 24.1051072,
+   "lng": 120.7264529,
+   "tags": {
+    "leisure": "playground",
+    "name": "溜滑梯"
+   },
+   "parks": [
+    {
+     "area": 1051186692,
+     "name": "光隆國小外操場"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "太平區"
+    }
+   ]
+  },
+  {
+   "ref": "w1161369498",
+   "lat": 24.2131473,
+   "lng": 120.6540588,
+   "tags": {
+    "leisure": "playground",
+    "name": "單槓"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1161369499",
+   "lat": 24.2132627,
+   "lng": 120.6540996,
+   "tags": {
+    "leisure": "playground",
+    "name": "鳥巢鞦韆"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1172762381",
+   "lat": 24.1485051,
+   "lng": 120.6649867,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 219484629,
+     "name": "草悟道"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1174708483",
+   "lat": 24.2186747,
+   "lng": 120.655375,
+   "tags": {
+    "leisure": "playground",
+    "name": "溜滑梯"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1174708484",
+   "lat": 24.2185412,
+   "lng": 120.655319,
+   "tags": {
+    "leisure": "playground",
+    "name": "戶外健身器材"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1174708485",
+   "lat": 24.218545,
+   "lng": 120.6554035,
+   "tags": {
+    "leisure": "playground",
+    "name": "鞦韆"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1174715905",
+   "lat": 24.213022,
+   "lng": 120.6540598,
+   "tags": {
+    "leisure": "playground",
+    "name": "沙坑"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1174715906",
+   "lat": 24.2146201,
+   "lng": 120.6544183,
+   "tags": {
+    "leisure": "playground",
+    "name": "單槓"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1177181722",
+   "lat": 24.217123,
+   "lng": 120.6550806,
+   "tags": {
+    "leisure": "playground",
+    "name": "單槓"
+   },
+   "parks": [
+    {
+     "area": 3614650189,
+     "name": "十四張圳水岸公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大雅區"
+    }
+   ]
+  },
+  {
+   "ref": "w1203856051",
+   "lat": 24.3360599,
+   "lng": 120.6216566,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1203856050,
+     "name": "義和里綠地公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大甲區"
+    }
+   ]
+  },
+  {
+   "ref": "w1203860673",
+   "lat": 24.3526273,
+   "lng": 120.6314663,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大甲區"
+    }
+   ]
+  },
+  {
+   "ref": "w1203866632",
+   "lat": 24.380721,
+   "lng": 120.5854494,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大安區"
+    }
+   ]
+  },
+  {
+   "ref": "w1204688042",
+   "lat": 24.3827412,
+   "lng": 120.6529554,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1204688041,
+     "name": "孟春兒童遊樂場"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "大甲區"
+    }
+   ]
+  },
+  {
+   "ref": "w1231877026",
+   "lat": 24.1366925,
+   "lng": 120.6940398,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1155680130,
+     "name": "泉源兒童交通主題公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w1231877027",
+   "lat": 24.1364077,
+   "lng": 120.6937319,
+   "tags": {
+    "leisure": "playground",
+    "name": "視野死角實境體驗"
+   },
+   "parks": [
+    {
+     "area": 1155680130,
+     "name": "泉源兒童交通主題公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w1231877028",
+   "lat": 24.1363653,
+   "lng": 120.6935926,
+   "tags": {
+    "leisure": "playground",
+    "name": "行前教育中心"
+   },
+   "parks": [
+    {
+     "area": 1155680130,
+     "name": "泉源兒童交通主題公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w1231877029",
+   "lat": 24.1364837,
+   "lng": 120.6938303,
+   "tags": {
+    "leisure": "playground",
+    "name": "體健設施區"
+   },
+   "parks": [
+    {
+     "area": 1155680130,
+     "name": "泉源兒童交通主題公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w1231877030",
+   "lat": 24.1365909,
+   "lng": 120.6939735,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1155680130,
+     "name": "泉源兒童交通主題公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w1231877031",
+   "lat": 24.1366839,
+   "lng": 120.6941905,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1155680130,
+     "name": "泉源兒童交通主題公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w1239196788",
+   "lat": 24.2815026,
+   "lng": 120.6017085,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "清水區"
+    }
+   ]
+  },
+  {
+   "ref": "w1316659561",
+   "lat": 24.1555322,
+   "lng": 120.7001738,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1188559890,
+     "name": "豬事圓滿公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北區"
+    }
+   ]
+  },
+  {
+   "ref": "w1353588934",
+   "lat": 24.1781679,
+   "lng": 120.7229491,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 310789190,
+     "name": "和順公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1373584005",
+   "lat": 24.1856108,
+   "lng": 120.7014957,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301617992,
+     "name": "松勇公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1427052285",
+   "lat": 24.1873751,
+   "lng": 120.6658206,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 618281000,
+     "name": "敦化公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1451586647",
+   "lat": 24.1607683,
+   "lng": 120.6548447,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 551194321,
+     "name": "何厝公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1454286430",
+   "lat": 24.1816836,
+   "lng": 120.720994,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301625062,
+     "name": "軍功公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1454380120",
+   "lat": 24.1820279,
+   "lng": 120.7004998,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3619894388,
+     "name": "舊社公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1455038312",
+   "lat": 24.1387381,
+   "lng": 120.6525668,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 544187239,
+     "name": "大進公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1455399874",
+   "lat": 24.160069,
+   "lng": 120.6587227,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 932687164,
+     "name": "大有公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1462175464",
+   "lat": 24.1899578,
+   "lng": 120.7049797,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1094702864,
+     "name": "琤瑽草原公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1467906313",
+   "lat": 24.2113909,
+   "lng": 120.7013214,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3620106828,
+     "name": "潭子運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "潭子區"
+    }
+   ]
+  },
+  {
+   "ref": "w1474908997",
+   "lat": 24.2523244,
+   "lng": 120.7322122,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 295073783,
+     "name": "三陽運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "豐原區"
+    }
+   ]
+  },
+  {
+   "ref": "w1493869298",
+   "lat": 24.1842175,
+   "lng": 120.5747044,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1493869293,
+     "name": "兒童公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "龍井區"
+    }
+   ]
+  },
+  {
+   "ref": "w1496475244",
+   "lat": 24.0591141,
+   "lng": 120.7239321,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "霧峰區"
+    }
+   ]
+  },
+  {
+   "ref": "w1501275212",
+   "lat": 24.1330033,
+   "lng": 120.6595875,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 288738978,
+     "name": "半平厝公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南區"
+    }
+   ]
+  },
+  {
+   "ref": "w1501275213",
+   "lat": 24.1323302,
+   "lng": 120.6602722,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 288738978,
+     "name": "半平厝公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "南區"
+    }
+   ]
+  },
+  {
+   "ref": "w1529638872",
+   "lat": 24.1600417,
+   "lng": 120.720082,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 378682567,
+     "name": "廊興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1530482263",
+   "lat": 24.1346267,
+   "lng": 120.6587127,
+   "tags": {
+    "access": "permissive",
+    "leisure": "playground",
+    "operator": "大勇國小總務處",
+    "surface": "paved"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1530482264",
+   "lat": 24.1343244,
+   "lng": 120.6587148,
+   "tags": {
+    "access": "permissive",
+    "leisure": "playground",
+    "operator": "大勇國小總務處",
+    "surface": "paved"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1530482265",
+   "lat": 24.1342023,
+   "lng": 120.6583386,
+   "tags": {
+    "access": "permissive",
+    "leisure": "playground",
+    "operator": "大勇國小總務處",
+    "surface": "grass_paver"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1530482266",
+   "lat": 24.1339308,
+   "lng": 120.6588858,
+   "tags": {
+    "access": "permissive",
+    "leisure": "playground",
+    "operator": "大勇國小總務處",
+    "surface": "paved"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1534149084",
+   "lat": 24.1363572,
+   "lng": 120.6578739,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "surface": "tartan"
+   },
+   "parks": [
+    {
+     "area": 541664257,
+     "name": "土庫公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1550077936",
+   "lat": 24.1345733,
+   "lng": 120.6640443,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:theme": "swing",
+    "surface": "tartan"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1551722255",
+   "lat": 24.1377408,
+   "lng": 120.6629699,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:theme": "play",
+    "surface": "tartan"
+   },
+   "parks": [
+    {
+     "area": 240137749,
+     "name": "美術園道 C段"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1551722256",
+   "lat": 24.1376942,
+   "lng": 120.6629702,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:theme": "swing",
+    "surface": "tartan"
+   },
+   "parks": [
+    {
+     "area": 240137749,
+     "name": "美術園道 C段"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1553092082",
+   "lat": 24.2017979,
+   "lng": 120.7045432,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1547753783,
+     "name": "大新社區公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "潭子區"
+    }
+   ]
+  },
+  {
+   "ref": "w1558323188",
+   "lat": 24.1387031,
+   "lng": 120.6619405,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "material": "plastic",
+    "playground:theme": "swing",
+    "surface": "artificial_turf",
+    "wheelchair": "yes"
+   },
+   "parks": [
+    {
+     "area": 571710110,
+     "name": "美村公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1558323189",
+   "lat": 24.138846,
+   "lng": 120.6619248,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "playground:theme": "play",
+    "surface": "artificial_turf"
+   },
+   "parks": [
+    {
+     "area": 571710110,
+     "name": "美村公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1563695522",
+   "lat": 24.1795467,
+   "lng": 120.6850453,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 273403690,
+     "name": "三分埔公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "北屯區"
+    }
+   ]
+  },
+  {
+   "ref": "w1566683509",
+   "lat": 24.1385315,
+   "lng": 120.6640638,
+   "tags": {
+    "access": "yes",
+    "blind": "yes",
+    "leisure": "playground",
+    "playground:theme": "swing",
+    "surface": "tartan",
+    "wheelchair": "yes"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1566683510",
+   "lat": 24.1388804,
+   "lng": 120.6639769,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "surface": "tartan"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1566683511",
+   "lat": 24.1389151,
+   "lng": 120.6640644,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "surface": "tartan"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w1567018745",
+   "lat": 24.1396183,
+   "lng": 120.6645193,
+   "tags": {
+    "access": "private",
+    "leisure": "playground",
+    "surface": "tartan"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  }
+ ]
+}

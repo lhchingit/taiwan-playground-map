@@ -20,6 +20,7 @@ const places = [
   ...load('mlc'),
   ...load('tpe'),
   ...load('nwt'),
+  ...load('txg'),
 ];
 // 新竹市東區與竹北市交界附近（新竹市的東區、北區與竹北市的場地都在 10 公里內）
 const ORIGIN = { lat: 24.815, lng: 121.0 };
@@ -91,5 +92,15 @@ describe('跨縣市距離篩選（臺北市＋新北市）', () => {
     const cities = new Set(results.map((p) => cityOf(p.id)));
     expect(cities.has('tpe')).toBe(true);
     expect(cities.has('nwt')).toBe(true);
+  });
+});
+
+describe('臺中市（目前不跟其他縣市相鄰）', () => {
+  // 臺中火車站
+  const STATION = { lat: 24.1372, lng: 120.6869 };
+  it('10 公里內只有臺中市的場地', () => {
+    const { results } = filterPlaces(places, { ...DEFAULT_FILTERS, maxKm: 10 }, STATION);
+    expect(results.length).toBeGreaterThan(0);
+    expect(new Set(results.map((p) => cityOf(p.id)))).toEqual(new Set(['txg']));
   });
 });

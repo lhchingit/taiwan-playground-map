@@ -29,6 +29,20 @@
   - 遊具全部是 `u`，靠家長回報補。
 - **Overpass：** 新北市的遊戲場多、範圍大，查所在公園的 is_in 常逾時。`lib/overpass.py` 的 `within` 改成：一批逾時就拆成兩半再查。
 
+## 臺中市（txg）
+
+- **資料：** 以 OSM 遊戲場起步（decisions D20）。建設局「臺中市公園綠地清冊」（[88288](https://data.gov.tw/dataset/88288)）只用來補地址（設置地點）與面積。
+  - 清冊沒有遊具；「兒童遊樂場用地」（219 筆）是都市計畫的用地分類，不代表現場有遊具，所以不單獨上地圖。
+  - 清冊的座標不使用。
+- **指令：** `python3 scripts/fetch_osm_city.py txg`、`python3 scripts/fetch_txg_parks.py` → `python3 scripts/import_osm_city.py txg`
+- **進度（2026-10-13）：** 資料已準備好、**未上線**。
+  - OSM 遊戲場 202 處（衛福部統計 689 處）：
+    - **上地圖 118 處**：同一個公園裡的 39 處遊戲區合併進去。
+    - **沒有名稱 45 處**：`data/review/txg/unnamed.csv`，之後一起人工命名。
+  - **補上地址與面積 72 處**：`official-matched.csv`。同一區有多個相符的：0。
+  - 遊具全部是 `u`。
+- 官方清單補充的程式改成新北市、臺中市共用（`sources/park_lists.py`）。新北市的輸出不變。
+
 ## 完成標準（每個縣市）
 
 - [ ] 該縣市的轉接器、設施對照與測試已合併。
