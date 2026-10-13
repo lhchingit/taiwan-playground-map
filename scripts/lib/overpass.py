@@ -56,11 +56,23 @@ def parse_is_in(elements):
     return out
 
 
-def within(points):
-    """[(ref, (lat, lon))] → {ref: {"parks": […], "districts": […]}}，分批查詢"""
+def within(points, query=None):
+    """[(ref, (lat, lon))] → {ref: {"parks": […], "districts": […]}}，分批查詢。
+    一批一直逾時（公開主機忙碌、範圍大的縣市）時拆成兩半再查，直到一次一個點；一個點也查不到才放棄。"""
+    query = query or (lambda batch: overpass(is_in_query(batch), tries=3)[1])
     out = {}
-    for i in range(0, len(points), BATCH):
+
+    def run(batch):
         time.sleep(2)  # Overpass 的使用規範：不要連續大量查詢
-        _, d = overpass(is_in_query(points[i:i + BATCH]))
-        out.update(parse_is_in(d["elements"]))
+        try:
+            out.update(parse_is_in(query(batch)["elements"]))
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 500, 502, 503, 504) or len(batch) == 1:
+                raise
+            half = len(batch) // 2
+            run(batch[:half])
+            run(batch[half:])
+
+    for i in range(0, len(points), BATCH):
+        run(points[i:i + BATCH])
     return out

@@ -35,6 +35,13 @@ CITIES = {
         "outputs": ["data/seed/tpe/places.json", "data/seed/tpe/places.csv"]
         + [f"data/review/tpe/{k}.csv" for k in ["odd-names", "out-of-bounds", "districts-unknown"]],
     },
+    # 新北市：OSM 遊戲場，官方公園清單只補地址
+    "nwt": {
+        "scripts": [["scripts/import_osm_city.py", "nwt"]],
+        "outputs": ["data/seed/nwt/places.json", "data/seed/nwt/places.csv"]
+        + [f"data/review/nwt/{k}.csv" for k in ["unnamed", "merged", "excluded", "official-matched",
+                                                "official-ambiguous"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],

@@ -149,7 +149,7 @@ DATABASE_URL=... SITE_URL=... REVALIDATE_SECRET=... pnpm city launch hsq --allow
 
 ## 新增其他縣市
 
-`cities` 表目前有新竹市（hsc）、新竹縣（hsq）、桃園市（tyc）、苗栗縣（mlc）、臺北市（tpe，0010 migration）。測試另外會暫時建立只存在於測試裡的測試縣（tst，`tests/db/test-city.ts`），不在 migration 裡。新增其他縣市時：
+`cities` 表目前有新竹市（hsc）、新竹縣（hsq）、桃園市（tyc）、苗栗縣（mlc）、臺北市（tpe，0010 migration）、新北市（nwt，0011）。測試另外會暫時建立只存在於測試裡的測試縣（tst，`tests/db/test-city.ts`），不在 migration 裡。新增其他縣市時：
 
 1. 寫一個 migration 新增 `cities` 資料列（`code` 三碼、`slug`、`name`），`launched_at` 留空。
 2. 在 `scripts/fetch_city_bounds.py` 的 `CITIES` 加上這個縣市，執行後提交 `data/raw/osm-city-bounds.json`。

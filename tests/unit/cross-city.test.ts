@@ -1,4 +1,4 @@
-// 跨縣市的距離篩選（P4 完成標準）：用新竹市、新竹縣、桃園市、苗栗縣的種子資料，從交界附近出發
+// 跨縣市的距離篩選（P4、P5 完成標準）：用各縣市的種子資料，從交界附近出發
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_FILTERS, filterPlaces, type FilterPlace, type Filters } from '@/lib/filter';
@@ -13,7 +13,14 @@ function load(city: string): FilterPlace[] {
   });
 }
 
-const places = [...load('hsc'), ...load('hsq'), ...load('tyc'), ...load('mlc')];
+const places = [
+  ...load('hsc'),
+  ...load('hsq'),
+  ...load('tyc'),
+  ...load('mlc'),
+  ...load('tpe'),
+  ...load('nwt'),
+];
 // 新竹市東區與竹北市交界附近（新竹市的東區、北區與竹北市的場地都在 10 公里內）
 const ORIGIN = { lat: 24.815, lng: 121.0 };
 const run = (f: Partial<Filters>) => filterPlaces(places, { ...DEFAULT_FILTERS, ...f }, ORIGIN);
@@ -73,5 +80,16 @@ describe('跨縣市距離篩選（苗栗縣）', () => {
     const cities = new Set(results.map((p) => cityOf(p.id)));
     expect(cities.has('hsc')).toBe(true);
     expect(cities.has('mlc')).toBe(true);
+  });
+});
+
+describe('跨縣市距離篩選（臺北市＋新北市）', () => {
+  // 中正橋附近（臺北市中正區與新北市永和區交界）
+  const BORDER = { lat: 25.01, lng: 121.51 };
+  it('5 公里內同時有臺北市與新北市的場地', () => {
+    const { results } = filterPlaces(places, { ...DEFAULT_FILTERS, maxKm: 5 }, BORDER);
+    const cities = new Set(results.map((p) => cityOf(p.id)));
+    expect(cities.has('tpe')).toBe(true);
+    expect(cities.has('nwt')).toBe(true);
   });
 });
