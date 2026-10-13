@@ -5,6 +5,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+from lib.geo import distance_m
 from lib.opendata import USER_AGENT
 
 OVERPASS = "https://overpass-api.de/api/interpreter"
@@ -56,16 +57,15 @@ def parse_is_in(elements):
     return out
 
 
-def within(points, query=None):
-    """[(ref, (lat, lon))] → {ref: {"parks": […], "districts": […]}}，分批查詢。
+def batched(points, query, parse):
+    """分批查詢：query(一批點) → Overpass 回應；parse(elements) → {ref: …}。
     一批一直逾時（公開主機忙碌、範圍大的縣市）時拆成兩半再查，直到一次一個點；一個點也查不到才放棄。"""
-    query = query or (lambda batch: overpass(is_in_query(batch), tries=3)[1])
     out = {}
 
     def run(batch):
         time.sleep(2)  # Overpass 的使用規範：不要連續大量查詢
         try:
-            out.update(parse_is_in(query(batch)["elements"]))
+            out.update(parse(query(batch)["elements"]))
         except urllib.error.HTTPError as e:
             if e.code not in (429, 500, 502, 503, 504) or len(batch) == 1:
                 raise
@@ -75,4 +75,66 @@ def within(points, query=None):
 
     for i in range(0, len(points), BATCH):
         run(points[i:i + BATCH])
+    return out
+
+
+def within(points, query=None):
+    """[(ref, (lat, lon))] → {ref: {"parks": […], "districts": […]}}"""
+    query = query or (lambda batch: overpass(is_in_query(batch), tries=3)[1])
+    return batched(points, query, parse_is_in)
+
+
+# 命名工具的提示：附近有名稱的地點（scripts/fetch_osm_nearby.py）
+NEARBY_KINDS = [
+    ("leisure", "^(park|playground|garden)$"),
+    ("amenity", "^(school|kindergarten|community_centre)$"),
+    ("landuse", "^residential$"),
+    ("place", "^(neighbourhood|quarter)$"),
+]
+KIND_LABEL = {
+    "park": "公園", "playground": "遊戲場", "garden": "花園", "school": "學校", "kindergarten": "幼兒園",
+    "community_centre": "社區活動中心", "residential": "住宅區", "neighbourhood": "鄰里", "quarter": "鄰里",
+}
+NEARBY_MAX = 8
+
+
+def nearby_query(points, radius=150):
+    """每個點前面放一個 marker，回應依序是 marker、附近有名稱的地點（中心點與標籤）"""
+    parts = ["[out:json][timeout:180];"]
+    for r, (lat, lon) in points:
+        around = f"(around:{radius},{lat},{lon})"
+        union = "".join(f'nwr{around}["name"]["{k}"~"{v}"];' for k, v in NEARBY_KINDS)
+        parts.append(f'make marker ref="{r}";out;({union});out center tags;')
+    return "".join(parts)
+
+
+def kind_of(tags):
+    for k, _ in NEARBY_KINDS:
+        if tags.get(k) in KIND_LABEL:
+            return KIND_LABEL[tags[k]]
+    return "其他"
+
+
+def parse_nearby(elements, coords, own=None):
+    """coords：{ref: (lat, lon)}；own：{ref: 遊戲場本身的 OSM ref}（不列自己）。
+    → {ref: [{name, kind, osm, distance_m}]}，依距離排序，每個點最多 NEARBY_MAX 個，同一個 OSM 物件只列一次"""
+    out, cur = {}, None
+    for e in elements:
+        t = e.get("tags", {})
+        if e["type"] == "marker":
+            cur = t["ref"]
+            out.setdefault(cur, [])
+            continue
+        if cur is None or not t.get("name"):
+            continue
+        ref = f"{e['type'][0]}{e['id']}"
+        if ref == (own or {}).get(cur) or any(x["osm"] == ref for x in out[cur]):
+            continue
+        c = e.get("center", e)
+        if "lat" not in c:
+            continue
+        out[cur].append({"name": t["name"].strip(), "kind": kind_of(t), "osm": ref,
+                         "distance_m": round(distance_m(coords[cur], (c["lat"], c["lon"])))})
+    for ref, items in out.items():
+        out[ref] = sorted(items, key=lambda x: (x["distance_m"], x["osm"]))[:NEARBY_MAX]
     return out

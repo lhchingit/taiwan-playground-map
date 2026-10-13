@@ -10,11 +10,11 @@
   - 同名的公園（特色遊戲場與埤塘公園都有）合併成一處
 """
 import csv
-import math
 import re
 from pathlib import Path
 
 from lib.attrs import map_items
+from lib.geo import distance_m
 
 SOURCE_ID = "tycg"
 SOURCE_SHORT = "桃園市公園資料"
@@ -132,12 +132,6 @@ AREA_OFFSET = {"w": 2400000000, "r": 3600000000}
 
 def area_id(ref):
     return AREA_OFFSET[ref[0]] + int(ref[1:]) if ref and ref[0] in AREA_OFFSET else None
-
-
-def distance_m(a, b):
-    lat1, lng1, lat2, lng2 = map(math.radians, (a[0], a[1], b[0], b[1]))
-    h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lng2 - lng1) / 2) ** 2
-    return 2 * 6371000 * math.asin(math.sqrt(h))
 
 
 def name_key(name):

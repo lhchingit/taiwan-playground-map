@@ -21,6 +21,7 @@
     "seed": "tsx scripts/seed.ts",
     "city": "tsx scripts/city.ts",
     "tool:locate": "tsx scripts/tools/locate/main.ts",
+    "tool:name": "tsx scripts/tools/name/main.ts",
     "regen:filter-cases": "tsx scripts/regen-filter-cases.ts",
     "typegen": "supabase gen types typescript --local --schema public > src/types/database.ts",
     "env:local": "node scripts/write-env-local.mjs",
