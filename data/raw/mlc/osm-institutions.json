@@ -1,0 +1,23 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-14",
+ "osm_json_sha256": "cc253aa94be8375d16aeb2bef2fd4613c758fc8247192ca3ed65f98fc428eff2",
+ "note": "遊戲場所在的學校、幼兒園、政府機關、軍營（只列在範圍內的）；匯入時自動排除",
+ "inside": {
+  "w1121055344": [
+   {
+    "osm": "w-1816845754",
+    "kind": "學校",
+    "name": "新埔國小"
+   }
+  ],
+  "w521157144": [
+   {
+    "osm": "w-2076576567",
+    "kind": "學校",
+    "name": "公館國小"
+   }
+  ]
+ }
+}

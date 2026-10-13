@@ -138,3 +138,51 @@ def parse_nearby(elements, coords, own=None):
     for ref, items in out.items():
         out[ref] = sorted(items, key=lambda x: (x["distance_m"], x["osm"]))[:NEARBY_MAX]
     return out
+
+
+# 自動排除：遊戲場位在學校、幼兒園、政府機關、軍營的範圍內（scripts/fetch_osm_institutions.py，decisions D20）。
+# 大學、專科（university／college）不算：多數校園對外開放。
+INSTITUTION_KINDS = [
+    ("amenity", "^(kindergarten|school)$"),
+    ("amenity", "^(townhall|police|fire_station)$"),
+    ("office", "^government$"),
+    ("landuse", "^military$"),
+]
+INSTITUTION_LABEL = {
+    "kindergarten": "幼兒園", "school": "學校", "townhall": "政府機關", "police": "警察局", "fire_station": "消防隊",
+    "government": "政府機關", "military": "軍營",
+}
+
+
+def institution_query(points):
+    """每個點前面放一個 marker，回應依序是 marker、所在的學校／機關區域（有沒有名稱都算）"""
+    parts = ["[out:json][timeout:180];"]
+    for r, (lat, lon) in points:
+        parts.append(f'make marker ref="{r}";out;is_in({lat},{lon})->.x;')
+        parts.append("".join(f'area.x["{k}"~"{v}"];out tags;' for k, v in INSTITUTION_KINDS))
+    return "".join(parts)
+
+
+def area_ref(area_id):
+    """Overpass 的 area id → OSM ref（way 加 2400000000、relation 加 3600000000）"""
+    return f"r{area_id - 3600000000}" if area_id >= 3600000000 else f"w{area_id - 2400000000}"
+
+
+def parse_institutions(elements):
+    """{點的 ref: [{"osm", "kind", "name"}]}；同一個區域只列一次，依 OSM ref 排序"""
+    out, cur = {}, None
+    for e in elements:
+        t = e.get("tags", {})
+        if e["type"] == "marker":
+            cur = t["ref"]
+            out.setdefault(cur, [])
+            continue
+        if cur is None:
+            continue
+        kind = next((INSTITUTION_LABEL[t[k]] for k, _ in INSTITUTION_KINDS if t.get(k) in INSTITUTION_LABEL), None)
+        if kind is None:
+            continue
+        ref = area_ref(e["id"])
+        if all(x["osm"] != ref for x in out[cur]):
+            out[cur].append({"osm": ref, "kind": kind, "name": (t.get("name") or "").strip()})
+    return {k: sorted(v, key=lambda x: x["osm"]) for k, v in out.items()}

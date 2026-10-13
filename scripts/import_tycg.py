@@ -5,9 +5,10 @@
 
 輸入：data/raw/tyc/tycg-parks.json、osm-matches.tsv、manual-review.tsv（人工定位工具）、
       item-decisions.tsv（對不到的設施用語，人工決定怎麼處理）、
-      osm.json（scripts/fetch_osm_city.py tyc）、manual-names.tsv（OSM 遊戲場的人工命名或排除）
+      osm.json（scripts/fetch_osm_city.py tyc）、manual-names.tsv（OSM 遊戲場的人工命名或排除）、
+      osm-institutions.json（位在學校、機關範圍內的 OSM 遊戲場，自動排除）
 輸出：data/seed/tyc/places.json、places.csv；data/review/tyc/ 的 unmatched、match-review、unmapped-items、
-      no-playground（官方資料）、unnamed、merged、excluded、osm-covered、osm-near-official（OSM 遊戲場）（CSV），
+      no-playground（官方資料）、unnamed、merged、excluded、excluded-institution、osm-covered、osm-near-official（OSM 遊戲場）（CSV），
       以及人工定位工具讀的 to-locate.json
 不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
 """
@@ -131,7 +132,10 @@ def main():
     osm_raw = read_json(RAW / "osm.json")
     playgrounds = osm_raw["playgrounds"]
     names = osm.load_manual(RAW / "manual-names.tsv", {p["ref"] for p in playgrounds})
-    extra, covered, near = tycg.split_osm(playgrounds, officials, names)
+    # 位在學校、機關範圍內的先排除（不影響官方場地）
+    kept, in_institution = osm.split_institutions(
+        playgrounds, osm.load_institutions(RAW / "osm-institutions.json", RAW / "osm.json"))
+    extra, covered, near = tycg.split_osm(kept, officials, names)
     groups, unnamed, excluded = osm.group_playgrounds(extra, names)
     osm_places = osm.to_places(groups, tycg.CITY, keys)
     taken = {p["name"] for p in places}
@@ -174,6 +178,9 @@ def main():
                if len(g["members"]) > 1])
     write_csv(out / "excluded.csv", ["OSM", "行政區", "OSM 連結"],
               [[p["ref"], osm.district_of(p) or "", link(p["ref"])] for p in excluded])
+    write_csv(out / "excluded-institution.csv", ["OSM", "行政區", "所在的學校／機關", "OSM 連結"],
+              [[p["ref"], osm.district_of(p) or "", osm.institution_label(at), link(p["ref"])]
+               for p, at in in_institution])
     write_csv(out / "osm-covered.csv", ["OSM", "所在公園", "官方場地 id", "官方場地", "依據", "OSM 連結"],
               [[p["ref"], "、".join(x["name"] for x in p["parks"]), o["id"], o["name"], why, link(p["ref"])]
                for p, o, why in covered])
@@ -186,7 +193,8 @@ def main():
     print(f"桃園市：上地圖 {len(places)}｜待定位 {len(review['unmatched'])}｜待確認比對 {len(review['match-review'])}"
           f"｜沒有遊具 {len(review['no-playground'])}｜有對不到的設施文字 {len(review['unmapped-items'])} 處")
     print(f"  OSM 遊戲場 {len(playgrounds)}：官方已涵蓋 {len(covered)}｜待判斷 {len(near)}｜"
-          f"補充場地 {len(osm_places)}｜沒有名稱 {len(unnamed)}｜排除 {len(excluded)}")
+          f"補充場地 {len(osm_places)}｜沒有名稱 {len(unnamed)}｜排除 {len(excluded)}"
+          f"｜學校／機關內 {len(in_institution)}")
 
 
 if __name__ == "__main__":
