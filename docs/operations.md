@@ -147,6 +147,20 @@ DATABASE_URL=... SITE_URL=... REVALIDATE_SECRET=... pnpm city launch hsq --allow
 
 不加 `--allow-remote` 時，工具會拒絕連到本機以外的資料庫。
 
+## 人工命名（沒有名稱的 OSM 遊戲場）
+
+OSM 匯入的遊戲場沒有名稱、也不在有名稱的公園裡時，不會上地圖（decisions D20），要人工命名或排除。
+
+1. 下載附近的 OSM 名稱（提示用，可以跳過）：`python3 scripts/fetch_osm_nearby.py <縣市>`，結果是 `data/raw/<縣市>/osm-nearby.json`。
+2. 開工具：`pnpm tool:name` → http://localhost:4101。
+   - 左邊選縣市與項目，右邊地圖中心就是那個遊戲場。
+   - 附近的 OSM 名稱點一下會填進名稱，依據自動選「OSM 地圖上可見的名稱」；**一定要在地圖上確認後再存**。
+   - 快捷鍵：Enter 儲存並到下一筆、E 或 Esc 排除、S 跳過、↑／↓ 換一筆。
+   - 依據只能是「OSM 地圖上可見的名稱」「實地確認」「政府公告」；**不可以用 Google 地圖查名稱**。查不到就跳過。
+   - 排除（私人社區、學校或機關內、OSM 標錯、跟官方場地同一處）要選理由，不用填名稱。臺北市的用地編號名稱只能命名。
+3. 重新匯入（頁首有各縣市的指令），例如 `python scripts/import_osm_city.py nwt`；桃園是 `import_tycg.py`、臺北是 `import_pkl.py`。
+4. `pnpm seed --city <縣市>` 看結果，提交 `manual-names.tsv` 與重新產生的檔案。
+
 ## 新增其他縣市
 
 `cities` 表目前有新竹市（hsc）、新竹縣（hsq）、桃園市（tyc）、苗栗縣（mlc）、臺北市（tpe，0010 migration）、新北市（nwt，0011）、臺中市（txg，0012）、高雄市（khh，0013）。測試另外會暫時建立只存在於測試裡的測試縣（tst，`tests/db/test-city.ts`），不在 migration 裡。新增其他縣市時：

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>人工命名工具｜全台放電地圖</title>
+    <link rel="stylesheet" href="/vendor/maplibre-gl.css" />
+    <style>
+      :root {
+        --paper: #f5f7f2;
+        --panel: #fff;
+        --ink: #1d2a25;
+        --muted: #5e6e67;
+        --line: #dce3dc;
+        --teal: #1c7a69;
+        --teal-soft: #ddf0ea;
+        --slide: #e27a1f;
+        --warn: #b42318;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        font:
+          14px/1.5 'Noto Sans TC',
+          'PingFang TC',
+          'Microsoft JhengHei',
+          system-ui,
+          sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+      header {
+        padding: 8px 16px;
+        background: var(--panel);
+        border-bottom: 1px solid var(--line);
+      }
+      header h1 {
+        font-size: 18px;
+        margin: 0;
+      }
+      .rule {
+        color: var(--warn);
+        font-weight: 700;
+        margin: 2px 0 0;
+        font-size: 13px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      code {
+        background: var(--teal-soft);
+        padding: 0 4px;
+        border-radius: 4px;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 340px 1fr;
+        min-height: 0;
+      }
+      aside {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        border-right: 1px solid var(--line);
+        background: var(--panel);
+      }
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--line);
+      }
+      button {
+        font: inherit;
+        cursor: pointer;
+      }
+      .tabs button,
+      .btn {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: 8px;
+        padding: 4px 10px;
+      }
+      .tabs button[aria-pressed='true'] {
+        background: var(--teal);
+        color: #fff;
+        border-color: var(--teal);
+      }
+      #list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+      }
+      #list li {
+        padding: 6px 12px;
+        border-bottom: 1px solid var(--line);
+        cursor: pointer;
+      }
+      #list li[aria-selected='true'] {
+        background: var(--teal-soft);
+      }
+      #list li .done {
+        color: var(--teal);
+        font-weight: 700;
+      }
+      section.work {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 0;
+      }
+      #map {
+        min-height: 300px;
+      }
+      .panel {
+        background: var(--panel);
+        border-top: 1px solid var(--line);
+        padding: 10px 16px;
+        display: grid;
+        gap: 8px;
+      }
+      .context {
+        color: var(--slide);
+        font-weight: 700;
+      }
+      #nearby {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #nearby button {
+        border: 1px solid var(--teal);
+        background: var(--teal-soft);
+        border-radius: 999px;
+        padding: 2px 10px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+      input,
+      select {
+        font: inherit;
+        padding: 4px 8px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+      }
+      #name {
+        min-width: 260px;
+      }
+      .primary {
+        background: var(--teal);
+        color: #fff;
+        border-color: var(--teal);
+      }
+      #errors {
+        color: var(--warn);
+        margin: 0;
+      }
+      .pin {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--slide);
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px var(--slide);
+      }
+      .hint {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--teal);
+        border: 2px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>人工命名工具 <span class="meta" id="progress"></span></h1>
+      <p class="rule">
+        不可以用 Google 地圖查名稱；附近的 OSM 名稱只是提示，請在地圖上確認後再存。查不到就跳過。
+      </p>
+      <p class="meta">
+        快捷鍵：Enter 儲存並到下一筆、Esc 排除（在名稱欄以外也可以按 E）、S 跳過、↑／↓ 換一筆。
+        完成後執行：<span id="commands"></span>
+      </p>
+    </header>
+    <main>
+      <aside>
+        <div class="tabs" id="tabs" role="toolbar" aria-label="縣市"></div>
+        <ul id="list" aria-label="待命名"></ul>
+      </aside>
+      <section class="work">
+        <div id="map"></div>
+        <div class="panel" id="panel" hidden>
+          <div class="row">
+            <strong id="title"></strong>
+            <span class="meta" id="where"></span>
+            <a id="osmlink" target="_blank" rel="noopener">在 OpenStreetMap 開啟</a>
+          </div>
+          <div class="context" id="context" hidden></div>
+          <div>
+            <span class="meta">附近的 OSM 名稱（點一下填入，只是提示）：</span>
+            <ul id="nearby"></ul>
+          </div>
+          <div class="row">
+            <label>名稱 <input id="name" autocomplete="off" /></label>
+            <label
+              >依據
+              <select id="basis"></select>
+            </label>
+            <label>確認者 <input id="by" size="8" autocomplete="off" /></label>
+          </div>
+          <div class="row">
+            <button class="btn primary" id="save">儲存並下一筆（Enter）</button>
+            <span id="excludeBox" class="row">
+              <select id="reason" aria-label="排除的理由"></select>
+              <button class="btn" id="exclude">排除（E）</button>
+              <span class="meta">排除不用填名稱</span>
+            </span>
+            <button class="btn" id="skip">跳過（S）</button>
+            <button class="btn" id="undo" hidden>刪除這筆結果</button>
+            <span class="meta" id="status"></span>
+          </div>
+          <p id="errors" role="alert"></p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
