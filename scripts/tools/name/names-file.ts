@@ -2,20 +2,18 @@
 // 格式跟 Python 端相同：OSM 遊戲場用 scripts/sources/osm_playgrounds.py 的 MANUAL_COLUMNS（鍵是 OSM），
 // 臺北市用 scripts/sources/pkl.py 的 MANUAL_COLUMNS（鍵是編號）。兩邊都用 tests/fixtures/manual-names-sample.tsv 測試。
 
+import { NAMING_BASES, NAMING_EXCLUDE_REASONS } from '../../../src/lib/naming';
+
 export type KeyColumn = 'OSM' | '編號';
 export const columns = (key: KeyColumn) => [key, '名稱', '依據', '確認者', '日期'] as const;
 
 /** 排除（不上地圖）：名稱欄寫這個（osm_playgrounds.EXCLUDE） */
 export const EXCLUDE = '（排除）';
-/** 命名的依據只能是這三種（decisions D20；不可以用 Google 地圖查名稱） */
-export const BASES = ['OSM 地圖上可見的名稱', '實地確認', '政府公告'] as const;
-/** 排除的理由（學校、幼兒園、機關裡的遊戲場上課或上班時間通常不對外開放，一律排除） */
-export const EXCLUDE_REASONS = [
-  'OSM 標錯／不是遊戲場',
-  '私人社區',
-  '在學校或機關內',
-  '與官方場地是同一處',
-] as const;
+/** 命名的依據只能是這三種（decisions D20；不可以用 Google 地圖查名稱）；跟網站的會員命名共用 */
+export const BASES = NAMING_BASES;
+/** 排除的理由（學校、幼兒園、機關裡的遊戲場上課或上班時間通常不對外開放，一律排除）；
+ *  「與官方場地是同一處」只在本機工具判斷 */
+export const EXCLUDE_REASONS = [...NAMING_EXCLUDE_REASONS, '與官方場地是同一處'] as const;
 
 export interface NameEntry {
   key: string;

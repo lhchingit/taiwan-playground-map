@@ -198,6 +198,58 @@ describe('pnpm seed', () => {
     }
   });
 
+  it('會員命名建立的場地（decisions D23）不在 places.json：不警告、--prune 也不刪除', async () => {
+    const id = 'hsc-osm-w1';
+    await sql`INSERT INTO places (id, name, city, geom, created_from_naming)
+              VALUES (${id}, 'test-會員命名', 'hsc', 'SRID=4326;POINT(120.97 24.8)', true)`;
+    try {
+      const s = await runSeed(sql, seed, {}, { prune: true, dryRun: true });
+      expect(s.orphanPlaces).not.toContain(id);
+      expect(s.pruned).not.toContain(id);
+    } finally {
+      await sql`DELETE FROM places WHERE id = ${id}`;
+    }
+  });
+
+  it('待命名清單：新的加入；清單沒有、沒人投票的刪除；有人投過票的保留；已經成為場地的標成已命名', async () => {
+    const pt = 'SRID=4326;POINT(120.97 24.8)';
+    const [first] = seed.places;
+    await sql`INSERT INTO naming_candidates (id, city, osm_ref, geom) VALUES
+      ('hsc-osm-w11', 'hsc', 'w11', ${pt}), ('hsc-osm-w12', 'hsc', 'w12', ${pt}),
+      (${first!.id}, 'hsc', 'w13', ${pt})`;
+    await sql`INSERT INTO naming_votes (candidate_id, action, name, name_key, basis)
+              VALUES ('hsc-osm-w12', 'name', 'x', 'x', '實地確認')`;
+    try {
+      const s = await runSeed(
+        sql,
+        seed,
+        {},
+        {
+          dryRun: true,
+          naming: [
+            {
+              id: 'hsc-osm-w10',
+              city: 'hsc',
+              osm_ref: 'w10',
+              district: '東區',
+              lat: 24.8,
+              lng: 120.97,
+              nearby: [],
+            },
+          ],
+        },
+      );
+      expect(s.changes).toMatchObject({
+        naming_upserted: 1,
+        naming_deleted: 1,
+        naming_imported: 1,
+      });
+      expect(s.naming).toEqual({ open: 2, kept: ['hsc-osm-w12'] });
+    } finally {
+      await sql`DELETE FROM naming_candidates WHERE id IN ('hsc-osm-w11', 'hsc-osm-w12', ${first!.id})`;
+    }
+  });
+
   it('新竹縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
     expect(hsq?.places.length).toBeGreaterThan(0);
     const [r] = await sql`

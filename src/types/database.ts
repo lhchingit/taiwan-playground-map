@@ -117,6 +117,70 @@ isOneToOne: false
       referencedColumns: ["id"]
     }
                   ]
+                },"naming_candidates": {
+                  Row: {
+                    "city": string,"created_at": string,"district": string | null,"geom": unknown,"id": string,"nearby": NonNullable<Json>,"osm_ref": string,"resolved_at": string | null,"resolved_basis": string | null,"resolved_by": string | null,"resolved_name": string | null,"resolved_user": string | null,"status": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "city": string,"created_at"?: string,"district"?: string | null,"geom": unknown,"id": string,"nearby"?: NonNullable<Json>,"osm_ref": string,"resolved_at"?: string | null,"resolved_basis"?: string | null,"resolved_by"?: string | null,"resolved_name"?: string | null,"resolved_user"?: string | null,"status"?: string
+                  }
+                  Update: {
+                    "city"?: string,"created_at"?: string,"district"?: string | null,"geom"?: unknown,"id"?: string,"nearby"?: NonNullable<Json>,"osm_ref"?: string,"resolved_at"?: string | null,"resolved_basis"?: string | null,"resolved_by"?: string | null,"resolved_name"?: string | null,"resolved_user"?: string | null,"status"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "naming_candidates_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "cities"
+      referencedColumns: ["code"]
+    },{
+      foreignKeyName: "naming_candidates_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "city_bounds"
+      referencedColumns: ["code"]
+    },{
+      foreignKeyName: "naming_candidates_resolved_user_fkey"
+      columns: ["resolved_user"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
+                },"naming_votes": {
+                  Row: {
+                    "action": string,"basis": string,"candidate_id": string,"created_at": string,"id": number,"name": string | null,"name_key": string | null,"updated_at": string,"user_id": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "action": string,"basis": string,"candidate_id": string,"created_at"?: string,"id"?: number,"name"?: string | null,"name_key"?: string | null,"updated_at"?: string,"user_id"?: string | null
+                  }
+                  Update: {
+                    "action"?: string,"basis"?: string,"candidate_id"?: string,"created_at"?: string,"id"?: number,"name"?: string | null,"name_key"?: string | null,"updated_at"?: string,"user_id"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "naming_votes_candidate_id_fkey"
+      columns: ["candidate_id"]
+isOneToOne: false
+      referencedRelation: "naming_candidates"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "naming_votes_candidate_id_fkey"
+      columns: ["candidate_id"]
+isOneToOne: false
+      referencedRelation: "naming_open"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "naming_votes_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"photos": {
                   Row: {
                     "caption": string | null,"created_at": string,"exif_stripped": boolean,"id": string,"place_id": string,"reject_reason": string | null,"reviewed_at": string | null,"reviewed_by": string | null,"status": string,"storage_path": string,"user_id": string | null
@@ -249,14 +313,14 @@ isOneToOne: false
                   ]
                 },"places": {
                   Row: {
-                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"coord_source": string | null,"created_at": string,"created_from_suggestion": number | null,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"hours_source": string | null,"hours_verified_at": string | null,"id": string,"indoor": boolean,"name": string,"size_class": string | null,"status": string,"status_note": string | null,"status_source": string | null,"status_until": string | null,"status_verified_at": string | null,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"surface_source": string | null,"surface_verified_at": string | null,"updated_at": string
+                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"coord_source": string | null,"created_at": string,"created_from_naming": boolean,"created_from_suggestion": number | null,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"hours_source": string | null,"hours_verified_at": string | null,"id": string,"indoor": boolean,"name": string,"size_class": string | null,"status": string,"status_note": string | null,"status_source": string | null,"status_until": string | null,"status_verified_at": string | null,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"surface_source": string | null,"surface_verified_at": string | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"coord_source"?: string | null,"created_at"?: string,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id": string,"indoor"?: boolean,"name": string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"coord_source"?: string | null,"created_at"?: string,"created_from_naming"?: boolean,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id": string,"indoor"?: boolean,"name": string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
                   }
                   Update: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"coord_source"?: string | null,"created_at"?: string,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id"?: string,"indoor"?: boolean,"name"?: string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"coord_source"?: string | null,"created_at"?: string,"created_from_naming"?: boolean,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id"?: string,"indoor"?: boolean,"name"?: string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -371,6 +435,32 @@ isOneToOne: false
                          }
                         Relationships: [
                     
+                  ]
+                },"naming_open": {
+                  Row: {
+                    "city": string | null,"district": string | null,"id": string | null,"lat": number | null,"lng": number | null,"nearby": Json | null,"osm_ref": string | null,"votes": number | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                           "city"?: string | null,"district"?: string | null,"id"?: string | null,"lat"?: never,"lng"?: never,"nearby"?: Json | null,"osm_ref"?: string | null,"votes"?: never
+                         }
+                        Update: {
+                           "city"?: string | null,"district"?: string | null,"id"?: string | null,"lat"?: never,"lng"?: never,"nearby"?: Json | null,"osm_ref"?: string | null,"votes"?: never
+                         }
+                        Relationships: [
+                    {
+      foreignKeyName: "naming_candidates_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "cities"
+      referencedColumns: ["code"]
+    },{
+      foreignKeyName: "naming_candidates_city_fkey"
+      columns: ["city"]
+isOneToOne: false
+      referencedRelation: "city_bounds"
+      referencedColumns: ["code"]
+    }
                   ]
                 },"place_cards": {
                   Row: {
@@ -501,8 +591,14 @@ isOneToOne: false
 "app_role":
 { Args: Record<PropertyKey, never>; Returns: string
                            },
+"apply_naming":
+{ Args: { "p_action": string,"p_basis": string,"p_by": string,"p_candidate": string,"p_name": string,"p_user": string }; Returns: undefined
+                           },
 "can_moderate":
 { Args: { "p_city": string }; Returns: boolean
+                           },
+"check_naming":
+{ Args: { "p_action": string,"p_basis": string,"p_name": string }; Returns: undefined
                            },
 "check_suggestion_payload":
 { Args: { "p": Json,"p_kind": string,"p_place_id": string }; Returns: undefined
@@ -629,6 +725,12 @@ isOneToOne: false
 "longtransactionsenabled":
 { Args: Record<PropertyKey, never>; Returns: boolean
                            },
+"naming_key":
+{ Args: { "p_name": string }; Returns: string
+                           },
+"naming_vote_count":
+{ Args: { "p_candidate": string }; Returns: number
+                           },
 "place_city":
 { Args: { "p_place_id": string }; Returns: string
                            },
@@ -720,6 +822,9 @@ isOneToOne: false
         isOneToOne: true
         isSetofReturn: false
       } },
+"resolve_naming":
+{ Args: { "p_action": string,"p_basis": string,"p_candidate": string,"p_name": string }; Returns: undefined
+                           },
 "restore_attribute":
 { Args: { "p_history_id": number }; Returns: undefined
                            },
@@ -1210,6 +1315,9 @@ isOneToOne: false
                            },
 "updategeometrysrid":
 { Args: { "catalogn_name": string,"column_name": string,"new_srid_in": number,"schema_name": string,"table_name": string }; Returns: string
+                           },
+"vote_naming":
+{ Args: { "p_action": string,"p_basis": string,"p_candidate": string,"p_name": string }; Returns: string
                            }
           }
           Enums: {

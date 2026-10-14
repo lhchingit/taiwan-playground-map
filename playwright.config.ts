@@ -10,8 +10,12 @@ export default defineConfig({
   testDir: 'tests/e2e',
   use: { baseURL: external ?? `http://localhost:${PORT}` },
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'] }, testIgnore: /multi-city|admin/ },
-    { name: 'mobile', use: { ...devices['Pixel 7'] }, testIgnore: /multi-city|admin/ },
+    {
+      name: 'desktop',
+      use: { ...devices['Desktop Chrome'] },
+      testIgnore: /multi-city|admin|naming\.spec/,
+    },
+    { name: 'mobile', use: { ...devices['Pixel 7'] }, testIgnore: /multi-city|admin|naming\.spec/ },
     // 會暫時讓新竹縣上線，所以等其他測試跑完才執行
     {
       name: 'multi-city',
@@ -19,11 +23,11 @@ export default defineConfig({
       testMatch: /multi-city/,
       dependencies: ['desktop', 'mobile'],
     },
-    // 審核會改動真實場地（綠光公園）的資料，等其他測試都跑完才執行，跑完還原
+    // 審核會改動真實場地（綠光公園）的資料、會員命名會在新竹市建立場地，等其他測試都跑完才執行，跑完還原
     {
       name: 'moderation',
       use: { ...devices['Desktop Chrome'] },
-      testMatch: /admin\.spec/,
+      testMatch: /admin\.spec|naming\.spec/,
       dependencies: ['multi-city'],
     },
   ],

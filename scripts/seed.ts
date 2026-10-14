@@ -7,6 +7,7 @@
 // 匯入不會改上線狀態，上線／下線用 pnpm city。
 import { connect, isLocalDatabase, parseSeedArgs, resolveDatabaseUrl } from './seed/cli';
 import { loadAllSeeds } from './seed/files';
+import { loadNamingCandidates } from './seed/naming';
 import { boundsWithoutSeeds, loadOsmBounds } from './seed/osm-bounds';
 import { revalidateSite } from './seed/revalidate-site';
 import { runSeed, type SeedSummary } from './seed/run';
@@ -49,6 +50,14 @@ function print(code: string, s: SeedSummary) {
       `注意：${s.pruneBlocked.join(', ')} 不在 places.json，但有使用者回報資料，沒有刪除；請人工處理。`,
     );
   }
+  if (s.naming) {
+    console.log(`待命名（會員命名）：${s.naming.open} 處`);
+    if (s.naming.kept.length > 0) {
+      console.warn(
+        `注意：${s.naming.kept.join(', ')} 已經不在 unnamed.csv，但有會員投過票，保留在待命名清單；請人工確認。`,
+      );
+    }
+  }
   if (s.orphanPlaces.length > s.pruneBlocked.length) {
     const left = s.orphanPlaces.filter((id) => !s.pruneBlocked.includes(id));
     console.warn(
@@ -77,7 +86,11 @@ async function main() {
   const db = connect(url);
   try {
     for (const [code, seed] of targets) {
-      const summary = await runSeed(db, seed, osm, { dryRun: args.dryRun, prune: args.prune });
+      const summary = await runSeed(db, seed, osm, {
+        dryRun: args.dryRun,
+        prune: args.prune,
+        naming: loadNamingCandidates(code),
+      });
       print(code, summary);
       // 真的寫入、而且有變動時，通知網站清快取
       if (!summary.dryRun && Object.values(summary.changes).some((n) => n > 0)) {

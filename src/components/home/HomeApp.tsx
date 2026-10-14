@@ -47,6 +47,8 @@ export interface HomeAppProps {
   places: CityPlace[];
   /** 網址的 query string（不含「?」） */
   query: string;
+  /** 待會員命名的遊戲場數（decisions D23）；0 時不顯示「幫忙命名」 */
+  namingCount?: number;
 }
 
 /** history.state 裡標記「這一筆是打開詳情面板時加的」，關閉時用上一頁回到首頁網址 */
@@ -57,7 +59,7 @@ function placeIdFromPath(pathname: string, slug: string): string | null {
   return m?.[1] ? decodeURIComponent(m[1]) : null;
 }
 
-export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) {
+export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 }: HomeAppProps) {
   const known = useMemo(
     () => ({ play: catalog.playGroups.flatMap((g) => g.keys), amen: catalog.amenity }),
     [catalog],
@@ -277,6 +279,11 @@ export function HomeApp({ city, cities, catalog, places, query }: HomeAppProps) 
             <button className="btn" type="button" onClick={() => void startNewPlace()}>
               回報新場地
             </button>
+            {namingCount > 0 && (
+              <Link className="btn" href={`/${city.slug}/naming`}>
+                幫忙命名（{namingCount} 處）
+              </Link>
+            )}
             {newPlaceMsg && (
               <span className="note err" role="status">
                 {newPlaceMsg}

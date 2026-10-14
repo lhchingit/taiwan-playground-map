@@ -45,6 +45,38 @@ export async function getCityPlaces(code: string): Promise<CityPlace[]> {
   return data.map((row) => toCityPlace(row));
 }
 
+/** 會員命名的待命名點（decisions D23）；只回傳參與人數，不回傳別人提的名稱。未上線縣市因為 RLS 是空陣列 */
+export interface NamingCandidateView {
+  id: string;
+  osmRef: string;
+  district: string | null;
+  lat: number;
+  lng: number;
+  nearby: { name: string; kind: string; osm: string; distance_m: number }[];
+  votes: number;
+}
+
+export async function getNamingCandidates(code: string): Promise<NamingCandidateView[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(`naming:${code}`, `city:${code}`);
+  const { data, error } = await supabaseServer()
+    .from('naming_open')
+    .select('*')
+    .eq('city', code)
+    .order('id');
+  if (error) throw new Error(`讀取 ${code} 的待命名清單失敗：${error.message}`);
+  return data.map((r) => ({
+    id: r.id ?? '',
+    osmRef: r.osm_ref ?? '',
+    district: r.district,
+    lat: r.lat ?? 0,
+    lng: r.lng ?? 0,
+    nearby: (r.nearby ?? []) as unknown as NamingCandidateView['nearby'],
+    votes: r.votes ?? 0,
+  }));
+}
+
 export async function getSources(): Promise<SourceRef[]> {
   'use cache';
   cacheLife('hours');
