@@ -725,11 +725,17 @@ isOneToOne: false
 "longtransactionsenabled":
 { Args: Record<PropertyKey, never>; Returns: boolean
                            },
+"naming_candidate_city":
+{ Args: { "p_candidate": string }; Returns: string
+                           },
 "naming_key":
 { Args: { "p_name": string }; Returns: string
                            },
 "naming_vote_count":
 { Args: { "p_candidate": string }; Returns: number
+                           },
+"naming_voted":
+{ Args: { "p_candidate": string }; Returns: boolean
                            },
 "place_city":
 { Args: { "p_place_id": string }; Returns: string
