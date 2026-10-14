@@ -208,7 +208,7 @@
   4. 命名表寫「（排除）」的不上地圖，例如 OSM 標錯或私人社區。
      學校、幼兒園、政府機關裡的遊戲場一律排除（2026-10-14）：上課、上班時間通常不對外開放，放上地圖容易讓家長白跑一趟。
   5. **自動排除（2026-10-14）：** 遊戲場位在 OSM 標示的以下範圍內，匯入時自動排除，不用人工確認。
-     - 範圍：幼兒園、學校（`amenity=kindergarten|school`）、政府機關（`office=government`、`amenity=townhall|police|fire_station`）、軍營（`landuse=military`）。
+     - 範圍：幼兒園、學校（`amenity=kindergarten|school`）、政府機關（`office=government`、`amenity=townhall|police|fire_station`）、研究機構（`office=research`，2026-10-14 加入，例如苗栗竹南的國家衛生研究院；也包括民間研發園區，同樣不對外開放）、軍營（`landuse=military`）。
      - 優先於上面所有規則：就算在有名稱的公園裡、有自己的名稱、有人工命名，也一樣排除。
      - 大學、專科不算，因為多數校園對外開放。
      - 用 Overpass `is_in` 判斷（`scripts/fetch_osm_institutions.py`），結果存成 `data/raw/<縣市>/osm-institutions.json`，裡面記著 `osm.json` 的 sha256，對不上時匯入中止。
