@@ -115,14 +115,11 @@ test('審核員在後台看到票數，可以直接命名（不用滿 3 票）',
   await sql`
     INSERT INTO naming_votes (candidate_id, user_id, action, name, name_key, basis)
     VALUES (${ID2}, ${voter!.id}, 'name', 'test-北區小公園', 'test-北區小公園', '實地確認')`;
-  const email = `test-e2e-naming-mod-${randomUUID().slice(0, 8)}@example.test`;
-  created.push(email);
+  // 先建立好審核員（負責新竹市），再用它的 Email 登入
+  const mod = await people.create('moderator', { cities: ['hsc'] });
   await page.goto('/login?next=/admin/naming');
-  await loginWithEmail(page, email);
-  await sql`UPDATE profiles SET role = 'moderator', terms_accepted_at = now()
-            WHERE id = (SELECT id FROM auth.users WHERE email = ${email})`;
-  await sql`INSERT INTO moderator_cities (user_id, city)
-            SELECT id, 'hsc' FROM auth.users WHERE email = ${email}`;
+  await loginWithEmail(page, mod.email);
+  await expect(page).toHaveURL(/\/admin\/naming$/);
   await page.goto('/admin/naming');
   const card = page.getByRole('region', { name: ID2 });
   await expect(card).toContainText('「test-北區小公園」1 票');
