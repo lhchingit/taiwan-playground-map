@@ -10,6 +10,10 @@
 ## D2 地圖：MapLibre GL + OpenFreeMap 向量圖磚
 
 - **理由：** 不用付授權費，可以自訂樣式；原型已經驗證可行。
+- **樣式：** 使用者可以在地圖右下角切換彩色或灰階（2026-10-14），記在 localStorage（`pm.map`），不放進網址。
+  - 預設彩色，用 `liberty`。
+  - 灰階用 `positron`，原本的預設就是它。
+  - 備援的 OSM 點陣圖磚只有彩色，灰階時用 CSS `grayscale` 濾鏡轉灰。
 - **備援：** OSM 官方點陣圖磚（tile.openstreetmap.org），OpenFreeMap 載入失敗或 7 秒沒載入時自動切換。
   原本用 CARTO，2026-10 發現 CARTO 圖磚需要 API key（每張都有浮水印），改用 OSM。
   只在備援時使用、流量很小，符合 [OSM 圖磚使用政策](https://operations.osmfoundation.org/policies/tiles/)：不預先下載、不大量抓取、版權標示連到 osm.org/copyright。原型仍是 CARTO，未更新。

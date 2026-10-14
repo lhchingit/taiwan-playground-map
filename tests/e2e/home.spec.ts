@@ -269,3 +269,46 @@ test('主要圖磚第一次就載入失敗時，改用備援圖磚', async ({ pa
   await expect(markers(page)).toHaveCount(TOTAL);
   await expect.poll(() => fallback).toBeGreaterThan(0);
 });
+
+test('地圖預設彩色（liberty），可以切換成灰階（positron），重新整理後仍記得', async ({ page }) => {
+  // 用本機的簡單樣式代替 OpenFreeMap（不連外網），記下請求了哪個樣式
+  const styles: string[] = [];
+  await page.route(/tiles\.openfreemap\.org\/styles\//, (r) => {
+    styles.push(r.request().url());
+    return r.fulfill({
+      json: {
+        version: 8,
+        sources: {},
+        layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#eeeeee' } }],
+      },
+    });
+  });
+  const toggle = page.getByTestId('map-color');
+  await page.goto('/hsinchu-city');
+  await expect(toggle).toHaveText('灰階');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  await expect.poll(() => styles.at(-1)).toMatch(/\/styles\/liberty$/);
+
+  await toggle.click();
+  await expect(toggle).toHaveText('彩色');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await expect(toggle).toHaveAccessibleName('地圖改成彩色');
+  await expect.poll(() => styles.at(-1)).toMatch(/\/styles\/positron$/);
+  await expect(markers(page)).toHaveCount(TOTAL); // 標記不受影響
+
+  styles.length = 0;
+  await page.reload();
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await expect.poll(() => styles.at(-1)).toMatch(/\/styles\/positron$/);
+  expect(styles.some((u) => u.endsWith('/liberty'))).toBe(false);
+});
+
+test('備援圖磚（OSM，彩色）在灰階時用濾鏡轉灰', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('pm.map', JSON.stringify({ color: 'gray' })));
+  await page.goto('/hsinchu-city');
+  const map = page.getByTestId('map');
+  await expect(map).toHaveClass(/map-gray-raster/); // setup() 攔截了 OpenFreeMap，改用備援
+  await expect(map.locator('canvas.maplibregl-canvas')).toHaveCSS('filter', 'grayscale(1)');
+  await page.getByTestId('map-color').click();
+  await expect(map).not.toHaveClass(/map-gray-raster/);
+});

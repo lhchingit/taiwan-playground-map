@@ -1,10 +1,17 @@
 // 地圖樣式（decisions D2）：OpenFreeMap 向量圖磚；載入失敗時改用 OSM 官方點陣圖磚。
 import type { StyleSpecification } from 'maplibre-gl';
 
-export const VECTOR_STYLE = 'https://tiles.openfreemap.org/styles/positron';
+/** 地圖顏色：使用者可以切換，預設彩色（記在 localStorage，見 src/lib/prefs.ts） */
+export type MapColor = 'color' | 'gray';
+export const DEFAULT_MAP_COLOR: MapColor = 'color';
+
+export const VECTOR_STYLES: Record<MapColor, string> = {
+  color: 'https://tiles.openfreemap.org/styles/liberty',
+  gray: 'https://tiles.openfreemap.org/styles/positron',
+};
 
 /**
- * 備援：OSM 官方圖磚。只在主要圖磚失敗時使用，流量很小，符合 OSM 圖磚使用政策
+ * 備援：OSM 官方圖磚（彩色；灰階時用 CSS 濾鏡轉灰）。只在主要圖磚失敗時使用，流量很小，符合 OSM 圖磚使用政策
  * （https://operations.osmfoundation.org/policies/tiles/）：不預先下載、不大量抓取、
  * 不偽造標頭，並標示連到 osm.org/copyright 的版權（見 OSM_ATTRIBUTION）。
  * 使用量變大時依 D2 改成自架（Protomaps PMTiles）。
