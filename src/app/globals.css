@@ -475,6 +475,22 @@ select {
   box-shadow: 0 0 0 6px color-mix(in srgb, var(--slide) 30%, transparent);
 }
 
+/* 灰階：向量圖磚用 positron；備援的 OSM 點陣圖磚是彩色的，用濾鏡轉灰（標記是 HTML，不受影響） */
+.map-gray-raster .maplibregl-canvas {
+  filter: grayscale(1);
+}
+/* 地圖顏色切換（右下角、縮放鈕上方）：手機上的觸控範圍至少 44px */
+.mapwrap .map-color-ctrl button {
+  width: auto;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
 /* 地圖版權連結不只靠顏色區分（無障礙）；maplibre-gl.css 比這裡晚載入，所以提高選擇器權重 */
 .mapwrap .maplibregl-ctrl-attrib a {
   text-decoration: underline;

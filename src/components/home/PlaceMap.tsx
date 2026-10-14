@@ -1,19 +1,29 @@
 'use client';
 
 // 地圖：OpenFreeMap 向量圖磚，載入失敗或 7 秒沒載入時改用 OSM 官方點陣圖磚（decisions D2；樣式在 src/lib/map-styles.ts）。
+// 右下角可以切換彩色／灰階（預設彩色，記在 localStorage）。
 // 只在瀏覽器載入（HomeApp 用 next/dynamic 引入）。
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { setWorkerUrl } from 'maplibre-gl';
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import MapGL, {
   Marker,
   NavigationControl,
+  useControl,
+  type IControl,
   type MapRef,
-  type StyleSpecification,
 } from 'react-map-gl/maplibre';
 import type { Origin } from '@/lib/filter';
-import { FALLBACK_AFTER_MS, FALLBACK_STYLE, OSM_ATTRIBUTION, VECTOR_STYLE } from '@/lib/map-styles';
+import {
+  FALLBACK_AFTER_MS,
+  FALLBACK_STYLE,
+  OSM_ATTRIBUTION,
+  VECTOR_STYLES,
+  type MapColor,
+} from '@/lib/map-styles';
 import type { CityPlace } from '@/lib/places';
+import { useMapColor } from '@/lib/prefs';
 
 // maplibre-gl 6 預設從主程式旁邊載入 worker，打包後找不到；改指向打包器輸出的檔案
 setWorkerUrl(new URL('maplibre-gl/dist/maplibre-gl-worker.mjs', import.meta.url).href);
@@ -38,7 +48,8 @@ export default function PlaceMap(props: PlaceMapProps) {
   const map = useRef<MapRef>(null);
   const loaded = useRef(false);
   const [ready, setReady] = useState(false);
-  const [style, setStyle] = useState<string | StyleSpecification>(VECTOR_STYLE);
+  const [fallback, setFallback] = useState(false);
+  const [color, setColor] = useMapColor();
   // 換頁時 Next.js 把上一頁藏起來（React <Activity>）而不是卸載；藏起來時地圖被拆掉，
   // 按「上一頁」回來會建立新的地圖，但標記仍綁在舊的地圖上（全部消失）。
   // 偵測到「重新顯示」就換 key，地圖與標記整組重新建立。
@@ -61,7 +72,7 @@ export default function PlaceMap(props: PlaceMapProps) {
   useEffect(() => {
     if (loaded.current) return;
     const t = setTimeout(() => {
-      if (!loaded.current) setStyle(FALLBACK_STYLE);
+      if (!loaded.current) setFallback(true);
     }, FALLBACK_AFTER_MS);
     return () => clearTimeout(t);
   }, []);
@@ -100,60 +111,107 @@ export default function PlaceMap(props: PlaceMapProps) {
   return (
     <>
       {!ready && <div className="mapmsg">地圖載入中…</div>}
-      <MapGL
-        key={generation}
-        ref={map}
-        initialViewState={{ longitude: props.center.lng, latitude: props.center.lat, zoom: 12 }}
-        style={{ position: 'absolute', inset: 0 }}
-        mapStyle={style}
-        attributionControl={{ compact: true, customAttribution: OSM_ATTRIBUTION }}
-        cursor={props.picking ? 'crosshair' : undefined}
-        onLoad={() => {
-          loaded.current = true;
-          setReady(true);
-          fitAll();
-        }}
-        onError={(e) => {
-          // 只有主要圖磚從來沒載入成功時才改用備援；被中斷的請求（換頁、重建地圖）不算失敗
-          if (loaded.current || e.error?.name === 'AbortError') return;
-          setStyle(FALLBACK_STYLE);
-        }}
-        onClick={(e) => {
-          if (props.picking) props.onPick({ lat: e.lngLat.lat, lng: e.lngLat.lng });
-        }}
+      {/* 備援的 OSM 點陣圖磚是彩色的，灰階時用 CSS 濾鏡轉灰（globals.css） */}
+      <div
+        className={`map${fallback && color === 'gray' ? ' map-gray-raster' : ''}`}
+        data-testid="map"
+        data-color={color}
       >
-        <NavigationControl position="bottom-right" showCompass={false} />
-        {props.results.map((p, i) => (
-          <Marker
-            key={p.id}
-            longitude={p.lng}
-            latitude={p.lat}
-            anchor="bottom-left"
-            onClick={(e) => {
-              e.originalEvent.stopPropagation();
-              props.onSelect(p.id);
-            }}
-          >
-            <button
-              type="button"
-              className={`mk${props.selected === p.id ? ' sel' : ''}`}
-              data-testid="marker"
-              aria-label={`${i + 1}. ${p.name}`}
-              title={p.name}
+        <MapGL
+          key={generation}
+          ref={map}
+          initialViewState={{ longitude: props.center.lng, latitude: props.center.lat, zoom: 12 }}
+          style={{ position: 'absolute', inset: 0 }}
+          mapStyle={fallback ? FALLBACK_STYLE : VECTOR_STYLES[color]}
+          attributionControl={{ compact: true, customAttribution: OSM_ATTRIBUTION }}
+          cursor={props.picking ? 'crosshair' : undefined}
+          onLoad={() => {
+            loaded.current = true;
+            setReady(true);
+            fitAll();
+          }}
+          onError={(e) => {
+            // 只有主要圖磚從來沒載入成功時才改用備援；被中斷的請求（換頁、重建地圖）不算失敗
+            if (loaded.current || e.error?.name === 'AbortError') return;
+            setFallback(true);
+          }}
+          onClick={(e) => {
+            if (props.picking) props.onPick({ lat: e.lngLat.lat, lng: e.lngLat.lng });
+          }}
+        >
+          <NavigationControl position="bottom-right" showCompass={false} />
+          {/* 後加的控制項排在上面：顏色切換在縮放鈕上方 */}
+          <MapColorControl color={color} onChange={setColor} />
+          {props.results.map((p, i) => (
+            <Marker
+              key={p.id}
+              longitude={p.lng}
+              latitude={p.lat}
+              anchor="bottom-left"
+              onClick={(e) => {
+                e.originalEvent.stopPropagation();
+                props.onSelect(p.id);
+              }}
             >
-              <span>{i + 1}</span>
-            </button>
+              <button
+                type="button"
+                className={`mk${props.selected === p.id ? ' sel' : ''}`}
+                data-testid="marker"
+                aria-label={`${i + 1}. ${p.name}`}
+                title={p.name}
+              >
+                <span>{i + 1}</span>
+              </button>
+            </Marker>
+          ))}
+          <Marker longitude={props.origin.lng} latitude={props.origin.lat}>
+            <div className="origin-mk" title="出發點" />
           </Marker>
-        ))}
-        <Marker longitude={props.origin.lng} latitude={props.origin.lat}>
-          <div className="origin-mk" title="出發點" />
-        </Marker>
-        {props.pin && (
-          <Marker longitude={props.pin.lng} latitude={props.pin.lat} anchor="bottom">
-            <div className="newplace-mk" title="新場地的位置" data-testid="newplace-pin" />
-          </Marker>
-        )}
-      </MapGL>
+          {props.pin && (
+            <Marker longitude={props.pin.lng} latitude={props.pin.lat} anchor="bottom">
+              <div className="newplace-mk" title="新場地的位置" data-testid="newplace-pin" />
+            </Marker>
+          )}
+        </MapGL>
+      </div>
     </>
+  );
+}
+
+/** 地圖控制項的容器（MapLibre 的 ctrl 樣式，跟縮放鈕一致）；內容用 React portal 畫進去 */
+class PortalControl implements IControl {
+  el = document.createElement('div');
+  constructor() {
+    this.el.className = 'maplibregl-ctrl maplibregl-ctrl-group map-color-ctrl';
+  }
+  onAdd() {
+    return this.el;
+  }
+  onRemove() {
+    this.el.remove();
+  }
+}
+
+function MapColorControl({
+  color,
+  onChange,
+}: {
+  color: MapColor;
+  onChange: (c: MapColor) => void;
+}) {
+  const ctrl = useControl(() => new PortalControl(), { position: 'bottom-right' });
+  const next: MapColor = color === 'gray' ? 'color' : 'gray';
+  return createPortal(
+    <button
+      type="button"
+      data-testid="map-color"
+      aria-pressed={color === 'gray'}
+      aria-label={next === 'gray' ? '地圖改成灰階' : '地圖改成彩色'}
+      title={next === 'gray' ? '地圖改成灰階' : '地圖改成彩色'}
+      onClick={() => onChange(next)}
+    >
+      {next === 'gray' ? '灰階' : '彩色'}
+    </button>,
+    ctrl.el,
   );
 }
