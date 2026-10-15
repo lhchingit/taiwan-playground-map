@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import { HomeApp, type HomeAppProps } from '@/components/home/HomeApp';
-import { getAttributeCatalog, getCityBounds, getCityPlaces } from '@/lib/data';
+import { getAttributeCatalog, getCityBounds, getCityPlaces, getNamingCandidates } from '@/lib/data';
 
 interface Params {
   params: Promise<{ city: string }>;
@@ -33,12 +33,13 @@ export default async function CityPage({
 }: Params & { searchParams: SearchParams }) {
   const city = await findCity((await params).city);
   if (!city) notFound();
-  const [cities, catalog, places] = await Promise.all([
+  const [cities, catalog, places, naming] = await Promise.all([
     getCityBounds(),
     getAttributeCatalog(),
     getCityPlaces(city.code),
+    getNamingCandidates(city.code),
   ]);
-  const props = { city, cities, catalog, places };
+  const props = { city, cities, catalog, places, namingCount: naming.length };
 
   // 篩選條件在網址裡（要求時才知道），放在 Suspense 裡；伺服器產生的畫面就是篩選後的結果
   return (

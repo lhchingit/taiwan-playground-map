@@ -6,21 +6,14 @@
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { setWorkerUrl } from 'maplibre-gl';
 import { useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
-import MapGL, {
-  Marker,
-  NavigationControl,
-  useControl,
-  type IControl,
-  type MapRef,
-} from 'react-map-gl/maplibre';
+import MapGL, { Marker, NavigationControl, type MapRef } from 'react-map-gl/maplibre';
+import { MapColorControl } from '@/components/map/MapColorControl';
 import type { Origin } from '@/lib/filter';
 import {
   FALLBACK_AFTER_MS,
   FALLBACK_STYLE,
   OSM_ATTRIBUTION,
   VECTOR_STYLES,
-  type MapColor,
 } from '@/lib/map-styles';
 import type { CityPlace } from '@/lib/places';
 import { useMapColor } from '@/lib/prefs';
@@ -175,43 +168,5 @@ export default function PlaceMap(props: PlaceMapProps) {
         </MapGL>
       </div>
     </>
-  );
-}
-
-/** 地圖控制項的容器（MapLibre 的 ctrl 樣式，跟縮放鈕一致）；內容用 React portal 畫進去 */
-class PortalControl implements IControl {
-  el = document.createElement('div');
-  constructor() {
-    this.el.className = 'maplibregl-ctrl maplibregl-ctrl-group map-color-ctrl';
-  }
-  onAdd() {
-    return this.el;
-  }
-  onRemove() {
-    this.el.remove();
-  }
-}
-
-function MapColorControl({
-  color,
-  onChange,
-}: {
-  color: MapColor;
-  onChange: (c: MapColor) => void;
-}) {
-  const ctrl = useControl(() => new PortalControl(), { position: 'bottom-right' });
-  const next: MapColor = color === 'gray' ? 'color' : 'gray';
-  return createPortal(
-    <button
-      type="button"
-      data-testid="map-color"
-      aria-pressed={color === 'gray'}
-      aria-label={next === 'gray' ? '地圖改成灰階' : '地圖改成彩色'}
-      title={next === 'gray' ? '地圖改成灰階' : '地圖改成彩色'}
-      onClick={() => onChange(next)}
-    >
-      {next === 'gray' ? '灰階' : '彩色'}
-    </button>,
-    ctrl.el,
   );
 }

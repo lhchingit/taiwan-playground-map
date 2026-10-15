@@ -39,12 +39,19 @@ async function MeContent() {
   const user = await currentUser(supabase);
   if (!user) redirect('/login?next=/me');
 
-  const [suggestions, photos, catalog, cities] = await Promise.all([
+  const [suggestions, naming, photos, catalog, cities] = await Promise.all([
     supabase
       .from('edit_suggestions')
       .select('id, kind, payload, status, reject_reason, created_at, place_id, places(name, city)')
       .eq('user_id', user.id)
       .order('created_at', { ascending: false }),
+    supabase
+      .from('naming_votes')
+      .select(
+        'id, action, name, basis, updated_at, naming_candidates(id, city, district, status, resolved_name)',
+      )
+      .eq('user_id', user.id)
+      .order('updated_at', { ascending: false }),
     supabase
       .from('photos')
       .select('id, status, reject_reason, created_at, places(name)')
@@ -104,6 +111,46 @@ async function MeContent() {
           <p className="note">還沒有資料。在場地頁按「回報修正」就可以提供修正。</p>
         )}
       </section>
+
+      {naming.data && naming.data.length > 0 && (
+        <section className="dsec" aria-labelledby="me-naming">
+          <h2 id="me-naming" className="dsec-title">
+            我的命名
+          </h2>
+          <ul className="me-list">
+            {naming.data.map((v) => {
+              const c = v.naming_candidates;
+              const citySlug = c ? slug.get(c.city) : undefined;
+              return (
+                <li key={v.id}>
+                  <div>
+                    {c?.status === 'named' && citySlug ? (
+                      <Link href={`/${citySlug}/places/${c.id}`}>{c.resolved_name}</Link>
+                    ) : (
+                      `${c?.district ?? ''}的遊戲場`
+                    )}
+                  </div>
+                  <div>
+                    {v.action === 'name'
+                      ? `你提的：「${v.name}」（${v.basis}）`
+                      : `建議排除（${v.basis}）`}
+                  </div>
+                  <div className="cmeta">
+                    <span className={`me-status ${c?.status === 'open' ? 'pending' : 'accepted'}`}>
+                      {c?.status === 'named'
+                        ? '已命名，已加到地圖'
+                        : c?.status === 'excluded'
+                          ? '已排除'
+                          : '等待更多人確認'}
+                    </span>
+                    ．{DATE.format(new Date(v.updated_at))}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
 
       {PHOTOS_ENABLED && (
         <section className="dsec" aria-labelledby="me-photos">

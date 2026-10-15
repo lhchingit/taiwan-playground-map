@@ -67,6 +67,7 @@ pnpm docker:down   # 停止並移除容器
 | `pnpm docker:up`／`docker:down` | 用 Docker Compose 建置並啟動／停止網站（見上方） |
 | `python3 scripts/build_seed.py && python3 scripts/import_hccg.py` | 從原始資料重新產生新竹市的 `data/seed/hsc/`、`data/review/hsc/` |
 | `python3 scripts/check_seed_hash.py` | 在暫存資料夾重新產生上面的檔案，逐位元組比對 repo 裡的版本 |
+| `pnpm naming:export` | 會員命名（decisions D23）：把網站上已經決定的命名結果寫回 `data/raw/<縣市>/manual-names.tsv`，再重新匯入。流程見 `docs/operations.md` |
 | `pnpm tool:name` | 人工命名工具（只在本機）：http://localhost:4101，替沒有名稱的 OSM 遊戲場命名或排除（各縣市），結果寫進 `data/raw/<縣市>/manual-names.tsv`；附近的 OSM 名稱提示先用 `python3 scripts/fetch_osm_nearby.py <縣市>` 下載。流程見 `docs/operations.md`「人工命名」 |
 | `pnpm tool:locate`（`-- --city tyc`） | 人工定位工具（只在本機）：http://localhost:4100，處理找不到座標與待確認比對的資料，結果寫進 `data/raw/<縣市>/manual-review.tsv`；預設新竹市，之後重新執行該縣市的匯入腳本套用 |
 | `python3 scripts/check_hccg_update.py` | 檢查新竹市政府的三份開放資料（清冊、公園、公廁）有沒有更新，印出差異報告（只讀；結束碼 0 沒變動／1 有變動／2 失敗）。`--meta-only` 只看 data.gov.tw 的更新時間（GitHub Actions 每季用這個模式自動檢查，因為連不到市府的下載主機），可能有更新時開 issue |

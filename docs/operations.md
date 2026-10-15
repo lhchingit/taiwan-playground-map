@@ -162,6 +162,18 @@ OSM 匯入的遊戲場沒有名稱、也不在有名稱的公園裡時，不會�
 3. 重新匯入（頁首有各縣市的指令），例如 `python scripts/import_osm_city.py nwt`；桃園是 `import_tycg.py`、臺北是 `import_pkl.py`。
 4. `pnpm seed --city <縣市>` 看結果，提交 `manual-names.tsv` 與重新產生的檔案。
 
+## 會員命名的結果寫回 repo（decisions D23）
+
+會員在網站上 3 人一致（或審核員直接決定）時，場地已經在資料庫建立、上了地圖。定期把結果寫回 repo，讓檔案仍然是資料來源：
+
+1. 匯出：`pnpm naming:export`（或 `--city nwt`）。連正式資料庫時設 `DATABASE_URL` 並加 `--allow-remote`。
+   結果寫進 `data/raw/<縣市>/manual-names.tsv`，確認者是「會員 3 人一致」或「審核員」。已經有的列不會被覆蓋。
+2. 重新匯入（指令會印出來），例如 `python scripts/import_osm_city.py nwt`。
+3. `pnpm seed --city <縣市>`：場地 id、名稱跟資料庫一致，地圖不會變；待命名清單少掉這些。
+4. 提交 `manual-names.tsv` 與重新產生的檔案，開 PR。
+
+`pnpm seed` 時，`unnamed.csv` 已經沒有、但有會員投過票的點會保留在待命名清單並印出警告，請人工確認。
+
 ## 新增其他縣市
 
 `cities` 表目前有新竹市（hsc）、新竹縣（hsq）、桃園市（tyc）、苗栗縣（mlc）、臺北市（tpe，0010 migration）、新北市（nwt，0011）、臺中市（txg，0012）、高雄市（khh，0013）。測試另外會暫時建立只存在於測試裡的測試縣（tst，`tests/db/test-city.ts`），不在 migration 裡。新增其他縣市時：

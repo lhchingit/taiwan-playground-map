@@ -4,6 +4,7 @@
 import type { Sql, TransactionSql } from 'postgres';
 import type { SeedFile } from '../../src/types/place';
 import type { Bbox } from './bbox';
+import type { NamingCandidate } from './naming';
 import { toSeedRows } from './transform';
 
 /** 使用者回報（P3）寫入的資料，seed 不可以覆蓋或刪除 */
@@ -21,6 +22,8 @@ export interface SeedOptions {
   dryRun?: boolean;
   /** 刪除資料庫有、places.json 沒有的場地（有使用者回報資料的拒絕刪除） */
   prune?: boolean;
+  /** 會員命名的待命名清單（scripts/seed/naming.ts）；沒給就不動 naming_candidates */
+  naming?: readonly NamingCandidate[];
 }
 
 export interface SeedSummary {
@@ -40,6 +43,8 @@ export interface SeedSummary {
   pruned: string[];
   /** --prune 時因為有使用者回報資料而拒絕刪除的場地（要人工處理） */
   pruneBlocked: string[];
+  /** 待命名清單：還沒決定的筆數；清單已經沒有、但有人投過票所以保留的 */
+  naming: { open: number; kept: string[] } | null;
 }
 
 export async function runSeed(
@@ -200,8 +205,8 @@ export async function runSeed(
               OR ${USER_SOURCE} IN (p.hours_source, p.surface_source, p.status_source)) AS protected
       FROM places p
       WHERE p.city = ANY(${seedCities}) AND NOT (p.id = ANY(${placeIds})) AND p.id NOT LIKE 'test-%'
-        -- 由使用者建議建立的場地本來就不在 places.json（decisions D19）：不警告、不刪除
-        AND p.created_from_suggestion IS NULL
+        -- 由使用者建議、會員命名建立的場地在匯出前不在 places.json（decisions D19、D23）：不警告、不刪除
+        AND p.created_from_suggestion IS NULL AND NOT p.created_from_naming
       ORDER BY p.id`;
     const pruned = options.prune ? orphanRows.filter((o) => !o.protected).map((o) => o.id) : [];
     const pruneBlocked = options.prune
@@ -210,6 +215,46 @@ export async function runSeed(
     // 屬性、停車會跟著刪（ON DELETE CASCADE）
     changes.places_pruned =
       pruned.length > 0 ? (await sql`DELETE FROM places WHERE id = ANY(${pruned})`).count : 0;
+
+    // 6.6 待命名清單（decisions D23）：新的加入；還沒決定的更新座標與提示；已經決定的不動
+    let naming: SeedSummary['naming'] = null;
+    if (options.naming) {
+      const list = sql.json(options.naming as unknown as Parameters<typeof sql.json>[0]);
+      const cols = sql`AS x(id text, city text, osm_ref text, district text, lat float8, lng float8, nearby jsonb)`;
+      changes.naming_upserted = (
+        await sql`
+        INSERT INTO naming_candidates (id, city, osm_ref, district, geom, nearby)
+        SELECT id, city, osm_ref, district, ST_SetSRID(ST_MakePoint(lng, lat), 4326)::geography, nearby
+        FROM jsonb_to_recordset(${list}) ${cols}
+        WHERE NOT EXISTS (SELECT 1 FROM places p WHERE p.id = x.id)
+        ON CONFLICT (id) DO UPDATE SET district = EXCLUDED.district, geom = EXCLUDED.geom, nearby = EXCLUDED.nearby
+        WHERE naming_candidates.status = 'open'
+          AND (naming_candidates.district, ST_AsEWKT(naming_candidates.geom), naming_candidates.nearby)
+            IS DISTINCT FROM (EXCLUDED.district, ST_AsEWKT(EXCLUDED.geom), EXCLUDED.nearby)`
+      ).count;
+      const ids = options.naming.map((c) => c.id);
+      // 清單已經沒有、而且已經是場地（例如用本機工具命名後匯入）：標成匯入時已命名
+      changes.naming_imported = (
+        await sql`
+        UPDATE naming_candidates c SET status = 'named', resolved_by = 'import', resolved_at = now(),
+          resolved_name = (SELECT name FROM places p WHERE p.id = c.id)
+        WHERE c.city = ANY(${seedCities}) AND c.status = 'open' AND NOT (c.id = ANY(${ids}))
+          AND EXISTS (SELECT 1 FROM places p WHERE p.id = c.id)`
+      ).count;
+      // 清單已經沒有、還沒決定、也沒人投票的（例如被自動排除、被排除）：刪除
+      changes.naming_deleted = (
+        await sql`
+        DELETE FROM naming_candidates c
+        WHERE c.city = ANY(${seedCities}) AND c.status = 'open' AND NOT (c.id = ANY(${ids}))
+          AND NOT EXISTS (SELECT 1 FROM naming_votes v WHERE v.candidate_id = c.id)`
+      ).count;
+      const kept = await sql<{ id: string }[]>`
+        SELECT id FROM naming_candidates c
+        WHERE c.city = ANY(${seedCities}) AND c.status = 'open' AND NOT (c.id = ANY(${ids})) ORDER BY id`;
+      const [open] = await sql<{ n: number }[]>`
+        SELECT count(*)::int AS n FROM naming_candidates WHERE city = ANY(${seedCities}) AND status = 'open'`;
+      naming = { open: open?.n ?? 0, kept: kept.map((k) => k.id) };
+    }
 
     // 7. 檢查 places.attrs 與 place_attributes 一致（trigger 負責同步，這裡只驗證）
     const drift = await sql<{ id: string }[]>`
@@ -250,6 +295,7 @@ export async function runSeed(
       orphanPlaces: orphanRows.map((o) => o.id).filter((id) => !pruned.includes(id)),
       pruned,
       pruneBlocked,
+      naming,
     };
     // 試跑：丟出特殊錯誤讓交易回滾，摘要照樣回傳
     if (options.dryRun) throw new DryRunRollback(summary);

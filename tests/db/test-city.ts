@@ -14,8 +14,9 @@ export async function ensureTestCity(sql: Sql) {
             ON CONFLICT (code) DO NOTHING`;
 }
 
-/** 刪除測試縣，連同它的場地與審核員負責縣市 */
+/** 刪除測試縣，連同它的待命名點、場地與審核員負責縣市 */
 export async function dropTestCity(sql: Sql) {
+  await sql`DELETE FROM naming_candidates WHERE city = ${TEST_CITY.code}`;
   await sql`DELETE FROM places WHERE city = ${TEST_CITY.code}`;
   await sql`DELETE FROM moderator_cities WHERE city = ${TEST_CITY.code}`;
   await sql`DELETE FROM cities WHERE code = ${TEST_CITY.code}`;
