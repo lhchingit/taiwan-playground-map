@@ -147,5 +147,34 @@ class InstitutionTest(unittest.TestCase):
             osm.load_institutions(Path(tempfile.mkdtemp()) / "none.json", Path("osm.json"))
 
 
+class SuspiciousTest(unittest.TestCase):
+    def test_hold_only_own_suspicious_names_without_manual(self):
+        groups, _, _ = osm.group_playgrounds([
+            pg("w1", name="碰碰車"),                      # 自己的名稱可疑 → 先不上地圖
+            pg("w2", name="某某遊戲區", park=(1, "百果山")),  # 在公園裡用公園名稱，不擋
+            pg("w3", name="兒童遊樂區"),                   # 像遊戲場
+            pg("w4", name="合興槌球場"),                   # 可疑，但人工確認過
+            pg("w5", name="公兒37"),                      # 用地編號
+        ], {"w4": "合興槌球場"})
+        shown, held = osm.hold_suspicious(groups, {"w4": "合興槌球場"})
+        self.assertEqual(sorted(g["name"] for g in held), ["公兒37", "碰碰車"])
+        self.assertEqual(sorted(g["name"] for g in shown), ["兒童遊樂區", "合興槌球場", "百果山"])
+        rows = osm.suspicious_rows(held, lambda r: f"https://osm/{r}")
+        self.assertEqual([r[0] for r in rows], ["w1", "w5"])
+        self.assertEqual(len(rows[0]), len(osm.SUSPICIOUS_COLUMNS))
+
+    def test_strict_also_holds_park_names_and_indoor(self):
+        groups, _, _ = osm.group_playgrounds([
+            pg("w1", park=(1, "糯米坊工坊")),            # 公園名稱可疑
+            pg("w2", name="LZ遊樂園", indoor="yes"),     # 室內
+            pg("w3", park=(2, "員林公園")),
+        ], {})
+        _, held = osm.hold_suspicious(groups, {})
+        self.assertEqual(held, [])  # 一般模式不擋
+        shown, held = osm.hold_suspicious(groups, {}, strict=True)
+        self.assertEqual(sorted(g["name"] for g in held), ["LZ遊樂園", "糯米坊工坊"])
+        self.assertEqual([g["name"] for g in shown], ["員林公園"])
+
+
 if __name__ == "__main__":
     unittest.main()

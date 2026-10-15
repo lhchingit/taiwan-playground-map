@@ -10,11 +10,14 @@
   2. 不在公園裡、但遊戲場自己有名稱 → 用自己的名稱
   3. 都沒有 → 看人工命名表；表裡也沒有 → 列進 unnamed，不上地圖
   4. 人工命名表寫「（排除）」的遊戲場不上地圖（例如 OSM 標錯、私人社區）
+  4.5 名稱可疑（只有開啟的縣市，見 hold_suspicious）：遊戲場自己的名稱不像公共遊戲場（「碰碰車」「保齡球館」），
+      或是用地編號，而且沒有人工命名 → 先不上地圖，等人工確認；嚴格模式另外擋公園名稱可疑的與標成室內的
   5. 遊具、生活機能全部是未知（OSM 幾乎沒有遊具資料）；規模、停留時間、年齡、收費也是未知
 """
 import csv
 import hashlib
 import json
+import re
 from pathlib import Path
 
 SOURCE_ID = "osm"
@@ -24,6 +27,10 @@ SOURCES = {
             "url": "https://www.openstreetmap.org/copyright", "kind": "open_data"},
 }
 EXCLUDE = "（排除）"
+# 用地編號，不是公園名稱：「公一」「公兒三」「公1」「公(兒)2」「公兒37」
+ODD_NAME = re.compile(r"^公[（(]?兒?[)）]?[A-Za-z]?[一二三四五六七八九十0-9０-９]+$")
+# 像公共遊戲場的名稱；遊戲場自己的名稱沒有這些字時，先等人工確認
+PLAYGROUND_NAME = re.compile(r"公園|遊戲|遊樂|兒童|親子|廣場|綠地|playground|park", re.I)
 MANUAL_COLUMNS = ["OSM", "名稱", "依據", "確認者", "日期"]
 
 
@@ -114,6 +121,35 @@ def group_playgrounds(playgrounds, manual):
         g = groups.setdefault(key, {"key": key, "name": name, "district": district_of(pg), "members": []})
         g["members"].append(pg)
     return list(groups.values()), unnamed, excluded
+
+
+def suspicious_name(name):
+    """遊戲場自己的名稱不像公共遊戲場（例如「碰碰車」「保齡球館」），或是用地編號"""
+    return bool(ODD_NAME.match(name)) or not PLAYGROUND_NAME.search(name)
+
+
+def hold_suspicious(groups, manual, strict=False):
+    """回傳 (上地圖的, 先不上地圖的)。人工命名表有這處的照人工決定，不再擋。
+    一般：只看用遊戲場自己名稱的（在有名稱公園裡的用公園名稱，不算）。
+    strict：公園名稱可疑的也擋（OSM 把商家標成公園，例如「糯米坊工坊」），標成室內的也擋（多半是商業室內遊樂場）"""
+    def held(g):
+        if any(m["ref"] in manual for m in g["members"]):
+            return False
+        if strict and any(m.get("tags", {}).get("indoor") == "yes" for m in g["members"]):
+            return True
+        return (strict or g["key"].startswith("pg:")) and suspicious_name(g["name"])
+    return [g for g in groups if not held(g)], [g for g in groups if held(g)]
+
+
+def suspicious_rows(held, link):
+    """named-suspicious.csv 的列（命名工具讀這個檔）"""
+    return [[g["members"][0]["ref"], g["district"] or "", g["members"][0]["lat"], g["members"][0]["lng"],
+             link(g["members"][0]["ref"]), g["name"],
+             "是公共遊戲場就在 manual-names.tsv 照名稱命名，不是就填「（排除）」"]
+            for g in sorted(held, key=lambda g: ref_key(g["members"][0]["ref"]))]
+
+
+SUSPICIOUS_COLUMNS = ["OSM", "行政區", "緯度", "經度", "OSM 連結", "OSM 名稱", "處理方式"]
 
 
 def summary(group):

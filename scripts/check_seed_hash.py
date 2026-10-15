@@ -61,6 +61,13 @@ CITIES = {
         "outputs": ["data/seed/cyi/places.json", "data/seed/cyi/places.csv"]
         + [f"data/review/cyi/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution"]],
     },
+    # 彰化縣：同新竹縣（沒有可用的開放資料）
+    "chw": {
+        "scripts": [["scripts/import_osm_city.py", "chw"]],
+        "outputs": ["data/seed/chw/places.json", "data/seed/chw/places.csv"]
+        + [f"data/review/chw/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],
