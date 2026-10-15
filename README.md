@@ -87,6 +87,7 @@ pnpm docker:down   # 停止並移除容器
 | 路徑 | 內容 |
 |---|---|
 | `CLAUDE.md` | 給 Claude Code 的專案規則（資料三態、授權、慣例） |
+| `AGENT.md` | 給貢獻者與 AI agent 的工作指南：工作流程、新增縣市的 checklist、匯入與命名規則、測試陷阱 |
 | `docs/decisions.md` | 技術決策與重新檢討的條件 |
 | `docs/tasks/` | 依序實作的任務說明（P0～P5；P4 是拓展到新竹縣、桃園市、苗栗縣，P5 是更多縣市） |
 | `docs/prototype/playmap.html` | 可直接打開的原型，介面與行為以它為準 |
