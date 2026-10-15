@@ -18,7 +18,7 @@ from lib.overpass import overpass, within
 
 ROOT = Path(__file__).resolve().parent.parent
 # 縣市代碼 → OSM 行政區的 ISO 3166-2 代碼
-ISO = {"hsq": "TW-HSQ", "tyc": "TW-TAO", "mlc": "TW-MIA", "tpe": "TW-TPE", "nwt": "TW-NWT", "txg": "TW-TXG", "khh": "TW-KHH"}
+ISO = {"hsq": "TW-HSQ", "tyc": "TW-TAO", "mlc": "TW-MIA", "tpe": "TW-TPE", "nwt": "TW-NWT", "txg": "TW-TXG", "khh": "TW-KHH", "tnn": "TW-TNN"}
 
 
 def playground_query(iso):

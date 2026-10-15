@@ -69,6 +69,14 @@ CITIES = {
                                                 "unnamed", "merged", "excluded", "excluded-institution", "osm-covered",
                                                 "osm-near-official"]],
     },
+    # 臺南市：臺南市公園設施資料（decisions D21），再用 OSM 遊戲場補充
+    "tnn": {
+        "scripts": ["scripts/import_tnn.py"],
+        "outputs": ["data/seed/tnn/places.json", "data/seed/tnn/places.csv"]
+        + [f"data/review/tnn/{k}.csv" for k in ["no-playground", "odd-names-official", "no-coords",
+                                                "out-of-bounds", "unnamed", "merged", "excluded",
+                                                "excluded-institution", "osm-covered", "osm-near-official"]],
+    },
 }
 
 
