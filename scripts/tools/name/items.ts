@@ -102,6 +102,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py yun',
   },
+  {
+    code: 'ila',
+    name: '宜蘭縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py ila',
+  },
 ];
 
 export interface Nearby {

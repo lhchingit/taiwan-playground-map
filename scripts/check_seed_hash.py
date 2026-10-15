@@ -82,6 +82,13 @@ CITIES = {
         + [f"data/review/yun/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
                                                 "named-suspicious"]],
     },
+    # 宜蘭縣：同彰化縣（沒有可用的開放資料；名稱可疑的先不上地圖）
+    "ila": {
+        "scripts": [["scripts/import_osm_city.py", "ila"]],
+        "outputs": ["data/seed/ila/places.json", "data/seed/ila/places.csv"]
+        + [f"data/review/ila/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],
