@@ -82,6 +82,19 @@
     - 名稱可疑 14 處：`named-suspicious.csv`
   - **上地圖合計 267 處。**
 
+## 嘉義市（cyi）
+
+- **資料：** 只用 OSM 遊戲場起步（decisions D20）。
+  - 政府資料開放平臺與嘉義市資料開放平臺都沒有找到可用的公園或遊戲場清單；網路上只有新聞與部落格。
+  - 網址 slug 是 `chiayi-city`，嘉義縣之後用 `chiayi-county`。
+- **指令：** `python3 scripts/fetch_osm_city.py cyi`、`python3 scripts/fetch_osm_institutions.py cyi` → `python3 scripts/import_osm_city.py cyi`
+- **進度（2026-10-15）：** 資料已準備好、**未上線**。
+  - OSM 遊戲場 16 處（新聞提到市內約 21 處兒童遊戲場）：
+    - **上地圖 5 處**：文化公園、番仔溝公園、嘉義公園、中正公園、文昌公園；同一個公園裡的 2 處遊戲區合併進去。
+    - 國小裡的 7 處自動排除。
+    - **沒有名稱 2 處**：`data/review/cyi/unnamed.csv`。
+  - 遊具全部是 `u`。資料少，上線時間由人決定。
+
 ## 完成標準（每個縣市）
 
 - [ ] 該縣市的轉接器、設施對照與測試已合併。

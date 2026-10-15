@@ -1,0 +1,301 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-CYI\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-15",
+ "osm_base": "2026-10-15T14:20:14Z",
+ "sha256": "1a238012dd45b8db81a7f9aa38d2bf3547eeb7fb2d216b0b5626366b9bd8495b",
+ "playgrounds": [
+  {
+   "ref": "n6281152267",
+   "lat": 23.4742319,
+   "lng": 120.4510165,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 163108598,
+     "name": "文化公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "n6281213373",
+   "lat": 23.4751706,
+   "lng": 120.4346782,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 544706378,
+     "name": "番仔溝公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n6469979677",
+   "lat": 23.4743854,
+   "lng": 120.4356879,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 544706378,
+     "name": "番仔溝公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n7161574381",
+   "lat": 23.4580872,
+   "lng": 120.4366442,
+   "tags": {
+    "access": "private",
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n7392659241",
+   "lat": 23.4892948,
+   "lng": 120.4285477,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊樂場",
+    "note": "提供給小三或小四的學生使用"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "n10156440505",
+   "lat": 23.4967213,
+   "lng": 120.4527152,
+   "tags": {
+    "leisure": "playground",
+    "level": "4"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w296203299",
+   "lat": 23.4838796,
+   "lng": 120.4635808,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "name": "兒童遊園地"
+   },
+   "parks": [
+    {
+     "area": 263449317,
+     "name": "嘉義公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w357092348",
+   "lat": 23.482039,
+   "lng": 120.4672511,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 263449317,
+     "name": "嘉義公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w552332394",
+   "lat": 23.481321,
+   "lng": 120.4473163,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 163107592,
+     "name": "中正公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w557397026",
+   "lat": 23.4786567,
+   "lng": 120.4561232,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 263608071,
+     "name": "文昌公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w778190985",
+   "lat": 23.4842648,
+   "lng": 120.4879753,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w778202441",
+   "lat": 23.4904642,
+   "lng": 120.4444507,
+   "tags": {
+    "leisure": "playground",
+    "name": "歡邦園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w787189568",
+   "lat": 23.4705096,
+   "lng": 120.4454286,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "max_age": "13",
+    "min_age": "7",
+    "name": "溜滑梯",
+    "surface": "ground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  {
+   "ref": "w790726962",
+   "lat": 23.4857273,
+   "lng": 120.4561861,
+   "tags": {
+    "leisure": "playground",
+    "name": "新遊樂器材區"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w790726965",
+   "lat": 23.4849631,
+   "lng": 120.4553719,
+   "tags": {
+    "leisure": "playground",
+    "name": "舊遊樂器材區"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  {
+   "ref": "w791062530",
+   "lat": 23.4929799,
+   "lng": 120.4555139,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  }
+ ]
+}

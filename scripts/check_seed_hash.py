@@ -55,6 +55,12 @@ CITIES = {
         "outputs": ["data/seed/khh/places.json", "data/seed/khh/places.csv"]
         + [f"data/review/khh/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution"]],
     },
+    # 嘉義市：同新竹縣（沒有找到可用的官方清單）
+    "cyi": {
+        "scripts": [["scripts/import_osm_city.py", "cyi"]],
+        "outputs": ["data/seed/cyi/places.json", "data/seed/cyi/places.csv"]
+        + [f"data/review/cyi/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],
