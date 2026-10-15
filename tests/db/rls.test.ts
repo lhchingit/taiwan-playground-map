@@ -221,7 +221,7 @@ describe('首頁用的公開 view', () => {
       ]);
   });
 
-  it('city_bounds：11 個縣市都有範圍，只公開這幾個欄位（測試縣不在 migration 裡）', async () => {
+  it('city_bounds：12 個縣市都有範圍，只公開這幾個欄位（測試縣不在 migration 裡）', async () => {
     const { data, error } = await anon.from('city_bounds').select('*').order('code');
     expect(error).toBeNull();
     expect(data?.map((c) => [c.code, c.launched])).toEqual([
@@ -232,6 +232,7 @@ describe('首頁用的公開 view', () => {
       ['khh', false],
       ['mlc', false],
       ['nwt', false],
+      ['pif', false],
       ['tnn', false],
       ['tpe', false],
       ['txg', false],

@@ -68,6 +68,13 @@ CITIES = {
         + [f"data/review/chw/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
                                                 "named-suspicious"]],
     },
+    # 屏東縣：同彰化縣（沒有可用的開放資料；名稱可疑的先不上地圖）
+    "pif": {
+        "scripts": [["scripts/import_osm_city.py", "pif"]],
+        "outputs": ["data/seed/pif/places.json", "data/seed/pif/places.csv"]
+        + [f"data/review/pif/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],

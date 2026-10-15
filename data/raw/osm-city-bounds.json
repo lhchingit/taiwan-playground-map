@@ -1,6 +1,6 @@
 {
  "source": "OpenStreetMap Nominatim（© OpenStreetMap contributors, ODbL）",
- "fetched": "2026-10-15",
+ "fetched": "2026-10-16",
  "note": "bbox 為 [西, 南, 東, 北]；只用在沒有場地的縣市（scripts/seed/transform.ts）",
  "cities": {
   "hsc": {
@@ -111,6 +111,16 @@
     23.7856132,
     120.6839479,
     24.2071833
+   ]
+  },
+  "pif": {
+   "name": "屏東縣",
+   "osm": "relation/2775815",
+   "bbox": [
+    120.3528956,
+    21.8968599,
+    120.9041877,
+    22.885148
    ]
   }
  }

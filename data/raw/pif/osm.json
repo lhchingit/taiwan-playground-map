@@ -1,0 +1,460 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-PIF\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-15T19:35:21Z",
+ "sha256": "7b16b7a6bdacde09e62f65ad42c63ff8d8b1fb60bb48ea85455db79de050754d",
+ "playgrounds": [
+  {
+   "ref": "n5003084273",
+   "lat": 22.8192306,
+   "lng": 120.5061303,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "里港鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6282854551",
+   "lat": 22.6927669,
+   "lng": 120.4864977,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 524114387,
+     "name": "廣興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "n6283977539",
+   "lat": 22.784545,
+   "lng": 120.494184,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 750961253,
+     "name": "阿里港河堤公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "里港鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n10284328831",
+   "lat": 22.4908798,
+   "lng": 120.5127668,
+   "tags": {
+    "leisure": "playground",
+    "name": "南州環保共融公園"
+   },
+   "parks": [
+    {
+     "area": 272300389,
+     "name": "南州運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "南州鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n13550955850",
+   "lat": 22.808658,
+   "lng": 120.4913239,
+   "tags": {
+    "indoor": "yes",
+    "leisure": "playground",
+    "name": "里港鄉兒童室內遊戲室",
+    "operator": "公家單位"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "里港鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n13563566023",
+   "lat": 22.8086217,
+   "lng": 120.491332,
+   "tags": {
+    "addr:city": "屏東縣",
+    "addr:country": "TW",
+    "addr:district": "里港鄉",
+    "addr:full": "屏東縣里港鄉中和村4鄰南進路1之1號",
+    "addr:hamlet": "中和村",
+    "addr:housenumber": "1之1",
+    "addr:neighbourhood": "4",
+    "addr:province": "台灣省",
+    "addr:street": "南進路",
+    "indoor": "yes",
+    "leisure": "playground",
+    "name": "里港鄉兒童室內遊戲室"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "里港鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w232400812",
+   "lat": 21.9816291,
+   "lng": 120.7507071,
+   "tags": {
+    "leisure": "playground",
+    "name": "炫風小型賽車場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "恆春鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w332369830",
+   "lat": 22.4883491,
+   "lng": 120.4571927,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新園鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w332369836",
+   "lat": 22.4874277,
+   "lng": 120.4574541,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新園鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w400903246",
+   "lat": 22.6594309,
+   "lng": 120.4833255,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 144711536,
+     "name": "復興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w723497159",
+   "lat": 22.3623756,
+   "lng": 120.6006261,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "枋寮鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1014355642",
+   "lat": 22.5954719,
+   "lng": 120.5257505,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹田鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1014372314",
+   "lat": 22.5843131,
+   "lng": 120.5250295,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹田鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1014372323",
+   "lat": 22.6194455,
+   "lng": 120.5323521,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹田鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1026582043",
+   "lat": 22.6357943,
+   "lng": 120.514021,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1026582042,
+     "name": "麟洛客家花轎遊戲場"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "麟洛鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1026885674",
+   "lat": 22.6612762,
+   "lng": 120.4783465,
+   "tags": {
+    "description": "fix me",
+    "leisure": "playground",
+    "name": "共融遊樂場"
+   },
+   "parks": [
+    {
+     "area": 727370920,
+     "name": "武昌公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1027568185",
+   "lat": 22.6562982,
+   "lng": 120.491188,
+   "tags": {
+    "leisure": "playground",
+    "name": "雙園遊憩"
+   },
+   "parks": [
+    {
+     "area": 727400958,
+     "name": "屏東縣民公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1213513672",
+   "lat": 22.5327639,
+   "lng": 120.5382626,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3608902559,
+     "name": "潮好玩幸福村"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "潮州鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1272733549",
+   "lat": 22.6590221,
+   "lng": 120.4970349,
+   "tags": {
+    "leisure": "playground",
+    "name": "雙園遊憩"
+   },
+   "parks": [
+    {
+     "area": 727400958,
+     "name": "屏東縣民公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1273345929",
+   "lat": 22.6584919,
+   "lng": 120.4962975,
+   "tags": {
+    "leisure": "playground",
+    "name": "雙園遊憩"
+   },
+   "parks": [
+    {
+     "area": 727400958,
+     "name": "屏東縣民公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1284842700",
+   "lat": 22.6585139,
+   "lng": 120.4966898,
+   "tags": {
+    "leisure": "playground",
+    "name": "雙園遊憩"
+   },
+   "parks": [
+    {
+     "area": 727400958,
+     "name": "屏東縣民公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1284842701",
+   "lat": 22.6593305,
+   "lng": 120.4971629,
+   "tags": {
+    "leisure": "playground",
+    "name": "雙園遊憩"
+   },
+   "parks": [
+    {
+     "area": 727400958,
+     "name": "屏東縣民公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1284842702",
+   "lat": 22.659028,
+   "lng": 120.497439,
+   "tags": {
+    "leisure": "playground",
+    "name": "雙園遊憩"
+   },
+   "parks": [
+    {
+     "area": 727400958,
+     "name": "屏東縣民公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1369499109",
+   "lat": 22.5476483,
+   "lng": 120.5412403,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "潮州鎮"
+    }
+   ]
+  }
+ ]
+}
