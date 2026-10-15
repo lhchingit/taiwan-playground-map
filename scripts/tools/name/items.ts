@@ -2,6 +2,7 @@
 //   - data/review/<縣市>/unnamed.csv：沒有名稱的 OSM 遊戲場
 //   - data/review/tyc/osm-near-official.csv：離官方場地很近、名稱不同（同一處就排除，不同處就命名）
 //   - data/review/tpe/odd-names.csv：名稱是用地編號（只能命名）
+//   - data/review/tnn/named-suspicious.csv：OSM 上有名稱但不像公共遊戲場（是就照名稱命名，不是就排除）
 // 附近的 OSM 名稱來自 data/raw/<縣市>/osm-nearby.json（只是提示）；已經處理的結果來自 manual-names.tsv。
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -66,6 +67,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py khh',
   },
+  {
+    code: 'tnn',
+    name: '臺南市',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_tnn.py',
+  },
 ];
 
 export interface Nearby {
@@ -78,7 +86,7 @@ export interface Nearby {
 export interface NameItem {
   city: string;
   key: string;
-  kind: 'unnamed' | 'near-official' | 'odd-name';
+  kind: 'unnamed' | 'near-official' | 'odd-name' | 'suspicious';
   lat: number;
   lng: number;
   district: string;
@@ -186,6 +194,18 @@ export function loadItems(root: string, city: string): NameItem[] {
         osmUrl: osmUrl(r.OSM ?? ''),
       });
     }
+  }
+
+  for (const r of readCsv(join(review, 'named-suspicious.csv'))) {
+    items.push({
+      ...base(r.OSM ?? ''),
+      kind: 'suspicious',
+      lat: Number(r['緯度']),
+      lng: Number(r['經度']),
+      district: r['行政區'] ?? '',
+      context: `OSM 上的名稱是「${r['OSM 名稱']}」，看起來不像公共遊戲場：是的話照名稱命名，不是就排除`,
+      osmUrl: osmUrl(r.OSM ?? ''),
+    });
   }
 
   for (const r of readCsv(join(review, 'odd-names.csv'))) {

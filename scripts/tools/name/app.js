@@ -82,7 +82,7 @@ function renderList() {
     .map((i, n) => {
       const label = i.done
         ? `<span class="done">✓ ${esc(i.done.name)}</span>`
-        : `<span class="meta">${i.kind === 'near-official' ? '離官方場地很近' : i.kind === 'odd-name' ? '用地編號' : '沒有名稱'}</span>`;
+        : `<span class="meta">${i.kind === 'near-official' ? '離官方場地很近' : i.kind === 'odd-name' ? '用地編號' : i.kind === 'suspicious' ? '名稱可疑' : '沒有名稱'}</span>`;
       return `<li data-n="${n}" aria-selected="${n === state.index}">${esc(i.key)} ${esc(i.district)}<br />${label}</li>`;
     })
     .join('');

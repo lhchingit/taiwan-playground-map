@@ -2,7 +2,7 @@
 
 台灣親子遊樂場與公園地圖。家長可依遊樂設施、年齡、生活機能、停車、距離等條件篩選場地。
 目前範圍：**新竹市**（72 處，來源：養工處兒童遊戲場清冊＋網路資料，座標來自 OpenStreetMap）。
-新竹縣、桃園市、苗栗縣、臺北市、新北市、臺中市、高雄市的資料已準備好，上線時間由人決定（`pnpm city launch`）。目標：公開給大眾使用的手機優先網站（PWA），之後擴展到全台。
+新竹縣、桃園市、苗栗縣、臺北市、新北市、臺中市、高雄市、臺南市的資料已準備好，上線時間由人決定（`pnpm city launch`）。目標：公開給大眾使用的手機優先網站（PWA），之後擴展到全台。
 
 - 介面與互動規格：`docs/prototype/playmap.html`（可直接用瀏覽器打開的原型，行為以它為準）
 - 技術決策與理由：`docs/decisions.md`
@@ -50,7 +50,7 @@ python -m unittest discover -s scripts/tests -t scripts   # 匯入腳本的測�
 
 - **不可以把 Google Maps / Places 的任何資料存進資料庫或 seed**，包括座標、評論、照片、評分。
   座標來源只能是 OpenStreetMap、內政部 TGOS、政府開放資料（政府資料開放授權條款，decisions D21），或實地測量。
-  （新竹市等縣市的座標來自 OpenStreetMap，臺北市來自公園處的開放資料；地圖與資料頁需標示「© OpenStreetMap contributors」。）
+  （新竹市等縣市的座標來自 OpenStreetMap，臺北市、臺南市來自市府的開放資料；地圖與資料頁需標示「© OpenStreetMap contributors」。）
 - 網路文章與評論只能當成「查證線索」，事實要重新整理並標註來源，不可複製原文。
 - 使用者上傳的照片：伺服器端移除 EXIF（含 GPS），審核通過前不公開。
 - 不在 log 或分析事件裡記錄使用者的精確定位；距離計算在前端完成。

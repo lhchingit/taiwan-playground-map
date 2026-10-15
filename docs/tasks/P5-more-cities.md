@@ -55,6 +55,33 @@
   - 遊具全部是 `u`。資料少，上線時間由人決定。
 - **範圍：** OSM 的高雄市行政區包含東沙島與太平島，所以 `osm-city-bounds.json` 的範圍很大。這個範圍只在縣市沒有場地時使用，高雄市有場地後改用場地座標計算，不受影響。
 
+## 臺南市（tnn）
+
+- **資料：** 臺南市公園設施資料（臺南市政府工務局，[53556](https://data.gov.tw/dataset/53556)，政府資料開放授權條款，decisions D21），附 WGS84 座標；再用 OSM 遊戲場補上官方沒有的（比照桃園，D20）。
+  - 每列一個公園，約 200 個「數量」欄位。規則見 `scripts/sources/tnn.py`：
+    - 數量 > 0 → `y`；0 或空白 → `u`，不寫 `n`。
+    - 只有兒童遊具區的欄位 > 0 才算有遊戲場。
+    - 大／中／小型兒童遊具（組合遊具）只寫進說明。
+    - 公廁 → 廁所、高燈／矮燈 → 夜間照明、各種球場 → 球場。
+    - 汽車停車位 → 停車場與格數。
+  - 名稱裡的用地編號括號拿掉再顯示（「南門公園(公8)」→ 南門公園），原文保留在 `official_ref`。
+  - OSM 補充裡名稱不像公共遊戲場的（碰碰車、保齡球館…）先不上地圖，列在 `named-suspicious.csv`，用命名工具確認。
+- **指令：** `python3 scripts/fetch_tnn_parks.py`、`python3 scripts/fetch_osm_city.py tnn`、`python3 scripts/fetch_osm_institutions.py tnn` → `python3 scripts/import_tnn.py`
+- **進度（2026-10-15）：** 資料已準備好、**未上線**。
+  - 官方 426 個公園：
+    - **上地圖 237 處**
+    - 只有體健設施 169 處
+    - 名稱是用地編號 19 處：`odd-names-official.csv`
+    - 缺座標 1 處：`no-coords.csv`
+  - OSM 遊戲場 150 處：
+    - 學校／機關內 11 處
+    - 官方已涵蓋 32 處
+    - **補充 30 處**
+    - 離官方場地很近、待判斷 14 處：`osm-near-official.csv`
+    - 沒有名稱 20 處：`unnamed.csv`
+    - 名稱可疑 14 處：`named-suspicious.csv`
+  - **上地圖合計 267 處。**
+
 ## 完成標準（每個縣市）
 
 - [ ] 該縣市的轉接器、設施對照與測試已合併。

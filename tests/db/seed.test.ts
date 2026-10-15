@@ -144,7 +144,8 @@ describe('pnpm seed', () => {
              count(*) FILTER (WHERE coord_source ILIKE '%google%')::int AS google,
              count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %'
                                 AND coord_source NOT LIKE '人工定位（%'
-                                AND coord_source NOT LIKE '臺北市公園設施資料（%')::int AS other
+                                AND coord_source NOT LIKE '臺北市公園設施資料（%'
+                                AND coord_source NOT LIKE '臺南市公園設施資料（%')::int AS other
       FROM places WHERE id NOT LIKE 'test-%'`;
     expect(r).toEqual({ missing: 0, google: 0, other: 0 });
   });
@@ -325,6 +326,30 @@ describe('pnpm seed', () => {
     expect(a?.n).toBe(0);
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'txg'`;
     expect(c?.launched_at).toBeNull();
+  });
+
+  it('臺南市（公園設施資料＋OSM 補充，decisions D20、D21）：未上線；只有「有」或未知；停車場有格數與來源', async () => {
+    const tnn = allSeeds.find((s) => s.places[0]?.city === 'tnn');
+    expect(tnn?.places.length).toBeGreaterThan(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'tnn'`;
+    expect(c?.launched_at).toBeNull();
+    const values = await sql`SELECT DISTINCT value, source_id FROM place_attributes
+                             WHERE place_id LIKE 'tnn-%' ORDER BY 1`;
+    expect(values).toEqual([{ value: 'y', source_id: 'tnn' }]);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE coord_source NOT LIKE '臺南市公園設施資料%'
+                                AND coord_source NOT LIKE 'OpenStreetMap %')::int AS other
+      FROM places WHERE city = 'tnn'`;
+    expect(r).toEqual({ n: tnn!.places.length, other: 0 });
+    const lots =
+      await sql`SELECT DISTINCT pp.type, pp.fee, pp.source_id, pp.spaces > 0 AS spaces FROM place_parking pp
+                           JOIN places p ON p.id = pp.place_id WHERE p.city = 'tnn' AND pp.type <> 'u'`;
+    expect(lots).toEqual([{ type: 'lot', fee: 'u', source_id: 'tnn', spaces: true }]);
+    // 用地編號已經從名稱拿掉
+    const [code] =
+      await sql`SELECT count(*)::int AS n FROM places WHERE city = 'tnn' AND name ~ '[（(](公|兒|綠)'`;
+    expect(code?.n).toBe(0);
   });
 
   it('臺北市（公園處設施資料，decisions D21）：未上線；遊具只有「有」或未知，沒有「無」', async () => {
