@@ -1,0 +1,33 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "radius_m": 150,
+ "note": "人工命名工具的提示，只是參考；匯入不使用",
+ "nearby": {
+  "n4438496991": [
+   {
+    "name": "龍潭湖風景區",
+    "kind": "公園",
+    "osm": "w785273398",
+    "distance_m": 137
+   }
+  ],
+  "n8363233807": [
+   {
+    "name": "有機蔬菜園區",
+    "kind": "花園",
+    "osm": "n7106175296",
+    "distance_m": 130
+   }
+  ],
+  "w676214335": [
+   {
+    "name": "蘇南社區活動中心",
+    "kind": "社區活動中心",
+    "osm": "w865224329",
+    "distance_m": 56
+   }
+  ]
+ }
+}

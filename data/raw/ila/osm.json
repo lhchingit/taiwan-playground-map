@@ -1,0 +1,517 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-ILA\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-15T20:37:21Z",
+ "sha256": "80a53b9bb9d26de67a71c0b9fe2da8f94e9b5b5bffdc325d08221def55f02122",
+ "playgrounds": [
+  {
+   "ref": "n4438496991",
+   "lat": 24.7920375,
+   "lng": 121.7398218,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "礁溪鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n4538912045",
+   "lat": 24.7398547,
+   "lng": 121.7576404,
+   "tags": {
+    "leisure": "playground",
+    "name": "滑溜場"
+   },
+   "parks": [
+    {
+     "area": 85252668,
+     "name": "宜蘭運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "宜蘭市"
+    }
+   ]
+  },
+  {
+   "ref": "n5526628621",
+   "lat": 24.611996,
+   "lng": 121.5264119,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "大同鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n7106133570",
+   "lat": 24.9037176,
+   "lng": 121.8487908,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "頭城鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n8363233807",
+   "lat": 24.9043499,
+   "lng": 121.8469506,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "頭城鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n9501883364",
+   "lat": 24.6610865,
+   "lng": 121.6187251,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "三星鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n9868393996",
+   "lat": 24.6693479,
+   "lng": 121.7702264,
+   "tags": {
+    "leisure": "playground",
+    "name": "共融遊戲場"
+   },
+   "parks": [
+    {
+     "area": 585025969,
+     "name": "羅東鎮公九公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "羅東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n10712095224",
+   "lat": 24.6767667,
+   "lng": 121.7693552,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 244031296,
+     "name": "羅東中山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "羅東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n12531281902",
+   "lat": 24.7483205,
+   "lng": 121.7602117,
+   "tags": {
+    "addr:street": "陽明路",
+    "leisure": "playground",
+    "name": "宜蘭市陽明公園",
+    "wheelchair": "yes"
+   },
+   "parks": [
+    {
+     "area": 1298331769,
+     "name": "宜蘭市陽明公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "宜蘭市"
+    }
+   ]
+  },
+  {
+   "ref": "w281893717",
+   "lat": 24.6766002,
+   "lng": 121.7313642,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊戲場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "冬山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w281893718",
+   "lat": 24.6764133,
+   "lng": 121.731755,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊戲場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "冬山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w457806020",
+   "lat": 24.7403763,
+   "lng": 121.755833,
+   "tags": {
+    "leisure": "playground",
+    "name": "戲砂池"
+   },
+   "parks": [
+    {
+     "area": 85252668,
+     "name": "宜蘭運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "宜蘭市"
+    }
+   ]
+  },
+  {
+   "ref": "w536613632",
+   "lat": 24.8631675,
+   "lng": 121.8238192,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 325023300,
+     "name": "頭城運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "頭城鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w536653781",
+   "lat": 24.8633901,
+   "lng": 121.8240232,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 325023300,
+     "name": "頭城運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "頭城鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w592590641",
+   "lat": 24.4457303,
+   "lng": 121.7783185,
+   "tags": {
+    "area": "yes",
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "南澳鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w659125151",
+   "lat": 24.6724905,
+   "lng": 121.772757,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "羅東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w659125152",
+   "lat": 24.6734246,
+   "lng": 121.772274,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "羅東鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w665803914",
+   "lat": 24.7115043,
+   "lng": 121.7695432,
+   "tags": {
+    "leisure": "playground",
+    "name": "五結溪濱公園籃球場"
+   },
+   "parks": [
+    {
+     "area": 396915119,
+     "name": "溪濱公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "五結鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w665803916",
+   "lat": 24.7116908,
+   "lng": 121.7707242,
+   "tags": {
+    "leisure": "playground",
+    "name": "五結溪濱公園溜冰場"
+   },
+   "parks": [
+    {
+     "area": 396915119,
+     "name": "溪濱公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "五結鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w676214335",
+   "lat": 24.5976606,
+   "lng": 121.8527605,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "蘇澳鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w793422964",
+   "lat": 24.7925316,
+   "lng": 121.7420969,
+   "tags": {
+    "leisure": "playground",
+    "name": "龍長坡大碗公溜滑梯"
+   },
+   "parks": [
+    {
+     "area": 785273398,
+     "name": "龍潭湖風景區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "礁溪鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1484822743",
+   "lat": 24.7447484,
+   "lng": 121.7211866,
+   "tags": {
+    "leisure": "playground",
+    "playground": "sledding"
+   },
+   "parks": [
+    {
+     "area": 3609594239,
+     "name": "員山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1484822744",
+   "lat": 24.7447616,
+   "lng": 121.721074,
+   "tags": {
+    "leisure": "playground",
+    "playground": "sledding"
+   },
+   "parks": [
+    {
+     "area": 3609594239,
+     "name": "員山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1484822745",
+   "lat": 24.7447499,
+   "lng": 121.7210891,
+   "tags": {
+    "leisure": "playground",
+    "playground": "sledding"
+   },
+   "parks": [
+    {
+     "area": 3609594239,
+     "name": "員山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1484822746",
+   "lat": 24.7447557,
+   "lng": 121.7210816,
+   "tags": {
+    "leisure": "playground",
+    "playground": "sledding"
+   },
+   "parks": [
+    {
+     "area": 3609594239,
+     "name": "員山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1484822764",
+   "lat": 24.7444581,
+   "lng": 121.722019,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3609594239,
+     "name": "員山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員山鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1547375337",
+   "lat": 24.6824976,
+   "lng": 121.7521071,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground",
+    "name": "薛長興全齡風雨樂活館",
+    "operator": "羅東運動公園兒童遊戲區",
+    "surface": "paved"
+   },
+   "parks": [
+    {
+     "area": 84760335,
+     "name": "羅東運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "羅東鎮"
+    }
+   ]
+  }
+ ]
+}
