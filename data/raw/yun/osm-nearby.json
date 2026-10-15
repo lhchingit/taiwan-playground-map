@@ -1,0 +1,22 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "radius_m": 150,
+ "note": "人工命名工具的提示，只是參考；匯入不使用",
+ "nearby": {
+  "n4677757175": [],
+  "n6276268741": [],
+  "n6276503257": [],
+  "n6470878345": [
+   {
+    "name": "雲林縣私立愛德堡幼兒園",
+    "kind": "幼兒園",
+    "osm": "w1244945000",
+    "distance_m": 123
+   }
+  ],
+  "n8430786852": [],
+  "w1015145232": []
+ }
+}

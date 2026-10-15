@@ -1,0 +1,51 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "osm_json_sha256": "e771be8e7be47f8b90f2f84cb5c8e9f5cbd2ee8a3fb618dca9ed3edd5ab9efd5",
+ "note": "遊戲場所在的學校、幼兒園、政府機關、軍營（只列在範圍內的）；匯入時自動排除",
+ "inside": {
+  "n4634327157": [
+   {
+    "osm": "w433832972",
+    "kind": "學校",
+    "name": "溝壩國小"
+   }
+  ],
+  "w453777229": [
+   {
+    "osm": "w453765498",
+    "kind": "學校",
+    "name": "石龜國小"
+   }
+  ],
+  "w778192432": [
+   {
+    "osm": "w370285779",
+    "kind": "學校",
+    "name": "宏仁國小"
+   }
+  ],
+  "w791747761": [
+   {
+    "osm": "w161009586",
+    "kind": "學校",
+    "name": "南陽國小"
+   }
+  ],
+  "w792115647": [
+   {
+    "osm": "w559382172",
+    "kind": "學校",
+    "name": "龍潭國小"
+   }
+  ],
+  "w804532322": [
+   {
+    "osm": "w496724593",
+    "kind": "學校",
+    "name": "大埤國小"
+   }
+  ]
+ }
+}
