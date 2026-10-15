@@ -7,6 +7,7 @@
 - 介面與互動規格：`docs/prototype/playmap.html`（可直接用瀏覽器打開的原型，行為以它為準）
 - 技術決策與理由：`docs/decisions.md`
 - 目前任務：`docs/tasks/` 裡編號最小、還沒完成的那一份
+- 給貢獻者與 AI agent 的工作指南（新增縣市的 checklist、匯入與命名規則、測試陷阱）：`AGENTS.md`
 
 ## 技術棧
 
