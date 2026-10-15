@@ -17,7 +17,7 @@ from pathlib import Path
 from lib.overpass import batched, institution_query, overpass, parse_institutions
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = ["hsq", "tyc", "mlc", "nwt", "txg", "khh", "tnn"]
+CITIES = ["hsq", "tyc", "mlc", "nwt", "txg", "khh", "tnn", "cyi"]
 
 
 def main():

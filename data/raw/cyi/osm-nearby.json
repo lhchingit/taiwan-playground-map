@@ -1,0 +1,24 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-15",
+ "radius_m": 150,
+ "note": "人工命名工具的提示，只是參考；匯入不使用",
+ "nearby": {
+  "n10156440505": [
+   {
+    "name": "仁義新村",
+    "kind": "住宅區",
+    "osm": "w729248235",
+    "distance_m": 96
+   },
+   {
+    "name": "景仁幼兒園",
+    "kind": "幼兒園",
+    "osm": "r16694956",
+    "distance_m": 171
+   }
+  ],
+  "n7161574381": []
+ }
+}

@@ -19,7 +19,7 @@ from sources import park_lists
 from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市", "txg": "臺中市", "khh": "高雄市"}
+CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市", "txg": "臺中市", "khh": "高雄市", "cyi": "嘉義市"}
 CSV_BASE = ["id", "name", "district", "lat", "lng", "size", "stay", "age_min", "age_max", "fee", "status"]
 
 
