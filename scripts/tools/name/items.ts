@@ -88,6 +88,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py chw',
   },
+  {
+    code: 'pif',
+    name: '屏東縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py pif',
+  },
 ];
 
 export interface Nearby {
