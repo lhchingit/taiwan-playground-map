@@ -66,9 +66,9 @@ class TnnTest(unittest.TestCase):
 
     def test_suspicious_osm_names(self):
         for name in ["碰碰車", "一心保齡球館", "公兒37"]:
-            self.assertTrue(tnn.suspicious_osm_name(name), name)
+            self.assertTrue(osm.suspicious_name(name), name)
         for name in ["臺南公園", "兒童遊樂區", "親子廣場"]:
-            self.assertFalse(tnn.suspicious_osm_name(name), name)
+            self.assertFalse(osm.suspicious_name(name), name)
 
     def test_coordinate_and_area(self):
         self.assertEqual(tnn.coordinate(park()), (22.98, 120.24))

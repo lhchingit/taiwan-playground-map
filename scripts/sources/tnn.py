@@ -14,6 +14,8 @@
 """
 import re
 
+from sources import osm_playgrounds as osm
+
 SOURCE_ID = "tnn"
 CITY = "tnn"
 SOURCES = {
@@ -51,14 +53,12 @@ MAPPED = {c for c, _ in COUNT_RULES}
 NOTE_ONLY = [c for c in PLAY_COLUMNS if c not in MAPPED]
 PARKING_COLUMN = "汽車停車位數量"
 
-# 用地編號，不是公園名稱：「公一」「公兒三」「公1」「公(兒)2」「公兒37」
-ODD_NAME = re.compile(r"^公[（(]?兒?[)）]?[A-Za-z]?[一二三四五六七八九十0-9０-９]+$")
+# 用地編號，不是公園名稱（定義在 osm_playgrounds，OSM 名稱可疑的規則也用它）
+ODD_NAME = osm.ODD_NAME
 # 用地編號的括號：「(公8)」「(公六)」「(公兒E53)」「(公兒1-4)」「(綠4)」「(富台段公兒20)」「(灣裡公42)」「(公)」；說明性的括號不算
 CODE_PAREN = re.compile(r"\s*[（(][^（）()]*?(?:公兒|兒公|公|兒|綠|廣)[A-Za-z]?[0-9０-９一二三四五六七八九十\-－]*[)）]")
 # 「公兒(中埕里鄰公園)」：真正的名稱在括號裡
 CODE_PREFIX = re.compile(r"^(?:公兒|公|兒)[（(](.+)[)）]$")
-# 像公共遊戲場的名稱（OSM 補充用；沒有這些字的先等人工確認）
-PLAYGROUND_NAME = re.compile(r"公園|遊戲|遊樂|兒童|親子|廣場|綠地|playground|park", re.I)
 
 
 def label(column):
@@ -72,11 +72,6 @@ def display_name(name):
     if m:
         name = m.group(1).strip()
     return CODE_PAREN.sub("", name).strip() or name
-
-
-def suspicious_osm_name(name):
-    """OSM 遊戲場自己的名稱不像公共遊戲場（例如「碰碰車」「保齡球館」），或是用地編號"""
-    return bool(ODD_NAME.match(name)) or not PLAYGROUND_NAME.search(name)
 
 
 def park_key(r):

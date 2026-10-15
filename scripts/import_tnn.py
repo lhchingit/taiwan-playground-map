@@ -104,11 +104,7 @@ def main():
     extra, covered, near = tycg.split_osm(kept, officials, names)
     groups, unnamed, excluded = osm.group_playgrounds(extra, names)
     # 自己的名稱不像公共遊戲場的（不在公園裡、也沒有人工命名）：先不上地圖，等人工確認
-    def suspicious(g):
-        first = g["members"][0]
-        return g["key"].startswith("pg:") and first["ref"] not in names and tnn.suspicious_osm_name(g["name"])
-    held = [g for g in groups if suspicious(g)]
-    groups = [g for g in groups if not suspicious(g)]
+    groups, held = osm.hold_suspicious(groups, names)
     osm_places = osm.to_places(groups, tnn.CITY, keys)
     taken = {p["name"] for p in places}
     for p in osm_places:
@@ -139,11 +135,7 @@ def main():
     write_csv(out / "unnamed.csv", ["OSM", "行政區", "緯度", "經度", "OSM 連結", "處理方式"],
               [[p["ref"], osm.district_of(p) or "", p["lat"], p["lng"], link(p["ref"]),
                 "確認後在 manual-names.tsv 填名稱或「（排除）」"] for p in unnamed])
-    write_csv(out / "named-suspicious.csv", ["OSM", "行政區", "緯度", "經度", "OSM 連結", "OSM 名稱", "處理方式"],
-              [[g["members"][0]["ref"], g["district"] or "", g["members"][0]["lat"], g["members"][0]["lng"],
-                link(g["members"][0]["ref"]), g["name"],
-                "是公共遊戲場就在 manual-names.tsv 照名稱命名，不是就填「（排除）」"]
-               for g in sorted(held, key=lambda g: osm.ref_key(g["members"][0]["ref"]))])
+    write_csv(out / "named-suspicious.csv", osm.SUSPICIOUS_COLUMNS, osm.suspicious_rows(held, link))
     write_csv(out / "merged.csv", ["場地 id", "名稱", "合併的 OSM 遊戲場", "各遊戲場自己的名稱"],
               [[p["id"], p["name"], p["official_ref"][0]["osm"],
                 "、".join(m["tags"].get("name", "") for m in g["members"] if m["tags"].get("name"))]

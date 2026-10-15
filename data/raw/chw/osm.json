@@ -1,0 +1,661 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-CHA\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-15",
+ "osm_base": "2026-10-15T14:43:13Z",
+ "sha256": "02cfb99b6cec272d995cf8f0d61477e9aac9bfc9d0eafc6db02dbb0227e48e98",
+ "playgrounds": [
+  {
+   "ref": "n2088290743",
+   "lat": 24.0593275,
+   "lng": 120.5387091,
+   "tags": {
+    "leisure": "playground",
+    "name": "延和公園"
+   },
+   "parks": [
+    {
+     "area": 604006801,
+     "name": "延和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "n2088539092",
+   "lat": 24.107228,
+   "lng": 120.5315591,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "和美鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n2994354089",
+   "lat": 24.0618081,
+   "lng": 120.5385691,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 295687840,
+     "name": "南興公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "n3202580283",
+   "lat": 24.0694667,
+   "lng": 120.5558258,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 311693212,
+     "name": "華陽公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "n3281592076",
+   "lat": 24.067808,
+   "lng": 120.5517336,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "n4008749877",
+   "lat": 23.8135372,
+   "lng": 120.6172099,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "二水鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n5245141101",
+   "lat": 24.0653926,
+   "lng": 120.5318683,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1418035266,
+     "name": "崙平公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "n5245733217",
+   "lat": 23.9579291,
+   "lng": 120.570633,
+   "tags": {
+    "disused:brand": "Under Armour",
+    "disused:brand:wikidata": "Q2031485",
+    "disused:clothes": "men;women",
+    "disused:name": "Under Armour",
+    "disused:shop": "clothes",
+    "indoor": "yes",
+    "leisure": "playground",
+    "name": "LZ遊樂園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員林市"
+    }
+   ]
+  },
+  {
+   "ref": "n5270126097",
+   "lat": 24.1322096,
+   "lng": 120.4602552,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 545017951,
+     "name": "線西公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "線西鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n5352598682",
+   "lat": 23.9415334,
+   "lng": 120.6225396,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員林市"
+    }
+   ]
+  },
+  {
+   "ref": "n7296140890",
+   "lat": 23.9480642,
+   "lng": 120.6073229,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 286016034,
+     "name": "百果山"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員林市"
+    }
+   ]
+  },
+  {
+   "ref": "n13543175428",
+   "lat": 23.8475116,
+   "lng": 120.4772535,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1252757790,
+     "name": "坑厝五分車站"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪州鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n14056592248",
+   "lat": 23.9012352,
+   "lng": 120.3757471,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1545441120,
+     "name": "豐田公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "二林鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w257603075",
+   "lat": 24.0659088,
+   "lng": 120.5407105,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 232498206,
+     "name": "延平公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w263769678",
+   "lat": 23.8952447,
+   "lng": 120.457365,
+   "tags": {
+    "leisure": "playground",
+    "name": "合興槌球場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "埤頭鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w267237009",
+   "lat": 24.0709941,
+   "lng": 120.5418978,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 232498205,
+     "name": "成功公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w267625214",
+   "lat": 24.0701491,
+   "lng": 120.5473074,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w267625216",
+   "lat": 24.0707887,
+   "lng": 120.546033,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w267625217",
+   "lat": 24.0711576,
+   "lng": 120.5460709,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w283147820",
+   "lat": 24.0783529,
+   "lng": 120.5519505,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w294784966",
+   "lat": 24.0831347,
+   "lng": 120.5313869,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w294784969",
+   "lat": 24.0832177,
+   "lng": 120.5322196,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w322176158",
+   "lat": 24.0887707,
+   "lng": 120.607377,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w354298135",
+   "lat": 24.0716542,
+   "lng": 120.5350603,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w372670664",
+   "lat": 24.0696199,
+   "lng": 120.5564947,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 311693212,
+     "name": "華陽公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w384315611",
+   "lat": 23.9452148,
+   "lng": 120.6022856,
+   "tags": {
+    "leisure": "playground",
+    "name": "榕樹廣場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員林市"
+    }
+   ]
+  },
+  {
+   "ref": "w397603850",
+   "lat": 23.9575746,
+   "lng": 120.5746251,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 385554987,
+     "name": "員林公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "員林市"
+    }
+   ]
+  },
+  {
+   "ref": "w528127023",
+   "lat": 23.8653734,
+   "lng": 120.496232,
+   "tags": {
+    "leisure": "playground",
+    "name": "體能探索教育場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪州鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w617363465",
+   "lat": 24.0606636,
+   "lng": 120.5389191,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 604006801,
+     "name": "延和公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w891734410",
+   "lat": 24.1212177,
+   "lng": 120.5166211,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "和美鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1171108290",
+   "lat": 24.082563,
+   "lng": 120.560049,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w1289052588",
+   "lat": 23.9497472,
+   "lng": 120.4768869,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 917938616,
+     "name": "溪湖中央公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪湖鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1385570093",
+   "lat": 23.9929757,
+   "lng": 120.4786278,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "埔鹽鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1418035273",
+   "lat": 24.065278,
+   "lng": 120.5316798,
+   "tags": {
+    "access": "yes",
+    "indoor": "no",
+    "leisure": "playground",
+    "surface": "artificial_turf"
+   },
+   "parks": [
+    {
+     "area": 1418035266,
+     "name": "崙平公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w1418644626",
+   "lat": 24.0632684,
+   "lng": 120.5290014,
+   "tags": {
+    "leisure": "playground",
+    "surface": "gravel"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  {
+   "ref": "w1526782437",
+   "lat": 23.9969208,
+   "lng": 120.4718277,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 468640310,
+     "name": "糯米坊工坊"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "埔鹽鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1540214638",
+   "lat": 24.0720219,
+   "lng": 120.5277546,
+   "tags": {
+    "leisure": "playground",
+    "surface": "grass"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  }
+ ]
+}

@@ -81,6 +81,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py cyi',
   },
+  {
+    code: 'chw',
+    name: '彰化縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py chw',
+  },
 ];
 
 export interface Nearby {
