@@ -19,7 +19,7 @@ from pathlib import Path
 from lib.overpass import batched, nearby_query, overpass, parse_nearby
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = ["hsq", "tyc", "mlc", "tpe", "nwt", "txg", "khh", "tnn", "cyi", "chw", "pif", "yun", "ila"]
+CITIES = ["hsq", "tyc", "mlc", "tpe", "nwt", "txg", "khh", "tnn", "cyi", "chw", "pif", "yun", "ila", "cyq"]
 
 
 def read_csv(path):

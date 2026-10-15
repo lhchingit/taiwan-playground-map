@@ -76,6 +76,7 @@
 | `pif` | 屏東縣 | `pingtung` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py pif` |
 | `yun` | 雲林縣 | `yunlin` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py yun` |
 | `ila` | 宜蘭縣 | `yilan` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py ila` |
+| `cyq` | 嘉義縣 | `chiayi-county` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py cyq` |
 
 - 匯入指令都在 `scripts/` 底下，用 `python3 scripts/<指令>` 執行。
 - 上線狀態用 `pnpm city status` 查。**匯入不會上線。**
@@ -97,7 +98,7 @@
 2. **以下不能用：** 只有網頁、標示「All rights reserved」、授權不明。例如高雄的特色公園名單、彰化的「樂遊彰化公園」、屏東的「寶貝放電護照」。部落格與新聞只能當查證線索。
 3. **把查到的結果和建議給使用者決定。** 常見的兩條路：
    - **官方資料為主＋OSM 補充：** 臺北、臺南、桃園。要寫轉接器 `scripts/sources/<來源>.py` 與匯入程式。
-   - **只用 OSM（D20）：** 新竹縣、苗栗、高雄、嘉義市、彰化、屏東、雲林、宜蘭。沿用 `import_osm_city.py`。
+   - **只用 OSM（D20）：** 新竹縣、苗栗、高雄、嘉義市、彰化、屏東、雲林、宜蘭、嘉義縣。沿用 `import_osm_city.py`。
 
 ### 4.2 要改的地方（只用 OSM 的縣市）
 
@@ -176,7 +177,7 @@ npx supabase migration up && pnpm seed --city <代碼>
   - **OSM 標成室內的**（`indoor=yes`），多半是商業室內遊樂場。
 - **哪些縣市開啟：**
   - 臺南：在 `import_tnn.py` 用一般模式。
-  - 彰化、屏東、雲林、宜蘭：在 `import_osm_city.py` 的 `HOLD_SUSPICIOUS` 用嚴格模式。
+  - 彰化、屏東、雲林、宜蘭、嘉義縣：在 `import_osm_city.py` 的 `HOLD_SUSPICIOUS` 用嚴格模式。
   - 其他縣市沒有開，結果不受影響。
 - 擋下的列在 `named-suspicious.csv`，用命名工具確認：是遊戲場就照名稱命名，不是就排除。
 - 人工命名表有這一處的，照人工決定，不再擋。

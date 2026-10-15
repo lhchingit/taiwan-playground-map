@@ -382,6 +382,20 @@ describe('pnpm seed', () => {
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'ila'`;
     expect(c?.launched_at).toBeNull();
   });
+  it('嘉義縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
+    const cyq = allSeeds.find((s) => s.places[0]?.city === 'cyq');
+    expect(cyq?.places.length).toBeGreaterThan(0);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
+      FROM places WHERE city = 'cyq'`;
+    expect(r).toEqual({ n: cyq!.places.length, not_osm: 0 });
+    const [a] =
+      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'cyq-%'`;
+    expect(a?.n).toBe(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'cyq'`;
+    expect(c?.launched_at).toBeNull();
+  });
 
   it('臺中市（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
     const txg = allSeeds.find((s) => s.places[0]?.city === 'txg');
