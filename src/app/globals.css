@@ -529,6 +529,23 @@ select {
 .dhead h2:focus {
   outline: none;
 }
+/* 詳情面板（首頁）：上方區塊與關閉鈕固定在頂端，捲動時下面的內容從它下方經過。場地頁不固定。
+   手機只固定名稱與按鈕（見下方 @media）。打開「回報修正」表單時不固定，表單才捲得到底。 */
+.detail .dhead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--panel);
+}
+.detail .dhead:has(.report-box:not(:empty)) {
+  position: static;
+}
+.dclose-wrap {
+  position: sticky;
+  top: 0;
+  height: 0;
+  z-index: 3;
+}
 .dclose {
   position: absolute;
   right: 10px;
@@ -744,6 +761,36 @@ a.card {
     max-height: 78vh;
     border-radius: 16px 16px 0 0;
     padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  /* 手機：只固定名稱與按鈕，地址、狀態、簡介照常捲走。.dhead 拆開（display: contents），
+     名稱貼在頂端，按鈕貼在名稱下方（名稱高度由 PlacePanel 量好放在 --detail-title-h） */
+  .detail .dhead {
+    display: contents;
+  }
+  .detail .dhead > * {
+    margin: 0;
+    padding: 0 16px 6px;
+  }
+  /* will-change：兩個 sticky 元素拆開後，Chrome 會把捲過去的文字畫在接縫上；提升成獨立圖層就正常 */
+  .detail .dhead > :is(h1, h2) {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    will-change: transform;
+    background: var(--panel);
+    padding: 16px 48px 6px 16px;
+  }
+  .detail .dhead > .actions {
+    position: sticky;
+    top: var(--detail-title-h, 0px);
+    z-index: 2;
+    will-change: transform;
+    background: var(--panel);
+    padding: 4px 16px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .detail .dhead:has(.report-box:not(:empty)) > :is(h1, h2, .actions) {
+    position: static;
   }
 }
 @media (prefers-reduced-motion: reduce) {

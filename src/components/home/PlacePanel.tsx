@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { PlaceDetailView } from '@/components/place/PlaceDetailView';
 import type { Origin, TravelMode } from '@/lib/filter';
 import type { PlaceDetail } from '@/lib/place-detail';
@@ -27,11 +27,32 @@ export function PlacePanel({ detail, name, catalog, trip, onClose }: Props) {
     return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);
 
+  // 手機只固定名稱與按鈕：量名稱的高度（可能折成兩行），按鈕貼在它下方（globals.css 的 --detail-title-h）
+  const panel = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const el = panel.current;
+    const title = el?.querySelector<HTMLElement>(`#${PANEL_TITLE_ID}`);
+    if (!el || !title) return;
+    const update = () =>
+      el.style.setProperty('--detail-title-h', `${title.getBoundingClientRect().height}px`);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(title);
+    return () => ro.disconnect();
+  }, [detail]);
+
   return (
-    <section className="detail" aria-labelledby={PANEL_TITLE_ID} data-testid="place-panel">
-      <button className="dclose" type="button" aria-label="關閉" onClick={onClose}>
-        ✕
-      </button>
+    <section
+      ref={panel}
+      className="detail"
+      aria-labelledby={PANEL_TITLE_ID}
+      data-testid="place-panel"
+    >
+      <div className="dclose-wrap">
+        <button className="dclose" type="button" aria-label="關閉" onClick={onClose}>
+          ✕
+        </button>
+      </div>
       {typeof detail === 'string' ? (
         <div className="dhead">
           <h2 id={PANEL_TITLE_ID} tabIndex={-1}>
