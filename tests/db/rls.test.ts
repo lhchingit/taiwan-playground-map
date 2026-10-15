@@ -221,7 +221,7 @@ describe('首頁用的公開 view', () => {
       ]);
   });
 
-  it('city_bounds：12 個縣市都有範圍，只公開這幾個欄位（測試縣不在 migration 裡）', async () => {
+  it('city_bounds：13 個縣市都有範圍，只公開這幾個欄位（測試縣不在 migration 裡）', async () => {
     const { data, error } = await anon.from('city_bounds').select('*').order('code');
     expect(error).toBeNull();
     expect(data?.map((c) => [c.code, c.launched])).toEqual([
@@ -237,6 +237,7 @@ describe('首頁用的公開 view', () => {
       ['tpe', false],
       ['txg', false],
       ['tyc', false],
+      ['yun', false],
     ]);
     for (const c of data ?? []) {
       expect(Object.keys(c).sort()).toEqual(['bbox', 'code', 'launched', 'name', 'slug']);

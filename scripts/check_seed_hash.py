@@ -75,6 +75,13 @@ CITIES = {
         + [f"data/review/pif/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
                                                 "named-suspicious"]],
     },
+    # 雲林縣：同彰化縣（沒有可用的開放資料；名稱可疑的先不上地圖）
+    "yun": {
+        "scripts": [["scripts/import_osm_city.py", "yun"]],
+        "outputs": ["data/seed/yun/places.json", "data/seed/yun/places.csv"]
+        + [f"data/review/yun/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],

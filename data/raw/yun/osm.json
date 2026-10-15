@@ -1,0 +1,300 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-YUN\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-15T20:01:36Z",
+ "sha256": "6da5b255d4204b8a5bed666e65571cd190140522bd6c4ec07b35922e85e943fa",
+ "playgrounds": [
+  {
+   "ref": "n4634327157",
+   "lat": 23.67392,
+   "lng": 120.5383575,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "古坑鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n4677757175",
+   "lat": 23.5650703,
+   "lng": 120.3056521,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "北港鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n6276268741",
+   "lat": 23.6763869,
+   "lng": 120.4803481,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n6276503257",
+   "lat": 23.6717892,
+   "lng": 120.4771164,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n6282974430",
+   "lat": 23.7609383,
+   "lng": 120.6167574,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 670940592,
+     "name": "林內兒童公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "林內鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6470878345",
+   "lat": 23.702706,
+   "lng": 120.5291346,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗六市"
+    }
+   ]
+  },
+  {
+   "ref": "n8430786852",
+   "lat": 23.7383751,
+   "lng": 120.5635075,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗六市"
+    }
+   ]
+  },
+  {
+   "ref": "w263998036",
+   "lat": 23.7533965,
+   "lng": 120.2540559,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊戲區"
+   },
+   "parks": [
+    {
+     "area": 263458949,
+     "name": "麥寮城鄉運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "麥寮鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w388839523",
+   "lat": 23.7017097,
+   "lng": 120.5362408,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 388839521,
+     "name": "柚子公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗六市"
+    }
+   ]
+  },
+  {
+   "ref": "w453777229",
+   "lat": 23.6432738,
+   "lng": 120.4833264,
+   "tags": {
+    "leisure": "playground",
+    "name": "幼童游戲區"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w778192432",
+   "lat": 23.6049056,
+   "lng": 120.2410797,
+   "tags": {
+    "blind": "yes",
+    "leisure": "playground",
+    "playground": "structure",
+    "playground:theme": "遊樂場",
+    "wheelchair": "yes"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "水林鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w791747761",
+   "lat": 23.566307,
+   "lng": 120.3016936,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "北港鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w792115647",
+   "lat": 23.6896494,
+   "lng": 120.2389177,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊戲場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "東勢鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w800672123",
+   "lat": 23.6836986,
+   "lng": 120.4723202,
+   "tags": {
+    "leisure": "playground",
+    "playground": "structure",
+    "playground:theme": "playground"
+   },
+   "parks": [
+    {
+     "area": 3611074161,
+     "name": "他里霧親水公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗南鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w804532322",
+   "lat": 23.6437778,
+   "lng": 120.4313019,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "大埤鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w818320520",
+   "lat": 23.5727921,
+   "lng": 120.1469213,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 818320519,
+     "name": "金湖濱桃公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "口湖鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1015145232",
+   "lat": 23.6122763,
+   "lng": 120.1682438,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "口湖鄉"
+    }
+   ]
+  }
+ ]
+}
