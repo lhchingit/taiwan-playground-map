@@ -1,4 +1,4 @@
-"""下載每個 OSM 遊戲場是否位在學校、幼兒園、政府機關、軍營的範圍內（Overpass is_in），
+"""下載每個 OSM 遊戲場是否位在學校、幼兒園、政府機關、研究機構、軍營的範圍內（Overpass is_in），
 存成 data/raw/<縣市>/osm-institutions.json。osm.json 更新後要重新執行；結果提交進 repo，匯入不連網路。
 
   python3 scripts/fetch_osm_institutions.py nwt

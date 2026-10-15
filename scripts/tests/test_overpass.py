@@ -54,10 +54,12 @@ class InstitutionTest(unittest.TestCase):
             {"type": "area", "id": 2400000123, "tags": {"amenity": "school", "name": "某國小"}},  # 重複只列一次
             {"type": "area", "id": 3600000045, "tags": {"landuse": "military"}},
             {"type": "marker", "tags": {"ref": "w2"}},
+            # 新版 Overpass：區域直接以 way／relation 回傳（國家衛生研究院是圍牆線加 office=research）
+            {"type": "way", "id": 542177843, "tags": {"barrier": "fence", "office": "research", "name": "國家衛生研究院"}},
         ])
         self.assertEqual(out, {
             "w1": [{"osm": "r45", "kind": "軍營", "name": ""}, {"osm": "w123", "kind": "學校", "name": "某國小"}],
-            "w2": [],
+            "w2": [{"osm": "w542177843", "kind": "研究機構", "name": "國家衛生研究院"}],
         })
 
     def test_university_is_not_an_institution(self):
@@ -65,6 +67,7 @@ class InstitutionTest(unittest.TestCase):
         q = overpass.institution_query([("w1", (24.8, 121.0))])
         self.assertNotIn("university", q)
         self.assertNotIn("college", q)
+        self.assertIn("research", q)
         out = overpass.parse_institutions([
             {"type": "marker", "tags": {"ref": "w1"}},
             {"type": "area", "id": 2400000001, "tags": {"amenity": "university", "name": "某大學"}},

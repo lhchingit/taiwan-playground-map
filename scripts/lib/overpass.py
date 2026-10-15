@@ -140,17 +140,17 @@ def parse_nearby(elements, coords, own=None):
     return out
 
 
-# 自動排除：遊戲場位在學校、幼兒園、政府機關、軍營的範圍內（scripts/fetch_osm_institutions.py，decisions D20）。
-# 大學、專科（university／college）不算：多數校園對外開放。
+# 自動排除：遊戲場位在學校、幼兒園、政府機關、研究機構、軍營的範圍內（scripts/fetch_osm_institutions.py，decisions D20）。
+# 大學、專科（university／college）不算：多數校園對外開放。研究機構（含民間研發園區）也不對外開放，一併排除。
 INSTITUTION_KINDS = [
     ("amenity", "^(kindergarten|school)$"),
     ("amenity", "^(townhall|police|fire_station)$"),
-    ("office", "^government$"),
+    ("office", "^(government|research)$"),
     ("landuse", "^military$"),
 ]
 INSTITUTION_LABEL = {
     "kindergarten": "幼兒園", "school": "學校", "townhall": "政府機關", "police": "警察局", "fire_station": "消防隊",
-    "government": "政府機關", "military": "軍營",
+    "government": "政府機關", "research": "研究機構", "military": "軍營",
 }
 
 
@@ -163,9 +163,16 @@ def institution_query(points):
     return "".join(parts)
 
 
-def area_ref(area_id):
-    """Overpass 的 area id → OSM ref（way 加 2400000000、relation 加 3600000000）"""
-    return f"r{area_id - 3600000000}" if area_id >= 3600000000 else f"w{area_id - 2400000000}"
+def area_ref(e):
+    """is_in 回傳的區域 → OSM ref。新版 Overpass 直接回傳 way／relation；
+    舊版回傳 area，id 是 way 加 2400000000、relation 加 3600000000"""
+    if e["type"] in ("way", "relation"):
+        return f"{e['type'][0]}{e['id']}"
+    return f"r{e['id'] - 3600000000}" if e["id"] >= 3600000000 else f"w{e['id'] - 2400000000}"
+
+
+def institution_kind(tags):
+    return next((INSTITUTION_LABEL[tags[k]] for k, _ in INSTITUTION_KINDS if tags.get(k) in INSTITUTION_LABEL), None)
 
 
 def parse_institutions(elements):
@@ -179,10 +186,11 @@ def parse_institutions(elements):
             continue
         if cur is None:
             continue
-        kind = next((INSTITUTION_LABEL[t[k]] for k, _ in INSTITUTION_KINDS if t.get(k) in INSTITUTION_LABEL), None)
+        kind = institution_kind(t)
         if kind is None:
             continue
-        ref = area_ref(e["id"])
+        ref = area_ref(e)
         if all(x["osm"] != ref for x in out[cur]):
             out[cur].append({"osm": ref, "kind": kind, "name": (t.get("name") or "").strip()})
     return {k: sorted(v, key=lambda x: x["osm"]) for k, v in out.items()}
+
