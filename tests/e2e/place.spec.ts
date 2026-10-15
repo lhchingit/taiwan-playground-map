@@ -17,6 +17,26 @@ const routeHref = async (scope: ReturnType<Page['locator']> | Page) =>
       '',
   );
 
+/** 把詳情面板捲到底 */
+async function scrolledToBottom(page: Page) {
+  // 詳細資料載入後才有內容可以捲；每次重新捲到底，直到真的捲動了
+  await expect(panel(page).getByRole('heading', { name: '基本資料' })).toBeVisible();
+  await expect
+    .poll(() =>
+      panel(page).evaluate((el) => {
+        el.scrollTop = el.scrollHeight;
+        return el.scrollTop;
+      }),
+    )
+    .toBeGreaterThan(100);
+}
+/** 元素的 top、bottom，相對於面板頂端 */
+const rel = (page: Page, sel: ReturnType<Page['locator']>) =>
+  Promise.all([panel(page).boundingBox(), sel.boundingBox()]).then(([p, b]) => ({
+    top: (b?.y ?? 0) - (p?.y ?? 0),
+    bottom: (b?.y ?? 0) + (b?.height ?? 0) - (p?.y ?? 0),
+  }));
+
 test.describe('場地頁', () => {
   test.skip(({ isMobile }) => isMobile, '桌機');
 
@@ -188,6 +208,32 @@ test.describe('首頁的詳情面板', () => {
     await expect(panel(page)).toHaveCount(0);
     await expect(page).toHaveURL(/\/hsinchu-city\?play=zipline$/);
   });
+
+  test('捲動面板時，上方區塊（名稱、地址、按鈕）與關閉鈕固定在頂端', async ({ page }) => {
+    await page.goto('/hsinchu-city');
+    await card(page, 'hsc-luguang-park').click();
+    const p = panel(page);
+    await expect(p.getByRole('heading', { name: '綠光公園' })).toBeVisible();
+    await scrolledToBottom(page);
+    const head = p.locator('.dhead');
+    expect((await rel(page, head)).top).toBeLessThanOrEqual(1); // 貼在面板頂端
+    const headBottom = (await rel(page, head)).bottom;
+    for (const el of [
+      p.getByRole('heading', { name: '綠光公園' }),
+      p.locator('.dhead .cmeta'),
+      p.getByRole('link', { name: '查實際路線（Google 地圖）' }),
+      p.getByRole('button', { name: '回報修正' }),
+      p.getByRole('button', { name: '關閉' }),
+    ]) {
+      const r = await rel(page, el);
+      expect(r.top).toBeGreaterThanOrEqual(0);
+      expect(r.bottom).toBeLessThanOrEqual(headBottom + 1);
+    }
+    // 「基本資料」已經捲到上方區塊底下
+    expect((await rel(page, p.getByRole('heading', { name: '基本資料' }))).top).toBeLessThan(
+      headBottom,
+    );
+  });
 });
 
 test.describe('手機', () => {
@@ -204,6 +250,26 @@ test.describe('手機', () => {
     expect(await noHScroll(page)).toBe(true);
     const box = await panel(page).boundingBox();
     expect(box?.width).toBeLessThanOrEqual(400);
+  });
+
+  test('抽屜捲動時只固定名稱與按鈕，地址捲走', async ({ page }) => {
+    await page.goto('/hsinchu-city');
+    await card(page, 'hsc-luguang-park').click();
+    const p = panel(page);
+    await expect(p.getByRole('heading', { name: '綠光公園' })).toBeVisible();
+    await scrolledToBottom(page);
+    const title = await rel(page, p.getByRole('heading', { name: '綠光公園' }));
+    expect(title.top).toBeGreaterThanOrEqual(-1);
+    expect(title.top).toBeLessThanOrEqual(1);
+    const actions = await rel(page, p.locator('.dhead .actions'));
+    expect(actions.top).toBeGreaterThanOrEqual(title.bottom - 1); // 按鈕貼在名稱下方
+    expect(actions.top).toBeLessThanOrEqual(title.bottom + 1);
+    await expect(p.getByRole('button', { name: '回報修正' })).toBeInViewport();
+    // 地址已經捲走（在名稱與按鈕底下或面板外）
+    expect((await rel(page, p.locator('.dhead .cmeta'))).bottom).toBeLessThanOrEqual(
+      actions.bottom,
+    );
+    expect((await rel(page, p.locator('.dhead .cmeta'))).top).toBeLessThan(title.bottom);
   });
 
   test('場地頁沒有水平捲動', async ({ page }) => {
