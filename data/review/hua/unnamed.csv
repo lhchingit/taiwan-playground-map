@@ -1,0 +1,4 @@
+﻿OSM,行政區,緯度,經度,OSM 連結,處理方式
+n12475225171,花蓮市,23.9980369,121.6175506,https://www.openstreetmap.org/node/12475225171,確認後在 manual-names.tsv 填名稱或「（排除）」
+w1233363467,新城鄉,24.0239793,121.6107545,https://www.openstreetmap.org/way/1233363467,確認後在 manual-names.tsv 填名稱或「（排除）」
+w1335835701,花蓮市,24.0101601,121.6209127,https://www.openstreetmap.org/way/1335835701,確認後在 manual-names.tsv 填名稱或「（排除）」

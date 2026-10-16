@@ -1,0 +1,649 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-HUA\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-16T11:11:59Z",
+ "sha256": "e5274efc75c3e8b267366cb44c1f4887894850949ff204e65096be2436004fbf",
+ "playgrounds": [
+  {
+   "ref": "n3417026690",
+   "lat": 23.8695694,
+   "lng": 121.5073462,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "壽豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n3835184057",
+   "lat": 23.9624626,
+   "lng": 121.6080683,
+   "tags": {
+    "leisure": "playground",
+    "name": "吉安海濱公園",
+    "toilets:wheelchair": "no",
+    "wheelchair": "no",
+    "wheelchair:description": "No toilet and hard to arrive."
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "吉安鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n3896490905",
+   "lat": 23.9734835,
+   "lng": 121.6109317,
+   "tags": {
+    "leisure": "playground",
+    "name": "電流射擊球"
+   },
+   "parks": [
+    {
+     "area": 3603326569,
+     "name": "陽光電城園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896490906",
+   "lat": 23.9734553,
+   "lng": 121.6109572,
+   "tags": {
+    "leisure": "playground",
+    "name": "電流急急棒"
+   },
+   "parks": [
+    {
+     "area": 3603326569,
+     "name": "陽光電城園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896490908",
+   "lat": 23.9733793,
+   "lng": 121.6110162,
+   "tags": {
+    "leisure": "playground",
+    "name": "來我加嘛夾娃娃"
+   },
+   "parks": [
+    {
+     "area": 3603326569,
+     "name": "陽光電城園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896507678",
+   "lat": 23.9734635,
+   "lng": 121.611091,
+   "tags": {
+    "leisure": "playground",
+    "name": "籃球九宮格"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896507679",
+   "lat": 23.9734182,
+   "lng": 121.6111352,
+   "tags": {
+    "leisure": "playground",
+    "name": "阿宗麻將"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896507680",
+   "lat": 23.97336,
+   "lng": 121.6111794,
+   "tags": {
+    "leisure": "playground",
+    "name": "打籃球打彈珠"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896507681",
+   "lat": 23.9733002,
+   "lng": 121.6112237,
+   "tags": {
+    "leisure": "playground",
+    "name": "來呦!搏聖杯 奪大獎"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896507682",
+   "lat": 23.9729606,
+   "lng": 121.6115015,
+   "tags": {
+    "leisure": "playground",
+    "name": "來我家嘛~夾娃娃機"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n3896507683",
+   "lat": 23.9731094,
+   "lng": 121.6113865,
+   "tags": {
+    "leisure": "playground",
+    "name": "小米射槍"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n5611005486",
+   "lat": 23.873553,
+   "lng": 121.5224374,
+   "tags": {
+    "leisure": "playground",
+    "name": "撒哇能耐活動中心廣場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "壽豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n8197989358",
+   "lat": 23.9909794,
+   "lng": 121.63177,
+   "tags": {
+    "leisure": "playground",
+    "shop": "toys"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n8197989359",
+   "lat": 23.9906491,
+   "lng": 121.6309505,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n8198024374",
+   "lat": 23.9935217,
+   "lng": 121.6258592,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "n10572832880",
+   "lat": 23.9017681,
+   "lng": 121.6012046,
+   "tags": {
+    "leisure": "playground",
+    "name": "鯨魚的夢想家"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "壽豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n10694421959",
+   "lat": 23.3367201,
+   "lng": 121.3165309,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 311730289,
+     "name": "玉里鎮民廣場"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "玉里鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n12475225171",
+   "lat": 23.9980369,
+   "lng": 121.6175506,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "w145721908",
+   "lat": 23.9782512,
+   "lng": 121.6131033,
+   "tags": {
+    "barrier": "wall",
+    "leisure": "playground",
+    "name": "花崗山親子戲沙池",
+    "natural": "sand"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "w334643746",
+   "lat": 23.8694209,
+   "lng": 121.5076083,
+   "tags": {
+    "leisure": "playground",
+    "name": "U型滑道"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "壽豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w335857285",
+   "lat": 23.9036873,
+   "lng": 121.5314967,
+   "tags": {
+    "leisure": "playground",
+    "name": "志學國小的遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "壽豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w435967736",
+   "lat": 24.0418843,
+   "lng": 121.6221331,
+   "tags": {
+    "leisure": "playground",
+    "name": "德燕遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新城鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w571707330",
+   "lat": 23.9017373,
+   "lng": 121.5997242,
+   "tags": {
+    "leisure": "playground",
+    "name": "飛旋貝殼",
+    "name:en": "Spinning Cups",
+    "name:zh": "飛旋貝殼"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "壽豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w679609970",
+   "lat": 23.982929,
+   "lng": 121.6003875,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "w698192088",
+   "lat": 23.9668381,
+   "lng": 121.6104591,
+   "tags": {
+    "access": "yes",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 91242667,
+     "name": "南濱公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "w800932515",
+   "lat": 23.7098505,
+   "lng": 121.4199341,
+   "tags": {
+    "leisure": "playground",
+    "name": "兒童遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "鳳林鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w806680276",
+   "lat": 23.7093372,
+   "lng": 121.419675,
+   "tags": {
+    "leisure": "playground",
+    "name": "兒童遊戲場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "鳳林鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w806680277",
+   "lat": 23.7093023,
+   "lng": 121.4198459,
+   "tags": {
+    "leisure": "playground",
+    "name": "兒童遊戲場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "鳳林鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w806680278",
+   "lat": 23.7092466,
+   "lng": 121.4197938,
+   "tags": {
+    "leisure": "playground",
+    "name": "兒童遊戲場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "鳳林鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w806680279",
+   "lat": 23.7092976,
+   "lng": 121.4195884,
+   "tags": {
+    "leisure": "playground",
+    "name": "兒童遊戲場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "鳳林鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w814980380",
+   "lat": 23.8013811,
+   "lng": 121.4522172,
+   "tags": {
+    "leisure": "playground",
+    "name": "鞦韆"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "鳳林鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1134057112",
+   "lat": 23.9020317,
+   "lng": 121.6003644,
+   "tags": {
+    "leisure": "playground",
+    "name": "鯨魚大冒險"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "壽豐鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1233363467",
+   "lat": 24.0239793,
+   "lng": 121.6107545,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新城鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1237142106",
+   "lat": 23.9951489,
+   "lng": 121.6304442,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 91561567,
+     "name": "白燈塔公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "w1286647241",
+   "lat": 24.0279132,
+   "lng": 121.6026363,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 968672320,
+     "name": "嘎比烏姆寵物親善公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "新城鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1335835701",
+   "lat": 24.0101601,
+   "lng": 121.6209127,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  {
+   "ref": "w1458710251",
+   "lat": 23.9937768,
+   "lng": 121.5646519,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "吉安鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1458710253",
+   "lat": 23.9942705,
+   "lng": 121.5649375,
+   "tags": {
+    "leisure": "playground",
+    "sport": "basketball"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "吉安鄉"
+    }
+   ]
+  }
+ ]
+}

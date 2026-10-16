@@ -397,6 +397,21 @@ describe('pnpm seed', () => {
     expect(c?.launched_at).toBeNull();
   });
 
+  it('花蓮縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
+    const hua = allSeeds.find((s) => s.places[0]?.city === 'hua');
+    expect(hua?.places.length).toBeGreaterThan(0);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
+      FROM places WHERE city = 'hua'`;
+    expect(r).toEqual({ n: hua!.places.length, not_osm: 0 });
+    const [a] =
+      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'hua-%'`;
+    expect(a?.n).toBe(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'hua'`;
+    expect(c?.launched_at).toBeNull();
+  });
+
   it('南投縣（OpenStreetMap＋都市計畫區公園一覽表補地址，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
     const nan = allSeeds.find((s) => s.places[0]?.city === 'nan');
     expect(nan?.places.length).toBeGreaterThan(0);

@@ -123,6 +123,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py nan',
   },
+  {
+    code: 'hua',
+    name: '花蓮縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py hua',
+  },
 ];
 
 export interface Nearby {

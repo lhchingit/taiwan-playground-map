@@ -103,6 +103,13 @@ CITIES = {
         + [f"data/review/nan/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
                                                 "named-suspicious", "official-matched", "official-ambiguous"]],
     },
+    # 花蓮縣：同彰化縣（沒有可用的開放資料；名稱可疑的先不上地圖）
+    "hua": {
+        "scripts": [["scripts/import_osm_city.py", "hua"]],
+        "outputs": ["data/seed/hua/places.json", "data/seed/hua/places.csv"]
+        + [f"data/review/hua/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],
