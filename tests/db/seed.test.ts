@@ -400,6 +400,21 @@ describe('pnpm seed', () => {
     expect(c?.launched_at).toBeNull();
   });
 
+  it('連江縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
+    const lie = allSeeds.find((s) => s.places[0]?.city === 'lie');
+    expect(lie?.places.length).toBeGreaterThan(0);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
+      FROM places WHERE city = 'lie'`;
+    expect(r).toEqual({ n: lie!.places.length, not_osm: 0 });
+    const [a] =
+      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'lie-%'`;
+    expect(a?.n).toBe(0);
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'lie'`;
+    expect(c?.launched_at).toBeNull();
+  });
+
   it('金門縣（OpenStreetMap，decisions D20）：場地 0 處（全部沒有名稱、在待命名清單），範圍用 OSM 行政界、未上線', async () => {
     const kin = JSON.parse(readFileSync('data/seed/kin/places.json', 'utf8')) as SeedFile;
     expect(kin.places).toEqual([]);

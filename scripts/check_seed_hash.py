@@ -138,6 +138,13 @@ CITIES = {
         + [f"data/review/kin/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
                                                 "named-suspicious"]],
     },
+    # 連江縣：同彰化縣（沒有可用的開放資料；名稱可疑的先不上地圖）
+    "lie": {
+        "scripts": [["scripts/import_osm_city.py", "lie"]],
+        "outputs": ["data/seed/lie/places.json", "data/seed/lie/places.csv"]
+        + [f"data/review/lie/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],
