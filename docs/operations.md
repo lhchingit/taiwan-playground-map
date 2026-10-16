@@ -51,7 +51,9 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
    - 「已授權的重新導向 URI」填 Supabase 的 callback：`https://<專案代碼>.supabase.co/auth/v1/callback`。
    - 把 Client ID、Secret 填到 Supabase 的 Authentication → Providers → Google。
    - OAuth 同意畫面的應用程式名稱填「全台放電地圖」，範圍只要 email、profile。
-3. **Email 登入連結**
+3. **Email 登入連結：上線初期關閉**（decisions D10，2026-10-17）
+   - Authentication → Sign In / Providers → **Email** 關掉。網站會照設定隱藏 Email 欄位，只顯示「用 Google 登入」，不需要設定 SMTP。
+   - 第 3 項其餘步驟和第 4、5 項，**要開放 Email 登入時才需要**：先設定好 SMTP，再把 Email provider 打開，網站不用改程式。
    - Authentication → Emails → Templates 的「Magic Link」與「Confirm signup」兩個範本，主旨與內容都改成 `supabase/templates/magic_link.html`。
    - 連結格式是 `{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=email`，網站在 `/auth/confirm` 驗證。
 4. **寄信服務（SMTP）**：Supabase 內建的寄信服務每小時只能寄很少封，只適合測試，**上線前一定要設定自訂 SMTP**（Authentication → Emails → SMTP Settings），例如 Amazon SES、Resend、Postmark。寄件人用自己網域的信箱，並設定 SPF／DKIM，避免被當成垃圾信。

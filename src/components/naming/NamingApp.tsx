@@ -296,6 +296,7 @@ export function NamingApp({
         onClose={() => setLogin(false)}
         next={login ? currentPath() : `/${city.slug}/naming`}
         google={session?.providers.google ?? false}
+        email={session?.providers.email ?? true}
       />
     </main>
   );

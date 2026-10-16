@@ -305,6 +305,7 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
           onClose={() => setNewPlaceLogin(null)}
           next={newPlaceLogin ?? '/'}
           google={session?.providers.google ?? false}
+          email={session?.providers.email ?? true}
         />
         <div className="scroll">
           <FilterPanel filters={filters} onChange={changeFilters} catalog={catalog} />
