@@ -58,7 +58,8 @@ describe('pnpm seed', () => {
 
   it('重跑不會改變任何資料（筆數、更新時間、停車 id、上線時間）', async () => {
     const before = await snapshot();
-    await runSeed(sql, seed, boundsWithoutSeeds(loadOsmBounds(), listSeedCities()));
+    const withPlaces = seedCities.filter((_, i) => allSeeds[i]!.places.length > 0);
+    await runSeed(sql, seed, boundsWithoutSeeds(loadOsmBounds(), withPlaces));
     expect(await snapshot()).toEqual(before);
   });
 
@@ -97,7 +98,9 @@ describe('pnpm seed', () => {
 
   it('場地的 city 存縣市代碼；新竹市已上線並有範圍，其他縣市都還沒上線', async () => {
     const cities = await sql`SELECT DISTINCT city FROM places ORDER BY city`;
-    expect(cities.map((c) => c.city)).toEqual([...seedCities].sort());
+    // 場地 0 處的縣市（例如金門，全部在待命名清單）不會出現在 places
+    const withPlaces = seedCities.filter((_, i) => allSeeds[i]!.places.length > 0);
+    expect(cities.map((c) => c.city)).toEqual([...withPlaces].sort());
     const [hsc] = await sql`SELECT launched_at, bbox FROM cities WHERE code = 'hsc'`;
     expect(hsc?.launched_at).not.toBeNull();
     expect(hsc?.bbox).toHaveLength(4);
@@ -395,6 +398,23 @@ describe('pnpm seed', () => {
     expect(a?.n).toBe(0);
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'cyq'`;
     expect(c?.launched_at).toBeNull();
+  });
+
+  it('金門縣（OpenStreetMap，decisions D20）：場地 0 處（全部沒有名稱、在待命名清單），範圍用 OSM 行政界、未上線', async () => {
+    const kin = JSON.parse(readFileSync('data/seed/kin/places.json', 'utf8')) as SeedFile;
+    expect(kin.places).toEqual([]);
+    const [r] = await sql`SELECT count(*)::int AS n FROM places WHERE city = 'kin'`;
+    expect(r?.n).toBe(0);
+    const bounds = loadOsmBounds();
+    const [c] =
+      await sql`SELECT launched_at, bbox::float8[] AS bbox FROM cities WHERE code = 'kin'`;
+    expect(c?.launched_at).toBeNull();
+    expect(c?.bbox).toEqual(bounds.kin);
+    const [n] = await sql`
+      SELECT count(*)::int AS n FROM naming_candidates WHERE city = 'kin' AND status = 'open'`;
+    const unnamed =
+      readFileSync('data/review/kin/unnamed.csv', 'utf8').trim().split(/\r?\n/).length - 1;
+    expect(n?.n).toBe(unnamed);
   });
 
   it('澎湖縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {

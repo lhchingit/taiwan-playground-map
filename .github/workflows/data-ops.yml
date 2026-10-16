@@ -30,6 +30,7 @@ on:
             ttt,
             kee,
             pen,
+            kin,
           ]
         required: true
       action:

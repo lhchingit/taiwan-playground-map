@@ -1,0 +1,131 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-KIN\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-16T14:04:06Z",
+ "sha256": "326765725a5f8e26c8f8254b6a19d1e8c34a6f83c9e79e07a87f3ad65771cb97",
+ "playgrounds": [
+  {
+   "ref": "n4683420889",
+   "lat": 24.4890517,
+   "lng": 118.3969483,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "金沙鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n4683457604",
+   "lat": 24.4891647,
+   "lng": 118.3963455,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "金沙鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n4688871675",
+   "lat": 24.4845765,
+   "lng": 118.415362,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "金沙鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n4688877012",
+   "lat": 24.4924857,
+   "lng": 118.4135433,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "金沙鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n4688953517",
+   "lat": 24.4921482,
+   "lng": 118.4310684,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "金沙鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n4689040642",
+   "lat": 24.4720074,
+   "lng": 118.4169066,
+   "tags": {
+    "leisure": "playground",
+    "mapillary": "293771002291706"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "金沙鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n4690668000",
+   "lat": 24.4392394,
+   "lng": 118.2294386,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "烈嶼鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w264249303",
+   "lat": 24.4022643,
+   "lng": 118.3206076,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "金城鎮"
+    }
+   ]
+  }
+ ]
+}

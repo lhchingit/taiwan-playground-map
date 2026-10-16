@@ -246,6 +246,18 @@
   - OSM 上澎湖標成遊戲場的很少，之後要靠 OSM 補資料、會員新增或其他來源。
   - 遊具全部是 `u`。
 
+## 金門縣（kin）
+
+- **資料：** 只用 OSM 遊戲場起步（decisions D20）。政府資料開放平臺沒有金門縣政府的公園或遊戲場清單。
+- **名稱可疑：** 用嚴格模式（`HOLD_SUSPICIOUS`）擋下。
+- **指令：** `python3 scripts/fetch_osm_city.py kin`、`python3 scripts/fetch_osm_institutions.py kin` → `python3 scripts/import_osm_city.py kin`
+- **進度（2026-10-16）：** 資料已準備好、**未上線**。
+  - OSM 遊戲場 8 處，**全部沒有名稱**、也不在有名稱的公園裡，所以**上地圖 0 處**；8 處都在待命名清單（金沙鎮 6、烈嶼鄉 1、金城鎮 1）。
+  - 使用者決定先加縣市、場地 0 處。用本機命名工具 `pnpm tool:name` 補名稱後重新匯入，就會有場地。
+  - 場地 0 處的縣市不能上線（`pnpm city launch` 會拒絕），會員命名頁 `/kinmen/naming` 也要上線後才有，所以目前只能用本機工具命名。
+  - 0 處場地的縣市：`pnpm seed` 用 OSM 行政界當範圍，待命名清單照常匯入（`runSeed` 的 `city` 選項）。
+  - 遊具全部是 `u`。
+
 ## 完成標準（每個縣市）
 
 - [ ] 該縣市的轉接器、設施對照與測試已合併。

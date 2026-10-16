@@ -131,6 +131,13 @@ CITIES = {
         + [f"data/review/pen/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
                                                 "named-suspicious"]],
     },
+    # 金門縣：同彰化縣（沒有可用的開放資料；名稱可疑的先不上地圖）
+    "kin": {
+        "scripts": [["scripts/import_osm_city.py", "kin"]],
+        "outputs": ["data/seed/kin/places.json", "data/seed/kin/places.csv"]
+        + [f"data/review/kin/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],

@@ -78,9 +78,10 @@ async function main() {
       args.city ? `找不到 data/seed/${args.city}/places.json` : 'data/seed/ 底下沒有任何縣市',
     );
   }
+  // 有場地的縣市用場地算範圍；0 處場地的縣市（全部在待命名清單）跟沒有種子資料的一樣用 OSM 行政界
   const osm = boundsWithoutSeeds(
     loadOsmBounds(),
-    all.map(([code]) => code),
+    all.filter(([, s]) => s.places.length > 0).map(([code]) => code),
   );
 
   const db = connect(url);
@@ -90,6 +91,7 @@ async function main() {
         dryRun: args.dryRun,
         prune: args.prune,
         naming: loadNamingCandidates(code),
+        city: code,
       });
       print(code, summary);
       // 真的寫入、而且有變動時，通知網站清快取
