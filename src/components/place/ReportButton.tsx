@@ -65,6 +65,7 @@ export function ReportButton({
         onClose={() => setLogin(null)}
         next={login ?? '/'}
         google={session?.providers.google ?? false}
+        email={session?.providers.email ?? true}
       />
     </>
   );

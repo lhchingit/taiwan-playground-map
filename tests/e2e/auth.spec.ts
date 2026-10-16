@@ -70,6 +70,24 @@ test('未登入按「回報修正」跳出登入視窗；登入後回到場地�
   await expect(page.getByRole('form', { name: '回報修正' })).toBeVisible();
 });
 
+test('Email 登入在後台關閉時（上線初期只開 Google），登入視窗只顯示 Google', async ({ page }) => {
+  await page.route('**/api/session', async (route) => {
+    const res = await route.fetch();
+    const body = await res.json();
+    await route.fulfill({
+      response: res,
+      json: { ...body, providers: { google: true, email: false } },
+    });
+  });
+  await page.goto(PLACE);
+  await page.getByRole('button', { name: '回報修正' }).click();
+  const dialog = page.getByRole('dialog', { name: '登入' });
+  await expect(dialog.getByRole('button', { name: '用 Google 登入' })).toBeEnabled();
+  await expect(dialog.getByText('（尚未設定）')).toHaveCount(0);
+  await expect(dialog.getByLabel(/Email 登入連結/)).toHaveCount(0);
+  await expect(dialog.getByRole('button', { name: '寄登入連結' })).toHaveCount(0);
+});
+
 test('登入狀態還在查詢時按「回報修正」，等查完仍然跳出登入視窗', async ({ page }) => {
   // 模擬網路慢：/api/session 晚 1.5 秒回應，頁面一打開就按
   await page.route('**/api/session', async (route) => {

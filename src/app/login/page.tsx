@@ -38,7 +38,7 @@ export default function LoginPage({ searchParams }: Props) {
 async function LoginContent({ searchParams }: Props) {
   const q = await searchParams;
   const next = safeNext(q.next);
-  const { google } = await authProviders();
+  const { google, email } = await authProviders();
   return (
     <>
       {q.error && (
@@ -46,7 +46,7 @@ async function LoginContent({ searchParams }: Props) {
           登入沒有成功，請再試一次。如果是打開 Email 裡的連結，連結可能已經用過或超過 1 小時。
         </p>
       )}
-      <LoginPanel next={next} google={google} />
+      <LoginPanel next={next} google={google} email={email} />
     </>
   );
 }

@@ -1,12 +1,21 @@
 'use client';
 // 登入方式：Google、Email 登入連結（/login 頁與登入視窗共用）。不要求密碼。
+// Email 登入連結在 Supabase 後台關閉時不顯示（上線初期只開 Google，decisions D10）。
 import Link from 'next/link';
 import { useActionState } from 'react';
 import { type MagicLinkState, sendMagicLink, signInWithGoogle } from '@/app/auth/actions';
 
 const IDLE: MagicLinkState = { status: 'idle', message: '' };
 
-export function LoginPanel({ next, google }: { next: string; google: boolean }) {
+export function LoginPanel({
+  next,
+  google,
+  email,
+}: {
+  next: string;
+  google: boolean;
+  email: boolean;
+}) {
   const [state, action, pending] = useActionState(sendMagicLink, IDLE);
   return (
     <div className="login-panel">
@@ -18,10 +27,12 @@ export function LoginPanel({ next, google }: { next: string; google: boolean }) 
         </button>
         {!google && <span className="note">（尚未設定）</span>}
       </form>
-      <div className="login-or" aria-hidden="true">
-        或
-      </div>
-      {state.status === 'sent' ? (
+      {email && (
+        <div className="login-or" aria-hidden="true">
+          或
+        </div>
+      )}
+      {!email ? null : state.status === 'sent' ? (
         <p className="note ok" role="status">
           {state.message}
         </p>

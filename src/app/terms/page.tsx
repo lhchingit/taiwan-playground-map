@@ -32,9 +32,7 @@ export default function TermsPage() {
         <section className="dsec">
           <h2 className="dsec-title">二、帳號</h2>
           <ul>
-            <li>
-              可以用 Google 帳號或 Email 登入連結登入。網站只公開你的暱稱，不公開 Email 或登入方式。
-            </li>
+            <li>目前可以用 Google 帳號登入。網站只公開你的暱稱，不公開 Email 或登入方式。</li>
             <li>你可以隨時在「我的貢獻」頁修改暱稱或刪除帳號。</li>
           </ul>
         </section>

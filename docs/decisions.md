@@ -78,6 +78,11 @@
   - P3(b) 先做 Google 與 Email 登入連結。
   - LINE 另外用 OAuth2 手動模式實驗：需要建立 LINE Login channel，用雲端 Supabase 測試。可行就加上，不可行再討論。
   - 不採用自己處理 LINE 流程。
+- **決定（2026-10-17）：上線初期只開 Google 登入。**
+  - 理由：網站唯一會寄的信是 Email 登入連結。Supabase 內建的寄信服務只適合測試，對外要另外設定 SMTP（自己網域的寄件信箱、SPF／DKIM，量大時要付費）。先不寄信，上線時就不用處理這些。
+  - 作法：在正式環境的 Supabase 後台關掉 Email provider。網站讀 `/auth/v1/settings`（`authProviders()`）決定要不要顯示 Email 欄位，程式不寫死；本機與 CI 照樣開著，e2e 用 Mailpit 登入。
+  - 影響：沒有 Google 帳號或不想用 Google 的人暫時不能登入（瀏覽、篩選不受影響）。服務條款寫「目前可以用 Google 帳號登入」。
+  - 重新開放：有人反應需要時，先設定 SMTP（`docs/operations.md`），再打開 Email provider，並更新服務條款的用字。
 - **Email 登入連結的作法：** 信裡的連結指向網站的 `/auth/confirm`，在伺服器端驗證 `token_hash`。換瀏覽器或裝置打開也能登入，不受 PKCE 必須同一個瀏覽器的限制。
 
 ## D11 使用者貢獻內容的授權（2026-10-11 決定：資料採 ODbL）
