@@ -7,3 +7,8 @@ export function supabaseEnv() {
   }
   return { url, key };
 }
+
+// 瀏覽器連 Supabase 的網址（Google 登入的授權頁）。只有 Docker 需要設定，其他情況等於 SUPABASE_URL。
+export function supabasePublicUrl(): string | undefined {
+  return process.env.SUPABASE_PUBLIC_URL || undefined;
+}

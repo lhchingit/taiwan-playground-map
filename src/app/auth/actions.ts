@@ -3,7 +3,9 @@
 import { redirect } from 'next/navigation';
 import { safeNext } from '@/lib/auth/next-path';
 import { requestOrigin } from '@/lib/auth/origin';
+import { toPublicUrl } from '@/lib/auth/public-url';
 import { supabaseAuth } from '@/lib/supabase/auth';
+import { supabaseEnv, supabasePublicUrl } from '@/lib/supabase/env';
 
 export async function signInWithGoogle(formData: FormData) {
   const next = safeNext(formData.get('next')?.toString());
@@ -15,7 +17,7 @@ export async function signInWithGoogle(formData: FormData) {
     options: { redirectTo: `${origin}/auth/callback?next=${encodeURIComponent(next)}` },
   });
   if (error || !data.url) redirect(`/login?error=1&next=${encodeURIComponent(next)}`);
-  redirect(data.url);
+  redirect(toPublicUrl(data.url, supabaseEnv().url, supabasePublicUrl()));
 }
 
 export interface MagicLinkState {
