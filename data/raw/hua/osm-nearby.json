@@ -1,0 +1,44 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "radius_m": 150,
+ "note": "人工命名工具的提示，只是參考；匯入不使用",
+ "nearby": {
+  "n12475225171": [
+   {
+    "name": "大陳二村活動中心",
+    "kind": "社區活動中心",
+    "osm": "w1348653993",
+    "distance_m": 21
+   },
+   {
+    "name": "花蓮高工",
+    "kind": "學校",
+    "osm": "r10409918",
+    "distance_m": 178
+   },
+   {
+    "name": "美崙山休閒運動公園",
+    "kind": "公園",
+    "osm": "r18504360",
+    "distance_m": 203
+   }
+  ],
+  "w1233363467": [
+   {
+    "name": "慈恩十五/三十村",
+    "kind": "住宅區",
+    "osm": "r6357785",
+    "distance_m": 36
+   },
+   {
+    "name": "慈恩幼稚園",
+    "kind": "幼兒園",
+    "osm": "w336656342",
+    "distance_m": 77
+   }
+  ],
+  "w1335835701": []
+ }
+}
