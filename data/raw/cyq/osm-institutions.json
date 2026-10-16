@@ -1,0 +1,30 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "osm_json_sha256": "889be487222038cd19bca96f54f7a7fb24013da198a6f70300ad6bd9fe178148",
+ "note": "遊戲場所在的學校、幼兒園、政府機關、軍營（只列在範圍內的）；匯入時自動排除",
+ "inside": {
+  "w1420093009": [
+   {
+    "osm": "w321999923",
+    "kind": "學校",
+    "name": "中和國小"
+   }
+  ],
+  "w790741028": [
+   {
+    "osm": "w269472991",
+    "kind": "學校",
+    "name": "東榮國小"
+   }
+  ],
+  "w790743051": [
+   {
+    "osm": "w269472991",
+    "kind": "學校",
+    "name": "東榮國小"
+   }
+  ]
+ }
+}

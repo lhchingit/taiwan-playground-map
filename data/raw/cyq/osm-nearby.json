@@ -1,0 +1,25 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "radius_m": 150,
+ "note": "人工命名工具的提示，只是參考；匯入不使用",
+ "nearby": {
+  "n13592012413": [],
+  "n14050074242": [
+   {
+    "name": "馨滿義竹",
+    "kind": "公園",
+    "osm": "w565121946",
+    "distance_m": 29
+   },
+   {
+    "name": "義竹國中",
+    "kind": "學校",
+    "osm": "w236258447",
+    "distance_m": 275
+   }
+  ],
+  "n9482723522": []
+ }
+}
