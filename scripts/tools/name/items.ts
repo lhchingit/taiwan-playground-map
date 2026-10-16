@@ -144,6 +144,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py kee',
   },
+  {
+    code: 'pen',
+    name: '澎湖縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py pen',
+  },
 ];
 
 export interface Nearby {

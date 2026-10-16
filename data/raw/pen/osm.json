@@ -1,0 +1,45 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-PEN\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-16T13:12:58Z",
+ "sha256": "358b957f169a1d7d9f443fb9677a3cab83339c8a6591f55abe2c593dc1e6eaea",
+ "playgrounds": [
+  {
+   "ref": "n2922976836",
+   "lat": 23.5512841,
+   "lng": 119.5979737,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "馬公市"
+    }
+   ]
+  },
+  {
+   "ref": "n13110201501",
+   "lat": 23.5685205,
+   "lng": 119.5625078,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3609532608,
+     "name": "觀音亭海濱公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "馬公市"
+    }
+   ]
+  }
+ ]
+}
