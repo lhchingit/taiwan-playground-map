@@ -1,0 +1,276 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-TTT\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-16T12:02:51Z",
+ "sha256": "98407d4c614f3fcc11499ab0320147800e15573c5bd30096a707dc52455a0c78",
+ "playgrounds": [
+  {
+   "ref": "n5065356269",
+   "lat": 22.8930799,
+   "lng": 121.0633707,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "延平鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n5252141804",
+   "lat": 22.7647457,
+   "lng": 121.1490141,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 253413459,
+     "name": "生日蛋糕公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "臺東市"
+    }
+   ]
+  },
+  {
+   "ref": "n6586658285",
+   "lat": 22.6626522,
+   "lng": 121.0290753,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "太麻里鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w407445740",
+   "lat": 23.4043874,
+   "lng": 121.4597004,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "長濱鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w426176107",
+   "lat": 23.4120699,
+   "lng": 121.481172,
+   "tags": {
+    "leisure": "playground",
+    "name": "雨天活動場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "長濱鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w429707964",
+   "lat": 22.7641467,
+   "lng": 121.1666805,
+   "tags": {
+    "building": "yes",
+    "leisure": "playground",
+    "name": "兒童戲水池"
+   },
+   "parks": [
+    {
+     "area": 253330922,
+     "name": "臺東森林公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "臺東市"
+    }
+   ]
+  },
+  {
+   "ref": "w429707965",
+   "lat": 22.7640562,
+   "lng": 121.1668706,
+   "tags": {
+    "building": "yes",
+    "leisure": "playground",
+    "name": "兒童戲水池"
+   },
+   "parks": [
+    {
+     "area": 253330922,
+     "name": "臺東森林公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "臺東市"
+    }
+   ]
+  },
+  {
+   "ref": "w485667024",
+   "lat": 23.121286,
+   "lng": 121.2110222,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 301814565,
+     "name": "池上三號運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "池上鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w507908274",
+   "lat": 23.0956162,
+   "lng": 121.2183565,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "池上鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w531409203",
+   "lat": 22.0445927,
+   "lng": 121.5177275,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "蘭嶼鄉 Ponso no Tao"
+    }
+   ]
+  },
+  {
+   "ref": "w531409204",
+   "lat": 22.0448559,
+   "lng": 121.5178459,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "蘭嶼鄉 Ponso no Tao"
+    }
+   ]
+  },
+  {
+   "ref": "w531642891",
+   "lat": 22.0795637,
+   "lng": 121.5278937,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "蘭嶼鄉 Ponso no Tao"
+    }
+   ]
+  },
+  {
+   "ref": "w531642895",
+   "lat": 22.079515,
+   "lng": 121.5285138,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "蘭嶼鄉 Ponso no Tao"
+    }
+   ]
+  },
+  {
+   "ref": "w531829533",
+   "lat": 22.0193103,
+   "lng": 121.562353,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "蘭嶼鄉 Ponso no Tao"
+    }
+   ]
+  },
+  {
+   "ref": "w916118471",
+   "lat": 22.7581204,
+   "lng": 121.1480649,
+   "tags": {
+    "leisure": "playground",
+    "name": "南京路公園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "臺東市"
+    }
+   ]
+  },
+  {
+   "ref": "w1551030615",
+   "lat": 22.7520235,
+   "lng": 121.1393522,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "臺東市"
+    }
+   ]
+  }
+ ]
+}
