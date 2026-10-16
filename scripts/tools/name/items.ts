@@ -130,6 +130,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py hua',
   },
+  {
+    code: 'ttt',
+    name: '臺東縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py ttt',
+  },
 ];
 
 export interface Nearby {
