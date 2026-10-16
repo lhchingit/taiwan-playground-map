@@ -29,6 +29,8 @@ ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 HOSTNAME=0.0.0.0 PORT=3000
 WORKDIR /app
 COPY --from=build --chown=node:node /app/.next/standalone ./
 COPY --from=build --chown=node:node /app/.next/static ./.next/static
+# public/（PWA 圖示）不在 standalone 輸出裡，要另外複製
+COPY --from=build --chown=node:node /app/public ./public
 USER node
 EXPOSE 3000
 CMD ["node", "server.js"]

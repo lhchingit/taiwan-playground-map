@@ -139,6 +139,29 @@ test.describe('場地頁', () => {
     const robots = await (await page.request.get('/robots.txt')).text();
     expect(robots).toContain('Sitemap:');
   });
+
+  test('PWA：頁面連到 manifest、主畫面圖示與網址列顏色，圖示都拿得到', async ({ page }) => {
+    await page.goto(LUGUANG);
+    const href = await page.locator('link[rel="manifest"]').getAttribute('href');
+    expect(href).toBe('/manifest.webmanifest');
+    await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveCount(1);
+    await expect(page.locator('meta[name="theme-color"]')).toHaveCount(2);
+    await expect(page.locator('meta[name="apple-mobile-web-app-title"]')).toHaveAttribute(
+      'content',
+      '放電地圖',
+    );
+
+    const res = await page.request.get(href!);
+    expect(res.ok()).toBe(true);
+    const m = (await res.json()) as { short_name: string; icons: { src: string }[] };
+    expect(m.short_name).toBe('放電地圖');
+    const apple = await page.locator('link[rel="apple-touch-icon"]').getAttribute('href');
+    for (const src of [...m.icons.map((i) => i.src), apple!]) {
+      const icon = await page.request.get(src);
+      expect(icon.ok(), src).toBe(true);
+      expect(icon.headers()['content-type']).toBe('image/png');
+    }
+  });
 });
 
 test.describe('首頁的詳情面板', () => {

@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Huninn } from 'next/font/google';
 import type { ReactNode } from 'react';
-import { siteUrl } from '@/lib/site';
+import { SHORT_NAME, SITE_DESCRIPTION, SITE_NAME, siteUrl } from '@/lib/site';
 import './globals.css';
 
 // 標題字型在建置時下載、由本站提供，不在瀏覽器即時連 Google Fonts。
@@ -15,8 +15,18 @@ const huninn = Huninn({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: '全台放電地圖',
-  description: '台灣親子遊樂場與公園地圖：依遊樂設施、年齡、生活機能、停車與距離篩選。',
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  // iOS「加入主畫面」的名稱；圖示是 src/app/apple-icon.png
+  appleWebApp: { title: SHORT_NAME },
+};
+
+// 手機瀏覽器網址列的顏色：淺色用 --teal，深色用深色模式的 --paper
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#1c7a69' },
+    { media: '(prefers-color-scheme: dark)', color: '#131a17' },
+  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
