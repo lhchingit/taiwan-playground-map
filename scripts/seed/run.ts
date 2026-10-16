@@ -24,6 +24,11 @@ export interface SeedOptions {
   prune?: boolean;
   /** 會員命名的待命名清單（scripts/seed/naming.ts）；沒給就不動 naming_candidates */
   naming?: readonly NamingCandidate[];
+  /**
+   * 這個檔案的縣市代碼。場地可能是 0 處（例如 OSM 遊戲場全部沒有名稱、都在待命名清單），
+   * 這時沒辦法從場地看出是哪個縣市，所以由呼叫端告訴 runSeed。
+   */
+  city?: string;
 }
 
 export interface SeedSummary {
@@ -56,8 +61,13 @@ export async function runSeed(
   const rows = toSeedRows(seed, osmBounds);
   const placeIds = rows.places.map((p) => p.id);
   const allCities = rows.cities.map((c) => c.code);
-  // 有場地的縣市（用來找資料庫裡多出來的場地）
-  const seedCities = rows.cities.filter((c) => c.bboxSource === 'places').map((c) => c.code);
+  // 這次匯入的縣市（用來找資料庫裡多出來的場地、整理待命名清單）：有場地的縣市，加上 0 處場地的這個檔案的縣市
+  const seedCities = [
+    ...new Set([
+      ...rows.cities.filter((c) => c.bboxSource === 'places').map((c) => c.code),
+      ...(options.city ? [options.city] : []),
+    ]),
+  ];
 
   const tableCounts = (sql: TransactionSql) => sql<Record<string, number>[]>`
       SELECT (SELECT count(*) FROM sources)::int AS sources,
