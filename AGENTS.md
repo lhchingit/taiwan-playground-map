@@ -271,9 +271,10 @@ python3 scripts/check_seed_hash.py                 # 重新產生 seed，逐位�
   - 等資料載入完再操作，例如先等「基本資料」標題出現再捲動。
   - 需要特定角色的帳號，先建立好再登入。
 - **Overpass 逾時（504）：** 放背景重試，間隔幾分鐘。
-- **偶發錯誤，重試就好：**
-  - Docker 建置偶爾讀資料庫失敗。
-  - CI 偶爾被 Docker Hub 限流。
+- **建置時讀資料庫：** `next build` 會產生所有已上線縣市的場地頁（上千頁）。
+  - 伺服器端 Supabase client 的同時請求數由 `src/lib/supabase/limit.ts` 限制（預設 8，可用 `SUPABASE_MAX_CONCURRENCY` 調整）。
+  - 不要拿掉，否則會塞爆本機 Kong 的 512 條連線，建置失敗（「讀取場地…失敗：An unexpected error occurred」）。
+- **偶發錯誤，重試就好：** CI 偶爾被 Docker Hub 限流。
 - **Windows 終端機中文亂碼：** Python 輸出時設 `PYTHONIOENCODING=utf-8`，或輸出到檔案再讀。
 
 ---
