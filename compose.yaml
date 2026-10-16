@@ -18,6 +18,8 @@ services:
     image: playmap-web
     environment:
       SUPABASE_URL: http://host.docker.internal:54321
+      # 瀏覽器連 Supabase 用的網址（Google 登入的授權頁）：瀏覽器在主機上，不經過 host.docker.internal
+      SUPABASE_PUBLIC_URL: http://127.0.0.1:54321
       SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
       SITE_URL: ${SITE_URL:-http://localhost:3000}
       # pnpm seed／pnpm city 改資料後用它清除容器的快取（不需要重新建置）

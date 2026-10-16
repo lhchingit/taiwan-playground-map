@@ -49,6 +49,7 @@ pnpm docker:down   # 停止並移除容器
 ```
 
 - 容器透過 `host.docker.internal:54321` 連到主機上的 Supabase。**建置時也要連得到**：場地頁是建置時產生的，所以要先啟動 Supabase 再 `docker:up`。
+- 瀏覽器不經過 `host.docker.internal`（Windows 的 hosts 檔可能記著舊 IP）：Google 登入的授權頁由 `SUPABASE_PUBLIC_URL`（`http://127.0.0.1:54321`）導過去，跟電腦的 IP 無關。
 - 資料改了之後**不用重新建置**：`pnpm seed`、`pnpm city launch／unlaunch` 會用 `.env.local` 的 `REVALIDATE_SECRET` 通知容器清快取，變更立刻生效（`pnpm dev` 也一樣）。
   `.env.local` 是舊的（沒有 `REVALIDATE_SECRET`）的話，先 `pnpm env:local` 再 `pnpm docker:up`。
 - ⚠️ 重新 `pnpm docker:up` **不會**讀到新資料：原始碼沒變時 Docker 會沿用上次的建置結果。真的要從頭建置用 `docker compose --env-file .env.local build --no-cache`。
