@@ -176,9 +176,9 @@ OSM 匯入的遊戲場沒有名稱、也不在有名稱的公園裡時，不會�
 
 ## 新增其他縣市
 
-`cities` 表目前有新竹市（hsc）、新竹縣（hsq）、桃園市（tyc）、苗栗縣（mlc）、臺北市（tpe，0010 migration）、新北市（nwt，0011）、臺中市（txg，0012）、高雄市（khh，0013）。測試另外會暫時建立只存在於測試裡的測試縣（tst，`tests/db/test-city.ts`），不在 migration 裡。新增其他縣市時：
+`cities` 表目前的縣市與代碼見 `AGENTS.md` 第 3 節（縣市一覽）。測試另外會暫時建立只存在於測試裡的測試縣（tst，`tests/db/test-city.ts`），不在 migration 裡。新增其他縣市時：
 
 1. 寫一個 migration 新增 `cities` 資料列（`code` 三碼、`slug`、`name`），`launched_at` 留空。
 2. 在 `scripts/fetch_city_bounds.py` 的 `CITIES` 加上這個縣市，執行後提交 `data/raw/osm-city-bounds.json`。
-3. 在 `.github/workflows/data-ops.yml` 的 `city` 選項加上新代碼。
+3. 在 `.github/workflows/data-ops.yml` 的 `city` 選項加上新代碼（`tests/unit/data-ops.test.ts` 會檢查跟 migrations 一致）。
 4. 之後照「匯入一個新縣市」的步驟。

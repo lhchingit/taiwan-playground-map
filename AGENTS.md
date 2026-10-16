@@ -107,6 +107,7 @@
 ### 4.2 要改的地方（只用 OSM 的縣市）
 
 - [ ] `supabase/migrations/00NN_city_<名稱>.sql`：`INSERT INTO cities (code, slug, name)`，`launched_at` 留空。
+- [ ] `.github/workflows/data-ops.yml`：`city` 的 `options` 加上新代碼，正式環境才能匯入、上線（`tests/unit/data-ops.test.ts` 會檢查）。
 - [ ] `scripts/fetch_osm_city.py`：`ISO` 加上 ISO 3166-2 代碼，例如彰化是 `TW-CHA`。
 - [ ] `scripts/fetch_osm_institutions.py`、`scripts/fetch_osm_nearby.py`：加到 `CITIES`。
 - [ ] `scripts/fetch_city_bounds.py`：加到 `CITIES`，執行後確認 `data/raw/osm-city-bounds.json` **只多了這個縣市**。
@@ -317,3 +318,13 @@ pnpm docker:up                 # 用目前的程式建置並啟動網站 http://
 - **登入：** 本機的登入信寄到 Mailpit：http://localhost:54324。
 - **確認完：** 如果不想讓縣市留在上線狀態，執行 `pnpm city unlaunch <代碼>`。
 - **正式環境的上線**由人在 GitHub Actions 操作，見 `docs/operations.md`。
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
