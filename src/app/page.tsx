@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { NearestCity } from '@/components/home/NearestCity';
 import { TaiwanMap } from '@/components/home/TaiwanMap';
+import { sortCitiesNorthToSouth } from '@/lib/cities';
 import { getCityBounds, getCityPlaces } from '@/lib/data';
 
 // 只有一個縣市上線時直接進入那個縣市；兩個以上時顯示台灣地圖與縣市選單（decisions D12）
@@ -32,7 +33,7 @@ export default async function Home() {
             <>
               <TaiwanMap cities={all} counts={counts} />
               <ul className="city-list">
-                {cities.map((c) => (
+                {sortCitiesNorthToSouth(cities).map((c) => (
                   <li key={c.code}>
                     <Link href={`/${c.slug}`}>{c.name}</Link>
                     <span className="note">{counts[c.code]} 處</span>

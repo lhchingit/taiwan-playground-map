@@ -10,6 +10,26 @@ export interface CityBounds {
   launched: boolean;
 }
 
+/** 首頁縣市清單的順序：西部由北到南，接著東部由北到南，離島最後。新增縣市時要加進來（有測試檢查）。 */
+export const CITY_ORDER: readonly string[] = [
+  // 西部：基隆、臺北、新北、桃園、新竹市、新竹縣、苗栗、臺中、彰化、南投、雲林、嘉義市、嘉義縣、臺南、高雄、屏東
+  ...['kee', 'tpe', 'nwt', 'tyc', 'hsc', 'hsq', 'mlc', 'txg'],
+  ...['chw', 'nan', 'yun', 'cyi', 'cyq', 'tnn', 'khh', 'pif'],
+  // 東部：宜蘭、花蓮、臺東
+  ...['ila', 'hua', 'ttt'],
+  // 離島：澎湖、金門、連江
+  ...['pen', 'kin', 'lie'],
+];
+
+/** 照 CITY_ORDER 排序；不在清單裡的代碼排最後，彼此照代碼排 */
+export function sortCitiesNorthToSouth<C extends { code: string }>(cities: readonly C[]): C[] {
+  const rank = (code: string) => {
+    const i = CITY_ORDER.indexOf(code);
+    return i === -1 ? CITY_ORDER.length : i;
+  };
+  return [...cities].sort((a, b) => rank(a.code) - rank(b.code) || a.code.localeCompare(b.code));
+}
+
 /** D4：範圍與出發點距離在這個公里數內的縣市都要載入 */
 export const LOAD_RADIUS_KM = 20;
 

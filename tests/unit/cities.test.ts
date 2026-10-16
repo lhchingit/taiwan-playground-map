@@ -1,5 +1,48 @@
+import { readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { citiesToLoad, distanceToBboxKm, nearestCity, type CityBounds } from '@/lib/cities';
+import {
+  CITY_ORDER,
+  citiesToLoad,
+  distanceToBboxKm,
+  nearestCity,
+  sortCitiesNorthToSouth,
+  type CityBounds,
+} from '@/lib/cities';
+
+// supabase/migrations 裡 INSERT INTO cities 的縣市代碼（同 data-ops.test.ts）
+const migrationCodes = readdirSync('supabase/migrations')
+  .filter((f) => f.endsWith('.sql'))
+  .flatMap((f) => {
+    const sql = readFileSync(`supabase/migrations/${f}`, 'utf8');
+    return [...sql.matchAll(/INSERT INTO cities[^;]*;/g)].flatMap((m) =>
+      [...m[0].matchAll(/\(\s*'([a-z]{3})'\s*,/g)].map((c) => c[1]!),
+    );
+  });
+
+describe('首頁縣市清單：由北到南、離島最後', () => {
+  it('照北到南排序', () => {
+    const codes = ['lie', 'chw', 'tpe', 'hua', 'hsc', 'kee'].map((code) => ({ code }));
+    expect(sortCitiesNorthToSouth(codes).map((c) => c.code)).toEqual([
+      'kee',
+      'tpe',
+      'hsc',
+      'chw',
+      'hua',
+      'lie',
+    ]);
+  });
+
+  it('不在清單裡的代碼排最後，彼此照代碼排', () => {
+    const codes = ['zzz', 'tst', 'pen', 'hsc'].map((code) => ({ code }));
+    expect(sortCitiesNorthToSouth(codes).map((c) => c.code)).toEqual(['hsc', 'pen', 'tst', 'zzz']);
+  });
+
+  it('CITY_ORDER 跟 migrations 的縣市一致：新增縣市時忘了加，首頁清單就會排到最後', () => {
+    expect(migrationCodes.length).toBeGreaterThanOrEqual(22);
+    expect(new Set(CITY_ORDER).size).toBe(CITY_ORDER.length);
+    expect([...CITY_ORDER].sort()).toEqual([...migrationCodes].sort());
+  });
+});
 
 // 簡化的範圍，只用來測試
 const city = (code: string, bbox: number[] | null): CityBounds => ({
