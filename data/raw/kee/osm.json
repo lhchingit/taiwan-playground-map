@@ -1,0 +1,431 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-KEE\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-16T12:25:11Z",
+ "sha256": "6b580706579f5429fd369723f59aa8a7fa950fbc8be9a2e7d781eacfa7e1f383",
+ "playgrounds": [
+  {
+   "ref": "n1703345366",
+   "lat": 25.0836386,
+   "lng": 121.7475595,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "n4943448982",
+   "lat": 25.0952463,
+   "lng": 121.7406335,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 157708358,
+     "name": "暖暖運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "n13640062001",
+   "lat": 25.1551663,
+   "lng": 121.7433178,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w161621166",
+   "lat": 25.1014744,
+   "lng": 121.7371541,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "w161621174",
+   "lat": 25.1019936,
+   "lng": 121.7375923,
+   "tags": {
+    "leisure": "playground",
+    "wheelchair": "no"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "w162190040",
+   "lat": 25.0986879,
+   "lng": 121.7364704,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "w367563463",
+   "lat": 25.1462898,
+   "lng": 121.7265863,
+   "tags": {
+    "leisure": "playground",
+    "name": "德和公園",
+    "wheelchair": "limited"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w367613153",
+   "lat": 25.1544754,
+   "lng": 121.7330491,
+   "tags": {
+    "leisure": "playground",
+    "name": "協和公園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w367847828",
+   "lat": 25.1550803,
+   "lng": 121.7308671,
+   "tags": {
+    "leisure": "playground",
+    "name": "小操場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w367847833",
+   "lat": 25.1549727,
+   "lng": 121.7298464,
+   "tags": {
+    "leisure": "playground",
+    "name": "大操場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w369377593",
+   "lat": 25.1317755,
+   "lng": 121.731539,
+   "tags": {
+    "leisure": "playground",
+    "name": "前庭"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "安樂區"
+    }
+   ]
+  },
+  {
+   "ref": "w369377594",
+   "lat": 25.1319363,
+   "lng": 121.7311075,
+   "tags": {
+    "leisure": "playground",
+    "name": "中庭"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "安樂區"
+    }
+   ]
+  },
+  {
+   "ref": "w369377595",
+   "lat": 25.1320389,
+   "lng": 121.7305855,
+   "tags": {
+    "leisure": "playground",
+    "name": "後庭"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "安樂區"
+    }
+   ]
+  },
+  {
+   "ref": "w369377598",
+   "lat": 25.1322636,
+   "lng": 121.7311848,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "安樂區"
+    }
+   ]
+  },
+  {
+   "ref": "w369417355",
+   "lat": 25.1058148,
+   "lng": 121.7425817,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "w371346499",
+   "lat": 25.1269974,
+   "lng": 121.7153382,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "安樂區"
+    }
+   ]
+  },
+  {
+   "ref": "w371444549",
+   "lat": 25.1284889,
+   "lng": 121.720483,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "安樂區"
+    }
+   ]
+  },
+  {
+   "ref": "w532764042",
+   "lat": 25.1358789,
+   "lng": 121.7337946,
+   "tags": {
+    "access": "yes",
+    "building": "kindergarten",
+    "building:levels": "2",
+    "layer": "1",
+    "leisure": "playground",
+    "name": "幼稚園遊樂區",
+    "operator": "聖心幼稚園",
+    "playground:theme": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w819332138",
+   "lat": 25.0955576,
+   "lng": 121.7405684,
+   "tags": {
+    "leisure": "playground",
+    "name": "躲貓貓涵管"
+   },
+   "parks": [
+    {
+     "area": 157708358,
+     "name": "暖暖運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "w819332139",
+   "lat": 25.0953574,
+   "lng": 121.7405194,
+   "tags": {
+    "leisure": "playground",
+    "name": "圓盤型鞦韆"
+   },
+   "parks": [
+    {
+     "area": 157708358,
+     "name": "暖暖運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  {
+   "ref": "w964159150",
+   "lat": 25.1242578,
+   "lng": 121.7437733,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "仁愛區"
+    }
+   ]
+  },
+  {
+   "ref": "w1152345062",
+   "lat": 25.1511462,
+   "lng": 121.7258704,
+   "tags": {
+    "leisure": "playground",
+    "name": "全民一家社區兒童遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w1152345063",
+   "lat": 25.1506399,
+   "lng": 121.7252983,
+   "tags": {
+    "leisure": "playground",
+    "name": "兒童遊樂場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  {
+   "ref": "w1434380571",
+   "lat": 25.1240528,
+   "lng": 121.724001,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 7,
+     "name": "安樂區"
+    }
+   ]
+  },
+  {
+   "ref": "w1486210997",
+   "lat": 25.1316824,
+   "lng": 121.7481068,
+   "tags": {
+    "leisure": "playground",
+    "name": "遊戲塔",
+    "playground:theme": "遊戲塔"
+   },
+   "parks": [
+    {
+     "area": 220817255,
+     "name": "中正公園"
+    },
+    {
+     "area": 1486210992,
+     "name": "希望之丘親子遊樂場"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "信義區"
+    }
+   ]
+  }
+ ]
+}
