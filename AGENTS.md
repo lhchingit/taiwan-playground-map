@@ -110,6 +110,7 @@
 
 - [ ] `supabase/migrations/00NN_city_<名稱>.sql`：`INSERT INTO cities (code, slug, name)`，`launched_at` 留空。
 - [ ] `.github/workflows/data-ops.yml`：`city` 的 `options` 加上新代碼，正式環境才能匯入、上線（`tests/unit/data-ops.test.ts` 會檢查）。
+- [ ] `src/lib/cities.ts`：`CITY_ORDER` 照由北到南、離島最後的位置加上新代碼，首頁縣市清單照這個順序（`tests/unit/cities.test.ts` 會檢查）。
 - [ ] `scripts/fetch_osm_city.py`：`ISO` 加上 ISO 3166-2 代碼，例如彰化是 `TW-CHA`。
 - [ ] `scripts/fetch_osm_institutions.py`、`scripts/fetch_osm_nearby.py`：加到 `CITIES`。
 - [ ] `scripts/fetch_city_bounds.py`：加到 `CITIES`，執行後確認 `data/raw/osm-city-bounds.json` **只多了這個縣市**。
