@@ -1,0 +1,16 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "osm_json_sha256": "5150b60a342a806abc67da9f2139dc644497d0d3c151934e819715945e571113",
+ "note": "遊戲場所在的學校、幼兒園、政府機關、軍營（只列在範圍內的）；匯入時自動排除",
+ "inside": {
+  "w529693207": [
+   {
+    "osm": "w430707164",
+    "kind": "學校",
+    "name": "東引國中小"
+   }
+  ]
+ }
+}

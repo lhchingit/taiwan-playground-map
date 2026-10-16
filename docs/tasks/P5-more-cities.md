@@ -258,6 +258,19 @@
   - 0 處場地的縣市：`pnpm seed` 用 OSM 行政界當範圍，待命名清單照常匯入（`runSeed` 的 `city` 選項）。
   - 遊具全部是 `u`。
 
+## 連江縣（lie）
+
+- **資料：** 只用 OSM 遊戲場起步（decisions D20）。政府資料開放平臺沒有連江縣政府的公園或遊戲場清單。
+- **名稱可疑：** 用嚴格模式（`HOLD_SUSPICIOUS`）擋下。
+- **指令：** `python3 scripts/fetch_osm_city.py lie`、`python3 scripts/fetch_osm_institutions.py lie` → `python3 scripts/import_osm_city.py lie`
+- **進度（2026-10-16）：** 資料已準備好、**未上線**。22 個縣市全部加入。
+  - OSM 遊戲場 8 處：
+    - **上地圖 3 處**：白馬王公園（南竿鄉）、青帆公園（莒光鄉）、東湧公園（東引鄉）
+    - 學校內 1 處（東引國中小）
+    - 名稱可疑 0 處
+    - **沒有名稱 4 處**（南竿鄉 2、莒光鄉 2）
+  - 遊具全部是 `u`。
+
 ## 完成標準（每個縣市）
 
 - [ ] 該縣市的轉接器、設施對照與測試已合併。

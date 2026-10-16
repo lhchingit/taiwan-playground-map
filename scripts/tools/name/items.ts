@@ -158,6 +158,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py kin',
   },
+  {
+    code: 'lie',
+    name: '連江縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py lie',
+  },
 ];
 
 export interface Nearby {

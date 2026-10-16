@@ -1,0 +1,145 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-LIE\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-16T14:37:35Z",
+ "sha256": "4e2375b396c0b25914d1da39fac85f58aa8a680a2ceae6c69e235f6732e1da87",
+ "playgrounds": [
+  {
+   "ref": "n10578001241",
+   "lat": 26.1549024,
+   "lng": 119.9518263,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 570128182,
+     "name": "白馬王公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "南竿鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n10583656406",
+   "lat": 26.157702,
+   "lng": 119.9428245,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "南竿鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n13763105375",
+   "lat": 25.9727948,
+   "lng": 119.9374436,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "莒光鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n13763156373",
+   "lat": 25.9710497,
+   "lng": 119.9320853,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1167906809,
+     "name": "青帆公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "莒光鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n13763165773",
+   "lat": 25.957923,
+   "lng": 119.9692928,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "莒光鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w529693207",
+   "lat": 26.3677932,
+   "lng": 120.4880268,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "東引鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w529693227",
+   "lat": 26.366281,
+   "lng": 120.4911752,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 431591549,
+     "name": "東湧公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "東引鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1358398380",
+   "lat": 26.1638121,
+   "lng": 119.9525182,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "南竿鄉"
+    }
+   ]
+  }
+ ]
+}

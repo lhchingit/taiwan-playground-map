@@ -18,8 +18,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data/raw/osm-city-bounds.json"
 USER_AGENT = "playmap-seed/0.1 (https://github.com/lhchingit/taiwan-playground-map)"
 
-# 與 supabase/migrations 的 cities 相同（0001_init、0010_city_taipei、0011_city_new_taipei、0012_city_taichung、0013_city_kaohsiung、0015_city_tainan、0016_city_chiayi、0017_city_changhua、0018_city_pingtung、0019_city_yunlin、0020_city_yilan、0021_city_chiayi_county、0022_city_nantou、0023_city_hualien、0024_city_taitung、0025_city_keelung、0026_city_penghu、0027_city_kinmen）
-CITIES = [("hsc", "新竹市"), ("hsq", "新竹縣"), ("tyc", "桃園市"), ("mlc", "苗栗縣"), ("tpe", "臺北市"), ("nwt", "新北市"), ("txg", "臺中市"), ("khh", "高雄市"), ("tnn", "臺南市"), ("cyi", "嘉義市"), ("chw", "彰化縣"), ("pif", "屏東縣"), ("yun", "雲林縣"), ("ila", "宜蘭縣"), ("cyq", "嘉義縣"), ("nan", "南投縣"), ("hua", "花蓮縣"), ("ttt", "臺東縣"), ("kee", "基隆市"), ("pen", "澎湖縣"), ("kin", "金門縣")]
+# 與 supabase/migrations 的 cities 相同（0001_init、0010_city_taipei、0011_city_new_taipei、0012_city_taichung、0013_city_kaohsiung、0015_city_tainan、0016_city_chiayi、0017_city_changhua、0018_city_pingtung、0019_city_yunlin、0020_city_yilan、0021_city_chiayi_county、0022_city_nantou、0023_city_hualien、0024_city_taitung、0025_city_keelung、0026_city_penghu、0027_city_kinmen、0028_city_lienchiang）
+CITIES = [("hsc", "新竹市"), ("hsq", "新竹縣"), ("tyc", "桃園市"), ("mlc", "苗栗縣"), ("tpe", "臺北市"), ("nwt", "新北市"), ("txg", "臺中市"), ("khh", "高雄市"), ("tnn", "臺南市"), ("cyi", "嘉義市"), ("chw", "彰化縣"), ("pif", "屏東縣"), ("yun", "雲林縣"), ("ila", "宜蘭縣"), ("cyq", "嘉義縣"), ("nan", "南投縣"), ("hua", "花蓮縣"), ("ttt", "臺東縣"), ("kee", "基隆市"), ("pen", "澎湖縣"), ("kin", "金門縣"), ("lie", "連江縣")]
 
 
 def search(name):
