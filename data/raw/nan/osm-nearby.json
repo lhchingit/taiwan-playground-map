@@ -1,0 +1,49 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "radius_m": 150,
+ "note": "人工命名工具的提示，只是參考；匯入不使用",
+ "nearby": {
+  "n5406297822": [
+   {
+    "name": "新厝村集會所",
+    "kind": "社區活動中心",
+    "osm": "n4890999126",
+    "distance_m": 16
+   },
+   {
+    "name": "新厝村集會所",
+    "kind": "社區活動中心",
+    "osm": "w810409325",
+    "distance_m": 17
+   }
+  ],
+  "n9702382599": [],
+  "w1065422582": [
+   {
+    "name": "竹山公園",
+    "kind": "公園",
+    "osm": "r14207294",
+    "distance_m": 148
+   }
+  ],
+  "w1128031333": [
+   {
+    "name": "竹山公園",
+    "kind": "公園",
+    "osm": "r14207294",
+    "distance_m": 157
+   }
+  ],
+  "w1469408327": [],
+  "w1524224007": [
+   {
+    "name": "名間鄉老人文康活動中心",
+    "kind": "社區活動中心",
+    "osm": "w1013976639",
+    "distance_m": 112
+   }
+  ]
+ }
+}
