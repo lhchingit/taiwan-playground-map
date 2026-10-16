@@ -1,6 +1,6 @@
 # 營運手冊：正式環境的資料作業
 
-這份文件寫給「已經上線到雲端」之後的人：怎麼把新縣市的資料匯入正式資料庫、確認後公開，以及出錯時怎麼收回。
+這份文件寫給要部署到雲端、以及「已經上線到雲端」之後的人：第一次部署照「部署 checklist」；怎麼把新縣市的資料匯入正式資料庫、確認後公開，以及出錯時怎麼收回。
 本機開發請看 README。
 
 ## 基本觀念
@@ -10,6 +10,77 @@
 - **網站資料快取 1 小時。** 匯入、上線、下線之後，工具會呼叫網站的 `/api/revalidate` 清快取，變更立刻生效；沒設定的話最多 1 小時後才更新。
 - **使用者回報的資料（`source_id = 'user'`）不會被匯入覆蓋或刪除。**
 - **匯入可以重複執行**，只有內容有變的資料才會更新。也可以先 `--dry-run` 試跑，看會改變什麼。
+
+## 部署 checklist（第一次上線）
+
+網站放 Vercel、資料庫用 Supabase 雲端專案。照順序勾選；寫「第 N 節」的步驟，細節在下方「第一次設定」。
+
+### A. 先決定
+
+- [ ] Supabase 方案：試用可以用免費方案；**對外公開建議 Pro**（免費方案閒置一週會暫停，也沒有每日備份）。
+- [ ] 網址：試用期間用 Vercel 給的 `https://<專案>.vercel.app`（免費、有 HTTPS）；對外公開前再買網域（見 F）。
+- [ ] 先上線哪些縣市：建議先只上線新竹市，自己和幾位家長試用，確認流程後再逐步上線其他縣市。
+- [ ] `/terms`、`/privacy` 的法律審閱（decisions D11），或決定先用草稿上線。
+
+### B. Supabase 正式專案
+
+- [ ] 建立專案，區域選 **Tokyo（ap-northeast-1）**，資料庫密碼存在密碼管理工具。
+- [ ] 套用所有 migration：
+  ```bash
+  pnpm exec supabase link --project-ref <專案代碼>
+  pnpm exec supabase db push
+  ```
+- [ ] 記下 Project URL 與 anon key（Project Settings → API）。**網站不使用 service role key。**
+- [ ] 第 1 節：取得 Postgres 連線字串（資料作業用）。
+- [ ] 第 4 節：登入設定。
+  - Site URL、Redirect URLs 先填 `https://<專案>.vercel.app`。
+  - 設定 Google 登入。
+  - **關閉 Email provider**（上線初期只開 Google，decisions D10）。SMTP、信件範本先不用設定。
+- [ ] 第 4 節第 6 項：Cloudflare Turnstile，網域先填 `<專案>.vercel.app`。
+- [ ] Google Cloud Console 的 OAuth 同意畫面發布成「**正式版**」：還在「測試」狀態時，只有列在測試使用者裡的帳號能登入。
+
+### C. 資料匯入（還不上線）
+
+- [ ] 第 2 節：產生 `REVALIDATE_SECRET`。
+- [ ] 第 3 節：設定 GitHub 的 `production` environment；`SITE_URL` 填 `https://<專案>.vercel.app`。
+- [ ] 資料作業匯入新竹市：`hsc` + `dry-run` 看過 job summary，再 `hsc` + `seed`（步驟同下方「匯入一個新縣市」第 3 步）。
+
+### D. Vercel
+
+- [ ] Vercel → Add New → Project → Import 這個 GitHub repo。Framework 會自動偵測成 Next.js，pnpm 版本照 `package.json` 的 `packageManager`。
+- [ ] Settings → General → Node.js Version 選 **24.x**（`engines` 要求 `>=24`）。
+- [ ] Settings → Functions → Function Region 選 **Tokyo（hnd1）**，跟 Supabase 同區。
+- [ ] Settings → Environment Variables（Production）：
+
+  | 名稱 | 內容 |
+  |---|---|
+  | `SUPABASE_URL` | B 的 Project URL |
+  | `SUPABASE_ANON_KEY` | B 的 anon key |
+  | `SITE_URL` | `https://<專案>.vercel.app`（結尾不要 `/`） |
+  | `REVALIDATE_SECRET` | C 的密鑰（跟 GitHub 的相同） |
+  | `TURNSTILE_SITE_KEY`、`TURNSTILE_SECRET_KEY` | B 的 Turnstile 金鑰 |
+
+  不用設定：`SUPABASE_PUBLIC_URL`、`NEXT_OUTPUT`（只有 Docker 用）、`SUPABASE_MAX_CONCURRENCY`（預設 8）。
+- [ ] 部署。**建置時會連 Supabase 產生頁面**，所以 B、C 要先完成。之後合併到 `main` 會自動部署。
+- [ ] 資料作業 `hsc` + `launch`：會通知網站清快取，新竹市立刻出現。
+
+### E. 上線後確認
+
+- [ ] 首頁直接導向 `/hsinchu-city`（只有一個縣市上線時）；地圖、篩選、場地頁正常。
+- [ ] `/sitemap.xml` 有場地頁，`/robots.txt` 的網址是正式網址。
+- [ ] 登入頁只有「用 Google 登入」，實際登入一次。
+- [ ] 第 5 節：設定第一位管理員。
+- [ ] 回報修正走一次：Turnstile 通過 → 審核後台看得到 → 核准後場地頁更新。
+- [ ] 用手機實際打開看一次。
+
+### F. 換成正式網域時
+
+- [ ] Vercel → Settings → Domains 加上網域，照畫面指示設定 DNS（在 Vercel 買的網域會自動設定）。
+- [ ] `SITE_URL` 改成新網址：Vercel 環境變數、GitHub `production` environment 兩處。
+- [ ] Supabase：Site URL 改成新網址，Redirect URLs 加上 `https://<網域>/**`。
+- [ ] Turnstile：網域加上新網域。
+- [ ] Google OAuth 同意畫面：首頁、隱私權政策、服務條款的網址改成新網域。
+- [ ] Vercel 重新部署，再照 E 確認一次。
 
 ## 第一次設定（只做一次）
 
@@ -70,7 +141,7 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
 
 管理員的角色只能由另一位管理員在 `/admin/users` 設定，所以第一位要直接在資料庫設定，只做一次：
 
-1. 用自己的 Email 或 Google 在正式網站登入一次，系統會建立 profile。
+1. 用自己的 Google 帳號在正式網站登入一次，系統會建立 profile。
 2. Supabase Studio → SQL Editor 執行（換成自己的 Email）：
    ```sql
    UPDATE profiles SET role = 'admin'
