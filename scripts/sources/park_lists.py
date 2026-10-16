@@ -1,4 +1,4 @@
-"""官方公園清單 → 替 OpenStreetMap 遊戲場補地址（與面積）。用於新北市、臺中市（decisions D20）。
+"""官方公園清單 → 替 OpenStreetMap 遊戲場補地址（與面積）。用於新北市、臺中市、南投縣（decisions D20）。
 
 這些清單沒有遊具資料，看不出哪個公園有遊戲場，所以不單獨上地圖（D13）；只補充已經在地圖上的 OSM 場地。
 規則（不推測）：
@@ -44,6 +44,14 @@ def txg_record(r):
             "address": r["設置地點"], "management": r["維護單位"], "area_m2": txg_area(r["面積（M2）"])}
 
 
+def nan_record(r):
+    """南投縣都市計畫區公園一覽表（fetch_ntc_parks.py）：名稱、單位裡有換行；地址括號裡是地段地號，不要"""
+    flat = lambda s: "".join((s or "").split())  # noqa: E731
+    return {"seqno": r["編號"], "name": flat(r["公園名稱"]), "district": flat(r["所在轄區"]),
+            "address": flat(PAREN.sub("", r["座落位置"] or "")), "management": flat(r["維護管理單位"]),
+            "area_m2": txg_area(r["面積（m2）"])}
+
+
 CONFIGS = {
     "nwt": {
         "raw": "data/raw/nwt/ntpc-parks.json",
@@ -60,6 +68,14 @@ CONFIGS = {
         "label": "臺中市公園綠地清冊",
         "sources": {"txgparks": {"label": "臺中市公園綠地清冊（建設局，政府資料開放平台）",
                                  "url": "https://data.gov.tw/dataset/88288", "kind": "open_data"}},
+    },
+    "nan": {
+        "raw": "data/raw/nan/ntc-parks.json",
+        "record": nan_record,
+        "ref_key": "ntc_seqno",
+        "label": "南投縣都市計畫區公園一覽表",
+        "sources": {"ntcparks": {"label": "南投縣都市計畫區公園一覽表（南投縣政府，政府資料開放平台）",
+                                 "url": "https://data.gov.tw/dataset/127415", "kind": "open_data"}},
     },
 }
 

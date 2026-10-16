@@ -6,8 +6,8 @@ USER_AGENT = "playmap-data/0.1"
 META_API = "https://data.gov.tw/api/v2/rest/dataset/{}"
 
 
-def download(url, timeout=60):
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+def download(url, timeout=60, user_agent=USER_AGENT):
+    req = urllib.request.Request(url, headers={"User-Agent": user_agent})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 

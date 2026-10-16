@@ -1,0 +1,30 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-16",
+ "osm_json_sha256": "a59ecd88c2c5e8e7805249d00a929d5a1813764e3438e005a60402be0b4c4014",
+ "note": "遊戲場所在的學校、幼兒園、政府機關、軍營（只列在範圍內的）；匯入時自動排除",
+ "inside": {
+  "n4855001121": [
+   {
+    "osm": "w450762746",
+    "kind": "學校",
+    "name": "清境國小"
+   }
+  ],
+  "w233696831": [
+   {
+    "osm": "w232946897",
+    "kind": "政府機關",
+    "name": "地方行政研習中心"
+   }
+  ],
+  "w533334180": [
+   {
+    "osm": "w339519483",
+    "kind": "學校",
+    "name": "中寮國小"
+   }
+  ]
+ }
+}

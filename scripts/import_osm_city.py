@@ -6,7 +6,7 @@
       data/raw/<縣市>/osm-institutions.json（scripts/fetch_osm_institutions.py：位在學校、機關範圍內的遊戲場）
 輸出：data/seed/<縣市>/places.json、places.csv；
       data/review/<縣市>/unnamed.csv、merged.csv、excluded.csv、excluded-institution.csv（HOLD_SUSPICIOUS 的縣市另有 named-suspicious.csv）
-新北市、臺中市另外用官方公園清單補地址（與面積），輸出 official-matched.csv、official-ambiguous.csv（sources/park_lists.py）
+新北市、臺中市、南投縣另外用官方公園清單補地址（與面積），輸出 official-matched.csv、official-ambiguous.csv（sources/park_lists.py）
 規則見 scripts/sources/osm_playgrounds.py。不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
 """
 import sys
@@ -19,9 +19,9 @@ from sources import park_lists
 from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市", "txg": "臺中市", "khh": "高雄市", "cyi": "嘉義市", "chw": "彰化縣", "pif": "屏東縣", "yun": "雲林縣", "ila": "宜蘭縣", "cyq": "嘉義縣"}
+CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市", "txg": "臺中市", "khh": "高雄市", "cyi": "嘉義市", "chw": "彰化縣", "pif": "屏東縣", "yun": "雲林縣", "ila": "宜蘭縣", "cyq": "嘉義縣", "nan": "南投縣"}
 # 名稱可疑的遊戲場先不上地圖、等人工確認的縣市（osm_playgrounds.hold_suspicious；值是 strict）；其他縣市照舊
-HOLD_SUSPICIOUS = {"chw": True, "pif": True, "yun": True, "ila": True, "cyq": True}
+HOLD_SUSPICIOUS = {"chw": True, "pif": True, "yun": True, "ila": True, "cyq": True, "nan": True}
 CSV_BASE = ["id", "name", "district", "lat", "lng", "size", "stay", "age_min", "age_max", "fee", "status"]
 
 

@@ -96,6 +96,13 @@ CITIES = {
         + [f"data/review/cyq/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
                                                 "named-suspicious"]],
     },
+    # 南投縣：OSM 遊戲場＋都市計畫區公園一覽表補地址與面積；名稱可疑的先不上地圖
+    "nan": {
+        "scripts": [["scripts/import_osm_city.py", "nan"]],
+        "outputs": ["data/seed/nan/places.json", "data/seed/nan/places.csv"]
+        + [f"data/review/nan/{k}.csv" for k in ["unnamed", "merged", "excluded", "excluded-institution",
+                                                "named-suspicious", "official-matched", "official-ambiguous"]],
+    },
     # 苗栗縣：同新竹縣（沒有官方清單）
     "mlc": {
         "scripts": [["scripts/import_osm_city.py", "mlc"]],

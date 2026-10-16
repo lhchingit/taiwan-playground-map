@@ -1,0 +1,483 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-NAN\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
+ "fetched": "2026-10-16",
+ "osm_base": "2026-10-16T10:33:05Z",
+ "sha256": "c9d84f9f05d9c1948195041e4dcfa4633c47d72b32a4e88e1643765c86959c56",
+ "playgrounds": [
+  {
+   "ref": "n4855001121",
+   "lat": 24.0442488,
+   "lng": 121.1588317,
+   "tags": {
+    "leisure": "playground",
+    "opening_hours": "Mo-Su 09:00-18:00"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "仁愛鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n5405008743",
+   "lat": 23.9712961,
+   "lng": 120.9698836,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 3608051531,
+     "name": "埔里鎮運動公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "埔里鎮"
+    }
+   ]
+  },
+  {
+   "ref": "n5406297822",
+   "lat": 23.8426085,
+   "lng": 120.658859,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "名間鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6866470438",
+   "lat": 23.8669164,
+   "lng": 120.9487084,
+   "tags": {
+    "leisure": "playground",
+    "name": "水戰船"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6866470439",
+   "lat": 23.8669895,
+   "lng": 120.9491289,
+   "tags": {
+    "leisure": "playground",
+    "name": "大漩渦"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6866470440",
+   "lat": 23.8669197,
+   "lng": 120.9484848,
+   "tags": {
+    "leisure": "playground",
+    "name": "飛行船"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6866470441",
+   "lat": 23.866699,
+   "lng": 120.9477325,
+   "tags": {
+    "leisure": "playground",
+    "name": "無敵艦隊"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6866470464",
+   "lat": 23.8681123,
+   "lng": 120.9474557,
+   "tags": {
+    "access": "customers",
+    "leisure": "playground",
+    "name": "星際嘉年華"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n6866470465",
+   "lat": 23.8682275,
+   "lng": 120.9479383,
+   "tags": {
+    "access": "customers",
+    "leisure": "playground",
+    "name": "動感電影"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "n9702382599",
+   "lat": 23.8997469,
+   "lng": 120.7116405,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "南投市"
+    }
+   ]
+  },
+  {
+   "ref": "w233696831",
+   "lat": 23.9364562,
+   "lng": 120.7029558,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "南投市"
+    }
+   ]
+  },
+  {
+   "ref": "w468282564",
+   "lat": 23.9788865,
+   "lng": 120.6948439,
+   "tags": {
+    "leisure": "playground",
+    "name": "草屯兒童樂園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "草屯鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w515716778",
+   "lat": 23.8113992,
+   "lng": 120.8598935,
+   "tags": {
+    "barrier": "wall",
+    "leisure": "playground",
+    "name": "兒童樂園"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "水里鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w533334180",
+   "lat": 23.8804138,
+   "lng": 120.7641584,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "中寮鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w733238694",
+   "lat": 23.8678981,
+   "lng": 120.9487333,
+   "tags": {
+    "leisure": "playground",
+    "name": "馬雅探險"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w733238703",
+   "lat": 23.8672183,
+   "lng": 120.9463113,
+   "tags": {
+    "leisure": "playground",
+    "name": "金礦山探險"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w733238704",
+   "lat": 23.8684493,
+   "lng": 120.948786,
+   "tags": {
+    "leisure": "playground",
+    "name": "UFO自由落體"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w745720494",
+   "lat": 23.664961,
+   "lng": 120.7926887,
+   "tags": {
+    "leisure": "playground",
+    "name": "林間遊憩場",
+    "wheelchair": "no"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "鹿谷鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1004995597",
+   "lat": 23.8257425,
+   "lng": 120.7865187,
+   "tags": {
+    "leisure": "playground",
+    "name": "集集風車花園賽車場"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "集集鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1013976631",
+   "lat": 23.8554751,
+   "lng": 120.6969105,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1013976628,
+     "name": "名間親子生態園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "名間鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1013976632",
+   "lat": 23.8555655,
+   "lng": 120.6970677,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1013976628,
+     "name": "名間親子生態園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "名間鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1013976633",
+   "lat": 23.8551188,
+   "lng": 120.6972262,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1013976628,
+     "name": "名間親子生態園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "名間鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1016015825",
+   "lat": 23.8557539,
+   "lng": 120.6971988,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1013976628,
+     "name": "名間親子生態園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "名間鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1065422564",
+   "lat": 23.758732,
+   "lng": 120.6703829,
+   "tags": {
+    "access": "yes",
+    "indoor": "no",
+    "leisure": "playground",
+    "wheelchair": "yes"
+   },
+   "parks": [
+    {
+     "area": 3614207294,
+     "name": "竹山公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹山鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1065422582",
+   "lat": 23.7588028,
+   "lng": 120.6721258,
+   "tags": {
+    "access": "yes",
+    "indoor": "no",
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹山鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1128031333",
+   "lat": 23.7594563,
+   "lng": 120.6718767,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹山鎮"
+    }
+   ]
+  },
+  {
+   "ref": "w1469408327",
+   "lat": 23.8483945,
+   "lng": 120.9318405,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "魚池鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1524224007",
+   "lat": 23.8388316,
+   "lng": 120.6969162,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "名間鄉"
+    }
+   ]
+  }
+ ]
+}

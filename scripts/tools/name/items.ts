@@ -116,6 +116,13 @@ export const CITIES: readonly City[] = [
     allowExclude: true,
     importCmd: 'python scripts/import_osm_city.py cyq',
   },
+  {
+    code: 'nan',
+    name: '南投縣',
+    key: 'OSM',
+    allowExclude: true,
+    importCmd: 'python scripts/import_osm_city.py nan',
+  },
 ];
 
 export interface Nearby {

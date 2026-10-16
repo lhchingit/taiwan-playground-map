@@ -1,4 +1,4 @@
-"""官方公園清單補地址與面積（sources/park_lists.py，新北市、臺中市）：不改名稱、座標與屬性"""
+"""官方公園清單補地址與面積（sources/park_lists.py，新北市、臺中市、南投縣）：不改名稱、座標與屬性"""
 import unittest
 
 from sources import park_lists
@@ -103,6 +103,38 @@ class TaichungTest(unittest.TestCase):
             [txg("1", "中山公園(公一)"), txg("2", "中山公園")], city="txg")
         self.assertIsNone(places[0]["address"])
         self.assertEqual((matched, len(ambiguous)), ([], 1))
+
+
+def ntc(seqno, name, district="南投市", address="南投市嘉和二路\n(嘉和段86、101)", area="6635"):
+    return {"編號": seqno, "公園名稱": name, "所在轄區": district, "座落位置": address,
+            "面積（m2）": area, "維護管理單位": "南投市公所\n"}
+
+
+class NantouTest(unittest.TestCase):
+    run_enrich = EnrichTest.run_enrich
+
+    def test_record_cleanup(self):
+        r = park_lists.nan_record(ntc("2", "嘉和(茄苳腳)\n公園", area="8259.12"))
+        self.assertEqual((r["name"], r["district"], r["address"], r["management"], r["area_m2"]),
+                         ("嘉和(茄苳腳)公園", "南投市", "南投市嘉和二路", "南投市公所", 8259.12))
+        self.assertIsNone(park_lists.nan_record(ntc("2", "向上公園", area=""))["area_m2"])
+
+    def test_unique_match_ignores_parenthesized_alias(self):
+        places, matched, _ = self.run_enrich([pg("n1", park=(1, "嘉和公園"), district="南投市")],
+                                             [ntc("2", "嘉和(茄苳腳)\n公園")], city="nan")
+        p = places[0]
+        self.assertEqual((p["address"], p["area_ha"]), ("南投市嘉和二路", 0.66))
+        self.assertEqual(p["official_ref"][-1]["ntc_seqno"], "2")
+        self.assertIn("地址與面積來自南投縣都市計畫區公園一覽表", p["summary"])
+        self.assertEqual(len(matched), 1)
+
+    def test_same_name_other_township_not_matched(self):
+        # 南投市、草屯鎮都有中山公園：行政區不同，各自比對
+        places, matched, ambiguous = self.run_enrich(
+            [pg("n1", park=(1, "中山公園"), district="草屯鎮")],
+            [ntc("5", "中山公園"), ntc("14", "中山公園", district="草屯鎮", address="草屯鎮中山街")], city="nan")
+        self.assertEqual(places[0]["address"], "草屯鎮中山街")
+        self.assertEqual((len(matched), ambiguous), (1, []))
 
 
 if __name__ == "__main__":
