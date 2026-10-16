@@ -69,6 +69,17 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
   await expect(list.locator('li', { hasText: '新竹市' })).toContainText(`${TOTAL} 處`);
   await expect(list.locator('li', { hasText: '測試縣' })).toContainText('2 處');
 
+  // 台灣地圖：已上線的新竹市可以點，未上線的臺北市不是連結；測試縣不在地圖上，只在清單裡
+  const map = page.getByRole('group', { name: '台灣縣市地圖' });
+  await expect(map.getByRole('link', { name: `新竹市，${TOTAL} 處` })).toBeVisible();
+  await expect(map.getByRole('link', { name: /臺北市/ })).toHaveCount(0);
+  await expect(
+    map.locator('path.tw-off', { has: page.locator('title', { hasText: '臺北市（尚未上線）' }) }),
+  ).toHaveCount(1);
+  await map.getByRole('link', { name: `新竹市，${TOTAL} 處` }).click();
+  await expect(page).toHaveURL(/\/hsinchu-city$/);
+  await page.goto('/');
+
   await list.getByRole('link', { name: '測試縣' }).click();
   await expect(page).toHaveURL(/\/test-city$/);
   await expect(page.locator('a.card[data-id="test-tst-known"]')).toBeVisible();

@@ -5,6 +5,7 @@ data/
 supabase/
 tests/fixtures/
 src/types/database.ts
+src/lib/taiwan-map.json
 pnpm-lock.yaml
 .claude/
 .next/

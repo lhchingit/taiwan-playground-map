@@ -295,6 +295,10 @@ python3 scripts/check_seed_hash.py                 # 重新產生 seed，逐位�
   - 手機只固定名稱與按鈕。
   - 打開「回報修正」表單時不固定。
   - 個別場地頁不固定。
+- **首頁台灣地圖（`TaiwanMap`）：** 兩個以上縣市上線時，首頁顯示台灣地圖＋地圖下方的精簡清單。
+  - 界線是內政部「直轄市、縣市界線」簡化成的靜態 SVG（`python3 scripts/build_taiwan_map.py` → `src/lib/taiwan-map.json`，22 個縣市都已畫好，新增縣市不用重跑）。
+  - 用縣市名稱對應資料庫；已上線的可以點，未上線的灰色、不能點。
+  - 金門、連江在左上角的小框，澎湖照實際位置。
 - **localStorage：** 讀寫都要包 try/catch，私密瀏覽也要能用。
 
 ---
