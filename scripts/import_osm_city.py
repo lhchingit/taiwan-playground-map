@@ -19,9 +19,9 @@ from sources import park_lists
 from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市", "txg": "臺中市", "khh": "高雄市", "cyi": "嘉義市", "chw": "彰化縣", "pif": "屏東縣", "yun": "雲林縣", "ila": "宜蘭縣", "cyq": "嘉義縣", "nan": "南投縣", "hua": "花蓮縣", "ttt": "臺東縣"}
+CITIES = {"hsq": "新竹縣", "tyc": "桃園市", "mlc": "苗栗縣", "nwt": "新北市", "txg": "臺中市", "khh": "高雄市", "cyi": "嘉義市", "chw": "彰化縣", "pif": "屏東縣", "yun": "雲林縣", "ila": "宜蘭縣", "cyq": "嘉義縣", "nan": "南投縣", "hua": "花蓮縣", "ttt": "臺東縣", "kee": "基隆市"}
 # 名稱可疑的遊戲場先不上地圖、等人工確認的縣市（osm_playgrounds.hold_suspicious；值是 strict）；其他縣市照舊
-HOLD_SUSPICIOUS = {"chw": True, "pif": True, "yun": True, "ila": True, "cyq": True, "nan": True, "hua": True, "ttt": True}
+HOLD_SUSPICIOUS = {"chw": True, "pif": True, "yun": True, "ila": True, "cyq": True, "nan": True, "hua": True, "ttt": True, "kee": True}
 CSV_BASE = ["id", "name", "district", "lat", "lng", "size", "stay", "age_min", "age_max", "fee", "status"]
 
 
