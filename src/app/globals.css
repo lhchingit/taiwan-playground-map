@@ -12,6 +12,7 @@
   --slide-soft: #fcebd9;
   --no: #9aa59f;
   --chip: #eef2ec;
+  --map-on: #a9d5ca; /* 首頁地圖：已上線的縣市 */
   --f-display: var(--font-huninn), 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
   --f-body: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
   --r: 10px;
@@ -29,6 +30,7 @@
     --slide-soft: #3a2817;
     --no: #66746d;
     --chip: #22302b;
+    --map-on: #2f7d6d;
     color-scheme: dark;
   }
 }
@@ -44,6 +46,7 @@
   --slide-soft: #3a2817;
   --no: #66746d;
   --chip: #22302b;
+  --map-on: #2f7d6d;
   color-scheme: dark;
 }
 
@@ -681,26 +684,93 @@ a.card {
 }
 
 /* 首頁的縣市選單 */
+/* 首頁台灣地圖（src/components/home/TaiwanMap.tsx）：已上線的可以點，未上線的灰色 */
+.tw-map {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto 14px;
+}
+.tw-inset {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.tw-map path {
+  fill-rule: evenodd;
+  stroke: var(--panel);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+.tw-off {
+  fill: var(--chip);
+}
+.tw-island,
+.tw-island path {
+  stroke: none;
+}
+.tw-on path {
+  fill: var(--map-on);
+  transition: fill 0.15s;
+}
+.tw-on:hover path,
+.tw-on:focus-visible path {
+  fill: var(--teal);
+}
+.tw-on:focus-visible {
+  outline: none;
+}
+.tw-on:focus-visible path {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.tw-label {
+  font-family: var(--f-display);
+  font-size: 11px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  paint-order: stroke;
+  stroke: var(--panel);
+  stroke-width: 2.5px;
+  stroke-linejoin: round;
+}
+.tw-small {
+  font-size: 9px;
+}
+.tw-on-label .tw-label {
+  fill: var(--ink);
+  font-weight: 700;
+}
+.tw-off-label .tw-label {
+  fill: var(--muted);
+  pointer-events: none;
+}
+
+/* 地圖下方的精簡縣市清單 */
 .city-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 .city-list li {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  gap: 8px;
-  padding: 10px 12px;
+  gap: 4px;
+  padding: 4px 10px;
   border: 1px solid var(--line);
-  border-radius: var(--r);
+  border-radius: 999px;
 }
 .city-list a {
   color: var(--teal);
   font-family: var(--f-display);
-  font-size: 18px;
+  font-size: 15px;
+}
+.city-list .note {
+  font-size: 12px;
 }
 .nearest {
   margin: 0 0 10px;
