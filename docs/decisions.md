@@ -6,6 +6,7 @@
 
 - **理由：** 公開服務需要 SEO，家長常搜尋「XX公園 溜滑梯」，每個場地都要有可被索引的獨立頁面；PWA 可以加到主畫面，暫時不用做原生 App。
 - **重新檢討：** 需要推播、背景定位，或 App Store 曝光時。
+- **PWA 進度（2026-10-17）：** 已加上 manifest（`src/app/manifest.ts`）與主畫面圖示（`pnpm icons` 產生，淺底綠圖釘，短名稱「放電地圖」）。還沒有 service worker，沒有離線功能。
 
 ## D2 地圖：MapLibre GL + OpenFreeMap 向量圖磚
 
