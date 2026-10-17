@@ -513,6 +513,12 @@ select {
   overflow: auto;
   z-index: 5;
 }
+/* 桌機：面板在地圖右上，讓出右上角的登入按鈕（手機是底部抽屜，不用讓） */
+@media (min-width: 821px) {
+  .app .detail {
+    top: 60px;
+  }
+}
 .dhead {
   padding: 16px;
   border-bottom: 1px solid var(--line);
@@ -878,9 +884,13 @@ a.card {
   justify-content: space-between;
   gap: 8px;
 }
-/* 首頁沒有「回上一頁」的連結，登入按鈕靠右 */
-.home-nav {
-  justify-content: flex-end;
+/* 登入按鈕固定在視窗右上角（每一頁都一樣，像 Google 地圖；src/components/auth/AuthCorner.tsx） */
+.auth-corner {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  z-index: 30;
+  display: flex; /* 按鈕的 padding 算進高度，不會超出上緣 */
 }
 .auth-slot {
   display: inline-block;
@@ -890,6 +900,8 @@ a.card {
 .auth-btn {
   text-decoration: none;
   color: inherit;
+  background: var(--panel);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
   font-size: 13px;
   max-width: 14em;
   overflow: hidden;
@@ -903,10 +915,6 @@ a.card {
 }
 .auth-menu summary::-webkit-details-marker {
   display: none;
-}
-/* 頁首有 overflow: hidden（背景圖案），選單打開時要能超出 */
-.head:has(.auth-menu[open]) {
-  overflow: visible;
 }
 .auth-pop {
   position: absolute;

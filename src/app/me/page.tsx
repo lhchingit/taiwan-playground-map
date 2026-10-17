@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
-import { AuthButton } from '@/components/auth/AuthButton';
 import { KIND_LABEL, statusText, suggestionSummary } from '@/lib/auth/labels';
 import { currentUser } from '@/lib/auth/session';
 import { getAttributeCatalog, getCityBounds } from '@/lib/data';
@@ -20,7 +19,6 @@ export default function MePage() {
     <main className="place-page">
       <nav className="place-nav" aria-label="導覽">
         <Link href="/">← 全台放電地圖</Link>
-        <AuthButton />
       </nav>
       <Suspense fallback={<p className="note">載入中…</p>}>
         <MeContent />

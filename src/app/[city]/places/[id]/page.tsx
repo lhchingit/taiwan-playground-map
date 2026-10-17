@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { AuthButton } from '@/components/auth/AuthButton';
 import { PlaceDetailView } from '@/components/place/PlaceDetailView';
 import {
   getAttributeCatalog,
@@ -62,7 +61,6 @@ export default async function PlacePage({ params }: Props) {
     <main className="place-page">
       <nav className="place-nav" aria-label="導覽">
         <Link href={`/${city.slug}`}>← 全台放電地圖：回到{city.name}地圖</Link>
-        <AuthButton />
       </nav>
       <article className="place-article">
         <PlaceDetailView detail={detail} catalog={catalog} headingLevel={1} />

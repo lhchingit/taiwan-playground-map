@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
-import { AuthButton } from '@/components/auth/AuthButton';
 import { currentUser } from '@/lib/auth/session';
 import { getCityBounds, getNamingThreshold } from '@/lib/data';
 import { supabaseAuth } from '@/lib/supabase/auth';
@@ -24,7 +23,6 @@ export default function NamingAdminPage() {
     <main className="place-page admin-page">
       <nav className="place-nav" aria-label="導覽">
         <Link href="/admin">← 審核後台</Link>
-        <AuthButton />
       </nav>
       <Suspense fallback={<p className="note">載入中…</p>}>
         <NamingAdmin />

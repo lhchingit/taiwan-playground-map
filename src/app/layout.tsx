@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Huninn } from 'next/font/google';
-import type { ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
+import { AuthCorner } from '@/components/auth/AuthCorner';
 import { SHORT_NAME, SITE_DESCRIPTION, SITE_NAME, siteUrl } from '@/lib/site';
 import './globals.css';
 
@@ -32,7 +33,13 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-Hant-TW" className={huninn.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* 用到網址（usePathname），動態頁面要包在 Suspense 裡 */}
+        <Suspense fallback={null}>
+          <AuthCorner />
+        </Suspense>
+      </body>
     </html>
   );
 }

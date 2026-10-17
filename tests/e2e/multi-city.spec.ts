@@ -70,7 +70,7 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('全台放電地圖');
   // 首頁也有登入按鈕（登入後回到首頁）
   await expect(
-    page.getByRole('navigation', { name: '導覽' }).getByRole('link', { name: '登入', exact: true }),
+    page.getByRole('navigation', { name: '帳號' }).getByRole('link', { name: '登入', exact: true }),
   ).toHaveAttribute('href', '/login?next=%2F');
   const list = page.locator('.city-list');
   await expect(list.getByRole('link')).toHaveText(['新竹市', '測試縣']);
@@ -103,7 +103,7 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
 
 test('從首頁登入，回到首頁顯示暱稱與選單（我的貢獻、登出）', async ({ page }) => {
   await page.goto('/');
-  const nav = page.getByRole('navigation', { name: '導覽' });
+  const nav = page.getByRole('navigation', { name: '帳號' });
   await nav.getByRole('link', { name: '登入', exact: true }).click();
   await expect(page).toHaveURL(/\/login\?next=%2F$/);
   await loginWithEmail(page, email);

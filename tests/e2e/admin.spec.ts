@@ -121,7 +121,7 @@ test('回報洗腳池 → 審核員核准 → 場地頁顯示「有」與使用�
   const mod = await person(browser, 'moderator');
   await mod.page.reload();
   await mod.page
-    .getByRole('navigation', { name: '導覽' })
+    .getByRole('navigation', { name: '帳號' })
     .getByText(/^家長 \d{4}$/)
     .click();
   await mod.page.getByRole('link', { name: '審核後台' }).click();
@@ -217,7 +217,7 @@ test('會員打開審核後台會被導回首頁；頁首沒有審核後台的�
   await expect(member.page).toHaveURL(/\/hsinchu-city$/);
   await member.page.goto(PLACE);
   await member.page
-    .getByRole('navigation', { name: '導覽' })
+    .getByRole('navigation', { name: '帳號' })
     .getByText(/^家長 \d{4}$/)
     .click();
   await expect(member.page.getByRole('link', { name: '我的貢獻' })).toBeVisible();
@@ -281,7 +281,7 @@ test('管理員：用 Email 搜尋、改成審核員並指派新竹市、停權�
   // 對方的頁首出現審核後台
   await target.page.goto(PLACE);
   await target.page
-    .getByRole('navigation', { name: '導覽' })
+    .getByRole('navigation', { name: '帳號' })
     .getByText(/^家長 \d{4}$/)
     .click();
   await expect(target.page.getByRole('link', { name: '審核後台' })).toBeVisible();

@@ -3,7 +3,6 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { AuthButton } from '@/components/auth/AuthButton';
 import { LoginDialog } from '@/components/auth/LoginDialog';
 import {
   currentPath,
@@ -253,7 +252,6 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
         <header className="head">
           <div className="head-top">
             <h1>全台放電地圖</h1>
-            <AuthButton />
           </div>
           <p className="sub">
             {city.name}親子遊樂場與公園．資料 {places.length} 處

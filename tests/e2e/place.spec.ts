@@ -301,3 +301,30 @@ test.describe('手機', () => {
     expect(await noHScroll(page)).toBe(true);
   });
 });
+
+test('登入按鈕在每一頁都固定在視窗右上角（同樣的位置，捲動也不動）', async ({ page }) => {
+  const spots: { url: string; right: number; top: number }[] = [];
+  for (const url of ['/hsinchu-city', LUGUANG, '/hsinchu-city/naming', '/terms']) {
+    await page.goto(url);
+    const btn = page.getByRole('navigation', { name: '帳號' }).getByRole('link', { name: '登入' });
+    await expect(btn).toBeVisible();
+    const box = (await btn.boundingBox())!;
+    const width = page.viewportSize()!.width;
+    spots.push({ url, right: Math.round(width - box.x - box.width), top: Math.round(box.y) });
+  }
+  for (const s of spots) {
+    expect(Math.abs(s.right - spots[0]!.right), s.url).toBeLessThanOrEqual(1);
+    expect(Math.abs(s.top - spots[0]!.top), s.url).toBeLessThanOrEqual(1);
+  }
+  expect(spots[0]!.right).toBeLessThanOrEqual(16);
+  expect(spots[0]!.top).toBeLessThanOrEqual(16);
+
+  // 捲到下面還在原位
+  await page.goto(LUGUANG);
+  await page.mouse.wheel(0, 2000);
+  const after = (await page
+    .getByRole('navigation', { name: '帳號' })
+    .getByRole('link', { name: '登入' })
+    .boundingBox())!;
+  expect(Math.round(after.y)).toBe(spots[1]!.top);
+});

@@ -35,7 +35,7 @@ const userId = async (email: string) =>
 
 test('Email 登入連結：從頁首登入、回到原頁顯示暱稱、登出', async ({ page }) => {
   await page.goto(PLACE);
-  const nav = page.getByRole('navigation', { name: '導覽' });
+  const nav = page.getByRole('navigation', { name: '帳號' });
   await nav.getByRole('link', { name: '登入', exact: true }).click();
   await expect(page).toHaveURL(/\/login\?next=/);
   // Google 在本機沒有設定金鑰
@@ -142,7 +142,7 @@ test('我的貢獻：建議的狀態與原因、改暱稱、刪除帳號', async
   await page.getByLabel('暱稱（其他人只看得到暱稱）').fill('小明爸爸');
   await page.getByRole('button', { name: '儲存' }).click();
   await expect(page.getByText('已更新暱稱。')).toBeVisible();
-  await expect(page.getByRole('navigation', { name: '導覽' }).getByText('小明爸爸')).toBeVisible();
+  await expect(page.getByRole('navigation', { name: '帳號' }).getByText('小明爸爸')).toBeVisible();
 
   // 刪除帳號：要輸入「刪除」確認
   await page.getByLabel('請輸入「刪除」確認').fill('不要');

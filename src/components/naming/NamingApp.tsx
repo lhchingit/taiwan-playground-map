@@ -10,7 +10,6 @@ import {
   type MyNamingVote,
   type NamingVoteResult,
 } from '@/app/[city]/naming/actions';
-import { AuthButton } from '@/components/auth/AuthButton';
 import { LoginDialog } from '@/components/auth/LoginDialog';
 import { currentPath, refreshSession, useSession } from '@/components/auth/useSession';
 import type { CityBounds } from '@/lib/cities';
@@ -127,7 +126,6 @@ export function NamingApp({
         <header className="head">
           <div className="head-top">
             <h1>幫忙命名</h1>
-            <AuthButton />
           </div>
           <p className="sub">
             {city.name}還有 {items.length} 處遊戲場沒有名稱．
