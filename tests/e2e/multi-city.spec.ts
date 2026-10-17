@@ -99,6 +99,11 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
 
   const res = await page.goto('/test-city/places/test-tst-known');
   expect(res?.status()).toBe(200);
+
+  // sitemap 也跟著更新（請求時產生，不用重新部署）
+  const xml = await (await request.get('/sitemap.xml')).text();
+  expect(xml).toContain('/test-city</loc>');
+  expect(xml).toContain('/test-city/places/test-tst-known</loc>');
 });
 
 test('從首頁登入，回到首頁顯示暱稱與選單（我的貢獻、登出）', async ({ page }) => {
@@ -125,4 +130,5 @@ test('測試縣下線並清快取後：場地頁 404、/ 恢復導向新竹市',
   expect((await page.goto('/test-city/places/test-tst-known'))?.status()).toBe(404);
   await page.goto('/');
   await expect(page).toHaveURL(/\/hsinchu-city$/);
+  expect(await (await request.get('/sitemap.xml')).text()).not.toContain('/test-city');
 });
