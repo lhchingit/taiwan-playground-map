@@ -6,7 +6,7 @@
 import { mkdirSync, readFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
 
-const PAPER = '#f5f7f2';
+const PAPER = '#fff8ec';
 const svg = readFileSync('src/app/icon.svg', 'utf8');
 const inner = svg.replace(/^<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '');
 

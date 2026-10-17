@@ -9,7 +9,9 @@ import {
   type ParkingTypeFilter,
 } from '@/lib/filter';
 import { activeFilterCount, PARKING_TYPE_LABEL, SIZE_LABEL, STAY_LABEL } from '@/lib/format';
+import { AMENITY_TONE, groupTone } from '@/lib/play-groups';
 import type { AttributeCatalog } from '@/lib/places';
+import { GroupIcon } from '@/components/ui/GroupIcon';
 
 interface Props {
   filters: Filters;
@@ -145,8 +147,11 @@ export function FilterPanel({ filters: f, onChange, catalog }: Props) {
           <h3>遊樂設施（全部都要有）</h3>
           <div className="pgroups">
             {catalog.playGroups.map((g) => (
-              <div className="pg" key={g.name}>
-                <span>{g.name}</span>
+              <div className="pg" key={g.name} data-tone={groupTone(g.name)}>
+                <span className="pg-name">
+                  <GroupIcon tone={groupTone(g.name) ?? 'grass'} />
+                  {g.name}
+                </span>
                 <Chips
                   options={g.keys}
                   label={label}
@@ -158,8 +163,11 @@ export function FilterPanel({ filters: f, onChange, catalog }: Props) {
           </div>
         </div>
 
-        <div className="fgroup">
-          <h3>生活機能（全部都要有）</h3>
+        <div className="fgroup" data-tone={AMENITY_TONE}>
+          <h3>
+            <GroupIcon tone={AMENITY_TONE} />
+            生活機能（全部都要有）
+          </h3>
           <Chips
             options={catalog.amenity}
             label={label}

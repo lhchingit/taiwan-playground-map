@@ -32,6 +32,7 @@ import { FilterPanel } from './FilterPanel';
 import { OriginControls } from './OriginControls';
 import { PANEL_TITLE_ID, PlacePanel } from './PlacePanel';
 import { ResultList } from './ResultList';
+import { PlaygroundArt } from '@/components/home/PlaygroundArt';
 
 const PlaceMap = dynamic(() => import('./PlaceMap'), {
   ssr: false,
@@ -252,6 +253,7 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
         <header className="head">
           <div className="head-top">
             <h1>全台放電地圖</h1>
+            <PlaygroundArt className="pa-mini" />
           </div>
           <p className="sub">
             {city.name}親子遊樂場與公園．資料 {places.length} 處

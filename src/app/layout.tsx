@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 // 手機瀏覽器網址列的顏色：淺色用 --teal，深色用深色模式的 --paper
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#1c7a69' },
-    { media: '(prefers-color-scheme: dark)', color: '#131a17' },
+    { media: '(prefers-color-scheme: light)', color: '#1f7a52' },
+    { media: '(prefers-color-scheme: dark)', color: '#1b1a17' },
   ],
 };
 
