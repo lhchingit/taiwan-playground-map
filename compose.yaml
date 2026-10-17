@@ -27,6 +27,8 @@ services:
       # 回報修正的機器人驗證（本機是 Cloudflare 的測試金鑰；沒有設定時網站拒絕回報）
       TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:-}
       TURNSTILE_SECRET_KEY: ${TURNSTILE_SECRET_KEY:-}
+      # 選填：Google 官方登入按鈕（decisions D28），沒設定時經過 Supabase 轉址
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
     extra_hosts:
       - host.docker.internal:host-gateway
     ports:

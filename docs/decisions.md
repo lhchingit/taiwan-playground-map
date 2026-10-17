@@ -344,3 +344,13 @@
 - **存什麼：** `saved_filters.query` 是分享網址的 query string（`filtersToQuery()`），讀回來用 `queryToFilters()` 解析，過期的參數自動丟掉。出發點本來就不在篩選條件裡，不會存任何位置。
 - **權限在資料庫：** RLS 只允許本人讀、新增、改名稱、刪除；匿名完全不能存取；欄位權限只開放新增 `name`、`query` 與更新 `name`。上限由 BEFORE INSERT trigger 把關（同一個人上 advisory lock，同時送出也不會超過）。刪除帳號時 ON DELETE CASCADE 一起刪除。
 - **停權的人也可以存：** 這是個人設定、不公開，不需要先同意服務條款。
+
+## D28 Google 登入改用 Google Identity Services（2026-10-17 決定）
+
+- **問題：** 原本的 Google 登入（`signInWithOAuth`）是網站 → Supabase → Google，Google 收到的回呼網址是 Supabase 的網域，同意畫面寫「繼續使用 <專案代碼>.supabase.co」，家長看不懂、也可能不放心。
+- **做法：** 設定了 `GOOGLE_CLIENT_ID` 時，網站自己顯示 Google 官方的登入按鈕（Google Identity Services），Google 直接把 ID token 交給網站，伺服器用 `signInWithIdToken` 換成 Supabase 的 session（一樣是 httpOnly cookie）。Google 的畫面顯示網站自己的網域。
+- **安全：** 每次顯示按鈕產生新的 nonce，雜湊交給 Google、原始值交給 Supabase，Supabase 驗證簽章、audience（後台 Google provider 的 Client ID）與 nonce，token 不能被拿去重放。token 不記錄。
+- **沒設定時：** 維持經過 Supabase 轉址的流程（本機、CI、Docker 預設），兩種流程登入後是同一個帳號（同一個 Google provider）。
+- **其他選擇：** Supabase 自訂網域（`auth.<網域>`，需要 Pro 方案加購）也能解決，但要付費、要先有網域；這個做法免費，換正式網域後一樣適用。
+- **設定：** Google Cloud 的 OAuth 用戶端要加「已授權的 JavaScript 來源」（網站網址），見 `docs/operations.md`。
+

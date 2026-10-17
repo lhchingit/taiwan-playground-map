@@ -299,6 +299,7 @@ export function NamingApp({
         next={login ? currentPath() : `/${city.slug}/naming`}
         google={session?.providers.google ?? false}
         email={session?.providers.email ?? true}
+        googleClientId={session?.providers.googleClientId ?? null}
       />
     </main>
   );

@@ -1343,6 +1343,16 @@ a.card {
   width: 100%;
   padding: 10px;
 }
+/* Google 官方登入按鈕（decisions D28）：先留好高度，載入時版面不跳動 */
+.google-signin-btn {
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+}
+.google-signin .note {
+  margin: 6px 0 0;
+  text-align: center;
+}
 .login-or {
   text-align: center;
   color: var(--muted);

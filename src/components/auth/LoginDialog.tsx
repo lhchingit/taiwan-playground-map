@@ -9,6 +9,7 @@ export function LoginDialog(props: {
   next: string;
   google: boolean;
   email: boolean;
+  googleClientId?: string | null;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -35,7 +36,14 @@ export function LoginDialog(props: {
             ✕
           </button>
         </div>
-        {props.open && <LoginPanel next={props.next} google={props.google} email={props.email} />}
+        {props.open && (
+          <LoginPanel
+            next={props.next}
+            google={props.google}
+            email={props.email}
+            googleClientId={props.googleClientId}
+          />
+        )}
       </div>
     </dialog>
   );

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { LoginPanel } from '@/components/auth/LoginPanel';
+import { googleClientId } from '@/lib/auth/google';
 import { safeNext } from '@/lib/auth/next-path';
 import { authProviders } from '@/lib/auth/providers';
 
@@ -46,7 +47,7 @@ async function LoginContent({ searchParams }: Props) {
           登入沒有成功，請再試一次。如果是打開 Email 裡的連結，連結可能已經用過或超過 1 小時。
         </p>
       )}
-      <LoginPanel next={next} google={google} email={email} />
+      <LoginPanel next={next} google={google} email={email} googleClientId={googleClientId()} />
     </>
   );
 }

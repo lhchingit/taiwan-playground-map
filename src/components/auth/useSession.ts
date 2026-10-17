@@ -5,7 +5,8 @@ import { useEffect, useState, useSyncExternalStore } from 'react';
 
 export interface SessionInfo {
   user: { name: string; role: string; banned: boolean; termsAccepted: boolean } | null;
-  providers: { google: boolean; email: boolean };
+  /** googleClientId：有值時用 Google 官方登入按鈕（decisions D28） */
+  providers: { google: boolean; email: boolean; googleClientId?: string | null };
   turnstileSiteKey: string | null;
 }
 
