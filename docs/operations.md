@@ -237,10 +237,10 @@ OSM 匯入的遊戲場沒有名稱、也不在有名稱的公園裡時，不會�
 
 ## 會員命名的結果寫回 repo（decisions D23）
 
-會員在網站上 3 人一致（或審核員直接決定）時，場地已經在資料庫建立、上了地圖。定期把結果寫回 repo，讓檔案仍然是資料來源：
+會員在網站上達到門檻人數一致（預設 10 人，管理員在 `/admin/naming` 設定；或審核員直接決定）時，場地已經在資料庫建立、上了地圖。定期把結果寫回 repo，讓檔案仍然是資料來源：
 
 1. 匯出：`pnpm naming:export`（或 `--city nwt`）。連正式資料庫時設 `DATABASE_URL` 並加 `--allow-remote`。
-   結果寫進 `data/raw/<縣市>/manual-names.tsv`，確認者是「會員 3 人一致」或「審核員」。已經有的列不會被覆蓋。
+   結果寫進 `data/raw/<縣市>/manual-names.tsv`，確認者是「會員 N 人一致」或「審核員」。已經有的列不會被覆蓋。
 2. 重新匯入（指令會印出來），例如 `python scripts/import_osm_city.py nwt`。
 3. `pnpm seed --city <縣市>`：場地 id、名稱跟資料庫一致，地圖不會變；待命名清單少掉這些。
 4. 提交 `manual-names.tsv` 與重新產生的檔案，開 PR。

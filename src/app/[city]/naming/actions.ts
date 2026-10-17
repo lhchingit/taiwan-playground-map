@@ -1,7 +1,7 @@
 'use server';
 // 會員命名（decisions D23）：以登入身分呼叫資料庫的 vote_naming()，權限與計票都在資料庫。
 // 不使用 service role key；不用 Turnstile（一筆一筆驗證太麻煩），靠登入與每天上限防濫用。
-// 3 人一致時資料庫立刻建立場地：清除那個縣市的快取，地圖下一個請求就有這處場地。
+// 達到門檻（naming_threshold()）時資料庫立刻建立場地：清除那個縣市的快取，地圖下一個請求就有這處場地。
 import { updateTag } from 'next/cache';
 import { checkNamingVote, namingErrorMessage, type NamingAction } from '@/lib/naming';
 import { supabaseAuth } from '@/lib/supabase/auth';
@@ -62,18 +62,22 @@ export async function voteNaming(input: {
     p_basis: input.basis,
   });
   if (error) return fail(namingErrorMessage(error.message));
+  const need = (await supabase.rpc('naming_threshold')).data ?? '門檻';
 
   updateTag(`naming:${input.city}`);
   if (data === 'named') {
     updateTag(`places:${input.city}`);
     updateTag(`city:${input.city}`);
     updateTag('places');
-    return { status: 'named', message: '已經有 3 人提出相同名稱，這處已加到地圖上。謝謝！' };
+    return { status: 'named', message: `已經有 ${need} 人提出相同名稱，這處已加到地圖上。謝謝！` };
   }
   if (data === 'excluded') {
-    return { status: 'excluded', message: '已經有 3 人建議排除，這處不會上地圖。謝謝！' };
+    return { status: 'excluded', message: `已經有 ${need} 人建議排除，這處不會上地圖。謝謝！` };
   }
-  return { status: 'voted', message: '已記錄。有 3 人提出相同名稱就會加到地圖上。' };
+  return {
+    status: 'voted',
+    message: `已記錄。有 ${need} 人提出相同名稱就會加到地圖上；未達門檻的會由審核員確認。`,
+  };
 }
 
 /** 自己在這個縣市投過的票（只有自己看得到，RLS 把關） */

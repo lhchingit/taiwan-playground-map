@@ -128,6 +128,7 @@ describe('清快取 API', () => {
   it('依縣市決定要清的 tag；代碼不對時拒絕', () => {
     expect(revalidationTags('hsq')).toEqual(['cities', 'places', 'places:hsq', 'city:hsq']);
     expect(revalidationTags(undefined)).toContain('attribute_defs');
+    expect(revalidationTags(undefined)).toContain('naming-settings');
     expect(revalidationTags('../x')).toBeNull();
     expect(revalidationTags(42)).toBeNull();
   });

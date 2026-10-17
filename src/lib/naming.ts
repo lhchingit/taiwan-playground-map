@@ -9,8 +9,6 @@ export const NAMING_EXCLUDE_REASONS = [
   '私人社區',
   '在學校或機關內',
 ] as const;
-/** 幾位不同會員提出相同名稱（或都建議排除）就自動通過 */
-export const NAMING_AGREE = 3;
 export const NAMING_NAME_MAX = 40;
 
 export type NamingAction = 'name' | 'exclude';

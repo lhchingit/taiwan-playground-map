@@ -1,6 +1,6 @@
 'use client';
 // 幫忙命名（decisions D23）：選一處 → 看地圖與附近的 OSM 名稱 → 填名稱與依據（或建議排除）→ 送出。
-// 只顯示每一處的參與人數，不顯示別人提的名稱（避免跟著別人填）。3 人一致時資料庫立刻建立場地。
+// 只顯示每一處的參與人數，不顯示別人提的名稱（避免跟著別人填）。達到門檻（管理員設定）時資料庫立刻建立場地。
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useEffect, useState, useTransition } from 'react';
@@ -16,7 +16,6 @@ import { currentPath, refreshSession, useSession } from '@/components/auth/useSe
 import type { CityBounds } from '@/lib/cities';
 import type { NamingCandidateView } from '@/lib/data';
 import {
-  NAMING_AGREE,
   NAMING_BASES,
   NAMING_EXCLUDE_REASONS,
   NAMING_NAME_MAX,
@@ -35,9 +34,12 @@ const osmUrl = (ref: string) =>
 export function NamingApp({
   city,
   candidates,
+  threshold,
 }: {
   city: CityBounds;
   candidates: NamingCandidateView[];
+  /** 幾位不同會員一致就自動通過 */
+  threshold: number;
 }) {
   const session = useSession();
   const [items, setItems] = useState(candidates);
@@ -134,7 +136,7 @@ export function NamingApp({
           <p className="note naming-rule" role="note">
             請依地圖上看得到的名稱、現場告示或政府公告填寫，
             <strong>不可以用 Google 地圖查名稱</strong>
-            ；查不到就換下一處。{NAMING_AGREE} 位會員提出相同名稱，就會加到地圖上。
+            ；查不到就換下一處。{threshold} 位會員提出相同名稱，就會加到地圖上。
           </p>
         </header>
 

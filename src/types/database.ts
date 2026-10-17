@@ -119,14 +119,14 @@ isOneToOne: false
                   ]
                 },"naming_candidates": {
                   Row: {
-                    "city": string,"created_at": string,"district": string | null,"geom": unknown,"id": string,"nearby": NonNullable<Json>,"osm_ref": string,"resolved_at": string | null,"resolved_basis": string | null,"resolved_by": string | null,"resolved_name": string | null,"resolved_user": string | null,"status": string
+                    "city": string,"created_at": string,"district": string | null,"geom": unknown,"id": string,"nearby": NonNullable<Json>,"osm_ref": string,"resolved_at": string | null,"resolved_basis": string | null,"resolved_by": string | null,"resolved_name": string | null,"resolved_user": string | null,"resolved_votes": number | null,"status": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "city": string,"created_at"?: string,"district"?: string | null,"geom": unknown,"id": string,"nearby"?: NonNullable<Json>,"osm_ref": string,"resolved_at"?: string | null,"resolved_basis"?: string | null,"resolved_by"?: string | null,"resolved_name"?: string | null,"resolved_user"?: string | null,"status"?: string
+                    "city": string,"created_at"?: string,"district"?: string | null,"geom": unknown,"id": string,"nearby"?: NonNullable<Json>,"osm_ref": string,"resolved_at"?: string | null,"resolved_basis"?: string | null,"resolved_by"?: string | null,"resolved_name"?: string | null,"resolved_user"?: string | null,"resolved_votes"?: number | null,"status"?: string
                   }
                   Update: {
-                    "city"?: string,"created_at"?: string,"district"?: string | null,"geom"?: unknown,"id"?: string,"nearby"?: NonNullable<Json>,"osm_ref"?: string,"resolved_at"?: string | null,"resolved_basis"?: string | null,"resolved_by"?: string | null,"resolved_name"?: string | null,"resolved_user"?: string | null,"status"?: string
+                    "city"?: string,"created_at"?: string,"district"?: string | null,"geom"?: unknown,"id"?: string,"nearby"?: NonNullable<Json>,"osm_ref"?: string,"resolved_at"?: string | null,"resolved_basis"?: string | null,"resolved_by"?: string | null,"resolved_name"?: string | null,"resolved_user"?: string | null,"resolved_votes"?: number | null,"status"?: string
                   }
                   Relationships: [
                     {
@@ -369,6 +369,26 @@ isOneToOne: false
                   Relationships: [
                     
                   ]
+                },"site_settings": {
+                  Row: {
+                    "id": boolean,"naming_threshold": number,"updated_at": string,"updated_by": string | null
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "id"?: boolean,"naming_threshold"?: number,"updated_at"?: string,"updated_by"?: string | null
+                  }
+                  Update: {
+                    "id"?: boolean,"naming_threshold"?: number,"updated_at"?: string,"updated_by"?: string | null
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "site_settings_updated_by_fkey"
+      columns: ["updated_by"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"sources": {
                   Row: {
                     "id": string,"kind": string,"label": string,"url": string | null
@@ -582,6 +602,9 @@ isOneToOne: false
 "admin_set_cities":
 { Args: { "p_cities": (string)[],"p_user": string }; Returns: undefined
                            },
+"admin_set_naming_threshold":
+{ Args: { "p_threshold": number }; Returns: undefined
+                           },
 "admin_set_role":
 { Args: { "p_role": string,"p_user": string }; Returns: undefined
                            },
@@ -592,7 +615,7 @@ isOneToOne: false
 { Args: Record<PropertyKey, never>; Returns: string
                            },
 "apply_naming":
-{ Args: { "p_action": string,"p_basis": string,"p_by": string,"p_candidate": string,"p_name": string,"p_user": string }; Returns: undefined
+{ Args: { "p_action": string,"p_basis": string,"p_by": string,"p_candidate": string,"p_name": string,"p_user": string,"p_votes"?: number }; Returns: undefined
                            },
 "can_moderate":
 { Args: { "p_city": string }; Returns: boolean
@@ -730,6 +753,9 @@ isOneToOne: false
                            },
 "naming_key":
 { Args: { "p_name": string }; Returns: string
+                           },
+"naming_threshold":
+{ Args: Record<PropertyKey, never>; Returns: number
                            },
 "naming_vote_count":
 { Args: { "p_candidate": string }; Returns: number

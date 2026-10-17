@@ -56,6 +56,18 @@ export interface NamingCandidateView {
   votes: number;
 }
 
+/** 會員命名的自動通過門檻（幾位不同會員一致；管理員在 /admin/naming 設定，decisions D23） */
+export async function getNamingThreshold(): Promise<number> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag('naming-settings');
+  const { data, error } = await supabaseServer().rpc('naming_threshold');
+  if (error || typeof data !== 'number') {
+    throw new Error(`讀取命名門檻失敗：${error?.message ?? '沒有資料'}`);
+  }
+  return data;
+}
+
 export async function getNamingCandidates(code: string): Promise<NamingCandidateView[]> {
   'use cache';
   cacheLife('hours');
