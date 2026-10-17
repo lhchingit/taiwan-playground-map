@@ -20,6 +20,7 @@ import {
   NAMING_NAME_MAX,
   type NamingAction,
 } from '@/lib/naming';
+import { PlaygroundArt } from '@/components/home/PlaygroundArt';
 
 const NamingMap = dynamic(() => import('./NamingMap'), {
   ssr: false,
@@ -126,6 +127,7 @@ export function NamingApp({
         <header className="head">
           <div className="head-top">
             <h1>幫忙命名</h1>
+            <PlaygroundArt className="pa-mini" />
           </div>
           <p className="sub">
             {city.name}還有 {items.length} 處遊戲場沒有名稱．

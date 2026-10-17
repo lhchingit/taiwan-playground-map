@@ -11,6 +11,7 @@ import {
   stayText,
   TRI_LABEL,
 } from '@/lib/format';
+import { keyTones } from '@/lib/play-groups';
 import type { AttributeCatalog, CityPlace } from '@/lib/places';
 
 /** 清單卡片的狀態標籤（開放中不標示） */
@@ -44,6 +45,7 @@ export function ResultList({
 }: Props) {
   const selectedKeys = [...filters.play, ...filters.amen];
   const showParking = parkingFilterOn(filters);
+  const tones = keyTones(catalog);
 
   return (
     <>
@@ -98,7 +100,12 @@ export function ResultList({
                     </span>
                   )}
                   {cardTags(p.attrs, selectedKeys, catalog.order).map(({ key, v }) => (
-                    <span key={key} className={`tag ${v}`} title={TRI_LABEL[v]}>
+                    <span
+                      key={key}
+                      className={`tag ${v}`}
+                      title={TRI_LABEL[v]}
+                      data-tone={tones[key]}
+                    >
                       {v === 'u' ? '?' : ''}
                       {catalog.labels[key] ?? key}
                     </span>

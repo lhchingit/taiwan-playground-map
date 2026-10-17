@@ -1,53 +1,134 @@
-/* 沿用原型 docs/prototype/playmap.html 的 tokens 與版面：
-   桌機左欄篩選＋清單、右側地圖；820px 以下改成上方地圖、下方清單。 */
+/* 視覺風格「陽光遊樂場」（decisions D24）：顏色與字體以這裡的 tokens 為準（原型只當互動規格）。
+   版面：桌機左欄篩選＋清單、右側地圖；820px 以下改成上方地圖、下方清單。
+   文字顏色都要過 WCAG AA（4.5:1）：亮的草地綠、滑梯橘只用在裝飾，文字與按鈕用深一階的顏色。 */
 :root {
-  --paper: #f5f7f2;
+  --paper: #fff8ec; /* 奶油黃 */
   --panel: #ffffff;
-  --ink: #1d2a25;
-  --muted: #5e6e67;
-  --line: #dce3dc;
-  --teal: #1c7a69;
-  --teal-soft: #ddf0ea;
-  --slide: #e27a1f;
-  --slide-soft: #fcebd9;
-  --no: #9aa59f;
-  --chip: #eef2ec;
-  --map-on: #a9d5ca; /* 首頁地圖：已上線的縣市 */
+  --ink: #2b2a33;
+  --muted: #6b6577;
+  --line: #efe4d2;
+  --teal: #1f7a52; /* 主色：草地綠（文字與按鈕用的深綠；名稱沿用舊的 --teal） */
+  --teal-soft: #e3f4ea;
+  --grass: #2e9e6b; /* 亮草地綠：插圖、地圖等裝飾 */
+  --slide: #b84e0c; /* 深橘：強調、錯誤訊息（文字用） */
+  --slide-soft: #ffe8d6;
+  --orange: #ff8a3d; /* 滑梯橘：裝飾 */
+  --sky: #4ba8e8;
+  --sky-soft: #ddf1ff;
+  --sun: #ffc93c;
+  --sun-soft: #fff1c7;
+  --grape: #8b6cf0;
+  --grape-soft: #ede6ff;
+  --sky-ink: #1f6fae; /* 類別圖示與框線用的深色（白底 4.5:1 以上） */
+  --sun-ink: #8a5d00;
+  --grape-ink: #6a4fd1;
+  --leaf-soft: #e7efea;
+  --cloud: #ffffff;
+  --no: #a79f92;
+  --chip: #fbf1e1;
+  --map-on: #a8dcbc; /* 首頁地圖：已上線的縣市 */
+  --shadow: 0 6px 18px rgb(120 80 20 / 0.1);
   --f-display: var(--font-huninn), 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
   --f-body: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
-  --r: 10px;
+  --r: 14px;
+  --r-lg: 18px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --paper: #131a17;
-    --panel: #1a2320;
-    --ink: #e6eee9;
-    --muted: #9db0a7;
-    --line: #2c3934;
-    --teal: #4fc2ab;
-    --teal-soft: #183a33;
-    --slide: #f29a4a;
-    --slide-soft: #3a2817;
-    --no: #66746d;
-    --chip: #22302b;
-    --map-on: #2f7d6d;
+    --paper: #1b1a17;
+    --panel: #24221e;
+    --ink: #f3efe6;
+    --muted: #b7af9f;
+    --line: #3a362f;
+    --teal: #5bd39a;
+    --teal-soft: #1f3a2c;
+    --grass: #3fb67f;
+    --slide: #ffa061;
+    --slide-soft: #3d2717;
+    --orange: #ff9a55;
+    --sky: #6ec1ff;
+    --sky-soft: #1d3242;
+    --sun: #ffd565;
+    --sun-soft: #3b3218;
+    --grape: #b9a6ff;
+    --grape-soft: #2e2840;
+    --sky-ink: #6ec1ff;
+    --sun-ink: #ffd565;
+    --grape-ink: #b9a6ff;
+    --leaf-soft: #263530;
+    --cloud: #55525c;
+    --no: #7d766a;
+    --chip: #2d2a24;
+    --map-on: #2f7d55;
+    --shadow: 0 6px 18px rgb(0 0 0 / 0.35);
     color-scheme: dark;
   }
 }
 :root[data-theme='dark'] {
-  --paper: #131a17;
-  --panel: #1a2320;
-  --ink: #e6eee9;
-  --muted: #9db0a7;
-  --line: #2c3934;
-  --teal: #4fc2ab;
-  --teal-soft: #183a33;
-  --slide: #f29a4a;
-  --slide-soft: #3a2817;
-  --no: #66746d;
-  --chip: #22302b;
-  --map-on: #2f7d6d;
+  --paper: #1b1a17;
+  --panel: #24221e;
+  --ink: #f3efe6;
+  --muted: #b7af9f;
+  --line: #3a362f;
+  --teal: #5bd39a;
+  --teal-soft: #1f3a2c;
+  --grass: #3fb67f;
+  --slide: #ffa061;
+  --slide-soft: #3d2717;
+  --orange: #ff9a55;
+  --sky: #6ec1ff;
+  --sky-soft: #1d3242;
+  --sun: #ffd565;
+  --sun-soft: #3b3218;
+  --grape: #b9a6ff;
+  --grape-soft: #2e2840;
+  --sky-ink: #6ec1ff;
+  --sun-ink: #ffd565;
+  --grape-ink: #b9a6ff;
+  --leaf-soft: #263530;
+  --cloud: #55525c;
+  --no: #7d766a;
+  --chip: #2d2a24;
+  --map-on: #2f7d55;
+  --shadow: 0 6px 18px rgb(0 0 0 / 0.35);
   color-scheme: dark;
+}
+
+/* 遊樂設施類別的顏色（src/lib/play-groups.ts）：[data-tone] 設定 --tone、--tone-soft，子元素沿用 */
+[data-tone='slide'] {
+  --tone: var(--orange);
+  --tone-soft: var(--slide-soft);
+  --tone-ink: var(--slide);
+}
+[data-tone='sky'] {
+  --tone: var(--sky);
+  --tone-soft: var(--sky-soft);
+  --tone-ink: var(--sky-ink);
+}
+[data-tone='sun'] {
+  --tone: var(--sun);
+  --tone-soft: var(--sun-soft);
+  --tone-ink: var(--sun-ink);
+}
+[data-tone='grass'] {
+  --tone: var(--grass);
+  --tone-soft: var(--teal-soft);
+  --tone-ink: var(--teal);
+}
+[data-tone='grape'] {
+  --tone: var(--grape);
+  --tone-soft: var(--grape-soft);
+  --tone-ink: var(--grape-ink);
+}
+[data-tone='leaf'] {
+  --tone: var(--grass);
+  --tone-soft: var(--leaf-soft);
+  --tone-ink: var(--teal);
+}
+.gicon {
+  flex: none;
+  vertical-align: -3px;
+  color: var(--tone-ink, var(--teal));
 }
 
 * {
@@ -94,30 +175,28 @@ select {
   min-height: 0;
   min-width: 0;
   border-right: 1px solid var(--line);
-  background: var(--panel);
+  background: var(--paper);
 }
 .head {
   padding: 16px 16px 12px;
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 30%, var(--slide-soft) 0 3px, transparent 4px),
-    radial-gradient(circle at 70% 20%, var(--teal-soft) 0 4px, transparent 5px),
-    radial-gradient(circle at 40% 80%, var(--line) 0 2px, transparent 3px),
-    radial-gradient(circle at 88% 70%, var(--slide-soft) 0 2px, transparent 3px);
-  background-size:
-    60px 46px,
-    74px 58px,
-    38px 34px,
-    52px 40px;
+  /* 跟首頁的標題區一樣：天空色漸層，右上角有小插圖（PlaygroundArt） */
+  background: linear-gradient(180deg, var(--sky-soft), var(--paper));
   border-bottom: 1px solid var(--line);
+}
+.head-top .pa-mini {
+  width: 112px;
+  flex: none;
+  margin: -6px -4px -6px 0;
 }
 h1 {
   font-family: var(--f-display);
-  font-size: 24px;
+  font-size: 26px;
   margin: 0;
   letter-spacing: 0.02em;
   font-weight: 400;
+  color: var(--teal);
 }
 .sub {
   color: var(--muted);
@@ -136,26 +215,39 @@ h1 {
 .orow input {
   flex: 1;
   min-width: 0;
-  padding: 8px 10px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--paper);
-}
-.btn {
-  border: 1px solid var(--line);
+  padding: 9px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
   background: var(--panel);
-  border-radius: 8px;
-  padding: 7px 10px;
+}
+/* 膠囊按鈕；按下時小彈跳（prefers-reduced-motion 時關閉動畫，見檔案後面） */
+.btn {
+  border: 1.5px solid var(--line);
+  background: var(--panel);
+  border-radius: 999px;
+  padding: 8px 14px;
   cursor: pointer;
   white-space: nowrap;
+  transition:
+    transform 0.12s ease,
+    border-color 0.15s,
+    box-shadow 0.15s;
 }
 .btn:hover {
   border-color: var(--teal);
+}
+.btn:active {
+  transform: scale(0.96);
 }
 .btn.primary {
   background: var(--teal);
   border-color: var(--teal);
   color: var(--panel);
+  font-weight: 500;
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--teal) 55%, black);
+}
+.btn.primary:active {
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--teal) 55%, black);
 }
 .btn.on {
   background: var(--slide-soft);
@@ -177,16 +269,19 @@ h1 {
   text-align: left;
   border: 0;
   background: var(--chip);
-  padding: 6px 8px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 13px;
 }
 .seg {
   display: flex;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  background: var(--panel);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
   overflow: hidden;
+  padding: 2px;
+  gap: 2px;
 }
 .seg button {
   flex: 1;
@@ -195,6 +290,9 @@ h1 {
   padding: 6px 4px;
   cursor: pointer;
   font-size: 13px;
+}
+.seg button {
+  border-radius: 999px;
 }
 .seg button[aria-pressed='true'] {
   background: var(--teal);
@@ -230,11 +328,14 @@ h1 {
   gap: 14px;
 }
 .fgroup h3 {
-  font-size: 11.5px;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin: 0 0 6px;
-  font-weight: 500;
+  font-family: var(--f-display);
+  font-size: 14px;
+  color: var(--ink);
+  margin: 0 0 8px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .fgroup.stack {
   display: grid;
@@ -258,23 +359,49 @@ h1 {
   gap: 8px;
   align-items: start;
 }
-.pg > span {
-  font-size: 12px;
-  color: var(--muted);
-  padding-top: 5px;
+.pg {
+  grid-template-columns: 84px 1fr;
+}
+.pg-name {
+  font-size: 12.5px;
+  color: var(--tone-ink, var(--muted));
+  padding-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .chip {
-  border: 1px solid var(--line);
+  border: 1.5px solid transparent;
   background: var(--chip);
   border-radius: 999px;
-  padding: 4px 11px;
+  padding: 5px 12px;
   cursor: pointer;
   font-size: 13px;
+  transition:
+    transform 0.12s ease,
+    background 0.15s;
+}
+.chip:hover {
+  border-color: var(--tone-ink, var(--teal));
+}
+.chip:active {
+  transform: scale(0.94);
 }
 .chip[aria-pressed='true'] {
   background: var(--teal);
   border-color: var(--teal);
   color: var(--panel);
+}
+/* 有類別顏色的設施：選取時用該類的淡色底＋深色框，前面加勾（不只靠顏色區分） */
+[data-tone] .chip[aria-pressed='true'] {
+  background: var(--tone-soft);
+  border-color: var(--tone-ink);
+  color: var(--ink);
+  font-weight: 600;
+}
+[data-tone] .chip[aria-pressed='true']::before {
+  content: '✓ ' / ''; /* 替代文字留空：讀屏與按鈕名稱只有設施名稱（已選取由 aria-pressed 表示） */
+  color: var(--tone-ink);
 }
 .rangerow {
   display: flex;
@@ -304,10 +431,10 @@ h1 {
   height: 16px;
 }
 select {
-  padding: 6px 8px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--paper);
+  padding: 6px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
 }
 .resbar {
   padding: 10px 16px;
@@ -317,7 +444,7 @@ select {
   gap: 8px;
   position: sticky;
   top: 0;
-  background: var(--panel);
+  background: var(--paper);
   z-index: 1;
   border-bottom: 1px solid var(--line);
 }
@@ -338,18 +465,27 @@ select {
   gap: 8px;
 }
 .card {
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  padding: 10px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 12px 14px;
   cursor: pointer;
   background: var(--panel);
   display: grid;
   gap: 6px;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s;
 }
-.card:hover,
+.card:hover {
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
 .card.sel {
   border-color: var(--teal);
-  box-shadow: 0 0 0 1px var(--teal);
+  box-shadow:
+    0 0 0 2px var(--teal),
+    var(--shadow);
 }
 .ctop {
   display: flex;
@@ -358,8 +494,9 @@ select {
   align-items: baseline;
 }
 .cname {
-  font-weight: 700;
-  font-size: 15px;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 16.5px;
   min-width: 0;
 }
 .cdist {
@@ -380,15 +517,15 @@ select {
 }
 .tag {
   font-size: 12px;
-  padding: 1px 7px;
-  border-radius: 5px;
+  padding: 2px 9px;
+  border-radius: 999px;
   border: 1px solid transparent;
   display: inline-flex;
   align-items: center;
   gap: 3px;
 }
 .tag.y {
-  background: var(--teal-soft);
+  background: var(--tone-soft, var(--teal-soft));
   color: var(--ink);
 }
 .tag.n {
@@ -414,8 +551,8 @@ select {
 .cnum {
   display: inline-grid;
   place-items: center;
-  min-width: 20px;
-  height: 20px;
+  min-width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: var(--teal);
   color: var(--panel);
@@ -451,8 +588,8 @@ select {
   border-radius: 50% 50% 50% 4px;
   transform: rotate(-45deg);
   background: var(--teal);
-  border: 2px solid var(--panel);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  border: 2.5px solid var(--panel);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -508,7 +645,7 @@ select {
   width: min(380px, calc(100% - 32px));
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
   overflow: auto;
   z-index: 5;
@@ -572,20 +709,23 @@ select {
   border-bottom: 1px solid var(--line);
 }
 .dsec-title {
-  font-size: 11.5px;
-  letter-spacing: 0.08em;
-  color: var(--muted);
+  font-family: var(--f-display);
+  font-size: 15px;
+  color: var(--teal);
   margin: 0 0 8px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .agroup + .agroup {
   margin-top: 6px;
 }
 .agroup-title {
-  font-size: 12px;
-  color: var(--muted);
-  margin: 4px 0 2px;
+  font-size: 12.5px;
+  color: var(--tone-ink, var(--muted));
+  margin: 6px 0 2px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .facts {
   display: grid;
@@ -766,9 +906,16 @@ a.card {
   display: flex;
   align-items: baseline;
   gap: 4px;
-  padding: 4px 10px;
-  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border: 1.5px solid var(--line);
   border-radius: 999px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease;
+}
+.city-list li:hover {
+  transform: translateY(-2px);
+  border-color: var(--teal);
 }
 .city-list a {
   color: var(--teal);
@@ -799,8 +946,118 @@ a.card {
 .place-article {
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+/* 首頁的標題區：天空色漸層＋遊樂場插圖（src/components/home/PlaygroundArt.tsx） */
+.home-hero {
+  background: linear-gradient(180deg, var(--sky-soft), var(--panel));
+  text-align: center;
+  justify-items: center;
+}
+.home-hero h1 {
+  font-size: 30px;
+  color: var(--teal);
+  padding-right: 0;
+}
+/* 首頁在桌機排成一個畫面、不出現捲軸：上方橫幅（插圖＋標題），下方左邊縣市清單、右邊台灣地圖填滿剩下的高度。
+   手機照原本由上而下排（放不下一個畫面，手機的捲軸只在捲動時短暫出現）。 */
+@media (min-width: 821px) {
+  html:has(.home-page),
+  html:has(.home-page) body {
+    overflow: hidden;
+  }
+  .home-page {
+    max-width: 1120px;
+    height: 100%;
+    padding: 16px 16px 16px;
+  }
+  .home-card {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+  .home-hero {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-align: left;
+    justify-items: start;
+    gap: 20px;
+    padding: 12px 24px;
+  }
+  .home-hero .pa {
+    width: 220px;
+  }
+  .home-cities {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(0, 1.25fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: 24px;
+    align-content: start;
+    padding: 14px 24px;
+  }
+  .home-cities > :not(.tw-map) {
+    grid-column: 1;
+  }
+  .home-cities > .tw-map {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+  }
+  .home-cities .city-list {
+    align-content: start;
+    overflow: auto; /* 很矮的視窗才會用到 */
+    min-height: 0;
+    padding: 4px 6px 10px; /* 陰影不被裁掉 */
+    margin: -4px -6px 0;
+  }
+  .home-credits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 16px;
+    padding: 8px 24px;
+  }
+  .home-credits .note {
+    margin: 0;
+  }
+}
+.pa {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+}
+.pa-sun {
+  fill: var(--sun);
+  stroke: var(--sun);
+}
+.pa-cloud {
+  fill: var(--cloud);
+}
+.pa-grass {
+  fill: var(--grass);
+}
+.pa-frame {
+  stroke: var(--sky-ink);
+}
+.pa-slide {
+  fill: var(--orange);
+}
+.pa-rope {
+  stroke: var(--muted);
+}
+.pa-seat {
+  fill: var(--slide);
+}
+.pa-bush {
+  fill: var(--teal);
 }
 .place-article .dsec:last-child {
   border-bottom: 0;

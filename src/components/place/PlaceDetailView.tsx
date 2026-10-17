@@ -19,7 +19,9 @@ import {
   type PlaceDetail,
   type SourceRef,
 } from '@/lib/place-detail';
+import { groupTone } from '@/lib/play-groups';
 import type { AttributeCatalog } from '@/lib/places';
+import { GroupIcon } from '@/components/ui/GroupIcon';
 import type { Tri } from '@/types/place';
 import { ReportButton } from './ReportButton';
 import { RouteLink } from './RouteLink';
@@ -172,8 +174,13 @@ export function PlaceDetailView({
         <section className="dsec" key={s.title} aria-label={s.title}>
           <Sub className="dsec-title">{s.title}</Sub>
           {s.groups.map((g) => (
-            <div key={g.name ?? s.title} className="agroup">
-              {g.name && <Group className="agroup-title">{g.name}</Group>}
+            <div key={g.name ?? s.title} className="agroup" data-tone={groupTone(g.name)}>
+              {g.name && (
+                <Group className="agroup-title">
+                  <GroupIcon tone={groupTone(g.name) ?? 'grass'} />
+                  {g.name}
+                </Group>
+              )}
               {g.rows.map((r) => (
                 <div className="arow" key={r.key}>
                   <span className={`st ${r.v}`} role="img" aria-label={TRI_LABEL[r.v]}>

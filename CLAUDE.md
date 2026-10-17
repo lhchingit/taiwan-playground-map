@@ -76,7 +76,7 @@ python -m unittest discover -s scripts/tests -t scripts   # 匯入腳本的測�
 - 篩選、距離、時間估算寫成純函式，放在 `src/lib/filter/`，不依賴 React，必須有單元測試。
 - 篩選狀態同步到網址 query string，方便家長分享連結。
 - 時間估算：直線距離 × 1.35 ÷ 速度（開車 30、機車 25、步行 4.5 km/h），介面標示「估算」；大眾運輸不估算，連到 Google 地圖。
-- 顏色與字體沿用原型 `:root` 的 tokens，支援淺色與深色模式。
+- 顏色與字體以 `src/app/globals.css` 的 `:root` tokens 為準（decisions D24「陽光遊樂場」；原型只當互動規格），支援淺色與深色模式。文字顏色要過 WCAG AA（4.5:1）。
 - Supabase 存取一律經過 RLS；不要在前端使用 service role key。
 
 ## 工作方式
