@@ -524,60 +524,6 @@
    "unknown_hint": 0
   },
   {
-   "name": "小型場地",
-   "filters": {
-    "size": [
-     "S"
-    ]
-   },
-   "expected_ids": [
-    "hsc-hccg-075",
-    "hsc-hccg-071",
-    "hsc-xingxue-park",
-    "hsc-hccg-104",
-    "hsc-hccg-022",
-    "hsc-hccg-108",
-    "hsc-hccg-070",
-    "hsc-hccg-114",
-    "hsc-changhe-park",
-    "hsc-green-road-smile-slide",
-    "hsc-hccg-018",
-    "hsc-hccg-092",
-    "hsc-hccg-017",
-    "hsc-hccg-024",
-    "hsc-hccg-090",
-    "hsc-hccg-074",
-    "hsc-hccg-016",
-    "hsc-hccg-028",
-    "hsc-hccg-007",
-    "hsc-hccg-068",
-    "hsc-hccg-115",
-    "hsc-hccg-004",
-    "hsc-hccg-038",
-    "hsc-hccg-003",
-    "hsc-hccg-037",
-    "hsc-hccg-039",
-    "hsc-hccg-116",
-    "hsc-hccg-029",
-    "hsc-hccg-097",
-    "hsc-hccg-080",
-    "hsc-hccg-079",
-    "hsc-hccg-050",
-    "hsc-hccg-012",
-    "hsc-hccg-088",
-    "hsc-hccg-040",
-    "hsc-hccg-076",
-    "hsc-hccg-041",
-    "hsc-hccg-014",
-    "hsc-hccg-011",
-    "hsc-hccg-083",
-    "hsc-hccg-084",
-    "hsc-hccg-085"
-   ],
-   "expected_count": 42,
-   "unknown_hint": 0
-  },
-  {
    "name": "停車場",
    "filters": {
     "pkType": [

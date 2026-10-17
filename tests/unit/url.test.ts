@@ -25,7 +25,6 @@ describe('filtersToQuery', () => {
       play: ['swing'],
       amen: ['shade', 'toilet'],
       stay: ['60_120', 'lt30'],
-      size: ['S', 'L'],
       env: 'out',
       free: true,
       includeUnknown: false,
@@ -34,7 +33,7 @@ describe('filtersToQuery', () => {
       pkMin: 30,
     };
     expect(filtersToQuery(f)).toBe(
-      'play=swing&amen=shade,toilet&km=20&stay=60_120,lt30&size=L,S&env=out&free=1&pk=lot,street&pkfee=paid&pkmin=30',
+      'play=swing&amen=shade,toilet&km=20&stay=60_120,lt30&env=out&free=1&pk=lot,street&pkfee=paid&pkmin=30',
     );
   });
 
@@ -64,7 +63,6 @@ describe('queryToFilters', () => {
       play: ['sandpit', 'swing'],
       amen: ['shade'],
       stay: ['half'],
-      size: ['M'],
       env: 'in',
       free: true,
       includeUnknown: true,
@@ -97,8 +95,8 @@ describe('queryToFilters', () => {
     expect(queryToFilters('km=20', known).maxKm).toBe(20);
   });
 
-  it('舊連結的 age 參數忽略，輸出的網址也不會有 age', () => {
-    const f = queryToFilters('age=8&play=slide', known);
+  it('舊連結的 age、size 參數忽略，輸出的網址也不會有', () => {
+    const f = queryToFilters('age=8&size=S&play=slide', known);
     expect(f).toEqual({ ...DEFAULT_FILTERS, play: ['slide'] });
     expect(filtersToQuery(f)).toBe('play=slide');
   });

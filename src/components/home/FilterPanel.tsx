@@ -7,7 +7,7 @@ import {
   type Filters,
   type ParkingTypeFilter,
 } from '@/lib/filter';
-import { activeFilterCount, PARKING_TYPE_LABEL, SIZE_LABEL, STAY_LABEL } from '@/lib/format';
+import { activeFilterCount, PARKING_TYPE_LABEL, STAY_LABEL } from '@/lib/format';
 import { AMENITY_TONE, groupTone } from '@/lib/play-groups';
 import type { AttributeCatalog } from '@/lib/places';
 import { GroupIcon } from '@/components/ui/GroupIcon';
@@ -201,16 +201,6 @@ export function FilterPanel({ filters: f, onChange, catalog }: Props) {
             label={(k) => STAY_LABEL[k]}
             selected={f.stay}
             onToggle={(k) => set({ stay: toggle(f.stay, k) })}
-          />
-        </div>
-
-        <div className="fgroup">
-          <h3>場地規模</h3>
-          <Chips
-            options={Object.keys(SIZE_LABEL) as (keyof typeof SIZE_LABEL)[]}
-            label={(k) => SIZE_LABEL[k]}
-            selected={f.size}
-            onToggle={(k) => set({ size: toggle(f.size, k) })}
           />
         </div>
 

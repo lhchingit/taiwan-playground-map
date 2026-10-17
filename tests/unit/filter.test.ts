@@ -36,7 +36,6 @@ describe('屬性三態', () => {
 describe('null 欄位當成未知', () => {
   const cases: [string, Partial<Filters>][] = [
     ['停留時長', { stay: ['30_60'] }],
-    ['規模', { size: ['M'] }],
     ['只看免費', { free: true }],
     ['停車類型', { pkType: ['lot'] }],
     ['停車費用', { pkFee: 'paid' }],
