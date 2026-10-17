@@ -513,6 +513,19 @@ button.pg-name[aria-pressed='true']::after {
   color: var(--ink);
   font-weight: 600;
 }
+/* 預留選取後（粗體＋勾）的寬度：選取前後按鈕一樣寬，不會掉到下一行 */
+[data-tone] .chip {
+  white-space: nowrap;
+  padding-inline: 5px; /* 左右留白縮小，補回預留的寬度 */
+}
+[data-tone] .chip::after {
+  content: '✓ ' attr(data-label) / '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-weight: 600;
+}
 [data-tone] .chip[aria-pressed='true']::before {
   content: '✓ ' / ''; /* 替代文字留空：讀屏與按鈕名稱只有設施名稱（已選取由 aria-pressed 表示） */
   color: var(--tone-ink);
