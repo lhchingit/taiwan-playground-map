@@ -27,6 +27,8 @@ const lines = [
   '# Cloudflare Turnstile：預設是官方的測試金鑰（一定通過，只能在本機與 CI 使用）',
   `TURNSTILE_SITE_KEY=${keep('TURNSTILE_SITE_KEY') ?? '1x00000000000000000000AA'}`,
   `TURNSTILE_SECRET_KEY=${keep('TURNSTILE_SECRET_KEY') ?? '1x0000000000000000000000000000000AA'}`,
+  // 選填：Google 官方登入按鈕（decisions D28）。手動加上的值保留
+  ...(keep('GOOGLE_CLIENT_ID') ? [`GOOGLE_CLIENT_ID=${keep('GOOGLE_CLIENT_ID')}`] : []),
   '',
 ];
 writeFileSync('.env.local', lines.join('\n'));

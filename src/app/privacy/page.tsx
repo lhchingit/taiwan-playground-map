@@ -48,6 +48,7 @@ export default function PrivacyPage() {
               組，例如「沙坑＋廁所」）：只有你看得到，不包含出發點或位置，刪除帳號時一起刪除。
             </li>
             <li>用 Google 登入時，Google 會提供你的 Email 與名稱；網站不會公開名稱或頭像。</li>
+            <li>登入頁會載入 Google 提供的登入按鈕，Google 依它的隱私權政策處理這次連線。</li>
           </ul>
         </section>
 

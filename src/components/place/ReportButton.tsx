@@ -66,6 +66,7 @@ export function ReportButton({
         next={login ?? '/'}
         google={session?.providers.google ?? false}
         email={session?.providers.email ?? true}
+        googleClientId={session?.providers.googleClientId ?? null}
       />
     </>
   );

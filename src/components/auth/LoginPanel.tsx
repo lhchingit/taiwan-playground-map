@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import { useActionState } from 'react';
 import { type MagicLinkState, sendMagicLink, signInWithGoogle } from '@/app/auth/actions';
+import { GoogleButton } from './GoogleButton';
 
 const IDLE: MagicLinkState = { status: 'idle', message: '' };
 
@@ -11,22 +12,29 @@ export function LoginPanel({
   next,
   google,
   email,
+  googleClientId = null,
 }: {
   next: string;
   google: boolean;
   email: boolean;
+  /** 有設定時用 Google 官方按鈕（decisions D28），否則經過 Supabase 轉址 */
+  googleClientId?: string | null;
 }) {
   const [state, action, pending] = useActionState(sendMagicLink, IDLE);
   return (
     <div className="login-panel">
       <p className="note">登入後可以回報修正。瀏覽地圖與場地資料不需要登入。</p>
-      <form action={signInWithGoogle}>
-        <input type="hidden" name="next" value={next} />
-        <button className="btn login-btn" type="submit" disabled={!google}>
-          用 Google 登入
-        </button>
-        {!google && <span className="note">（尚未設定）</span>}
-      </form>
+      {google && googleClientId ? (
+        <GoogleButton clientId={googleClientId} next={next} />
+      ) : (
+        <form action={signInWithGoogle}>
+          <input type="hidden" name="next" value={next} />
+          <button className="btn login-btn" type="submit" disabled={!google}>
+            用 Google 登入
+          </button>
+          {!google && <span className="note">（尚未設定）</span>}
+        </form>
+      )}
       {email && (
         <div className="login-or" aria-hidden="true">
           或

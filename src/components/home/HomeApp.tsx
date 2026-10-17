@@ -313,6 +313,7 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
           next={loginNext ?? '/'}
           google={session?.providers.google ?? false}
           email={session?.providers.email ?? true}
+          googleClientId={session?.providers.googleClientId ?? null}
         />
         <div className="scroll">
           <FilterPanel

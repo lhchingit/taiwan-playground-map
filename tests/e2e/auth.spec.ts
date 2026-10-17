@@ -88,6 +88,60 @@ test('Email 登入在後台關閉時（上線初期只開 Google），登入視�
   await expect(dialog.getByRole('button', { name: '寄登入連結' })).toHaveCount(0);
 });
 
+test('設定了 Google 用戶端 ID 時用 Google 官方按鈕（decisions D28）；假的 token 會被拒絕', async ({
+  page,
+}) => {
+  const clientId = 'e2e-test.apps.googleusercontent.com';
+  await page.route('**/api/session', async (route) => {
+    const res = await route.fetch();
+    const body = await res.json();
+    await route.fulfill({
+      response: res,
+      json: { ...body, providers: { google: true, email: false, googleClientId: clientId } },
+    });
+  });
+  // 假的 Google Identity Services：記下 initialize 的參數，按鈕按下去就回傳一個假的 ID token
+  await page.route('https://accounts.google.com/gsi/client', (route) =>
+    route.fulfill({
+      contentType: 'text/javascript',
+      body: `window.google = { accounts: { id: {
+        initialize(o) { window.__gis = o; },
+        renderButton(el, o) {
+          window.__gisButton = o;
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.textContent = '假的 Google 按鈕';
+          b.onclick = () => window.__gis.callback({ credential: 'aaa.bbb.ccc' });
+          el.appendChild(b);
+        },
+      } } };`,
+    }),
+  );
+  await page.goto(PLACE);
+  await page.getByRole('button', { name: '回報修正' }).click();
+  const dialog = page.getByRole('dialog', { name: '登入' });
+  await expect(dialog.getByRole('button', { name: '假的 Google 按鈕' })).toBeVisible();
+  await expect(dialog.getByRole('button', { name: '用 Google 登入' })).toHaveCount(0);
+
+  const gis = await page.evaluate(() => {
+    const w = window as unknown as {
+      __gis: { client_id: string; nonce: string };
+      __gisButton: { locale: string };
+    };
+    return { clientId: w.__gis.client_id, nonce: w.__gis.nonce, locale: w.__gisButton.locale };
+  });
+  expect(gis).toEqual({
+    clientId,
+    nonce: expect.stringMatching(/^[0-9a-f]{64}$/),
+    locale: 'zh-TW',
+  });
+
+  // 本機 Supabase 不接受假的 token：顯示錯誤，視窗還在、可以再試
+  await dialog.getByRole('button', { name: '假的 Google 按鈕' }).click();
+  await expect(dialog.getByRole('alert')).toHaveText('登入沒有成功，請再試一次。');
+  await expect(dialog).toBeVisible();
+});
+
 test('登入狀態還在查詢時按「回報修正」，等查完仍然跳出登入視窗', async ({ page }) => {
   // 模擬網路慢：/api/session 晚 1.5 秒回應，頁面一打開就按
   await page.route('**/api/session', async (route) => {

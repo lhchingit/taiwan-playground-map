@@ -1,6 +1,7 @@
 'use server';
 // 登入（Google、Email 登入連結）。流程全部在伺服器端，session 存在 httpOnly cookie。
 import { redirect } from 'next/navigation';
+import { validIdTokenInput } from '@/lib/auth/google';
 import { safeNext } from '@/lib/auth/next-path';
 import { requestOrigin } from '@/lib/auth/origin';
 import { toPublicUrl } from '@/lib/auth/public-url';
@@ -18,6 +19,22 @@ export async function signInWithGoogle(formData: FormData) {
   });
   if (error || !data.url) redirect(`/login?error=1&next=${encodeURIComponent(next)}`);
   redirect(toPublicUrl(data.url, supabaseEnv().url, supabasePublicUrl()));
+}
+
+/**
+ * Google Identity Services 的登入（decisions D28）：瀏覽器拿到 Google 的 ID token 後交給這裡，
+ * 由 Supabase 驗證簽章、audience 與 nonce，成功就寫入 session cookie。token 不記錄。
+ */
+export async function signInWithGoogleIdToken(
+  credential: string,
+  nonce: string,
+): Promise<{ ok: true } | { ok: false; message: string }> {
+  const failed = { ok: false as const, message: '登入沒有成功，請再試一次。' };
+  if (!validIdTokenInput(credential, nonce)) return failed;
+  const { error } = await (
+    await supabaseAuth()
+  ).auth.signInWithIdToken({ provider: 'google', token: credential, nonce });
+  return error ? failed : { ok: true };
 }
 
 export interface MagicLinkState {

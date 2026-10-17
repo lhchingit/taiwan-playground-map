@@ -77,6 +77,7 @@
   | `REVALIDATE_SECRET` | secret | C 的密鑰（跟 `.env.prod-db`、GitHub 的相同） |
   | `TURNSTILE_SITE_KEY` | config | B 的 Turnstile site key |
   | `TURNSTILE_SECRET_KEY` | secret | B 的 Turnstile secret key |
+  | `GOOGLE_CLIENT_ID` | config | Google OAuth 用戶端 ID（跟 Supabase Google provider 的相同）。設定後用 Google 官方登入按鈕，Google 的畫面顯示網站網址而不是 supabase.co（decisions D28） |
 
   值不要加引號、前後不要有空白。不用設定：`DATABASE_URL`（網站不直接連資料庫，含密碼的連線字串不要放進 Vercel）、`SUPABASE_PUBLIC_URL`、`NEXT_OUTPUT`（只有 Docker 用）、`SUPABASE_MAX_CONCURRENCY`（預設 8）。
 - [ ] 部署。Deployments 是空的（沒有自動部署）時，用 Deployments 右上角的 **Create Deployment**，分支填 `main`。之後合併到 `main` 會自動部署。
@@ -102,6 +103,8 @@
 | Google 登入後導回 `localhost:3000` | Supabase 的 Site URL 還是預設值，或 Redirect URLs 沒有 `https://<專案>.vercel.app/**` | 改 Supabase URL Configuration（立刻生效） |
 | 登入頁還有「寄登入連結」，或 Google 按鈕不能按 | 登入方式的快取還沒過期 | Redeploy |
 | `supabase login` 出現 `LoginMissingTokenError`（non-TTY） | 在不是終端機的環境執行 | 在自己的終端機執行 |
+| Google 畫面寫「繼續使用 <專案代碼>.supabase.co」 | 沒設定 `GOOGLE_CLIENT_ID`，走的是經過 Supabase 轉址的流程 | Vercel 加 `GOOGLE_CLIENT_ID`、Google Cloud 加 JavaScript 來源，Redeploy |
+| Google 登入按鈕出現，但按了跳出錯誤（例如 `origin_mismatch`、`The given origin is not allowed`） | Google Cloud 的 OAuth 用戶端沒有把網站網址加進「已授權的 JavaScript 來源」 | 加上 `https://<網域>`（不要結尾 `/`），幾分鐘後生效 |
 | Deployments 一直是空的 | 沒有觸發第一次部署，或 Vercel 沒有這個 repo 的權限 | Settings → Git 確認已連上 repo，再 Create Deployment |
 
 ### F. 換成正式網域時
@@ -111,6 +114,7 @@
 - [ ] Supabase：Site URL 改成新網址，Redirect URLs 加上 `https://<網域>/**`。
 - [ ] Turnstile：網域加上新網域。
 - [ ] Google OAuth 同意畫面：首頁、隱私權政策、服務條款的網址改成新網域。
+- [ ] Google OAuth 用戶端：「已授權的 JavaScript 來源」加上新網域。
 - [ ] Vercel 重新部署，再照 E 確認一次。
 
 ## 第一次設定（只做一次）
@@ -151,6 +155,7 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
 2. **Google 登入**
    - 在 Google Cloud Console 建立「OAuth 用戶端 ID」，類型選「網頁應用程式」。
    - 「已授權的重新導向 URI」填 Supabase 的 callback：`https://<專案代碼>.supabase.co/auth/v1/callback`。
+   - 「**已授權的 JavaScript 來源**」填網站網址 `https://<網域>`（試用期是 `https://<專案>.vercel.app`；本機預覽要加 `http://localhost:3000` 與 `http://localhost`）。網站用 Google 官方登入按鈕時需要（`GOOGLE_CLIENT_ID`，decisions D28）。
    - 把 Client ID、Secret 填到 Supabase 的 Authentication → Providers → Google。
    - OAuth 同意畫面的應用程式名稱填「全台放電地圖」，範圍只要 email、profile。
 3. **Email 登入連結：上線初期關閉**（decisions D10，2026-10-17）
