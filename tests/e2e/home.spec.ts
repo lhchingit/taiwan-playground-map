@@ -239,6 +239,35 @@ test.describe('手機', () => {
     expect(overflowing).toEqual([]);
   });
 
+  test('選取選項（變粗體、加勾）時按鈕寬度不變，不會掉到下一行', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 860 });
+    await page.goto('/hsinchu-city');
+    await page.getByRole('button', { name: '篩選條件' }).click();
+    const baby = chip(page, '嬰兒鞦韆');
+    const before = await baby.boundingBox();
+    await baby.click();
+    await expect(baby).toHaveAttribute('aria-pressed', 'true');
+    const after = await baby.boundingBox();
+    expect(after?.width).toBeCloseTo(before!.width, 0);
+    expect(after?.y).toBeCloseTo(before!.y, 0);
+
+    // 有類別顏色的每個選項（遊樂設施、生活機能）：選取樣式套上前後一樣寬、一樣高
+    const changed = await page.evaluate(() =>
+      [...document.querySelectorAll<HTMLElement>('#filter-body [data-tone] .chip')]
+        .filter((c) => {
+          const was = c.getAttribute('aria-pressed');
+          c.setAttribute('aria-pressed', 'false');
+          const a = c.getBoundingClientRect();
+          c.setAttribute('aria-pressed', 'true');
+          const b = c.getBoundingClientRect();
+          c.setAttribute('aria-pressed', was ?? 'false');
+          return Math.abs(a.width - b.width) > 0.5 || Math.abs(a.height - b.height) > 0.5;
+        })
+        .map((c) => c.textContent),
+    );
+    expect(changed).toEqual([]);
+  });
+
   test('手機也能篩選，標記數量等於清單數量', async ({ page }) => {
     await page.goto('/hsinchu-city?play=sandpit');
     await expect(count(page)).toHaveText(String(expected('沙坑').expected_count));

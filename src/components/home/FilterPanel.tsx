@@ -42,6 +42,7 @@ function Chips<K extends string>(props: {
           key={k}
           type="button"
           className="chip"
+          data-label={props.label(k)}
           aria-pressed={props.selected.includes(k)}
           onClick={() => props.onToggle(k)}
         >
