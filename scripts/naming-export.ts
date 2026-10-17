@@ -19,7 +19,7 @@ async function main() {
     if (cities.length === 0) throw new Error(`沒有這個縣市，或它不是用 OSM 編號命名：${args.city}`);
     for (const city of cities) {
       const results = await db<NamingResult[]>`
-        SELECT osm_ref, status, resolved_name, resolved_basis, resolved_by,
+        SELECT osm_ref, status, resolved_name, resolved_basis, resolved_by, resolved_votes,
                to_char(resolved_at AT TIME ZONE 'Asia/Taipei', 'YYYY-MM-DD') AS resolved_on
         FROM naming_candidates
         WHERE city = ${city.code} AND status IN ('named', 'excluded') AND resolved_by IN ('votes', 'moderator')

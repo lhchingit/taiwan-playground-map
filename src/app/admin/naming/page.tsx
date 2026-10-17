@@ -1,14 +1,16 @@
 // 命名投票（decisions D23）：負責縣市裡有人投票、還沒決定的待命名點。
-// 審核員看得到每個名稱的票數與提出的人（只顯示暱稱），可以直接決定（不用滿 3 票）。
+// 審核員看得到每個名稱的票數與提出的人（只顯示暱稱），可以直接決定（不用達到門檻）。
+// 管理員可以調整自動通過的門檻（全站一個數字）。
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 import { AuthButton } from '@/components/auth/AuthButton';
 import { currentUser } from '@/lib/auth/session';
-import { getCityBounds } from '@/lib/data';
+import { getCityBounds, getNamingThreshold } from '@/lib/data';
 import { supabaseAuth } from '@/lib/supabase/auth';
 import { ResolveForm } from './ResolveForm';
+import { ThresholdForm } from './ThresholdForm';
 
 export const metadata: Metadata = {
   title: '命名投票｜全台放電地圖',
@@ -63,7 +65,7 @@ async function NamingAdmin() {
   const supabase = await supabaseAuth();
   const me = await currentUser(supabase);
   if (!me || me.banned || !['moderator', 'admin'].includes(me.role)) redirect('/');
-  const [{ data, error }, cities] = await Promise.all([
+  const [{ data, error }, cities, threshold] = await Promise.all([
     supabase
       .from('naming_candidates')
       .select(
@@ -72,6 +74,7 @@ async function NamingAdmin() {
       .eq('status', 'open')
       .order('id'),
     getCityBounds(),
+    getNamingThreshold(),
   ]);
   if (error) throw new Error(`讀取命名投票失敗：${error.message}`);
   const cityName = new Map(cities.map((c) => [c.code, c.name]));
@@ -85,9 +88,10 @@ async function NamingAdmin() {
       <div className="dhead">
         <h1>命名投票</h1>
         <p className="cmeta">
-          有人投票、還沒決定的待命名點 {rows.length} 處。3 位會員提出相同名稱會自動通過；不滿 3
-          人或意見分歧時，可以在這裡直接決定。
+          有人投票、還沒決定的待命名點 {rows.length} 處。{threshold}{' '}
+          位會員提出相同名稱（或都建議排除）會自動通過；未達門檻或意見分歧時，由審核員在這裡決定。
         </p>
+        {me.role === 'admin' && <ThresholdForm value={threshold} />}
       </div>
       {rows.length === 0 && <p className="note">目前沒有需要處理的命名投票。</p>}
       {rows.map((c) => {

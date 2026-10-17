@@ -51,11 +51,16 @@ let banned: Actor;
 let modHsc: Actor;
 let modHsq: Actor;
 let admin: Actor;
+/** 測試前的自動通過門檻（跑完恢復）；計票的測試用 3 人 */
+let originalThreshold: number;
 
 beforeAll(async () => {
   const [launched] = await sql`SELECT launched_at IS NOT NULL AS on FROM cities WHERE code = 'hsc'`;
   if (!launched?.on) throw new Error('新竹市要先上線：pnpm city launch hsc');
   await ensureTestCity(sql);
+  originalThreshold = (await sql`SELECT naming_threshold FROM site_settings`)[0]!
+    .naming_threshold as number;
+  await sql`UPDATE site_settings SET naming_threshold = 3`;
   [m1, m2, m3, m4, noTerms, banned, modHsc, modHsq, admin] = await Promise.all([
     people.create('member'),
     people.create('member'),
@@ -78,6 +83,8 @@ afterAll(async () => {
     await sql`DELETE FROM places WHERE id = ANY(${made})`;
   }
   await sql`DELETE FROM naming_candidates WHERE id LIKE 'test-naming-%'`; // 票跟著刪
+  await sql`UPDATE site_settings SET naming_threshold = ${originalThreshold}`;
+  if (admin) await sql`DELETE FROM admin_log WHERE actor = ${admin.id}`;
   await people.cleanup();
   await dropTestCity(sql);
   await sql.end();
@@ -225,6 +232,7 @@ describe('票與清單的讀寫權限', () => {
           p_basis: '實地確認',
           p_by: 'moderator',
           p_user: a.id,
+          p_votes: null,
         } as never,
       );
       expect(apply.error).not.toBeNull();
@@ -266,6 +274,60 @@ describe('審核員直接決定', () => {
     expect(ex.error).toBeNull();
     expect((await status(b))!.status).toBe('excluded');
     expect((await resolve(admin, await candidate(), '己公園')).error).toBeNull();
+  });
+});
+
+describe('自動通過門檻（管理員設定，預設 10 人）', () => {
+  const setThreshold = (a: Actor, n: number) =>
+    a.client.rpc('admin_set_naming_threshold', { p_threshold: n });
+
+  it('預設是 10 人；任何人（含未登入）都讀得到目前的門檻', async () => {
+    const [d] = await sql`
+      SELECT column_default FROM information_schema.columns
+      WHERE table_name = 'site_settings' AND column_name = 'naming_threshold'`;
+    expect(d!.column_default).toBe('10');
+    expect((await anon.rpc('naming_threshold')).data).toBe(3); // 這個檔案暫時設成 3
+    expect((await anon.from('site_settings').select('naming_threshold').single()).data).toEqual({
+      naming_threshold: 3,
+    });
+  });
+
+  it('會員、審核員不能設定；不能直接寫入設定表', async () => {
+    expect((await setThreshold(m1, 5)).error?.message).toContain('只有管理員');
+    expect((await setThreshold(modHsc, 5)).error?.message).toContain('只有管理員');
+    expect((await anon.rpc('admin_set_naming_threshold', { p_threshold: 5 })).error).not.toBeNull();
+    for (const a of [m1, modHsc, admin]) {
+      const upd = await a.client
+        .from('site_settings')
+        .update({ naming_threshold: 2 })
+        .eq('id', true)
+        .select();
+      expect(upd.error !== null || upd.data?.length === 0).toBe(true);
+    }
+    expect((await sql`SELECT naming_threshold FROM site_settings`)[0]!.naming_threshold).toBe(3);
+  });
+
+  it('管理員可以設定（2～100 人），記在 admin_log；達到新門檻才自動通過，記下一致的人數', async () => {
+    expect((await setThreshold(admin, 1)).error?.message).toContain('2～100');
+    expect((await setThreshold(admin, 101)).error?.message).toContain('2～100');
+    try {
+      expect((await setThreshold(admin, 4)).error).toBeNull();
+      const [log] = await sql`
+        SELECT before, after FROM admin_log
+        WHERE actor = ${admin.id} AND action = 'set_naming_threshold' ORDER BY id DESC LIMIT 1`;
+      expect(log).toEqual({ before: { naming_threshold: 3 }, after: { naming_threshold: 4 } });
+
+      const id = await candidate();
+      for (const a of [m1, m2, m3]) expect((await vote(a, id, '癸公園')).data).toBe('voted');
+      expect((await status(id))!.status).toBe('open'); // 3 人不夠，留給審核員
+      expect((await vote(m4, id, '癸公園')).data).toBe('named');
+      const [r] = await sql`SELECT resolved_votes FROM naming_candidates WHERE id = ${id}`;
+      expect(r!.resolved_votes).toBe(4);
+      const [h] = await sql`SELECT note FROM place_field_history WHERE place_id = ${id}`;
+      expect(h!.note).toBe('會員命名（4 人一致）：癸公園');
+    } finally {
+      await sql`UPDATE site_settings SET naming_threshold = 3`;
+    }
   });
 });
 

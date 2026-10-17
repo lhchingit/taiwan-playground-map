@@ -111,6 +111,9 @@ describe('管理員操作紀錄的文字', () => {
     );
     expect(adminLogText('ban', null, { reason: '灌水' }, city)).toBe('停權：灌水');
     expect(adminLogText('unban', { reason: '灌水' }, null, city)).toBe('解除停權');
+    expect(
+      adminLogText('set_naming_threshold', { naming_threshold: 3 }, { naming_threshold: 10 }, city),
+    ).toBe('命名自動通過門檻：3 → 10 人');
     expect(roleLabel('admin')).toBe('管理員');
   });
 });

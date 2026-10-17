@@ -107,6 +107,8 @@ export function adminLogText(
       return `停權：${String(o(after).reason ?? '')}`;
     case 'unban':
       return '解除停權';
+    case 'set_naming_threshold':
+      return `命名自動通過門檻：${String(o(before).naming_threshold ?? '')} → ${String(o(after).naming_threshold ?? '')} 人`;
     default:
       return action;
   }

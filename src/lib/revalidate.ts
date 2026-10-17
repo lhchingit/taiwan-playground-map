@@ -17,7 +17,7 @@ const CITY_CODE = /^[a-z]{3}$/;
  */
 export function revalidationTags(city: unknown): string[] | null {
   if (city === undefined || city === null) {
-    return ['cities', 'attribute_defs', 'sources', 'places'];
+    return ['cities', 'attribute_defs', 'sources', 'places', 'naming-settings'];
   }
   if (typeof city !== 'string' || !CITY_CODE.test(city)) return null;
   return ['cities', 'places', `places:${city}`, `city:${city}`];

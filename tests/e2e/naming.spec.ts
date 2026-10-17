@@ -1,4 +1,5 @@
-// 幫忙命名（decisions D23）：會員選一處 → 點附近的 OSM 名稱 → 送出 → 第 3 位一致時立刻上地圖。
+// 幫忙命名（decisions D23）：會員選一處 → 點附近的 OSM 名稱 → 送出 → 達到門檻時立刻上地圖。
+// 門檻預設 10 人（管理員設定）；這裡暫時設成 3 人，跑完恢復。
 // 會在新竹市建立場地，所以跟審核一樣在 moderation 專案、其他 e2e 跑完之後才執行；跑完刪除測試資料並清快取。
 import { randomUUID } from 'node:crypto';
 import { expect, test } from '@playwright/test';
@@ -16,14 +17,22 @@ const ID = `test-naming-e2e-${process.pid}`;
 const ID2 = `${ID}-b`;
 const NAME = 'test-測試小公園';
 const created: string[] = [];
+let originalThreshold = 10;
 
-const revalidate = (request: import('@playwright/test').APIRequestContext) =>
-  request.post('/api/revalidate', {
-    headers: { Authorization: `Bearer ${E2E_REVALIDATE_SECRET}` },
-    data: { city: 'hsc' },
-  });
+// 不帶縣市：連門檻（naming-settings）一起清
+const revalidate = async (request: import('@playwright/test').APIRequestContext) => {
+  for (const data of [{ city: 'hsc' }, {}]) {
+    await request.post('/api/revalidate', {
+      headers: { Authorization: `Bearer ${E2E_REVALIDATE_SECRET}` },
+      data,
+    });
+  }
+};
 
 test.beforeAll(async ({ request }) => {
+  originalThreshold = (await sql`SELECT naming_threshold FROM site_settings`)[0]!
+    .naming_threshold as number;
+  await sql`UPDATE site_settings SET naming_threshold = 3`;
   await sql`
     INSERT INTO naming_candidates (id, city, osm_ref, district, geom, nearby) VALUES
       (${ID}, 'hsc', 'w990001', '東區', 'SRID=4326;POINT(120.9700 24.8010)',
@@ -42,6 +51,8 @@ test.afterAll(async ({ request }) => {
   await sql`DELETE FROM place_field_history WHERE place_id IN (${ID}, ${ID2})`;
   await sql`DELETE FROM places WHERE id IN (${ID}, ${ID2})`;
   await sql`DELETE FROM naming_candidates WHERE id IN (${ID}, ${ID2})`;
+  await sql`UPDATE site_settings SET naming_threshold = ${originalThreshold}`;
+  await sql`DELETE FROM admin_log WHERE action = 'set_naming_threshold' AND after = ${sql.json({ naming_threshold: 7 })}`;
   await people.cleanup();
   if (created.length) {
     await sql`DELETE FROM moderator_cities WHERE user_id IN (SELECT id FROM auth.users WHERE email = ANY(${created}))`;
@@ -69,7 +80,7 @@ test('縣市頁有「幫忙命名」入口；未登入送出會跳出登入視�
   await expect(page.getByRole('dialog')).toBeVisible();
 });
 
-test('第 3 位會員點附近的名稱送出 → 立刻加到地圖，入口少 1 處', async ({ page }) => {
+test('第 3 位會員（門檻 3 人）點附近的名稱送出 → 立刻加到地圖，入口少 1 處', async ({ page }) => {
   const email = `test-e2e-naming-${randomUUID().slice(0, 8)}@example.test`;
   created.push(email);
   await page.goto('/login?next=/hsinchu-city/naming');
@@ -110,7 +121,7 @@ test('手機寬度也能使用：地圖與表單都看得到、沒有水平捲�
   expect(overflow).toBe(false);
 });
 
-test('審核員在後台看到票數，可以直接命名（不用滿 3 票）', async ({ page }) => {
+test('審核員在後台看到票數，可以直接命名（不用達到門檻）', async ({ page }) => {
   const [voter] = await Promise.all([people.create('member')]);
   await sql`
     INSERT INTO naming_votes (candidate_id, user_id, action, name, name_key, basis)
@@ -127,4 +138,28 @@ test('審核員在後台看到票數，可以直接命名（不用滿 3 票）',
   await expect(card).toHaveCount(0); // 已經決定的不再列出
   await page.goto(`/hsinchu-city/places/${ID2}`);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('test-北區小公園');
+});
+
+test('管理員在後台調整自動通過門檻，命名頁的說明跟著改；審核員看不到設定', async ({ page }) => {
+  const admin = await people.create('admin');
+  await page.goto('/login?next=/admin/naming');
+  await loginWithEmail(page, admin.email);
+  await expect(page).toHaveURL(/\/admin\/naming$/);
+  const form = page.getByRole('form', { name: '自動通過門檻' });
+  await expect(form.getByLabel('自動通過門檻（人）')).toHaveValue('3');
+  await form.getByLabel('自動通過門檻（人）').fill('7');
+  await form.getByRole('button', { name: '儲存' }).click();
+  await expect(form.getByRole('status')).toHaveText('已改成 7 人。');
+  await expect(page.locator('.cmeta').first()).toContainText('7 位會員提出相同名稱');
+  await page.goto('/hsinchu-city/naming');
+  await expect(page.getByText('7 位會員提出相同名稱，就會加到地圖上')).toBeVisible();
+  await sql`UPDATE site_settings SET naming_threshold = 3`;
+
+  // 審核員只看得到門檻，沒有設定表單
+  await page.context().clearCookies();
+  const mod = await people.create('moderator', { cities: ['hsc'] });
+  await page.goto('/login?next=/admin/naming');
+  await loginWithEmail(page, mod.email);
+  await expect(page).toHaveURL(/\/admin\/naming$/);
+  await expect(page.getByRole('form', { name: '自動通過門檻' })).toHaveCount(0);
 });

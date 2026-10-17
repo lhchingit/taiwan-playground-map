@@ -46,20 +46,22 @@ export function loadNamingCandidates(city: string, root = '.'): NamingCandidate[
   });
 }
 
-/** 資料庫裡已經決定的待命名點（會員 3 人一致或審核員） */
+/** 資料庫裡已經決定的待命名點（會員達到門檻一致或審核員） */
 export interface NamingResult {
   osm_ref: string;
   status: 'named' | 'excluded';
   resolved_name: string | null;
   resolved_basis: string;
   resolved_by: 'votes' | 'moderator';
+  /** 投票通過時一致的人數；0029 之前通過的是 null（當時門檻是 3） */
+  resolved_votes: number | null;
   /** YYYY-MM-DD */
   resolved_on: string;
 }
 
 /**
  * 會員命名的結果 → manual-names.tsv 的列（pnpm naming:export）。已經有的鍵不動（人工命名優先）。
- * 確認者只寫「會員 3 人一致」或「審核員」，不寫暱稱或 email。
+ * 確認者只寫「會員 N 人一致」或「審核員」，不寫暱稱或 email。
  */
 export function mergeNamingResults(
   existing: readonly NameEntry[],
@@ -72,7 +74,7 @@ export function mergeNamingResults(
       key: r.osm_ref,
       name: r.status === 'named' ? (r.resolved_name ?? '') : EXCLUDE,
       basis: r.resolved_basis,
-      by: r.resolved_by === 'votes' ? '會員 3 人一致' : '審核員',
+      by: r.resolved_by === 'votes' ? `會員 ${r.resolved_votes ?? 3} 人一致` : '審核員',
       date: r.resolved_on,
     }));
   return { entries: [...existing, ...added], added };

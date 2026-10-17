@@ -64,7 +64,7 @@ python -m unittest discover -s scripts/tests -t scripts   # 匯入腳本的測�
 - **權限在資料庫層把關**（RLS、SECURITY DEFINER 函式）。前端隱藏按鈕只是體驗，不能當成安全機制。
 - 使用者提交的修改一律先進 `edit_suggestions`（status = pending），**只能透過 `review_suggestion()` 核准**，
   不可以寫任何繞過審核、直接寫入 `place_attributes` 的會員端程式。
-- 會員命名（decisions D23）的票**只能透過 `vote_naming()`／`resolve_naming()`**，3 人一致才自動建立場地；
+- 會員命名（decisions D23）的票**只能透過 `vote_naming()`／`resolve_naming()`**，達到管理員設定的人數（預設 10 人，`site_settings`）一致才自動建立場地，門檻只能透過 `admin_set_naming_threshold()` 修改；
   不可以寫任何直接寫入 `naming_candidates`、`naming_votes` 或建立場地的會員端程式。
 - 審核員不能審核自己的建議，也不能審核負責縣市以外的建議。
 - 每一個權限規則都要有對應的自動測試（用不同身分的 JWT 直接打資料庫）；改 RLS 時，權限測試必須全部通過。

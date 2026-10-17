@@ -57,6 +57,7 @@ describe('mergeNamingResults（pnpm naming:export）', () => {
         resolved_name: '會員命名',
         resolved_basis: '實地確認',
         resolved_by: 'votes',
+        resolved_votes: 10,
         resolved_on: on,
       },
       {
@@ -65,6 +66,17 @@ describe('mergeNamingResults（pnpm naming:export）', () => {
         resolved_name: '東大公園',
         resolved_basis: 'OSM 地圖上可見的名稱',
         resolved_by: 'votes',
+        resolved_votes: 10,
+        resolved_on: on,
+      },
+      {
+        // 0029 之前通過的（當時門檻是 3，沒有記人數）
+        osm_ref: 'w4',
+        status: 'named',
+        resolved_name: '西大公園',
+        resolved_basis: '實地確認',
+        resolved_by: 'votes',
+        resolved_votes: null,
         resolved_on: on,
       },
       {
@@ -73,12 +85,20 @@ describe('mergeNamingResults（pnpm naming:export）', () => {
         resolved_name: null,
         resolved_basis: '私人社區',
         resolved_by: 'moderator',
+        resolved_votes: null,
         resolved_on: on,
       },
     ]);
     expect(entries[0]).toEqual(existing[0]);
     expect(added).toEqual([
-      { key: 'w2', name: '東大公園', basis: 'OSM 地圖上可見的名稱', by: '會員 3 人一致', date: on },
+      {
+        key: 'w2',
+        name: '東大公園',
+        basis: 'OSM 地圖上可見的名稱',
+        by: '會員 10 人一致',
+        date: on,
+      },
+      { key: 'w4', name: '西大公園', basis: '實地確認', by: '會員 3 人一致', date: on },
       { key: 'n3', name: '（排除）', basis: '私人社區', by: '審核員', date: on },
     ]);
   });
