@@ -34,6 +34,32 @@ async function expectMarkersMatchList(page: Page) {
   await expect(markers(page)).toHaveCount(n);
 }
 
+/** 縣市頁左側的標題區（載入中的骨架也有 header.head，用出發點區分） */
+const head = (page: Page) => page.locator('header.head', { has: page.getByTestId('origin-name') });
+
+/** 標題區的插圖不壓到下一行（…．切換縣市），標題區也沒有被裁切 */
+async function expectHeadNotClipped(page: Page) {
+  await page.goto('/hsinchu-city');
+  await expect(count(page)).toHaveText(String(TOTAL));
+  // 版面還沒算好時量到的都是 0：重試到插圖真的有位置為止
+  await expect(async () => {
+    const m = await head(page).evaluate((h) => ({
+      artBottom: h.querySelector('.pa-mini')!.getBoundingClientRect().bottom,
+      subTop: h.querySelector('.sub')!.getBoundingClientRect().top,
+      clipped: h.scrollHeight - h.clientHeight,
+    }));
+    expect(m.artBottom).toBeGreaterThan(0);
+    expect(m.artBottom).toBeLessThanOrEqual(m.subTop);
+    expect(m.clipped).toBeLessThanOrEqual(1);
+  }).toPass({ timeout: 5000 });
+  // 標題區最下面的按鈕看得到、按得到（沒被裁掉）
+  const btn = head(page).getByRole('button', { name: '使用目前位置' });
+  await btn.scrollIntoViewIfNeeded();
+  const box = (await btn.boundingBox())!;
+  const hb = (await head(page).boundingBox())!;
+  expect(box.y + box.height).toBeLessThanOrEqual(hb.y + hb.height);
+}
+
 test.beforeEach(async ({ page }) => setup(page));
 
 test('OpenFreeMap 失敗時改用 OSM 官方圖磚；版權標示連到 osm.org/copyright', async ({ browser }) => {
@@ -64,6 +90,10 @@ test('OpenFreeMap 失敗時改用 OSM 官方圖磚；版權標示連到 osm.org/
 
 test.describe('桌機', () => {
   test.skip(({ isMobile }) => isMobile, '桌機版面');
+
+  test('標題區：插圖不壓到「切換縣市」那一行', async ({ page }) => {
+    await expectHeadNotClipped(page);
+  });
 
   test('/ 導向 /hsinchu-city', async ({ page }) => {
     await page.goto('/');
@@ -239,17 +269,28 @@ test.describe('手機', () => {
     expect(overflowing).toEqual([]);
   });
 
+  test('標題區沒有被壓扁：標題、出發點、交通方式都看得到', async ({ page }) => {
+    await expectHeadNotClipped(page);
+  });
+
   test('選取選項（變粗體、加勾）時按鈕寬度不變，不會掉到下一行', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 860 });
     await page.goto('/hsinchu-city');
     await page.getByRole('button', { name: '篩選條件' }).click();
     const baby = chip(page, '嬰兒鞦韆');
-    const before = await baby.boundingBox();
+    // 點擊會把面板捲動到按鈕的位置，所以量相對於同一組選項的位置
+    const box = () =>
+      baby.evaluate((c) => {
+        const r = c.getBoundingClientRect();
+        return { width: r.width, y: r.y - c.parentElement!.getBoundingClientRect().y };
+      });
+    await baby.scrollIntoViewIfNeeded();
+    const before = await box();
     await baby.click();
     await expect(baby).toHaveAttribute('aria-pressed', 'true');
-    const after = await baby.boundingBox();
-    expect(after?.width).toBeCloseTo(before!.width, 0);
-    expect(after?.y).toBeCloseTo(before!.y, 0);
+    const after = await box();
+    expect(after.width).toBeCloseTo(before.width, 0);
+    expect(after.y).toBeCloseTo(before.y, 0);
 
     // 有類別顏色的每個選項（遊樂設施、生活機能）：選取樣式套上前後一樣寬、一樣高
     const changed = await page.evaluate(() =>
