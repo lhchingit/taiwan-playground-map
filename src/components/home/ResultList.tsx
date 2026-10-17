@@ -5,13 +5,14 @@ import {
   ageText,
   cardTags,
   distanceText,
+  groupTagKeys,
   parkingFilterOn,
   parkingText,
   parkingTri,
   stayText,
   TRI_LABEL,
 } from '@/lib/format';
-import { keyTones } from '@/lib/play-groups';
+import { groupKeyMap, keyTones } from '@/lib/play-groups';
 import type { AttributeCatalog, CityPlace } from '@/lib/places';
 
 /** 清單卡片的狀態標籤（開放中不標示） */
@@ -43,7 +44,7 @@ export function ResultList({
   placeHref,
   onSelect,
 }: Props) {
-  const selectedKeys = [...filters.play, ...filters.amen];
+  const groupKeys = groupKeyMap(catalog.playGroups);
   const showParking = parkingFilterOn(filters);
   const tones = keyTones(catalog);
 
@@ -99,7 +100,15 @@ export function ResultList({
                       {pk === 'u' ? '?' : ''}停車：{parkingText(p.parking)}
                     </span>
                   )}
-                  {cardTags(p.attrs, selectedKeys, catalog.order).map(({ key, v }) => (
+                  {cardTags(
+                    p.attrs,
+                    [
+                      ...filters.play,
+                      ...groupTagKeys(p.attrs, filters.groups, groupKeys),
+                      ...filters.amen,
+                    ],
+                    catalog.order,
+                  ).map(({ key, v }) => (
                     <span
                       key={key}
                       className={`tag ${v}`}

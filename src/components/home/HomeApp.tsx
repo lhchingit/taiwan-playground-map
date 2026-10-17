@@ -27,6 +27,7 @@ import {
 import { exampleOrigin, type NamedOrigin } from '@/lib/origin';
 import type { PlaceDetail } from '@/lib/place-detail';
 import type { AttributeCatalog, CityPlace } from '@/lib/places';
+import { groupKeyMap } from '@/lib/play-groups';
 import { useTravelMode } from '@/lib/prefs';
 import { FilterPanel } from './FilterPanel';
 import { OriginControls } from './OriginControls';
@@ -61,9 +62,14 @@ function placeIdFromPath(pathname: string, slug: string): string | null {
 
 export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 }: HomeAppProps) {
   const known = useMemo(
-    () => ({ play: catalog.playGroups.flatMap((g) => g.keys), amen: catalog.amenity }),
+    () => ({
+      play: catalog.playGroups.flatMap((g) => g.keys),
+      amen: catalog.amenity,
+      groups: Object.keys(groupKeyMap(catalog.playGroups)),
+    }),
     [catalog],
   );
+  const groupKeys = useMemo(() => groupKeyMap(catalog.playGroups), [catalog]);
   const [filters, setFilters] = useState<Filters>(() => queryToFilters(query, known));
   const [origin, setOriginState] = useState<NamedOrigin>(() => exampleOrigin(city));
   const [fitSeq, setFitSeq] = useState(0);
@@ -233,8 +239,8 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
     [codes, city.code, places, otherCities],
   );
   const { results, unknownHint } = useMemo(
-    () => filterPlaces(allPlaces, filters, origin),
-    [allPlaces, filters, origin],
+    () => filterPlaces(allPlaces, filters, origin, groupKeys),
+    [allPlaces, filters, origin, groupKeys],
   );
   const selectedPlace = selected ? results.find((r) => r.id === selected) : undefined;
   const selectedId = selectedPlace ? selectedPlace.id : null;
@@ -243,7 +249,7 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
   function changeFilters(f: Filters) {
     setFilters(f);
     const p = selected ? allPlaces.find((x) => x.id === selected) : undefined;
-    if (p && !passes(p, haversineKm(origin, p), f, f.includeUnknown)) closePlace();
+    if (p && !passes(p, haversineKm(origin, p), f, f.includeUnknown, groupKeys)) closePlace();
   }
   const failedNames = failed.map((c) => cities.find((x) => x.code === c)?.name ?? c);
 

@@ -1,7 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_FILTERS, filtersToQuery, queryToFilters, type Filters } from '@/lib/filter';
 
-const known = { play: ['slide', 'sandpit', 'swing'], amen: ['toilet', 'shade'] };
+const known = {
+  play: ['slide', 'sandpit', 'swing'],
+  amen: ['toilet', 'shade'],
+  groups: ['climb', 'ride'],
+};
 
 describe('filtersToQuery', () => {
   it('預設條件 → 空字串', () => {
@@ -23,6 +27,7 @@ describe('filtersToQuery', () => {
     const f: Filters = {
       maxKm: 20,
       play: ['swing'],
+      groups: ['ride', 'climb'],
       amen: ['shade', 'toilet'],
       stay: ['60_120', 'lt30'],
       env: 'out',
@@ -33,7 +38,7 @@ describe('filtersToQuery', () => {
       pkMin: 30,
     };
     expect(filtersToQuery(f)).toBe(
-      'play=swing&amen=shade,toilet&km=20&stay=60_120,lt30&env=out&free=1&pk=lot,street&pkfee=paid&pkmin=30',
+      'play=swing&grp=climb,ride&amen=shade,toilet&km=20&stay=60_120,lt30&env=out&free=1&pk=lot,street&pkfee=paid&pkmin=30',
     );
   });
 
@@ -61,6 +66,7 @@ describe('queryToFilters', () => {
     const f: Filters = {
       maxKm: 7,
       play: ['sandpit', 'swing'],
+      groups: ['climb'],
       amen: ['shade'],
       stay: ['half'],
       env: 'in',
@@ -99,6 +105,12 @@ describe('queryToFilters', () => {
     const f = queryToFilters('age=8&size=S&play=slide', known);
     expect(f).toEqual({ ...DEFAULT_FILTERS, play: ['slide'] });
     expect(filtersToQuery(f)).toBe('play=slide');
+  });
+
+  it('遊樂設施類別（decisions D26）：不認得的代號丟掉', () => {
+    const f = queryToFilters('grp=climb,nope,climb', known);
+    expect(f).toEqual({ ...DEFAULT_FILTERS, groups: ['climb'] });
+    expect(filtersToQuery(f)).toBe('grp=climb');
   });
 
   it('重複值去掉並排序', () => {

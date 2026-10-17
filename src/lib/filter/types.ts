@@ -10,6 +10,8 @@ export interface Filters {
   maxKm: number | null;
   /** 遊樂設施，全部都要有（AND） */
   play: string[];
+  /** 遊樂設施類別代號（decisions D26）：每一類有其中任一種即可，類別之間 AND */
+  groups: string[];
   /** 生活機能，全部都要有（AND） */
   amen: string[];
   /** 停留時長，符合其中一個即可（OR） */
@@ -29,6 +31,7 @@ export interface Filters {
 export const DEFAULT_FILTERS: Readonly<Filters> = Object.freeze({
   maxKm: null,
   play: [],
+  groups: [],
   amen: [],
   stay: [],
   env: 'all',
@@ -54,6 +57,9 @@ export interface FilterPlace {
   attrs: Readonly<Record<string, Tri>>;
   parking: { type: ParkingType; fee: ParkingFee; spaces: number | null };
 }
+
+/** 類別代號 → 這一類的屬性 key；不在裡面的代號視同沒選 */
+export type GroupKeys = Readonly<Record<string, readonly string[]>>;
 
 export interface Origin {
   lat: number;

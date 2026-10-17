@@ -11,6 +11,35 @@ export const GROUP_TONES: Readonly<Record<string, Tone>> = {
   跑跳體能: 'grass',
   感官創意: 'grape',
 };
+/**
+ * 類別代號（decisions D26）：網址的 grp 參數用，例如 ?grp=climb。
+ * 沒有代號的類別不能整類選取（類別名稱不做成按鈕），畫面照常。
+ */
+export const GROUP_IDS: Readonly<Record<string, string>> = {
+  滑行擺盪: 'ride',
+  攀爬平衡: 'climb',
+  玩沙玩水: 'sandwater',
+  跑跳體能: 'active',
+  感官創意: 'sense',
+};
+
+/** 類別名稱 → 代號；沒有代號回傳 undefined */
+export function groupId(name: string): string | undefined {
+  return GROUP_IDS[name];
+}
+
+/** 類別代號 → 這一類的屬性 key（篩選「其中任一種」用） */
+export function groupKeyMap(
+  playGroups: readonly { name: string; keys: readonly string[] }[],
+): Record<string, readonly string[]> {
+  const out: Record<string, readonly string[]> = {};
+  for (const g of playGroups) {
+    const id = groupId(g.name);
+    if (id) out[id] = g.keys;
+  }
+  return out;
+}
+
 /** 生活機能（廁所、飲水機等）沒有類別名稱 */
 export const AMENITY_TONE: Tone = 'leaf';
 

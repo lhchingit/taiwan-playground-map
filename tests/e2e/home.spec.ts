@@ -105,6 +105,33 @@ test.describe('桌機', () => {
     await expectMarkersMatchList(page);
   });
 
+  test('遊樂設施類別＝其中任一種（decisions D26）：筆數照標準答案；同一類的類別與單項互相取代', async ({
+    page,
+  }) => {
+    const any = expected('攀爬平衡（任一種）');
+    await page.goto('/hsinchu-city');
+    await chip(page, '攀爬架').click();
+    const climbingOnly = Number(await count(page).innerText());
+
+    await chip(page, '攀爬平衡').click();
+    await expect(chip(page, '攀爬平衡')).toHaveAttribute('aria-pressed', 'true');
+    await expect(chip(page, '攀爬架')).toHaveAttribute('aria-pressed', 'false');
+    await expect(count(page)).toHaveText(String(any.expected_count));
+    expect(any.expected_count).toBeGreaterThanOrEqual(climbingOnly);
+    await expect(page.getByText(`另有 ${any.unknown_hint} 處資料未知`)).toBeVisible();
+    await expect(page).toHaveURL(/\?grp=climb$/);
+    await expectMarkersMatchList(page);
+
+    await chip(page, '攀岩牆').click();
+    await expect(chip(page, '攀爬平衡')).toHaveAttribute('aria-pressed', 'false');
+    await expect(chip(page, '攀岩牆')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page).toHaveURL(/\?play=climbing_wall$/);
+
+    await page.goto('/hsinchu-city?grp=climb&amen=toilet');
+    await expect(count(page)).toHaveText(String(expected('攀爬平衡＋廁所').expected_count));
+    await expect(chip(page, '攀爬平衡')).toHaveAttribute('aria-pressed', 'true');
+  });
+
   test('只看免費：清冊場地的收費未知，算在「另有 N 處資料未知」', async ({ page }) => {
     const free = expected('只看免費');
     await page.goto('/hsinchu-city');

@@ -73,6 +73,7 @@ export function activeFilterCount(f: Filters): number {
   const d = DEFAULT_FILTERS;
   return (
     f.play.length +
+    f.groups.length +
     f.amen.length +
     f.stay.length +
     f.pkType.length +
@@ -99,4 +100,20 @@ export function cardTags(
     .filter((k) => v(k) === 'y')
     .slice(0, 6)
     .map((key) => ({ key, v: 'y' as const }));
+}
+
+/**
+ * 選了遊樂設施類別時（decisions D26），卡片要列出的屬性：這一類裡場地「有」的項目；
+ * 一項都沒有（靠「包含資料未知」通過）時列出未知的項目。
+ */
+export function groupTagKeys(
+  attrs: Readonly<Record<string, Tri | undefined>>,
+  groups: readonly string[],
+  groupKeys: Readonly<Record<string, readonly string[]>>,
+): string[] {
+  return groups.flatMap((id) => {
+    const keys = groupKeys[id] ?? [];
+    const yes = keys.filter((k) => attrs[k] === 'y');
+    return yes.length > 0 ? yes : keys.filter((k) => (attrs[k] ?? 'u') === 'u');
+  });
 }

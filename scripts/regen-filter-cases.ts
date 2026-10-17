@@ -9,7 +9,14 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { chromium } from '@playwright/test';
-import { DEFAULT_FILTERS, filterPlaces, type FilterPlace, type Filters } from '../src/lib/filter';
+import {
+  DEFAULT_FILTERS,
+  filterPlaces,
+  type FilterPlace,
+  type Filters,
+  type GroupKeys,
+} from '../src/lib/filter';
+import { GROUP_IDS, groupKeyMap } from '../src/lib/play-groups';
 import type { Place, SeedFile, Tri } from '../src/types/place';
 
 const FIXTURE = 'tests/fixtures/filter-cases.json';
@@ -43,6 +50,9 @@ function toFilterPlace(p: Place): FilterPlace {
 }
 
 async function prototypeAnswers(places: Place[], fx: Fixture): Promise<Answer[]> {
+  const groupNames: Record<string, string> = Object.fromEntries(
+    Object.entries(GROUP_IDS).map(([name, id]) => [id, name]),
+  );
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage();
@@ -50,7 +60,7 @@ async function prototypeAnswers(places: Place[], fx: Fixture): Promise<Answer[]>
     await page.route(/^https?:/, (r) => r.abort());
     await page.goto(PROTOTYPE);
     return await page.evaluate(
-      ({ places, cases, origin }) => {
+      ({ places, cases, origin, groupNames }) => {
         /* eslint-disable @typescript-eslint/no-explicit-any */
         const w = globalThis as any;
         // 原型的全域變數：P（場地陣列）、st（篩選狀態）、hav()、pass()
@@ -66,6 +76,8 @@ async function prototypeAnswers(places: Place[], fx: Fixture): Promise<Answer[]>
             maxKm: f.maxKm ?? null,
             age: f.age ?? null,
             play: new Set(f.play ?? []),
+            // 原型用類別名稱；fixture 用代號（decisions D26）
+            grp: new Set((f.groups ?? []).map((id: string) => groupNames[id])),
             amen: new Set(f.amen ?? []),
             stay: new Set(f.stay ?? []),
             size: new Set(f.size ?? []),
@@ -86,19 +98,25 @@ async function prototypeAnswers(places: Place[], fx: Fixture): Promise<Answer[]>
           };
         });
       },
-      { places, cases: fx.cases, origin: fx.origin },
+      { places, cases: fx.cases, origin: fx.origin, groupNames },
     );
   } finally {
     await browser.close();
   }
 }
 
-function productionAnswer(places: FilterPlace[], c: Case, origin: Fixture['origin']): Answer {
+function productionAnswer(
+  places: FilterPlace[],
+  c: Case,
+  origin: Fixture['origin'],
+  groupKeys: GroupKeys,
+): Answer {
   const { unk, ...rest } = c.filters;
   const r = filterPlaces(
     places,
     { ...DEFAULT_FILTERS, ...rest, includeUnknown: unk ?? false },
     origin,
+    groupKeys,
   );
   return { ids: r.results.map((p) => p.id), hint: r.unknownHint };
 }
@@ -114,11 +132,12 @@ async function main() {
 
   const proto = await prototypeAnswers(seed.places, fx);
   const prod = seed.places.map(toFilterPlace);
+  const groupKeys = groupKeyMap(seed.labels.play_groups);
 
   const problems: string[] = [];
   fx.cases.forEach((c, i) => {
     const p = proto[i]!;
-    const q = productionAnswer(prod, c, fx.origin);
+    const q = productionAnswer(prod, c, fx.origin, groupKeys);
     let answer = p;
     if (!same(p, q)) {
       if (!c.deviation) {

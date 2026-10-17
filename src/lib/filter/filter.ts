@@ -1,8 +1,9 @@
 // 篩選語意（CLAUDE.md 資料規則 2）：預設只有 y 通過；包含資料未知時 u（含 null 欄位）也通過；n 永遠不通過。
 // 遊樂設施、生活機能是 AND；停留時長、停車類型是 OR。
+// 遊樂設施類別（decisions D26）是「其中任一種」：類別內 OR，類別之間、類別與其他條件 AND。
 import { readAttr } from '@/types/place';
 import { haversineKm } from './distance';
-import type { FilterPlace, Filters, Origin } from './types';
+import type { FilterPlace, Filters, GroupKeys, Origin } from './types';
 
 /** 已知時看 known 的結果；未知時看是否包含未知 */
 const tri = (known: boolean | null, includeUnknown: boolean) =>
@@ -13,12 +14,21 @@ export function passes(
   km: number,
   f: Filters,
   includeUnknown: boolean,
+  groupKeys: GroupKeys = {},
 ): boolean {
   if (f.maxKm !== null && km > f.maxKm) return false;
 
   for (const key of [...f.play, ...f.amen]) {
     const v = readAttr(place.attrs, key);
     if (!(v === 'y' || (includeUnknown && v === 'u'))) return false;
+  }
+
+  // 類別：有一項 y 就通過；都不是 y 時，包含未知且至少一項 u 才通過
+  for (const id of f.groups) {
+    const keys = groupKeys[id];
+    if (!keys) continue;
+    const vs = keys.map((k) => readAttr(place.attrs, k));
+    if (!(vs.includes('y') || (includeUnknown && vs.includes('u')))) return false;
   }
 
   if (
@@ -61,13 +71,14 @@ export function filterPlaces<T extends FilterPlace>(
   places: readonly T[],
   filters: Filters,
   origin: Origin,
+  groupKeys: GroupKeys = {},
 ): FilterResult<T> {
   const withKm = places.map((p) => ({ ...p, km: haversineKm(origin, p) }));
   const results = withKm
-    .filter((p) => passes(p, p.km, filters, filters.includeUnknown))
+    .filter((p) => passes(p, p.km, filters, filters.includeUnknown, groupKeys))
     .sort((a, b) => a.km - b.km || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const unknownHint = filters.includeUnknown
     ? 0
-    : withKm.filter((p) => passes(p, p.km, filters, true)).length - results.length;
+    : withKm.filter((p) => passes(p, p.km, filters, true, groupKeys)).length - results.length;
   return { results, unknownHint };
 }
