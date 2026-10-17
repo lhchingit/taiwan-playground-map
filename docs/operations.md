@@ -25,53 +25,84 @@
 ### B. Supabase 正式專案
 
 - [ ] 建立專案，區域選 **Tokyo（ap-northeast-1）**，資料庫密碼存在密碼管理工具。
-- [ ] 套用所有 migration：
+- [ ] 套用所有 migration。`login`、`link` 要在**自己的終端機**執行：`login` 會開瀏覽器授權，`link` 會問資料庫密碼。在 Claude Code 裡用 `!` 執行會出現 non-TTY 錯誤。
   ```bash
+  pnpm exec supabase login
   pnpm exec supabase link --project-ref <專案代碼>
+  pnpm exec supabase db push --dry-run   # 先看要套用哪些 migration
   pnpm exec supabase db push
   ```
-- [ ] 記下 Project URL 與 anon key（Project Settings → API）。**網站不使用 service role key。**
-- [ ] 第 1 節：取得 Postgres 連線字串（資料作業用）。
+- [ ] 記下 Project URL（`https://<專案代碼>.supabase.co`）與 anon key（Project Settings → API Keys）。
+  - anon key 用 **Legacy API Keys** 分頁的 `anon`（`eyJ…` 開頭），跟本機與 CI 測試的同一種；沒有的話用新版的 Publishable key（`sb_publishable_…`）。
+  - **不可以用 `service_role`／`sb_secret_…`**：它會略過 RLS，網站不使用。
+- [ ] 第 1 節：取得 Postgres 連線字串（匯入、上線縣市用，**網站不用**）。
 - [ ] 第 4 節：登入設定。
-  - Site URL、Redirect URLs 先填 `https://<專案>.vercel.app`。
+  - **Site URL 新專案預設是 `http://localhost:3000`，一定要改**成 `https://<專案>.vercel.app`；Redirect URLs 加上 `https://<專案>.vercel.app/**`。網址不在清單裡時，Supabase 會改導回 Site URL，登入後就會跑到 localhost。這兩項改完立刻生效，不用重新部署。
   - 設定 Google 登入。
   - **關閉 Email provider**（上線初期只開 Google，decisions D10）。SMTP、信件範本先不用設定。
 - [ ] 第 4 節第 6 項：Cloudflare Turnstile，網域先填 `<專案>.vercel.app`。
 - [ ] Google Cloud Console 的 OAuth 同意畫面發布成「**正式版**」：還在「測試」狀態時，只有列在測試使用者裡的帳號能登入。
 
-### C. 資料匯入（還不上線）
+### C. 資料匯入，並先上線一個縣市
+
+**第一次部署前，至少要有一個縣市已經上線。** 建置時會產生每個已上線縣市與場地的頁面，一個都沒有時建置會失敗（`generateStaticParams functions must return at least one result`）。
 
 - [ ] 第 2 節：產生 `REVALIDATE_SECRET`。
-- [ ] 第 3 節：設定 GitHub 的 `production` environment；`SITE_URL` 填 `https://<專案>.vercel.app`。
-- [ ] 資料作業匯入新竹市：`hsc` + `dry-run` 看過 job summary，再 `hsc` + `seed`（步驟同下方「匯入一個新縣市」第 3 步）。
+- [ ] 匯入新竹市並上線，兩種方法擇一：
+  - **從本機（第一次部署建議用這個）**：照下方「從本機操作」建立 `.env.prod-db`，然後：
+    ```bash
+    set -a; . ./.env.prod-db; set +a
+    pnpm seed --city hsc --dry-run --allow-remote   # 看筆數
+    pnpm seed --city hsc --allow-remote
+    pnpm city launch hsc --allow-remote
+    ```
+  - **GitHub Actions**：第 3 節設定 `production` environment（`SITE_URL` 填 `https://<專案>.vercel.app`），資料作業 `hsc` + `dry-run` 看過 job summary，再 `hsc` + `seed`、`hsc` + `launch`（步驟同下方「匯入一個新縣市」第 3 步）。
+- 這時網站還沒部署，launch 清快取會失敗或略過，這是正常的。上線後，新竹市的資料就能從 Supabase 的公開 API 讀到（本來就是公開資料）。
 
 ### D. Vercel
 
-- [ ] Vercel → Add New → Project → Import 這個 GitHub repo。Framework 會自動偵測成 Next.js，pnpm 版本照 `package.json` 的 `packageManager`。
-- [ ] Settings → General → Node.js Version 選 **24.x**（`engines` 要求 `>=24`）。
+- [ ] Vercel → Add New → Project → Import 這個 GitHub repo。
+  - **Project Name 決定網址** `https://<名稱>.vercel.app`，`SITE_URL`、Supabase 登入設定都用它，先想好。
+  - Framework（Next.js）、Root Directory、Build／Install Command 都用預設；pnpm 版本照 `package.json` 的 `packageManager`。
+  - **環境變數在這個畫面就填好**（下表）：按 Deploy 後馬上建置，建置時要連 Supabase，少了就失敗。
+- [ ] Node.js：`package.json` 的 `engines` 是 `>=24`，Vercel 會自動用 24.x（建置紀錄有一行「engines 蓋過 Project Settings」的警告是正常的）。要手動改在 Settings → Build and Deployment → Node.js Version。
 - [ ] Settings → Functions → Function Region 選 **Tokyo（hnd1）**，跟 Supabase 同區。
 - [ ] Settings → Environment Variables（Production）：
 
-  | 名稱 | 內容 |
-  |---|---|
-  | `SUPABASE_URL` | B 的 Project URL |
-  | `SUPABASE_ANON_KEY` | B 的 anon key |
-  | `SITE_URL` | `https://<專案>.vercel.app`（結尾不要 `/`） |
-  | `REVALIDATE_SECRET` | C 的密鑰（跟 GitHub 的相同） |
-  | `TURNSTILE_SITE_KEY`、`TURNSTILE_SECRET_KEY` | B 的 Turnstile 金鑰 |
+  | 名稱 | 類型 | 內容 |
+  |---|---|---|
+  | `SUPABASE_URL` | config | `https://<專案代碼>.supabase.co`。**不是** `postgresql://…` 連線字串，填錯會出現 `Invalid supabaseUrl` |
+  | `SUPABASE_ANON_KEY` | config | B 的 anon key（公開金鑰） |
+  | `SITE_URL` | config | `https://<專案>.vercel.app`（結尾不要 `/`） |
+  | `REVALIDATE_SECRET` | secret | C 的密鑰（跟 `.env.prod-db`、GitHub 的相同） |
+  | `TURNSTILE_SITE_KEY` | config | B 的 Turnstile site key |
+  | `TURNSTILE_SECRET_KEY` | secret | B 的 Turnstile secret key |
 
-  不用設定：`SUPABASE_PUBLIC_URL`、`NEXT_OUTPUT`（只有 Docker 用）、`SUPABASE_MAX_CONCURRENCY`（預設 8）。
-- [ ] 部署。**建置時會連 Supabase 產生頁面**，所以 B、C 要先完成。之後合併到 `main` 會自動部署。
-- [ ] 資料作業 `hsc` + `launch`：會通知網站清快取，新竹市立刻出現。
+  值不要加引號、前後不要有空白。不用設定：`DATABASE_URL`（網站不直接連資料庫，含密碼的連線字串不要放進 Vercel）、`SUPABASE_PUBLIC_URL`、`NEXT_OUTPUT`（只有 Docker 用）、`SUPABASE_MAX_CONCURRENCY`（預設 8）。
+- [ ] 部署。Deployments 是空的（沒有自動部署）時，用 Deployments 右上角的 **Create Deployment**，分支填 `main`。之後合併到 `main` 會自動部署。
+- [ ] 改了環境變數或 Supabase 的登入方式之後要重新部署：Deployments → 最新那筆的 **⋯ → Redeploy**，不要勾「Use existing Build Cache」。
+- [ ] `.env.prod-db` 補上 `SITE_URL`，之後上線、下線縣市都會通知網站清快取。
 
 ### E. 上線後確認
 
 - [ ] 首頁直接導向 `/hsinchu-city`（只有一個縣市上線時）；地圖、篩選、場地頁正常。
 - [ ] `/sitemap.xml` 有場地頁，`/robots.txt` 的網址是正式網址。
-- [ ] 登入頁只有「用 Google 登入」，實際登入一次。
+- [ ] 登入頁只有「用 Google 登入」，實際登入一次。登入頁讀取 Supabase 開了哪些登入方式，結果快取 1 小時：改過 Google／Email 設定後要 Redeploy 才會立刻生效。
 - [ ] 第 5 節：設定第一位管理員。
 - [ ] 回報修正走一次：Turnstile 通過 → 審核後台看得到 → 核准後場地頁更新。
 - [ ] 用手機實際打開看一次。
+
+### 第一次部署常見錯誤
+
+| 看到的狀況 | 原因 | 解法 |
+|---|---|---|
+| 建置失敗：`all generateStaticParams functions must return at least one result` | 還沒有任何縣市上線 | 先 `launch` 一個縣市（C），再 Redeploy |
+| 建置失敗：`Invalid supabaseUrl: Must be a valid HTTP or HTTPS URL` | `SUPABASE_URL` 填錯（少了 `https://`、有引號或空白、填成連線字串或 anon key） | 改成 `https://<專案代碼>.supabase.co`，Redeploy |
+| 建置失敗：`缺少 SUPABASE_URL 或 SUPABASE_ANON_KEY` | 環境變數沒設，或沒勾 Production | 補上後 Redeploy |
+| Google 登入後導回 `localhost:3000` | Supabase 的 Site URL 還是預設值，或 Redirect URLs 沒有 `https://<專案>.vercel.app/**` | 改 Supabase URL Configuration（立刻生效） |
+| 登入頁還有「寄登入連結」，或 Google 按鈕不能按 | 登入方式的快取還沒過期 | Redeploy |
+| `supabase login` 出現 `LoginMissingTokenError`（non-TTY） | 在不是終端機的環境執行 | 在自己的終端機執行 |
+| Deployments 一直是空的 | 沒有觸發第一次部署，或 Vercel 沒有這個 repo 的權限 | Settings → Git 確認已連上 repo，再 Create Deployment |
 
 ### F. 換成正式網域時
 
@@ -89,7 +120,7 @@
 Supabase 後台 → 專案 → **Connect** → 複製 Postgres 連線字串（含密碼），例如：
 `postgresql://postgres.xxxx:密碼@aws-0-ap-northeast-1.pooler.supabase.com:5432/postgres`
 
-匯入要在交易裡執行，請用 **Session pooler（埠 5432）或直連**，不要用 Transaction pooler（埠 6543）。
+匯入要在交易裡執行，請用 **Session pooler（埠 5432）或直連**，不要用 Transaction pooler（埠 6543）。直連（`db.<專案代碼>.supabase.co`）只支援 IPv6，連不上時改用 Session pooler。
 
 ### 2. 網站的清快取密鑰
 
@@ -142,7 +173,7 @@ GitHub repo → **Settings → Environments → New environment**，名稱 `prod
 管理員的角色只能由另一位管理員在 `/admin/users` 設定，所以第一位要直接在資料庫設定，只做一次：
 
 1. 用自己的 Google 帳號在正式網站登入一次，系統會建立 profile。
-2. Supabase Studio → SQL Editor 執行（換成自己的 Email）：
+2. Supabase Studio → SQL Editor 執行（換成自己的 Email；也可以從本機用 `.env.prod-db` 的 `DATABASE_URL` 連線執行）：
    ```sql
    UPDATE profiles SET role = 'admin'
    WHERE id = (SELECT id FROM auth.users WHERE email = 'you@example.com');
@@ -209,14 +240,24 @@ data.gov.tw 上三份資料的「更新時間」與下載網址：
 - **匯入失敗**：整個匯入在同一個交易裡，失敗就全部回滾，資料庫不會停在一半。看 job 的錯誤訊息修正後重跑。
 - **清快取失敗**：資料庫已經更新，網站最多 1 小時後也會更新。檢查 `SITE_URL`、`REVALIDATE_SECRET` 是否跟網站的設定一致。
 
-## 從本機操作（不建議，只在 GitHub Actions 不能用時）
+## 從本機操作
 
-```bash
-DATABASE_URL="<連線字串>" SITE_URL="https://example.tw" REVALIDATE_SECRET="<密鑰>" \
-  pnpm seed --city hsq --dry-run --allow-remote
-# 確認後拿掉 --dry-run；上線：
-DATABASE_URL=... SITE_URL=... REVALIDATE_SECRET=... pnpm city launch hsq --allow-remote
-```
+第一次部署（GitHub 的 `production` environment 還沒設定）時用這個；之後平常的匯入、上線建議用 GitHub Actions 的資料作業（有核准紀錄）。
+
+1. 在專案根目錄建立 `.env.prod-db`（`.gitignore`、`.dockerignore` 都排除 `.env*`，不會被提交或打包）。**不要用 `.env.production.local`**：Next.js 建置時會自動讀那個檔。
+   ```bash
+   DATABASE_URL='postgresql://postgres...:<密碼>@...:5432/postgres'
+   SITE_URL='https://example.tw'
+   REVALIDATE_SECRET='<密鑰>'
+   ```
+   `DATABASE_URL` 見第 1 節；密碼裡有 `@`、`#`、`/` 等字元時要先做網址編碼。
+2. 載入後執行（Git Bash／macOS／Linux）：
+   ```bash
+   set -a; . ./.env.prod-db; set +a
+   pnpm seed --city hsq --dry-run --allow-remote
+   # 確認後拿掉 --dry-run；上線：
+   pnpm city launch hsq --allow-remote
+   ```
 
 不加 `--allow-remote` 時，工具會拒絕連到本機以外的資料庫。
 
