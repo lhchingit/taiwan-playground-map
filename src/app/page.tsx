@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import { AuthButton } from '@/components/auth/AuthButton';
 import { NearestCity } from '@/components/home/NearestCity';
 import { TaiwanMap } from '@/components/home/TaiwanMap';
 import { sortCitiesNorthToSouth } from '@/lib/cities';
@@ -17,6 +18,10 @@ export default async function Home() {
 
   return (
     <main className="place-page">
+      {/* 登入／暱稱選單（我的貢獻、審核後台、登出）：瀏覽器端查登入狀態，首頁仍是靜態頁 */}
+      <nav className="place-nav home-nav" aria-label="導覽">
+        <AuthButton />
+      </nav>
       <article className="place-article">
         <div className="dhead">
           <h1>全台放電地圖</h1>

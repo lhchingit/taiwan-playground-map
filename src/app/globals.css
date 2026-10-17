@@ -878,6 +878,10 @@ a.card {
   justify-content: space-between;
   gap: 8px;
 }
+/* 首頁沒有「回上一頁」的連結，登入按鈕靠右 */
+.home-nav {
+  justify-content: flex-end;
+}
 .auth-slot {
   display: inline-block;
   min-width: 56px;
