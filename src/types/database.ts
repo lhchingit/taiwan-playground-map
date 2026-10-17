@@ -369,6 +369,26 @@ isOneToOne: false
                   Relationships: [
                     
                   ]
+                },"saved_filters": {
+                  Row: {
+                    "created_at": string,"id": string,"name": string,"query": string,"user_id": string
+                  }
+                  ComputedFields: never
+                  Insert: {
+                    "created_at"?: string,"id"?: string,"name": string,"query": string,"user_id"?: string
+                  }
+                  Update: {
+                    "created_at"?: string,"id"?: string,"name"?: string,"query"?: string,"user_id"?: string
+                  }
+                  Relationships: [
+                    {
+      foreignKeyName: "saved_filters_user_id_fkey"
+      columns: ["user_id"]
+isOneToOne: false
+      referencedRelation: "profiles"
+      referencedColumns: ["id"]
+    }
+                  ]
                 },"site_settings": {
                   Row: {
                     "id": boolean,"naming_threshold": number,"updated_at": string,"updated_by": string | null

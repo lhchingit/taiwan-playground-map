@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useSyncExternalStore } from 'react';
+import { useState, useSyncExternalStore, type ReactNode } from 'react';
 import {
   DEFAULT_FILTERS,
   MAX_KM_OPTIONS,
@@ -16,6 +16,8 @@ interface Props {
   filters: Filters;
   onChange: (f: Filters) => void;
   catalog: AttributeCatalog;
+  /** 面板最上面的「我的篩選」（decisions D27） */
+  saved?: ReactNode;
 }
 
 const PK_PRESETS = [10, 30, 50, 100];
@@ -80,7 +82,7 @@ function subscribeMobile(fn: () => void) {
 }
 const isMobileNow = () => window.matchMedia(MOBILE).matches;
 
-export function FilterPanel({ filters: f, onChange, catalog }: Props) {
+export function FilterPanel({ filters: f, onChange, catalog, saved }: Props) {
   const set = (patch: Partial<Filters>) => onChange({ ...f, ...patch });
   const count = activeFilterCount(f);
   // null = 依螢幕寬度（CSS 決定：手機收起、桌機展開，同原型），使用者按過之後才由這裡決定。
@@ -104,6 +106,7 @@ export function FilterPanel({ filters: f, onChange, catalog }: Props) {
         {count > 0 && <span className="pill">{count} 項</span>}
       </button>
       <div className="fbody" id="filter-body">
+        {saved}
         <div className="fgroup">
           <h3 id="f-km">距離上限（直線）</h3>
           <div className="rangerow">
