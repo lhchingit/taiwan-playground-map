@@ -80,7 +80,6 @@ export function activeFilterCount(f: Filters): number {
     Number(f.pkFee !== d.pkFee) +
     Number(f.pkMin !== d.pkMin) +
     Number(f.maxKm !== d.maxKm) +
-    Number(f.age !== d.age) +
     Number(f.env !== d.env) +
     Number(f.free)
   );

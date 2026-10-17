@@ -13,17 +13,15 @@ describe('filtersToQuery', () => {
       ...DEFAULT_FILTERS,
       play: ['slide', 'sandpit'],
       amen: ['toilet'],
-      age: 3,
       maxKm: 5,
       includeUnknown: true,
     };
-    expect(filtersToQuery(f)).toBe('play=sandpit,slide&amen=toilet&age=3&km=5&unk=1');
+    expect(filtersToQuery(f)).toBe('play=sandpit,slide&amen=toilet&km=5&unk=1');
   });
 
   it('全部條件', () => {
     const f: Filters = {
       maxKm: 20,
-      age: 12,
       play: ['swing'],
       amen: ['shade', 'toilet'],
       stay: ['60_120', 'lt30'],
@@ -36,7 +34,7 @@ describe('filtersToQuery', () => {
       pkMin: 30,
     };
     expect(filtersToQuery(f)).toBe(
-      'play=swing&amen=shade,toilet&age=12&km=20&stay=60_120,lt30&size=L,S&env=out&free=1&pk=lot,street&pkfee=paid&pkmin=30',
+      'play=swing&amen=shade,toilet&km=20&stay=60_120,lt30&size=L,S&env=out&free=1&pk=lot,street&pkfee=paid&pkmin=30',
     );
   });
 
@@ -46,12 +44,11 @@ describe('filtersToQuery', () => {
 });
 
 describe('queryToFilters', () => {
-  it('任務範例的網址', () => {
+  it('任務範例的網址（舊連結的 age 參數忽略，decisions D25）', () => {
     expect(queryToFilters('?play=sandpit,slide&amen=toilet&age=3&km=5&unk=1', known)).toEqual({
       ...DEFAULT_FILTERS,
       play: ['sandpit', 'slide'],
       amen: ['toilet'],
-      age: 3,
       maxKm: 5,
       includeUnknown: true,
     });
@@ -64,7 +61,6 @@ describe('queryToFilters', () => {
   it('往返轉換結果相同', () => {
     const f: Filters = {
       maxKm: 7,
-      age: 10,
       play: ['sandpit', 'swing'],
       amen: ['shade'],
       stay: ['half'],
@@ -101,10 +97,10 @@ describe('queryToFilters', () => {
     expect(queryToFilters('km=20', known).maxKm).toBe(20);
   });
 
-  it('年齡只接受選單上的值', () => {
-    expect(queryToFilters('age=8', known).age).toBe(8);
-    expect(queryToFilters('age=9', known).age).toBeNull();
-    expect(queryToFilters('age=10', known).age).toBe(10);
+  it('舊連結的 age 參數忽略，輸出的網址也不會有 age', () => {
+    const f = queryToFilters('age=8&play=slide', known);
+    expect(f).toEqual({ ...DEFAULT_FILTERS, play: ['slide'] });
+    expect(filtersToQuery(f)).toBe('play=slide');
   });
 
   it('重複值去掉並排序', () => {

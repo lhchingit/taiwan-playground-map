@@ -2,7 +2,6 @@
 
 import { useState, useSyncExternalStore } from 'react';
 import {
-  AGE_OPTIONS,
   DEFAULT_FILTERS,
   MAX_KM_OPTIONS,
   type Filters,
@@ -19,7 +18,6 @@ interface Props {
   catalog: AttributeCatalog;
 }
 
-const AGE_LABEL: Record<number, string> = { 10: '9–10 歲', 12: '11–12 歲' };
 const PK_PRESETS = [10, 30, 50, 100];
 const PK_TYPES: ParkingTypeFilter[] = ['lot', 'street'];
 /** 滑桿最右邊 = 不限 */
@@ -123,24 +121,6 @@ export function FilterPanel({ filters: f, onChange, catalog }: Props) {
             />
             <output>{f.maxKm === null ? '不限' : `${f.maxKm} 公里內`}</output>
           </div>
-        </div>
-
-        <div className="fgroup">
-          <h3>
-            <label htmlFor="f-age">孩子年齡</label>
-          </h3>
-          <select
-            id="f-age"
-            value={f.age ?? ''}
-            onChange={(e) => set({ age: e.target.value === '' ? null : Number(e.target.value) })}
-          >
-            <option value="">不限</option>
-            {AGE_OPTIONS.map((a) => (
-              <option key={a} value={a}>
-                {AGE_LABEL[a] ?? `${a} 歲`}
-              </option>
-            ))}
-          </select>
         </div>
 
         <div className="fgroup">

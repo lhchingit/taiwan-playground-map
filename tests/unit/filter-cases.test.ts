@@ -14,8 +14,8 @@ function toFilters({ unk, ...rest }: CaseFilters): Filters {
 const places = loadSeedPlaces();
 
 describe('filter-cases.json', () => {
-  it('有 21 個案例', () => {
-    expect(cases.cases).toHaveLength(21);
+  it('有 19 個案例（年齡篩選的 2 個已移除，decisions D25）', () => {
+    expect(cases.cases).toHaveLength(19);
   });
 
   it.each(cases.cases)('$name', (c) => {

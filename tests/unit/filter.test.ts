@@ -35,7 +35,6 @@ describe('屬性三態', () => {
 
 describe('null 欄位當成未知', () => {
   const cases: [string, Partial<Filters>][] = [
-    ['年齡', { age: 3 }],
     ['停留時長', { stay: ['30_60'] }],
     ['規模', { size: ['M'] }],
     ['只看免費', { free: true }],
@@ -51,15 +50,9 @@ describe('null 欄位當成未知', () => {
   });
 });
 
-describe('年齡', () => {
-  it('包含上下限', () => {
-    expect(only(run({ age: 2 }).ids, 'test-known')).toEqual(['test-known']);
-    expect(only(run({ age: 10 }).ids, 'test-known')).toEqual(['test-known']);
-  });
-
-  it('超出範圍不通過，包含未知也一樣（年齡是已知的）', () => {
-    expect(only(run({ age: 1, includeUnknown: true }).ids, 'test-known')).toEqual([]);
-    expect(only(run({ age: 12, includeUnknown: true }).ids, 'test-known')).toEqual([]);
+describe('年齡不是篩選條件（decisions D25）', () => {
+  it('年齡未知的場地不會因為年齡被濾掉', () => {
+    expect(run({}).ids).toContain('test-nulls');
   });
 });
 
