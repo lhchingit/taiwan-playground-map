@@ -4,7 +4,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
-import { AuthButton } from '@/components/auth/AuthButton';
 import { attributeHistoryText, fieldHistoryText } from '@/lib/admin/history';
 import { currentUser } from '@/lib/auth/session';
 import { getAttributeCatalog, getCityBounds, getSources } from '@/lib/data';
@@ -25,7 +24,6 @@ export default function PlaceHistoryPage({ params }: Props) {
     <main className="place-page admin-page">
       <nav className="place-nav" aria-label="導覽">
         <Link href="/admin">← 審核後台</Link>
-        <AuthButton />
       </nav>
       <Suspense fallback={<p className="note">載入中…</p>}>
         <HistoryContent params={params} />

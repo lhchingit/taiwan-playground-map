@@ -1,6 +1,7 @@
 // 多縣市：測試縣（tst，只存在於測試，tests/db/test-city.ts）暫時上線（用 tests/fixtures/seed-test.json 的測試場地）→ / 變成縣市選單；
 // 下線並清快取後恢復。會暫時改動共用的資料庫狀態，所以在 playwright.config.ts 的 multi-city 專案、
 // 其他 e2e 跑完之後才執行。
+import { randomUUID } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { expect, test, type APIRequestContext } from '@playwright/test';
 import { TOTAL } from './expected';
@@ -9,6 +10,7 @@ import { adminSql } from '../db/helpers';
 import { dropTestCity, ensureTestCity } from '../db/test-city';
 import { toSeedRows } from '../../scripts/seed/transform';
 import { E2E_REVALIDATE_SECRET } from './constants';
+import { loginWithEmail } from './login';
 
 test.skip(!!process.env.PLAYWRIGHT_BASE_URL, '外部伺服器（例如 Docker）不知道清快取的密鑰');
 test.describe.configure({ mode: 'serial' });
@@ -18,6 +20,7 @@ const sql = adminSql();
 const fixture = JSON.parse(readFileSync('tests/fixtures/seed-test.json', 'utf8')) as SeedFile;
 const rows = toSeedRows(fixture);
 const ids = rows.places.map((p) => p.id);
+const email = `test-e2e-home-${randomUUID()}@example.test`;
 
 const revalidate = (request: APIRequestContext, city: unknown, secret = E2E_REVALIDATE_SECRET) =>
   request.post('/api/revalidate', {
@@ -33,6 +36,7 @@ test.beforeAll(() => ensureTestCity(sql));
 
 test.afterAll(async ({ request }) => {
   await sql`DELETE FROM places WHERE id = ANY(${ids})`;
+  await sql`DELETE FROM auth.users WHERE email = ${email}`;
   await dropTestCity(sql);
   await revalidate(request, 'tst');
   await sql.end();
@@ -64,6 +68,10 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
   await page.goto('/');
   await expect(page).toHaveURL(/\/$/);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('全台放電地圖');
+  // 首頁也有登入按鈕（登入後回到首頁）
+  await expect(
+    page.getByRole('navigation', { name: '帳號' }).getByRole('link', { name: '登入', exact: true }),
+  ).toHaveAttribute('href', '/login?next=%2F');
   const list = page.locator('.city-list');
   await expect(list.getByRole('link')).toHaveText(['新竹市', '測試縣']);
   await expect(list.locator('li', { hasText: '新竹市' })).toContainText(`${TOTAL} 處`);
@@ -91,6 +99,23 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
 
   const res = await page.goto('/test-city/places/test-tst-known');
   expect(res?.status()).toBe(200);
+});
+
+test('從首頁登入，回到首頁顯示暱稱與選單（我的貢獻、登出）', async ({ page }) => {
+  await page.goto('/');
+  const nav = page.getByRole('navigation', { name: '帳號' });
+  await nav.getByRole('link', { name: '登入', exact: true }).click();
+  await expect(page).toHaveURL(/\/login\?next=%2F$/);
+  await loginWithEmail(page, email);
+  await expect(page).toHaveURL(/\/$/);
+  await expect(page.locator('.city-list')).toBeVisible();
+  const me = nav.getByText(/^家長 \d{4}$/);
+  await me.click();
+  await expect(nav.getByRole('link', { name: '我的貢獻' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: '審核後台' })).toHaveCount(0); // 一般會員沒有
+  await nav.getByRole('button', { name: '登出' }).click();
+  await expect(page).toHaveURL(/\/$/);
+  await expect(nav.getByRole('link', { name: '登入', exact: true })).toBeVisible();
 });
 
 test('測試縣下線並清快取後：場地頁 404、/ 恢復導向新竹市', async ({ page, request }) => {

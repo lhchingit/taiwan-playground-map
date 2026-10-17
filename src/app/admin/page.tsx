@@ -4,7 +4,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
-import { AuthButton } from '@/components/auth/AuthButton';
 import { groupQueue } from '@/lib/admin/queue';
 import { haversineKm } from '@/lib/filter';
 import { KIND_LABEL, suggestionSummary } from '@/lib/auth/labels';
@@ -30,7 +29,6 @@ export default function AdminPage({ searchParams }: Props) {
     <main className="place-page admin-page">
       <nav className="place-nav" aria-label="導覽">
         <Link href="/">← 全台放電地圖</Link>
-        <AuthButton />
       </nav>
       <Suspense fallback={<p className="note">載入中…</p>}>
         <AdminContent searchParams={searchParams} />
