@@ -33,6 +33,7 @@ import { FilterPanel } from './FilterPanel';
 import { OriginControls } from './OriginControls';
 import { PANEL_TITLE_ID, PlacePanel } from './PlacePanel';
 import { ResultList } from './ResultList';
+import { SavedFilters } from './SavedFilters';
 import { PlaygroundArt } from '@/components/home/PlaygroundArt';
 
 const PlaceMap = dynamic(() => import('./PlaceMap'), {
@@ -80,7 +81,7 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
   const [newPlace, setNewPlace] = useState<{ point: Origin | null; session: SessionInfo } | null>(
     null,
   );
-  const [newPlaceLogin, setNewPlaceLogin] = useState<string | null>(null);
+  const [loginNext, setLoginNext] = useState<string | null>(null);
   const [newPlaceMsg, setNewPlaceMsg] = useState<string | null>(null);
   const session = useSession();
   const [mode, setMode] = useTravelMode();
@@ -94,7 +95,7 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
   const startNewPlace = useCallback(async () => {
     setNewPlaceMsg(null);
     const s = await loadSession();
-    if (!s.user) setNewPlaceLogin(withFlag(currentPath(), 'newplace'));
+    if (!s.user) setLoginNext(withFlag(currentPath(), 'newplace'));
     else if (s.user.banned) setNewPlaceMsg('帳號已停權，暫時不能回報。');
     else {
       setPicking(false);
@@ -307,14 +308,27 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
           />
         )}
         <LoginDialog
-          open={newPlaceLogin !== null}
-          onClose={() => setNewPlaceLogin(null)}
-          next={newPlaceLogin ?? '/'}
+          open={loginNext !== null}
+          onClose={() => setLoginNext(null)}
+          next={loginNext ?? '/'}
           google={session?.providers.google ?? false}
           email={session?.providers.email ?? true}
         />
         <div className="scroll">
-          <FilterPanel filters={filters} onChange={changeFilters} catalog={catalog} />
+          <FilterPanel
+            filters={filters}
+            onChange={changeFilters}
+            catalog={catalog}
+            saved={
+              <SavedFilters
+                filters={filters}
+                catalog={catalog}
+                session={session}
+                onApply={(q) => changeFilters(queryToFilters(q, known))}
+                onLogin={() => setLoginNext(currentPath())}
+              />
+            }
+          />
           {failedNames.length > 0 && (
             <p className="note" role="status" style={{ padding: '8px 16px', margin: 0 }}>
               {failedNames.join('、')}的資料暫時載入失敗，目前只顯示其他縣市。
