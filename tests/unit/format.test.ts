@@ -70,12 +70,11 @@ describe('activeFilterCount', () => {
         ...DEFAULT_FILTERS,
         play: ['slide', 'swing'],
         amen: ['toilet'],
-        age: 3,
         maxKm: 5,
         free: true,
         pkFee: 'paid',
       }),
-    ).toBe(7);
+    ).toBe(6);
   });
 });
 

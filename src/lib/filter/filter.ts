@@ -16,12 +16,6 @@ export function passes(
 ): boolean {
   if (f.maxKm !== null && km > f.maxKm) return false;
 
-  if (f.age !== null) {
-    const { age_min: min, age_max: max } = place;
-    const fits = min === null || max === null ? null : f.age >= min && f.age <= max;
-    if (!tri(fits, includeUnknown)) return false;
-  }
-
   for (const key of [...f.play, ...f.amen]) {
     const v = readAttr(place.attrs, key);
     if (!(v === 'y' || (includeUnknown && v === 'u'))) return false;

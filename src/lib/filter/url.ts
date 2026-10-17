@@ -1,12 +1,11 @@
 // 篩選條件 ↔ 網址 query string，方便家長分享連結。出發點不在 Filters 裡，不會出現在網址。
 // 解析時不合法的值直接丟棄、不丟錯：壞掉或過期的分享連結也要能打開。
+// 年齡篩選已拿掉（decisions D25）：舊連結的 age 參數直接忽略。
 import type { SizeClass, StayBucket } from '@/types/place';
 import { DEFAULT_FILTERS, type Env, type Filters, type ParkingTypeFilter } from './types';
 
 /** 原型的距離滑桿：1–20 公里，21 = 不限 */
 export const MAX_KM_OPTIONS = { min: 1, max: 20 } as const;
-/** 原型的年齡選單（10 = 9–10 歲、12 = 11–12 歲） */
-export const AGE_OPTIONS = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12] as const;
 
 const STAY: readonly StayBucket[] = ['lt30', '30_60', '60_120', 'half'];
 const SIZE: readonly SizeClass[] = ['S', 'M', 'L'];
@@ -31,14 +30,12 @@ export function queryToFilters(query: URLSearchParams | string, known: KnownAttr
   const q = typeof query === 'string' ? new URLSearchParams(query) : query;
 
   const km = parseInt10(q.get('km'));
-  const age = parseInt10(q.get('age'));
   const pkMin = parseInt10(q.get('pkmin'));
   const env = q.get('env');
   const pkFee = q.get('pkfee');
 
   return {
     maxKm: km !== null && km >= MAX_KM_OPTIONS.min && km <= MAX_KM_OPTIONS.max ? km : null,
-    age: age !== null && (AGE_OPTIONS as readonly number[]).includes(age) ? age : null,
     play: parseList(q.get('play'), known.play),
     amen: parseList(q.get('amen'), known.amen),
     stay: parseList(q.get('stay'), STAY),
@@ -63,7 +60,6 @@ export function filtersToQuery(f: Filters): string {
   };
   list('play', f.play);
   list('amen', f.amen);
-  if (f.age !== DEFAULT_FILTERS.age) parts.push(['age', String(f.age)]);
   if (f.maxKm !== DEFAULT_FILTERS.maxKm) parts.push(['km', String(f.maxKm)]);
   list('stay', f.stay);
   list('size', f.size);

@@ -8,8 +8,6 @@ export type ParkingFeeFilter = 'any' | Exclude<ParkingFee, 'u'>;
 export interface Filters {
   /** 直線距離上限（公里），null = 不限 */
   maxKm: number | null;
-  /** 孩子年齡，null = 不限 */
-  age: number | null;
   /** 遊樂設施，全部都要有（AND） */
   play: string[];
   /** 生活機能，全部都要有（AND） */
@@ -32,7 +30,6 @@ export interface Filters {
 
 export const DEFAULT_FILTERS: Readonly<Filters> = Object.freeze({
   maxKm: null,
-  age: null,
   play: [],
   amen: [],
   stay: [],

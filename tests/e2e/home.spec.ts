@@ -89,17 +89,18 @@ test.describe('桌機', () => {
     await expectMarkersMatchList(page);
   });
 
-  test('年齡未知的場地：選了年齡就不顯示，包含未知才顯示', async ({ page }) => {
+  test('沒有年齡篩選（decisions D25）：年齡未知的場地照常顯示；舊連結的 age 參數忽略', async ({
+    page,
+  }) => {
     await page.goto('/hsinchu-city');
+    await expect(page.getByLabel('孩子年齡')).toHaveCount(0);
     const unknownAge = page.locator('.card[data-id="hsc-hccg-001"]');
     await expect(unknownAge).toContainText('年齡未知');
 
-    await page.getByLabel('孩子年齡').selectOption('3');
-    await expect(unknownAge).toHaveCount(0);
-    await expectMarkersMatchList(page);
-
+    await page.goto('/hsinchu-city?age=3&play=sandpit');
+    await expect(count(page)).toHaveText(String(expected('沙坑').expected_count));
     await page.getByLabel('包含資料未知的場地').check();
-    await expect(unknownAge).toHaveCount(1);
+    await expect(page).toHaveURL(/\?play=sandpit&unk=1$/);
     await expectMarkersMatchList(page);
   });
 
