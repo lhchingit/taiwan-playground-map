@@ -184,11 +184,13 @@ select {
   /* 跟首頁的標題區一樣：天空色漸層，右上角有小插圖（PlaygroundArt） */
   background: linear-gradient(180deg, var(--sky-soft), var(--paper));
   border-bottom: 1px solid var(--line);
+  flex: none; /* 手機的 .side 是會捲動的 flex 欄：不讓標題區被壓扁（overflow: hidden 會把內容裁掉） */
 }
+/* 插圖底部不往下伸，跟下一行（…．切換縣市）留空隙 */
 .head-top .pa-mini {
   width: 112px;
   flex: none;
-  margin: -6px -4px -6px 0;
+  margin: -6px -4px 0 0;
 }
 h1 {
   font-family: var(--f-display);
@@ -201,7 +203,7 @@ h1 {
 .sub {
   color: var(--muted);
   font-size: 12.5px;
-  margin: 2px 0 0;
+  margin: 6px 0 0;
 }
 .origin {
   margin-top: 12px;
