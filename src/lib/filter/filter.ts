@@ -1,5 +1,5 @@
 // 篩選語意（CLAUDE.md 資料規則 2）：預設只有 y 通過；包含資料未知時 u（含 null 欄位）也通過；n 永遠不通過。
-// 遊樂設施、生活機能是 AND；停留時長、規模、停車類型是 OR。
+// 遊樂設施、生活機能是 AND；停留時長、停車類型是 OR。
 import { readAttr } from '@/types/place';
 import { haversineKm } from './distance';
 import type { FilterPlace, Filters, Origin } from './types';
@@ -24,11 +24,6 @@ export function passes(
   if (
     f.stay.length > 0 &&
     !tri(place.stay === null ? null : f.stay.includes(place.stay), includeUnknown)
-  )
-    return false;
-  if (
-    f.size.length > 0 &&
-    !tri(place.size === null ? null : f.size.includes(place.size), includeUnknown)
   )
     return false;
 

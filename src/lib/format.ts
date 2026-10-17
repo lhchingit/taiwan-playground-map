@@ -75,7 +75,6 @@ export function activeFilterCount(f: Filters): number {
     f.play.length +
     f.amen.length +
     f.stay.length +
-    f.size.length +
     f.pkType.length +
     Number(f.pkFee !== d.pkFee) +
     Number(f.pkMin !== d.pkMin) +

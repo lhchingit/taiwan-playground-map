@@ -14,8 +14,6 @@ export interface Filters {
   amen: string[];
   /** 停留時長，符合其中一個即可（OR） */
   stay: StayBucket[];
-  /** 場地規模，符合其中一個即可（OR） */
-  size: SizeClass[];
   env: Env;
   /** 只看免費 */
   free: boolean;
@@ -33,7 +31,6 @@ export const DEFAULT_FILTERS: Readonly<Filters> = Object.freeze({
   play: [],
   amen: [],
   stay: [],
-  size: [],
   env: 'all',
   free: false,
   includeUnknown: false,

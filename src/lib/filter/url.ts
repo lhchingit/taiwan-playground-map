@@ -1,6 +1,6 @@
 // 篩選條件 ↔ 網址 query string，方便家長分享連結。出發點不在 Filters 裡，不會出現在網址。
 // 解析時不合法的值直接丟棄、不丟錯：壞掉或過期的分享連結也要能打開。
-// 年齡篩選已拿掉（decisions D25）：舊連結的 age 參數直接忽略。
+// 年齡、規模篩選已拿掉（decisions D25）：舊連結的 age、size 參數直接忽略。
 import type { SizeClass, StayBucket } from '@/types/place';
 import { DEFAULT_FILTERS, type Env, type Filters, type ParkingTypeFilter } from './types';
 
@@ -8,7 +8,6 @@ import { DEFAULT_FILTERS, type Env, type Filters, type ParkingTypeFilter } from 
 export const MAX_KM_OPTIONS = { min: 1, max: 20 } as const;
 
 const STAY: readonly StayBucket[] = ['lt30', '30_60', '60_120', 'half'];
-const SIZE: readonly SizeClass[] = ['S', 'M', 'L'];
 const PK_TYPE: readonly ParkingTypeFilter[] = ['lot', 'street'];
 
 export interface KnownAttrKeys {
@@ -39,7 +38,6 @@ export function queryToFilters(query: URLSearchParams | string, known: KnownAttr
     play: parseList(q.get('play'), known.play),
     amen: parseList(q.get('amen'), known.amen),
     stay: parseList(q.get('stay'), STAY),
-    size: parseList(q.get('size'), SIZE),
     env: env === 'in' || env === 'out' ? (env satisfies Env) : 'all',
     free: q.get('free') === '1',
     includeUnknown: q.get('unk') === '1',
@@ -62,7 +60,6 @@ export function filtersToQuery(f: Filters): string {
   list('amen', f.amen);
   if (f.maxKm !== DEFAULT_FILTERS.maxKm) parts.push(['km', String(f.maxKm)]);
   list('stay', f.stay);
-  list('size', f.size);
   if (f.env !== DEFAULT_FILTERS.env) parts.push(['env', f.env]);
   if (f.free) parts.push(['free', '1']);
   list('pk', f.pkType);
