@@ -4,6 +4,7 @@ import {
   activeFilterCount,
   ageText,
   cardTags,
+  groupTagKeys,
   distanceText,
   formatKm,
   parkingFilterOn,
@@ -69,12 +70,13 @@ describe('activeFilterCount', () => {
       activeFilterCount({
         ...DEFAULT_FILTERS,
         play: ['slide', 'swing'],
+        groups: ['climb'],
         amen: ['toilet'],
         maxKm: 5,
         free: true,
         pkFee: 'paid',
       }),
-    ).toBe(6);
+    ).toBe(7);
   });
 });
 
@@ -99,5 +101,27 @@ describe('cardTags', () => {
       { key: 'sandpit', v: 'u' },
       { key: 'toilet', v: 'y' },
     ]);
+  });
+});
+
+describe('groupTagKeys（decisions D26）', () => {
+  const groupKeys = { climb: ['climbing', 'climbing_wall', 'rope_net'], ride: ['slide'] };
+
+  it('列出這一類「有」的項目', () => {
+    expect(
+      groupTagKeys({ climbing: 'y', climbing_wall: 'n', rope_net: 'y' }, ['climb'], groupKeys),
+    ).toEqual(['climbing', 'rope_net']);
+  });
+
+  it('一項都沒有時列出未知的項目（沒有的 key 也是未知）', () => {
+    expect(groupTagKeys({ climbing: 'n', climbing_wall: 'u' }, ['climb'], groupKeys)).toEqual([
+      'climbing_wall',
+      'rope_net',
+    ]);
+  });
+
+  it('沒選類別或不認得的代號不列', () => {
+    expect(groupTagKeys({ slide: 'y' }, [], groupKeys)).toEqual([]);
+    expect(groupTagKeys({ slide: 'y' }, ['nope'], groupKeys)).toEqual([]);
   });
 });

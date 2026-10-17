@@ -1,6 +1,14 @@
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { AMENITY_TONE, GROUP_TONES, groupTone, keyTones } from '@/lib/play-groups';
+import {
+  AMENITY_TONE,
+  GROUP_IDS,
+  GROUP_TONES,
+  groupId,
+  groupKeyMap,
+  groupTone,
+  keyTones,
+} from '@/lib/play-groups';
 
 describe('遊樂設施類別的顏色（decisions D24）', () => {
   it('五個類別各有不同的色調；生活機能另外一種', () => {
@@ -34,5 +42,27 @@ describe('遊樂設施類別的顏色（decisions D24）', () => {
     for (const tone of new Set([...Object.values(GROUP_TONES), AMENITY_TONE])) {
       expect(css).toContain(`[data-tone='${tone}'] {`);
     }
+  });
+});
+
+describe('遊樂設施類別代號（decisions D26）', () => {
+  it('每個縣市 seed 的類別都有代號，代號不重複', () => {
+    for (const city of readdirSync('data/seed')) {
+      const seed = JSON.parse(readFileSync(`data/seed/${city}/places.json`, 'utf8')) as {
+        labels: { play_groups: { name: string }[] };
+      };
+      for (const g of seed.labels.play_groups) expect(groupId(g.name), g.name).toBeDefined();
+    }
+    const ids = Object.values(GROUP_IDS);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it('groupKeyMap 只收有代號的類別', () => {
+    expect(
+      groupKeyMap([
+        { name: '攀爬平衡', keys: ['climbing'] },
+        { name: '新的類別', keys: ['x'] },
+      ]),
+    ).toEqual({ climb: ['climbing'] });
   });
 });

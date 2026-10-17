@@ -360,7 +360,7 @@ h1 {
   align-items: start;
 }
 .pg {
-  grid-template-columns: 84px 1fr;
+  grid-template-columns: 112px 1fr;
 }
 .pg-name {
   font-size: 12.5px;
@@ -369,6 +369,43 @@ h1 {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+/* 類別名稱可以按（decisions D26）：整類「其中任一種」 */
+button.pg-name {
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: left;
+  padding: 4px 8px 4px 6px;
+  margin-top: 1px;
+  border: 1.5px dashed var(--tone-ink, var(--teal));
+  border-radius: 999px;
+  background: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    background 0.15s;
+}
+button.pg-name:hover {
+  background: var(--tone-soft, var(--chip));
+}
+button.pg-name:active {
+  transform: scale(0.94);
+}
+button.pg-name[aria-pressed='true'] {
+  border-style: solid;
+  background: var(--tone-soft, var(--chip));
+  color: var(--ink);
+}
+button.pg-name[aria-pressed='true']::after {
+  content: '✓' / ''; /* 同 chip：不只靠顏色區分，替代文字留空 */
+  color: var(--tone-ink, var(--teal));
+}
+.fnote {
+  font-size: 12px;
+  color: var(--muted);
+  margin: -2px 0 6px;
 }
 .chip {
   border: 1.5px solid transparent;

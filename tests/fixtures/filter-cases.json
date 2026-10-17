@@ -777,6 +777,157 @@
    "unknown_hint": 62,
    "note": "與原型不同：清冊新增的 62 處收費改為未知（原本是匯入腳本推測的免費），只剩手工整理的 10 處確定免費，另有 62 處資料未知。篩選邏輯沒有改變。",
    "deviation": "null 欄位的三態規則：原型把收費 null 當成永遠不通過，正式版當成未知（PR #2 核准）"
+  },
+  {
+   "name": "攀爬平衡（任一種）",
+   "filters": {
+    "groups": [
+     "climb"
+    ]
+   },
+   "expected_ids": [
+    "hsc-hccg-099",
+    "hsc-hsinchu-park",
+    "hsc-zhongyang-park",
+    "hsc-hccg-070",
+    "hsc-changhe-park",
+    "hsc-hccg-024",
+    "hsc-luguang-park",
+    "hsc-hccg-115",
+    "hsc-hccg-003",
+    "hsc-hccg-040",
+    "hsc-hccg-042",
+    "hsc-guanxin-park",
+    "hsc-hccg-013",
+    "hsc-hccg-056",
+    "hsc-hccg-031",
+    "hsc-gangnan-canal-park"
+   ],
+   "expected_count": 16,
+   "unknown_hint": 56
+  },
+  {
+   "name": "攀爬平衡（任一種）＋包含未知",
+   "filters": {
+    "groups": [
+     "climb"
+    ],
+    "unk": true
+   },
+   "expected_ids": [
+    "hsc-hccg-099",
+    "hsc-hccg-075",
+    "hsc-hccg-072",
+    "hsc-hccg-071",
+    "hsc-xingxue-park",
+    "hsc-hsinchu-park",
+    "hsc-zhongyang-park",
+    "hsc-hccg-104",
+    "hsc-hccg-022",
+    "hsc-hccg-108",
+    "hsc-hccg-070",
+    "hsc-hccg-114",
+    "hsc-changhe-park",
+    "hsc-hccg-086",
+    "hsc-hccg-069",
+    "hsc-green-road-smile-slide",
+    "hsc-hccg-018",
+    "hsc-hccg-092",
+    "hsc-hccg-017",
+    "hsc-hccg-024",
+    "hsc-hccg-065",
+    "hsc-hccg-090",
+    "hsc-hccg-019",
+    "hsc-hccg-074",
+    "hsc-hccg-016",
+    "hsc-hccg-033",
+    "hsc-hccg-021",
+    "hsc-luguang-park",
+    "hsc-hccg-028",
+    "hsc-hccg-007",
+    "hsc-hccg-034",
+    "hsc-hccg-001",
+    "hsc-hccg-035",
+    "hsc-hccg-068",
+    "hsc-hccg-115",
+    "hsc-hccg-005",
+    "hsc-hccg-004",
+    "hsc-hccg-038",
+    "hsc-hccg-003",
+    "hsc-hccg-037",
+    "hsc-hccg-039",
+    "hsc-hccg-032",
+    "hsc-minghu-park",
+    "hsc-hccg-116",
+    "hsc-hccg-029",
+    "hsc-hccg-089",
+    "hsc-hccg-097",
+    "hsc-hccg-080",
+    "hsc-hccg-079",
+    "hsc-hccg-052",
+    "hsc-hccg-095",
+    "hsc-hccg-050",
+    "hsc-hccg-012",
+    "hsc-hccg-088",
+    "hsc-hccg-040",
+    "hsc-hccg-042",
+    "hsc-hccg-076",
+    "hsc-hccg-041",
+    "hsc-guanxin-park",
+    "hsc-hccg-077",
+    "hsc-hccg-014",
+    "hsc-hccg-013",
+    "hsc-hccg-056",
+    "hsc-hccg-011",
+    "hsc-hccg-083",
+    "hsc-hccg-084",
+    "hsc-hccg-025",
+    "hsc-hccg-010",
+    "hsc-hccg-085",
+    "hsc-hccg-031",
+    "hsc-gangnan-canal-park",
+    "hsc-nanliao-sand-water"
+   ],
+   "expected_count": 72,
+   "unknown_hint": 0
+  },
+  {
+   "name": "玩沙玩水＋滑行擺盪",
+   "filters": {
+    "groups": [
+     "sandwater",
+     "ride"
+    ]
+   },
+   "expected_ids": [
+    "hsc-hccg-072",
+    "hsc-hsinchu-park",
+    "hsc-zhongyang-park",
+    "hsc-luguang-park",
+    "hsc-hccg-005",
+    "hsc-minghu-park",
+    "hsc-guanxin-park",
+    "hsc-nanliao-sand-water"
+   ],
+   "expected_count": 8,
+   "unknown_hint": 64
+  },
+  {
+   "name": "攀爬平衡＋廁所",
+   "filters": {
+    "groups": [
+     "climb"
+    ],
+    "amen": [
+     "toilet"
+    ]
+   },
+   "expected_ids": [
+    "hsc-hccg-056",
+    "hsc-gangnan-canal-park"
+   ],
+   "expected_count": 2,
+   "unknown_hint": 68
   }
  ]
 }

@@ -112,3 +112,52 @@ describe('排序與提示', () => {
     expect(run({}).unknownHint).toBe(0);
   });
 });
+
+describe('遊樂設施類別＝其中任一種（decisions D26）', () => {
+  const groupKeys = { climb: ['climbing', 'climbing_wall'], water: ['water_play', 'sandpit'] };
+  const place = (attrs: Record<string, 'y' | 'n' | 'u'>): FilterPlace => ({
+    ...(places[0] as FilterPlace),
+    id: 'test-group',
+    attrs,
+  });
+  const ok = (p: FilterPlace, f: Partial<Filters>) =>
+    filterPlaces([p], { ...DEFAULT_FILTERS, ...f }, edge.origin, groupKeys).results.length === 1;
+
+  it('有一項 y 就通過', () => {
+    expect(ok(place({ climbing: 'n', climbing_wall: 'y' }), { groups: ['climb'] })).toBe(true);
+  });
+
+  it('全部 n 不通過，包含未知也一樣', () => {
+    const p = place({ climbing: 'n', climbing_wall: 'n' });
+    expect(ok(p, { groups: ['climb'] })).toBe(false);
+    expect(ok(p, { groups: ['climb'], includeUnknown: true })).toBe(false);
+  });
+
+  it('沒有 y、有 u 時，包含未知才通過；沒有的 key 也當成 u', () => {
+    const p = place({ climbing: 'n' });
+    expect(ok(p, { groups: ['climb'] })).toBe(false);
+    expect(ok(p, { groups: ['climb'], includeUnknown: true })).toBe(true);
+  });
+
+  it('類別之間、類別與單項之間是 AND', () => {
+    const p = place({ climbing: 'y', water_play: 'n', sandpit: 'n', slide: 'y' });
+    expect(ok(p, { groups: ['climb', 'water'] })).toBe(false);
+    expect(ok(p, { groups: ['climb'], play: ['slide'] })).toBe(true);
+    expect(ok(p, { groups: ['climb'], play: ['swing'] })).toBe(false);
+  });
+
+  it('不認得的代號視同沒選', () => {
+    expect(ok(place({}), { groups: ['nope'] })).toBe(true);
+  });
+
+  it('另有幾處資料未知的提示也算類別', () => {
+    const r = filterPlaces(
+      [place({ climbing: 'u' }), { ...place({ climbing_wall: 'y' }), id: 'test-group-2' }],
+      { ...DEFAULT_FILTERS, groups: ['climb'] },
+      edge.origin,
+      groupKeys,
+    );
+    expect(r.results.map((p) => p.id)).toEqual(['test-group-2']);
+    expect(r.unknownHint).toBe(1);
+  });
+});

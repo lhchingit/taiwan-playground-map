@@ -8,7 +8,7 @@ import {
   type ParkingTypeFilter,
 } from '@/lib/filter';
 import { activeFilterCount, PARKING_TYPE_LABEL, STAY_LABEL } from '@/lib/format';
-import { AMENITY_TONE, groupTone } from '@/lib/play-groups';
+import { AMENITY_TONE, groupId, groupTone } from '@/lib/play-groups';
 import type { AttributeCatalog } from '@/lib/places';
 import { GroupIcon } from '@/components/ui/GroupIcon';
 
@@ -124,22 +124,50 @@ export function FilterPanel({ filters: f, onChange, catalog }: Props) {
         </div>
 
         <div className="fgroup">
-          <h3>遊樂設施（全部都要有）</h3>
+          <h3>遊樂設施（選的都要有）</h3>
+          <p className="fnote">按類別名稱＝這一類有其中任一種</p>
           <div className="pgroups">
-            {catalog.playGroups.map((g) => (
-              <div className="pg" key={g.name} data-tone={groupTone(g.name)}>
-                <span className="pg-name">
-                  <GroupIcon tone={groupTone(g.name) ?? 'grass'} />
-                  {g.name}
-                </span>
-                <Chips
-                  options={g.keys}
-                  label={label}
-                  selected={f.play}
-                  onToggle={(k) => set({ play: toggle(f.play, k) })}
-                />
-              </div>
-            ))}
+            {catalog.playGroups.map((g) => {
+              const id = groupId(g.name);
+              const icon = <GroupIcon tone={groupTone(g.name) ?? 'grass'} />;
+              // 同一類的類別與單項互相取代（decisions D26）
+              return (
+                <div className="pg" key={g.name} data-tone={groupTone(g.name)}>
+                  {id ? (
+                    <button
+                      type="button"
+                      className="pg-name"
+                      aria-pressed={f.groups.includes(id)}
+                      onClick={() =>
+                        set({
+                          groups: toggle(f.groups, id),
+                          play: f.play.filter((k) => !g.keys.includes(k)),
+                        })
+                      }
+                    >
+                      {icon}
+                      {g.name}
+                    </button>
+                  ) : (
+                    <span className="pg-name">
+                      {icon}
+                      {g.name}
+                    </span>
+                  )}
+                  <Chips
+                    options={g.keys}
+                    label={label}
+                    selected={f.play}
+                    onToggle={(k) =>
+                      set({
+                        play: toggle(f.play, k),
+                        groups: f.groups.filter((x) => x !== id),
+                      })
+                    }
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
 

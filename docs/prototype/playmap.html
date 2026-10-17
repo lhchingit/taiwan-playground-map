@@ -62,6 +62,8 @@ details.filters>summary::-webkit-details-marker{display:none}
 .pgroups{display:grid;gap:8px}
 .pg{display:grid;grid-template-columns:64px 1fr;gap:8px;align-items:start}
 .pg>span{font-size:12px;color:var(--muted);padding-top:5px}
+.pg>button.gname{font:inherit;font-size:12px;text-align:left;border:1px dashed var(--muted);border-radius:999px;background:none;padding:3px 8px;cursor:pointer;color:var(--muted)}
+.pg>button.gname[aria-pressed=true]{border-style:solid;font-weight:600;color:inherit}
 .unk{font-size:12.5px;color:var(--muted);padding-top:6px;border-top:1px dashed var(--line);margin-top:4px}
 .chip{border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:4px 11px;cursor:pointer;font-size:13px}
 .chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--panel)}
@@ -172,7 +174,7 @@ form.report{display:grid;gap:8px;margin-top:10px}
             <option value="7">7 歲</option><option value="8">8 歲</option><option value="10">9–10 歲</option><option value="12">11–12 歲</option>
           </select>
         </div>
-        <div class="fgroup"><h3>遊樂設施（全部都要有）</h3><div id="playGroups" class="pgroups"></div></div>
+        <div class="fgroup"><h3>遊樂設施（選的都要有．按類別名稱＝其中任一種）</h3><div id="playGroups" class="pgroups"></div></div>
         <div class="fgroup"><h3>生活機能（全部都要有）</h3><div class="chips" id="amenChips"></div></div>
         <div class="fgroup" style="display:grid;gap:8px"><h3 style="margin:0">停車</h3>
           <div class="chips" id="pkTypeChips"></div>
@@ -19444,7 +19446,7 @@ const PK_FEE = {free:"免費", paid:"付費", u:"費用未知"};
 
 const st = {
   origin:{lat:24.80163,lng:120.97163,name:"新竹火車站（範例）"},
-  mode:"drive", maxKm:null, age:null, play:new Set(), amen:new Set(), stay:new Set(), size:new Set(),
+  mode:"drive", maxKm:null, age:null, play:new Set(), grp:new Set(), amen:new Set(), stay:new Set(), size:new Set(),
   env:"all", free:false, pkType:new Set(), pkFee:"any", pkMin:null, unk:false, sel:null, picking:false
 };
 try{ const s=JSON.parse(localStorage.getItem("pm.prefs")||"{}"); if(s.mode&&MODE[s.mode]) st.mode=s.mode; }catch(e){}
@@ -19463,6 +19465,8 @@ function pass(p,unk){
   if(st.maxKm!=null && p._km>st.maxKm) return false;
   if(st.age!=null){ if(p.age_min==null){ if(!unk) return false; } else if(st.age<p.age_min||st.age>p.age_max) return false; }
   for(const k of st.play) if(!passAttr(p,k,unk)) return false;
+  // 遊樂設施類別（decisions D26）：這一類有其中任一種即可
+  for(const g of L.play_groups) if(st.grp.has(g.name) && !g.keys.some(k=>passAttr(p,k,unk))) return false;
   for(const k of st.amen) if(!passAttr(p,k,unk)) return false;
   if(st.stay.size && !st.stay.has(p.stay)) return false;
   if(st.size.size && !st.size.has(p.size)) return false;
@@ -19483,9 +19487,16 @@ function chips(el,map,set){
   el.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;const k=b.dataset.k;
     set.has(k)?set.delete(k):set.add(k);b.setAttribute("aria-pressed",set.has(k));render();});
 }
+// 類別名稱可以按＝這一類有其中任一種（decisions D26）；同一類的類別與單項互相取代
 L.play_groups.forEach(g=>{const row=document.createElement("div");row.className="pg";
-  row.innerHTML=`<span>${esc(g.name)}</span><div class="chips"></div>`;$("#playGroups").appendChild(row);
-  chips(row.querySelector(".chips"),Object.fromEntries(g.keys.map(k=>[k,L.play[k]])),st.play);});
+  row.innerHTML=`<button type="button" class="gname" aria-pressed="false">${esc(g.name)}</button><div class="chips"></div>`;$("#playGroups").appendChild(row);
+  const gb=row.querySelector(".gname"),box=row.querySelector(".chips");
+  gb.addEventListener("click",()=>{
+    if(st.grp.has(g.name)) st.grp.delete(g.name); else st.grp.add(g.name);
+    g.keys.forEach(k=>st.play.delete(k));box.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed","false"));
+    gb.setAttribute("aria-pressed",st.grp.has(g.name));render();});
+  box.addEventListener("click",e=>{if(e.target.closest(".chip")){st.grp.delete(g.name);gb.setAttribute("aria-pressed","false");}},true);
+  chips(box,Object.fromEntries(g.keys.map(k=>[k,L.play[k]])),st.play);});
 chips($("#amenChips"),L.amenity,st.amen);
 chips($("#stayChips"),STAY,st.stay);
 chips($("#sizeChips"),SIZE,st.size);
@@ -19504,10 +19515,10 @@ $("#age").addEventListener("change",e=>{st.age=e.target.value===""?null:+e.targe
 $("#freeOnly").addEventListener("change",e=>{st.free=e.target.checked;render();});
 $("#incUnknown").addEventListener("change",e=>{st.unk=e.target.checked;render();});
 $("#btnReset").addEventListener("click",()=>{
-  [st.play,st.amen,st.stay,st.size,st.pkType].forEach(s=>s.clear());
+  [st.play,st.grp,st.amen,st.stay,st.size,st.pkType].forEach(s=>s.clear());
   st.pkFee="any";$("#pkFeeSeg").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.fee==="any"));
   st.pkMin=null;$("#pkMin").value="";
-  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed","false"));
+  document.querySelectorAll(".chip,.gname").forEach(c=>c.setAttribute("aria-pressed","false"));
   st.maxKm=null;$("#maxKm").value=21;$("#maxKmOut").textContent="不限";
   st.age=null;$("#age").value="";st.free=false;$("#freeOnly").checked=false;st.unk=false;$("#incUnknown").checked=false;
   st.env="all";$("#envSeg").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.env==="all"));
@@ -19515,7 +19526,8 @@ $("#btnReset").addEventListener("click",()=>{
 });
 
 function topTags(p){
-  const keys=[...st.play,...st.amen];
+  const gk=L.play_groups.filter(g=>st.grp.has(g.name)).flatMap(g=>{const y=g.keys.filter(k=>p.attrs[k].v==="y");return y.length?y:g.keys.filter(k=>p.attrs[k].v==="u");});
+  const keys=[...st.play,...gk,...st.amen];
   const pick=keys.length?keys:Object.keys(p.attrs).filter(k=>p.attrs[k].v==="y").slice(0,6);
   const pkOn=st.pkType.size||st.pkFee!=="any"||st.pkMin!=null;
   return (pkOn?pkTag(p):"")+pick.map(k=>{const v=p.attrs[k].v;const lab=L.play[k]||L.amenity[k];
@@ -19533,7 +19545,7 @@ function pkTag(p){const pk=p.parking;const c=pk.type==="none"?"n":pk.type==="u"?
 function ageTxt(p){return p.age_min==null?"年齡未知":`${p.age_min}–${p.age_max} 歲`;}
 function distTxt(p){const m=est(p._km);return m==null?fmtKm(p._km):`${fmtKm(p._km)}．約 ${m} 分`;}
 
-function activeCount(){return st.play.size+st.amen.size+st.stay.size+st.size.size+st.pkType.size+(st.pkFee!=="any")+(st.pkMin!=null)+(st.maxKm!=null)+(st.age!=null)+(st.env!=="all")+st.free;}
+function activeCount(){return st.play.size+st.grp.size+st.amen.size+st.stay.size+st.size.size+st.pkType.size+(st.pkFee!=="any")+(st.pkMin!=null)+(st.maxKm!=null)+(st.age!=null)+(st.env!=="all")+st.free;}
 
 function render(){
   P.forEach(p=>p._km=hav(st.origin,p));

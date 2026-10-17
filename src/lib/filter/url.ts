@@ -1,7 +1,7 @@
 // 篩選條件 ↔ 網址 query string，方便家長分享連結。出發點不在 Filters 裡，不會出現在網址。
 // 解析時不合法的值直接丟棄、不丟錯：壞掉或過期的分享連結也要能打開。
 // 年齡、規模篩選已拿掉（decisions D25）：舊連結的 age、size 參數直接忽略。
-import type { SizeClass, StayBucket } from '@/types/place';
+import type { StayBucket } from '@/types/place';
 import { DEFAULT_FILTERS, type Env, type Filters, type ParkingTypeFilter } from './types';
 
 /** 原型的距離滑桿：1–20 公里，21 = 不限 */
@@ -13,6 +13,8 @@ const PK_TYPE: readonly ParkingTypeFilter[] = ['lot', 'street'];
 export interface KnownAttrKeys {
   play: readonly string[];
   amen: readonly string[];
+  /** 遊樂設施類別代號（decisions D26） */
+  groups: readonly string[];
 }
 
 function parseList<T extends string>(raw: string | null, allowed: readonly T[]): T[] {
@@ -36,6 +38,7 @@ export function queryToFilters(query: URLSearchParams | string, known: KnownAttr
   return {
     maxKm: km !== null && km >= MAX_KM_OPTIONS.min && km <= MAX_KM_OPTIONS.max ? km : null,
     play: parseList(q.get('play'), known.play),
+    groups: parseList(q.get('grp'), known.groups),
     amen: parseList(q.get('amen'), known.amen),
     stay: parseList(q.get('stay'), STAY),
     env: env === 'in' || env === 'out' ? (env satisfies Env) : 'all',
@@ -57,6 +60,7 @@ export function filtersToQuery(f: Filters): string {
     if (values.length > 0) parts.push([key, [...new Set(values)].sort().join(',')]);
   };
   list('play', f.play);
+  list('grp', f.groups);
   list('amen', f.amen);
   if (f.maxKm !== DEFAULT_FILTERS.maxKm) parts.push(['km', String(f.maxKm)]);
   list('stay', f.stay);

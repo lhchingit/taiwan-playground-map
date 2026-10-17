@@ -39,6 +39,7 @@ python -m unittest discover -s scripts/tests -t scripts   # 匯入腳本的測�
    TypeScript 型別用 `'y' | 'n' | 'u'`，不要用 boolean。
 2. **篩選語意：** 預設只有 `y` 通過；使用者開啟「包含資料未知」時 `u` 也通過；`n` 永遠不通過。
    同一組內的多選條件是 AND（遊樂設施、生活機能），停車類型是 OR。
+   例外：遊樂設施的「類別」選項是「這一類有其中任一種」（類別內 OR，類別之間仍是 AND；decisions D26）。
    標準答案在 `tests/fixtures/filter-cases.json`，任何篩選邏輯的修改都必須通過這組測試。
 3. **每筆事實都要有來源。** `place_attributes` 與 `place_parking` 的每一列都要有 `source_id` 與 `verified_at`。
 4. **不可以自己編造場地資料。** 不能憑印象或推測填任何屬性、座標、開放時間；找不到來源就留 `u`，並在 PR 說明。
