@@ -1,12 +1,13 @@
 // 「我的貢獻」頁的中文用字（純函式，有單元測試）
 import type { Json } from '@/types/database';
 
-export type SuggestionStatus = 'pending' | 'accepted' | 'rejected';
+export type SuggestionStatus = 'pending' | 'accepted' | 'rejected' | 'withdrawn';
 
 export const STATUS_LABEL: Record<SuggestionStatus, string> = {
   pending: '審核中',
   accepted: '已採納',
   rejected: '未採納',
+  withdrawn: '已撤回',
 };
 
 /** 退回原因（對應 edit_suggestions.reject_reason 的 CHECK） */

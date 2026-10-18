@@ -313,6 +313,23 @@ test('管理員：用 Email 搜尋、改成審核員並指派新竹市、停權�
   await expect(admin.page.getByText('不能修改自己的角色或停權自己')).toBeVisible();
 });
 
+test('自己提交的建議：審核後台不能核准或退回，可以撤回（decisions D29）', async ({ browser }) => {
+  const mod = await person(browser, 'moderator');
+  const id = await pending(mod.id, 'attribute', { key: 'footwash', value: 'n' });
+  await mod.page.goto('/admin');
+  const card = mod.page.getByRole('listitem', { name: new RegExp(`^#${id} `) });
+  await expect(card.getByText('這是你自己提交的建議，不能自己審核')).toBeVisible();
+  await expect(card.getByRole('button', { name: '核准' })).toHaveCount(0);
+  await expect(card.getByRole('button', { name: '退回' })).toHaveCount(0);
+  await expect(card.getByRole('checkbox')).toHaveCount(0);
+
+  await card.getByRole('button', { name: '撤回' }).click();
+  await card.getByRole('group', { name: '確認撤回' }).getByRole('button', { name: '撤回' }).click();
+  await expect(mod.page.getByRole('listitem', { name: new RegExp(`^#${id} `) })).toHaveCount(0);
+  const [r] = await sql`SELECT status FROM edit_suggestions WHERE id = ${id}`;
+  expect(r?.status).toBe('withdrawn');
+});
+
 test('審核員看不到使用者管理；打開 /admin/users 會被導回審核後台', async ({ browser }) => {
   const mod = await person(browser, 'moderator');
   await mod.page.goto('/admin');

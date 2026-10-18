@@ -55,6 +55,7 @@ describe('我的貢獻的用字', () => {
     expect(statusText('accepted', null)).toBe('已採納');
     expect(statusText('rejected', 'unverifiable')).toBe('未採納（無法查證）');
     expect(statusText('rejected', null)).toBe('未採納');
+    expect(statusText('withdrawn', null)).toBe('已撤回');
   });
 
   it('退回原因涵蓋資料庫允許的全部值', () => {
