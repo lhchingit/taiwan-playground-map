@@ -1,4 +1,4 @@
-// 回報修正（P3(c)）：登入後在綠光公園提交四種修正建議、第一次同意服務條款、重複回報、Turnstile。
+// 回報修正（P3(c)）：登入後在綠光公園提交四種修正建議、第一次同意服務條款、重複回報與撤回（D29）、Turnstile。
 // Turnstile 用 Cloudflare 官方的測試金鑰（pnpm env:local），一定通過；驗證失敗用擋掉 Turnstile 腳本模擬。
 // 審核員核准後場地頁顯示新資料在 P3(e) 測試。
 import { randomUUID } from 'node:crypto';
@@ -96,6 +96,32 @@ test('回報「洗腳池：有」：第一次同意條款、我的貢獻顯示�
   await submit(page);
   await expect(form.getByText('你已經回報過，正在審核中。')).toBeVisible();
   expect(await mine(id)).toHaveLength(1);
+
+  // 撤回那一筆（decisions D29，頁面內確認）後重新送出
+  await form.getByRole('button', { name: '撤回那一筆' }).click();
+  await form.getByRole('group', { name: '確認撤回' }).getByRole('button', { name: '撤回' }).click();
+  await expect(form.getByText('已撤回，可以重新送出。')).toBeVisible();
+  await submit(page);
+  await expect(page.getByText('已收到你的修正建議，審核通過後會更新。')).toBeVisible();
+  // 出錯後表單內容保留：重新送出的仍然是「洗腳池：沒有」
+  expect((await mine(id)).map((r) => [r.payload.key, r.payload.value, r.status])).toEqual([
+    ['footwash', 'y', 'withdrawn'],
+    ['footwash', 'n', 'pending'],
+  ]);
+
+  // 我的貢獻：撤回另一筆，狀態變成「已撤回」，撤回按鈕消失
+  await page.goto('/me');
+  const items = page.getByRole('region', { name: '我的修正建議' }).getByRole('listitem');
+  const pendingItem = items.filter({ hasText: '洗腳池：沒有' });
+  await pendingItem.getByRole('button', { name: '撤回' }).click();
+  await pendingItem
+    .getByRole('group', { name: '確認撤回' })
+    .getByRole('button', { name: '撤回' })
+    .click();
+  await expect(pendingItem.getByText('已撤回')).toBeVisible();
+  await expect(pendingItem.getByRole('button', { name: '撤回' })).toHaveCount(0);
+  await expect(items.filter({ hasText: '已撤回' })).toHaveCount(2);
+  expect((await mine(id)).map((r) => r.status)).toEqual(['withdrawn', 'withdrawn']);
 });
 
 test('停車、基本資料、封閉或維修', async ({ page }) => {

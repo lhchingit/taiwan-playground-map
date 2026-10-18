@@ -85,7 +85,7 @@ async function AdminContent({ searchParams }: Props) {
     supabase
       .from('edit_suggestions')
       .select(
-        'id, kind, payload, note, created_at, place_id, places(name, city, hours, surface, status, status_until, status_note, hours_source, hours_verified_at, surface_source, surface_verified_at, status_source, status_verified_at), profiles(display_name, accepted_count)',
+        'id, kind, payload, note, created_at, place_id, user_id, places(name, city, hours, surface, status, status_until, status_note, hours_source, hours_verified_at, surface_source, surface_verified_at, status_source, status_verified_at), profiles(display_name, accepted_count)',
       )
       .eq('status', 'pending')
       .order('created_at', { ascending: true })
@@ -235,6 +235,7 @@ async function AdminContent({ searchParams }: Props) {
       createdText: DATE.format(new Date(r.created_at)),
       summary: suggestionSummary(r.kind, r.payload, catalog.labels),
       note: s(p.note) || r.note || '',
+      mine: r.user_id === user.id,
       submitter: r.profiles
         ? { name: r.profiles.display_name ?? '家長', accepted: r.profiles.accepted_count }
         : null,

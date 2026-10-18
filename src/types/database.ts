@@ -1370,6 +1370,9 @@ isOneToOne: false
                            },
 "vote_naming":
 { Args: { "p_action": string,"p_basis": string,"p_candidate": string,"p_name": string }; Returns: string
+                           },
+"withdraw_suggestion":
+{ Args: { "p_id": number }; Returns: undefined
                            }
           }
           Enums: {

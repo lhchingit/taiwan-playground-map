@@ -12,6 +12,8 @@ import type { Json } from '@/types/database';
 export interface ReportState {
   status: 'idle' | 'sent' | 'error';
   message: string;
+  /** 同一個項目已經有自己的待審建議時，那一筆的 id（可以直接撤回，decisions D29） */
+  pendingId?: number;
 }
 
 type Fields = Record<string, string | undefined>;
@@ -69,6 +71,21 @@ async function insert(
   sent: string,
 ): Promise<ReportState> {
   const { error } = await supabase.from('edit_suggestions').insert(row);
+  if (error?.code === '23505' && row.place_id) {
+    // 同一個項目已經有待審建議（0006）：找出自己那一筆，讓使用者可以撤回後重新送出
+    const payload = row.payload as Record<string, unknown>;
+    let q = supabase
+      .from('edit_suggestions')
+      .select('id')
+      .eq('user_id', row.user_id)
+      .eq('place_id', row.place_id)
+      .eq('kind', row.kind)
+      .eq('status', 'pending');
+    if (row.kind === 'attribute') q = q.eq('payload->>key', String(payload.key));
+    if (row.kind === 'field') q = q.eq('payload->>field', String(payload.field));
+    const { data } = await q.limit(1).maybeSingle();
+    return { ...fail(submitErrorMessage(error)), ...(data && { pendingId: data.id }) };
+  }
   if (error) return fail(submitErrorMessage(error));
   return { status: 'sent', message: sent };
 }

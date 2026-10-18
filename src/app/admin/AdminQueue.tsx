@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useActionState } from 'react';
 import type { QueueGroup } from '@/lib/admin/queue';
+import { WithdrawSuggestion } from '@/components/report/WithdrawSuggestion';
 import { REJECT_REASON_LABEL } from '@/lib/auth/labels';
 import { FIELD_OPTIONS } from '@/lib/suggestions/form';
 import type { Json } from '@/types/database';
@@ -27,6 +28,8 @@ export interface CardData {
   summary: string;
   note: string;
   submitter: { name: string; accepted: number } | null;
+  /** 自己提交的建議：不能自己審核（review_suggestion() 擋下），改成可以撤回（decisions D29） */
+  mine: boolean;
   current: CurrentLine[];
   /** 核准前可以修改的內容（基本資料、封閉或維修） */
   edit: Record<string, string> | null;
@@ -74,7 +77,7 @@ function Card({
     <li className="admin-card" aria-label={`#${c.id} ${c.placeName}`}>
       <div className="admin-card-head">
         <label className="check">
-          <input type="checkbox" name="ids" value={c.id} form="batch" />
+          {!c.mine && <input type="checkbox" name="ids" value={c.id} form="batch" />}
           <span>
             #{c.id}．
             <strong>
@@ -126,85 +129,94 @@ function Card({
         </div>
       </div>
 
-      <form action={action} className="admin-review">
-        <input type="hidden" name="id" value={c.id} />
-        <input type="hidden" name="kind" value={c.kind} />
-        {c.kind === 'field' && c.edit && (
-          <fieldset>
-            <legend>核准前可以修改</legend>
-            <input type="hidden" name="edit_field" value={c.edit.field} />
-            <label>
-              {FIELD_OPTIONS.find((o) => o.field === c.edit?.field)?.label ?? c.edit.field}
-              <input name="edit_value" defaultValue={c.edit.value} maxLength={100} />
-            </label>
-          </fieldset>
-        )}
-        {c.kind === 'closure' && c.edit && (
-          <fieldset>
-            <legend>核准前可以修改</legend>
-            <label>
-              狀態
-              <select name="edit_status" defaultValue={c.edit.status}>
-                <option value="maintenance">維修中</option>
-                <option value="closed">已封閉</option>
-              </select>
-            </label>
-            <label>
-              原因
-              <input name="edit_reason" defaultValue={c.edit.reason} maxLength={200} />
-            </label>
-            <label>
-              預計恢復日期
-              <input name="edit_until" type="date" defaultValue={c.edit.until} />
-            </label>
-          </fieldset>
-        )}
-        {c.kind === 'new_place' && c.edit && (
-          <fieldset>
-            <legend>核准前可以修改（核准後立即出現在地圖上）</legend>
-            <p className="note">
-              <a
-                href={`https://www.openstreetmap.org/?mlat=${c.edit.lat}&mlon=${c.edit.lng}#map=18/${c.edit.lat}/${c.edit.lng}`}
-                target="_blank"
-                rel="noopener"
-              >
-                在 OpenStreetMap 上確認位置
-              </a>
-              ：位置要在公園或遊戲場範圍內；不可以用 Google 地圖修正。
-            </p>
-            <input type="hidden" name="edit_city" value={c.edit.city} />
-            <label>
-              名稱
-              <input name="edit_name" defaultValue={c.edit.name} maxLength={50} />
-            </label>
-            <label>
-              地址
-              <input name="edit_address" defaultValue={c.edit.address} maxLength={100} />
-            </label>
-            <label>
-              緯度
-              <input name="edit_lat" defaultValue={c.edit.lat} inputMode="decimal" />
-            </label>
-            <label>
-              經度
-              <input name="edit_lng" defaultValue={c.edit.lng} inputMode="decimal" />
-            </label>
-          </fieldset>
-        )}
-        <label>
-          審核說明（選填）
-          <input name="review_note" maxLength={500} />
-        </label>
-        <div className="admin-actions">
-          <button className="btn primary" name="decision" value="accept" disabled={pending}>
-            核准
-          </button>
-          <ReasonSelect id={`reason-${c.id}`} />
-          <button className="btn danger" name="decision" value="reject" disabled={pending}>
-            退回
-          </button>
+      {c.mine ? (
+        <div className="admin-review">
+          <p className="note">
+            這是你自己提交的建議，不能自己審核；要由其他審核員處理，或撤回。
+            <WithdrawSuggestion id={c.id} />
+          </p>
         </div>
-      </form>
+      ) : (
+        <form action={action} className="admin-review">
+          <input type="hidden" name="id" value={c.id} />
+          <input type="hidden" name="kind" value={c.kind} />
+          {c.kind === 'field' && c.edit && (
+            <fieldset>
+              <legend>核准前可以修改</legend>
+              <input type="hidden" name="edit_field" value={c.edit.field} />
+              <label>
+                {FIELD_OPTIONS.find((o) => o.field === c.edit?.field)?.label ?? c.edit.field}
+                <input name="edit_value" defaultValue={c.edit.value} maxLength={100} />
+              </label>
+            </fieldset>
+          )}
+          {c.kind === 'closure' && c.edit && (
+            <fieldset>
+              <legend>核准前可以修改</legend>
+              <label>
+                狀態
+                <select name="edit_status" defaultValue={c.edit.status}>
+                  <option value="maintenance">維修中</option>
+                  <option value="closed">已封閉</option>
+                </select>
+              </label>
+              <label>
+                原因
+                <input name="edit_reason" defaultValue={c.edit.reason} maxLength={200} />
+              </label>
+              <label>
+                預計恢復日期
+                <input name="edit_until" type="date" defaultValue={c.edit.until} />
+              </label>
+            </fieldset>
+          )}
+          {c.kind === 'new_place' && c.edit && (
+            <fieldset>
+              <legend>核准前可以修改（核准後立即出現在地圖上）</legend>
+              <p className="note">
+                <a
+                  href={`https://www.openstreetmap.org/?mlat=${c.edit.lat}&mlon=${c.edit.lng}#map=18/${c.edit.lat}/${c.edit.lng}`}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  在 OpenStreetMap 上確認位置
+                </a>
+                ：位置要在公園或遊戲場範圍內；不可以用 Google 地圖修正。
+              </p>
+              <input type="hidden" name="edit_city" value={c.edit.city} />
+              <label>
+                名稱
+                <input name="edit_name" defaultValue={c.edit.name} maxLength={50} />
+              </label>
+              <label>
+                地址
+                <input name="edit_address" defaultValue={c.edit.address} maxLength={100} />
+              </label>
+              <label>
+                緯度
+                <input name="edit_lat" defaultValue={c.edit.lat} inputMode="decimal" />
+              </label>
+              <label>
+                經度
+                <input name="edit_lng" defaultValue={c.edit.lng} inputMode="decimal" />
+              </label>
+            </fieldset>
+          )}
+          <label>
+            審核說明（選填）
+            <input name="review_note" maxLength={500} />
+          </label>
+          <div className="admin-actions">
+            <button className="btn primary" name="decision" value="accept" disabled={pending}>
+              核准
+            </button>
+            <ReasonSelect id={`reason-${c.id}`} />
+            <button className="btn danger" name="decision" value="reject" disabled={pending}>
+              退回
+            </button>
+          </div>
+        </form>
+      )}
     </li>
   );
 }

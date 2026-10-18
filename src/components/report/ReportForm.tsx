@@ -2,7 +2,7 @@
 // 回報修正的表單（沿用原型的 form.report）：設施或生活機能、停車、基本資料、封閉或維修。
 // 送出後進入審核，審核通過才會更新場地資料。
 import Link from 'next/link';
-import { type ReactNode, useActionState, useEffect, useId, useState } from 'react';
+import { type ReactNode, startTransition, useActionState, useEffect, useId, useState } from 'react';
 import { type ReportState, submitSuggestion } from '@/app/report/actions';
 import { refreshSession } from '@/components/auth/useSession';
 import {
@@ -13,6 +13,7 @@ import {
 } from '@/lib/suggestions/form';
 import type { Tri } from '@/types/place';
 import { Turnstile } from './Turnstile';
+import { WithdrawSuggestion } from './WithdrawSuggestion';
 
 export interface ReportOption {
   key: string;
@@ -45,6 +46,8 @@ export function ReportForm(props: {
   const [kind, setKind] = useState<SuggestionKind>('attribute');
   const [value, setValue] = useState<'y' | 'n'>('y');
   const [parkingType, setParkingType] = useState('lot');
+  // 重複回報時撤回了那一筆（decisions D29）：提示可以重新送出
+  const [withdrawn, setWithdrawn] = useState<number | null>(null);
 
   // 第一次送出成功後，同意條款的狀態改變了：讓其他元件重新查詢
   useEffect(() => {
@@ -63,7 +66,16 @@ export function ReportForm(props: {
   }
 
   return (
-    <form className="report" action={action} aria-label="回報修正">
+    <form
+      className="report"
+      aria-label="回報修正"
+      // 不用 action={action}：React 送出後會重設表單，出錯時（例如重複回報、撤回後重新送出）使用者選的項目會跳回第一項
+      onSubmit={(e) => {
+        e.preventDefault();
+        const data = new FormData(e.currentTarget);
+        startTransition(() => action(data));
+      }}
+    >
       <input type="hidden" name="place_id" value={props.placeId} />
       <input type="hidden" name="kind" value={kind} />
       <div className="seg" role="group" aria-label="回報類型">
@@ -233,9 +245,23 @@ export function ReportForm(props: {
       <button className="btn primary" type="submit" disabled={pending}>
         {pending ? '送出中…' : '送出修正建議'}
       </button>
-      <p className="note err" role="alert">
-        {state.status === 'error' ? state.message : ''}
-      </p>
+      {state.status === 'error' && state.pendingId && withdrawn === state.pendingId ? (
+        <p className="note ok" role="status">
+          已撤回，可以重新送出。
+        </p>
+      ) : (
+        <p className="note err" role="alert">
+          {state.status === 'error' ? state.message : ''}
+          {state.status === 'error' && state.pendingId !== undefined && (
+            <WithdrawSuggestion
+              key={state.pendingId}
+              id={state.pendingId}
+              label="撤回那一筆"
+              onDone={() => setWithdrawn(state.pendingId ?? null)}
+            />
+          )}
+        </p>
+      )}
       <p className="note">送出後會先由審核員確認，通過才會更新場地資料。</p>
     </form>
   );

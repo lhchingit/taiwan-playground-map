@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
+import { WithdrawSuggestion } from '@/components/report/WithdrawSuggestion';
 import { KIND_LABEL, statusText, suggestionSummary } from '@/lib/auth/labels';
 import { currentUser } from '@/lib/auth/session';
 import { getAttributeCatalog, getCityBounds } from '@/lib/data';
@@ -100,6 +101,7 @@ async function MeContent() {
                       {statusText(s.status, s.reject_reason)}
                     </span>
                     ．{DATE.format(new Date(s.created_at))}
+                    {s.status === 'pending' && <WithdrawSuggestion id={s.id} />}
                   </div>
                 </li>
               );
