@@ -1495,6 +1495,12 @@ form.report .seg {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  /* 不用共用 .seg 的膠囊外框：按鈕是獨立的圓角方塊，外框的 overflow: hidden 會切掉頭尾按鈕的角 */
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
 }
 form.report .seg button {
   font: inherit;
