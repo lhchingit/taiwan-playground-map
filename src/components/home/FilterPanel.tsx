@@ -110,6 +110,8 @@ export function FilterPanel({ filters: f, onChange, catalog, saved }: Props) {
         {saved}
         <div className="fgroup">
           <h3 id="f-km">距離上限（直線）</h3>
+          {/* decisions D4：不限時只看這個縣市，設了距離才包含附近縣市 */}
+          <p className="fnote">不限＝僅限同縣市；設了距離會包含附近縣市</p>
           <div className="rangerow">
             <input
               type="range"
