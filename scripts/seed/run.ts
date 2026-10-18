@@ -119,15 +119,17 @@ export async function runSeed(
     changes.places_upserted = (
       await sql`
       INSERT INTO places (id, name, city, district, address, geom, size_class, area_ha, stay_bucket, stay_source,
-                          age_min, age_max, fee, indoor, hours, surface, status, summary, coord_source)
+                          age_min, age_max, fee, indoor, hours, surface, status, summary, coord_source,
+                          listing_source, listing_verified_at)
       SELECT id, name, city, district, address,
              ST_SetSRID(ST_MakePoint(lng, lat), 4326)::geography,
              size_class, area_ha, stay_bucket, stay_source, age_min, age_max, fee, indoor, hours, surface, status, summary,
-             coord_source
+             coord_source, listing_source, listing_verified_at
       FROM jsonb_to_recordset(${sql.json(rows.places)}) AS x(
         id text, name text, city text, district text, address text, lat float8, lng float8,
         size_class char(1), area_ha numeric, stay_bucket text, stay_source text, age_min smallint, age_max smallint,
-        fee text, indoor boolean, hours text, surface text, status text, summary text, coord_source text)
+        fee text, indoor boolean, hours text, surface text, status text, summary text, coord_source text,
+        listing_source text, listing_verified_at date)
       ON CONFLICT (id) DO UPDATE SET
         name = EXCLUDED.name, city = EXCLUDED.city, district = EXCLUDED.district, address = EXCLUDED.address,
         geom = EXCLUDED.geom, size_class = EXCLUDED.size_class, area_ha = EXCLUDED.area_ha, stay_bucket = EXCLUDED.stay_bucket,
@@ -137,11 +139,12 @@ export async function runSeed(
         surface = CASE WHEN places.surface_source = ${USER_SOURCE} THEN places.surface ELSE EXCLUDED.surface END,
         status = CASE WHEN places.status_source = ${USER_SOURCE} THEN places.status ELSE EXCLUDED.status END,
         summary = EXCLUDED.summary, coord_source = EXCLUDED.coord_source,
+        listing_source = EXCLUDED.listing_source, listing_verified_at = EXCLUDED.listing_verified_at,
         updated_at = now()
       WHERE (places.name, places.city, places.district, places.address, ST_AsEWKT(places.geom),
              places.size_class, places.area_ha, places.stay_bucket, places.stay_source, places.age_min, places.age_max,
              places.fee, places.indoor, places.hours, places.surface, places.status, places.summary,
-             places.coord_source)
+             places.coord_source, places.listing_source, places.listing_verified_at)
         IS DISTINCT FROM
             (EXCLUDED.name, EXCLUDED.city, EXCLUDED.district, EXCLUDED.address, ST_AsEWKT(EXCLUDED.geom),
              EXCLUDED.size_class, EXCLUDED.area_ha, EXCLUDED.stay_bucket, EXCLUDED.stay_source, EXCLUDED.age_min, EXCLUDED.age_max,
@@ -149,7 +152,7 @@ export async function runSeed(
              CASE WHEN places.hours_source = ${USER_SOURCE} THEN places.hours ELSE EXCLUDED.hours END,
              CASE WHEN places.surface_source = ${USER_SOURCE} THEN places.surface ELSE EXCLUDED.surface END,
              CASE WHEN places.status_source = ${USER_SOURCE} THEN places.status ELSE EXCLUDED.status END,
-             EXCLUDED.summary, EXCLUDED.coord_source)`
+             EXCLUDED.summary, EXCLUDED.coord_source, EXCLUDED.listing_source, EXCLUDED.listing_verified_at)`
     ).count;
 
     // 5. 屬性：先刪掉 places.json 已經沒有的列（不動使用者回報的資料），再 upsert

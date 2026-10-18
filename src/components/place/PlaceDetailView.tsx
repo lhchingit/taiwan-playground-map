@@ -167,6 +167,15 @@ export function PlaceDetailView({
           </dd>
           <dt>座標來源</dt>
           <dd className="asrc">{d.coordSource ?? '未知'}</dd>
+          {d.listingRef?.source && (
+            <>
+              <dt>場地依據</dt>
+              <dd>
+                報導寫明公園裡有兒童遊戲場
+                <FieldSource field={d.listingRef} />
+              </dd>
+            </>
+          )}
         </dl>
       </section>
 

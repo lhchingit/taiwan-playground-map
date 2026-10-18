@@ -90,6 +90,7 @@ class ParksTest(unittest.TestCase):
         self.assertEqual((new["id"], new["name"], new["district"], new["lat"], new["lng"]),
                          ("hsq-osm-w9", "兒9公園", "竹北市", 24.81, 121.01))
         self.assertEqual(new["source_coords"], "OpenStreetMap w9（leisure=park 範圍中心）")
+        self.assertEqual((new["listing_src"], new["listing_at"]), ("news-1", "2026-10-18"))
         self.assertEqual(new["summary"], "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場："
                          "縣府啟用的特色遊戲場「測試」。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。")
         self.assertEqual(new["attrs"]["slide"]["v"], "y")

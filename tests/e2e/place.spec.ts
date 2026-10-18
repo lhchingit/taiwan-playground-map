@@ -56,6 +56,8 @@ test.describe('場地頁', () => {
 
     await expect(page.getByText('座標與地圖資料 © OpenStreetMap contributors')).toBeVisible();
     await expect(page.getByText('OpenStreetMap w448662016（清冊編號 94）')).toBeVisible();
+    // 場地依據只有依新聞或文章上地圖的場地才有（decisions D20）
+    await expect(page.getByText('場地依據', { exact: true })).toHaveCount(0);
 
     await expect(page.locator('meta[name="description"]')).toHaveAttribute(
       'content',

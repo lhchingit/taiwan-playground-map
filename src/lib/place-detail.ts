@@ -42,6 +42,8 @@ export interface PlaceDetail extends CityPlace {
   /** 開放時間、地面材質的來源（使用者回報經審核後套用時才有） */
   hoursRef: FieldRef | null;
   surfaceRef: FieldRef | null;
+  /** 場地本身的依據：OSM 只畫了公園、依新聞或文章寫明有遊戲場才上地圖的場地（decisions D20）；一般場地是 null */
+  listingRef: FieldRef | null;
   /** 維修中／已封閉的說明（status 在 CityPlace） */
   statusInfo: StatusInfo | null;
   facts: AttrFact[];
@@ -119,6 +121,7 @@ export function pageSources(d: PlaceDetail): SourceRef[] {
     ...d.facts.map((f) => f.source),
     ...d.parkingRows.map((p) => p.source),
     d.staySource,
+    d.listingRef?.source ?? null,
   ].filter((s): s is SourceRef => s !== null);
   const unique = [...new Map(all.map((s) => [s.id, s])).values()];
   return unique.sort(
@@ -184,6 +187,7 @@ export function toPlaceDetail(input: {
     coordSource: str(place.coord_source),
     hoursRef: ref(place.hours_source, place.hours_verified_at),
     surfaceRef: ref(place.surface_source, place.surface_verified_at),
+    listingRef: ref(place.listing_source, place.listing_verified_at),
     statusInfo: closed
       ? {
           until: str(place.status_until),
