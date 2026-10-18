@@ -273,6 +273,17 @@ describe('pnpm seed', () => {
       FROM place_attributes pa JOIN sources s ON s.id = pa.source_id
       WHERE pa.place_id LIKE 'hsq-osm-%'`;
     expect(a).toEqual({ n: entries.length, no_date: 0, other_kind: 0 });
+    // OSM 只畫了公園、依新聞或文章上地圖的場地：依據有來源與日期（places.listing_source，0032）；其他場地沒有
+    const listed = hsq!.places.filter((p) => p.listing_src).map((p) => p.id);
+    expect(listed.length).toBeGreaterThan(0);
+    const [l] = await sql`
+      SELECT count(*) FILTER (WHERE p.listing_source IS NOT NULL)::int AS n,
+             count(*) FILTER (WHERE p.listing_source IS NOT NULL AND p.id <> ALL(${listed}))::int AS extra,
+             count(*) FILTER (WHERE p.listing_source IS NOT NULL
+                              AND (p.listing_verified_at IS NULL OR s.kind NOT IN ('news', 'article')))::int AS bad
+      FROM places p LEFT JOIN sources s ON s.id = p.listing_source
+      WHERE p.city = 'hsq' AND p.id NOT LIKE 'test-%'`;
+    expect(l).toEqual({ n: listed.length, extra: 0, bad: 0 });
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'hsq'`;
     expect(c?.launched_at).toBeNull();
     const pub = await anonClient().from('places').select('id').eq('city', 'hsq');

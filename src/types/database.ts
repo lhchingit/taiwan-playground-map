@@ -313,14 +313,14 @@ isOneToOne: false
                   ]
                 },"places": {
                   Row: {
-                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"coord_source": string | null,"created_at": string,"created_from_naming": boolean,"created_from_suggestion": number | null,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"hours_source": string | null,"hours_verified_at": string | null,"id": string,"indoor": boolean,"name": string,"size_class": string | null,"status": string,"status_note": string | null,"status_source": string | null,"status_until": string | null,"status_verified_at": string | null,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"surface_source": string | null,"surface_verified_at": string | null,"updated_at": string
+                    "address": string | null,"age_max": number | null,"age_min": number | null,"area_ha": number | null,"attrs": NonNullable<Json>,"city": string,"coord_source": string | null,"created_at": string,"created_from_naming": boolean,"created_from_suggestion": number | null,"district": string | null,"fee": string | null,"geom": unknown,"hours": string | null,"hours_source": string | null,"hours_verified_at": string | null,"id": string,"indoor": boolean,"listing_source": string | null,"listing_verified_at": string | null,"name": string,"size_class": string | null,"status": string,"status_note": string | null,"status_source": string | null,"status_until": string | null,"status_verified_at": string | null,"stay_bucket": string | null,"stay_source": string | null,"summary": string | null,"surface": string | null,"surface_source": string | null,"surface_verified_at": string | null,"updated_at": string
                   }
                   ComputedFields: never
                   Insert: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"coord_source"?: string | null,"created_at"?: string,"created_from_naming"?: boolean,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id": string,"indoor"?: boolean,"name": string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city": string,"coord_source"?: string | null,"created_at"?: string,"created_from_naming"?: boolean,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom": unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id": string,"indoor"?: boolean,"listing_source"?: string | null,"listing_verified_at"?: string | null,"name": string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
                   }
                   Update: {
-                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"coord_source"?: string | null,"created_at"?: string,"created_from_naming"?: boolean,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id"?: string,"indoor"?: boolean,"name"?: string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
+                    "address"?: string | null,"age_max"?: number | null,"age_min"?: number | null,"area_ha"?: number | null,"attrs"?: NonNullable<Json>,"city"?: string,"coord_source"?: string | null,"created_at"?: string,"created_from_naming"?: boolean,"created_from_suggestion"?: number | null,"district"?: string | null,"fee"?: string | null,"geom"?: unknown,"hours"?: string | null,"hours_source"?: string | null,"hours_verified_at"?: string | null,"id"?: string,"indoor"?: boolean,"listing_source"?: string | null,"listing_verified_at"?: string | null,"name"?: string,"size_class"?: string | null,"status"?: string,"status_note"?: string | null,"status_source"?: string | null,"status_until"?: string | null,"status_verified_at"?: string | null,"stay_bucket"?: string | null,"stay_source"?: string | null,"summary"?: string | null,"surface"?: string | null,"surface_source"?: string | null,"surface_verified_at"?: string | null,"updated_at"?: string
                   }
                   Relationships: [
                     {
@@ -338,6 +338,12 @@ isOneToOne: false
     },{
       foreignKeyName: "places_hours_source_fkey"
       columns: ["hours_source"]
+isOneToOne: false
+      referencedRelation: "sources"
+      referencedColumns: ["id"]
+    },{
+      foreignKeyName: "places_listing_source_fkey"
+      columns: ["listing_source"]
 isOneToOne: false
       referencedRelation: "sources"
       referencedColumns: ["id"]

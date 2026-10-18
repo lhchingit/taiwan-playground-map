@@ -233,6 +233,7 @@
   - **OSM 只畫了公園的遊戲場（2026-10-18，先用於新竹縣）：** OSM 公園（`leisure=park`）裡沒有標遊戲場，但新聞或文章寫明裡面有兒童遊戲場、而且寫的路口跟 OSM 公園位置對得上的，可以列在 `research.json` 的 `parks` 上地圖。
     - 名稱用 OSM 公園名稱，座標用公園範圍中心點（`scripts/fetch_osm_parks.py` → `osm-parks.json`），`source_coords` 註明「leisure=park 範圍中心」。
     - 中心點離現有場地不到 100 公尺的，可能是同一處，匯入中止。
+    - 依據的來源與查證日期記在 `places.listing_source`／`listing_verified_at`（0032），場地頁的「場地依據」與「資料來源」會列出。
     - 新聞或文章用的名稱跟 OSM 不同時（例如 OSM「公16公園」就是文章說的「公兒30 蘑菇城堡」），寫在 `aka`，放進場地說明，不改名稱。
     - 路口附近有好幾個遊戲場、分不出是哪一個的（例如兒22 大王花），先不上地圖。
 - **id：** `<縣市>-osm-<n|w|r><OSM id>`，例如 `hsq-osm-w974869027`（D12）。

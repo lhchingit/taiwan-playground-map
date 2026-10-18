@@ -8,7 +8,7 @@
    "places": {"<場地 id>": {"<屬性 key>": ["y|n", "<來源 key>", "<重新整理的說明>"]}}}
 
 parks：OSM 公園裡沒有標遊戲場、但新聞或文章寫明有的，用公園範圍中心點（data/raw/<縣市>/osm-parks.json，
-scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱。
+scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱；依據的來源記在 listing_src／listing_at（places.listing_source）。
 只記來源文字明確寫到的；「沒有」也要來源明寫才填 n。格式有錯就中止匯入，不會默默略過。
 """
 import math
@@ -120,6 +120,8 @@ def park_places(research, osm_parks, places, keys, city):
             attrs={k: {"v": "u", "src": None, "note": None, "at": None} for k in keys},
             parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
             source_coords=f"OpenStreetMap {ref}（leisure=park 範圍中心）",
+            listing_src=parks[ref][0] if isinstance(parks[ref], list) and len(parks[ref]) == 2 else None,
+            listing_at=research.get("verified_at"),
             official_ref=[{"osm": ref}],
             area_ha=None,
             city=city,

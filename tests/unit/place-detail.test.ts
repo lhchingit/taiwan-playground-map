@@ -108,6 +108,32 @@ describe('pageSources', () => {
   it('去重，官方資料在前、網友線索與推估在後', () => {
     expect(pageSources(detail).map((s) => s.id)).toEqual(['hccg', 'yam', 'lead', 'est']);
   });
+
+  it('一般場地沒有場地依據', () => {
+    expect(detail.listingRef).toBeNull();
+  });
+
+  it('場地依據（decisions D20）：有來源與確認日期，也列進資料來源', () => {
+    const news: SourceRef = {
+      id: 'ltn',
+      label: '新聞',
+      url: 'https://example.org/n',
+      kind: 'news',
+    };
+    const listed = toPlaceDetail({
+      card,
+      place: {
+        listing_source: 'ltn',
+        listing_verified_at: '2026-10-18',
+        coord_source: 'OpenStreetMap w9',
+      },
+      attributes: [],
+      parking: [],
+      sources: [...Object.values(SRC), news],
+    });
+    expect(listed.listingRef).toEqual({ source: news, verifiedAt: '2026-10-18' });
+    expect(pageSources(listed).map((s) => s.id)).toEqual(['ltn']);
+  });
 });
 
 describe('顯示文字', () => {

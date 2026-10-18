@@ -73,6 +73,10 @@ export interface Place {
   parking: Parking;
   /** 座標來源說明（OSM 編號等），尚未存進資料庫 */
   source_coords?: string;
+  /** 場地本身的依據（來源 key）：OSM 只畫了公園、依新聞或文章上地圖的場地（decisions D20） */
+  listing_src?: string | null;
+  /** 場地依據的確認日期（YYYY-MM-DD） */
+  listing_at?: string | null;
   /** 對應的官方清冊資料，尚未存進資料庫 */
   official_ref?: OfficialRef[];
 }

@@ -48,6 +48,9 @@ export type PlaceRow = {
   summary: string | null;
   /** 座標來源說明（OSM 編號等） */
   coord_source: string | null;
+  /** 場地本身的依據（decisions D20）；一般場地是 null */
+  listing_source: string | null;
+  listing_verified_at: string | null;
 };
 
 export type PlaceAttributeRow = {
@@ -161,6 +164,8 @@ export function toSeedRows(
     status: p.status,
     summary: p.summary,
     coord_source: p.source_coords ?? null,
+    listing_source: p.listing_src ?? null,
+    listing_verified_at: p.listing_at ?? null,
   }));
 
   // 沒有資料列 = 未知：值為 u 且沒有來源的屬性不寫入；u 但有來源（查過但無法確認）保留紀錄
