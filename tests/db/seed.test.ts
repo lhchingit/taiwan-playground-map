@@ -254,17 +254,25 @@ describe('pnpm seed', () => {
     }
   });
 
-  it('新竹縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
+  it('新竹縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM；屬性只有人工查證的項目，每一項都有來源', async () => {
     expect(hsq?.places.length).toBeGreaterThan(0);
+    // data/raw/hsq/research.json：新聞、網路文章明確寫到的遊具與設施
+    const researched = hsq!.places.filter((p) => Object.values(p.attrs).some((a) => a.v !== 'u'));
+    const entries = researched.flatMap((p) => Object.values(p.attrs).filter((a) => a.v !== 'u'));
+    expect(researched.length).toBeGreaterThan(0);
     const [r] = await sql`
       SELECT count(*)::int AS n,
              count(*) FILTER (WHERE attrs <> '{}'::jsonb)::int AS with_attrs,
              count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
       FROM places WHERE city = 'hsq' AND id NOT LIKE 'test-%'`;
-    expect(r).toEqual({ n: hsq!.places.length, with_attrs: 0, not_osm: 0 });
-    const [a] =
-      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'hsq-osm-%'`;
-    expect(a?.n).toBe(0);
+    expect(r).toEqual({ n: hsq!.places.length, with_attrs: researched.length, not_osm: 0 });
+    const [a] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE pa.verified_at IS NULL)::int AS no_date,
+             count(*) FILTER (WHERE s.kind NOT IN ('news', 'article'))::int AS other_kind
+      FROM place_attributes pa JOIN sources s ON s.id = pa.source_id
+      WHERE pa.place_id LIKE 'hsq-osm-%'`;
+    expect(a).toEqual({ n: entries.length, no_date: 0, other_kind: 0 });
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'hsq'`;
     expect(c?.launched_at).toBeNull();
     const pub = await anonClient().from('places').select('id').eq('city', 'hsq');

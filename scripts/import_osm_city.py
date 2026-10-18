@@ -3,6 +3,7 @@
   python3 scripts/import_osm_city.py hsq
 
 輸入：data/raw/<縣市>/osm.json（scripts/fetch_osm_city.py）、data/raw/<縣市>/manual-names.tsv（人工命名或排除）、
+      data/raw/<縣市>/research.json（有的話：人工查證的遊具與設施，sources/research.py）、
       data/raw/<縣市>/osm-institutions.json（scripts/fetch_osm_institutions.py：位在學校、機關範圍內的遊戲場）
 輸出：data/seed/<縣市>/places.json、places.csv；
       data/review/<縣市>/unnamed.csv、merged.csv、excluded.csv、excluded-institution.csv（HOLD_SUSPICIOUS 的縣市另有 named-suspicious.csv）
@@ -15,7 +16,7 @@ from pathlib import Path
 from lib.attrs import attr_keys
 from lib.io import read_json, write_csv, write_json
 from lib.labels import labels_json
-from sources import park_lists
+from sources import park_lists, research
 from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -51,7 +52,10 @@ def main():
         ordered = sorted(groups, key=lambda g: osm.ref_key(g["members"][0]["ref"]))  # 跟 to_places 相同的順序
         official = park_lists.enrich(places, ordered, parks["records"], config)
         sources.update(config["sources"])
-    seed = {"version": "0.2", "city": CITIES[city], "generated": raw["fetched"], "sources": sources,
+    research_path = raw_dir / "research.json"
+    if research_path.exists():  # 人工查證的遊具與設施（sources/research.py）
+        sources.update(research.apply(read_json(research_path), places, keys))
+    seed ={"version": "0.2", "city": CITIES[city], "generated": raw["fetched"], "sources": sources,
             "labels": labels, "places": places}
     seed_dir = ROOT / "data/seed" / city
     seed_dir.mkdir(parents=True, exist_ok=True)

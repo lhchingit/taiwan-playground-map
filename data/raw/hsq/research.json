@@ -1,0 +1,72 @@
+{
+ "verified_at": "2026-10-18",
+ "sources": {
+  "ltn-2021-rope": {"label": "新聞：自由時報 2021-02 竹北兒1公園攀爬網重建啟用（竹北市公所說明）", "url": "https://news.ltn.com.tw/news/life/paper/1431014", "kind": "news"},
+  "blog-2024-rope": {"label": "網路文章：痞客邦部落格 2024-04 竹北繩索公園", "url": "https://q82465.pixnet.net/blog/posts/12226925845", "kind": "article"},
+  "nienie-2023-p25": {"label": "網路文章：nienie 部落格 2023-10 竹北公25 小猴森林公園", "url": "https://nienie.tw/monkey-forest-park/", "kind": "article"},
+  "tvbs-star": {"label": "網路文章：TVBS 食尚玩家 竹北星際系列特色公園（頁面未標日期）", "url": "https://supertaste.tvbs.com.tw/kids/354597", "kind": "article"},
+  "natsu-2024-ai": {"label": "網路文章：小菲親子玩樂生活 2024-04（2025-06 更新）竹北 AI 智慧園區公園", "url": "https://natsuphil.com/hsinchu/ai-park/", "kind": "article"},
+  "natsu-2025-p24": {"label": "網路文章：小菲親子玩樂生活 2025-04 竹北公24 興隆公園", "url": "https://natsuphil.com/hsinchu/kid24-park/", "kind": "article"},
+  "udn-2026-fuxing": {"label": "新聞：聯合報 2026-10 竹北福興公園改善完成（竹北市公所說明）", "url": "https://udn.com/news/story/7324/9805990", "kind": "news"}
+ },
+ "places": {
+  "hsq-osm-w1363504028": {
+   "rope_net": ["y", "ltn-2021-rope", "8.7 公尺高的大型繩索攀爬網（2021 年重建）"],
+   "slide": ["y", "ltn-2021-rope", "攀爬網附圓管溜滑梯；另有給幼兒的樹幹造型溜滑梯（2024 部落格）"],
+   "toilet": ["y", "blog-2024-rope", "有公廁"],
+   "nursing": ["y", "blog-2024-rope", "無障礙廁所與女廁有尿布台"]
+  },
+  "hsq-osm-w1472862933": {
+   "climbing": ["y", "nienie-2023-p25", "大型原木攀爬架，也有較低矮的攀爬設施"],
+   "swing": ["y", "nienie-2023-p25", "鞦韆很多"],
+   "toilet": ["n", "nienie-2023-p25", "文章寫遊戲場沒有廁所，最近的在旁邊的公24興隆公園"]
+  },
+  "hsq-osm-w441724977": {
+   "slide": ["y", "tvbs-star", "太空站主題（星際航站）遊戲塔有溜滑梯"],
+   "rope_net": ["y", "tvbs-star", "有攀爬網"],
+   "swing": ["y", "tvbs-star", "有雙人鞦韆"],
+   "toddler_zone": ["y", "tvbs-star", "有 2 歲以上幼童的遊戲區"],
+   "music": ["y", "tvbs-star", "安全護欄設計成可以敲的鐵琴"],
+   "shade": ["y", "tvbs-star", "有涼亭"]
+  },
+  "hsq-osm-w974869027": {
+   "slide": ["y", "natsu-2024-ai", "大碗公造型溜滑梯等多座溜滑梯"],
+   "swing": ["y", "natsu-2024-ai", "有共融式鞦韆"],
+   "zipline": ["y", "natsu-2024-ai", "有滑索"],
+   "spinner": ["y", "natsu-2024-ai", "旋轉陀螺"],
+   "climbing": ["y", "natsu-2024-ai", "攀岩、攀繩架"],
+   "rope_net": ["y", "natsu-2024-ai", "攀爬網，適合較大的孩子"],
+   "balance": ["y", "natsu-2024-ai", "有平衡木"],
+   "sandpit": ["y", "natsu-2024-ai", "細沙沙坑，上方加了遮陽"],
+   "pushbike": ["y", "natsu-2024-ai", "兒童滑步車練習場"],
+   "toilet": ["y", "natsu-2024-ai", "原本的流動廁所改建成公廁"],
+   "handwash": ["y", "natsu-2024-ai", "園區有多處洗手台"],
+   "shade": ["y", "natsu-2024-ai", "遊戲場有遮陽休憩區，沙坑上方有遮陽"],
+   "inclusive": ["y", "natsu-2024-ai", "竹北第一座共融式公園"]
+  },
+  "hsq-osm-w492346303": {
+   "slide": ["y", "natsu-2025-p24", "森林小木屋滑梯組，另有兩座磨石子地景滑梯"],
+   "swing": ["y", "natsu-2025-p24", "親子雙人鞦韆、單板鞦韆"],
+   "nest_swing": ["y", "natsu-2025-p24", "有鳥巢鞦韆"],
+   "spinner": ["y", "natsu-2025-p24", "沙坑旁有轉轉杯"],
+   "climbing": ["y", "natsu-2025-p24", "竹林造型攀爬設施"],
+   "climbing_wall": ["y", "natsu-2025-p24", "斜坡攀爬牆，有類似攀岩石的設計"],
+   "rope_net": ["y", "natsu-2025-p24", "蝴蝶造型攀爬網"],
+   "sandpit": ["y", "natsu-2025-p24", "森林小木屋沙坑區，有挖沙機"],
+   "pushbike": ["y", "natsu-2025-p24", "Push Bike 地景車道"],
+   "open_lawn": ["y", "natsu-2025-p24", "大片草皮可以跑跳"],
+   "bars": ["y", "natsu-2025-p24", "體健區有單槓"],
+   "toilet": ["y", "natsu-2025-p24", "有公共廁所"],
+   "handwash": ["y", "natsu-2025-p24", "沙坑旁有沖洗手腳的設備"],
+   "footwash": ["y", "natsu-2025-p24", "沙坑旁有沖洗手腳的設備"],
+   "shade": ["y", "natsu-2025-p24", "隧道地景滑梯上方有遮陽"],
+   "inclusive": ["y", "natsu-2025-p24", "有共融式鞦韆"]
+  },
+  "hsq-osm-w1227114582": {
+   "toilet": ["y", "udn-2026-fuxing", "2026 年改善工程修繕了廁所"],
+   "shade": ["y", "udn-2026-fuxing", "2026 年改善後新增涼亭"],
+   "lighting": ["y", "udn-2026-fuxing", "2026 年改善工程一併改善照明"],
+   "stroller": ["y", "udn-2026-fuxing", "改善後步道沒有高低差，輪椅可以順暢通行"]
+  }
+ }
+}
