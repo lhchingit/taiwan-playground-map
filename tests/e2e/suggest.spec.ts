@@ -164,6 +164,23 @@ test('停車、基本資料、封閉或維修', async ({ page }) => {
   ]);
 });
 
+test('回報類型、實際狀況的按鈕完整顯示，不會被外框裁掉', async ({ page }) => {
+  const id = await login(page);
+  await acceptTerms(page, id);
+  const form = await openForm(page);
+  for (const name of ['回報類型', '實際狀況']) {
+    const group = form.getByRole('group', { name });
+    // 外框不能裁切（共用的 .seg 是膠囊形、overflow: hidden，頭尾按鈕的角會被切掉）
+    expect(await group.evaluate((el) => getComputedStyle(el).overflow)).not.toBe('hidden');
+    const outer = (await group.boundingBox())!;
+    for (const button of await group.getByRole('button').all()) {
+      const b = (await button.boundingBox())!;
+      expect(b.x).toBeGreaterThanOrEqual(outer.x - 0.5);
+      expect(b.x + b.width).toBeLessThanOrEqual(outer.x + outer.width + 0.5);
+    }
+  }
+});
+
 test('格式錯誤時顯示原因，不會送出', async ({ page }) => {
   const id = await login(page);
   await acceptTerms(page, id);
