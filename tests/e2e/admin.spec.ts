@@ -438,6 +438,25 @@ test('回報新場地 → 審核員修改名稱後核准 → 地圖、場地頁�
   ).toHaveAttribute('href', `/hsinchu-city/places/${placeId}`);
 });
 
+test('回報新場地出錯時（Turnstile 沒通過），填好的名稱、地址保留', async ({ browser }) => {
+  const member = await person(browser, 'member');
+  // 擋掉 Turnstile：沒有 token，送出會被拒絕
+  await member.page.route(/challenges\.cloudflare\.com/, (r) => r.abort());
+  await member.page.goto('/hsinchu-city');
+  await member.page.getByRole('button', { name: '回報新場地' }).click();
+  await pickOnMap(member.page);
+  const form = member.page.getByRole('form', { name: '新場地' });
+  await form.getByLabel('場地名稱').fill('test-e2e 保留內容');
+  await form.getByLabel('地址（選填）').fill('新竹市測試路 2 號');
+  await form.getByRole('button', { name: '送出新場地' }).click();
+  await expect(form.getByText('驗證沒有通過，請再試一次。')).toBeVisible();
+  await expect(form.getByLabel('場地名稱')).toHaveValue('test-e2e 保留內容');
+  await expect(form.getByLabel('地址（選填）')).toHaveValue('新竹市測試路 2 號');
+  expect(
+    await sql`SELECT 1 FROM edit_suggestions WHERE user_id = ${member.id} AND kind = 'new_place'`,
+  ).toHaveLength(0);
+});
+
 test('未登入按「回報新場地」→ 登入視窗 → 登入後直接進入標點模式', async ({ browser }) => {
   const page = await (await browser.newContext()).newPage();
   await page.route(/tiles\.openfreemap\.org|tile\.openstreetmap\.org|nominatim/, (r) => r.abort());

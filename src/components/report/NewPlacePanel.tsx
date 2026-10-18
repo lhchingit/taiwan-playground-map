@@ -2,7 +2,7 @@
 // 回報新場地（首頁）：在地圖上點出位置 → 名稱、地址 → 送出，審核通過後出現在地圖上。
 // 位置只用本站的 OpenStreetMap 底圖標示（decisions D19），不可以照 Google 地圖的位置標。
 import Link from 'next/link';
-import { useActionState, useEffect } from 'react';
+import { startTransition, useActionState, useEffect } from 'react';
 import { submitNewPlace, type ReportState } from '@/app/report/actions';
 import { refreshSession, type SessionInfo } from '@/components/auth/useSession';
 import { launchedCityAt, type CityBounds } from '@/lib/cities';
@@ -47,7 +47,16 @@ export function NewPlacePanel(props: {
           在地圖上點出場地的位置。請到現場確認，或對照地圖上的公園範圍；不要照 Google 地圖的位置標。
         </p>
       ) : (
-        <form className="report" action={action} aria-label="新場地">
+        <form
+          className="report"
+          aria-label="新場地"
+          // 不用 action={action}：React 送出後會重設表單，出錯時（例如驗證沒通過）填好的名稱、地址會被清掉
+          onSubmit={(e) => {
+            e.preventDefault();
+            const data = new FormData(e.currentTarget);
+            startTransition(() => action(data));
+          }}
+        >
           <input type="hidden" name="lat" value={props.point.lat} />
           <input type="hidden" name="lng" value={props.point.lng} />
           <p className="cmeta">
