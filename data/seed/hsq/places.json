@@ -42,6 +42,26 @@
    "label": "新聞：聯合報 2026-10 竹北福興公園改善完成（竹北市公所說明）",
    "url": "https://udn.com/news/story/7324/9805990",
    "kind": "news"
+  },
+  "ltn-2023-04-picturebook": {
+   "label": "新聞：自由時報 2023-04 竹北 6 座公園遊戲場改造啟用（新竹縣政府）",
+   "url": "https://news.ltn.com.tw/news/HsinchuCounty/breakingnews/4285200",
+   "kind": "news"
+  },
+  "ltn-2023-07-jack": {
+   "label": "新聞：自由時報 2023-07 竹北 6 座特色公園開放（新竹縣政府產業發展處）",
+   "url": "https://news.ltn.com.tw/news/life/breakingnews/4357946",
+   "kind": "news"
+  },
+  "nienie-2023-p26": {
+   "label": "網路文章：nienie 部落格 2023-10 竹北公兒26 五色鳥之家公園",
+   "url": "https://nienie.tw/kid26park/",
+   "kind": "article"
+  },
+  "blog-2025-mushroom": {
+   "label": "網路文章：部落格 2025-03 竹北公兒30 蘑菇城堡公園",
+   "url": "https://as660707.com/%E8%98%91%E8%8F%87%E5%9F%8E%E5%A0%A1%E5%85%AC%E5%9C%922025",
+   "kind": "article"
   }
  },
  "labels": {
@@ -10761,19 +10781,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。網路文章稱這裡為公兒30 蘑菇城堡公園（小竹繪本主題遊戲場，光明八街與縣政十三路口）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "blog-2025-mushroom",
+     "note": "蘑菇城堡遊具有溜滑梯",
+     "at": "2026-10-18"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "blog-2025-mushroom",
+     "note": "有鞦韆",
+     "at": "2026-10-18"
     },
     "baby_swing": {
      "v": "u",
@@ -10818,16 +10838,16 @@
      "at": null
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "blog-2025-mushroom",
+     "note": "有攀岩牆面",
+     "at": "2026-10-18"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "blog-2025-mushroom",
+     "note": "有攀爬網",
+     "at": "2026-10-18"
     },
     "balance": {
      "v": "u",
@@ -10842,10 +10862,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "blog-2025-mushroom",
+     "note": "有鑽管和爬管",
+     "at": "2026-10-18"
     },
     "tree_house": {
      "v": "u",
@@ -10932,10 +10952,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "n",
+     "src": "blog-2025-mushroom",
+     "note": "文章寫沒有公廁",
+     "at": "2026-10-18"
     },
     "handwash": {
      "v": "u",
@@ -13124,6 +13144,2656 @@
    "official_ref": [
     {
      "osm": "w1542787155"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w318662245",
+   "name": "高鐵兒三公園",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8079051,
+   "lng": 121.030408,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：縣府 2023 年開放的特色遊戲場「森林花園」（六家一路一段與嘉政五街口）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ltn-2023-07-jack",
+     "note": "攀爬架、繩索和滑梯組成的大型遊戲塔",
+     "at": "2026-10-18"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "ltn-2023-07-jack",
+     "note": "旋轉遊具，建議 5 歲以上",
+     "at": "2026-10-18"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "ltn-2023-07-jack",
+     "note": "原木攀爬架",
+     "at": "2026-10-18"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w318662245（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w318662245"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w321416652",
+   "name": "公12公園(蝴蝶公園)",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8367085,
+   "lng": 120.9987298,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：縣府 2023 年啟用的小竹繪本主題遊戲場「巨大的蝴蝶」。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ltn-2023-04-picturebook",
+     "note": "蝴蝶造型攀爬網",
+     "at": "2026-10-18"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "ltn-2023-04-picturebook",
+     "note": "毛毛蟲造型的攀爬網鑽管",
+     "at": "2026-10-18"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w321416652（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w321416652"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w321782405",
+   "name": "公兒26公園",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8184669,
+   "lng": 121.0149436,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：縣府 2023 年開放的特色遊戲場「五色鳥樂園」（成功八路與自強一路口）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "兩座雙人鞦韆",
+     "at": "2026-10-18"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "有溜索，速度不快",
+     "at": "2026-10-18"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "圓盤造型攀爬網",
+     "at": "2026-10-18"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "大沙坑，細沙",
+     "at": "2026-10-18"
+    },
+    "sand_table": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "沙坑裡有玩沙桌",
+     "at": "2026-10-18"
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "有單槓",
+     "at": "2026-10-18"
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "n",
+     "src": "nienie-2023-p26",
+     "note": "文章寫遊戲場沒有廁所，最近的在公24興隆公園",
+     "at": "2026-10-18"
+    },
+    "handwash": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "沙坑旁有洗手台",
+     "at": "2026-10-18"
+    },
+    "footwash": {
+     "v": "y",
+     "src": "nienie-2023-p26",
+     "note": "有沖腳區",
+     "at": "2026-10-18"
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w321782405（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w321782405"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w321787018",
+   "name": "音符公園",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8011388,
+   "lng": 121.0423112,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：縣府 2023 年開放的特色遊戲場「音符公園」（隘口三街與隘口七街口）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ltn-2023-07-jack",
+     "note": "又高又長的滑梯，建議 5 歲以上",
+     "at": "2026-10-18"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "y",
+     "src": "ltn-2023-07-jack",
+     "note": "跳樁平衡木",
+     "at": "2026-10-18"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "y",
+     "src": "ltn-2023-07-jack",
+     "note": "給低齡孩子的遊戲沙桌",
+     "at": "2026-10-18"
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w321787018（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w321787018"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w323575799",
+   "name": "公兒27公園(搖擺的甲蟲公園)",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8339478,
+   "lng": 121.0029924,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：縣府 2023 年啟用的小竹繪本主題遊戲場「搖擺的甲蟲」。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "ltn-2023-04-picturebook",
+     "note": "甲蟲主題的攀爬設施，要手腳並用",
+     "at": "2026-10-18"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w323575799（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w323575799"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w323598294",
+   "name": "兒5莊敬蔬果公園",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8238476,
+   "lng": 121.0282409,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：竹北市公所星際系列遊戲場「土航環線」（莊敬六街）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "土星環造型平台有三道滑梯",
+     "at": "2026-10-18"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "穿越型爬網",
+     "at": "2026-10-18"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "C 型鑽龍隧道",
+     "at": "2026-10-18"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w323598294（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w323598294"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w323598298",
+   "name": "兒10自強節氣公園",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8170771,
+   "lng": 121.0229906,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：竹北市公所星際系列遊戲場「星河之夢」（自強五路、成功六街、成功七街口）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "風車塔溜滑梯",
+     "at": "2026-10-18"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有鞦韆區",
+     "at": "2026-10-18"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有攀爬網",
+     "at": "2026-10-18"
+    },
+    "balance": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有獨木橋",
+     "at": "2026-10-18"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有沙坑",
+     "at": "2026-10-18"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w323598298（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w323598298"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w323598314",
+   "name": "兒五公園",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8059374,
+   "lng": 121.0291116,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：竹北市公所星際系列遊戲場「星際天體」（六家五路）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "立體星球造型爬網",
+     "at": "2026-10-18"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "「星河沙灘」沙區，適合 6 歲以下",
+     "at": "2026-10-18"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有洗腳區",
+     "at": "2026-10-18"
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w323598314（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w323598314"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w323598317",
+   "name": "高鐵兒六公園",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8063449,
+   "lng": 121.0327892,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：縣府 2023 年開放的特色遊戲場「冒險小丘」（六家一路一段與嘉政八街口）。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w323598317（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w323598317"
+    }
+   ],
+   "area_ha": null,
+   "city": "hsq"
+  },
+  {
+   "id": "hsq-osm-w544941404",
+   "name": "六家生肖公園 (兒四)",
+   "district": "竹北市",
+   "address": null,
+   "lat": 24.8108312,
+   "lng": 121.0230067,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：竹北市公所星際系列遊戲場「黑曜星際戰艦」（六家五路一段）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "戰艦兩側有雙滑梯",
+     "at": "2026-10-18"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "長型三角爬網",
+     "at": "2026-10-18"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "鑽龍通道",
+     "at": "2026-10-18"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w544941404（leisure=park 範圍中心）",
+   "official_ref": [
+    {
+     "osm": "w544941404"
     }
    ],
    "area_ha": null,

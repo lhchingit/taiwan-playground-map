@@ -1,37 +1,70 @@
-"""人工查證的遊具與設施（data/raw/<縣市>/research.json）：補在 OSM 場地上，每一項都要有來源與說明。
+"""人工查證（data/raw/<縣市>/research.json）：補在 OSM 場地上的遊具與設施，以及 OSM 只畫了公園的遊戲場（decisions D20）。
 
 格式：
   {"verified_at": "2026-10-18",
    "sources": {"<來源 key>": {"label": "...", "url": "...", "kind": "news|article"}},
+   "parks": {"<OSM ref>": ["<來源 key>", "<哪篇報導寫明裡面有遊戲場>"]},
+   "aka": {"<場地 id>": ["<來源 key>", "<新聞或文章用的名稱>"]},
    "places": {"<場地 id>": {"<屬性 key>": ["y|n", "<來源 key>", "<重新整理的說明>"]}}}
 
+parks：OSM 公園裡沒有標遊戲場、但新聞或文章寫明有的，用公園範圍中心點（data/raw/<縣市>/osm-parks.json，
+scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱。
 只記來源文字明確寫到的；「沒有」也要來源明寫才填 n。格式有錯就中止匯入，不會默默略過。
 """
+import math
 from datetime import date
 
 KINDS = {"news", "article"}
 VALUES = {"y", "n"}
 UNKNOWN_TAIL = "遊具與設施還沒有資料，歡迎回報。"
 RESEARCHED_TAIL = "部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。"
+PARK_TEXT = "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：{}。"
+# 新公園的中心點離現有場地太近，可能是同一處（OSM 遊戲場已經在地圖上）
+MIN_DISTANCE_M = 100
 
 
 class ResearchError(ValueError):
     pass
 
 
-def validate(research, places, keys):
+def distance_m(a, b):
+    lat = math.radians((a["lat"] + b["lat"]) / 2)
+    return math.hypot((a["lat"] - b["lat"]) * 111_195, (a["lng"] - b["lng"]) * 111_195 * math.cos(lat))
+
+
+def check_cited(errors, where, entry, sources):
+    if not isinstance(entry, list) or len(entry) != 2:
+        errors.append(f"{where}：格式要是 [來源, 說明]")
+        return
+    src, note = entry
+    if src not in sources:
+        errors.append(f"{where}：來源 {src} 沒有定義")
+    if not (note or "").strip():
+        errors.append(f"{where}：要有說明")
+
+
+def validate_base(research):
     errors = []
     try:
         date.fromisoformat(research.get("verified_at") or "")
     except ValueError:
         errors.append("verified_at 要是 YYYY-MM-DD")
-    sources = research.get("sources") or {}
-    for key, s in sources.items():
+    for key, s in (research.get("sources") or {}).items():
         if not (s.get("label") or "").strip() or not (s.get("url") or "").startswith("https://"):
             errors.append(f"來源 {key}：要有 label 與 https 網址")
         if s.get("kind") not in KINDS:
             errors.append(f"來源 {key}：kind 只能是 {'/'.join(sorted(KINDS))}")
+    return errors
+
+
+def validate_places(research, places, keys):
+    errors = []
+    sources = research.get("sources") or {}
     ids = {p["id"] for p in places}
+    for pid, entry in (research.get("aka") or {}).items():
+        if pid not in ids:
+            errors.append(f"aka {pid}：沒有這個場地")
+        check_cited(errors, f"aka {pid}", entry, sources)
     for pid, attrs in (research.get("places") or {}).items():
         if pid not in ids:
             errors.append(f"{pid}：沒有這個場地")
@@ -49,20 +82,70 @@ def validate(research, places, keys):
                 errors.append(f"{where}：來源 {src} 沒有定義")
             if not (note or "").strip():
                 errors.append(f"{where}：要有說明")
+    return errors
+
+
+def park_places(research, osm_parks, places, keys, city):
+    """parks 列出的公園 → 新場地（不修改 places）。回傳 (新場地, 錯誤)"""
+    errors, new = [], []
+    parks = research.get("parks") or {}
+    if not parks:
+        return new, errors
+    fetched = (osm_parks or {}).get("parks", {})
+    if set(fetched) != set(parks):
+        return new, [f"osm-parks.json 跟 research.json 的 parks 對不上：請重新執行 python scripts/fetch_osm_parks.py {city}"]
+    sources = research.get("sources") or {}
+    ids = {p["id"] for p in places}
+    for ref in sorted(parks):
+        pid = f"{city}-osm-{ref}"
+        where = f"parks {ref}"
+        check_cited(errors, where, parks[ref], sources)
+        park = fetched[ref]
+        if pid in ids:
+            errors.append(f"{where}：已經是場地")
+        if not (park.get("name") or "").strip():
+            errors.append(f"{where}：OSM 公園沒有名稱")
+        for other in places + new:
+            d = distance_m(park, other)
+            if d < MIN_DISTANCE_M:
+                errors.append(f"{where}：離 {other['name']}（{other['id']}）只有 {d:.0f} 公尺，可能是同一處")
+        ds = sorted(park.get("districts", []), key=lambda x: -x["level"])
+        note = parks[ref][1] if isinstance(parks[ref], list) and len(parks[ref]) == 2 else ""
+        new.append(dict(
+            id=pid, name=(park.get("name") or "").strip(), district=ds[0]["name"] if ds else None, address=None,
+            lat=park["lat"], lng=park["lng"],
+            size=None, stay=None, stay_src=None, age_min=None, age_max=None,
+            fee=None, indoor=False, hours=None, surface=None,
+            status="open", summary=PARK_TEXT.format(note.strip()) + UNKNOWN_TAIL,
+            attrs={k: {"v": "u", "src": None, "note": None, "at": None} for k in keys},
+            parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
+            source_coords=f"OpenStreetMap {ref}（leisure=park 範圍中心）",
+            official_ref=[{"osm": ref}],
+            area_ha=None,
+            city=city,
+        ))
+    return new, errors
+
+
+def apply(research, places, keys, city=None, osm_parks=None):
+    """把查證結果寫進 places（就地修改，新公園加在最後），回傳要併進 seed 的來源"""
+    new, park_errors = park_places(research, osm_parks, places, keys, city)
+    errors = validate_base(research) + park_errors + validate_places(research, places + new, keys)
     if errors:
         raise ResearchError("research.json 有錯：\n  " + "\n  ".join(errors))
-
-
-def apply(research, places, keys):
-    """把查證結果寫進 places（就地修改），回傳要併進 seed 的來源"""
-    validate(research, places, keys)
+    places.extend(new)
     at = research["verified_at"]
     by_id = {p["id"]: p for p in places}
-    for pid, attrs in research["places"].items():
+    for pid, (_, note) in (research.get("aka") or {}).items():
+        p = by_id[pid]
+        cut = len(p["summary"]) - len(UNKNOWN_TAIL) if p["summary"].endswith(UNKNOWN_TAIL) else len(p["summary"])
+        p["summary"] = p["summary"][:cut] + note.strip() + "。" + p["summary"][cut:]
+    for pid, attrs in (research.get("places") or {}).items():
         p = by_id[pid]
         for k, (v, src, note) in attrs.items():
             p["attrs"][k] = {"v": v, "src": src, "note": note.strip(), "at": at}
         if attrs and p["summary"].endswith(UNKNOWN_TAIL):
             p["summary"] = p["summary"][: -len(UNKNOWN_TAIL)] + RESEARCHED_TAIL
-    used = {src for attrs in research["places"].values() for _, src, _ in attrs.values()}
+    used = {src for attrs in (research.get("places") or {}).values() for _, src, _ in attrs.values()}
+    used |= {e[0] for section in ("parks", "aka") for e in (research.get(section) or {}).values()}
     return {k: s for k, s in research["sources"].items() if k in used}

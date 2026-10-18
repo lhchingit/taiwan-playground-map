@@ -3,7 +3,7 @@
   python3 scripts/import_osm_city.py hsq
 
 輸入：data/raw/<縣市>/osm.json（scripts/fetch_osm_city.py）、data/raw/<縣市>/manual-names.tsv（人工命名或排除）、
-      data/raw/<縣市>/research.json（有的話：人工查證的遊具與設施，sources/research.py）、
+      data/raw/<縣市>/research.json、osm-parks.json（有的話：人工查證的遊具與設施、OSM 只畫了公園的遊戲場，sources/research.py）、
       data/raw/<縣市>/osm-institutions.json（scripts/fetch_osm_institutions.py：位在學校、機關範圍內的遊戲場）
 輸出：data/seed/<縣市>/places.json、places.csv；
       data/review/<縣市>/unnamed.csv、merged.csv、excluded.csv、excluded-institution.csv（HOLD_SUSPICIOUS 的縣市另有 named-suspicious.csv）
@@ -54,7 +54,9 @@ def main():
         sources.update(config["sources"])
     research_path = raw_dir / "research.json"
     if research_path.exists():  # 人工查證的遊具與設施（sources/research.py）
-        sources.update(research.apply(read_json(research_path), places, keys))
+        parks_path = raw_dir / "osm-parks.json"
+        osm_parks = read_json(parks_path) if parks_path.exists() else None
+        sources.update(research.apply(read_json(research_path), places, keys, city, osm_parks))
     seed ={"version": "0.2", "city": CITIES[city], "generated": raw["fetched"], "sources": sources,
             "labels": labels, "places": places}
     seed_dir = ROOT / "data/seed" / city

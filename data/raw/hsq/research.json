@@ -7,7 +7,26 @@
   "tvbs-star": {"label": "網路文章：TVBS 食尚玩家 竹北星際系列特色公園（頁面未標日期）", "url": "https://supertaste.tvbs.com.tw/kids/354597", "kind": "article"},
   "natsu-2024-ai": {"label": "網路文章：小菲親子玩樂生活 2024-04（2025-06 更新）竹北 AI 智慧園區公園", "url": "https://natsuphil.com/hsinchu/ai-park/", "kind": "article"},
   "natsu-2025-p24": {"label": "網路文章：小菲親子玩樂生活 2025-04 竹北公24 興隆公園", "url": "https://natsuphil.com/hsinchu/kid24-park/", "kind": "article"},
-  "udn-2026-fuxing": {"label": "新聞：聯合報 2026-10 竹北福興公園改善完成（竹北市公所說明）", "url": "https://udn.com/news/story/7324/9805990", "kind": "news"}
+  "udn-2026-fuxing": {"label": "新聞：聯合報 2026-10 竹北福興公園改善完成（竹北市公所說明）", "url": "https://udn.com/news/story/7324/9805990", "kind": "news"},
+  "ltn-2023-04-picturebook": {"label": "新聞：自由時報 2023-04 竹北 6 座公園遊戲場改造啟用（新竹縣政府）", "url": "https://news.ltn.com.tw/news/HsinchuCounty/breakingnews/4285200", "kind": "news"},
+  "ltn-2023-07-jack": {"label": "新聞：自由時報 2023-07 竹北 6 座特色公園開放（新竹縣政府產業發展處）", "url": "https://news.ltn.com.tw/news/life/breakingnews/4357946", "kind": "news"},
+  "nienie-2023-p26": {"label": "網路文章：nienie 部落格 2023-10 竹北公兒26 五色鳥之家公園", "url": "https://nienie.tw/kid26park/", "kind": "article"},
+  "blog-2025-mushroom": {"label": "網路文章：部落格 2025-03 竹北公兒30 蘑菇城堡公園", "url": "https://as660707.com/%E8%98%91%E8%8F%87%E5%9F%8E%E5%A0%A1%E5%85%AC%E5%9C%922025", "kind": "article"}
+ },
+ "parks": {
+  "w321416652": ["ltn-2023-04-picturebook", "縣府 2023 年啟用的小竹繪本主題遊戲場「巨大的蝴蝶」"],
+  "w323575799": ["ltn-2023-04-picturebook", "縣府 2023 年啟用的小竹繪本主題遊戲場「搖擺的甲蟲」"],
+  "w321782405": ["ltn-2023-07-jack", "縣府 2023 年開放的特色遊戲場「五色鳥樂園」（成功八路與自強一路口）"],
+  "w318662245": ["ltn-2023-07-jack", "縣府 2023 年開放的特色遊戲場「森林花園」（六家一路一段與嘉政五街口）"],
+  "w323598317": ["ltn-2023-07-jack", "縣府 2023 年開放的特色遊戲場「冒險小丘」（六家一路一段與嘉政八街口）"],
+  "w321787018": ["ltn-2023-07-jack", "縣府 2023 年開放的特色遊戲場「音符公園」（隘口三街與隘口七街口）"],
+  "w323598298": ["tvbs-star", "竹北市公所星際系列遊戲場「星河之夢」（自強五路、成功六街、成功七街口）"],
+  "w323598294": ["tvbs-star", "竹北市公所星際系列遊戲場「土航環線」（莊敬六街）"],
+  "w544941404": ["tvbs-star", "竹北市公所星際系列遊戲場「黑曜星際戰艦」（六家五路一段）"],
+  "w323598314": ["tvbs-star", "竹北市公所星際系列遊戲場「星際天體」（六家五路）"]
+ },
+ "aka": {
+  "hsq-osm-w1387488174": ["blog-2025-mushroom", "網路文章稱這裡為公兒30 蘑菇城堡公園（小竹繪本主題遊戲場，光明八街與縣政十三路口）"]
  },
  "places": {
   "hsq-osm-w1363504028": {
@@ -67,6 +86,64 @@
    "shade": ["y", "udn-2026-fuxing", "2026 年改善後新增涼亭"],
    "lighting": ["y", "udn-2026-fuxing", "2026 年改善工程一併改善照明"],
    "stroller": ["y", "udn-2026-fuxing", "改善後步道沒有高低差，輪椅可以順暢通行"]
+  },
+  "hsq-osm-w1387488174": {
+   "slide": ["y", "blog-2025-mushroom", "蘑菇城堡遊具有溜滑梯"],
+   "swing": ["y", "blog-2025-mushroom", "有鞦韆"],
+   "rope_net": ["y", "blog-2025-mushroom", "有攀爬網"],
+   "climbing_wall": ["y", "blog-2025-mushroom", "有攀岩牆面"],
+   "tunnel": ["y", "blog-2025-mushroom", "有鑽管和爬管"],
+   "toilet": ["n", "blog-2025-mushroom", "文章寫沒有公廁"]
+  },
+  "hsq-osm-w321416652": {
+   "rope_net": ["y", "ltn-2023-04-picturebook", "蝴蝶造型攀爬網"],
+   "tunnel": ["y", "ltn-2023-04-picturebook", "毛毛蟲造型的攀爬網鑽管"]
+  },
+  "hsq-osm-w323575799": {
+   "climbing": ["y", "ltn-2023-04-picturebook", "甲蟲主題的攀爬設施，要手腳並用"]
+  },
+  "hsq-osm-w321782405": {
+   "rope_net": ["y", "nienie-2023-p26", "圓盤造型攀爬網"],
+   "swing": ["y", "nienie-2023-p26", "兩座雙人鞦韆"],
+   "zipline": ["y", "nienie-2023-p26", "有溜索，速度不快"],
+   "bars": ["y", "nienie-2023-p26", "有單槓"],
+   "sandpit": ["y", "nienie-2023-p26", "大沙坑，細沙"],
+   "sand_table": ["y", "nienie-2023-p26", "沙坑裡有玩沙桌"],
+   "handwash": ["y", "nienie-2023-p26", "沙坑旁有洗手台"],
+   "footwash": ["y", "nienie-2023-p26", "有沖腳區"],
+   "toilet": ["n", "nienie-2023-p26", "文章寫遊戲場沒有廁所，最近的在公24興隆公園"]
+  },
+  "hsq-osm-w318662245": {
+   "slide": ["y", "ltn-2023-07-jack", "攀爬架、繩索和滑梯組成的大型遊戲塔"],
+   "climbing": ["y", "ltn-2023-07-jack", "原木攀爬架"],
+   "spinner": ["y", "ltn-2023-07-jack", "旋轉遊具，建議 5 歲以上"]
+  },
+  "hsq-osm-w321787018": {
+   "slide": ["y", "ltn-2023-07-jack", "又高又長的滑梯，建議 5 歲以上"],
+   "balance": ["y", "ltn-2023-07-jack", "跳樁平衡木"],
+   "sand_table": ["y", "ltn-2023-07-jack", "給低齡孩子的遊戲沙桌"]
+  },
+  "hsq-osm-w323598298": {
+   "slide": ["y", "tvbs-star", "風車塔溜滑梯"],
+   "rope_net": ["y", "tvbs-star", "有攀爬網"],
+   "balance": ["y", "tvbs-star", "有獨木橋"],
+   "sandpit": ["y", "tvbs-star", "有沙坑"],
+   "swing": ["y", "tvbs-star", "有鞦韆區"]
+  },
+  "hsq-osm-w323598294": {
+   "slide": ["y", "tvbs-star", "土星環造型平台有三道滑梯"],
+   "tunnel": ["y", "tvbs-star", "C 型鑽龍隧道"],
+   "rope_net": ["y", "tvbs-star", "穿越型爬網"]
+  },
+  "hsq-osm-w544941404": {
+   "slide": ["y", "tvbs-star", "戰艦兩側有雙滑梯"],
+   "rope_net": ["y", "tvbs-star", "長型三角爬網"],
+   "tunnel": ["y", "tvbs-star", "鑽龍通道"]
+  },
+  "hsq-osm-w323598314": {
+   "rope_net": ["y", "tvbs-star", "立體星球造型爬網"],
+   "sandpit": ["y", "tvbs-star", "「星河沙灘」沙區，適合 6 歲以下"],
+   "footwash": ["y", "tvbs-star", "有洗腳區"]
   }
  }
 }
