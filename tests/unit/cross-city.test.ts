@@ -44,13 +44,18 @@ describe('跨縣市距離篩選（新竹市＋新竹縣）', () => {
     expect(all.some((p) => cityOf(p.id) === 'hsq' && !near.has(p.id))).toBe(true);
   });
 
-  it('有設施條件時：新竹縣的場地都是未知，預設不通過，開啟「包含資料未知」才出現', () => {
+  it('有設施條件時：新竹縣只有查證過有溜滑梯的場地通過，未知的開啟「包含資料未知」才出現', () => {
+    const hsq = places.filter((p) => cityOf(p.id) === 'hsq');
+    const known = new Set(hsq.filter((p) => p.attrs.slide === 'y').map((p) => p.id));
+    expect(known.size).toBeGreaterThan(0); // data/raw/hsq/research.json
     const strict = run({ maxKm: 10, play: ['slide'] });
-    expect(strict.results.some((p) => cityOf(p.id) === 'hsq')).toBe(false);
+    expect(strict.results.filter((p) => cityOf(p.id) === 'hsq').every((p) => known.has(p.id))).toBe(
+      true,
+    );
     expect(strict.unknownHint).toBeGreaterThan(0);
     const loose = run({ maxKm: 10, play: ['slide'], includeUnknown: true });
-    expect(loose.results.some((p) => cityOf(p.id) === 'hsq')).toBe(true);
-    // 「無」永遠不通過：新竹縣沒有任何 n，所以開啟後只會多、不會少
+    expect(loose.results.some((p) => cityOf(p.id) === 'hsq' && !known.has(p.id))).toBe(true);
+    // 「無」永遠不通過：開啟後只會多、不會少
     expect(loose.results.length).toBeGreaterThanOrEqual(strict.results.length);
   });
 });

@@ -7,6 +7,41 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "ltn-2021-rope": {
+   "label": "新聞：自由時報 2021-02 竹北兒1公園攀爬網重建啟用（竹北市公所說明）",
+   "url": "https://news.ltn.com.tw/news/life/paper/1431014",
+   "kind": "news"
+  },
+  "blog-2024-rope": {
+   "label": "網路文章：痞客邦部落格 2024-04 竹北繩索公園",
+   "url": "https://q82465.pixnet.net/blog/posts/12226925845",
+   "kind": "article"
+  },
+  "nienie-2023-p25": {
+   "label": "網路文章：nienie 部落格 2023-10 竹北公25 小猴森林公園",
+   "url": "https://nienie.tw/monkey-forest-park/",
+   "kind": "article"
+  },
+  "tvbs-star": {
+   "label": "網路文章：TVBS 食尚玩家 竹北星際系列特色公園（頁面未標日期）",
+   "url": "https://supertaste.tvbs.com.tw/kids/354597",
+   "kind": "article"
+  },
+  "natsu-2024-ai": {
+   "label": "網路文章：小菲親子玩樂生活 2024-04（2025-06 更新）竹北 AI 智慧園區公園",
+   "url": "https://natsuphil.com/hsinchu/ai-park/",
+   "kind": "article"
+  },
+  "natsu-2025-p24": {
+   "label": "網路文章：小菲親子玩樂生活 2025-04 竹北公24 興隆公園",
+   "url": "https://natsuphil.com/hsinchu/kid24-park/",
+   "kind": "article"
+  },
+  "udn-2026-fuxing": {
+   "label": "新聞：聯合報 2026-10 竹北福興公園改善完成（竹北市公所說明）",
+   "url": "https://udn.com/news/story/7324/9805990",
+   "kind": "news"
   }
  },
  "labels": {
@@ -2776,19 +2811,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "太空站主題（星際航站）遊戲塔有溜滑梯",
+     "at": "2026-10-18"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有雙人鞦韆",
+     "at": "2026-10-18"
     },
     "baby_swing": {
      "v": "u",
@@ -2839,10 +2874,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有攀爬網",
+     "at": "2026-10-18"
     },
     "balance": {
      "v": "u",
@@ -2929,10 +2964,10 @@
      "at": null
     },
     "music": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "安全護欄設計成可以敲的鐵琴",
+     "at": "2026-10-18"
     },
     "chalk_wall": {
      "v": "u",
@@ -2941,10 +2976,10 @@
      "at": null
     },
     "toddler_zone": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有 2 歲以上幼童的遊戲區",
+     "at": "2026-10-18"
     },
     "toilet": {
      "v": "u",
@@ -2965,10 +3000,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-star",
+     "note": "有涼亭",
+     "at": "2026-10-18"
     },
     "transit": {
      "v": "u",
@@ -3571,19 +3606,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "森林小木屋滑梯組，另有兩座磨石子地景滑梯",
+     "at": "2026-10-18"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "親子雙人鞦韆、單板鞦韆",
+     "at": "2026-10-18"
     },
     "baby_swing": {
      "v": "u",
@@ -3592,10 +3627,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-18"
     },
     "zipline": {
      "v": "u",
@@ -3616,28 +3651,28 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "沙坑旁有轉轉杯",
+     "at": "2026-10-18"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "竹林造型攀爬設施",
+     "at": "2026-10-18"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "斜坡攀爬牆，有類似攀岩石的設計",
+     "at": "2026-10-18"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "蝴蝶造型攀爬網",
+     "at": "2026-10-18"
     },
     "balance": {
      "v": "u",
@@ -3664,10 +3699,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "森林小木屋沙坑區，有挖沙機",
+     "at": "2026-10-18"
     },
     "sand_table": {
      "v": "u",
@@ -3694,16 +3729,16 @@
      "at": null
     },
     "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "Push Bike 地景車道",
+     "at": "2026-10-18"
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "大片草皮可以跑跳",
+     "at": "2026-10-18"
     },
     "ball_court": {
      "v": "u",
@@ -3718,10 +3753,10 @@
      "at": null
     },
     "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "體健區有單槓",
+     "at": "2026-10-18"
     },
     "music": {
      "v": "u",
@@ -3742,28 +3777,28 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "有公共廁所",
+     "at": "2026-10-18"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "沙坑旁有沖洗手腳的設備",
+     "at": "2026-10-18"
     },
     "footwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "沙坑旁有沖洗手腳的設備",
+     "at": "2026-10-18"
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "隧道地景滑梯上方有遮陽",
+     "at": "2026-10-18"
     },
     "transit": {
      "v": "u",
@@ -3796,10 +3831,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-p24",
+     "note": "有共融式鞦韆",
+     "at": "2026-10-18"
     }
    },
    "parking": {
@@ -6221,19 +6256,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 6 處遊戲區：滑梯遊戲區、滑步車遊戲場、體健廣場1（静態）、體健廣場2（動態）、林間遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 6 處遊戲區：滑梯遊戲區、滑步車遊戲場、體健廣場1（静態）、體健廣場2（動態）、林間遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "大碗公造型溜滑梯等多座溜滑梯",
+     "at": "2026-10-18"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "有共融式鞦韆",
+     "at": "2026-10-18"
     },
     "baby_swing": {
      "v": "u",
@@ -6248,10 +6283,10 @@
      "at": null
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "有滑索",
+     "at": "2026-10-18"
     },
     "seesaw": {
      "v": "u",
@@ -6266,16 +6301,16 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "旋轉陀螺",
+     "at": "2026-10-18"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "攀岩、攀繩架",
+     "at": "2026-10-18"
     },
     "climbing_wall": {
      "v": "u",
@@ -6284,16 +6319,16 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "攀爬網，適合較大的孩子",
+     "at": "2026-10-18"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "有平衡木",
+     "at": "2026-10-18"
     },
     "suspension_bridge": {
      "v": "u",
@@ -6314,10 +6349,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "細沙沙坑，上方加了遮陽",
+     "at": "2026-10-18"
     },
     "sand_table": {
      "v": "u",
@@ -6344,10 +6379,10 @@
      "at": null
     },
     "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "兒童滑步車練習場",
+     "at": "2026-10-18"
     },
     "open_lawn": {
      "v": "u",
@@ -6392,16 +6427,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "原本的流動廁所改建成公廁",
+     "at": "2026-10-18"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "園區有多處洗手台",
+     "at": "2026-10-18"
     },
     "footwash": {
      "v": "u",
@@ -6410,10 +6445,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "遊戲場有遮陽休憩區，沙坑上方有遮陽",
+     "at": "2026-10-18"
     },
     "transit": {
      "v": "u",
@@ -6446,10 +6481,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2024-ai",
+     "note": "竹北第一座共融式公園",
+     "at": "2026-10-18"
     }
    },
    "parking": {
@@ -8076,7 +8111,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "u",
@@ -8247,10 +8282,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "udn-2026-fuxing",
+     "note": "2026 年改善工程修繕了廁所",
+     "at": "2026-10-18"
     },
     "handwash": {
      "v": "u",
@@ -8265,10 +8300,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "udn-2026-fuxing",
+     "note": "2026 年改善後新增涼亭",
+     "at": "2026-10-18"
     },
     "transit": {
      "v": "u",
@@ -8277,10 +8312,10 @@
      "at": null
     },
     "stroller": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "udn-2026-fuxing",
+     "note": "改善後步道沒有高低差，輪椅可以順暢通行",
+     "at": "2026-10-18"
     },
     "nursing": {
      "v": "u",
@@ -8289,10 +8324,10 @@
      "at": null
     },
     "lighting": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "udn-2026-fuxing",
+     "note": "2026 年改善工程一併改善照明",
+     "at": "2026-10-18"
     },
     "food": {
      "v": "u",
@@ -10461,13 +10496,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ltn-2021-rope",
+     "note": "攀爬網附圓管溜滑梯；另有給幼兒的樹幹造型溜滑梯（2024 部落格）",
+     "at": "2026-10-18"
     },
     "swing": {
      "v": "u",
@@ -10524,10 +10559,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ltn-2021-rope",
+     "note": "8.7 公尺高的大型繩索攀爬網（2021 年重建）",
+     "at": "2026-10-18"
     },
     "balance": {
      "v": "u",
@@ -10632,10 +10667,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "blog-2024-rope",
+     "note": "有公廁",
+     "at": "2026-10-18"
     },
     "handwash": {
      "v": "u",
@@ -10668,10 +10703,10 @@
      "at": null
     },
     "nursing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "blog-2024-rope",
+     "note": "無障礙廁所與女廁有尿布台",
+     "at": "2026-10-18"
     },
     "lighting": {
      "v": "u",
@@ -12051,7 +12086,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "u",
@@ -12060,10 +12095,10 @@
      "at": null
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "nienie-2023-p25",
+     "note": "鞦韆很多",
+     "at": "2026-10-18"
     },
     "baby_swing": {
      "v": "u",
@@ -12102,10 +12137,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "nienie-2023-p25",
+     "note": "大型原木攀爬架，也有較低矮的攀爬設施",
+     "at": "2026-10-18"
     },
     "climbing_wall": {
      "v": "u",
@@ -12222,10 +12257,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "n",
+     "src": "nienie-2023-p25",
+     "note": "文章寫遊戲場沒有廁所，最近的在旁邊的公24興隆公園",
+     "at": "2026-10-18"
     },
     "handwash": {
      "v": "u",
