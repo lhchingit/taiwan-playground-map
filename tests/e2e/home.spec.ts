@@ -218,10 +218,15 @@ test.describe('桌機', () => {
     await expect(count(page)).toHaveText(String(TOTAL));
   });
 
-  test('出發點在新竹市與新竹縣交界：會載入新竹縣（未上線，空資料）且不出錯', async ({ page }) => {
+  test('出發點在新竹市與新竹縣交界：距離不限時只看新竹市，設了距離才載入新竹縣（未上線，空資料）且不出錯', async ({
+    page,
+  }) => {
     const errors: string[] = [];
     page.on('pageerror', (e) => errors.push(e.message));
-    const hsq = page.waitForResponse((r) => r.url().endsWith('/api/cities/hsq/places'));
+    const hsqRequests: string[] = [];
+    page.on('request', (r) => {
+      if (r.url().endsWith('/api/cities/hsq/places')) hsqRequests.push(r.url());
+    });
 
     await page.goto('/hsinchu-city');
     await page.getByLabel('地址或地標').fill('縣市交界');
@@ -229,12 +234,20 @@ test.describe('桌機', () => {
     await page.getByRole('button', { name: /縣市交界測試點/ }).click();
     await expect(page.getByTestId('origin-name')).toHaveText('縣市交界測試點');
 
+    // 距離不限：只顯示新竹市，不去抓新竹縣
+    await expect(count(page)).toHaveText(String(TOTAL));
+    await page.waitForTimeout(500);
+    expect(hsqRequests).toEqual([]);
+
+    // 設了距離上限：附近的新竹縣也算進來
+    const hsq = page.waitForResponse((r) => r.url().endsWith('/api/cities/hsq/places'));
+    await page.getByRole('slider', { name: '距離上限（直線）' }).fill('20');
     const res = await hsq;
     expect(res.status()).toBe(200);
     expect(await res.json()).toEqual([]);
 
-    await expect(count(page)).toHaveText(String(TOTAL));
     const ids = await cards(page).evaluateAll((els) => els.map((e) => e.getAttribute('data-id')));
+    expect(ids.length).toBeGreaterThan(0);
     expect(ids.every((id) => id?.startsWith('hsc-'))).toBe(true);
     await expect(page.getByText(/載入失敗/)).toHaveCount(0);
     expect(errors).toEqual([]);

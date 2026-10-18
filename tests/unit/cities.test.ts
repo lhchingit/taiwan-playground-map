@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import {
   CITY_ORDER,
   citiesToLoad,
+  citiesToShow,
   distanceToBboxKm,
   nearestCity,
   sortCitiesNorthToSouth,
@@ -97,6 +98,27 @@ describe('citiesToLoad', () => {
 
   it('全部都太遠時回傳空陣列', () => {
     expect(citiesToLoad({ lat: 22.6, lng: 120.3 }, cities)).toEqual([]);
+  });
+});
+
+describe('citiesToShow', () => {
+  const cities = [
+    city('aaa', [120.9, 24.7, 121.0, 24.8]),
+    city('bbb', [121.0, 24.8, 121.3, 25.0]), // 北邊相鄰
+    city('ccc', [121.5, 25.5, 121.6, 25.6]), // 很遠
+  ];
+  const border = { lat: 24.81, lng: 121.01 };
+
+  it('距離不限時只有這個縣市，不載入附近縣市', () => {
+    expect(citiesToShow('aaa', border, cities, null)).toEqual(['aaa']);
+  });
+
+  it('有距離上限時加上附近縣市，這個縣市排第一、不重複', () => {
+    expect(citiesToShow('aaa', border, cities, 5)).toEqual(['aaa', 'bbb']);
+  });
+
+  it('出發點離這個縣市很遠時，這個縣市還是包含', () => {
+    expect(citiesToShow('ccc', border, cities, 20)).toEqual(['ccc', 'bbb', 'aaa']);
   });
 });
 

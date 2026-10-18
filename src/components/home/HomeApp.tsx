@@ -12,7 +12,7 @@ import {
 } from '@/components/auth/useSession';
 import { NewPlacePanel } from '@/components/report/NewPlacePanel';
 import { withFlag } from '@/lib/auth/next-path';
-import { citiesToLoad, type CityBounds } from '@/lib/cities';
+import { citiesToShow, type CityBounds } from '@/lib/cities';
 import { loadCityPlaces } from '@/lib/city-cache';
 import { loadPlaceDetail } from '@/lib/detail-cache';
 import {
@@ -211,10 +211,10 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
     if (panelReady) document.getElementById(PANEL_TITLE_ID)?.focus({ preventScroll: true });
   }, [selected, panelReady]);
 
-  // 依出發點載入附近縣市（decisions D4）；這個頁面的縣市一定包含
+  // 有距離上限時依出發點載入附近縣市（decisions D4）；這個頁面的縣市一定包含
   const codes = useMemo(
-    () => [...new Set([city.code, ...citiesToLoad(origin, cities)])],
-    [city.code, cities, origin],
+    () => citiesToShow(city.code, origin, cities, filters.maxKm),
+    [city.code, cities, origin, filters.maxKm],
   );
   useEffect(() => {
     let cancelled = false;

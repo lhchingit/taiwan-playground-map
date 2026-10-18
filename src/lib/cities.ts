@@ -56,6 +56,21 @@ export function citiesToLoad(
     .map((c) => c.code);
 }
 
+/**
+ * 縣市頁面要顯示哪些縣市的場地，這個頁面的縣市排第一。
+ * 距離不限（maxKm = null）時只看這個縣市：選了縣市就是想看這個縣市，
+ * 有距離上限時才把附近縣市算進來（decisions D4）。
+ */
+export function citiesToShow(
+  cityCode: string,
+  origin: Origin,
+  cities: readonly CityBounds[],
+  maxKm: number | null,
+): string[] {
+  if (maxKm === null) return [cityCode];
+  return [...new Set([cityCode, ...citiesToLoad(origin, cities)])];
+}
+
 /** 離出發點最近的縣市（到範圍的距離；在範圍內為 0）。沒有任何縣市有範圍時回傳 null。 */
 export function nearestCity<C extends CityBounds>(origin: Origin, cities: readonly C[]): C | null {
   let best: { city: C; km: number } | null = null;
