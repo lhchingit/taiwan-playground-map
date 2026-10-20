@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Huninn } from 'next/font/google';
 import { Suspense, type ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import { AuthCorner } from '@/components/auth/AuthCorner';
 import { SHORT_NAME, SITE_DESCRIPTION, SITE_NAME, siteUrl } from '@/lib/site';
 import './globals.css';
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Suspense fallback={null}>
           <AuthCorner />
         </Suspense>
+        <Analytics />
       </body>
     </html>
   );
