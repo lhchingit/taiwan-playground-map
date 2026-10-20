@@ -369,3 +369,10 @@
 - **撤回後：** 狀態改成 `withdrawn`，保留紀錄，「我的貢獻」顯示「已撤回」；審核後台不再出現，`review_suggestion()` 也不接受；同一個項目可以重新回報。
 - **介面：** 「我的貢獻」每筆審核中的建議旁有「撤回」；場地頁重複回報出現「你已經回報過，正在審核中」時，可以直接「撤回那一筆」後重新送出。都在頁面內確認，不用瀏覽器的 confirm。
 
+## D30 網站流量統計用 Vercel Web Analytics（2026-10-20 決定）
+
+- **原因：** 想知道有多少人在用、常看哪些頁面與縣市、從哪裡連進來、常用哪些篩選。網站已經放在 Vercel，Web Analytics 不使用 cookie，裝好就能在 Vercel 後台看。
+- **只在 Vercel 上載入：** `process.env.VERCEL === '1'` 才放 `<Analytics />`（`src/components/analytics/SiteAnalytics.tsx`）。本機、Docker 與 e2e 沒有 `/_vercel/insights`，也不該把測試流量算進去。
+- **網址參數：** 送出前用 `analyticsUrl()`（`src/lib/analytics.ts`）處理。首頁與縣市頁保留篩選參數（只有篩選條件，出發點本來就不在網址裡，D4）；其他頁面只送路徑，避免送出管理後台的搜尋字（可能是 Email）、登入頁的 `next` 等。
+- **不送自訂事件：** 只有頁面瀏覽，所以不會有位置或帳號資料。隱私權政策「第三方服務」有列出。
+- **要在 Vercel 專案的 Analytics 分頁啟用**才會收資料。

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Huninn } from 'next/font/google';
 import { Suspense, type ReactNode } from 'react';
+import { SiteAnalytics } from '@/components/analytics/SiteAnalytics';
 import { AuthCorner } from '@/components/auth/AuthCorner';
 import { SHORT_NAME, SITE_DESCRIPTION, SITE_NAME, siteUrl } from '@/lib/site';
 import './globals.css';
@@ -39,6 +40,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Suspense fallback={null}>
           <AuthCorner />
         </Suspense>
+        {/* 流量統計只在 Vercel 上載入：本機與 e2e 沒有 /_vercel/insights（decisions D30） */}
+        {process.env.VERCEL === '1' && <SiteAnalytics />}
       </body>
     </html>
   );
