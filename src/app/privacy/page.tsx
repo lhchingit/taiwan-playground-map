@@ -69,6 +69,10 @@ export default function PrivacyPage() {
               。
             </li>
             <li>OpenStreetMap：地圖圖磚與地址查詢。</li>
+            <li>
+              Vercel Web Analytics：統計頁面瀏覽次數、來源網站、裝置與瀏覽器類型，不使用
+              cookie，不包含你的位置或出發點，也不連結到你的帳號。
+            </li>
           </ul>
         </section>
 
