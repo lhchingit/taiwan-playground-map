@@ -1,6 +1,6 @@
 ﻿id,name,district,lat,lng,size,stay,age_min,age_max,fee,status,slide,swing,baby_swing,nest_swing,zipline,seesaw,spring_rider,spinner,climbing,climbing_wall,rope_net,balance,suspension_bridge,tunnel,tree_house,sandpit,sand_table,water_play,water_pump,trampoline,pushbike,open_lawn,ball_court,skatepark,bars,music,chalk_wall,toddler_zone,toilet,handwash,footwash,shade,transit,stroller,nursing,lighting,food,inclusive,parking_type,parking_fee,parking_spaces
 mlc-osm-n5340542200,玉新公園,公館鄉,24.5024564,120.8240978,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-mlc-osm-w374539076,貓貍山公園,苗栗市,24.5558331,120.8117577,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-mlc-osm-w485040090,竹南運動公園,竹南鎮,24.6879819,120.8863262,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-mlc-osm-w1026878239,獅山多功能運動公園,竹南鎮,24.6778175,120.8700404,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-mlc-osm-w1026878242,貓裏喵親子公園,苗栗市,24.5636439,120.8381462,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+mlc-osm-w374539076,貓貍山公園,苗栗市,24.5558331,120.8117577,,,,,,open,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,y,u,u,y,u,u,u,u,u,u,u,u,
+mlc-osm-w485040090,竹南運動公園,竹南鎮,24.6879819,120.8863262,,,,,,open,y,u,u,u,u,u,u,u,u,y,y,y,u,y,u,y,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+mlc-osm-w1026878239,獅山多功能運動公園,竹南鎮,24.6778175,120.8700404,,,,,,open,y,y,u,y,u,y,u,y,y,y,y,u,u,u,u,y,y,y,u,u,u,y,y,u,u,u,u,u,y,u,u,u,u,u,u,u,u,y,u,u,
+mlc-osm-w1026878242,貓裏喵親子公園,苗栗市,24.5636439,120.8381462,,,,,,open,y,y,u,y,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,
