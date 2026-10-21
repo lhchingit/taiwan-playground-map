@@ -37,7 +37,7 @@ async function expectMarkersMatchList(page: Page) {
 /** 縣市頁左側的標題區（載入中的骨架也有 header.head，用出發點區分） */
 const head = (page: Page) => page.locator('header.head', { has: page.getByTestId('origin-name') });
 
-/** 標題區的插圖不壓到下一行（…．切換縣市），標題區也沒有被裁切 */
+/** 標題區的插圖不壓到下一行（縣市選單那一行），標題區也沒有被裁切 */
 async function expectHeadNotClipped(page: Page) {
   await page.goto('/hsinchu-city');
   await expect(count(page)).toHaveText(String(TOTAL));
@@ -91,7 +91,7 @@ test('OpenFreeMap 失敗時改用 OSM 官方圖磚；版權標示連到 osm.org/
 test.describe('桌機', () => {
   test.skip(({ isMobile }) => isMobile, '桌機版面');
 
-  test('標題區：插圖不壓到「切換縣市」那一行', async ({ page }) => {
+  test('標題區：插圖不壓到副標題那一行', async ({ page }) => {
     await expectHeadNotClipped(page);
   });
 

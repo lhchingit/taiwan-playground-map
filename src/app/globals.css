@@ -1767,9 +1767,39 @@ table.history th {
   font: inherit;
 }
 
-/* 縣市首頁的「切換縣市」 */
-.sub a {
+/* 縣市頁標題的縣市選單：膠囊按鈕，手指好點（高度至少 40px）。
+   原生 select 透明疊在縣市名稱上：寬度跟著縣市名稱，不被最長的選項撐開 */
+.city-pick {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  margin-right: 8px;
+  padding: 0 14px;
+  border: 1.5px solid var(--teal);
+  border-radius: 999px;
+  background: var(--panel);
   color: var(--teal);
+  font-size: 15px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+.city-pick::after {
+  content: '▾';
+  font-size: 13px;
+}
+.city-pick select {
+  position: absolute;
+  /* 連外框一起蓋住，整顆膠囊都點得到 */
+  inset: -1.5px;
+  width: calc(100% + 3px);
+  opacity: 0;
+  cursor: pointer;
+}
+.city-pick:focus-within {
+  outline: 2px solid var(--slide);
+  outline-offset: 2px;
 }
 
 /* 幫忙命名（decisions D23）：側欄整欄捲動，頁首、表單不被擠扁 */
