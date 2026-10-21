@@ -1,0 +1,195 @@
+{
+ "verified_at": "2026-10-21",
+ "sources": {
+  "tvbs-2019-mlm": {
+   "label": "網路文章：TVBS 食尚玩家 苗栗貓裏喵親子公園（頁面未標日期，內文為 2019-01 啟用）",
+   "url": "https://supertaste.tvbs.com.tw/travel/313249",
+   "kind": "article"
+  },
+  "tvbs-shishan": {
+   "label": "網路文章：TVBS 食尚玩家 竹南獅山親子公園（頁面未標日期）",
+   "url": "https://supertaste.tvbs.com.tw/esg/360343",
+   "kind": "article"
+  },
+  "yam-2020-shishan": {
+   "label": "網路文章：輕旅行 2020-07 竹南獅山親子公園（獅山多功能運動場）",
+   "url": "https://travel.yam.com/article/119606",
+   "kind": "article"
+  },
+  "yam-2022-zhunan": {
+   "label": "網路文章：輕旅行 2022-05 竹南運動公園",
+   "url": "https://travel.yam.com/article/127753",
+   "kind": "article"
+  },
+  "natsu-2025-gowexu": {
+   "label": "網路文章：小菲親子玩樂生活 2025-05 功維敘隧道、貓貍山公園星空滾輪滑梯",
+   "url": "https://natsuphil.com/miaoli/gowexu-trail/",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "mlc-osm-w1026878242": {
+   "slide": [
+    "y",
+    "tvbs-2019-mlm",
+    "約 9 公尺高的大章魚，8 隻觸角都是溜滑梯，有直有彎；另有貝殼滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "tvbs-2019-mlm",
+    "有很大的沙坑"
+   ],
+   "swing": [
+    "y",
+    "tvbs-2019-mlm",
+    "有兩個孩子可以一起盪的互動鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "tvbs-2019-mlm",
+    "有鳥巢鞦韆"
+   ],
+   "toilet": [
+    "y",
+    "tvbs-2019-mlm",
+    "海盜船造型公廁；廁所與照明有開放時間"
+   ]
+  },
+  "mlc-osm-w1026878239": {
+   "slide": [
+    "y",
+    "tvbs-shishan",
+    "火炎山造型滑梯有 7 道磨石子滑道；另有適合幼童的瓢蟲滑梯與無障礙滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "tvbs-shishan",
+    "有沙坑"
+   ],
+   "sand_table": [
+    "y",
+    "yam-2020-shishan",
+    "沙坑旁有沙桌"
+   ],
+   "swing": [
+    "y",
+    "yam-2020-shishan",
+    "有一般鞦韆與鳥巢鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "tvbs-shishan",
+    "有鳥巢鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "tvbs-shishan",
+    "有蹺蹺板（2020 文章寫是多人蹺蹺板）"
+   ],
+   "spinner": [
+    "y",
+    "tvbs-shishan",
+    "有旋轉飛輪"
+   ],
+   "climbing": [
+    "y",
+    "tvbs-shishan",
+    "有攀爬塔"
+   ],
+   "climbing_wall": [
+    "y",
+    "tvbs-shishan",
+    "火炎山可由木樁攀岩牆爬上去"
+   ],
+   "rope_net": [
+    "y",
+    "tvbs-shishan",
+    "火炎山背面有蜘蛛網狀的攀爬網"
+   ],
+   "water_play": [
+    "y",
+    "tvbs-shishan",
+    "夏季開放戲水區，下午到傍晚、噴水與休息輪流，週一清潔不開放"
+   ],
+   "inclusive": [
+    "y",
+    "tvbs-shishan",
+    "文章稱為各年齡同樂的共融遊戲空間，並有無障礙滑梯"
+   ],
+   "toilet": [
+    "y",
+    "tvbs-shishan",
+    "蘑菇屋造型公廁"
+   ],
+   "open_lawn": [
+    "y",
+    "yam-2020-shishan",
+    "有大草皮"
+   ],
+   "ball_court": [
+    "y",
+    "yam-2020-shishan",
+    "有籃球場"
+   ]
+  },
+  "mlc-osm-w485040090": {
+   "slide": [
+    "y",
+    "yam-2022-zhunan",
+    "兒童遊戲場更新後有磨石子溜滑梯"
+   ],
+   "climbing_wall": [
+    "y",
+    "yam-2022-zhunan",
+    "有攀岩牆"
+   ],
+   "rope_net": [
+    "y",
+    "yam-2022-zhunan",
+    "有攀爬網"
+   ],
+   "balance": [
+    "y",
+    "yam-2022-zhunan",
+    "有獨木橋"
+   ],
+   "tunnel": [
+    "y",
+    "yam-2022-zhunan",
+    "有躲貓貓水管"
+   ],
+   "sandpit": [
+    "y",
+    "yam-2022-zhunan",
+    "有沙坑"
+   ],
+   "ball_court": [
+    "y",
+    "yam-2022-zhunan",
+    "園區有籃球場"
+   ]
+  },
+  "mlc-osm-w374539076": {
+   "slide": [
+    "y",
+    "natsu-2025-gowexu",
+    "功維敘隧道旁草地上有約 31 公尺長的滾輪溜滑梯，前段有星空投影隧道；文章建議五歲以下不要輕易嘗試，可自備紙板"
+   ],
+   "open_lawn": [
+    "y",
+    "natsu-2025-gowexu",
+    "滑梯設在草地上"
+   ],
+   "shade": [
+    "y",
+    "natsu-2025-gowexu",
+    "滑梯旁有一座不小的涼亭可以遮陽休息"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2025-gowexu",
+    "遊客中心旁有公廁"
+   ]
+  }
+ }
+}

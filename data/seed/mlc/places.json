@@ -7,6 +7,31 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "tvbs-2019-mlm": {
+   "label": "網路文章：TVBS 食尚玩家 苗栗貓裏喵親子公園（頁面未標日期，內文為 2019-01 啟用）",
+   "url": "https://supertaste.tvbs.com.tw/travel/313249",
+   "kind": "article"
+  },
+  "tvbs-shishan": {
+   "label": "網路文章：TVBS 食尚玩家 竹南獅山親子公園（頁面未標日期）",
+   "url": "https://supertaste.tvbs.com.tw/esg/360343",
+   "kind": "article"
+  },
+  "yam-2020-shishan": {
+   "label": "網路文章：輕旅行 2020-07 竹南獅山親子公園（獅山多功能運動場）",
+   "url": "https://travel.yam.com/article/119606",
+   "kind": "article"
+  },
+  "yam-2022-zhunan": {
+   "label": "網路文章：輕旅行 2022-05 竹南運動公園",
+   "url": "https://travel.yam.com/article/127753",
+   "kind": "article"
+  },
+  "natsu-2025-gowexu": {
+   "label": "網路文章：小菲親子玩樂生活 2025-05 功維敘隧道、貓貍山公園星空滾輪滑梯",
+   "url": "https://natsuphil.com/miaoli/gowexu-trail/",
+   "kind": "article"
   }
  },
  "labels": {
@@ -391,13 +416,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-gowexu",
+     "note": "功維敘隧道旁草地上有約 31 公尺長的滾輪溜滑梯，前段有星空投影隧道；文章建議五歲以下不要輕易嘗試，可自備紙板",
+     "at": "2026-10-21"
     },
     "swing": {
      "v": "u",
@@ -520,10 +545,10 @@
      "at": null
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-gowexu",
+     "note": "滑梯設在草地上",
+     "at": "2026-10-21"
     },
     "ball_court": {
      "v": "u",
@@ -562,10 +587,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-gowexu",
+     "note": "遊客中心旁有公廁",
+     "at": "2026-10-21"
     },
     "handwash": {
      "v": "u",
@@ -580,10 +605,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "natsu-2025-gowexu",
+     "note": "滑梯旁有一座不小的涼亭可以遮陽休息",
+     "at": "2026-10-21"
     },
     "transit": {
      "v": "u",
@@ -656,13 +681,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區：溜滑梯、溜滑梯。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區：溜滑梯、溜滑梯。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2022-zhunan",
+     "note": "兒童遊戲場更新後有磨石子溜滑梯",
+     "at": "2026-10-21"
     },
     "swing": {
      "v": "u",
@@ -713,22 +738,22 @@
      "at": null
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2022-zhunan",
+     "note": "有攀岩牆",
+     "at": "2026-10-21"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2022-zhunan",
+     "note": "有攀爬網",
+     "at": "2026-10-21"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2022-zhunan",
+     "note": "有獨木橋",
+     "at": "2026-10-21"
     },
     "suspension_bridge": {
      "v": "u",
@@ -737,10 +762,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2022-zhunan",
+     "note": "有躲貓貓水管",
+     "at": "2026-10-21"
     },
     "tree_house": {
      "v": "u",
@@ -749,10 +774,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2022-zhunan",
+     "note": "有沙坑",
+     "at": "2026-10-21"
     },
     "sand_table": {
      "v": "u",
@@ -791,10 +816,10 @@
      "at": null
     },
     "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2022-zhunan",
+     "note": "園區有籃球場",
+     "at": "2026-10-21"
     },
     "skatepark": {
      "v": "u",
@@ -921,19 +946,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：遊樂場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：遊樂場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "火炎山造型滑梯有 7 道磨石子滑道；另有適合幼童的瓢蟲滑梯與無障礙滑梯",
+     "at": "2026-10-21"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2020-shishan",
+     "note": "有一般鞦韆與鳥巢鞦韆",
+     "at": "2026-10-21"
     },
     "baby_swing": {
      "v": "u",
@@ -942,10 +967,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-21"
     },
     "zipline": {
      "v": "u",
@@ -954,10 +979,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "有蹺蹺板（2020 文章寫是多人蹺蹺板）",
+     "at": "2026-10-21"
     },
     "spring_rider": {
      "v": "u",
@@ -966,28 +991,28 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "有旋轉飛輪",
+     "at": "2026-10-21"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "有攀爬塔",
+     "at": "2026-10-21"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "火炎山可由木樁攀岩牆爬上去",
+     "at": "2026-10-21"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "火炎山背面有蜘蛛網狀的攀爬網",
+     "at": "2026-10-21"
     },
     "balance": {
      "v": "u",
@@ -1014,22 +1039,22 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "有沙坑",
+     "at": "2026-10-21"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2020-shishan",
+     "note": "沙坑旁有沙桌",
+     "at": "2026-10-21"
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "夏季開放戲水區，下午到傍晚、噴水與休息輪流，週一清潔不開放",
+     "at": "2026-10-21"
     },
     "water_pump": {
      "v": "u",
@@ -1050,16 +1075,16 @@
      "at": null
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2020-shishan",
+     "note": "有大草皮",
+     "at": "2026-10-21"
     },
     "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yam-2020-shishan",
+     "note": "有籃球場",
+     "at": "2026-10-21"
     },
     "skatepark": {
      "v": "u",
@@ -1092,10 +1117,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "蘑菇屋造型公廁",
+     "at": "2026-10-21"
     },
     "handwash": {
      "v": "u",
@@ -1146,10 +1171,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-shishan",
+     "note": "文章稱為各年齡同樂的共融遊戲空間，並有無障礙滑梯",
+     "at": "2026-10-21"
     }
    },
    "parking": {
@@ -1186,19 +1211,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-2019-mlm",
+     "note": "約 9 公尺高的大章魚，8 隻觸角都是溜滑梯，有直有彎；另有貝殼滑梯",
+     "at": "2026-10-21"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-2019-mlm",
+     "note": "有兩個孩子可以一起盪的互動鞦韆",
+     "at": "2026-10-21"
     },
     "baby_swing": {
      "v": "u",
@@ -1207,10 +1232,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-2019-mlm",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-21"
     },
     "zipline": {
      "v": "u",
@@ -1279,10 +1304,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-2019-mlm",
+     "note": "有很大的沙坑",
+     "at": "2026-10-21"
     },
     "sand_table": {
      "v": "u",
@@ -1357,10 +1382,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-2019-mlm",
+     "note": "海盜船造型公廁；廁所與照明有開放時間",
+     "at": "2026-10-21"
     },
     "handwash": {
      "v": "u",
