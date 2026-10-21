@@ -29,6 +29,7 @@ import type { PlaceDetail } from '@/lib/place-detail';
 import type { AttributeCatalog, CityPlace } from '@/lib/places';
 import { groupKeyMap } from '@/lib/play-groups';
 import { useTravelMode } from '@/lib/prefs';
+import { CityMenu } from './CityMenu';
 import { FilterPanel } from './FilterPanel';
 import { OriginControls } from './OriginControls';
 import { PANEL_TITLE_ID, PlacePanel } from './PlacePanel';
@@ -263,13 +264,13 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
             <PlaygroundArt className="pa-mini" />
           </div>
           <p className="sub">
-            {city.name}親子遊樂場與公園．資料 {places.length} 處
-            {/* 兩個以上縣市上線時才有縣市選單（只有一個時 / 直接導向該縣市） */}
-            {cities.filter((c) => c.launched).length > 1 && (
-              <>
-                ．<Link href="/">切換縣市</Link>
-              </>
+            {/* 兩個以上縣市上線時，縣市名稱是切換選單（只有一個時 / 直接導向該縣市） */}
+            {cities.filter((c) => c.launched).length > 1 ? (
+              <CityMenu city={city} cities={cities} filters={filters} />
+            ) : (
+              city.name
             )}
+            親子遊樂場與公園．資料 {places.length} 處
           </p>
           <OriginControls
             origin={origin}

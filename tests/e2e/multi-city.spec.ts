@@ -54,7 +54,7 @@ test('只有新竹市上線時，/ 直接導向新竹市，也沒有「切換縣
   await page.goto('/');
   await expect(page).toHaveURL(/\/hsinchu-city$/);
   await expect(page.getByText(/資料 \d+ 處/)).toBeVisible();
-  await expect(page.getByRole('link', { name: '切換縣市' })).toHaveCount(0);
+  await expect(page.getByRole('combobox', { name: '切換縣市' })).toHaveCount(0);
 });
 
 test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可以瀏覽', async ({ page, request }) => {
@@ -92,8 +92,18 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
   await expect(page).toHaveURL(/\/test-city$/);
   await expect(page.locator('a.card[data-id="test-tst-known"]')).toBeVisible();
 
-  // 兩個縣市上線：縣市首頁有「切換縣市」，回到縣市選單
-  await page.getByRole('link', { name: '切換縣市' }).click();
+  // 兩個縣市上線：縣市名稱是「切換縣市」選單，手指好點；切換時帶著篩選條件
+  await page.goto('/hsinchu-city?play=sandpit');
+  const menu = page.getByRole('combobox', { name: '切換縣市' });
+  await expect(menu).toHaveValue('hsinchu-city');
+  expect((await menu.boundingBox())!.height).toBeGreaterThanOrEqual(40);
+  await menu.selectOption({ label: '測試縣' });
+  await expect(page).toHaveURL(/\/test-city\?play=sandpit$/);
+  await expect(page.getByRole('combobox', { name: '切換縣市' })).toHaveValue('test-city');
+  // 最後一項回到縣市選單
+  await page
+    .getByRole('combobox', { name: '切換縣市' })
+    .selectOption({ label: '全部縣市（台灣地圖）' });
   await expect(page).toHaveURL(/\/$/);
   await expect(page.locator('.city-list')).toBeVisible();
 
