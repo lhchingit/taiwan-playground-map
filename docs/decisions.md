@@ -376,3 +376,9 @@
 - **網址參數：** 送出前用 `analyticsUrl()`（`src/lib/analytics.ts`）處理。首頁與縣市頁保留篩選參數（只有篩選條件，出發點本來就不在網址裡，D4）；其他頁面只送路徑，避免送出管理後台的搜尋字（可能是 Email）、登入頁的 `next` 等。
 - **不送自訂事件：** 只有頁面瀏覽，所以不會有位置或帳號資料。隱私權政策「第三方服務」有列出。
 - **要在 Vercel 專案的 Analytics 分頁啟用**才會收資料。
+
+## D31 PostGIS 放在 extensions schema（2026-10-21 決定）
+
+- **原因：** Supabase 安全檢查回報 `public.spatial_ref_sys` 沒有 RLS。這是 PostGIS 自帶的座標系統表，擁有者是 `supabase_admin`，我們不能開 RLS 也收不回權限；實測任何人都能用匿名金鑰透過 API 刪改。刪掉 SRID 4326，審核的距離判斷、新增場地、匯入都會壞掉。
+- **做法：** migration 0033 把 PostGIS 移除後重裝在 `extensions`（不對 API 公開；PostGIS 不支援 `ALTER EXTENSION … SET SCHEMA`）。重裝前記下每一筆座標，重建 `geom` 欄位、索引與 `place_cards`、`naming_open` 兩個 view，逐筆比對座標，不同就整個退回。PostGIS 的函式也不再透過 API 公開。
+- **之後的 migration：** 用到 PostGIS 的 SECURITY DEFINER 函式，`search_path` 要寫 `public, extensions`（DB 測試會檢查）；view 與 SQL 裡可以寫 `extensions.ST_*`。
