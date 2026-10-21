@@ -19,6 +19,7 @@ const TABLES = [
   'place_attributes',
   'place_parking',
   'edit_suggestions',
+  'naming_candidates',
 ] as const;
 
 /** 每張表內容的雜湊，用來確認匿名操作沒有改到任何資料 */
@@ -105,6 +106,12 @@ describe('匿名使用者不能寫入', () => {
       insert: { id: 'test-anon', name: '測試', city: 'hsc' },
       match: { id: park },
       update: { name: '改名' },
+    },
+    {
+      table: 'naming_open',
+      insert: { id: 'test-anon', city: 'hsc', osm_ref: 'n1' },
+      match: { city: 'hsc' },
+      update: { district: '改名' },
     },
   ] as const;
 
@@ -272,5 +279,36 @@ describe('首頁用的公開 view', () => {
       fee: 'paid',
       spaces: null,
     });
+  });
+});
+
+// PostGIS 在 extensions schema（decisions D31）：spatial_ref_sys 不能開 RLS，不可以透過 API 讀寫
+describe('PostGIS 不對外公開', () => {
+  it('postgis 裝在 extensions，public 沒有 spatial_ref_sys', async () => {
+    const [r] = await sql`SELECT extnamespace::regnamespace::text AS schema,
+                                 to_regclass('public.spatial_ref_sys') AS srs
+                          FROM pg_extension WHERE extname = 'postgis'`;
+    expect(r).toEqual({ schema: 'extensions', srs: null });
+  });
+
+  it('匿名透過 API 讀不到、也刪不了 spatial_ref_sys', async () => {
+    const from = (anon as unknown as ReturnType<typeof anonClient>).from(
+      'spatial_ref_sys' as 'places',
+    );
+    expect((await from.select('*').limit(1)).error?.code).toBe('PGRST205');
+    expect((await from.delete().eq('id', '4326')).error?.code).toBe('PGRST205');
+    const [r] =
+      await sql`SELECT count(*)::int AS n FROM extensions.spatial_ref_sys WHERE srid = 4326`;
+    expect(r?.n).toBe(1);
+  });
+
+  it('用到 PostGIS 的 SECURITY DEFINER 函式找得到 extensions', async () => {
+    const rows = await sql`SELECT proname, proconfig FROM pg_proc
+                           WHERE pronamespace = 'public'::regnamespace AND prosecdef
+                             AND prosrc ~* ${String.raw`(st_[a-z]+\s*\(|geography|geom)`}`;
+    expect(rows.length).toBeGreaterThan(0);
+    for (const r of rows) {
+      expect(r.proconfig, r.proname).toContain('search_path=public, extensions');
+    }
   });
 });

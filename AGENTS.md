@@ -272,6 +272,9 @@ python3 scripts/check_seed_hash.py                 # 重新產生 seed，逐位�
   - 刪掉 `.next`，因為建置快取會留著舊的上線狀態。
   - 關掉還在跑的 3100 port 伺服器。
 - **新增資料庫函式或資料表後**，要執行 `pnpm typegen`，或 `npx supabase gen types ...`，重新產生 `src/types/database.ts`。CI 會檢查。
+- **PostGIS 在 `extensions` schema**（decisions D31），不在 `public`：
+  - 新的 SECURITY DEFINER 函式用到 `ST_*` 或 `geography` 時，要寫 `SET search_path = public, extensions`，否則會找不到函式。
+  - 用 `postgres` 連線的匯入腳本與測試不受影響，因為它的 search_path 本來就有 `extensions`。
 - **場地 0 處的縣市**（OSM 遊戲場全部沒有名稱，例如金門）：一樣可以加，`places.json` 的 `places` 是空的；`pnpm seed` 會用 OSM 行政界當範圍、匯入待命名清單。0 處場地不能上線，會員命名頁也要上線後才有，先用 `pnpm tool:name` 命名。
 - **只改其他縣市時**，`check_seed_hash.py` 要「全部相同」，確認沒影響到別的縣市。
 - **e2e 的時間差：**
