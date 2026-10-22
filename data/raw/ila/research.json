@@ -1,0 +1,346 @@
+{
+ "verified_at": "2026-10-22",
+ "sources": {
+  "ltn-2026-ilsp": {
+   "label": "新聞：自由時報 2026-07 宜蘭運動公園特色兒童遊戲場啟用",
+   "url": "https://news.ltn.com.tw/news/Yilan/paper/1761036",
+   "kind": "news"
+  },
+  "udn-2026-ilsp": {
+   "label": "新聞：聯合報 2026-07 宜蘭運動公園特色遊戲場（彩虹滑梯）",
+   "url": "https://udn.com/news/story/7328/9600253",
+   "kind": "news"
+  },
+  "abic-ldsp": {
+   "label": "網路文章：愛貝客親子遊 薛長興全齡風雨樂活館（頁面未標日期，內容為 2024-11 啟用後）",
+   "url": "https://www.abic.com.tw/place/view/id/15568",
+   "kind": "article"
+  },
+  "bjsmile-2026-ldsp": {
+   "label": "網路文章：紫色微笑 2026-08 羅東運動公園泡泡森林親子公園",
+   "url": "https://bjsmile.tw/bubble-forest/",
+   "kind": "article"
+  },
+  "yam-2020-tcsp": {
+   "label": "網路文章：輕旅行 2020-04 頭城運動公園",
+   "url": "https://travel.yam.com/article/118321",
+   "kind": "article"
+  },
+  "tvbs-ld9": {
+   "label": "網路文章：TVBS 食尚玩家 羅東九號公園共融式遊戲場（頁面未標日期，約 2022-05）",
+   "url": "https://supertaste.tvbs.com.tw/review/336406",
+   "kind": "article"
+  },
+  "pts-2025-zhongshan": {
+   "label": "新聞：公視 2025-06 羅東中山公園環境與設施占用",
+   "url": "https://news.pts.org.tw/article/754053",
+   "kind": "news"
+  },
+  "ltn-2025-yangming": {
+   "label": "新聞：自由時報 2025-01 宜蘭市陽明公園共融遊戲場啟用",
+   "url": "https://news.ltn.com.tw/news/Yilan/breakingnews/4933125",
+   "kind": "news"
+  },
+  "bjsmile-2026-yangming": {
+   "label": "網路文章：紫色微笑 2026-01 宜蘭市陽明公園",
+   "url": "https://bjsmile.tw/yangmin-park/",
+   "kind": "article"
+  },
+  "bjsmile-2025-yuanshan": {
+   "label": "網路文章：紫色微笑 2025-08 員山公園",
+   "url": "https://bjsmile.tw/yuanshan-park/",
+   "kind": "article"
+  },
+  "abic-yuanshan": {
+   "label": "網路文章：愛貝客親子遊 員山公園（頁面未標日期）",
+   "url": "https://www.abic.com.tw/place/view/id/11113",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "ila-osm-n4538912045": {
+   "slide": [
+    "y",
+    "udn-2026-ilsp",
+    "2026-07 新開的特色遊戲場有兩座彩虹溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "udn-2026-ilsp",
+    "有座椅式、親子式和鳥巢三款鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "udn-2026-ilsp",
+    "三款鞦韆之一是鳥巢鞦韆"
+   ],
+   "spinner": [
+    "y",
+    "udn-2026-ilsp",
+    "有小轉杯"
+   ],
+   "rope_net": [
+    "y",
+    "ltn-2026-ilsp",
+    "有圓筒狀的爬網"
+   ],
+   "sandpit": [
+    "y",
+    "udn-2026-ilsp",
+    "有沙坑"
+   ],
+   "sand_table": [
+    "y",
+    "ltn-2026-ilsp",
+    "有沙桌"
+   ],
+   "inclusive": [
+    "y",
+    "ltn-2026-ilsp",
+    "擋牆後方用人工草坡做成無障礙動線，坐輪椅也能上平台玩溜滑梯"
+   ],
+   "shade": [
+    "y",
+    "ltn-2026-ilsp",
+    "「雨後彩虹平台」有大範圍的遮蔭"
+   ]
+  },
+  "ila-osm-w1547375337": {
+   "slide": [
+    "y",
+    "abic-ldsp",
+    "有碗公造型的磨石子溜滑梯，以及木屋造型的溜滑梯攀爬組合"
+   ],
+   "swing": [
+    "y",
+    "abic-ldsp",
+    "有單片鞦韆，鞦韆不在頂棚下"
+   ],
+   "nest_swing": [
+    "y",
+    "abic-ldsp",
+    "有鳥巢鞦韆，鞦韆不在頂棚下"
+   ],
+   "sandpit": [
+    "y",
+    "abic-ldsp",
+    "有戲沙坑"
+   ],
+   "climbing_wall": [
+    "y",
+    "abic-ldsp",
+    "草丘上有攀岩牆"
+   ],
+   "climbing": [
+    "y",
+    "bjsmile-2026-ldsp",
+    "有多功能攀爬遊具，搭配溜滑梯"
+   ],
+   "trampoline": [
+    "y",
+    "abic-ldsp",
+    "有彈跳床"
+   ],
+   "water_play": [
+    "y",
+    "abic-ldsp",
+    "有泡泡森林戲水區"
+   ],
+   "shade": [
+    "y",
+    "abic-ldsp",
+    "鋼構頂棚可遮陽擋雨，但鞦韆在頂棚外"
+   ],
+   "lighting": [
+    "y",
+    "abic-ldsp",
+    "樂活館夜間照明開到晚上 10 點"
+   ],
+   "toilet": [
+    "y",
+    "bjsmile-2026-ldsp",
+    "遊戲區有公共廁所"
+   ]
+  },
+  "ila-osm-w536613632": {
+   "slide": [
+    "y",
+    "yam-2020-tcsp",
+    "有蜂巢溜滑梯和水泥溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "yam-2020-tcsp",
+    "有單人鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "yam-2020-tcsp",
+    "有鳥巢鞦韆"
+   ],
+   "sandpit": [
+    "y",
+    "yam-2020-tcsp",
+    "新增了鯨魚造型的大沙坑"
+   ],
+   "climbing": [
+    "y",
+    "yam-2020-tcsp",
+    "有多功能攀爬設施"
+   ],
+   "climbing_wall": [
+    "y",
+    "yam-2020-tcsp",
+    "攀爬設施上有手抓攀岩塊"
+   ],
+   "rope_net": [
+    "y",
+    "yam-2020-tcsp",
+    "攀爬設施上有爬網"
+   ],
+   "seesaw": [
+    "y",
+    "yam-2020-tcsp",
+    "新增了蹺蹺板"
+   ],
+   "spinner": [
+    "y",
+    "yam-2020-tcsp",
+    "有大轉盤和轉轉杯"
+   ],
+   "inclusive": [
+    "y",
+    "yam-2020-tcsp",
+    "大轉盤設計成輪椅可以直接推上去"
+   ],
+   "music": [
+    "y",
+    "yam-2020-tcsp",
+    "有傳聲筒和音樂牆板"
+   ]
+  },
+  "ila-osm-n9868393996": {
+   "slide": [
+    "y",
+    "tvbs-ld9",
+    "海盜船遊戲場有 2 座溜滑梯（含螺旋滑梯），草坡上另有磨石子溜滑梯"
+   ],
+   "rope_net": [
+    "y",
+    "tvbs-ld9",
+    "海盜船遊戲場有攀爬網"
+   ],
+   "climbing_wall": [
+    "y",
+    "tvbs-ld9",
+    "有 2 面攀岩牆"
+   ],
+   "swing": [
+    "y",
+    "tvbs-ld9",
+    "有 3 種鞦韆，包括雙人鞦韆"
+   ],
+   "baby_swing": [
+    "y",
+    "tvbs-ld9",
+    "有適合小小孩的椅型鞦韆"
+   ],
+   "bars": [
+    "y",
+    "tvbs-ld9",
+    "山丘旁有單槓活動區"
+   ],
+   "water_play": [
+    "y",
+    "tvbs-ld9",
+    "有噴水池，預計 5 到 10 月開放，整點噴水"
+   ],
+   "inclusive": [
+    "y",
+    "tvbs-ld9",
+    "原本的兒童遊戲場改建成共融式遊戲場"
+   ]
+  },
+  "ila-osm-n12531281902": {
+   "slide": [
+    "y",
+    "ltn-2025-yangming",
+    "有磨石子溜滑梯"
+   ],
+   "climbing": [
+    "y",
+    "ltn-2025-yangming",
+    "有體能攀爬組"
+   ],
+   "climbing_wall": [
+    "y",
+    "bjsmile-2026-yangming",
+    "有攀岩牆"
+   ],
+   "balance": [
+    "y",
+    "bjsmile-2026-yangming",
+    "有平衡木"
+   ],
+   "inclusive": [
+    "y",
+    "ltn-2025-yangming",
+    "宜蘭市公所蓋的全齡共融公園，設有無障礙設施"
+   ]
+  },
+  "ila-osm-w1484822743": {
+   "slide": [
+    "y",
+    "abic-yuanshan",
+    "有大小兩座磨石子溜滑梯，另有塑膠大型溜滑梯組"
+   ],
+   "swing": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有盪鞦韆"
+   ],
+   "sandpit": [
+    "y",
+    "abic-yuanshan",
+    "磨石子溜滑梯下方是戲沙區"
+   ],
+   "seesaw": [
+    "y",
+    "abic-yuanshan",
+    "有蹺蹺板"
+   ],
+   "spring_rider": [
+    "y",
+    "abic-yuanshan",
+    "有搖搖馬"
+   ],
+   "climbing": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有木頭攀爬遊戲區"
+   ],
+   "ball_court": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有小型籃球場"
+   ],
+   "toilet": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有洗手間"
+   ],
+   "shade": [
+    "y",
+    "abic-yuanshan",
+    "磨石子溜滑梯旁有涼亭"
+   ]
+  },
+  "ila-osm-n10712095224": {
+   "slide": [
+    "y",
+    "pts-2025-zhongshan",
+    "報導寫到公園裡的兒童溜滑梯"
+   ]
+  }
+ }
+}
