@@ -97,10 +97,16 @@ test('測試縣上線並清快取後：/ 是縣市選單，測試縣的頁面可
   const menu = page.getByRole('combobox', { name: '切換縣市' });
   await expect(menu).toHaveValue('hsinchu-city');
   expect((await menu.boundingBox())!.height).toBeGreaterThanOrEqual(40);
-  await menu.selectOption({ label: '測試縣' });
+  // 第一項是全部縣市，接著是各縣市與場地數
+  await expect(menu.locator('option')).toHaveText([
+    '全部縣市（台灣地圖）',
+    `新竹市（${TOTAL} 處）`,
+    '測試縣（2 處）',
+  ]);
+  await menu.selectOption('test-city');
   await expect(page).toHaveURL(/\/test-city\?play=sandpit$/);
   await expect(page.getByRole('combobox', { name: '切換縣市' })).toHaveValue('test-city');
-  // 最後一項回到縣市選單
+  // 第一項回到縣市選單
   await page
     .getByRole('combobox', { name: '切換縣市' })
     .selectOption({ label: '全部縣市（台灣地圖）' });

@@ -52,6 +52,8 @@ export interface HomeAppProps {
   query: string;
   /** 待會員命名的遊戲場數（decisions D23）；0 時不顯示「幫忙命名」 */
   namingCount?: number;
+  /** 已上線縣市的場地數（縣市選單用），key 是縣市代碼 */
+  cityCounts?: Record<string, number>;
 }
 
 /** history.state 裡標記「這一筆是打開詳情面板時加的」，關閉時用上一頁回到首頁網址 */
@@ -62,7 +64,15 @@ function placeIdFromPath(pathname: string, slug: string): string | null {
   return m?.[1] ? decodeURIComponent(m[1]) : null;
 }
 
-export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 }: HomeAppProps) {
+export function HomeApp({
+  city,
+  cities,
+  catalog,
+  places,
+  query,
+  namingCount = 0,
+  cityCounts = {},
+}: HomeAppProps) {
   const known = useMemo(
     () => ({
       play: catalog.playGroups.flatMap((g) => g.keys),
@@ -266,7 +276,7 @@ export function HomeApp({ city, cities, catalog, places, query, namingCount = 0 
           <p className="sub">
             {/* 兩個以上縣市上線時，縣市名稱是切換選單（只有一個時 / 直接導向該縣市） */}
             {cities.filter((c) => c.launched).length > 1 ? (
-              <CityMenu city={city} cities={cities} filters={filters} />
+              <CityMenu city={city} cities={cities} counts={cityCounts} filters={filters} />
             ) : (
               city.name
             )}

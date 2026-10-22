@@ -39,7 +39,17 @@ export default async function CityPage({
     getCityPlaces(city.code),
     getNamingCandidates(city.code),
   ]);
-  const props = { city, cities, catalog, places, namingCount: naming.length };
+  // 縣市選單上的場地數（兩個以上縣市上線時才有選單）；各縣市的場地已經快取
+  const launched = cities.filter((c) => c.launched);
+  const cityCounts =
+    launched.length > 1
+      ? Object.fromEntries(
+          await Promise.all(
+            launched.map(async (c) => [c.code, (await getCityPlaces(c.code)).length] as const),
+          ),
+        )
+      : {};
+  const props = { city, cities, catalog, places, namingCount: naming.length, cityCounts };
 
   // 篩選條件在網址裡（要求時才知道），放在 Suspense 裡；伺服器產生的畫面就是篩選後的結果
   return (

@@ -9,10 +9,13 @@ const ALL = '';
 export function CityMenu({
   city,
   cities,
+  counts,
   filters,
 }: {
   city: CityBounds;
   cities: readonly CityBounds[];
+  /** 各縣市的場地數，key 是縣市代碼 */
+  counts: Readonly<Record<string, number>>;
   filters: Filters;
 }) {
   const router = useRouter();
@@ -31,12 +34,12 @@ export function CityMenu({
           router.push(`/${slug}${q ? `?${q}` : ''}`);
         }}
       >
+        <option value={ALL}>全部縣市（台灣地圖）</option>
         {launched.map((c) => (
           <option key={c.code} value={c.slug}>
-            {c.name}
+            {counts[c.code] === undefined ? c.name : `${c.name}（${counts[c.code]} 處）`}
           </option>
         ))}
-        <option value={ALL}>全部縣市（台灣地圖）</option>
       </select>
     </span>
   );
