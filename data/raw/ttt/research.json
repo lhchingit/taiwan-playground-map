@@ -1,0 +1,195 @@
+{
+ "verified_at": "2026-10-22",
+ "sources": {
+  "abic-ttfp": {
+   "label": "網路文章：愛貝客親子遊 台東森林公園烏頭翁森林遊戲區（頁面未標日期，內容為 2025-03 改版後）",
+   "url": "https://www.abic.com.tw/place/view/id/1921",
+   "kind": "article"
+  },
+  "gvm-2026-ttfp": {
+   "label": "新聞：遠見《未來城市》2026-04 台東烏頭翁遊戲場",
+   "url": "https://city.gvm.com.tw/article/129587",
+   "kind": "news"
+  },
+  "abic-cs3": {
+   "label": "網路文章：愛貝客親子遊 池上三號公園共融式遊戲場（頁面未標日期，內容為 2026-03 開放後）",
+   "url": "https://www.abic.com.tw/place/view/id/16055",
+   "kind": "article"
+  },
+  "udn-2026-cs3": {
+   "label": "新聞：聯合報 2026-03 台東池上共融式公園啟用",
+   "url": "https://udn.com/news/story/7328/9395966",
+   "kind": "news"
+  },
+  "fullfen-2021-cake": {
+   "label": "網路文章：滿分的旅遊札記 2021-09 台東生日蛋糕公園",
+   "url": "https://fullfenblog.tw/birthday-cake-park/",
+   "kind": "article"
+  },
+  "walker-2022-cake": {
+   "label": "網路文章：窩客島 2022-10 台東兒童公園（生日蛋糕公園）",
+   "url": "https://www.walkerland.com.tw/article/view/340198",
+   "kind": "article"
+  },
+  "ner-2024-nanjing": {
+   "label": "新聞：國立教育廣播電台 2024-04 臺東南京路園道攀爬主題遊戲場啟用（Yahoo 新聞轉載）",
+   "url": "https://tw.news.yahoo.com/%E6%94%80%E5%90%A7%E5%AD%A9%E5%AD%90-%E8%87%BA%E6%9D%B1%E5%8D%97%E4%BA%AC%E8%B7%AF%E5%9C%92%E9%81%93%E6%94%80%E7%88%AC%E4%B8%BB%E9%A1%8C%E9%81%8A%E6%88%B2%E5%A0%B4%E5%95%9F%E7%94%A8-101706254.html",
+   "kind": "news"
+  },
+  "ct-2026-nanjing": {
+   "label": "新聞：中時新聞網 2026-09 台東南京路攀爬公園遊具螺栓掉落（Yahoo 新聞轉載）",
+   "url": "https://tw.news.yahoo.com/%E5%8F%B0%E6%9D%B1%E5%85%AC%E5%9C%92%E5%85%92%E7%AB%A5%E6%94%80%E7%88%AC%E9%81%8A%E5%85%B7-%E8%9E%BA%E6%A0%93%E6%8E%89%E8%90%BD-%E5%BB%A0%E5%95%86%E5%88%9D%E5%88%A4%E9%81%AD%E4%BA%BA%E7%82%BA%E6%8B%86%E5%8D%B8-091226075.html",
+   "kind": "news"
+  }
+ },
+ "places": {
+  "ttt-osm-w429707964": {
+   "slide": [
+    "y",
+    "abic-ttfp",
+    "烏頭翁森林遊戲區：大烏頭翁的翅膀是水管滑梯，山丘區有磨石子滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "abic-ttfp",
+    "烏頭翁森林遊戲區有戲沙坑"
+   ],
+   "climbing": [
+    "y",
+    "abic-ttfp",
+    "有垂直爬梯，以及木製小鴨造型攀爬組"
+   ],
+   "climbing_wall": [
+    "y",
+    "abic-ttfp",
+    "有山丘攀爬牆，小烏頭翁有斜坡攀爬牆"
+   ],
+   "rope_net": [
+    "y",
+    "abic-ttfp",
+    "有階梯型繩網攀爬組"
+   ],
+   "balance": [
+    "y",
+    "abic-ttfp",
+    "有平衡木和原木跳樁"
+   ],
+   "water_play": [
+    "y",
+    "abic-ttfp",
+    "有可以踩水的淺水道"
+   ],
+   "inclusive": [
+    "y",
+    "gvm-2026-ttfp",
+    "報導稱烏頭翁遊戲場為共融式遊戲場"
+   ]
+  },
+  "ttt-osm-w485667024": {
+   "slide": [
+    "y",
+    "abic-cs3",
+    "米塔造型遊具有高低不同的兩座溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "abic-cs3",
+    "有單板鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "abic-cs3",
+    "有鳥巢鞦韆"
+   ],
+   "zipline": [
+    "y",
+    "abic-cs3",
+    "有立式與包覆式的泰山溜索"
+   ],
+   "spinner": [
+    "y",
+    "abic-cs3",
+    "有單人旋轉柱"
+   ],
+   "sandpit": [
+    "y",
+    "abic-cs3",
+    "有細白沙坑"
+   ],
+   "sand_table": [
+    "y",
+    "abic-cs3",
+    "有沙桌"
+   ],
+   "climbing": [
+    "y",
+    "abic-cs3",
+    "米塔遊具有斜坡鑽籠、垂直爬籠、爬繩和金屬爬梯"
+   ],
+   "shade": [
+    "y",
+    "abic-cs3",
+    "遊戲場旁有涼亭"
+   ],
+   "inclusive": [
+    "y",
+    "udn-2026-cs3",
+    "2026-03 啟用的共融式公園，設計成不分年齡與身心條件都能使用"
+   ]
+  },
+  "ttt-osm-n5252141804": {
+   "slide": [
+    "y",
+    "walker-2022-cake",
+    "有低矮的溜滑梯、較高的溜滑梯，以及海盜船溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "fullfen-2021-cake",
+    "有盪鞦韆"
+   ],
+   "sandpit": [
+    "y",
+    "fullfen-2021-cake",
+    "有沙坑"
+   ],
+   "rope_net": [
+    "y",
+    "walker-2022-cake",
+    "有網繩攀爬組"
+   ],
+   "open_lawn": [
+    "y",
+    "walker-2022-cake",
+    "有一大片草皮"
+   ],
+   "toddler_zone": [
+    "y",
+    "walker-2022-cake",
+    "有給嬰幼兒的安全遊戲區"
+   ]
+  },
+  "ttt-osm-w916118471": {
+   "climbing": [
+    "y",
+    "ner-2024-nanjing",
+    "2024-04 啟用的攀爬主題遊戲場，有立體攀爬組、大型攀爬架等多種攀爬設施"
+   ],
+   "toddler_zone": [
+    "y",
+    "ner-2024-nanjing",
+    "正氣路側另有 2 到 5 歲的幼兒遊戲場"
+   ],
+   "lighting": [
+    "y",
+    "ner-2024-nanjing",
+    "有夜間照明"
+   ],
+   "toilet": [
+    "y",
+    "ct-2026-nanjing",
+    "報導寫公園設有廁所"
+   ]
+  }
+ }
+}
