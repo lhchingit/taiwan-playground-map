@@ -76,6 +76,8 @@ test('出發點方式二選一：地圖點選時選「在地圖上點選」，�
   page,
   isMobile,
 }) => {
+  // 要等地圖載入、找沒有標記的位置點，再做地址搜尋；全部測試同時跑時手機版地圖載入較慢，30 秒不夠
+  test.setTimeout(60_000);
   await page.goto('/hsinchu-city');
   const here = head(page).getByRole('button', { name: '使用目前位置' });
   const pick = head(page).getByRole('button', { name: '在地圖上點選' });
