@@ -1,5 +1,5 @@
 ﻿id,name,district,lat,lng,size,stay,age_min,age_max,fee,status,slide,swing,baby_swing,nest_swing,zipline,seesaw,spring_rider,spinner,climbing,climbing_wall,rope_net,balance,suspension_bridge,tunnel,tree_house,sandpit,sand_table,water_play,water_pump,trampoline,pushbike,open_lawn,ball_court,skatepark,bars,music,chalk_wall,toddler_zone,toilet,handwash,footwash,shade,transit,stroller,nursing,lighting,food,inclusive,parking_type,parking_fee,parking_spaces
-ttt-osm-n5252141804,生日蛋糕公園,臺東市,22.7647457,121.1490141,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-ttt-osm-w429707964,臺東森林公園,臺東市,22.7641467,121.1666805,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-ttt-osm-w485667024,池上三號運動公園,池上鄉,23.121286,121.2110222,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-ttt-osm-w916118471,南京路公園,臺東市,22.7581204,121.1480649,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+ttt-osm-n5252141804,生日蛋糕公園,臺東市,22.7647457,121.1490141,,,,,,open,y,y,u,u,u,u,u,u,u,u,y,u,u,u,u,y,u,u,u,u,u,y,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,
+ttt-osm-w429707964,臺東森林公園,臺東市,22.7641467,121.1666805,,,,,,open,y,u,u,u,u,u,u,u,y,y,y,y,u,u,u,y,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,
+ttt-osm-w485667024,池上三號運動公園,池上鄉,23.121286,121.2110222,,,,,,open,y,y,u,y,y,u,u,y,y,u,u,u,u,u,u,y,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,y,u,u,
+ttt-osm-w916118471,南京路公園,臺東市,22.7581204,121.1480649,,,,,,open,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,y,y,u,u,u,u,u,u,y,u,u,u,u,
