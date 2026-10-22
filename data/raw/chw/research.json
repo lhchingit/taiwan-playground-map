@@ -1,0 +1,284 @@
+{
+ "verified_at": "2026-10-22",
+ "sources": {
+  "chcg-park-2": {
+   "label": "政府網站：彰化縣政府 樂遊彰化公園 華陽公園（城市暨觀光發展處；頁面未標日期）",
+   "url": "https://park.chcg.gov.tw/park/2",
+   "kind": "article"
+  },
+  "chcg-park-5": {
+   "label": "政府網站：彰化縣政府 樂遊彰化公園 崙平公園（城市暨觀光發展處；頁面未標日期）",
+   "url": "https://park.chcg.gov.tw/park/5",
+   "kind": "article"
+  },
+  "chcg-park-6": {
+   "label": "政府網站：彰化縣政府 樂遊彰化公園 延和公園（城市暨觀光發展處；頁面未標日期）",
+   "url": "https://park.chcg.gov.tw/park/6",
+   "kind": "article"
+  },
+  "chcg-park-7": {
+   "label": "政府網站：彰化縣政府 樂遊彰化公園 延平公園（城市暨觀光發展處；頁面未標日期）",
+   "url": "https://park.chcg.gov.tw/park/7",
+   "kind": "article"
+  },
+  "chcg-park-65": {
+   "label": "政府網站：彰化縣政府 樂遊彰化公園 線西公園（城市暨觀光發展處；頁面未標日期）",
+   "url": "https://park.chcg.gov.tw/park/65",
+   "kind": "article"
+  },
+  "chcg-park-80": {
+   "label": "政府網站：彰化縣政府 樂遊彰化公園 中央公園（溪湖鎮）（城市暨觀光發展處；頁面未標日期）",
+   "url": "https://park.chcg.gov.tw/park/80",
+   "kind": "article"
+  },
+  "cmeyy-2024-yanping": {
+   "label": "網路文章：可人之家 2024-03 彰化市延平公園共融式遊戲場",
+   "url": "https://cmeyy.tw/blog/post/20240217",
+   "kind": "article"
+  },
+  "nini-2024-yanping": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2024-03 彰化延平公園",
+   "url": "https://niniandblue.com/blog/post/yanping-park",
+   "kind": "article"
+  },
+  "nini-2023-xihu": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2023-09 溪湖中央公園",
+   "url": "https://niniandblue.com/blog/post/xihu-park",
+   "kind": "article"
+  },
+  "fupo-2023-xihu": {
+   "label": "網路文章：小腹婆大世界 2023-02 溪湖中央公園",
+   "url": "https://fupo.tw/blog/post/xihu-central-park",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "chw-osm-w257603075": {
+   "slide": [
+    "y",
+    "cmeyy-2024-yanping",
+    "小土坡上有 3 道磨石子溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "cmeyy-2024-yanping",
+    "有好幾種盪鞦韆"
+   ],
+   "zipline": [
+    "y",
+    "nini-2024-yanping",
+    "有滑索，只有一道，要排隊"
+   ],
+   "sandpit": [
+    "y",
+    "cmeyy-2024-yanping",
+    "有玩沙池，裡面有小挖土機，上方設了遮陽"
+   ],
+   "rope_net": [
+    "y",
+    "cmeyy-2024-yanping",
+    "有一座大型攀爬網"
+   ],
+   "climbing_wall": [
+    "y",
+    "cmeyy-2024-yanping",
+    "有小型攀岩"
+   ],
+   "balance": [
+    "y",
+    "cmeyy-2024-yanping",
+    "有平衡木與踏樁"
+   ],
+   "tunnel": [
+    "y",
+    "nini-2024-yanping",
+    "溜滑梯旁有涵管通道可以鑽"
+   ],
+   "trampoline": [
+    "y",
+    "cmeyy-2024-yanping",
+    "有方型彈跳床"
+   ],
+   "open_lawn": [
+    "y",
+    "cmeyy-2024-yanping",
+    "有一大片草皮"
+   ],
+   "toilet": [
+    "y",
+    "chcg-park-7",
+    "縣府網站列有廁所 1 間、無障礙廁所 1 間；文章也寫停車場上方有廁所"
+   ],
+   "handwash": [
+    "y",
+    "cmeyy-2024-yanping",
+    "旁邊有水龍頭可以洗手"
+   ],
+   "inclusive": [
+    "y",
+    "nini-2024-yanping",
+    "有多種共融式盪鞦韆"
+   ]
+  },
+  "chw-osm-w1289052588": {
+   "slide": [
+    "y",
+    "nini-2023-xihu",
+    "葡藤堡遊戲場兩端都有溜滑梯，另有磨石子溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "fupo-2023-xihu",
+    "有一整排鞦韆，共 11 座"
+   ],
+   "sandpit": [
+    "y",
+    "nini-2023-xihu",
+    "綠丘原野樂園中間有玩沙池"
+   ],
+   "rope_net": [
+    "y",
+    "fupo-2023-xihu",
+    "有很大的攀爬網"
+   ],
+   "climbing_wall": [
+    "y",
+    "nini-2023-xihu",
+    "有攀岩牆"
+   ],
+   "climbing": [
+    "y",
+    "chcg-park-80",
+    "縣府網站列有攀爬式設施"
+   ],
+   "tunnel": [
+    "y",
+    "fupo-2023-xihu",
+    "有水管可以鑽進去玩躲貓貓"
+   ],
+   "trampoline": [
+    "y",
+    "chcg-park-80",
+    "縣府網站列有彈跳床"
+   ],
+   "inclusive": [
+    "y",
+    "chcg-park-80",
+    "縣府網站列有共融攀爬網、共融搖晃設施"
+   ],
+   "ball_court": [
+    "y",
+    "chcg-park-80",
+    "縣府網站列有籃球場"
+   ],
+   "toilet": [
+    "y",
+    "chcg-park-80",
+    "縣府網站列有廁所 17 間、無障礙廁所與親子廁所各 1 間"
+   ]
+  },
+  "chw-osm-n3202580283": {
+   "sandpit": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有沙坑"
+   ],
+   "swing": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有鞦韆"
+   ],
+   "slide": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有溜滑梯"
+   ],
+   "spinner": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有轉轉盤"
+   ],
+   "climbing": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有攀爬架"
+   ],
+   "zipline": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有溜索"
+   ],
+   "trampoline": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有彈跳床"
+   ],
+   "nest_swing": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有鳥巢鞦韆（列在共融遊戲設施）"
+   ],
+   "inclusive": [
+    "y",
+    "chcg-park-2",
+    "縣府網站把鳥巢鞦韆列為共融遊戲設施"
+   ],
+   "toilet": [
+    "y",
+    "chcg-park-2",
+    "縣府網站列有廁所 5 間、無障礙廁所 1 間"
+   ]
+  },
+  "chw-osm-n5270126097": {
+   "swing": [
+    "y",
+    "chcg-park-65",
+    "縣府網站列有鞦韆與共融鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "chcg-park-65",
+    "縣府網站列有攀爬式設施"
+   ],
+   "inclusive": [
+    "y",
+    "chcg-park-65",
+    "縣府網站列有共融鞦韆"
+   ],
+   "ball_court": [
+    "y",
+    "chcg-park-65",
+    "縣府網站列有籃球場"
+   ],
+   "toilet": [
+    "y",
+    "chcg-park-65",
+    "縣府網站列有廁所 1 間、無障礙廁所 1 間"
+   ]
+  },
+  "chw-osm-n5245141101": {
+   "ball_court": [
+    "y",
+    "chcg-park-5",
+    "縣府網站列有籃球場 1 面"
+   ],
+   "toilet": [
+    "y",
+    "chcg-park-5",
+    "縣府網站列有廁所 1 間"
+   ]
+  },
+  "chw-osm-n2088290743": {
+   "ball_court": [
+    "y",
+    "chcg-park-6",
+    "縣府網站列有籃球場 3 面"
+   ],
+   "toilet": [
+    "y",
+    "chcg-park-6",
+    "縣府網站列有廁所 1 間"
+   ]
+  }
+ }
+}
