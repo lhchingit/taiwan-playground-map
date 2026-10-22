@@ -89,28 +89,32 @@ test('出發點方式二選一：地圖點選時選「在地圖上點選」，�
   const map = page.getByRole('region', { name: '地圖' });
   await expect(page.getByText('地圖載入中…')).toHaveCount(0, { timeout: 15_000 });
   const box = (await map.boundingBox())!;
-  // 找一個沒有被標記蓋住的位置點
+  // 找一個點下去真的是地圖本身的位置：地圖剛載入時還在移動，標記會移過來；
+  // 點到標記會打開場地詳情（手機上面板從下方蓋住地圖），所以每次點之前都重新確認
   await expect(async () => {
+    let tapped = false;
     for (const [dx, dy] of [
       [40, -40],
       [-40, 40],
       [80, 80],
       [-80, -80],
       [120, 0],
+      [0, -120],
     ] as const) {
       const x = box.x + box.width / 2 + dx;
       const y = box.y + box.height / 2 + dy;
-      const covered = await page.evaluate(
-        ([px, py]) => !!document.elementFromPoint(px!, py!)?.closest('.maplibregl-marker'),
+      const onMap = await page.evaluate(
+        ([px, py]) => !!document.elementFromPoint(px!, py!)?.matches('canvas.maplibregl-canvas'),
         [x, y],
       );
-      if (!covered) {
-        // 手機（觸控模擬）用點觸
-        if (isMobile) await page.touchscreen.tap(x, y);
-        else await page.mouse.click(x, y);
-        break;
-      }
+      if (!onMap) continue;
+      // 手機（觸控模擬）用點觸
+      if (isMobile) await page.touchscreen.tap(x, y);
+      else await page.mouse.click(x, y);
+      tapped = true;
+      break;
     }
+    expect(tapped).toBe(true);
     await expect(page.getByTestId('origin-name')).toHaveText(/^地圖上的點/, { timeout: 1000 });
   }).toPass({ timeout: 10_000 });
   await expect(pick).toHaveAttribute('aria-pressed', 'true');
