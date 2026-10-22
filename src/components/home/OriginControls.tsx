@@ -1,13 +1,15 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useState, type FormEvent, type ReactNode } from 'react';
 import { TRAVEL_MODES, type TravelMode } from '@/lib/filter';
 import { searchAddress, type GeoResult } from '@/lib/geocode';
-import type { NamedOrigin } from '@/lib/origin';
+import type { NamedOrigin, OriginKind } from '@/lib/origin';
 
 interface Props {
   origin: NamedOrigin;
   onOrigin: (o: NamedOrigin) => void;
+  /** 出發點從哪來：定位或地圖點選時對應的按鈕呈現選取 */
+  originKind: OriginKind;
   locating: boolean;
   onLocate: () => void;
   message: string | null;
@@ -15,6 +17,8 @@ interface Props {
   onPickingChange: (on: boolean) => void;
   mode: TravelMode;
   onMode: (m: TravelMode) => void;
+  /** 放在「使用目前位置」同一排最後面的按鈕（例如回報新場地） */
+  actions?: ReactNode;
 }
 
 type Search =
@@ -44,18 +48,25 @@ export function OriginControls(props: Props) {
       <div className="olabel" aria-live="polite">
         出發點：<b data-testid="origin-name">{props.message ?? props.origin.name}</b>
       </div>
-      <div className="orow">
-        <button className="btn primary" type="button" onClick={props.onLocate}>
-          {props.locating ? '定位中…' : '使用目前位置'}
-        </button>
-        <button
-          className={`btn${props.picking ? ' on' : ''}`}
-          type="button"
-          aria-pressed={props.picking}
-          onClick={() => props.onPickingChange(!props.picking)}
-        >
-          在地圖上點選
-        </button>
+      <div className="orow orow-fill">
+        {/* 出發點二選一（同交通方式）；地址搜尋或範例出發點時兩個都不選 */}
+        <div className="seg seg-origin" role="group" aria-label="出發點方式">
+          <button
+            type="button"
+            aria-pressed={props.locating || (props.originKind === 'here' && !props.picking)}
+            onClick={props.onLocate}
+          >
+            {props.locating ? '定位中…' : '使用目前位置'}
+          </button>
+          <button
+            type="button"
+            aria-pressed={props.picking || (props.originKind === 'map' && !props.locating)}
+            onClick={() => props.onPickingChange(!props.picking)}
+          >
+            在地圖上點選
+          </button>
+        </div>
+        {props.actions}
       </div>
       <form className="orow" role="search" onSubmit={onSubmit}>
         <input

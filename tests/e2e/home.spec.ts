@@ -62,6 +62,88 @@ async function expectHeadNotClipped(page: Page) {
 
 test.beforeEach(async ({ page }) => setup(page));
 
+test('「回報新場地」跟出發點方式在同一排，整排跟交通方式對齊', async ({ page }) => {
+  await page.goto('/hsinchu-city');
+  const seg = (await head(page).getByRole('group', { name: '出發點方式' }).boundingBox())!;
+  const report = (await head(page).getByRole('button', { name: '回報新場地' }).boundingBox())!;
+  const modes = (await head(page).getByRole('group', { name: '交通方式' }).boundingBox())!;
+  expect(Math.abs(report.y + report.height / 2 - (seg.y + seg.height / 2))).toBeLessThan(2);
+  expect(Math.abs(seg.x - modes.x)).toBeLessThan(2);
+  expect(Math.abs(report.x + report.width - (modes.x + modes.width))).toBeLessThan(2);
+});
+
+test('出發點方式二選一：地圖點選時選「在地圖上點選」，地址搜尋時兩個都不選', async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto('/hsinchu-city');
+  const here = head(page).getByRole('button', { name: '使用目前位置' });
+  const pick = head(page).getByRole('button', { name: '在地圖上點選' });
+  // 沒有授予定位權限：還是範例出發點，兩個都不選
+  await expect(here).toHaveAttribute('aria-pressed', 'false');
+  await expect(pick).toHaveAttribute('aria-pressed', 'false');
+
+  await pick.click();
+  await expect(pick).toHaveAttribute('aria-pressed', 'true');
+  await expect(here).toHaveAttribute('aria-pressed', 'false');
+  const map = page.getByRole('region', { name: '地圖' });
+  await expect(page.getByText('地圖載入中…')).toHaveCount(0, { timeout: 15_000 });
+  const box = (await map.boundingBox())!;
+  // 找一個沒有被標記蓋住的位置點
+  await expect(async () => {
+    for (const [dx, dy] of [
+      [40, -40],
+      [-40, 40],
+      [80, 80],
+      [-80, -80],
+      [120, 0],
+    ] as const) {
+      const x = box.x + box.width / 2 + dx;
+      const y = box.y + box.height / 2 + dy;
+      const covered = await page.evaluate(
+        ([px, py]) => !!document.elementFromPoint(px!, py!)?.closest('.maplibregl-marker'),
+        [x, y],
+      );
+      if (!covered) {
+        // 手機（觸控模擬）用點觸
+        if (isMobile) await page.touchscreen.tap(x, y);
+        else await page.mouse.click(x, y);
+        break;
+      }
+    }
+    await expect(page.getByTestId('origin-name')).toHaveText(/^地圖上的點/, { timeout: 1000 });
+  }).toPass({ timeout: 10_000 });
+  await expect(pick).toHaveAttribute('aria-pressed', 'true');
+  await expect(here).toHaveAttribute('aria-pressed', 'false');
+
+  await page.getByLabel('地址或地標').fill('縣市交界');
+  await page.getByRole('button', { name: '搜尋' }).click();
+  await page.getByRole('button', { name: /縣市交界測試點/ }).click();
+  await expect(page.getByTestId('origin-name')).toHaveText('縣市交界測試點');
+  await expect(here).toHaveAttribute('aria-pressed', 'false');
+  await expect(pick).toHaveAttribute('aria-pressed', 'false');
+});
+
+test('出發點方式：定位成功時選「使用目前位置」', async ({ browser }) => {
+  const ctx = await browser.newContext({
+    permissions: ['geolocation'],
+    geolocation: { latitude: 24.8036, longitude: 120.9686 },
+  });
+  const page = await ctx.newPage();
+  await setup(page);
+  await page.goto('/hsinchu-city');
+  await expect(page.getByTestId('origin-name')).toHaveText('目前位置');
+  await expect(head(page).getByRole('button', { name: '使用目前位置' })).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  );
+  await expect(head(page).getByRole('button', { name: '在地圖上點選' })).toHaveAttribute(
+    'aria-pressed',
+    'false',
+  );
+  await ctx.close();
+});
+
 test('OpenFreeMap 失敗時改用 OSM 官方圖磚；版權標示連到 osm.org/copyright', async ({ browser }) => {
   // 用新的 context，不套用上面攔截全部圖磚的設定
   const ctx = await browser.newContext();

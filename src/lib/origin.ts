@@ -6,6 +6,9 @@ export interface NamedOrigin extends Origin {
   name: string;
 }
 
+/** 出發點從哪來：範例、定位、地圖上點選、地址搜尋（出發點按鈕的選取狀態用） */
+export type OriginKind = 'example' | 'here' | 'map' | 'search';
+
 /** 定位失敗或還沒定位時的範例出發點，名稱標示「範例」 */
 const EXAMPLES: Readonly<Record<string, NamedOrigin>> = {
   hsc: { lat: 24.80163, lng: 120.97163, name: '新竹火車站（範例）' },
