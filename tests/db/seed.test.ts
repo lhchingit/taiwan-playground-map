@@ -401,17 +401,24 @@ describe('pnpm seed', () => {
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'pif'`;
     expect(c?.launched_at).toBeNull();
   });
-  it('雲林縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM、屬性全是未知', async () => {
+  it('雲林縣（OpenStreetMap，decisions D20）：未上線、座標來自 OSM；屬性只有人工查證的項目，每一項都有來源', async () => {
     const yun = allSeeds.find((s) => s.places[0]?.city === 'yun');
     expect(yun?.places.length).toBeGreaterThan(0);
+    // data/raw/yun/research.json：新聞與網路文章明確寫到的遊具與設施
+    const entries = yun!.places.flatMap((p) => Object.values(p.attrs).filter((a) => a.v !== 'u'));
+    expect(entries.length).toBeGreaterThan(0);
     const [r] = await sql`
       SELECT count(*)::int AS n,
              count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
       FROM places WHERE city = 'yun'`;
     expect(r).toEqual({ n: yun!.places.length, not_osm: 0 });
-    const [a] =
-      await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'yun-%'`;
-    expect(a?.n).toBe(0);
+    const [a] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE pa.verified_at IS NULL)::int AS no_date,
+             count(*) FILTER (WHERE s.kind NOT IN ('news', 'article'))::int AS other_kind
+      FROM place_attributes pa JOIN sources s ON s.id = pa.source_id
+      WHERE pa.place_id LIKE 'yun-%'`;
+    expect(a).toEqual({ n: entries.length, no_date: 0, other_kind: 0 });
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'yun'`;
     expect(c?.launched_at).toBeNull();
   });

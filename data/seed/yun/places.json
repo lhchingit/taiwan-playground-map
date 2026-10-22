@@ -7,6 +7,16 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "little15-2022-yuzi": {
+   "label": "網路文章：啾啾老闆！來一份雞屁股！ 2022-05 斗六民生公園（柚子公園）",
+   "url": "https://little15.pixnet.net/blog/posts/3050055068",
+   "kind": "article"
+  },
+  "udn-2026-mailiao": {
+   "label": "新聞：聯合報 2026-01 麥寮城鄉運動公園改善工程動土",
+   "url": "https://udn.com/news/story/7326/9288072",
+   "kind": "news"
   }
  },
  "labels": {
@@ -391,19 +401,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "udn-2026-mailiao",
+     "note": "鄉公所 2014 年後增設綜合溜滑梯區",
+     "at": "2026-10-22"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "udn-2026-mailiao",
+     "note": "鄉公所 2014 年後增設共融式擺盪鞦韆",
+     "at": "2026-10-22"
     },
     "baby_swing": {
      "v": "u",
@@ -616,10 +626,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "udn-2026-mailiao",
+     "note": "有共融式擺盪鞦韆",
+     "at": "2026-10-22"
     }
    },
    "parking": {
@@ -656,19 +666,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "little15-2022-yuzi",
+     "note": "有特色溜滑梯、雙道溜滑梯和水管溜滑梯（2022 年作者去時特色溜滑梯用三角錐圍起來）",
+     "at": "2026-10-22"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "little15-2022-yuzi",
+     "note": "有鞦韆",
+     "at": "2026-10-22"
     },
     "baby_swing": {
      "v": "u",
@@ -689,10 +699,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "little15-2022-yuzi",
+     "note": "有蹺蹺板",
+     "at": "2026-10-22"
     },
     "spring_rider": {
      "v": "u",
@@ -731,10 +741,10 @@
      "at": null
     },
     "suspension_bridge": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "little15-2022-yuzi",
+     "note": "溜滑梯組上有吊橋",
+     "at": "2026-10-22"
     },
     "tunnel": {
      "v": "u",
@@ -803,10 +813,10 @@
      "at": null
     },
     "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "little15-2022-yuzi",
+     "note": "有單槓",
+     "at": "2026-10-22"
     },
     "music": {
      "v": "u",
@@ -827,10 +837,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "little15-2022-yuzi",
+     "note": "有廁所",
+     "at": "2026-10-22"
     },
     "handwash": {
      "v": "u",
