@@ -24,7 +24,7 @@ import {
   type Filters,
   type Origin,
 } from '@/lib/filter';
-import { exampleOrigin, type NamedOrigin } from '@/lib/origin';
+import { exampleOrigin, type NamedOrigin, type OriginKind } from '@/lib/origin';
 import type { PlaceDetail } from '@/lib/place-detail';
 import type { AttributeCatalog, CityPlace } from '@/lib/places';
 import { groupKeyMap } from '@/lib/play-groups';
@@ -84,6 +84,7 @@ export function HomeApp({
   const groupKeys = useMemo(() => groupKeyMap(catalog.playGroups), [catalog]);
   const [filters, setFilters] = useState<Filters>(() => queryToFilters(query, known));
   const [origin, setOriginState] = useState<NamedOrigin>(() => exampleOrigin(city));
+  const [originKind, setOriginKind] = useState<OriginKind>('example');
   const [fitSeq, setFitSeq] = useState(0);
   const [locating, setLocating] = useState(false);
   const [originMsg, setOriginMsg] = useState<string | null>(null);
@@ -135,6 +136,7 @@ export function HomeApp({
         (pos) => {
           setLocating(false);
           setOrigin({ lat: pos.coords.latitude, lng: pos.coords.longitude, name: '目前位置' });
+          setOriginKind('here');
         },
         () => {
           setLocating(false);
@@ -284,7 +286,11 @@ export function HomeApp({
           </p>
           <OriginControls
             origin={origin}
-            onOrigin={setOrigin}
+            onOrigin={(o) => {
+              setOrigin(o);
+              setOriginKind('search');
+            }}
+            originKind={originKind}
             locating={locating}
             onLocate={locate}
             message={originMsg}
@@ -381,6 +387,7 @@ export function HomeApp({
               ...o,
               name: `地圖上的點（${o.lat.toFixed(4)}, ${o.lng.toFixed(4)}）`,
             });
+            setOriginKind('map');
           }}
           fitKey={String(fitSeq)}
           focus={focus}

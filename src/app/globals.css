@@ -215,6 +215,20 @@ h1 {
   flex-wrap: wrap;
   gap: 6px;
 }
+/* 出發點那一排：二選一切換與回報按鈕依文字長度等比例撐滿，跟下面的搜尋列、交通方式同寬 */
+.orow-fill > .btn {
+  flex: 1 1 auto;
+}
+.orow-fill > .seg-origin {
+  flex: 2 1 auto;
+}
+/* 跟一般膠囊按鈕一樣大，手指好點（交通方式是較小的字） */
+.seg.seg-origin button {
+  padding: 7px 12px;
+  font-size: inherit;
+  white-space: nowrap;
+  min-height: 36px;
+}
 .orow input {
   flex: 1;
   min-width: 0;
