@@ -292,22 +292,26 @@ export function HomeApp({
             onPickingChange={setPicking}
             mode={mode}
             onMode={setMode}
+            actions={
+              <button className="btn" type="button" onClick={() => void startNewPlace()}>
+                回報新場地
+              </button>
+            }
           />
-          <div className="newplace-entry">
-            <button className="btn" type="button" onClick={() => void startNewPlace()}>
-              回報新場地
-            </button>
-            {namingCount > 0 && (
-              <Link className="btn" href={`/${city.slug}/naming`}>
-                幫忙命名（{namingCount} 處）
-              </Link>
-            )}
-            {newPlaceMsg && (
-              <span className="note err" role="status">
-                {newPlaceMsg}
-              </span>
-            )}
-          </div>
+          {(namingCount > 0 || newPlaceMsg) && (
+            <div className="newplace-entry">
+              {namingCount > 0 && (
+                <Link className="btn" href={`/${city.slug}/naming`}>
+                  幫忙命名（{namingCount} 處）
+                </Link>
+              )}
+              {newPlaceMsg && (
+                <span className="note err" role="status">
+                  {newPlaceMsg}
+                </span>
+              )}
+            </div>
+          )}
         </header>
         {newPlace && (
           <NewPlacePanel

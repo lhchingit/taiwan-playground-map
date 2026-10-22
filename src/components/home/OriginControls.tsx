@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useState, type FormEvent, type ReactNode } from 'react';
 import { TRAVEL_MODES, type TravelMode } from '@/lib/filter';
 import { searchAddress, type GeoResult } from '@/lib/geocode';
 import type { NamedOrigin } from '@/lib/origin';
@@ -15,6 +15,8 @@ interface Props {
   onPickingChange: (on: boolean) => void;
   mode: TravelMode;
   onMode: (m: TravelMode) => void;
+  /** 放在「使用目前位置」同一排最後面的按鈕（例如回報新場地） */
+  actions?: ReactNode;
 }
 
 type Search =
@@ -56,6 +58,7 @@ export function OriginControls(props: Props) {
         >
           在地圖上點選
         </button>
+        {props.actions}
       </div>
       <form className="orow" role="search" onSubmit={onSubmit}>
         <input

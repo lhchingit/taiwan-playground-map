@@ -62,6 +62,13 @@ async function expectHeadNotClipped(page: Page) {
 
 test.beforeEach(async ({ page }) => setup(page));
 
+test('「回報新場地」跟「使用目前位置」在同一排', async ({ page }) => {
+  await page.goto('/hsinchu-city');
+  const locate = (await head(page).getByRole('button', { name: '使用目前位置' }).boundingBox())!;
+  const report = (await head(page).getByRole('button', { name: '回報新場地' }).boundingBox())!;
+  expect(Math.abs(report.y - locate.y)).toBeLessThan(2);
+});
+
 test('OpenFreeMap 失敗時改用 OSM 官方圖磚；版權標示連到 osm.org/copyright', async ({ browser }) => {
   // 用新的 context，不套用上面攔截全部圖磚的設定
   const ctx = await browser.newContext();

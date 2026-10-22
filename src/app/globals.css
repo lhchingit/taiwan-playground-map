@@ -212,6 +212,7 @@ h1 {
 }
 .orow {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
 }
 .orow input {
