@@ -1,6 +1,6 @@
 ﻿id,name,district,lat,lng,size,stay,age_min,age_max,fee,status,slide,swing,baby_swing,nest_swing,zipline,seesaw,spring_rider,spinner,climbing,climbing_wall,rope_net,balance,suspension_bridge,tunnel,tree_house,sandpit,sand_table,water_play,water_pump,trampoline,pushbike,open_lawn,ball_court,skatepark,bars,music,chalk_wall,toddler_zone,toilet,handwash,footwash,shade,transit,stroller,nursing,lighting,food,inclusive,parking_type,parking_fee,parking_spaces
-cyi-osm-n6281152267,文化公園,東區,23.4742319,120.4510165,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-cyi-osm-n6281213373,番仔溝公園,西區,23.4751706,120.4346782,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-cyi-osm-w296203299,嘉義公園,東區,23.4838796,120.4635808,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-cyi-osm-w552332394,中正公園,西區,23.481321,120.4473163,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-cyi-osm-w557397026,文昌公園,東區,23.4786567,120.4561232,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+cyi-osm-n6281152267,文化公園,東區,23.4742319,120.4510165,,,,,,open,y,y,u,u,u,u,y,y,y,u,u,y,u,u,u,y,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,y,u,u,
+cyi-osm-n6281213373,番仔溝公園,西區,23.4751706,120.4346782,,,,,,open,y,u,u,u,u,u,u,u,y,u,u,y,u,u,u,y,u,u,u,u,u,u,u,u,y,u,u,y,y,y,y,y,u,u,u,u,u,u,u,u,
+cyi-osm-w296203299,嘉義公園,東區,23.4838796,120.4635808,,,,,,open,y,u,u,y,u,u,u,y,u,y,y,u,y,u,y,y,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,
+cyi-osm-w552332394,中正公園,西區,23.481321,120.4473163,,,,,,open,u,u,u,u,u,y,u,y,y,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,y,u,u,
+cyi-osm-w557397026,文昌公園,東區,23.4786567,120.4561232,,,,,,open,y,u,u,u,u,u,u,u,y,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,

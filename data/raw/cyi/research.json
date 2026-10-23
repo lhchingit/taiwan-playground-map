@@ -1,0 +1,252 @@
+{
+ "verified_at": "2026-10-23",
+ "sources": {
+  "udn-2026-culture": {
+   "label": "新聞：聯合報 2026-01 嘉市文化公園 1280 萬整修（新增遮蔭、鞦韆、搖搖馬）",
+   "url": "https://udn.com/news/story/7326/9279889",
+   "kind": "news"
+  },
+  "youyou-2026-culture": {
+   "label": "網路文章：游游的親子旅遊 嘉義文化公園 2026 新整修（2026-10 更新，內容為整修後）",
+   "url": "https://youyoutrip88.com/culture-park/",
+   "kind": "article"
+  },
+  "nownews-2018-culture": {
+   "label": "新聞：NOWnews 2018-10 嘉義市首座共融式遊戲場啟用（文化公園）",
+   "url": "https://www.nownews.com/news/3011567",
+   "kind": "news"
+  },
+  "yam-2022-fanzaigou": {
+   "label": "網路文章：yam 蕃薯藤旅遊（小資爸親子旅行團）2022-06 番仔溝公園機器人特色遊戲場",
+   "url": "https://travel.yam.com/article/128095",
+   "kind": "article"
+  },
+  "abic-chiayipark": {
+   "label": "網路文章：愛貝客親子遊 嘉義公園樹屋尋寶遊戲場（頁面未標日期，內容為 2022-07 換新後）",
+   "url": "https://www.abic.com.tw/place/view/id/1272",
+   "kind": "article"
+  },
+  "yoyo-2022-chiayipark": {
+   "label": "網路文章：1＋1＝3 玩學樂生活（小Yo之家）2022-07 嘉義公園新樹屋遊戲場",
+   "url": "https://yoyoman822.pixnet.net/blog/posts/5064781257",
+   "kind": "article"
+  },
+  "lavie-2022-zhongzheng": {
+   "label": "網路文章：La Vie 2022-04 嘉義中正公園百科全書遊戲場",
+   "url": "https://www.wowlavie.com/article/ae2200546",
+   "kind": "article"
+  },
+  "ltn-2021-zhongzheng": {
+   "label": "新聞：自由時報 2021-08 嘉市中正公園改造為遊戲百科式共融遊戲場",
+   "url": "https://news.ltn.com.tw/news/life/breakingnews/3646499",
+   "kind": "news"
+  },
+  "snoopy-2021-wenchang": {
+   "label": "網路文章：史努比遊樂園 2021-07 嘉義文昌公園木造大船溜滑梯遊戲場",
+   "url": "https://snoopyblog.com/blog/post/wenchangpark-chiayi",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "cyi-osm-n6281152267": {
+   "slide": [
+    "y",
+    "udn-2026-culture",
+    "有蛙蹼造型溜滑梯；整修後有兩層樓高的溜滑梯"
+   ],
+   "spinner": [
+    "y",
+    "youyou-2026-culture",
+    "有單人座與五人座旋轉椅；整修前的報導也寫有大轉盤"
+   ],
+   "swing": [
+    "y",
+    "udn-2026-culture",
+    "2025–2026 年整修時增設鞦韆（另一篇文章寫明 2026 年整修完成）"
+   ],
+   "spring_rider": [
+    "y",
+    "udn-2026-culture",
+    "2025–2026 年整修時增設搖搖馬（另一篇文章寫明 2026 年整修完成）"
+   ],
+   "sandpit": [
+    "y",
+    "youyou-2026-culture",
+    "有沙坑；報導另提到給學齡前幼兒、有圍欄的沙坑"
+   ],
+   "water_play": [
+    "y",
+    "youyou-2026-culture",
+    "有戲水池，下午到晚上分時段噴水"
+   ],
+   "climbing": [
+    "y",
+    "youyou-2026-culture",
+    "整修後有攀爬區與多種攀爬設施"
+   ],
+   "balance": [
+    "y",
+    "youyou-2026-culture",
+    "整修後有多種平衡設施"
+   ],
+   "shade": [
+    "y",
+    "youyou-2026-culture",
+    "有遮陽棚（2025–2026 年整修時增設遮蔭）"
+   ],
+   "inclusive": [
+    "y",
+    "nownews-2018-culture",
+    "嘉義市第一座共融式遊戲場，滑梯有給輪椅使用者的長坡道；2026 年整修後仍是共融遊戲場"
+   ]
+  },
+  "cyi-osm-n6281213373": {
+   "slide": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有機器人造型的攀爬溜滑梯、火車溜滑梯組和旋轉溜滑梯"
+   ],
+   "climbing": [
+    "y",
+    "yam-2022-fanzaigou",
+    "機器人遊具可以攀爬，也有彎曲的爬梯"
+   ],
+   "balance": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有平衡木"
+   ],
+   "bars": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有攀爬單槓（MONKEY BAR）和單槓組"
+   ],
+   "sandpit": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有用柵欄圍起來的沙坑"
+   ],
+   "toddler_zone": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有適合小小孩的遊具組"
+   ],
+   "handwash": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有洗手沖腳的地方"
+   ],
+   "footwash": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有洗手沖腳的地方"
+   ],
+   "toilet": [
+    "y",
+    "yam-2022-fanzaigou",
+    "有廁所，在鐵道旁邊"
+   ],
+   "shade": [
+    "y",
+    "yam-2022-fanzaigou",
+    "遊戲場在高架橋下，玩遊具不會曬到太陽"
+   ]
+  },
+  "cyi-osm-w296203299": {
+   "tree_house": [
+    "y",
+    "abic-chiayipark",
+    "樹屋尋寶遊戲場有 7 間相連的樹屋（2022-07 換新）"
+   ],
+   "slide": [
+    "y",
+    "abic-chiayipark",
+    "樹屋旁有磨石子溜滑梯，民權路入口的遊戲場有飛碟造型溜滑梯"
+   ],
+   "rope_net": [
+    "y",
+    "abic-chiayipark",
+    "樹屋之間有攀爬網"
+   ],
+   "climbing_wall": [
+    "y",
+    "abic-chiayipark",
+    "遊戲場旁有攀岩牆"
+   ],
+   "suspension_bridge": [
+    "y",
+    "abic-chiayipark",
+    "樹屋之間用繩橋相連"
+   ],
+   "nest_swing": [
+    "y",
+    "yoyo-2022-chiayipark",
+    "有鳥巢鞦韆"
+   ],
+   "spinner": [
+    "y",
+    "abic-chiayipark",
+    "有多人旋轉盤"
+   ],
+   "sandpit": [
+    "y",
+    "abic-chiayipark",
+    "有一大一小兩座細礫石沙坑"
+   ],
+   "toilet": [
+    "y",
+    "yoyo-2022-chiayipark",
+    "樹屋遊戲場旁邊就有洗手間"
+   ]
+  },
+  "cyi-osm-w552332394": {
+   "climbing": [
+    "y",
+    "lavie-2022-zhongzheng",
+    "有攀爬架（2022 年改造後）"
+   ],
+   "spinner": [
+    "y",
+    "lavie-2022-zhongzheng",
+    "有旋轉遊具"
+   ],
+   "balance": [
+    "y",
+    "lavie-2022-zhongzheng",
+    "有獨木橋"
+   ],
+   "seesaw": [
+    "y",
+    "lavie-2022-zhongzheng",
+    "有蹺蹺板"
+   ],
+   "music": [
+    "y",
+    "lavie-2022-zhongzheng",
+    "有音樂遊戲區：鐘、音樂球、鐵琴、雙擊鼓"
+   ],
+   "inclusive": [
+    "y",
+    "ltn-2021-zhongzheng",
+    "改造成共融遊戲場，全區採通用設計；迷宮也讓坐輪椅的孩子能進入"
+   ]
+  },
+  "cyi-osm-w557397026": {
+   "slide": [
+    "y",
+    "snoopy-2021-wenchang",
+    "木造大船上有曲線、管狀、直線三座溜滑梯，旁邊另有一座金屬溜滑梯"
+   ],
+   "climbing": [
+    "y",
+    "snoopy-2021-wenchang",
+    "可以攀繩、爬輪胎、爬大輪子造型的斜坡"
+   ],
+   "tunnel": [
+    "y",
+    "snoopy-2021-wenchang",
+    "船輪做成的小隧道，甲板上還有鑽籠"
+   ]
+  }
+ }
+}
