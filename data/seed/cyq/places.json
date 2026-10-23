@@ -7,6 +7,36 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "abic-xingang": {
+   "label": "網路文章：愛貝客親子遊 新港鄉公園蜻蜓造型特色遊戲場（頁面未標日期，2024-01 新增遊具）",
+   "url": "https://www.abic.com.tw/place/view/id/12142",
+   "kind": "article"
+  },
+  "bao-2026-zhuqi": {
+   "label": "網路文章：來飽寶家ba 2026-07 竹崎親水公園兒童戲水區與鯨魚遊具",
+   "url": "https://baofamily.tw/zhuqi-park/",
+   "kind": "article"
+  },
+  "snoopy-2022-zhuqi": {
+   "label": "網路文章：史努比遊樂園 2022-08 竹崎親水公園鯨魚兒童遊戲場",
+   "url": "https://snoopyblog.com/blog/post/takezakipark",
+   "kind": "article"
+  },
+  "abic-puzi": {
+   "label": "網路文章：愛貝客親子遊 朴子藝術公園（頁面未標日期，內容為 2023-06 整建後）",
+   "url": "https://www.abic.com.tw/place/view/id/14949",
+   "kind": "article"
+  },
+  "umei-2024-puzi": {
+   "label": "網路文章：烏梅 2024-12 嘉義朴子藝術公園兒童遊戲區",
+   "url": "https://xingyetsai.com/?p=7418",
+   "kind": "article"
+  },
+  "ydn-2024-puzi": {
+   "label": "新聞：青年日報 2024-01 嘉義朴子藝術公園軍事營區脫胎換骨（Yahoo 新聞轉載）",
+   "url": "https://tw.news.yahoo.com/%E5%98%89%E7%BE%A9%E6%9C%B4%E5%AD%90%E8%97%9D%E8%A1%93%E5%85%AC%E5%9C%92-%E8%BB%8D%E4%BA%8B%E7%87%9F%E5%8D%80%E8%84%AB%E8%83%8E%E6%8F%9B%E9%AA%A8-160000886.html",
+   "kind": "news"
   }
  },
  "labels": {
@@ -126,19 +156,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "2024 年新增寬滑道、彎滑道兩座磨石子溜滑梯；原本另有大船造型溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "有盪鞦韆，2024 年再新增雙人鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -159,10 +189,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "兒童遊戲場旁有蹺蹺板",
+     "at": "2026-10-23"
     },
     "spring_rider": {
      "v": "u",
@@ -177,16 +207,16 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "2024 年新增地景攀爬遊具",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "2024 年新增拉著繩索往上爬的攀爬牆，可以爬到溜滑梯",
+     "at": "2026-10-23"
     },
     "rope_net": {
      "v": "u",
@@ -195,10 +225,10 @@
      "at": null
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "2024 年新增地景平衡遊具",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -219,10 +249,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "2024 年新增架高的沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -273,10 +303,10 @@
      "at": null
     },
     "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-xingang",
+     "note": "兒童遊戲場附近有單槓",
+     "at": "2026-10-23"
     },
     "music": {
      "v": "u",
@@ -656,13 +686,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：兒童戲水區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：兒童戲水區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2026-zhuqi",
+     "note": "戲水區和鯨魚遊戲區都有溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
      "v": "u",
@@ -701,10 +731,10 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "snoopy-2022-zhuqi",
+     "note": "有可以多人一起玩的旋轉盤",
+     "at": "2026-10-23"
     },
     "climbing": {
      "v": "u",
@@ -713,22 +743,22 @@
      "at": null
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2026-zhuqi",
+     "note": "鯨魚造型遊具有攀岩",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2026-zhuqi",
+     "note": "鯨魚造型遊具有攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "snoopy-2022-zhuqi",
+     "note": "鯨魚造型遊具有平衡板",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -761,16 +791,16 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2026-zhuqi",
+     "note": "夏季開放的兒童戲水區，有淋水設施和戲水溜滑梯（2026 年作者去時倒水的大水桶壞了）",
+     "at": "2026-10-23"
     },
     "water_pump": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "snoopy-2022-zhuqi",
+     "note": "兒童遊戲區有汲水幫浦",
+     "at": "2026-10-23"
     },
     "trampoline": {
      "v": "u",
@@ -827,10 +857,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "snoopy-2022-zhuqi",
+     "note": "戲水區旁有廁所和免費淋浴間（沒有熱水）",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -845,10 +875,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2026-zhuqi",
+     "note": "有遮陽棚",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -921,31 +951,31 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-puzi",
+     "note": "有水管溜滑梯和磨石子溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-puzi",
+     "note": "共 6 座鞦韆，有單片、雙人等款式",
+     "at": "2026-10-23"
     },
     "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-puzi",
+     "note": "有尿布式（幼兒）鞦韆",
+     "at": "2026-10-23"
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-puzi",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -966,16 +996,16 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-puzi",
+     "note": "有旋轉杯和旋轉柱",
+     "at": "2026-10-23"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-puzi",
+     "note": "有立體攀爬架，爬到最後從溜滑梯滑下來",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
      "v": "u",
@@ -990,10 +1020,10 @@
      "at": null
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "umei-2024-puzi",
+     "note": "有高低不一的木頭圍成一圈的平衡木；另有原木跳樁",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -1002,10 +1032,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-puzi",
+     "note": "有垂直鑽籠和小山洞",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -1014,10 +1044,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "umei-2024-puzi",
+     "note": "有三處沙坑（兩處礫石、一處細沙），細沙坑裡有固定的挖土機",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -1092,16 +1122,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "umei-2024-puzi",
+     "note": "有親子廁所和無障礙廁所",
+     "at": "2026-10-23"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "umei-2024-puzi",
+     "note": "有玩沙後用的洗手台和兒童清洗區",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
@@ -1146,10 +1176,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ydn-2024-puzi",
+     "note": "有給不同年齡層使用的共融式遊具",
+     "at": "2026-10-23"
     }
    },
    "parking": {
