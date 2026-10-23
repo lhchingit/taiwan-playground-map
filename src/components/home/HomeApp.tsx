@@ -46,8 +46,10 @@ export interface HomeAppProps {
   city: CityBounds;
   cities: CityBounds[];
   catalog: AttributeCatalog;
-  /** 這個縣市的場地（伺服器已取得） */
-  places: CityPlace[];
+  /** 這個縣市的場地（伺服器已取得）；沒給時在瀏覽器載入（場地頁，避免每一頁都內嵌整個縣市） */
+  places?: CityPlace[];
+  /** 直接開啟場地網址時：一開始就打開這個場地的面板，地圖停在它上面 */
+  initialPlace?: PlaceDetail;
   /** 網址的 query string（不含「?」） */
   query: string;
   /** 待會員命名的遊戲場數（decisions D23）；0 時不顯示「幫忙命名」 */
@@ -68,7 +70,8 @@ export function HomeApp({
   city,
   cities,
   catalog,
-  places,
+  places: serverPlaces,
+  initialPlace,
   query,
   namingCount = 0,
   cityCounts = {},
@@ -97,11 +100,26 @@ export function HomeApp({
   const [newPlaceMsg, setNewPlaceMsg] = useState<string | null>(null);
   const session = useSession();
   const [mode, setMode] = useTravelMode();
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string | null>(initialPlace?.id ?? null);
   const [focus, setFocus] = useState<{ id: string; seq: number } | null>(null);
   const [otherCities, setOtherCities] = useState<Record<string, CityPlace[]>>({});
   const [failed, setFailed] = useState<string[]>([]);
-  const [details, setDetails] = useState<Record<string, PlaceDetail | 'error'>>({});
+  const [details, setDetails] = useState<Record<string, PlaceDetail | 'error'>>(() =>
+    initialPlace ? { [initialPlace.id]: initialPlace } : {},
+  );
+  // 場地頁沒有內嵌縣市的場地，在瀏覽器載入（跟附近縣市共用快取）
+  const [loadedPlaces, setLoadedPlaces] = useState<CityPlace[] | null>(null);
+  const places = serverPlaces ?? loadedPlaces;
+  useEffect(() => {
+    if (serverPlaces) return;
+    let cancelled = false;
+    loadCityPlaces(city.code)
+      .then((data) => !cancelled && setLoadedPlaces(data))
+      .catch(() => !cancelled && setFailed((f) => (f.includes(city.code) ? f : [...f, city.code])));
+    return () => {
+      cancelled = true;
+    };
+  }, [serverPlaces, city.code]);
   const lastOpened = useRef<string | null>(null);
 
   const startNewPlace = useCallback(async () => {
@@ -123,19 +141,19 @@ export function HomeApp({
     });
   }, []);
 
-  const setOrigin = useCallback((o: NamedOrigin) => {
+  const setOrigin = useCallback((o: NamedOrigin, fit = true) => {
     setOriginState(o);
     setOriginMsg(null);
-    setFitSeq((n) => n + 1);
+    if (fit) setFitSeq((n) => n + 1);
   }, []);
 
   // 出發點只留在瀏覽器：不寫進網址、不送到伺服器、不記錄
   const requestPosition = useCallback(
-    (onFail: () => void) => {
+    (onFail: () => void, fit = true) => {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
           setLocating(false);
-          setOrigin({ lat: pos.coords.latitude, lng: pos.coords.longitude, name: '目前位置' });
+          setOrigin({ lat: pos.coords.latitude, lng: pos.coords.longitude, name: '目前位置' }, fit);
           setOriginKind('here');
         },
         () => {
@@ -157,9 +175,11 @@ export function HomeApp({
     requestPosition(() => setOriginMsg('無法取得定位，請改輸入地址或在地圖上點選'));
   }
 
-  // 進入頁面時自動嘗試定位；失敗時不打擾，維持範例出發點
+  // 進入頁面時自動嘗試定位；失敗時不打擾，維持範例出發點。
+  // 直接開啟場地網址時只更新出發點與距離，地圖不移走
+  const startedOnPlace = useRef(initialPlace !== undefined);
   useEffect(() => {
-    if ('geolocation' in navigator) requestPosition(() => {});
+    if ('geolocation' in navigator) requestPosition(() => {}, !startedOnPlace.current);
   }, [requestPosition]);
 
   // 篩選條件同步到網址，方便分享（詳情面板打開時網址是場地頁，不動）
@@ -188,7 +208,14 @@ export function HomeApp({
 
   function closePlace() {
     if (history.state?.[PANEL_STATE]) history.back();
-    else setSelected(null);
+    else {
+      // 直接開啟場地網址後關閉：沒有上一頁可回，網址換成縣市地圖（帶目前的篩選）
+      if (placeIdFromPath(location.pathname, city.slug)) {
+        const q = filtersToQuery(filters);
+        history.replaceState(history.state, '', `/${city.slug}${q ? `?${q}` : ''}`);
+      }
+      setSelected(null);
+    }
   }
 
   useEffect(() => {
@@ -249,14 +276,20 @@ export function HomeApp({
   }, [codes, city.code]);
 
   const allPlaces = useMemo(
-    () => codes.flatMap((c) => (c === city.code ? places : (otherCities[c] ?? []))),
+    () => codes.flatMap((c) => (c === city.code ? (places ?? []) : (otherCities[c] ?? []))),
     [codes, city.code, places, otherCities],
   );
   const { results, unknownHint } = useMemo(
     () => filterPlaces(allPlaces, filters, origin, groupKeys),
     [allPlaces, filters, origin, groupKeys],
   );
-  const selectedPlace = selected ? results.find((r) => r.id === selected) : undefined;
+  // 直接開啟的場地：清單還沒載入或被預設篩選排除時，面板照樣顯示
+  const selectedPlace = selected
+    ? (results.find((r) => r.id === selected) ??
+      (initialPlace?.id === selected
+        ? { ...initialPlace, km: haversineKm(origin, initialPlace) }
+        : undefined))
+    : undefined;
   const selectedId = selectedPlace ? selectedPlace.id : null;
 
   // 改篩選條件後，打開的場地不再符合時關閉面板（同原型）
@@ -272,7 +305,8 @@ export function HomeApp({
       <div className="side">
         <header className="head">
           <div className="head-top">
-            <h1>全台放電地圖</h1>
+            {/* 場地頁的 h1 是場地名稱（在面板裡），網站名稱改用同樣樣式的段落 */}
+            {initialPlace ? <p className="brand">全台放電地圖</p> : <h1>全台放電地圖</h1>}
             <PlaygroundArt className="pa-mini" />
           </div>
           <p className="sub">
@@ -282,7 +316,7 @@ export function HomeApp({
             ) : (
               city.name
             )}
-            親子遊樂場與公園．資料 {places.length} 處
+            親子遊樂場與公園．{places ? `資料 ${places.length} 處` : '資料載入中…'}
           </p>
           <OriginControls
             origin={origin}
@@ -391,6 +425,7 @@ export function HomeApp({
           }}
           fitKey={String(fitSeq)}
           focus={focus}
+          initialFocus={initialPlace}
         />
         {selectedPlace && (
           <PlacePanel
@@ -399,6 +434,7 @@ export function HomeApp({
             catalog={catalog}
             trip={{ origin, km: selectedPlace.km, mode }}
             onClose={closePlace}
+            headingLevel={initialPlace ? 1 : 2}
           />
         )}
       </section>

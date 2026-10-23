@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { PlaceDetailView } from '@/components/place/PlaceDetailView';
+import { HomeApp } from '@/components/home/HomeApp';
 import {
   getAttributeCatalog,
   getCityBounds,
+  getCityPlaces,
   getLaunchedPlaceParams,
+  getNamingCandidates,
   getPlaceDetail,
 } from '@/lib/data';
 import { jsonLdScript, placeJsonLd } from '@/lib/seo';
@@ -45,11 +46,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/**
+ * 直接開啟（或重新整理）場地網址：跟點選後一樣是整個地圖畫面，面板打開這個場地。
+ * 伺服器輸出的面板就有完整內容；縣市的場地清單不內嵌，在瀏覽器載入（HomeApp）。
+ */
 export default async function PlacePage({ params }: Props) {
   const found = await load(params);
   if (!found) notFound();
   const { city, detail } = found;
-  const catalog = await getAttributeCatalog();
+  const [cities, catalog, naming] = await Promise.all([
+    getCityBounds(),
+    getAttributeCatalog(),
+    getNamingCandidates(city.code),
+  ]);
+  // 縣市選單上的場地數（同縣市頁；各縣市的場地已經快取）
+  const launched = cities.filter((c) => c.launched);
+  const cityCounts =
+    launched.length > 1
+      ? Object.fromEntries(
+          await Promise.all(
+            launched.map(async (c) => [c.code, (await getCityPlaces(c.code)).length] as const),
+          ),
+        )
+      : {};
   const ld = placeJsonLd(
     detail,
     catalog,
@@ -58,14 +77,17 @@ export default async function PlacePage({ params }: Props) {
   );
 
   return (
-    <main className="place-page">
-      <nav className="place-nav" aria-label="導覽">
-        <Link href={`/${city.slug}`}>← 全台放電地圖：回到{city.name}地圖</Link>
-      </nav>
-      <article className="place-article">
-        <PlaceDetailView detail={detail} catalog={catalog} headingLevel={1} />
-      </article>
+    <>
+      <HomeApp
+        city={city}
+        cities={cities}
+        catalog={catalog}
+        initialPlace={detail}
+        query=""
+        namingCount={naming.length}
+        cityCounts={cityCounts}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdScript(ld) }} />
-    </main>
+    </>
   );
 }

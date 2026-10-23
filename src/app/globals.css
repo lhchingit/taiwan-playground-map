@@ -192,7 +192,8 @@ select {
   flex: none;
   margin: -6px -4px 0 0;
 }
-h1 {
+h1,
+.brand {
   font-family: var(--f-display);
   font-size: 26px;
   margin: 0;
@@ -812,6 +813,8 @@ select {
   font-weight: 400;
   font-size: 22px;
   margin: 0;
+  color: inherit;
+  letter-spacing: normal;
   text-wrap: balance;
   padding-right: 32px;
 }
