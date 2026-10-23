@@ -1,6 +1,6 @@
 ﻿id,name,district,lat,lng,size,stay,age_min,age_max,fee,status,slide,swing,baby_swing,nest_swing,zipline,seesaw,spring_rider,spinner,climbing,climbing_wall,rope_net,balance,suspension_bridge,tunnel,tree_house,sandpit,sand_table,water_play,water_pump,trampoline,pushbike,open_lawn,ball_court,skatepark,bars,music,chalk_wall,toddler_zone,toilet,handwash,footwash,shade,transit,stroller,nursing,lighting,food,inclusive,parking_type,parking_fee,parking_spaces
 yun-osm-n6282974430,林內兒童公園,林內鄉,23.7609383,120.6167574,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-yun-osm-w263998036,麥寮城鄉運動公園,麥寮鄉,23.7533965,120.2540559,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-yun-osm-w388839523,柚子公園,斗六市,23.7017097,120.5362408,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+yun-osm-w263998036,麥寮城鄉運動公園,麥寮鄉,23.7533965,120.2540559,,,,,,open,y,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,
+yun-osm-w388839523,柚子公園,斗六市,23.7017097,120.5362408,,,,,,open,y,y,u,u,u,y,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,
 yun-osm-w800672123,他里霧親水公園,斗南鎮,23.6836986,120.4723202,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
 yun-osm-w818320520,金湖濱桃公園,口湖鄉,23.5727921,120.1469213,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,

@@ -1,0 +1,66 @@
+{
+ "verified_at": "2026-10-22",
+ "sources": {
+  "little15-2022-yuzi": {
+   "label": "網路文章：啾啾老闆！來一份雞屁股！ 2022-05 斗六民生公園（柚子公園）",
+   "url": "https://little15.pixnet.net/blog/posts/3050055068",
+   "kind": "article"
+  },
+  "udn-2026-mailiao": {
+   "label": "新聞：聯合報 2026-01 麥寮城鄉運動公園改善工程動土",
+   "url": "https://udn.com/news/story/7326/9288072",
+   "kind": "news"
+  }
+ },
+ "places": {
+  "yun-osm-w388839523": {
+   "slide": [
+    "y",
+    "little15-2022-yuzi",
+    "有特色溜滑梯、雙道溜滑梯和水管溜滑梯（2022 年作者去時特色溜滑梯用三角錐圍起來）"
+   ],
+   "swing": [
+    "y",
+    "little15-2022-yuzi",
+    "有鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "little15-2022-yuzi",
+    "有蹺蹺板"
+   ],
+   "bars": [
+    "y",
+    "little15-2022-yuzi",
+    "有單槓"
+   ],
+   "suspension_bridge": [
+    "y",
+    "little15-2022-yuzi",
+    "溜滑梯組上有吊橋"
+   ],
+   "toilet": [
+    "y",
+    "little15-2022-yuzi",
+    "有廁所"
+   ]
+  },
+  "yun-osm-w263998036": {
+   "swing": [
+    "y",
+    "udn-2026-mailiao",
+    "鄉公所 2014 年後增設共融式擺盪鞦韆"
+   ],
+   "inclusive": [
+    "y",
+    "udn-2026-mailiao",
+    "有共融式擺盪鞦韆"
+   ],
+   "slide": [
+    "y",
+    "udn-2026-mailiao",
+    "鄉公所 2014 年後增設綜合溜滑梯區"
+   ]
+  }
+ }
+}
