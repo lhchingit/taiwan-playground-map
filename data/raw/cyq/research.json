@@ -1,0 +1,188 @@
+{
+ "verified_at": "2026-10-23",
+ "sources": {
+  "abic-xingang": {
+   "label": "網路文章：愛貝客親子遊 新港鄉公園蜻蜓造型特色遊戲場（頁面未標日期，2024-01 新增遊具）",
+   "url": "https://www.abic.com.tw/place/view/id/12142",
+   "kind": "article"
+  },
+  "bao-2026-zhuqi": {
+   "label": "網路文章：來飽寶家ba 2026-07 竹崎親水公園兒童戲水區與鯨魚遊具",
+   "url": "https://baofamily.tw/zhuqi-park/",
+   "kind": "article"
+  },
+  "snoopy-2022-zhuqi": {
+   "label": "網路文章：史努比遊樂園 2022-08 竹崎親水公園鯨魚兒童遊戲場",
+   "url": "https://snoopyblog.com/blog/post/takezakipark",
+   "kind": "article"
+  },
+  "abic-puzi": {
+   "label": "網路文章：愛貝客親子遊 朴子藝術公園（頁面未標日期，內容為 2023-06 整建後）",
+   "url": "https://www.abic.com.tw/place/view/id/14949",
+   "kind": "article"
+  },
+  "umei-2024-puzi": {
+   "label": "網路文章：烏梅 2024-12 嘉義朴子藝術公園兒童遊戲區",
+   "url": "https://xingyetsai.com/?p=7418",
+   "kind": "article"
+  },
+  "ydn-2024-puzi": {
+   "label": "新聞：青年日報 2024-01 嘉義朴子藝術公園軍事營區脫胎換骨（Yahoo 新聞轉載）",
+   "url": "https://tw.news.yahoo.com/%E5%98%89%E7%BE%A9%E6%9C%B4%E5%AD%90%E8%97%9D%E8%A1%93%E5%85%AC%E5%9C%92-%E8%BB%8D%E4%BA%8B%E7%87%9F%E5%8D%80%E8%84%AB%E8%83%8E%E6%8F%9B%E9%AA%A8-160000886.html",
+   "kind": "news"
+  }
+ },
+ "places": {
+  "cyq-osm-n4676758218": {
+   "slide": [
+    "y",
+    "abic-xingang",
+    "2024 年新增寬滑道、彎滑道兩座磨石子溜滑梯；原本另有大船造型溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "abic-xingang",
+    "有盪鞦韆，2024 年再新增雙人鞦韆"
+   ],
+   "climbing_wall": [
+    "y",
+    "abic-xingang",
+    "2024 年新增拉著繩索往上爬的攀爬牆，可以爬到溜滑梯"
+   ],
+   "climbing": [
+    "y",
+    "abic-xingang",
+    "2024 年新增地景攀爬遊具"
+   ],
+   "balance": [
+    "y",
+    "abic-xingang",
+    "2024 年新增地景平衡遊具"
+   ],
+   "sandpit": [
+    "y",
+    "abic-xingang",
+    "2024 年新增架高的沙坑"
+   ],
+   "seesaw": [
+    "y",
+    "abic-xingang",
+    "兒童遊戲場旁有蹺蹺板"
+   ],
+   "bars": [
+    "y",
+    "abic-xingang",
+    "兒童遊戲場附近有單槓"
+   ]
+  },
+  "cyq-osm-w303266673": {
+   "water_play": [
+    "y",
+    "bao-2026-zhuqi",
+    "夏季開放的兒童戲水區，有淋水設施和戲水溜滑梯（2026 年作者去時倒水的大水桶壞了）"
+   ],
+   "water_pump": [
+    "y",
+    "snoopy-2022-zhuqi",
+    "兒童遊戲區有汲水幫浦"
+   ],
+   "slide": [
+    "y",
+    "bao-2026-zhuqi",
+    "戲水區和鯨魚遊戲區都有溜滑梯"
+   ],
+   "climbing_wall": [
+    "y",
+    "bao-2026-zhuqi",
+    "鯨魚造型遊具有攀岩"
+   ],
+   "rope_net": [
+    "y",
+    "bao-2026-zhuqi",
+    "鯨魚造型遊具有攀爬網"
+   ],
+   "balance": [
+    "y",
+    "snoopy-2022-zhuqi",
+    "鯨魚造型遊具有平衡板"
+   ],
+   "spinner": [
+    "y",
+    "snoopy-2022-zhuqi",
+    "有可以多人一起玩的旋轉盤"
+   ],
+   "toilet": [
+    "y",
+    "snoopy-2022-zhuqi",
+    "戲水區旁有廁所和免費淋浴間（沒有熱水）"
+   ],
+   "shade": [
+    "y",
+    "bao-2026-zhuqi",
+    "有遮陽棚"
+   ]
+  },
+  "cyq-osm-w586089286": {
+   "slide": [
+    "y",
+    "abic-puzi",
+    "有水管溜滑梯和磨石子溜滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "umei-2024-puzi",
+    "有三處沙坑（兩處礫石、一處細沙），細沙坑裡有固定的挖土機"
+   ],
+   "swing": [
+    "y",
+    "abic-puzi",
+    "共 6 座鞦韆，有單片、雙人等款式"
+   ],
+   "baby_swing": [
+    "y",
+    "abic-puzi",
+    "有尿布式（幼兒）鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "abic-puzi",
+    "有鳥巢鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "abic-puzi",
+    "有立體攀爬架，爬到最後從溜滑梯滑下來"
+   ],
+   "tunnel": [
+    "y",
+    "abic-puzi",
+    "有垂直鑽籠和小山洞"
+   ],
+   "spinner": [
+    "y",
+    "abic-puzi",
+    "有旋轉杯和旋轉柱"
+   ],
+   "balance": [
+    "y",
+    "umei-2024-puzi",
+    "有高低不一的木頭圍成一圈的平衡木；另有原木跳樁"
+   ],
+   "toilet": [
+    "y",
+    "umei-2024-puzi",
+    "有親子廁所和無障礙廁所"
+   ],
+   "handwash": [
+    "y",
+    "umei-2024-puzi",
+    "有玩沙後用的洗手台和兒童清洗區"
+   ],
+   "inclusive": [
+    "y",
+    "ydn-2024-puzi",
+    "有給不同年齡層使用的共融式遊具"
+   ]
+  }
+ }
+}
