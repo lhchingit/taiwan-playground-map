@@ -12,6 +12,31 @@
    "label": "南投縣都市計畫區公園一覽表（南投縣政府，政府資料開放平台）",
    "url": "https://data.gov.tw/dataset/127415",
    "kind": "open_data"
+  },
+  "tvbs-mingjian": {
+   "label": "網路文章：TVBS 食尚玩家 名間親子生態園區（頁面未標日期，照片為 2021-12）",
+   "url": "https://supertaste.tvbs.com.tw/travel/334071",
+   "kind": "article"
+  },
+  "vicky-2022-mingjian": {
+   "label": "網路文章：薇琪 2022-01 名間親子生態園區",
+   "url": "https://flyingwings.tw/mingjian/",
+   "kind": "article"
+  },
+  "bobowin-2024-caotun": {
+   "label": "網路文章：寶寶溫旅行親子生活 2024-11 草屯兒童樂園",
+   "url": "https://bobowin.blog/caotun-kid-park/",
+   "kind": "article"
+  },
+  "fupo-2020-caotun": {
+   "label": "網路文章：小腹婆大世界 2020-10 草屯兒童樂園",
+   "url": "https://fupo.tw/blog/post/nantou001",
+   "kind": "article"
+  },
+  "loveweekend-2026-nantou": {
+   "label": "網路文章：愛週末 LoveWeekend 2026-06 南投公園景點懶人包（竹山公園；2026-10 更新）",
+   "url": "https://loveweekend.tw/taiwan-travel/nantou-park-guide/",
+   "kind": "article"
   }
  },
  "labels": {
@@ -396,19 +421,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有溜滑梯和海盜船遊具；2020 年的文章另寫有透明旋轉溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有盪鞦韆；2020 年的文章寫有多人、單人和小型鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -423,22 +448,22 @@
      "at": null
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "fupo-2020-caotun",
+     "note": "有滑索，建議大班以上（2020 年的文章）",
+     "at": "2026-10-23"
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有蹺蹺板",
+     "at": "2026-10-23"
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有搖搖馬",
+     "at": "2026-10-23"
     },
     "spinner": {
      "v": "u",
@@ -447,28 +472,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有攀爬架，錐形攀爬架最受歡迎",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "fupo-2020-caotun",
+     "note": "有攀岩牆（2020 年的文章）",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "fupo-2020-caotun",
+     "note": "有大、小攀爬網（2020 年的文章）",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有平衡木和梅花樁",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -489,10 +514,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有沙池",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -549,34 +574,34 @@
      "at": null
     },
     "music": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "fupo-2020-caotun",
+     "note": "有打鼓的遊具（2020 年的文章）",
+     "at": "2026-10-23"
     },
     "chalk_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "fupo-2020-caotun",
+     "note": "有粉筆塗鴉牆，作者去時沒有粉筆（2020 年的文章）",
+     "at": "2026-10-23"
     },
     "toddler_zone": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "沙池旁有小小孩專用的迷你遊戲區",
+     "at": "2026-10-23"
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有廁所",
+     "at": "2026-10-23"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "沙池旁有洗手的地方",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
@@ -585,10 +610,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2024-caotun",
+     "note": "有很大的遮陽棚",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -926,31 +951,31 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 4 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 4 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "5 公尺高的彩虹磨石子溜滑梯，一彎一直；複合遊具另有三道較矮的小滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有一般鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有尿布式（幼兒）鞦韆",
+     "at": "2026-10-23"
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -959,10 +984,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-mingjian",
+     "note": "有蹺蹺板",
+     "at": "2026-10-23"
     },
     "spring_rider": {
      "v": "u",
@@ -971,34 +996,34 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有會隨重心自轉的旋轉架；另有旋轉椅",
+     "at": "2026-10-23"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-mingjian",
+     "note": "溜滑梯兩側有攀爬區，360 度複合遊具也能攀爬",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-mingjian",
+     "note": "溜滑梯兩側有攀岩和拉繩",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "複合遊具上有攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有獨木橋、四個踏板的天平式遊具；另有平衡步道和跳樁",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -1019,10 +1044,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-mingjian",
+     "note": "有可以容納很多孩子的大沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -1043,10 +1068,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有一座單人彈跳床",
+     "at": "2026-10-23"
     },
     "pushbike": {
      "v": "u",
@@ -1055,10 +1080,10 @@
      "at": null
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "後方有大草地，可以丟球、玩飛盤",
+     "at": "2026-10-23"
     },
     "ball_court": {
      "v": "u",
@@ -1073,10 +1098,10 @@
      "at": null
     },
     "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有單槓，另有上方會轉的單槓",
+     "at": "2026-10-23"
     },
     "music": {
      "v": "u",
@@ -1091,16 +1116,16 @@
      "at": null
     },
     "toddler_zone": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有一組適合國小以下幼童的遊具",
+     "at": "2026-10-23"
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "vicky-2022-mingjian",
+     "note": "有廁所，但離遊戲區比較遠",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -1115,10 +1140,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-mingjian",
+     "note": "彩虹溜滑梯和複合遊具上方有遮陽網；另有遮陽休憩區",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -1191,13 +1216,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。地址與面積來自南投縣都市計畫區公園一覽表。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。地址與面積來自南投縣都市計畫區公園一覽表。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "兒童遊樂區有溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
      "v": "u",

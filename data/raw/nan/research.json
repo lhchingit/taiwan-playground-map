@@ -1,0 +1,208 @@
+{
+ "verified_at": "2026-10-23",
+ "sources": {
+  "tvbs-mingjian": {
+   "label": "網路文章：TVBS 食尚玩家 名間親子生態園區（頁面未標日期，照片為 2021-12）",
+   "url": "https://supertaste.tvbs.com.tw/travel/334071",
+   "kind": "article"
+  },
+  "vicky-2022-mingjian": {
+   "label": "網路文章：薇琪 2022-01 名間親子生態園區",
+   "url": "https://flyingwings.tw/mingjian/",
+   "kind": "article"
+  },
+  "bobowin-2024-caotun": {
+   "label": "網路文章：寶寶溫旅行親子生活 2024-11 草屯兒童樂園",
+   "url": "https://bobowin.blog/caotun-kid-park/",
+   "kind": "article"
+  },
+  "fupo-2020-caotun": {
+   "label": "網路文章：小腹婆大世界 2020-10 草屯兒童樂園",
+   "url": "https://fupo.tw/blog/post/nantou001",
+   "kind": "article"
+  },
+  "loveweekend-2026-nantou": {
+   "label": "網路文章：愛週末 LoveWeekend 2026-06 南投公園景點懶人包（竹山公園；2026-10 更新）",
+   "url": "https://loveweekend.tw/taiwan-travel/nantou-park-guide/",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "nan-osm-w1013976631": {
+   "slide": [
+    "y",
+    "vicky-2022-mingjian",
+    "5 公尺高的彩虹磨石子溜滑梯，一彎一直；複合遊具另有三道較矮的小滑梯"
+   ],
+   "climbing": [
+    "y",
+    "tvbs-mingjian",
+    "溜滑梯兩側有攀爬區，360 度複合遊具也能攀爬"
+   ],
+   "climbing_wall": [
+    "y",
+    "tvbs-mingjian",
+    "溜滑梯兩側有攀岩和拉繩"
+   ],
+   "rope_net": [
+    "y",
+    "vicky-2022-mingjian",
+    "複合遊具上有攀爬網"
+   ],
+   "balance": [
+    "y",
+    "vicky-2022-mingjian",
+    "有獨木橋、四個踏板的天平式遊具；另有平衡步道和跳樁"
+   ],
+   "seesaw": [
+    "y",
+    "tvbs-mingjian",
+    "有蹺蹺板"
+   ],
+   "spinner": [
+    "y",
+    "vicky-2022-mingjian",
+    "有會隨重心自轉的旋轉架；另有旋轉椅"
+   ],
+   "swing": [
+    "y",
+    "vicky-2022-mingjian",
+    "有一般鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "vicky-2022-mingjian",
+    "有鳥巢鞦韆"
+   ],
+   "baby_swing": [
+    "y",
+    "vicky-2022-mingjian",
+    "有尿布式（幼兒）鞦韆"
+   ],
+   "trampoline": [
+    "y",
+    "vicky-2022-mingjian",
+    "有一座單人彈跳床"
+   ],
+   "bars": [
+    "y",
+    "vicky-2022-mingjian",
+    "有單槓，另有上方會轉的單槓"
+   ],
+   "sandpit": [
+    "y",
+    "tvbs-mingjian",
+    "有可以容納很多孩子的大沙坑"
+   ],
+   "toddler_zone": [
+    "y",
+    "vicky-2022-mingjian",
+    "有一組適合國小以下幼童的遊具"
+   ],
+   "shade": [
+    "y",
+    "tvbs-mingjian",
+    "彩虹溜滑梯和複合遊具上方有遮陽網；另有遮陽休憩區"
+   ],
+   "open_lawn": [
+    "y",
+    "vicky-2022-mingjian",
+    "後方有大草地，可以丟球、玩飛盤"
+   ],
+   "toilet": [
+    "y",
+    "vicky-2022-mingjian",
+    "有廁所，但離遊戲區比較遠"
+   ]
+  },
+  "nan-osm-w468282564": {
+   "slide": [
+    "y",
+    "bobowin-2024-caotun",
+    "有溜滑梯和海盜船遊具；2020 年的文章另寫有透明旋轉溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "bobowin-2024-caotun",
+    "有盪鞦韆；2020 年的文章寫有多人、單人和小型鞦韆"
+   ],
+   "spring_rider": [
+    "y",
+    "bobowin-2024-caotun",
+    "有搖搖馬"
+   ],
+   "seesaw": [
+    "y",
+    "bobowin-2024-caotun",
+    "有蹺蹺板"
+   ],
+   "climbing": [
+    "y",
+    "bobowin-2024-caotun",
+    "有攀爬架，錐形攀爬架最受歡迎"
+   ],
+   "balance": [
+    "y",
+    "bobowin-2024-caotun",
+    "有平衡木和梅花樁"
+   ],
+   "sandpit": [
+    "y",
+    "bobowin-2024-caotun",
+    "有沙池"
+   ],
+   "toddler_zone": [
+    "y",
+    "bobowin-2024-caotun",
+    "沙池旁有小小孩專用的迷你遊戲區"
+   ],
+   "handwash": [
+    "y",
+    "bobowin-2024-caotun",
+    "沙池旁有洗手的地方"
+   ],
+   "shade": [
+    "y",
+    "bobowin-2024-caotun",
+    "有很大的遮陽棚"
+   ],
+   "toilet": [
+    "y",
+    "bobowin-2024-caotun",
+    "有廁所"
+   ],
+   "zipline": [
+    "y",
+    "fupo-2020-caotun",
+    "有滑索，建議大班以上（2020 年的文章）"
+   ],
+   "rope_net": [
+    "y",
+    "fupo-2020-caotun",
+    "有大、小攀爬網（2020 年的文章）"
+   ],
+   "climbing_wall": [
+    "y",
+    "fupo-2020-caotun",
+    "有攀岩牆（2020 年的文章）"
+   ],
+   "music": [
+    "y",
+    "fupo-2020-caotun",
+    "有打鼓的遊具（2020 年的文章）"
+   ],
+   "chalk_wall": [
+    "y",
+    "fupo-2020-caotun",
+    "有粉筆塗鴉牆，作者去時沒有粉筆（2020 年的文章）"
+   ]
+  },
+  "nan-osm-w1065422564": {
+   "slide": [
+    "y",
+    "loveweekend-2026-nantou",
+    "兒童遊樂區有溜滑梯"
+   ]
+  }
+ }
+}
