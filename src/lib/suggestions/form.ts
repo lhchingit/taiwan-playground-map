@@ -15,7 +15,38 @@ export const SUGGESTION_KINDS: readonly { kind: SuggestionKind; label: string }[
 export const FIELD_OPTIONS = [
   { field: 'hours', label: '開放時間' },
   { field: 'surface', label: '地面材質' },
+  { field: 'fee', label: '費用' },
+  { field: 'age', label: '適合年齡' },
 ] as const;
+
+export type FieldName = (typeof FIELD_OPTIONS)[number]['field'];
+
+/** 適合年齡的上限（跟資料庫 check_suggestion_payload() 一致） */
+export const AGE_MAX = 18;
+
+/** 基本資料的值給人看的文字：費用 free／paid → 免費／收費；年齡「3-12」→「3–12 歲」 */
+export function fieldValueText(field: string, value: string): string {
+  if (field === 'fee') return value === 'free' ? '免費' : value === 'paid' ? '收費' : value;
+  if (field === 'age') {
+    const m = /^(\d+)-(\d+)$/.exec(value);
+    return m ? `${m[1]}–${m[2]} 歲` : value;
+  }
+  return value;
+}
+
+/** 年齡兩格 → 「最小-最大」；格式不對時回傳錯誤訊息 */
+export function parseAge(
+  min: string | undefined,
+  max: string | undefined,
+): string | { error: string } {
+  const a = text(min);
+  const b = text(max);
+  if (!a || !b) return { error: '請填寫適合年齡的最小和最大歲數。' };
+  if (!/^\d{1,2}$/.test(a) || !/^\d{1,2}$/.test(b)) return { error: '年齡要填整數。' };
+  if (Number(b) > AGE_MAX) return { error: `年齡最多填到 ${AGE_MAX} 歲。` };
+  if (Number(a) > Number(b)) return { error: '最小年齡不能大於最大年齡。' };
+  return `${Number(a)}-${Number(b)}`;
+}
 
 export const LIMITS = { note: 200, value: 100, reason: 200, feeNote: 100, spaces: 10000 } as const;
 
@@ -89,6 +120,16 @@ export function parseSuggestion(f: Fields, keys: readonly string[]): ParseResult
   if (kind === 'field') {
     const field = text(f.field);
     if (!FIELD_OPTIONS.some((o) => o.field === field)) return fail('請選擇要修正的欄位。');
+    if (field === 'fee') {
+      if (f.fee_value !== 'free' && f.fee_value !== 'paid')
+        return fail('請選擇「免費」或「收費」。');
+      return { ok: true, kind, payload: { field, value: f.fee_value } };
+    }
+    if (field === 'age') {
+      const age = parseAge(f.age_min, f.age_max);
+      if (typeof age !== 'string') return fail(age.error);
+      return { ok: true, kind, payload: { field, value: age } };
+    }
     const value = text(f.field_value);
     if (!value) return fail('請填寫內容。');
     const long = tooLong(value, LIMITS.value, '內容');

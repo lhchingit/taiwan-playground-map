@@ -336,6 +336,10 @@ describe('會員', () => {
       { kind: 'parking', payload: { type: 'lot', spaces: -3 }, why: '格數' },
       { kind: 'parking', payload: { type: 'lot', spaces: 2.5 }, why: '格數' },
       { kind: 'field', payload: { field: 'name', value: '改名' }, why: '不能回報' },
+      { kind: 'field', payload: { field: 'fee', value: 'u' }, why: '免費或收費' },
+      { kind: 'field', payload: { field: 'age', value: '12-3' }, why: '0～18 歲' },
+      { kind: 'field', payload: { field: 'age', value: '3-19' }, why: '0～18 歲' },
+      { kind: 'field', payload: { field: 'age', value: '3 到 12' }, why: '0～18 歲' },
       { kind: 'closure', payload: { reason: '維修', until: '下個月' }, why: '日期格式' },
       {
         kind: 'new_place',
@@ -570,6 +574,40 @@ describe('核准時套用基本資料與封閉（0007）', () => {
     });
   });
 
+  it('費用、適合年齡：核准後寫入場地，留下來源、確認日期與修改紀錄', async () => {
+    const fee = await suggest(submitter, {
+      kind: 'field',
+      payload: { field: 'fee', value: 'paid' },
+    });
+    expect((await review5(modHsc, fee.data!.id, true)).error).toBeNull();
+    const age = await suggest(submitter, {
+      kind: 'field',
+      payload: { field: 'age', value: '3-12' },
+    });
+    // 審核員改成 2-10 再核准
+    expect(
+      (await review5(modHsc, age.data!.id, true, { field: 'age', value: '2-10' })).error,
+    ).toBeNull();
+
+    const [p] = await sql`SELECT fee, fee_source, fee_verified_at, age_min, age_max, age_source,
+                                 age_verified_at FROM places WHERE id = ${HSC}`;
+    expect(p).toMatchObject({
+      fee: 'paid',
+      fee_source: 'user',
+      age_min: 2,
+      age_max: 10,
+      age_source: 'user',
+    });
+    expect(p?.fee_verified_at).not.toBeNull();
+    expect(p?.age_verified_at).not.toBeNull();
+    const hist = await sql`SELECT field, old_value, new_value FROM place_field_history
+                           WHERE suggestion_id IN (${fee.data!.id}, ${age.data!.id}) ORDER BY id`;
+    expect(hist).toEqual([
+      { field: 'fee', old_value: null, new_value: 'paid' },
+      { field: 'age', old_value: null, new_value: '2-10' },
+    ]);
+  });
+
   it('審核員修改的內容也要符合格式', async () => {
     const { data } = await suggest(submitter, {
       kind: 'field',
@@ -720,6 +758,19 @@ describe('修改紀錄的還原（0008）', () => {
     const [r] =
       await sql`SELECT restored_from, changed_by FROM place_field_history ORDER BY id DESC LIMIT 1`;
     expect(r).toEqual({ restored_from: fh!.id, changed_by: modHsc.id });
+
+    // 費用、適合年齡：回到審核前的值（年齡從「最小-最大」拆回兩欄）
+    const before = await sql`SELECT fee, fee_source, age_min, age_max, age_source
+                             FROM places WHERE id = ${HSC}`;
+    const ageId = await approve({ field: 'age', value: '4-8' }, 'field');
+    const [ah] = await sql`SELECT id FROM place_field_history WHERE suggestion_id = ${ageId}`;
+    const feeId = await approve({ field: 'fee', value: 'free' }, 'field');
+    const [feh] = await sql`SELECT id FROM place_field_history WHERE suggestion_id = ${feeId}`;
+    expect((await restoreField(ah!.id)).error).toBeNull();
+    expect((await restoreField(feh!.id)).error).toBeNull();
+    expect(
+      await sql`SELECT fee, fee_source, age_min, age_max, age_source FROM places WHERE id = ${HSC}`,
+    ).toEqual(before);
 
     const closureId = await approve(
       { reason: '整修', until: '2027-02-01', status: 'closed' },

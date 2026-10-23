@@ -35,6 +35,10 @@ function expirePlace(placeId: string, city: string | null) {
 /** 核准時審核員修改過的內容（基本資料、封閉或維修）；沒有修改就用原本的建議 */
 function editedPayload(kind: string, f: FormData): Json | undefined {
   const get = (k: string) => f.get(k)?.toString().trim() ?? '';
+  // 適合年齡：兩格組回「最小-最大」，格式由資料庫 check_suggestion_payload() 檢查
+  if (kind === 'field' && f.has('edit_age_min')) {
+    return { field: 'age', value: `${get('edit_age_min')}-${get('edit_age_max')}` };
+  }
   if (kind === 'field' && f.has('edit_value')) {
     return { field: get('edit_field'), value: get('edit_value') };
   }

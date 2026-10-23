@@ -115,7 +115,7 @@ export async function runSeed(
     }
 
     // 4. 場地（attrs 不寫，由 place_attributes 的 trigger 同步）
-    //    開放時間、地面材質、狀態的來源是使用者回報（審核後套用）時保留現有的值，跟屬性的規則一樣
+    //    開放時間、地面材質、費用、適合年齡、狀態的來源是使用者回報（審核後套用）時保留現有的值，跟屬性的規則一樣
     changes.places_upserted = (
       await sql`
       INSERT INTO places (id, name, city, district, address, geom, size_class, area_ha, stay_bucket, stay_source,
@@ -133,8 +133,10 @@ export async function runSeed(
       ON CONFLICT (id) DO UPDATE SET
         name = EXCLUDED.name, city = EXCLUDED.city, district = EXCLUDED.district, address = EXCLUDED.address,
         geom = EXCLUDED.geom, size_class = EXCLUDED.size_class, area_ha = EXCLUDED.area_ha, stay_bucket = EXCLUDED.stay_bucket,
-        stay_source = EXCLUDED.stay_source, age_min = EXCLUDED.age_min, age_max = EXCLUDED.age_max,
-        fee = EXCLUDED.fee, indoor = EXCLUDED.indoor,
+        stay_source = EXCLUDED.stay_source,
+        age_min = CASE WHEN places.age_source = ${USER_SOURCE} THEN places.age_min ELSE EXCLUDED.age_min END,
+        age_max = CASE WHEN places.age_source = ${USER_SOURCE} THEN places.age_max ELSE EXCLUDED.age_max END,
+        fee = CASE WHEN places.fee_source = ${USER_SOURCE} THEN places.fee ELSE EXCLUDED.fee END, indoor = EXCLUDED.indoor,
         hours = CASE WHEN places.hours_source = ${USER_SOURCE} THEN places.hours ELSE EXCLUDED.hours END,
         surface = CASE WHEN places.surface_source = ${USER_SOURCE} THEN places.surface ELSE EXCLUDED.surface END,
         status = CASE WHEN places.status_source = ${USER_SOURCE} THEN places.status ELSE EXCLUDED.status END,
@@ -147,8 +149,10 @@ export async function runSeed(
              places.coord_source, places.listing_source, places.listing_verified_at)
         IS DISTINCT FROM
             (EXCLUDED.name, EXCLUDED.city, EXCLUDED.district, EXCLUDED.address, ST_AsEWKT(EXCLUDED.geom),
-             EXCLUDED.size_class, EXCLUDED.area_ha, EXCLUDED.stay_bucket, EXCLUDED.stay_source, EXCLUDED.age_min, EXCLUDED.age_max,
-             EXCLUDED.fee, EXCLUDED.indoor,
+             EXCLUDED.size_class, EXCLUDED.area_ha, EXCLUDED.stay_bucket, EXCLUDED.stay_source,
+             CASE WHEN places.age_source = ${USER_SOURCE} THEN places.age_min ELSE EXCLUDED.age_min END,
+             CASE WHEN places.age_source = ${USER_SOURCE} THEN places.age_max ELSE EXCLUDED.age_max END,
+             CASE WHEN places.fee_source = ${USER_SOURCE} THEN places.fee ELSE EXCLUDED.fee END, EXCLUDED.indoor,
              CASE WHEN places.hours_source = ${USER_SOURCE} THEN places.hours ELSE EXCLUDED.hours END,
              CASE WHEN places.surface_source = ${USER_SOURCE} THEN places.surface ELSE EXCLUDED.surface END,
              CASE WHEN places.status_source = ${USER_SOURCE} THEN places.status ELSE EXCLUDED.status END,
@@ -215,7 +219,7 @@ export async function runSeed(
              (EXISTS (SELECT 1 FROM place_attributes a WHERE a.place_id = p.id AND a.source_id = ${USER_SOURCE})
               OR EXISTS (SELECT 1 FROM place_parking pp WHERE pp.place_id = p.id AND pp.source_id = ${USER_SOURCE})
               OR EXISTS (SELECT 1 FROM edit_suggestions e WHERE e.place_id = p.id)
-              OR ${USER_SOURCE} IN (p.hours_source, p.surface_source, p.status_source)) AS protected
+              OR ${USER_SOURCE} IN (p.hours_source, p.surface_source, p.status_source, p.fee_source, p.age_source)) AS protected
       FROM places p
       WHERE p.city = ANY(${seedCities}) AND NOT (p.id = ANY(${placeIds})) AND p.id NOT LIKE 'test-%'
         -- 由使用者建議、會員命名建立的場地在匯出前不在 places.json（decisions D19、D23）：不警告、不刪除

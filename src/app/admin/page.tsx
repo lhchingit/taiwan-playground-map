@@ -11,6 +11,7 @@ import { currentUser } from '@/lib/auth/session';
 import { getAttributeCatalog, getCityBounds, getSources } from '@/lib/data';
 import { PARKING_FEE_LABEL, PARKING_TYPE_LABEL } from '@/lib/format';
 import { supabaseAuth } from '@/lib/supabase/auth';
+import { fieldValueText } from '@/lib/suggestions/form';
 import type { Json } from '@/types/database';
 import type { ParkingFee, ParkingType } from '@/types/place';
 import { AdminQueue, ReopenList, type CardData, type CurrentLine } from './AdminQueue';
@@ -59,7 +60,11 @@ function editDefaults(
   kind: string,
   p: Record<string, Json | undefined>,
 ): Record<string, string> | null {
-  if (kind === 'field') return { field: s(p.field), value: s(p.value) };
+  if (kind === 'field') {
+    // 年齡「3-12」拆成兩格
+    const [ageMin = '', ageMax = ''] = p.field === 'age' ? s(p.value).split('-') : [];
+    return { field: s(p.field), value: s(p.value), ageMin, ageMax };
+  }
   if (kind === 'closure') {
     return { reason: s(p.reason), until: s(p.until), status: s(p.status) || 'maintenance' };
   }
@@ -85,7 +90,7 @@ async function AdminContent({ searchParams }: Props) {
     supabase
       .from('edit_suggestions')
       .select(
-        'id, kind, payload, note, created_at, place_id, user_id, places(name, city, hours, surface, status, status_until, status_note, hours_source, hours_verified_at, surface_source, surface_verified_at, status_source, status_verified_at), profiles(display_name, accepted_count)',
+        'id, kind, payload, note, created_at, place_id, user_id, places(name, city, hours, surface, fee, age_min, age_max, status, status_until, status_note, hours_source, hours_verified_at, surface_source, surface_verified_at, fee_source, fee_verified_at, age_source, age_verified_at, status_source, status_verified_at), profiles(display_name, accepted_count)',
       )
       .eq('status', 'pending')
       .order('created_at', { ascending: true })
@@ -177,14 +182,26 @@ async function AdminContent({ searchParams }: Props) {
       }));
     }
     if (r.kind === 'field' && pl) {
-      const hours = p.field === 'hours';
-      return [
-        {
-          text: (hours ? pl.hours : pl.surface) ?? '還沒有資料',
-          source: sourceLabel(hours ? pl.hours_source : pl.surface_source),
-          verifiedAt: hours ? pl.hours_verified_at : pl.surface_verified_at,
-        },
-      ];
+      const cur =
+        p.field === 'fee'
+          ? {
+              v: pl.fee && fieldValueText('fee', pl.fee),
+              src: pl.fee_source,
+              at: pl.fee_verified_at,
+            }
+          : p.field === 'age'
+            ? {
+                v:
+                  pl.age_min !== null && pl.age_max !== null
+                    ? fieldValueText('age', `${pl.age_min}-${pl.age_max}`)
+                    : null,
+                src: pl.age_source,
+                at: pl.age_verified_at,
+              }
+            : p.field === 'hours'
+              ? { v: pl.hours, src: pl.hours_source, at: pl.hours_verified_at }
+              : { v: pl.surface, src: pl.surface_source, at: pl.surface_verified_at };
+      return [{ text: cur.v ?? '還沒有資料', source: sourceLabel(cur.src), verifiedAt: cur.at }];
     }
     if (r.kind === 'closure' && pl) {
       return [

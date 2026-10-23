@@ -5,7 +5,7 @@ import { useActionState } from 'react';
 import type { QueueGroup } from '@/lib/admin/queue';
 import { WithdrawSuggestion } from '@/components/report/WithdrawSuggestion';
 import { REJECT_REASON_LABEL } from '@/lib/auth/labels';
-import { FIELD_OPTIONS } from '@/lib/suggestions/form';
+import { AGE_MAX, FIELD_OPTIONS } from '@/lib/suggestions/form';
 import type { Json } from '@/types/database';
 import { reopenPlace, reviewBatch, reviewSuggestion, type ReviewState } from './actions';
 
@@ -144,10 +144,43 @@ function Card({
             <fieldset>
               <legend>核准前可以修改</legend>
               <input type="hidden" name="edit_field" value={c.edit.field} />
-              <label>
-                {FIELD_OPTIONS.find((o) => o.field === c.edit?.field)?.label ?? c.edit.field}
-                <input name="edit_value" defaultValue={c.edit.value} maxLength={100} />
-              </label>
+              {c.edit.field === 'fee' ? (
+                <label>
+                  費用
+                  <select name="edit_value" defaultValue={c.edit.value}>
+                    <option value="free">免費</option>
+                    <option value="paid">收費</option>
+                  </select>
+                </label>
+              ) : c.edit.field === 'age' ? (
+                <>
+                  <label>
+                    最小歲數
+                    <input
+                      name="edit_age_min"
+                      type="number"
+                      min={0}
+                      max={AGE_MAX}
+                      defaultValue={c.edit.ageMin}
+                    />
+                  </label>
+                  <label>
+                    最大歲數
+                    <input
+                      name="edit_age_max"
+                      type="number"
+                      min={0}
+                      max={AGE_MAX}
+                      defaultValue={c.edit.ageMax}
+                    />
+                  </label>
+                </>
+              ) : (
+                <label>
+                  {FIELD_OPTIONS.find((o) => o.field === c.edit?.field)?.label ?? c.edit.field}
+                  <input name="edit_value" defaultValue={c.edit.value} maxLength={100} />
+                </label>
+              )}
             </fieldset>
           )}
           {c.kind === 'closure' && c.edit && (

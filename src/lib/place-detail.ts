@@ -39,9 +39,11 @@ export interface PlaceDetail extends CityPlace {
   staySource: SourceRef | null;
   /** 座標來源說明，例：OpenStreetMap w448662016（清冊編號 94） */
   coordSource: string | null;
-  /** 開放時間、地面材質的來源（使用者回報經審核後套用時才有） */
+  /** 開放時間、地面材質、費用、適合年齡的來源（使用者回報經審核後套用時才有） */
   hoursRef: FieldRef | null;
   surfaceRef: FieldRef | null;
+  feeRef: FieldRef | null;
+  ageRef: FieldRef | null;
   /** 場地本身的依據：OSM 只畫了公園、依新聞或文章寫明有遊戲場才上地圖的場地（decisions D20）；一般場地是 null */
   listingRef: FieldRef | null;
   /** 維修中／已封閉的說明（status 在 CityPlace） */
@@ -187,6 +189,8 @@ export function toPlaceDetail(input: {
     coordSource: str(place.coord_source),
     hoursRef: ref(place.hours_source, place.hours_verified_at),
     surfaceRef: ref(place.surface_source, place.surface_verified_at),
+    feeRef: ref(place.fee_source, place.fee_verified_at),
+    ageRef: ref(place.age_source, place.age_verified_at),
     listingRef: ref(place.listing_source, place.listing_verified_at),
     statusInfo: closed
       ? {

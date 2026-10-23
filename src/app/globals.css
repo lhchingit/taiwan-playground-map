@@ -1530,6 +1530,15 @@ form.report .seg button[aria-pressed='true'] {
   background: var(--teal-soft);
   border-color: var(--teal);
 }
+/* 適合年齡：「__ 歲到 __ 歲」 */
+form.report .age-range {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+form.report .age-range input {
+  width: 5em;
+}
 form.report .check {
   display: flex;
   gap: 6px;
