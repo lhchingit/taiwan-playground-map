@@ -7,6 +7,126 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "bao-2025-metro": {
+   "label": "網路文章：來飽寶家ba 2025-01 楠梓都會公園時間鳥主題遊戲場",
+   "url": "https://baofamily.tw/purelife/",
+   "kind": "article"
+  },
+  "myjourney-2026-metro": {
+   "label": "網路文章：可大王愛旅行 2026-02 高雄都會公園時間之鳥遊戲場",
+   "url": "https://myjourney.tw/kaohsiung-metropolitan-park/",
+   "kind": "article"
+  },
+  "bao-2025-shidai": {
+   "label": "網路文章：來飽寶家ba 2025-01 前鎮時代公園",
+   "url": "https://baofamily.tw/blog/post/569630568",
+   "kind": "article"
+  },
+  "gvm-2023-parks": {
+   "label": "新聞：遠見 城市學 2023-03 高雄特色公園（時代公園等）",
+   "url": "https://city.gvm.com.tw/article/101226",
+   "kind": "news"
+  },
+  "storm-2022-shidai": {
+   "label": "新聞：風傳媒 2022-12 前鎮時代公園正式啟用",
+   "url": "https://www.storm.mg/article/4641948",
+   "kind": "news"
+  },
+  "tvbs-water": {
+   "label": "網路文章：食尚玩家 高雄戲水景點（頁面未標日期，內容提到星光水岸公園改建中）",
+   "url": "https://supertaste.tvbs.com.tw/esg/355466",
+   "kind": "article"
+  },
+  "bao-2023-central": {
+   "label": "網路文章：來飽寶家ba 2023-02 中央公園特色遊戲場",
+   "url": "https://baofamily.tw/blog/post/463501466",
+   "kind": "article"
+  },
+  "bobowin-2026-aozihdi": {
+   "label": "網路文章：寶寶溫旅行親子生活 2026-01 凹子底森林公園",
+   "url": "https://bobowin.blog/aozihdi-park/",
+   "kind": "article"
+  },
+  "myjourney-2022-aozihdi": {
+   "label": "網路文章：可大王愛旅行 2022-02 凹子底森林公園遊戲場",
+   "url": "https://myjourney.tw/aozihdi-park/",
+   "kind": "article"
+  },
+  "bao-2019-weiwuying": {
+   "label": "網路文章：來飽寶家ba 2019-01 衛武營都會公園共融遊戲場",
+   "url": "https://baofamily.tw/blog/post/466899257",
+   "kind": "article"
+  },
+  "storm-2019-weiwuying": {
+   "label": "新聞：風傳媒 2019-01 衛武營增設魔法遊戲區",
+   "url": "https://www.storm.mg/article/897191",
+   "kind": "news"
+  },
+  "tvbs-parks": {
+   "label": "網路文章：食尚玩家 高雄特色公園（頁面未標日期，圖片為 2022-03）",
+   "url": "https://supertaste.tvbs.com.tw/pack/335401",
+   "kind": "article"
+  },
+  "myjourney-2026-familypark": {
+   "label": "網路文章：可大王愛旅行 2026-10 高雄親子遊樂園區",
+   "url": "https://myjourney.tw/kaohsiung-family-park/",
+   "kind": "article"
+  },
+  "storm-2026-familypark": {
+   "label": "新聞：風傳媒 2026-08 高雄親子遊樂園區開幕",
+   "url": "https://www.storm.mg/article/11153364",
+   "kind": "news"
+  },
+  "myjourney-2026-youchang": {
+   "label": "網路文章：可大王愛旅行 2026-02 右昌森林公園飛行主題遊戲場",
+   "url": "https://myjourney.tw/youchang-forest-park/",
+   "kind": "article"
+  },
+  "bunnyann-2025-youchang": {
+   "label": "網路文章：bunnyann.tw 2025-07 右昌森林公園飛機主題親子公園",
+   "url": "https://bunnyann.tw/airplane-park/",
+   "kind": "article"
+  },
+  "ya7-2025-renwu": {
+   "label": "網路文章：ya7.tw 2025-02 仁武運動公園特色遊戲場",
+   "url": "https://ya7.tw/ren-wu/",
+   "kind": "article"
+  },
+  "bao-2021-fushan": {
+   "label": "網路文章：來飽寶家ba 2021-02 左營福山公園",
+   "url": "https://baofamily.tw/blog/post/556739013",
+   "kind": "article"
+  },
+  "bao-2021-greenway": {
+   "label": "網路文章：來飽寶家ba 2021-12 左營綠園道大地遊戲場",
+   "url": "https://baofamily.tw/blog/post/561389614",
+   "kind": "article"
+  },
+  "storm-2021-greenway": {
+   "label": "新聞：風傳媒 2021-12 左營園道遊戲場正式啟用",
+   "url": "https://www.storm.mg/article/4110306",
+   "kind": "news"
+  },
+  "bao-2023-lotus": {
+   "label": "網路文章：來飽寶家ba 2023-10 蓮池潭兒童公園",
+   "url": "https://baofamily.tw/blog/post/464728094",
+   "kind": "article"
+  },
+  "guliufish-2022-wenshan4": {
+   "label": "網路文章：咕溜魚 2022-02 鳳山文山特區4號公園",
+   "url": "https://guliufish.com/blog/post/wenshan-4-park",
+   "kind": "article"
+  },
+  "dpm2bb-2022-wenshan4": {
+   "label": "網路文章：dpm2bb.com 2022-01 鳳山文山特區公園（飛機公園）",
+   "url": "https://dpm2bb.com/2022-71/",
+   "kind": "article"
+  },
+  "poopy-2023-lianxing": {
+   "label": "網路文章：哈囉我是噗比媽 2023-09 三民聯興公園（2026-10 更新）",
+   "url": "https://www.happypoopyland.com/lianxing-park",
+   "kind": "article"
   }
  },
  "labels": {
@@ -3571,19 +3691,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有好幾條溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "沙坑旁有鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -3622,22 +3742,22 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有天車雲朵網和健體攀爬區",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有下方鋪軟墊的抱石攀岩場",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "storm-2026-familypark",
+     "note": "舊的門型天車改造成攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -3664,10 +3784,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "雲朵彈跳床旁有沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -3676,10 +3796,10 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有親水降溫設施，開放時間依季節和天氣調整",
+     "at": "2026-10-23"
     },
     "water_pump": {
      "v": "u",
@@ -3688,16 +3808,16 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有可以多人一起玩的雲朵彈跳床，要脫鞋",
+     "at": "2026-10-23"
     },
     "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有設交通號誌的滑步車道和 Pump Track 坡道場",
+     "at": "2026-10-23"
     },
     "open_lawn": {
      "v": "u",
@@ -3706,10 +3826,10 @@
      "at": null
     },
     "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有設防護網的球類運動場",
+     "at": "2026-10-23"
     },
     "skatepark": {
      "v": "u",
@@ -3760,10 +3880,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "部分遊戲區有頂棚，可以減少日曬",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -3790,10 +3910,10 @@
      "at": null
     },
     "food": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-familypark",
+     "note": "有美食市集和舊車廂改成的餐廳",
+     "at": "2026-10-23"
     },
     "inclusive": {
      "v": "u",
@@ -3836,19 +3956,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 4 處遊戲區：兒童遊戲場、都會公園兒童遊戲區、都會公園兒童遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 4 處遊戲區：兒童遊戲場、都會公園兒童遊戲區、都會公園兒童遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "時間之鳥遊戲塔有三條水管溜滑梯和一座磨石子溜滑梯，另有小木屋造型的迷你溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "共有七組鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -3857,10 +3977,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-metro",
+     "note": "有一字、雙人和鳥巢鞦韆",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -3869,10 +3989,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-metro",
+     "note": "有可以多人一起玩的蹺蹺板",
+     "at": "2026-10-23"
     },
     "spring_rider": {
      "v": "u",
@@ -3881,28 +4001,28 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "有可以坐進去被推著轉的旋轉圓盤",
+     "at": "2026-10-23"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-metro",
+     "note": "有接近垂直的大型攀爬架",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-metro",
+     "note": "主塔有攀岩",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "塔外有波浪型攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -3917,10 +4037,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "爬到遊戲塔第二層後可以鑽鑽籠往上",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -3953,22 +4073,22 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "有可以彈得很高的彈跳網",
+     "at": "2026-10-23"
     },
     "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-metro",
+     "note": "停車場附近有滑步車場地",
+     "at": "2026-10-23"
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "有很大的森林綠地，可以鋪野餐墊",
+     "at": "2026-10-23"
     },
     "ball_court": {
      "v": "u",
@@ -4007,10 +4127,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "園區有廁所",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -4061,10 +4181,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-metro",
+     "note": "主要遊具是時間之鳥共融遊戲塔",
+     "at": "2026-10-23"
     }
    },
    "parking": {
@@ -4101,19 +4221,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "有飛機溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "有一座鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -4146,16 +4266,16 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "有旋轉架",
+     "at": "2026-10-23"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "機身下方有波浪狀攀爬區",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
      "v": "u",
@@ -4164,16 +4284,16 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "有煙霧造型的繩網可以攀爬",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "沙坑裡有平衡木",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -4182,10 +4302,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "有鑽籠",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -4194,10 +4314,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2026-youchang",
+     "note": "有護欄圍起來的沙坑，旁邊有水龍頭",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -4218,10 +4338,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2025-youchang",
+     "note": "有彈跳床（2026 年的文章寫彈跳網已經被玩壞）",
+     "at": "2026-10-23"
     },
     "pushbike": {
      "v": "u",
@@ -4272,10 +4392,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2025-youchang",
+     "note": "園區兩邊各有一處廁所",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -5426,19 +5546,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2019-weiwuying",
+     "note": "沙坑裡和大型遊具上有溜滑梯（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "storm-2019-weiwuying",
+     "note": "有鞦韆（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -5447,10 +5567,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2019-weiwuying",
+     "note": "有鳥巢鞦韆（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -5459,10 +5579,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-parks",
+     "note": "有大人小孩可以一起玩的大型蹺蹺板",
+     "at": "2026-10-23"
     },
     "spring_rider": {
      "v": "u",
@@ -5477,28 +5597,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2019-weiwuying",
+     "note": "有攀爬架和三角錐攀爬網（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-parks",
+     "note": "有彩色的繩索攀爬牆",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2019-weiwuying",
+     "note": "有三角錐攀爬網（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "storm-2019-weiwuying",
+     "note": "有平衡木（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -5507,10 +5627,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "storm-2019-weiwuying",
+     "note": "有可以捉迷藏的管子山洞（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -5519,10 +5639,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-parks",
+     "note": "有彎曲成月牙狀的沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -5573,16 +5693,16 @@
      "at": null
     },
     "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-parks",
+     "note": "有連續單槓",
+     "at": "2026-10-23"
     },
     "music": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2019-weiwuying",
+     "note": "傳聲筒可以敲出不同音色（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "chalk_wall": {
      "v": "u",
@@ -5603,16 +5723,16 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2019-weiwuying",
+     "note": "沙坑旁有洗手台（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "footwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2019-weiwuying",
+     "note": "沙坑旁有洗腳台（2019 年的資料）",
+     "at": "2026-10-23"
     },
     "shade": {
      "v": "u",
@@ -5651,10 +5771,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "storm-2019-weiwuying",
+     "note": "有無障礙遊具、無障礙鏟沙器和點字告示牌（2019 年的資料）",
+     "at": "2026-10-23"
     }
    },
    "parking": {
@@ -7016,13 +7136,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "幼齡遊戲場有溜滑梯（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "swing": {
      "v": "u",
@@ -7049,10 +7169,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "有四人蹺蹺板，幼齡區也有蹺蹺板（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "spring_rider": {
      "v": "u",
@@ -7067,28 +7187,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "有 3 公尺高、結合攀爬網的平台（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "有攀岩板（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "有攀爬網（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "山訓區有木樁和平衡木（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -7109,10 +7229,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "有圍欄圍起來的沙坑（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -7181,22 +7301,22 @@
      "at": null
     },
     "toddler_zone": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "有地板是軟墊的幼齡遊戲場（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "有廁所（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-fushan",
+     "note": "沙坑旁有洗手台（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
@@ -7811,19 +7931,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "有 5 公尺高的貓頭鷹遊戲塔溜滑梯，另有兩種高度的滑梯和給小小孩的簡易滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "有可以 360 度擺盪的鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -7856,28 +7976,28 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "有旋轉的共融設施",
+     "at": "2026-10-23"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "山訓設施可以攀爬",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "山訓設施有攀岩",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "攻頂要經過網繩通道",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -7904,10 +8024,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "有圍欄圍起來的沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -7916,10 +8036,10 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "有花灑戲水區，每天照時刻表噴水",
+     "at": "2026-10-23"
     },
     "water_pump": {
      "v": "u",
@@ -7928,10 +8048,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "有彈跳床",
+     "at": "2026-10-23"
     },
     "pushbike": {
      "v": "u",
@@ -7988,10 +8108,10 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "沙坑旁有貓頭鷹造型的清洗台",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
@@ -8036,10 +8156,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-central",
+     "note": "有旋轉共融設施",
+     "at": "2026-10-23"
     }
    },
    "parking": {
@@ -8606,19 +8726,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-greenway",
+     "note": "有不鏽鋼隧道式滑梯和三道磨石子滑梯（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-greenway",
+     "note": "有一字型鞦韆（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -8627,10 +8747,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-greenway",
+     "note": "有鳥巢鞦韆（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -8651,10 +8771,10 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-greenway",
+     "note": "有兩種高度和轉速的旋轉設施（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "climbing": {
      "v": "u",
@@ -8669,10 +8789,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2021-greenway",
+     "note": "有 4 公尺高的攀爬網（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -8735,10 +8855,10 @@
      "at": null
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "storm-2021-greenway",
+     "note": "南側有大草坪（2021 年的資料）",
+     "at": "2026-10-23"
     },
     "ball_court": {
      "v": "u",
@@ -9401,19 +9521,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "鳥巢三塔有兩條滑道，山丘上另有可以三、四人並排的磨石子滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2022-aozihdi",
+     "note": "有多種造型的鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -9422,10 +9542,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "共融鞦韆區有鳥巢式鞦韆",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -9452,28 +9572,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "有可以邊爬邊盪的單桿攀爬架",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "可以從攀岩牆爬上溜滑梯",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "三座蛋塔之間用攀爬網相連",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "有平衡木、獨木橋和攀爬木樁",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -9482,10 +9602,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "蛋塔底部有鑽籠",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -9494,22 +9614,22 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "有彩繪鳥蛋沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2022-aozihdi",
+     "note": "沙坑旁有可以站著玩的沙桌",
+     "at": "2026-10-23"
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "有花灑戲水區，4 到 10 月開放",
+     "at": "2026-10-23"
     },
     "water_pump": {
      "v": "u",
@@ -9530,10 +9650,10 @@
      "at": null
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "公園有大樹下的草地，可以野餐",
+     "at": "2026-10-23"
     },
     "ball_court": {
      "v": "u",
@@ -9578,10 +9698,10 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "myjourney-2022-aozihdi",
+     "note": "沙坑旁有清洗區",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
@@ -9590,10 +9710,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "沙坑上方有遮陽棚",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -9626,10 +9746,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2026-aozihdi",
+     "note": "有共融式鞦韆區",
+     "at": "2026-10-23"
     }
    },
    "parking": {
@@ -9666,19 +9786,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：遊樂場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：遊樂場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "有一座內外都是爬網的溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "有親子鞦韆和平板鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -9687,10 +9807,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "鞦韆區有鳥巢鞦韆",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -9711,10 +9831,10 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "有共融轉盤和懸吊轉盤",
+     "at": "2026-10-23"
     },
     "climbing": {
      "v": "u",
@@ -9729,16 +9849,16 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "有橘色環形、高低起伏的攀爬大網",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "有遊戲跳樁區",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -9759,10 +9879,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "有柵欄圍起來的沙池",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -9843,10 +9963,10 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "沙池有沖洗區",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
@@ -9855,10 +9975,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "沙池上方有遮陽棚",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -9891,10 +10011,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ya7-2025-renwu",
+     "note": "有共融式轉盤和共融式鞦韆區",
+     "at": "2026-10-23"
     }
    },
    "parking": {
@@ -11256,19 +11376,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "guliufish-2022-wenshan4",
+     "note": "飛機造型遊具有旋轉和直線滑梯，房屋造型遊具也有滑梯（2022 年的資料）",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "dpm2bb-2022-wenshan4",
+     "note": "有簡單的鞦韆（2022 年的資料）",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -11295,10 +11415,10 @@
      "at": null
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "guliufish-2022-wenshan4",
+     "note": "有汽車和機車造型的搖搖馬（2022 年的資料）",
+     "at": "2026-10-23"
     },
     "spinner": {
      "v": "u",
@@ -11307,10 +11427,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "guliufish-2022-wenshan4",
+     "note": "飛機遊具可以爬繩索，另有體能訓練攀爬設施（2022 年的資料）",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
      "v": "u",
@@ -11319,10 +11439,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "guliufish-2022-wenshan4",
+     "note": "有圓弧格子爬網（2022 年的資料）",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -11379,10 +11499,10 @@
      "at": null
     },
     "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "guliufish-2022-wenshan4",
+     "note": "有可以騎滑步車、腳踏車、直排輪的練習場（2022 年的資料）",
+     "at": "2026-10-23"
     },
     "open_lawn": {
      "v": "u",
@@ -11427,10 +11547,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "dpm2bb-2022-wenshan4",
+     "note": "溜冰場旁的小房子是廁所（2022 年的資料）",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -12051,7 +12171,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 3 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 3 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "u",
@@ -12072,16 +12192,16 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-23"
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "有利用山丘地勢的滑索",
+     "at": "2026-10-23"
     },
     "seesaw": {
      "v": "u",
@@ -12102,28 +12222,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "有大型攀爬架和竹蜻蜓造型的攀爬杆",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "可以攀岩上山丘",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "有三角錐造型的攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "有木製獨木橋",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -12132,10 +12252,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "有可以玩躲貓貓的長水管",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -12144,10 +12264,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "遊具底下鋪沙，可以蓋沙堡",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -12222,10 +12342,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2023-lotus",
+     "note": "兩個遊戲區中間有廁所",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -12581,19 +12701,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有高塔溜滑梯、直線和旋轉水管滑梯、磨石子滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有多種鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -12602,10 +12722,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-water",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-23"
     },
     "zipline": {
      "v": "u",
@@ -12626,16 +12746,16 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有旋轉盤",
+     "at": "2026-10-23"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有大型三角高塔攀爬架",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
      "v": "u",
@@ -12644,16 +12764,16 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "gvm-2023-parks",
+     "note": "有攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有搭配小山丘的平衡木",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -12662,10 +12782,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有可以鑽進去玩躲貓貓的涵管",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -12674,10 +12794,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有圍欄圍起來的沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -12686,28 +12806,28 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有戲水區",
+     "at": "2026-10-23"
     },
     "water_pump": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "戲水區有復古泵浦",
+     "at": "2026-10-23"
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有兩個彈跳床",
+     "at": "2026-10-23"
     },
     "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bao-2025-shidai",
+     "note": "有滑步車場地",
+     "at": "2026-10-23"
     },
     "open_lawn": {
      "v": "u",
@@ -12752,10 +12872,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "gvm-2023-parks",
+     "note": "有滑翔翼造型的廁所",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -12764,16 +12884,16 @@
      "at": null
     },
     "footwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-water",
+     "note": "有洗腳區",
+     "at": "2026-10-23"
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-water",
+     "note": "有遮陽休息區",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -12806,10 +12926,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "storm-2022-shidai",
+     "note": "市府說是全齡、共融式的公園",
+     "at": "2026-10-23"
     }
    },
    "parking": {
@@ -13111,25 +13231,25 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 3 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 3 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "poopy-2023-lianxing",
+     "note": "有獨立一區的幼兒溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "poopy-2023-lianxing",
+     "note": "有平板鞦韆等多種鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "poopy-2023-lianxing",
+     "note": "有小寶寶也能坐的尿布型鞦韆",
+     "at": "2026-10-23"
     },
     "nest_swing": {
      "v": "u",
@@ -13174,10 +13294,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "poopy-2023-lianxing",
+     "note": "有大型網狀攀爬架",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -13234,10 +13354,10 @@
      "at": null
     },
     "pushbike": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "poopy-2023-lianxing",
+     "note": "交通訓練場外圈是有起伏的滑步車道，內圈有紅綠燈和斑馬線",
+     "at": "2026-10-23"
     },
     "open_lawn": {
      "v": "u",
@@ -13276,10 +13396,10 @@
      "at": null
     },
     "toddler_zone": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "poopy-2023-lianxing",
+     "note": "幼兒溜滑梯區和大型設施分開，適合 1、2 歲幼兒",
+     "at": "2026-10-23"
     },
     "toilet": {
      "v": "u",
@@ -13288,10 +13408,10 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "poopy-2023-lianxing",
+     "note": "有親子洗手台",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
