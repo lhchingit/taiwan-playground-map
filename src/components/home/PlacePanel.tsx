@@ -14,14 +14,17 @@ interface Props {
   catalog: AttributeCatalog;
   trip: { origin: Origin; km: number; mode: TravelMode };
   onClose: () => void;
+  /** 直接開啟場地網址時，場地名稱是這一頁的 h1 */
+  headingLevel?: 1 | 2;
 }
 
 /** 首頁的場地詳情：桌機在地圖右側，手機是底部抽屜（CSS .detail） */
-export function PlacePanel({ detail, name, catalog, trip, onClose }: Props) {
-  // 面板打開時，不論焦點在哪裡，按 Esc 都會關閉
+export function PlacePanel({ detail, name, catalog, trip, onClose, headingLevel = 2 }: Props) {
+  const Heading = headingLevel === 1 ? 'h1' : 'h2';
+  // 面板打開時，不論焦點在哪裡，按 Esc 都會關閉；開著對話框（例如登入視窗）時 Esc 只關對話框
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape' && !document.querySelector('dialog[open]')) onClose();
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -55,15 +58,21 @@ export function PlacePanel({ detail, name, catalog, trip, onClose }: Props) {
       </div>
       {typeof detail === 'string' ? (
         <div className="dhead">
-          <h2 id={PANEL_TITLE_ID} tabIndex={-1}>
+          <Heading id={PANEL_TITLE_ID} tabIndex={-1}>
             {name}
-          </h2>
+          </Heading>
           <p className="note" role="status">
             {detail === 'loading' ? '載入中…' : '詳細資料暫時載入失敗，請稍後再試。'}
           </p>
         </div>
       ) : (
-        <PlaceDetailView detail={detail} catalog={catalog} trip={trip} titleId={PANEL_TITLE_ID} />
+        <PlaceDetailView
+          detail={detail}
+          catalog={catalog}
+          trip={trip}
+          titleId={PANEL_TITLE_ID}
+          headingLevel={headingLevel}
+        />
       )}
     </section>
   );

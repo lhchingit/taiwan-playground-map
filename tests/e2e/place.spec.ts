@@ -119,13 +119,35 @@ test.describe('場地頁', () => {
     await expect(page.getByRole('dialog', { name: '登入' })).toBeVisible();
   });
 
-  test('查實際路線：場地頁沒有出發點，只帶目的地', async ({ page }) => {
+  test('查實際路線：直接開啟場地頁也帶入出發點（同首頁面板）', async ({ page }) => {
     await page.goto(LUGUANG);
-    const url = await routeHref(page);
+    const url = await routeHref(panel(page));
     expect(url.origin + url.pathname).toBe('https://www.google.com/maps/dir/');
-    expect(url.searchParams.get('origin')).toBeNull();
+    expect(url.searchParams.get('origin')).toBe(EXAMPLE_ORIGIN);
     expect(url.searchParams.get('destination')).toMatch(/^24\.\d+,120\.\d+$/);
     expect(url.searchParams.get('travelmode')).toBe('driving');
+  });
+
+  test('直接開啟場地頁：顯示地圖與清單，面板打開；關閉後回到縣市地圖', async ({ page }) => {
+    await page.goto(LUGUANG);
+    await expect(panel(page)).toBeVisible();
+    await expect(panel(page).getByRole('heading', { level: 1 })).toHaveText('綠光公園');
+    await expect(page.getByTestId('map')).toBeVisible();
+    await expect(page.getByTestId('marker')).toHaveCount(TOTAL);
+    await expect(page.getByTestId('count')).toHaveText(String(TOTAL));
+    await expect(card(page, 'hsc-luguang-park')).toHaveClass(/sel/);
+
+    await panel(page).getByRole('button', { name: '關閉' }).click();
+    await expect(panel(page)).toHaveCount(0);
+    await expect(page).toHaveURL(/\/hsinchu-city$/);
+    await expect(page.getByTestId('marker')).toHaveCount(TOTAL);
+
+    // 再點別的場地、按上一頁，回到縣市地圖
+    await card(page, 'hsc-hsinchu-park').click();
+    await expect(page).toHaveURL(/\/hsinchu-city\/places\/hsc-hsinchu-park$/);
+    await page.goBack();
+    await expect(page).toHaveURL(/\/hsinchu-city$/);
+    await expect(panel(page)).toHaveCount(0);
   });
 
   test('不存在的場地、網址縣市不符、未上線縣市 → 404', async ({ page }) => {
@@ -169,7 +191,7 @@ test.describe('場地頁', () => {
 test.describe('首頁的詳情面板', () => {
   test.skip(({ isMobile }) => isMobile, '桌機');
 
-  test('點卡片打開面板、網址換成場地頁；上一頁回到原本的篩選；重新整理是場地頁', async ({
+  test('點卡片打開面板、網址換成場地頁；上一頁回到原本的篩選；重新整理仍有地圖與面板', async ({
     page,
   }) => {
     await page.goto('/hsinchu-city?play=sandpit');
@@ -192,7 +214,9 @@ test.describe('首頁的詳情面板', () => {
     await expect(panel(page)).toBeVisible();
     await page.reload();
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('新竹公園');
-    await expect(page.locator('.app')).toHaveCount(0);
+    await expect(panel(page)).toBeVisible();
+    await expect(page.locator('.app')).toHaveCount(1);
+    await expect(page.getByTestId('marker')).toHaveCount(TOTAL);
   });
 
   test('卡片是連結，搜尋引擎與「開新分頁」都能用', async ({ page }) => {

@@ -35,6 +35,8 @@ export interface PlaceMapProps {
   focus: { id: string; seq: number } | null;
   /** 回報新場地時標的點 */
   pin?: Origin | null;
+  /** 直接開啟場地網址時：地圖一開始停在這裡，不縮放到全部結果 */
+  initialFocus?: Origin;
 }
 
 export default function PlaceMap(props: PlaceMapProps) {
@@ -70,6 +72,9 @@ export default function PlaceMap(props: PlaceMapProps) {
     return () => clearTimeout(t);
   }, []);
 
+  // 桌機的詳情面板在右側，把場地往左移，避免被面板蓋住（同原型）
+  const panelOffset = (): [number, number] => (window.innerWidth > 820 ? [-190, 0] : [0, 0]);
+
   function fitAll() {
     const m = map.current;
     if (!m) return;
@@ -96,9 +101,7 @@ export default function PlaceMap(props: PlaceMapProps) {
     const id = latest.current.focus?.id;
     const p = latest.current.results.find((r) => r.id === id);
     if (!m || !p) return;
-    // 桌機的詳情面板在右側，把場地往左移，避免被面板蓋住（同原型）
-    const offset: [number, number] = window.innerWidth > 820 ? [-190, 0] : [0, 0];
-    m.flyTo({ center: [p.lng, p.lat], zoom: Math.max(m.getZoom(), 14.5), offset });
+    m.flyTo({ center: [p.lng, p.lat], zoom: Math.max(m.getZoom(), 14.5), offset: panelOffset() });
   }, [focusSeq]);
 
   return (
@@ -113,15 +116,28 @@ export default function PlaceMap(props: PlaceMapProps) {
         <MapGL
           key={generation}
           ref={map}
-          initialViewState={{ longitude: props.center.lng, latitude: props.center.lat, zoom: 12 }}
+          initialViewState={
+            props.initialFocus
+              ? { longitude: props.initialFocus.lng, latitude: props.initialFocus.lat, zoom: 15 }
+              : { longitude: props.center.lng, latitude: props.center.lat, zoom: 12 }
+          }
           style={{ position: 'absolute', inset: 0 }}
           mapStyle={fallback ? FALLBACK_STYLE : VECTOR_STYLES[color]}
           attributionControl={{ compact: true, customAttribution: OSM_ATTRIBUTION }}
           cursor={props.picking ? 'crosshair' : undefined}
           onLoad={() => {
+            const first = !loaded.current;
             loaded.current = true;
             setReady(true);
-            fitAll();
+            const f = props.initialFocus;
+            if (first && f) {
+              map.current?.easeTo({
+                center: [f.lng, f.lat],
+                zoom: 15,
+                offset: panelOffset(),
+                duration: 0,
+              });
+            } else fitAll();
           }}
           onError={(e) => {
             // 只有主要圖磚從來沒載入成功時才改用備援；被中斷的請求（換頁、重建地圖）不算失敗
