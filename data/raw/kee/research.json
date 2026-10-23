@@ -1,0 +1,81 @@
+{
+ "verified_at": "2026-10-23",
+ "sources": {
+  "bunnyann-2026-nuannuan": {
+   "label": "網路文章：bunnyann.tw 2026-04 基隆暖暖運動公園",
+   "url": "https://bunnyann.tw/nuannuan-0422/",
+   "kind": "article"
+  },
+  "gofunit-keelung": {
+   "label": "網路文章：gofunit 基隆親子景點（2025-12-30 更新）",
+   "url": "https://gofunit.com/%e5%9f%ba%e9%9a%86%e8%a6%aa%e5%ad%90%e6%99%af%e9%bb%9e/",
+   "kind": "article"
+  },
+  "bunnyann-2026-hope": {
+   "label": "網路文章：bunnyann.tw 2026-07 基隆中正公園希望之丘",
+   "url": "https://bunnyann.tw/gohope-0502/",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "kee-osm-n4943448982": {
+   "slide": [
+    "y",
+    "bunnyann-2026-nuannuan",
+    "有戶外長溜滑梯，包括磨石子溜滑梯和很長的水管溜滑梯"
+   ],
+   "rope_net": [
+    "y",
+    "bunnyann-2026-nuannuan",
+    "有挑戰性高的攀爬網"
+   ],
+   "tunnel": [
+    "y",
+    "bunnyann-2026-nuannuan",
+    "有水管造型的通道"
+   ],
+   "sandpit": [
+    "y",
+    "bunnyann-2026-nuannuan",
+    "水管溜滑梯下方是沙坑"
+   ],
+   "suspension_bridge": [
+    "y",
+    "bunnyann-2026-nuannuan",
+    "公園裡有吊橋"
+   ],
+   "toilet": [
+    "y",
+    "bunnyann-2026-nuannuan",
+    "遊戲區旁邊就有廁所"
+   ],
+   "shade": [
+    "n",
+    "bunnyann-2026-nuannuan",
+    "文章寫遊戲區和家長座位區都沒有遮陽"
+   ],
+   "open_lawn": [
+    "y",
+    "gofunit-keelung",
+    "公園有大草地，可以野餐"
+   ],
+   "ball_court": [
+    "y",
+    "gofunit-keelung",
+    "公園裡有籃球場和棒球場"
+   ]
+  },
+  "kee-osm-w1486210997": {
+   "slide": [
+    "y",
+    "bunnyann-2026-hope",
+    "大水塔裡有旋轉溜滑梯，另有很寬的磨石子溜滑梯"
+   ],
+   "toilet": [
+    "y",
+    "bunnyann-2026-hope",
+    "親子公園旁邊有公廁"
+   ]
+  }
+ }
+}
