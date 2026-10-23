@@ -120,7 +120,7 @@ export async function getPlaceDetail(id: string): Promise<PlaceDetail | null> {
     sb
       .from('places')
       .select(
-        'address, hours, surface, summary, area_ha, stay_source, coord_source, hours_source, hours_verified_at, surface_source, surface_verified_at, status_source, status_verified_at, status_until, status_note, listing_source, listing_verified_at',
+        'address, hours, surface, summary, area_ha, stay_source, coord_source, hours_source, hours_verified_at, surface_source, surface_verified_at, fee_source, fee_verified_at, age_source, age_verified_at, status_source, status_verified_at, status_until, status_note, listing_source, listing_verified_at',
       )
       .eq('id', id)
       .maybeSingle(),

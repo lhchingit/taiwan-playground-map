@@ -1,5 +1,6 @@
 // 「我的貢獻」頁的中文用字（純函式，有單元測試）
 import type { Json } from '@/types/database';
+import { FIELD_OPTIONS, fieldValueText } from '@/lib/suggestions/form';
 
 export type SuggestionStatus = 'pending' | 'accepted' | 'rejected' | 'withdrawn';
 
@@ -28,7 +29,9 @@ export const KIND_LABEL: Record<string, string> = {
 };
 
 const VALUE_LABEL: Record<string, string> = { y: '有', n: '沒有', u: '不確定' };
-const FIELD_LABEL: Record<string, string> = { hours: '開放時間', surface: '地面材質' };
+const FIELD_LABEL: Record<string, string> = Object.fromEntries(
+  FIELD_OPTIONS.map((o) => [o.field, o.label]),
+);
 const PARKING_TYPE: Record<string, string> = {
   lot: '停車場',
   street: '路邊停車',
@@ -62,7 +65,7 @@ export function suggestionSummary(
     }
     case 'field': {
       const field = str(p, 'field');
-      return `${FIELD_LABEL[field] ?? field}：${str(p, 'value')}`;
+      return `${FIELD_LABEL[field] ?? field}：${fieldValueText(field, str(p, 'value'))}`;
     }
     case 'closure': {
       const until = str(p, 'until');

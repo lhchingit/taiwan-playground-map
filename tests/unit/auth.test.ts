@@ -76,6 +76,8 @@ describe('我的貢獻的用字', () => {
     expect(suggestionSummary('field', { field: 'hours', value: '06:00–22:00' })).toBe(
       '開放時間：06:00–22:00',
     );
+    expect(suggestionSummary('field', { field: 'fee', value: 'free' })).toBe('費用：免費');
+    expect(suggestionSummary('field', { field: 'age', value: '3-12' })).toBe('適合年齡：3–12 歲');
     expect(suggestionSummary('closure', { reason: '遊具維修中', until: '2026-12-31' })).toBe(
       '遊具維修中，預計 2026-12-31 恢復',
     );

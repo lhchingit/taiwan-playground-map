@@ -165,17 +165,26 @@ describe('pnpm seed', () => {
     );
   });
 
-  it('重新匯入不覆蓋使用者回報（已審核）的開放時間、地面材質、狀態', async () => {
+  it('重新匯入不覆蓋使用者回報（已審核）的開放時間、地面材質、費用、適合年齡、狀態', async () => {
     const target = seed.places[0]!;
     const [before] =
-      await sql`SELECT hours, surface, status, updated_at FROM places WHERE id = ${target.id}`;
+      await sql`SELECT hours, surface, fee, age_min, age_max, status, updated_at FROM places WHERE id = ${target.id}`;
     await sql`UPDATE places SET hours = '使用者時間', hours_source = 'user', surface = '使用者地面', surface_source = 'user',
+                               fee = 'paid', fee_source = 'user', age_min = 7, age_max = 9, age_source = 'user',
                                status = 'maintenance', status_source = 'user'
               WHERE id = ${target.id}`;
     try {
       await runSeed(sql, seed);
-      const [after] = await sql`SELECT hours, surface, status FROM places WHERE id = ${target.id}`;
-      expect(after).toEqual({ hours: '使用者時間', surface: '使用者地面', status: 'maintenance' });
+      const [after] =
+        await sql`SELECT hours, surface, fee, age_min, age_max, status FROM places WHERE id = ${target.id}`;
+      expect(after).toEqual({
+        hours: '使用者時間',
+        surface: '使用者地面',
+        fee: 'paid',
+        age_min: 7,
+        age_max: 9,
+        status: 'maintenance',
+      });
       // 再匯入一次也不會再更新（不會每次都改 updated_at）
       const [t1] = await sql`SELECT updated_at FROM places WHERE id = ${target.id}`;
       await runSeed(sql, seed);
@@ -183,7 +192,9 @@ describe('pnpm seed', () => {
       expect(t2?.updated_at).toEqual(t1?.updated_at);
     } finally {
       await sql`UPDATE places SET hours = ${before!.hours}, surface = ${before!.surface}, status = ${before!.status},
+                                 fee = ${before!.fee}, age_min = ${before!.age_min}, age_max = ${before!.age_max},
                                  hours_source = NULL, surface_source = NULL, status_source = NULL,
+                                 fee_source = NULL, age_source = NULL,
                                  updated_at = ${before!.updated_at}
                 WHERE id = ${target.id}`;
     }

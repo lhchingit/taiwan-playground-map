@@ -93,6 +93,31 @@ describe('修改紀錄的文字', () => {
     ).toBe('24 小時');
   });
 
+  it('費用、適合年齡：值換成中文，沒有值是「沒有資料」', () => {
+    const row = {
+      old_source: null,
+      new_source: 'user',
+      old_until: null,
+      new_until: null,
+      changed_by: 'u1',
+    };
+    const fee = fieldHistoryText(
+      { ...row, field: 'fee', old_value: 'free', new_value: 'paid' },
+      source,
+      names,
+    );
+    expect(fee.item).toBe('費用');
+    expect(fee.from).toBe('免費');
+    const age = fieldHistoryText(
+      { ...row, field: 'age', old_value: null, new_value: '3-12' },
+      source,
+      names,
+    );
+    expect(age.item).toBe('適合年齡');
+    expect(age.from).toBe('沒有資料');
+    expect(age.to).toMatch(/^3–12 歲/);
+  });
+
   it('修改者：匯入、暱稱、已刪除的帳號', () => {
     expect(changedBy(null, names)).toBe('匯入');
     expect(changedBy('u1', names)).toBe('小明爸爸');

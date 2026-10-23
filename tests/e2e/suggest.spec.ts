@@ -145,6 +145,17 @@ test('停車、基本資料、封閉或維修', async ({ page }) => {
   await submit(page);
   await expect(page.getByText('已收到你的修正建議')).toBeVisible();
 
+  // 適合年齡：兩格「__ 歲到 __ 歲」
+  await page.reload();
+  form = await openForm(page);
+  await form.getByRole('button', { name: '基本資料' }).click();
+  await form.getByLabel('欄位').selectOption('age');
+  await expect(form.getByLabel('內容')).toHaveCount(0);
+  await form.getByLabel('最小歲數').fill('3');
+  await form.getByLabel('最大歲數').fill('12');
+  await submit(page);
+  await expect(page.getByText('已收到你的修正建議')).toBeVisible();
+
   await page.reload();
   form = await openForm(page);
   await form.getByRole('button', { name: '封閉或維修' }).click();
@@ -160,6 +171,7 @@ test('停車、基本資料、封閉或維修', async ({ page }) => {
       status: 'pending',
     },
     { kind: 'field', payload: { field: 'hours', value: '06:00–22:00' }, status: 'pending' },
+    { kind: 'field', payload: { field: 'age', value: '3-12' }, status: 'pending' },
     { kind: 'closure', payload: { reason: '遊具維修中', until: '2026-12-31' }, status: 'pending' },
   ]);
 });

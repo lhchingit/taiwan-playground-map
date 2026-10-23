@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseSuggestion, submitErrorMessage } from '@/lib/suggestions/form';
+import { fieldValueText, parseSuggestion, submitErrorMessage } from '@/lib/suggestions/form';
 
 const KEYS = ['footwash', 'slide', 'toilet'];
 const parse = (f: Record<string, string>) => parseSuggestion(f, KEYS);
@@ -85,6 +85,43 @@ describe('基本資料', () => {
     expect(parse({ kind: 'field', field: 'surface', field_value: '人工草皮' })).toMatchObject({
       ok: true,
     });
+  });
+
+  it('費用：免費或收費', () => {
+    expect(parse({ kind: 'field', field: 'fee', fee_value: 'paid' })).toEqual({
+      ok: true,
+      kind: 'field',
+      payload: { field: 'fee', value: 'paid' },
+    });
+    expect(parse({ kind: 'field', field: 'fee', fee_value: 'u' })).toMatchObject({
+      ok: false,
+      error: '請選擇「免費」或「收費」。',
+    });
+  });
+
+  it('適合年齡：兩格組成「最小-最大」', () => {
+    expect(parse({ kind: 'field', field: 'age', age_min: ' 03 ', age_max: '12' })).toEqual({
+      ok: true,
+      kind: 'field',
+      payload: { field: 'age', value: '3-12' },
+    });
+    expect(parse({ kind: 'field', field: 'age', age_min: '0', age_max: '18' })).toMatchObject({
+      ok: true,
+    });
+    const err = (age_min: string, age_max: string) =>
+      (parse({ kind: 'field', field: 'age', age_min, age_max }) as { error?: string }).error;
+    expect(err('', '12')).toBe('請填寫適合年齡的最小和最大歲數。');
+    expect(err('2.5', '12')).toBe('年齡要填整數。');
+    expect(err('-1', '12')).toBe('年齡要填整數。');
+    expect(err('3', '19')).toBe('年齡最多填到 18 歲。');
+    expect(err('12', '3')).toBe('最小年齡不能大於最大年齡。');
+  });
+
+  it('值給人看的文字', () => {
+    expect(fieldValueText('fee', 'free')).toBe('免費');
+    expect(fieldValueText('fee', 'paid')).toBe('收費');
+    expect(fieldValueText('age', '3-12')).toBe('3–12 歲');
+    expect(fieldValueText('hours', '06:00–22:00')).toBe('06:00–22:00');
   });
 
   it('其他欄位、空白內容不行', () => {

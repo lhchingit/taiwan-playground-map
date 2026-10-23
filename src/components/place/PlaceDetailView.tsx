@@ -138,7 +138,10 @@ export function PlaceDetailView({
             </>
           )}
           <dt>適合年齡</dt>
-          <dd>{ageText(d)}</dd>
+          <dd>
+            {ageText(d)}
+            <FieldSource field={d.ageRef} />
+          </dd>
           <dt>建議停留</dt>
           <dd>
             {stayText(d.stay)}
@@ -154,7 +157,10 @@ export function PlaceDetailView({
             {d.areaHa !== null && `（${d.areaHa} 公頃）`}
           </dd>
           <dt>費用</dt>
-          <dd>{feeText(d.fee)}</dd>
+          <dd>
+            {feeText(d.fee)}
+            <FieldSource field={d.feeRef} />
+          </dd>
           <dt>開放時間</dt>
           <dd>
             {d.hours ?? '未知'}

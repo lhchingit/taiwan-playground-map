@@ -1,4 +1,5 @@
 // 修改紀錄頁的文字整理（純函式，有單元測試）：值 → 有／無／未知、來源 id → 名稱、修改者 → 暱稱或「匯入」。
+import { FIELD_OPTIONS, fieldValueText } from '@/lib/suggestions/form';
 
 const TRI: Record<string, string> = { y: '有', n: '無', u: '未知' };
 const STATUS: Record<string, string> = {
@@ -7,7 +8,10 @@ const STATUS: Record<string, string> = {
   maintenance: '維修中',
   closed: '已封閉',
 };
-const FIELD: Record<string, string> = { hours: '開放時間', surface: '地面材質', status: '狀態' };
+const FIELD: Record<string, string> = {
+  ...Object.fromEntries(FIELD_OPTIONS.map((o) => [o.field, o.label])),
+  status: '狀態',
+};
 
 export interface HistoryText {
   item: string;
@@ -69,7 +73,8 @@ export function fieldHistoryText(
 ): HistoryText {
   const status = h.field === 'status';
   const show = (v: string | null, until: string | null) => {
-    if (!status || v === null) return v;
+    if (v === null) return v;
+    if (!status) return fieldValueText(h.field, v);
     return `${STATUS[v] ?? v}${until ? `（預計 ${until} 恢復）` : ''}`;
   };
   return {

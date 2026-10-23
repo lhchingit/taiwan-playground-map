@@ -6,7 +6,9 @@ import { type ReactNode, startTransition, useActionState, useEffect, useId, useS
 import { type ReportState, submitSuggestion } from '@/app/report/actions';
 import { refreshSession } from '@/components/auth/useSession';
 import {
+  AGE_MAX,
   FIELD_OPTIONS,
+  type FieldName,
   LIMITS,
   SUGGESTION_KINDS,
   type SuggestionKind,
@@ -46,6 +48,8 @@ export function ReportForm(props: {
   const [kind, setKind] = useState<SuggestionKind>('attribute');
   const [value, setValue] = useState<'y' | 'n'>('y');
   const [parkingType, setParkingType] = useState('lot');
+  const [field, setField] = useState<FieldName>('hours');
+  const [fee, setFee] = useState<'free' | 'paid'>('free');
   // 重複回報時撤回了那一筆（decisions D29）：提示可以重新送出
   const [withdrawn, setWithdrawn] = useState<number | null>(null);
 
@@ -181,7 +185,12 @@ export function ReportForm(props: {
         <>
           <Field label="欄位">
             {(id) => (
-              <select id={id} name="field">
+              <select
+                id={id}
+                name="field"
+                value={field}
+                onChange={(e) => setField(e.target.value as FieldName)}
+              >
                 {FIELD_OPTIONS.map((o) => (
                   <option key={o.field} value={o.field}>
                     {o.label}
@@ -190,17 +199,55 @@ export function ReportForm(props: {
               </select>
             )}
           </Field>
-          <Field label="內容">
-            {(id) => (
+          {field === 'fee' && (
+            <>
+              <input type="hidden" name="fee_value" value={fee} />
+              <div className="seg" role="group" aria-label="費用">
+                {(['free', 'paid'] as const).map((v) => (
+                  <button key={v} type="button" aria-pressed={fee === v} onClick={() => setFee(v)}>
+                    {v === 'free' ? '免費' : '收費'}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+          {field === 'age' && (
+            <div className="age-range" role="group" aria-label="適合年齡">
               <input
-                id={id}
-                name="field_value"
+                name="age_min"
+                aria-label="最小歲數"
+                type="number"
+                min={0}
+                max={AGE_MAX}
+                inputMode="numeric"
                 required
-                maxLength={LIMITS.value}
-                placeholder="例如：06:00–22:00，或：人工草皮、PU 地墊"
               />
-            )}
-          </Field>
+              <span>歲到</span>
+              <input
+                name="age_max"
+                aria-label="最大歲數"
+                type="number"
+                min={0}
+                max={AGE_MAX}
+                inputMode="numeric"
+                required
+              />
+              <span>歲</span>
+            </div>
+          )}
+          {(field === 'hours' || field === 'surface') && (
+            <Field label="內容">
+              {(id) => (
+                <input
+                  id={id}
+                  name="field_value"
+                  required
+                  maxLength={LIMITS.value}
+                  placeholder={field === 'hours' ? '例如：06:00–22:00' : '例如：人工草皮、PU 地墊'}
+                />
+              )}
+            </Field>
+          )}
         </>
       )}
 
