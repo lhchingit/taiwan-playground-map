@@ -1,0 +1,732 @@
+{
+ "verified_at": "2026-10-23",
+ "sources": {
+  "natsu-2025-bearmonkey": {
+   "label": "網路文章：小菲親子玩樂生活 2025-06 新北大都會公園熊猴森樂園",
+   "url": "https://natsuphil.com/new-taipei/new-taipei-park/",
+   "kind": "article"
+  },
+  "bobowin-2026-bearmonkey": {
+   "label": "網路文章：寶寶溫旅行親子生活 2026-06 三重熊猴森樂園",
+   "url": "https://bobowin.blog/bear-monkey-park/",
+   "kind": "article"
+  },
+  "natsu-2026-14park": {
+   "label": "網路文章：小菲親子玩樂生活 2026-07 新店十四張歷史公園",
+   "url": "https://natsuphil.com/new-taipei/14-park/",
+   "kind": "article"
+  },
+  "natsu-2025-13park": {
+   "label": "網路文章：小菲親子玩樂生活 2025-04 八里十三行文化公園",
+   "url": "https://natsuphil.com/new-taipei/13-park/",
+   "kind": "article"
+  },
+  "natsu-2025-park4": {
+   "label": "網路文章：小菲親子玩樂生活 2025-04 中和四號公園（八二三紀念公園）",
+   "url": "https://natsuphil.com/new-taipei/number-four-park/",
+   "kind": "article"
+  },
+  "natsu-2025-yongning": {
+   "label": "網路文章：小菲親子玩樂生活 2025-04 土城永寧廣場親子跑酷遊戲場",
+   "url": "https://natsuphil.com/uncategorized/yongning-parkour/",
+   "kind": "article"
+  },
+  "natsu-2025-wenzaidi": {
+   "label": "網路文章：小菲親子玩樂生活 2025-06 新莊塭仔底濕地公園",
+   "url": "https://natsuphil.com/new-taipei/color-water-park/",
+   "kind": "article"
+  },
+  "natsu-2023-duck": {
+   "label": "網路文章：小菲親子玩樂生活 2023-12 三重鴨鴨公園",
+   "url": "https://natsuphil.com/new-taipei/duck-park/",
+   "kind": "article"
+  },
+  "natsu-2025-bali": {
+   "label": "網路文章：小菲親子玩樂生活 2025-04 八里左岸公園翠堡遊戲場",
+   "url": "https://natsuphil.com/new-taipei/bali-show/",
+   "kind": "article"
+  },
+  "natsu-2026-lion": {
+   "label": "網路文章：小菲親子玩樂生活 2026-09 五股獅子頭山水匯集廣場兒童遊戲場",
+   "url": "https://natsuphil.com/new-taipei/lion-park/",
+   "kind": "article"
+  },
+  "natsu-2024-rabbit": {
+   "label": "網路文章：小菲親子玩樂生活 2024-12 新店親子夢遊天地遊戲場",
+   "url": "https://natsuphil.com/new-taipei/rabbit-park/",
+   "kind": "article"
+  },
+  "myjourney-2024-jingho": {
+   "label": "網路文章：可大王愛旅行 2024-06 中和錦和運動公園",
+   "url": "https://myjourney.tw/jing-ho-park/",
+   "kind": "article"
+  },
+  "myjourney-2025-zumeng": {
+   "label": "網路文章：可大王愛旅行 2025-01 林口足夢運動公園",
+   "url": "https://myjourney.tw/linkou-football-park/",
+   "kind": "article"
+  },
+  "myjourney-2025-sunshine": {
+   "label": "網路文章：可大王愛旅行 2025-02 新店陽光運動公園",
+   "url": "https://myjourney.tw/sunshine-sports-park/",
+   "kind": "article"
+  },
+  "yoyo-2018-xingfu": {
+   "label": "網路文章：1＋1＝3 玩學樂生活（小Yo之家）2018-04 三重幸福水漾公園",
+   "url": "https://yoyoman822.pixnet.net/blog/posts/5066669093",
+   "kind": "article"
+  },
+  "tiss-2020-music": {
+   "label": "網路文章：TISS玩味食尚 2020-12 板橋音樂公園",
+   "url": "https://tisshuang.com/blog/post/musicpark",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "nwt-osm-w925452339": {
+   "slide": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "有磨石子、彩虹六道、滾輪、水管、山洞造型和約 7 公尺高的樹幹鋼管溜滑梯等多座溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "有台灣黑熊造型的鞦韆組，另有輪椅鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "有樹幹攀爬區和大樹攀爬牆"
+   ],
+   "climbing_wall": [
+    "y",
+    "natsu-2025-bearmonkey",
+    "有梅花鹿攀爬牆和綠色攀繩牆"
+   ],
+   "rope_net": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "有台灣藍鵲、櫻花鉤吻鮭等造型的攀爬網"
+   ],
+   "suspension_bridge": [
+    "y",
+    "natsu-2025-bearmonkey",
+    "有兒童走的大樹繩索吊橋"
+   ],
+   "zipline": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "有樹蛙滑索（5 歲以上）和環形溜索"
+   ],
+   "trampoline": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "瀑布滑草場區有荷葉蹦蹦床"
+   ],
+   "toilet": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "園區有流動廁所"
+   ],
+   "inclusive": [
+    "y",
+    "bobowin-2026-bearmonkey",
+    "有輪椅鞦韆，溜滑梯旁有無障礙空間"
+   ]
+  },
+  "nwt-osm-w548596659": {
+   "slide": [
+    "y",
+    "natsu-2026-14park",
+    "穀倉遊戲塔有旋轉滑梯和磨石子滑梯"
+   ],
+   "swing": [
+    "y",
+    "natsu-2026-14park",
+    "有共融鞦韆和給身障孩子的鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "natsu-2026-14park",
+    "有蹺蹺板"
+   ],
+   "climbing": [
+    "y",
+    "natsu-2026-14park",
+    "有原木挑戰區"
+   ],
+   "rope_net": [
+    "y",
+    "natsu-2026-14park",
+    "穀倉塔中段有大蜘蛛攀爬網"
+   ],
+   "climbing_wall": [
+    "y",
+    "natsu-2026-14park",
+    "塔內有小型攀岩牆"
+   ],
+   "balance": [
+    "y",
+    "natsu-2026-14park",
+    "原木挑戰區有平衡木"
+   ],
+   "tunnel": [
+    "y",
+    "natsu-2026-14park",
+    "滑梯中間有躲貓貓涵洞"
+   ],
+   "sandpit": [
+    "y",
+    "natsu-2026-14park",
+    "穀倉遊戲塔旁有大沙池，有半遮陽"
+   ],
+   "water_play": [
+    "y",
+    "natsu-2026-14park",
+    "夏季開放戲水區，有水汲桶、水圳和水桶瀑布"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2026-14park",
+    "大廣場附近有公共廁所"
+   ],
+   "footwash": [
+    "y",
+    "natsu-2026-14park",
+    "有洗腳區和沖沙設備"
+   ],
+   "open_lawn": [
+    "y",
+    "natsu-2026-14park",
+    "有可以玩球、吹泡泡的草原區"
+   ],
+   "inclusive": [
+    "y",
+    "natsu-2026-14park",
+    "有共融鞦韆"
+   ]
+  },
+  "nwt-osm-w505942279": {
+   "slide": [
+    "y",
+    "natsu-2025-13park",
+    "有陶罐造型的三道磨石子溜滑梯，另有幼兒溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "natsu-2025-13park",
+    "有共融式鞦韆和一般鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "natsu-2025-13park",
+    "有兒童蹺蹺板"
+   ],
+   "climbing": [
+    "y",
+    "natsu-2025-13park",
+    "有人面陶罐造型的攀爬架"
+   ],
+   "sandpit": [
+    "y",
+    "natsu-2025-13park",
+    "有半遮陽的尋寶沙坑區"
+   ],
+   "trampoline": [
+    "y",
+    "natsu-2025-13park",
+    "有瓢蟲彈跳床"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2025-13park",
+    "有流動廁所"
+   ],
+   "handwash": [
+    "y",
+    "natsu-2025-13park",
+    "沙坑旁有洗手洗腳區"
+   ],
+   "footwash": [
+    "y",
+    "natsu-2025-13park",
+    "沙坑旁有洗手洗腳區"
+   ],
+   "shade": [
+    "y",
+    "natsu-2025-13park",
+    "遊戲場旁有遮陽休憩區"
+   ],
+   "open_lawn": [
+    "y",
+    "natsu-2025-13park",
+    "周邊有可以鋪野餐墊的草皮"
+   ],
+   "inclusive": [
+    "y",
+    "natsu-2025-13park",
+    "有共融式鞦韆"
+   ]
+  },
+  "nwt-osm-n3593631941": {
+   "slide": [
+    "y",
+    "natsu-2025-park4",
+    "有高低兩道的滑梯塔、旋轉滑梯和書本造型滑梯"
+   ],
+   "swing": [
+    "y",
+    "natsu-2025-park4",
+    "有共融鞦韆"
+   ],
+   "spring_rider": [
+    "y",
+    "natsu-2025-park4",
+    "有粉紅搖搖馬"
+   ],
+   "climbing": [
+    "y",
+    "natsu-2025-park4",
+    "綠色樹屋要靠攀爬上去"
+   ],
+   "sandpit": [
+    "y",
+    "natsu-2025-park4",
+    "遊戲塔下是可以玩沙的小礫石區"
+   ],
+   "ball_court": [
+    "y",
+    "natsu-2025-park4",
+    "公園內有球場"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2025-park4",
+    "遊戲場附近有公共廁所"
+   ],
+   "inclusive": [
+    "y",
+    "natsu-2025-park4",
+    "是四號公園共融遊戲場，有共融鞦韆"
+   ]
+  },
+  "nwt-osm-n4785988972": {
+   "slide": [
+    "y",
+    "natsu-2025-yongning",
+    "有鍬形蟲造型的滑梯"
+   ],
+   "climbing": [
+    "y",
+    "natsu-2025-yongning",
+    "有鍬形蟲攀爬架"
+   ],
+   "rope_net": [
+    "y",
+    "natsu-2025-yongning",
+    "可以從攀爬網爬上鍬形蟲遊具"
+   ],
+   "balance": [
+    "y",
+    "natsu-2025-yongning",
+    "有平衡管關卡"
+   ],
+   "inclusive": [
+    "y",
+    "natsu-2025-yongning",
+    "以共融特色遊具為設計目標"
+   ],
+   "toilet": [
+    "n",
+    "natsu-2025-yongning",
+    "文章寫公園沒有廁所"
+   ]
+  },
+  "nwt-osm-n5256705062": {
+   "water_play": [
+    "y",
+    "natsu-2025-wenzaidi",
+    "有彩色隧道噴霧區、濕地噴泉和水舞戲水廣場"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2025-wenzaidi",
+    "戲水區步行約一分鐘有洗手間"
+   ],
+   "footwash": [
+    "y",
+    "natsu-2025-wenzaidi",
+    "有洗腳區"
+   ],
+   "shade": [
+    "y",
+    "natsu-2025-wenzaidi",
+    "休憩區有遮陽"
+   ]
+  },
+  "nwt-osm-w893358834": {
+   "slide": [
+    "y",
+    "natsu-2023-duck",
+    "有鴨鴨造型溜滑梯"
+   ],
+   "pushbike": [
+    "y",
+    "natsu-2023-duck",
+    "有可以騎滑步車的模擬車道"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2023-duck",
+    "有流動廁所"
+   ]
+  },
+  "nwt-osm-w958764620": {
+   "swing": [
+    "y",
+    "natsu-2025-bali",
+    "碉堡區高處有共融式鞦韆，河岸另有鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "natsu-2025-bali",
+    "有原木攀爬組、爬梯組和爬桿"
+   ],
+   "climbing_wall": [
+    "y",
+    "natsu-2025-bali",
+    "有攀岩和攀爬繩索"
+   ],
+   "rope_net": [
+    "y",
+    "natsu-2025-bali",
+    "有翠堡攀爬網"
+   ],
+   "balance": [
+    "y",
+    "natsu-2025-bali",
+    "有獨木橋"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2025-bali",
+    "有公共廁所和流動廁所"
+   ],
+   "footwash": [
+    "y",
+    "natsu-2025-bali",
+    "有洗腳區"
+   ],
+   "inclusive": [
+    "y",
+    "natsu-2025-bali",
+    "有共融式鞦韆"
+   ]
+  },
+  "nwt-osm-w1434561811": {
+   "slide": [
+    "y",
+    "natsu-2026-lion",
+    "有兩座三道溜滑梯"
+   ],
+   "climbing": [
+    "y",
+    "natsu-2026-lion",
+    "有攀爬區"
+   ],
+   "balance": [
+    "y",
+    "natsu-2026-lion",
+    "有平衡木和跳樁"
+   ],
+   "trampoline": [
+    "y",
+    "natsu-2026-lion",
+    "有跳床"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2026-lion",
+    "自行車道旁有流動廁所"
+   ],
+   "footwash": [
+    "y",
+    "natsu-2026-lion",
+    "有洗腳區"
+   ]
+  },
+  "nwt-osm-w1468275886": {
+   "slide": [
+    "y",
+    "natsu-2024-rabbit",
+    "有利用地形坡度的磨石子溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "natsu-2024-rabbit",
+    "有可以坐三個人、會自轉的旋轉兔窩鞦韆"
+   ],
+   "spinner": [
+    "y",
+    "natsu-2024-rabbit",
+    "有蒲公英自轉蝶旋轉遊具"
+   ],
+   "climbing": [
+    "y",
+    "natsu-2024-rabbit",
+    "有高低起伏的小土丘攀爬組"
+   ],
+   "sandpit": [
+    "y",
+    "natsu-2024-rabbit",
+    "有溪潭沙道沙坑"
+   ],
+   "toilet": [
+    "y",
+    "natsu-2024-rabbit",
+    "有廁所，從最遠的溜滑梯走過去約三分鐘"
+   ],
+   "handwash": [
+    "y",
+    "natsu-2024-rabbit",
+    "有可以洗手的沖洗區"
+   ],
+   "open_lawn": [
+    "y",
+    "natsu-2024-rabbit",
+    "有綠波草坪和寬廣的草地"
+   ]
+  },
+  "nwt-osm-n13279218034": {
+   "slide": [
+    "y",
+    "myjourney-2024-jingho",
+    "有和繩網相連的水管溜滑梯和迷你溜滑梯（滾輪溜滑梯已經拆除）"
+   ],
+   "swing": [
+    "y",
+    "myjourney-2024-jingho",
+    "有三座鞦韆，包括雙人鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "myjourney-2024-jingho",
+    "有坡道上的大型攀爬架和迷你攀爬架"
+   ],
+   "rope_net": [
+    "y",
+    "myjourney-2024-jingho",
+    "攀爬架是像蜘蛛網的繩索結構"
+   ],
+   "sandpit": [
+    "y",
+    "myjourney-2024-jingho",
+    "攀爬架底下是沙坑"
+   ],
+   "water_play": [
+    "y",
+    "myjourney-2024-jingho",
+    "有地面噴泉和戲水河道，各有開放時段"
+   ]
+  },
+  "nwt-osm-w1065435326": {
+   "slide": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有超長水管溜滑梯、兩條磨石子溜滑梯和給幼童的塑膠溜滑梯"
+   ],
+   "climbing": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有攀爬體能挑戰區"
+   ],
+   "climbing_wall": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有長型攀岩牆"
+   ],
+   "rope_net": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有攀爬網和繩網"
+   ],
+   "balance": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有練平衡的交叉繩橋"
+   ],
+   "spinner": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有附護手的旋轉盤"
+   ],
+   "ball_court": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有五人制兒童足球場"
+   ],
+   "toilet": [
+    "y",
+    "myjourney-2025-zumeng",
+    "有廁所"
+   ],
+   "open_lawn": [
+    "y",
+    "myjourney-2025-zumeng",
+    "周圍有大片草皮"
+   ]
+  },
+  "nwt-osm-w501526131": {
+   "slide": [
+    "y",
+    "myjourney-2025-sunshine",
+    "有寬面和彎曲的磨石子溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "myjourney-2025-sunshine",
+    "有不少鞦韆，包括鐵籠造型的鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "myjourney-2025-sunshine",
+    "跑酷區和小車車遊具可以攀爬"
+   ],
+   "rope_net": [
+    "y",
+    "myjourney-2025-sunshine",
+    "有爬上山丘的三角形攀爬網"
+   ],
+   "suspension_bridge": [
+    "y",
+    "myjourney-2025-sunshine",
+    "溜滑梯路線上有天空吊橋"
+   ],
+   "balance": [
+    "y",
+    "myjourney-2025-sunshine",
+    "跑酷區可以練平衡"
+   ],
+   "sandpit": [
+    "y",
+    "myjourney-2025-sunshine",
+    "有沙坑，旁邊有水龍頭"
+   ],
+   "water_play": [
+    "y",
+    "myjourney-2025-sunshine",
+    "有碟形水道區、噴水走道和蓮蓬頭，分時段開放"
+   ],
+   "toilet": [
+    "y",
+    "myjourney-2025-sunshine",
+    "園區有廁所"
+   ],
+   "shade": [
+    "y",
+    "myjourney-2025-sunshine",
+    "沙坑上方有遮陽棚子"
+   ],
+   "open_lawn": [
+    "y",
+    "myjourney-2025-sunshine",
+    "有可以野餐的大片綠地"
+   ]
+  },
+  "nwt-osm-w446933456": {
+   "swing": [
+    "y",
+    "yoyo-2018-xingfu",
+    "有一般鞦韆（2018 年的資料）"
+   ],
+   "baby_swing": [
+    "y",
+    "yoyo-2018-xingfu",
+    "有給小小孩的尿布鞦韆（2018 年的資料）"
+   ],
+   "climbing": [
+    "y",
+    "yoyo-2018-xingfu",
+    "有可以走、可以爬的組合遊具（2018 年的資料）"
+   ],
+   "sandpit": [
+    "y",
+    "yoyo-2018-xingfu",
+    "有白色大沙坑（2018 年的資料）"
+   ],
+   "toilet": [
+    "y",
+    "yoyo-2018-xingfu",
+    "沙坑區和多處角落有洗手間（2018 年的資料）"
+   ],
+   "shade": [
+    "y",
+    "yoyo-2018-xingfu",
+    "有遮陽棚（2018 年的資料）"
+   ],
+   "open_lawn": [
+    "y",
+    "yoyo-2018-xingfu",
+    "有可以野餐的寬廣草皮（2018 年的資料）"
+   ],
+   "inclusive": [
+    "y",
+    "yoyo-2018-xingfu",
+    "是共融沙坑遊戲場（2018 年的資料）"
+   ]
+  },
+  "nwt-osm-w239613955": {
+   "slide": [
+    "y",
+    "tiss-2020-music",
+    "有下方鋪木屑的溜滑梯（2020 年的資料）"
+   ],
+   "swing": [
+    "y",
+    "tiss-2020-music",
+    "有鞦韆（2020 年的資料）"
+   ],
+   "spring_rider": [
+    "y",
+    "tiss-2020-music",
+    "有搖搖馬（2020 年的資料）"
+   ],
+   "spinner": [
+    "y",
+    "tiss-2020-music",
+    "有旋轉椅（2020 年的資料）"
+   ],
+   "climbing": [
+    "y",
+    "tiss-2020-music",
+    "有攀爬網（2020 年的資料）"
+   ],
+   "rope_net": [
+    "y",
+    "tiss-2020-music",
+    "有攀爬網（2020 年的資料）"
+   ],
+   "sandpit": [
+    "y",
+    "tiss-2020-music",
+    "有不小的沙坑（2020 年的資料）"
+   ],
+   "music": [
+    "y",
+    "tiss-2020-music",
+    "有可以打鼓、敲琴的音樂遊具（2020 年的資料）"
+   ],
+   "open_lawn": [
+    "y",
+    "tiss-2020-music",
+    "有可以爬、可以溜的草皮（2020 年的資料）"
+   ],
+   "inclusive": [
+    "y",
+    "tiss-2020-music",
+    "是共融式遊戲場（2020 年的資料）"
+   ]
+  }
+ }
+}
