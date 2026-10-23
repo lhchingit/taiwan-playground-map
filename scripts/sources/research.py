@@ -146,8 +146,9 @@ def apply(research, places, keys, city=None, osm_parks=None):
         p = by_id[pid]
         for k, (v, src, note) in attrs.items():
             p["attrs"][k] = {"v": v, "src": src, "note": note.strip(), "at": at}
-        if attrs and p["summary"].endswith(UNKNOWN_TAIL):
-            p["summary"] = p["summary"][: -len(UNKNOWN_TAIL)] + RESEARCHED_TAIL
+        # 官方公園清單補地址時，說明後面會再接「地址來自…」，所以不只看結尾
+        if attrs and UNKNOWN_TAIL in p["summary"]:
+            p["summary"] = p["summary"].replace(UNKNOWN_TAIL, RESEARCHED_TAIL, 1)
     used = {src for attrs in (research.get("places") or {}).values() for _, src, _ in attrs.values()}
     used |= {e[0] for section in ("parks", "aka") for e in (research.get(section) or {}).values()}
     return {k: s for k, s in research["sources"].items() if k in used}

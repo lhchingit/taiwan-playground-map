@@ -30,6 +30,14 @@ class ApplyTest(unittest.TestCase):
         self.assertEqual(list(sources), ["news-1"])  # 沒用到的來源不放進 seed
         self.assertEqual(places[1], place("hsq-osm-w2"))  # 沒有查證資料的場地不變
 
+    def test_summary_with_address_note(self):
+        # 官方公園清單補地址後，「地址來自…」接在「還沒有資料」後面，也要換成查證的說明
+        p = place()
+        p["summary"] += "地址來自測試清單。"
+        research.apply(data(), [p], ["slide", "toilet"])
+        self.assertEqual(p["summary"],
+                         "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。地址來自測試清單。")
+
 
 class ValidateTest(unittest.TestCase):
     def assert_error(self, d, message):

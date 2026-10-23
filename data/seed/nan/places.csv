@@ -1,6 +1,6 @@
 ﻿id,name,district,lat,lng,size,stay,age_min,age_max,fee,status,slide,swing,baby_swing,nest_swing,zipline,seesaw,spring_rider,spinner,climbing,climbing_wall,rope_net,balance,suspension_bridge,tunnel,tree_house,sandpit,sand_table,water_play,water_pump,trampoline,pushbike,open_lawn,ball_court,skatepark,bars,music,chalk_wall,toddler_zone,toilet,handwash,footwash,shade,transit,stroller,nursing,lighting,food,inclusive,parking_type,parking_fee,parking_spaces
 nan-osm-n5405008743,埔里鎮運動公園,埔里鎮,23.9712961,120.9698836,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-nan-osm-w468282564,草屯兒童樂園,草屯鎮,23.9788865,120.6948439,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+nan-osm-w468282564,草屯兒童樂園,草屯鎮,23.9788865,120.6948439,,,,,,open,y,y,u,u,y,y,y,u,y,y,y,y,u,u,u,y,u,u,u,u,u,u,u,u,u,y,y,y,y,y,u,y,u,u,u,u,u,u,u,u,
 nan-osm-w515716778,兒童樂園,水里鄉,23.8113992,120.8598935,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-nan-osm-w1013976631,名間親子生態園區,名間鄉,23.8554751,120.6969105,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-nan-osm-w1065422564,竹山公園,竹山鎮,23.758732,120.6703829,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+nan-osm-w1013976631,名間親子生態園區,名間鄉,23.8554751,120.6969105,,,,,,open,y,y,y,y,u,y,u,y,y,y,y,y,u,u,u,y,u,u,u,y,u,y,u,u,y,u,u,y,y,u,u,y,u,u,u,u,u,u,u,u,
+nan-osm-w1065422564,竹山公園,竹山鎮,23.758732,120.6703829,,,,,,open,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
