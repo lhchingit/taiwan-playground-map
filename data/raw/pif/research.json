@@ -1,0 +1,292 @@
+{
+ "verified_at": "2026-10-23",
+ "sources": {
+  "bao-2023-civic": {
+   "label": "網路文章：來飽寶家ba 2023-01 屏東縣民公園特色遊戲場再進化（2023 改版後）",
+   "url": "https://baofamily.tw/post-466250450/",
+   "kind": "article"
+  },
+  "natsu-fuxing": {
+   "label": "網路文章：小菲親子玩樂生活 屏東復興公園蜂巢共融遊戲場（頁面日期 2025-11）",
+   "url": "https://natsuphil.com/pingdong/bee-park/",
+   "kind": "article"
+  },
+  "bunny-2022-linluo": {
+   "label": "網路文章：兔兒毛毛姊妹花 2022-02 麟洛客家花轎遊戲場",
+   "url": "https://twobunnytravel.tw/sedan-chair-park/",
+   "kind": "article"
+  },
+  "ettoday-2022-linluo": {
+   "label": "新聞：ETtoday 2022-05 全台唯一客家花轎滑梯（麟洛）",
+   "url": "https://travel.ettoday.net/article/2261730.htm",
+   "kind": "news"
+  },
+  "myjourney-2023-nanzhou": {
+   "label": "網路文章：可大王愛旅行 2023-10 南州環保共融公園",
+   "url": "https://myjourney.tw/nanzhou-park/",
+   "kind": "article"
+  },
+  "cmeyy-2023-ligang": {
+   "label": "網路文章：可人之家 2023-12 屏東阿里港公園",
+   "url": "https://cmeyy.tw/blog/post/20231223",
+   "kind": "article"
+  },
+  "fupo-2021-ligang": {
+   "label": "網路文章：小腹婆大世界 2021-12 屏東里港阿里港公園",
+   "url": "https://fupo.tw/blog/post/ligangpark",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "pif-osm-w1027568185": {
+   "slide": [
+    "y",
+    "bao-2023-civic",
+    "有 7 米高的洋蔥溜滑梯（三種高度的滑道），山丘上另有磨石子溜滑梯"
+   ],
+   "zipline": [
+    "y",
+    "bao-2023-civic",
+    "有利用山丘做的滑索"
+   ],
+   "swing": [
+    "y",
+    "bao-2023-civic",
+    "有一整排鞦韆，包括單人和雙人鞦韆"
+   ],
+   "nest_swing": [
+    "y",
+    "bao-2023-civic",
+    "有鳥巢鞦韆"
+   ],
+   "rope_net": [
+    "y",
+    "bao-2023-civic",
+    "有半圓形攀爬網，青少年挑戰區另有繩網"
+   ],
+   "climbing_wall": [
+    "y",
+    "bao-2023-civic",
+    "青少年挑戰區有橫向移動的攀岩"
+   ],
+   "seesaw": [
+    "y",
+    "bao-2023-civic",
+    "有兩人半躺著玩的蹺蹺板"
+   ],
+   "balance": [
+    "y",
+    "bao-2023-civic",
+    "有考驗平衡的渡橋和高低木樁"
+   ],
+   "water_play": [
+    "y",
+    "bao-2023-civic",
+    "有親水廣場，有拱門、花灑和小水桶"
+   ],
+   "water_pump": [
+    "y",
+    "bao-2023-civic",
+    "親水廣場旁有傳統的壓水機"
+   ],
+   "sandpit": [
+    "y",
+    "bao-2023-civic",
+    "有沙坑"
+   ],
+   "sand_table": [
+    "y",
+    "bao-2023-civic",
+    "沙坑區有沙桌"
+   ],
+   "toddler_zone": [
+    "y",
+    "bao-2023-civic",
+    "有給小小孩的遊戲區，旁邊另有小野人區"
+   ],
+   "toilet": [
+    "y",
+    "bao-2023-civic",
+    "有廁所"
+   ],
+   "open_lawn": [
+    "y",
+    "bao-2023-civic",
+    "遊戲場周圍是人工草皮，可以野餐、放風箏"
+   ],
+   "inclusive": [
+    "y",
+    "bao-2023-civic",
+    "屏東第一座共融公園"
+   ]
+  },
+  "pif-osm-w400903246": {
+   "slide": [
+    "y",
+    "natsu-fuxing",
+    "有蜂巢造型的溜滑梯，玩沙區另有短滑梯"
+   ],
+   "swing": [
+    "y",
+    "natsu-fuxing",
+    "蜂巢遊戲區旁有鞦韆"
+   ],
+   "spring_rider": [
+    "y",
+    "natsu-fuxing",
+    "有搖搖馬"
+   ],
+   "sandpit": [
+    "y",
+    "natsu-fuxing",
+    "大樹下有玩沙區"
+   ],
+   "balance": [
+    "y",
+    "natsu-fuxing",
+    "體能挑戰區有考驗平衡的遊具"
+   ],
+   "toilet": [
+    "y",
+    "natsu-fuxing",
+    "有公共廁所"
+   ],
+   "inclusive": [
+    "y",
+    "natsu-fuxing",
+    "有共融式遊戲區"
+   ]
+  },
+  "pif-osm-w1026582043": {
+   "slide": [
+    "y",
+    "bunny-2022-linluo",
+    "花轎四面共有七道滑梯：直道、彎道、旋轉和水管滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "bunny-2022-linluo",
+    "遊具蓋在有圍欄的大沙坑上，進沙坑要脫鞋"
+   ],
+   "water_play": [
+    "y",
+    "ettoday-2022-linluo",
+    "有客家花布衣造型的灑水廊道，按按鈕會噴水霧（只在夏天開放）"
+   ],
+   "climbing_wall": [
+    "y",
+    "bunny-2022-linluo",
+    "有攀岩牆"
+   ],
+   "rope_net": [
+    "y",
+    "bunny-2022-linluo",
+    "有繩網攀爬"
+   ],
+   "climbing": [
+    "y",
+    "ettoday-2022-linluo",
+    "滑梯下有攀爬架，也可以爬攀爬桿上滑梯"
+   ],
+   "balance": [
+    "y",
+    "bunny-2022-linluo",
+    "有獨木橋和平衡木"
+   ],
+   "spinner": [
+    "y",
+    "bunny-2022-linluo",
+    "有旋轉架"
+   ]
+  },
+  "pif-osm-n10284328831": {
+   "slide": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有兩座水管滑梯（一彎一直）和一座磨石子滑梯"
+   ],
+   "zipline": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有可以擺盪滑行的溜索"
+   ],
+   "rope_net": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有攀爬網"
+   ],
+   "climbing": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有攀爬塊、輪胎和高低不一的原木攀爬架"
+   ],
+   "climbing_wall": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有攀岩塊"
+   ],
+   "swing": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "共 4 座鞦韆，有單人和汽座型"
+   ],
+   "nest_swing": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有鳥巢鞦韆"
+   ],
+   "spinner": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有可以多人坐進去的旋轉球"
+   ],
+   "sandpit": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "大部分遊具下方是沙坑"
+   ],
+   "toilet": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有廁所"
+   ],
+   "open_lawn": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有小山坡草皮，周邊是大片綠地"
+   ],
+   "inclusive": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "共融遊戲場，不同年齡的孩子可以一起玩"
+   ]
+  },
+  "pif-osm-n6283977539": {
+   "slide": [
+    "y",
+    "cmeyy-2023-ligang",
+    "有海盜船造型溜滑梯和四線道的河馬溜滑梯"
+   ],
+   "climbing_wall": [
+    "y",
+    "cmeyy-2023-ligang",
+    "河馬溜滑梯旁有攀岩和拉繩"
+   ],
+   "nest_swing": [
+    "y",
+    "cmeyy-2023-ligang",
+    "有鳥巢鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "fupo-2021-ligang",
+    "有蹺蹺板（2021 年的文章）"
+   ],
+   "toilet": [
+    "y",
+    "cmeyy-2023-ligang",
+    "有公廁"
+   ]
+  }
+ }
+}
