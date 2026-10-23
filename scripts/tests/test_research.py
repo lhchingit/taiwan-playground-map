@@ -30,6 +30,15 @@ class ApplyTest(unittest.TestCase):
         self.assertEqual(list(sources), ["news-1"])  # 沒用到的來源不放進 seed
         self.assertEqual(places[1], place("hsq-osm-w2"))  # 沒有查證資料的場地不變
 
+    def test_entry_date_overrides_verified_at(self):
+        # 之後補查的項目寫自己的查證日期，先前查的項目仍用 verified_at
+        d = data()
+        d["places"]["hsq-osm-w1"]["slide"] = ["y", "news-1", "有溜滑梯", "2026-10-23"]
+        places = [place()]
+        research.apply(d, places, ["slide", "toilet"])
+        self.assertEqual(places[0]["attrs"]["slide"]["at"], "2026-10-23")
+        self.assertEqual(places[0]["attrs"]["toilet"]["at"], "2026-10-18")
+
     def test_summary_with_address_note(self):
         # 官方公園清單補地址後，「地址來自…」接在「還沒有資料」後面，也要換成查證的說明
         p = place()
@@ -66,6 +75,10 @@ class ValidateTest(unittest.TestCase):
 
     def test_blank_note(self):
         self.assert_error(self.with_entry("slide", ["y", "news-1", " "]), "要有說明")
+
+    def test_bad_entry_date(self):
+        self.assert_error(self.with_entry("slide", ["y", "news-1", "有", "2026/10/23"]), "查證日期要是 YYYY-MM-DD")
+        self.assert_error(self.with_entry("slide", ["y", "news-1", "有", "2026-10-23", "x"]), "格式要是")
 
     def test_bad_source_kind_and_date(self):
         d = data(verified_at="2026/10/18")
@@ -105,6 +118,12 @@ class ParksTest(unittest.TestCase):
         self.assertEqual(new["attrs"]["toilet"]["v"], "u")
         self.assertIn("news-1", sources)
 
+    def test_park_with_own_date(self):
+        places = [place()]
+        research.apply(with_parks({"w9": ["news-1", "特色遊戲場", "2026-10-23"]}), places, ["slide", "toilet"], "hsq",
+                       osm_parks())
+        self.assertEqual((places[-1]["listing_src"], places[-1]["listing_at"]), ("news-1", "2026-10-23"))
+
     def test_without_attrs_keeps_unknown_tail(self):
         places = [place()]
         research.apply(with_parks(), places, ["slide", "toilet"], "hsq", osm_parks())
@@ -123,6 +142,7 @@ class ParksTest(unittest.TestCase):
         self.assert_error(with_parks(), osm_parks(w9={"name": " ", "lat": 24.81, "lng": 121.01}), "沒有名稱")
         self.assert_error(with_parks({"w9": ["blog-9", "有"]}), osm_parks(), "parks w9：來源 blog-9 沒有定義")
         self.assert_error(with_parks({"w9": ["news-1", ""]}), osm_parks(), "parks w9：要有說明")
+        self.assert_error(with_parks({"w9": ["news-1", "有", "昨天"]}), osm_parks(), "parks w9：查證日期要是 YYYY-MM-DD")
 
 
 class AkaTest(unittest.TestCase):
