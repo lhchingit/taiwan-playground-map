@@ -7,6 +7,21 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "bobowin-2025-nanbin": {
+   "label": "網路文章：寶寶溫旅行親子生活 2025-01 花蓮太平洋公園南濱遊戲場",
+   "url": "https://bobowin.blog/nanbin-park/",
+   "kind": "article"
+  },
+  "abic-huagangshan": {
+   "label": "網路文章：愛貝客親子遊 花崗山親子戲沙池（頁面未標日期，2018 改建、2019-05 開放）",
+   "url": "https://www.abic.com.tw/place/view/id/12086",
+   "kind": "article"
+  },
+  "yoyo-2019-huagangshan": {
+   "label": "網路文章：1＋1＝3 玩學樂生活（小Yo之家）2019-04 花崗山親子戲沙池",
+   "url": "https://yoyoman822.pixnet.net/blog/posts/5067955310",
+   "kind": "article"
   }
  },
  "labels": {
@@ -921,13 +936,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yoyo-2019-huagangshan",
+     "note": "有從粉紅鯨魚嘴巴滑下的磨石子滑梯和貝殼磨石子滑梯（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "swing": {
      "v": "u",
@@ -972,28 +987,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-huagangshan",
+     "note": "有攀爬架（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yoyo-2019-huagangshan",
+     "note": "有攀岩（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-huagangshan",
+     "note": "有攀爬網（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-huagangshan",
+     "note": "有獨木橋和木樁（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "suspension_bridge": {
      "v": "u",
@@ -1014,10 +1029,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yoyo-2019-huagangshan",
+     "note": "有大片白沙戲沙池，進去要脫鞋（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -1092,16 +1107,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "abic-huagangshan",
+     "note": "有洗手間（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yoyo-2019-huagangshan",
+     "note": "有小丑魚造型的洗手台（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     },
     "footwash": {
      "v": "u",
@@ -1146,10 +1161,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "yoyo-2019-huagangshan",
+     "note": "花蓮第一座共融特色遊戲場，主要遊具是共融遊具（2019 年的資料；2023 年曾暫停開放整修）",
+     "at": "2026-10-23"
     }
    },
    "parking": {
@@ -1451,19 +1466,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "鑽籠遊戲區和海盜船上都有溜滑梯，另有小飛象滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "沙坑上方有鞦韆",
+     "at": "2026-10-23"
     },
     "baby_swing": {
      "v": "u",
@@ -1478,10 +1493,10 @@
      "at": null
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有坐椅子、繫安全帶的環形溜索（不建議 6 歲以下或 50 公斤以上）",
+     "at": "2026-10-23"
     },
     "seesaw": {
      "v": "u",
@@ -1502,10 +1517,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有攀爬遊具和環形攀爬架",
+     "at": "2026-10-23"
     },
     "climbing_wall": {
      "v": "u",
@@ -1514,10 +1529,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -1526,16 +1541,16 @@
      "at": null
     },
     "suspension_bridge": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "海盜船周邊有吊橋",
+     "at": "2026-10-23"
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有相連成迷宮的隧道鑽籠",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -1544,10 +1559,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有海盜船造型的大沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -1622,22 +1637,22 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有公廁，最近整修過",
+     "at": "2026-10-23"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有波浪造型的沖洗區",
+     "at": "2026-10-23"
     },
     "footwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bobowin-2025-nanbin",
+     "note": "有洗腳區",
+     "at": "2026-10-23"
     },
     "shade": {
      "v": "u",
