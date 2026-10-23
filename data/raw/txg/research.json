@@ -1,0 +1,640 @@
+{
+ "verified_at": "2026-10-23",
+ "sources": {
+  "bobowin-2024-beitun": {
+   "label": "網路文章：寶寶溫旅行親子生活 2024-10 北屯兒童公園",
+   "url": "https://bobowin.blog/beitun-park/",
+   "kind": "article"
+  },
+  "ettoday-2025-parks": {
+   "label": "新聞：ETtoday 旅遊雲 2025-04 26個特色台中公園懶人包",
+   "url": "https://travel.ettoday.net/article/2887517.htm",
+   "kind": "news"
+  },
+  "bobowin-2024-pig": {
+   "label": "網路文章：寶寶溫旅行親子生活 2024-10 豬事圓滿公園",
+   "url": "https://bobowin.blog/taichung-pig-park/",
+   "kind": "article"
+  },
+  "bobowin-2024-traffic": {
+   "label": "網路文章：寶寶溫旅行親子生活 2024-11 泉源兒童交通主題公園",
+   "url": "https://bobowin.blog/taichung-trafficpark/",
+   "kind": "article"
+  },
+  "tcg-2024-nanxing": {
+   "label": "新聞：臺中市政府市政新聞 2024-12 北屯區南興公園「大樹原野遊戲場」完工開放",
+   "url": "https://www.taichung.gov.tw/2840664/post",
+   "kind": "news"
+  },
+  "nini-2024-nanxing": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2024-12 南興公園大樹原野遊戲場",
+   "url": "https://niniandblue.com/blog/post/nanxing-park",
+   "kind": "article"
+  },
+  "bobowin-2025-houli": {
+   "label": "網路文章：寶寶溫旅行親子生活 2025-09 后里森林公園",
+   "url": "https://bobowin.blog/houli-forest-park/",
+   "kind": "article"
+  },
+  "ya7-2026-dongfeng": {
+   "label": "網路文章：ya7.tw 2026-03 東峰公園綠色山丘遊戲場",
+   "url": "https://ya7.tw/dongfeng/",
+   "kind": "article"
+  },
+  "nini-2023-fengle": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2023-07 豐樂雕塑公園",
+   "url": "https://niniandblue.com/blog/post/fengle-park",
+   "kind": "article"
+  },
+  "nini-2022-wenxin": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2022-07 文心森林公園",
+   "url": "https://niniandblue.com/blog/post/wen-xin-park",
+   "kind": "article"
+  },
+  "bobowin-2019-wenxin": {
+   "label": "網路文章：寶寶溫旅行親子生活 2019-01 文心森林公園",
+   "url": "https://bobowin.blog/p2034/",
+   "kind": "article"
+  },
+  "nini-2023-dingyuliao": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2023-12 梧棲頂魚寮公園",
+   "url": "https://niniandblue.com/blog/post/wuchi-firshpark",
+   "kind": "article"
+  },
+  "bobowin-2017-dingyuliao": {
+   "label": "網路文章：寶寶溫旅行親子生活 2017-12 梧棲頂魚寮公園",
+   "url": "https://bobowin.blog/whale-silde/",
+   "kind": "article"
+  },
+  "bao-2022-minsu": {
+   "label": "網路文章：來飽寶家ba 2022-06 台中民俗公園",
+   "url": "https://baofamily.tw/blog/post/564685390",
+   "kind": "article"
+  },
+  "bobowin-2019-airpark": {
+   "label": "網路文章：寶寶溫旅行親子生活 2019-01 神岡圳前仁愛公園",
+   "url": "https://bobowin.blog/taichung-airpark/",
+   "kind": "article"
+  },
+  "nini-2018-tcpark": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2018-09 台中公園",
+   "url": "https://niniandblue.com/blog/post/tc-park",
+   "kind": "article"
+  },
+  "nini-2019-zhongzheng": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2019-02 台中北區中正公園",
+   "url": "https://niniandblue.com/blog/post/zhongzheng-park",
+   "kind": "article"
+  },
+  "nini-2019-xinfu": {
+   "label": "網路文章：Nini and Blue 玩樂食記 2019-10 太平新福公園",
+   "url": "https://niniandblue.com/blog/post/xinfu-park",
+   "kind": "article"
+  }
+ },
+ "places": {
+  "txg-osm-n4558516069": {
+   "slide": [
+    "y",
+    "bobowin-2024-beitun",
+    "林間探索遊戲場的高塔有溜滑梯"
+   ],
+   "spring_rider": [
+    "y",
+    "bobowin-2024-beitun",
+    "有搖搖馬"
+   ],
+   "swing": [
+    "y",
+    "bobowin-2024-beitun",
+    "遊戲場旁有鞦韆組"
+   ],
+   "climbing": [
+    "y",
+    "bobowin-2024-beitun",
+    "要攀爬、攀岩或鑽籠才能上高塔"
+   ],
+   "climbing_wall": [
+    "y",
+    "bobowin-2024-beitun",
+    "高塔有垂直的攀岩牆"
+   ],
+   "rope_net": [
+    "y",
+    "ettoday-2025-parks",
+    "林間探索遊戲場有爬網"
+   ],
+   "tunnel": [
+    "y",
+    "bobowin-2024-beitun",
+    "高塔有彎曲式鑽籠"
+   ],
+   "sandpit": [
+    "y",
+    "bobowin-2024-beitun",
+    "有小礫石砂坑"
+   ],
+   "shade": [
+    "y",
+    "bobowin-2024-beitun",
+    "砂池上方有很大的遮陽蓬"
+   ],
+   "toilet": [
+    "y",
+    "bobowin-2024-beitun",
+    "有公共廁所"
+   ],
+   "handwash": [
+    "y",
+    "bobowin-2024-beitun",
+    "砂池旁有可以洗手腳的沖腳池"
+   ],
+   "footwash": [
+    "y",
+    "bobowin-2024-beitun",
+    "砂池旁有沖腳池"
+   ]
+  },
+  "txg-osm-w1316659561": {
+   "slide": [
+    "y",
+    "bobowin-2024-pig",
+    "小山豬遊具的滑道從豬尾巴滑出，沙坑區也有溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "bobowin-2024-pig",
+    "小山豬遊具旁有共融式鞦韆組"
+   ],
+   "spinner": [
+    "y",
+    "bobowin-2024-pig",
+    "有多人旋轉盤"
+   ],
+   "climbing": [
+    "y",
+    "bobowin-2024-pig",
+    "小山豬遊具側邊有攀爬架"
+   ],
+   "rope_net": [
+    "y",
+    "bobowin-2024-pig",
+    "要通過攀爬網才能玩到溜滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "bobowin-2024-pig",
+    "有很大的沙坑區"
+   ],
+   "trampoline": [
+    "y",
+    "bobowin-2024-pig",
+    "有彈跳床"
+   ],
+   "toilet": [
+    "y",
+    "bobowin-2024-pig",
+    "有一般廁所和親子廁所"
+   ],
+   "handwash": [
+    "y",
+    "bobowin-2024-pig",
+    "沙坑旁有水龍頭可以洗手"
+   ],
+   "footwash": [
+    "y",
+    "bobowin-2024-pig",
+    "沙坑旁有水龍頭可以洗腳"
+   ],
+   "shade": [
+    "y",
+    "bobowin-2024-pig",
+    "小山豬區和沙坑區有遮陽"
+   ],
+   "inclusive": [
+    "y",
+    "bobowin-2024-pig",
+    "有嘉年華共融遊戲區"
+   ]
+  },
+  "txg-osm-w1231877026": {
+   "slide": [
+    "y",
+    "bobowin-2024-traffic",
+    "有溜滑梯，另有給小小孩的溜滑梯組"
+   ],
+   "swing": [
+    "y",
+    "bobowin-2024-traffic",
+    "有旋轉鞦韆和共融式鞦韆組"
+   ],
+   "pushbike": [
+    "y",
+    "bobowin-2024-traffic",
+    "有畫斑馬線、雙黃線，設紅綠燈的兒童滑步車道"
+   ],
+   "water_play": [
+    "y",
+    "bobowin-2024-traffic",
+    "夏天開放戲水區"
+   ],
+   "toilet": [
+    "y",
+    "bobowin-2024-traffic",
+    "有公共廁所"
+   ],
+   "handwash": [
+    "y",
+    "bobowin-2024-traffic",
+    "有洗手腳的地方"
+   ],
+   "footwash": [
+    "y",
+    "bobowin-2024-traffic",
+    "有洗手腳的地方"
+   ],
+   "inclusive": [
+    "y",
+    "bobowin-2024-traffic",
+    "有共融式鞦韆組"
+   ]
+  },
+  "txg-osm-w519272387": {
+   "slide": [
+    "y",
+    "nini-2024-nanxing",
+    "有水管和磨石子溜滑梯，另有 5.8 公尺高的大樹攀爬塔溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "nini-2024-nanxing",
+    "有共融式鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "tcg-2024-nanxing",
+    "有 5.8 公尺高的大樹攀爬塔"
+   ],
+   "handwash": [
+    "y",
+    "nini-2024-nanxing",
+    "有符合小朋友身高的洗手台"
+   ],
+   "open_lawn": [
+    "y",
+    "nini-2024-nanxing",
+    "公園有寬敞的草地"
+   ],
+   "inclusive": [
+    "y",
+    "tcg-2024-nanxing",
+    "有共融遊具、無障礙動線和輪椅休憩空間"
+   ]
+  },
+  "txg-osm-n6380530249": {
+   "slide": [
+    "y",
+    "bobowin-2025-houli",
+    "猴森堡壘有兩座長溜滑梯，后森之丘有磨石子溜滑梯和波浪滑道"
+   ],
+   "climbing": [
+    "y",
+    "bobowin-2025-houli",
+    "猴森堡壘要先通過各種攀爬設施"
+   ],
+   "rope_net": [
+    "y",
+    "bobowin-2025-houli",
+    "有攀網"
+   ],
+   "balance": [
+    "y",
+    "bobowin-2025-houli",
+    "森林搖籃有實木平衡木樁"
+   ],
+   "sandpit": [
+    "y",
+    "bobowin-2025-houli",
+    "遊戲農園有大沙坑"
+   ],
+   "water_play": [
+    "y",
+    "bobowin-2025-houli",
+    "遊戲農園的水盤遊具可以玩水，12 到 2 月不供水"
+   ],
+   "toilet": [
+    "y",
+    "bobowin-2025-houli",
+    "有彩繪公廁"
+   ],
+   "handwash": [
+    "y",
+    "bobowin-2025-houli",
+    "玩沙後有地方洗手"
+   ],
+   "footwash": [
+    "y",
+    "bobowin-2025-houli",
+    "玩沙後有地方洗腳"
+   ],
+   "shade": [
+    "y",
+    "bobowin-2025-houli",
+    "后森之丘有遮陽架，遊戲農園全區有遮陽"
+   ]
+  },
+  "txg-osm-n3883015742": {
+   "slide": [
+    "y",
+    "ya7-2026-dongfeng",
+    "綠色小山丘有滑梯可以滑下來"
+   ],
+   "nest_swing": [
+    "y",
+    "ya7-2026-dongfeng",
+    "有鳥巢式鞦韆"
+   ]
+  },
+  "txg-osm-n3899215594": {
+   "slide": [
+    "y",
+    "nini-2023-fengle",
+    "斜坡上有磨石子溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "nini-2023-fengle",
+    "有共融式鞦韆"
+   ],
+   "baby_swing": [
+    "y",
+    "nini-2023-fengle",
+    "有包覆性的尿布式鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "nini-2023-fengle",
+    "有兒童蹺蹺板，底下是輪胎和沙坑"
+   ],
+   "sandpit": [
+    "y",
+    "nini-2023-fengle",
+    "有沙質細緻的開放式沙坑"
+   ],
+   "toilet": [
+    "y",
+    "nini-2023-fengle",
+    "有化妝室"
+   ],
+   "footwash": [
+    "y",
+    "nini-2023-fengle",
+    "有洗腳區"
+   ],
+   "shade": [
+    "y",
+    "nini-2023-fengle",
+    "最近增加了遮陽棚"
+   ],
+   "open_lawn": [
+    "y",
+    "nini-2023-fengle",
+    "有草地和寬敞的廣場，可以放風箏、野餐"
+   ],
+   "inclusive": [
+    "y",
+    "nini-2023-fengle",
+    "有共融式鞦韆"
+   ]
+  },
+  "txg-osm-n3487983296": {
+   "slide": [
+    "y",
+    "nini-2022-wenxin",
+    "有木珠溜滑梯"
+   ],
+   "nest_swing": [
+    "y",
+    "nini-2022-wenxin",
+    "有盤型鞦韆"
+   ],
+   "spinner": [
+    "y",
+    "bobowin-2019-wenxin",
+    "有多處旋轉盤（2019 年的資料）"
+   ],
+   "climbing": [
+    "y",
+    "bobowin-2019-wenxin",
+    "木珠溜滑梯後方有攀爬繩索（2019 年的資料）"
+   ],
+   "climbing_wall": [
+    "y",
+    "nini-2022-wenxin",
+    "木珠溜滑梯有攀岩"
+   ],
+   "balance": [
+    "y",
+    "nini-2022-wenxin",
+    "有站立搖動設施和高低木樁"
+   ],
+   "tunnel": [
+    "y",
+    "nini-2022-wenxin",
+    "迷宮最後有涵管通道"
+   ],
+   "sandpit": [
+    "y",
+    "nini-2022-wenxin",
+    "有寬敞的沙坑"
+   ],
+   "handwash": [
+    "y",
+    "nini-2022-wenxin",
+    "沙坑兩側有盥洗區"
+   ],
+   "footwash": [
+    "y",
+    "bobowin-2019-wenxin",
+    "有多個沖腳設施（2019 年的資料）"
+   ],
+   "open_lawn": [
+    "y",
+    "nini-2022-wenxin",
+    "園區有草地"
+   ]
+  },
+  "txg-osm-w591456745": {
+   "slide": [
+    "y",
+    "nini-2023-dingyuliao",
+    "有鯨魚造型溜滑梯和大型溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "nini-2023-dingyuliao",
+    "有共融式鞦韆"
+   ],
+   "climbing": [
+    "y",
+    "nini-2023-dingyuliao",
+    "有攀爬網和攀爬繩"
+   ],
+   "rope_net": [
+    "y",
+    "nini-2023-dingyuliao",
+    "有攀爬網"
+   ],
+   "balance": [
+    "y",
+    "nini-2023-dingyuliao",
+    "有會搖晃的木造獨木橋"
+   ],
+   "toilet": [
+    "y",
+    "nini-2023-dingyuliao",
+    "有動物彩繪的化妝室"
+   ],
+   "inclusive": [
+    "y",
+    "nini-2023-dingyuliao",
+    "有共融式鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "bobowin-2017-dingyuliao",
+    "有蹺蹺板（2017 年的資料）"
+   ],
+   "open_lawn": [
+    "y",
+    "bobowin-2017-dingyuliao",
+    "有可以野餐的大草地（2017 年的資料）"
+   ]
+  },
+  "txg-osm-n3989500790": {
+   "slide": [
+    "y",
+    "bao-2022-minsu",
+    "有利用地勢蓋的溜滑梯和磨石子溜滑梯"
+   ],
+   "spinner": [
+    "y",
+    "bao-2022-minsu",
+    "有旋轉類設施"
+   ],
+   "climbing": [
+    "y",
+    "bao-2022-minsu",
+    "沙坑旁有簡易的攀爬設施"
+   ],
+   "sandpit": [
+    "y",
+    "bao-2022-minsu",
+    "有小礫石鋪成的砂坑"
+   ],
+   "toilet": [
+    "y",
+    "bao-2022-minsu",
+    "有古色古香的廁所"
+   ],
+   "handwash": [
+    "y",
+    "bao-2022-minsu",
+    "有洗手台"
+   ]
+  },
+  "txg-osm-n13395527976": {
+   "slide": [
+    "y",
+    "ettoday-2025-parks",
+    "有溜滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "ettoday-2025-parks",
+    "有沙坑"
+   ],
+   "open_lawn": [
+    "y",
+    "ettoday-2025-parks",
+    "有草地區"
+   ],
+   "climbing": [
+    "y",
+    "bobowin-2019-airpark",
+    "機堡遊戲區有攀爬架和攀爬繩索（2019 年的資料）"
+   ]
+  },
+  "txg-osm-w322820673": {
+   "slide": [
+    "y",
+    "ettoday-2025-parks",
+    "有溜滑梯"
+   ],
+   "swing": [
+    "y",
+    "ettoday-2025-parks",
+    "有鞦韆"
+   ],
+   "toilet": [
+    "y",
+    "ettoday-2025-parks",
+    "公廁改裝過"
+   ],
+   "open_lawn": [
+    "y",
+    "nini-2018-tcpark",
+    "有可以野餐的草地（2018 年的資料）"
+   ]
+  },
+  "txg-osm-n6449044031": {
+   "skatepark": [
+    "y",
+    "ettoday-2025-parks",
+    "有設平台、三角平台和斜桿的滑板場"
+   ],
+   "open_lawn": [
+    "y",
+    "ettoday-2025-parks",
+    "有草地"
+   ],
+   "slide": [
+    "y",
+    "nini-2019-zhongzheng",
+    "有磨石子溜滑梯（2019 年的資料）"
+   ],
+   "swing": [
+    "y",
+    "nini-2019-zhongzheng",
+    "有鞦韆（2019 年的資料）"
+   ],
+   "sandpit": [
+    "y",
+    "nini-2019-zhongzheng",
+    "有沙坑（2019 年的資料）"
+   ]
+  },
+  "txg-osm-n6271886591": {
+   "climbing": [
+    "y",
+    "ettoday-2025-parks",
+    "有攀爬式探索迷宮"
+   ],
+   "slide": [
+    "y",
+    "nini-2019-xinfu",
+    "有溜滑梯遊戲組（2019 年的資料）"
+   ],
+   "sandpit": [
+    "y",
+    "nini-2019-xinfu",
+    "有圓形沙坑（2019 年的資料）"
+   ],
+   "open_lawn": [
+    "y",
+    "nini-2019-xinfu",
+    "公園中間有草地（2019 年的資料）"
+   ]
+  }
+ }
+}
