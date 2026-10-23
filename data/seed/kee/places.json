@@ -7,6 +7,21 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "bunnyann-2026-nuannuan": {
+   "label": "網路文章：bunnyann.tw 2026-04 基隆暖暖運動公園",
+   "url": "https://bunnyann.tw/nuannuan-0422/",
+   "kind": "article"
+  },
+  "gofunit-keelung": {
+   "label": "網路文章：gofunit 基隆親子景點（2025-12-30 更新）",
+   "url": "https://gofunit.com/%e5%9f%ba%e9%9a%86%e8%a6%aa%e5%ad%90%e6%99%af%e9%bb%9e/",
+   "kind": "article"
+  },
+  "bunnyann-2026-hope": {
+   "label": "網路文章：bunnyann.tw 2026-07 基隆中正公園希望之丘",
+   "url": "https://bunnyann.tw/gohope-0502/",
+   "kind": "article"
   }
  },
  "labels": {
@@ -126,13 +141,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 3 處遊戲區：躲貓貓涵管、圓盤型鞦韆。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 3 處遊戲區：躲貓貓涵管、圓盤型鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-nuannuan",
+     "note": "有戶外長溜滑梯，包括磨石子溜滑梯和很長的水管溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
      "v": "u",
@@ -189,10 +204,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-nuannuan",
+     "note": "有挑戰性高的攀爬網",
+     "at": "2026-10-23"
     },
     "balance": {
      "v": "u",
@@ -201,16 +216,16 @@
      "at": null
     },
     "suspension_bridge": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-nuannuan",
+     "note": "公園裡有吊橋",
+     "at": "2026-10-23"
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-nuannuan",
+     "note": "有水管造型的通道",
+     "at": "2026-10-23"
     },
     "tree_house": {
      "v": "u",
@@ -219,10 +234,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-nuannuan",
+     "note": "水管溜滑梯下方是沙坑",
+     "at": "2026-10-23"
     },
     "sand_table": {
      "v": "u",
@@ -255,16 +270,16 @@
      "at": null
     },
     "open_lawn": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "gofunit-keelung",
+     "note": "公園有大草地，可以野餐",
+     "at": "2026-10-23"
     },
     "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "gofunit-keelung",
+     "note": "公園裡有籃球場和棒球場",
+     "at": "2026-10-23"
     },
     "skatepark": {
      "v": "u",
@@ -297,10 +312,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-nuannuan",
+     "note": "遊戲區旁邊就有廁所",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
@@ -315,10 +330,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "n",
+     "src": "bunnyann-2026-nuannuan",
+     "note": "文章寫遊戲區和家長座位區都沒有遮陽",
+     "at": "2026-10-23"
     },
     "transit": {
      "v": "u",
@@ -1451,13 +1466,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：遊戲塔。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：遊戲塔。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-hope",
+     "note": "大水塔裡有旋轉溜滑梯，另有很寬的磨石子溜滑梯",
+     "at": "2026-10-23"
     },
     "swing": {
      "v": "u",
@@ -1622,10 +1637,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "bunnyann-2026-hope",
+     "note": "親子公園旁邊有公廁",
+     "at": "2026-10-23"
     },
     "handwash": {
      "v": "u",
