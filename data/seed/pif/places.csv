@@ -1,8 +1,8 @@
 ﻿id,name,district,lat,lng,size,stay,age_min,age_max,fee,status,slide,swing,baby_swing,nest_swing,zipline,seesaw,spring_rider,spinner,climbing,climbing_wall,rope_net,balance,suspension_bridge,tunnel,tree_house,sandpit,sand_table,water_play,water_pump,trampoline,pushbike,open_lawn,ball_court,skatepark,bars,music,chalk_wall,toddler_zone,toilet,handwash,footwash,shade,transit,stroller,nursing,lighting,food,inclusive,parking_type,parking_fee,parking_spaces
 pif-osm-n6282854551,廣興公園,屏東市,22.6927669,120.4864977,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-pif-osm-n6283977539,阿里港河堤公園,里港鄉,22.784545,120.494184,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-pif-osm-n10284328831,南州運動公園,南州鄉,22.4908798,120.5127668,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-pif-osm-w400903246,復興公園,屏東市,22.6594309,120.4833255,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-pif-osm-w1026582043,麟洛客家花轎遊戲場,麟洛鄉,22.6357943,120.514021,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+pif-osm-n6283977539,阿里港河堤公園,里港鄉,22.784545,120.494184,,,,,,open,y,u,u,y,u,y,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,
+pif-osm-n10284328831,南州運動公園,南州鄉,22.4908798,120.5127668,,,,,,open,y,y,u,y,y,u,u,y,y,y,y,u,u,u,u,y,u,u,u,u,u,y,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,y,u,u,
+pif-osm-w400903246,復興公園,屏東市,22.6594309,120.4833255,,,,,,open,y,y,u,u,u,u,y,u,u,u,u,y,u,u,u,y,u,u,u,u,u,u,u,u,u,u,u,u,y,u,u,u,u,u,u,u,u,y,u,u,
+pif-osm-w1026582043,麟洛客家花轎遊戲場,麟洛鄉,22.6357943,120.514021,,,,,,open,y,u,u,u,u,u,u,y,y,y,y,y,u,u,u,y,u,y,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
 pif-osm-w1026885674,武昌公園,屏東市,22.6612762,120.4783465,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
-pif-osm-w1027568185,屏東縣民公園,屏東市,22.6562982,120.491188,,,,,,open,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,
+pif-osm-w1027568185,屏東縣民公園,屏東市,22.6562982,120.491188,,,,,,open,y,y,u,y,y,y,u,u,u,y,y,y,u,u,u,y,y,y,y,u,u,y,u,u,u,u,u,y,y,u,u,u,u,u,u,u,u,y,u,u,
