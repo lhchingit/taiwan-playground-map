@@ -17,6 +17,346 @@
    "label": "依面積與設施推估",
    "url": null,
    "kind": "estimate"
+  },
+  "tycpark-2": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 華興池生態埤塘公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/2",
+   "kind": "article"
+  },
+  "tycpark-5": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 陽明運動公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/5",
+   "kind": "article"
+  },
+  "tycpark-6": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 四維兒童公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/6",
+   "kind": "article"
+  },
+  "tycpark-7": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 龍潭運動公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/7",
+   "kind": "article"
+  },
+  "tycpark-8": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 傑克冒險公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/8",
+   "kind": "article"
+  },
+  "tycpark-11": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 埔頂公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/11",
+   "kind": "article"
+  },
+  "tycpark-12": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 河濱公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/12",
+   "kind": "article"
+  },
+  "tycpark-14": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 藝術園區公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/14",
+   "kind": "article"
+  },
+  "tycpark-15": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 仁祥公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/15",
+   "kind": "article"
+  },
+  "tycpark-16": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 文化公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/16",
+   "kind": "article"
+  },
+  "tycpark-18": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 星河親子公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/18",
+   "kind": "article"
+  },
+  "tycpark-21": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 1895乙未保台紀念公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/21",
+   "kind": "article"
+  },
+  "tycpark-22": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 雙連坡碉堡公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/22",
+   "kind": "article"
+  },
+  "tycpark-23": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 鑊篤陂塘生態公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/23",
+   "kind": "article"
+  },
+  "tycpark-24": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 新勢公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/24",
+   "kind": "article"
+  },
+  "tycpark-25": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 民俗文化公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/25",
+   "kind": "article"
+  },
+  "tycpark-28": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 大有梯田生態公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/28",
+   "kind": "article"
+  },
+  "tycpark-34": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 伯公岡公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/34",
+   "kind": "article"
+  },
+  "tycpark-37": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 富岡運動公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/37",
+   "kind": "article"
+  },
+  "tycpark-38": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 三民公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/38",
+   "kind": "article"
+  },
+  "tycpark-40": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 國三橋下舞動園區（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/40",
+   "kind": "article"
+  },
+  "tycpark-41": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 龍潭大池（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/41",
+   "kind": "article"
+  },
+  "tycpark-42": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 中正公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/42",
+   "kind": "article"
+  },
+  "tycpark-49": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 南興水岸遊憩公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/49",
+   "kind": "article"
+  },
+  "tycpark-50": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 台茂公園 TaimallPark（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/50",
+   "kind": "article"
+  },
+  "tycpark-62": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 中正公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/62",
+   "kind": "article"
+  },
+  "tycpark-63": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 虎頭山公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/63",
+   "kind": "article"
+  },
+  "tycpark-66": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 公一公園 (風禾公園)（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/66",
+   "kind": "article"
+  },
+  "tycpark-67": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 觀音區 草漯水之丘（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/67",
+   "kind": "article"
+  },
+  "tycpark-68": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 青埔公七公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/68",
+   "kind": "article"
+  },
+  "tycpark-71": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 茄苳埤塘公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/71",
+   "kind": "article"
+  },
+  "tycpark-80": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大湳公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/80",
+   "kind": "article"
+  },
+  "tycpark-113": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 橫峰河濱公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/113",
+   "kind": "article"
+  },
+  "tycpark-123": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 運動公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/123",
+   "kind": "article"
+  },
+  "tycpark-131": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 過嶺松勇公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/131",
+   "kind": "article"
+  },
+  "tycpark-140": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 新興綠地公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/140",
+   "kind": "article"
+  },
+  "tycpark-142": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 龍岡森林公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/142",
+   "kind": "article"
+  },
+  "tycpark-143": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 興仁親子公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/143",
+   "kind": "article"
+  },
+  "tycpark-169": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 白馬公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/169",
+   "kind": "article"
+  },
+  "tycpark-180": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 新富公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/180",
+   "kind": "article"
+  },
+  "tycpark-185": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國強公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/185",
+   "kind": "article"
+  },
+  "tycpark-188": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 龍鳳公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/188",
+   "kind": "article"
+  },
+  "tycpark-193": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 忠孝公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/193",
+   "kind": "article"
+  },
+  "tycpark-194": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 仁愛公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/194",
+   "kind": "article"
+  },
+  "tycpark-201": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 建新公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/201",
+   "kind": "article"
+  },
+  "tycpark-224": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 東埔公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/224",
+   "kind": "article"
+  },
+  "tycpark-228": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 三民運動公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/228",
+   "kind": "article"
+  },
+  "tycpark-229": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 忠義公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/229",
+   "kind": "article"
+  },
+  "tycpark-230": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 快樂公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/230",
+   "kind": "article"
+  },
+  "tycpark-231": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 寶山公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/231",
+   "kind": "article"
+  },
+  "tycpark-236": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國道2號橋下(冒險公園)（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/236",
+   "kind": "article"
+  },
+  "tycpark-237": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國道2號橋下(桃園區福林里段)（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/237",
+   "kind": "article"
+  },
+  "tycpark-241": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 兒11公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/241",
+   "kind": "article"
+  },
+  "tycpark-254": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 瑞溪兒童公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/254",
+   "kind": "article"
+  },
+  "tycpark-255": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 埔心公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/255",
+   "kind": "article"
+  },
+  "tycpark-263": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 豐野兒童公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/263",
+   "kind": "article"
+  },
+  "tycpark-264": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 新富兒童公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/264",
+   "kind": "article"
+  },
+  "tycpark-269": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 新梅兒童公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/269",
+   "kind": "article"
+  },
+  "tycpark-303": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 樂善公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/303",
+   "kind": "article"
+  },
+  "tycpark-304": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 第一河濱公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/304",
+   "kind": "article"
+  },
+  "tycpark-320": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 公三公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/320",
+   "kind": "article"
+  },
+  "tycpark-324": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 兒二公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/324",
+   "kind": "article"
+  },
+  "tycpark-348": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 向陽公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/348",
+   "kind": "article"
+  },
+  "tycpark-365": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 上興公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/365",
+   "kind": "article"
+  },
+  "tycpark-368": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 大興公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/368",
+   "kind": "article"
+  },
+  "tycpark-370": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 上竹公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/370",
+   "kind": "article"
+  },
+  "tycpark-374": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 明德公園（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/374",
+   "kind": "article"
+  },
+  "tycpark-381": {
+   "label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 青山河濱公園（青埔公4公園）（頁面未標日期）",
+   "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/381",
+   "kind": "article"
   }
  },
  "labels": {
@@ -136,7 +476,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：親子鞦韆、軟墊盪鞦韆、木板盪鞦韆、粗繩盪鞦韆、城堡遊戲組、全齡式森林遊戲場、滑索、磨石子溜滑梯、沙坑",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：親子鞦韆、軟墊盪鞦韆、木板盪鞦韆、粗繩盪鞦韆、城堡遊戲組、全齡式森林遊戲場、滑索、磨石子溜滑梯、沙坑。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -187,28 +527,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-28",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-28",
+     "note": "市府遊戲場網站：城堡遊戲場有攀岩斜坡",
+     "at": "2026-10-24"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-28",
+     "note": "市府遊戲場網站：城堡遊戲場有攀爬網",
+     "at": "2026-10-24"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-28",
+     "note": "市府遊戲場網站：城堡遊戲場有平衡挑戰設施",
+     "at": "2026-10-24"
     },
     "suspension_bridge": {
      "v": "u",
@@ -313,22 +653,22 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-28",
+     "note": "市府遊戲場網站：沙坑旁有洗手洗腳設備",
+     "at": "2026-10-24"
     },
     "footwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-28",
+     "note": "市府遊戲場網站：沙坑旁有洗手洗腳設備",
+     "at": "2026-10-24"
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-28",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -406,7 +746,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：塑膠(彎曲)溜滑梯、磨石子(直道)溜滑梯、低齡兒童遊具組、攀爬牆、隧道、搖搖馬、一般鞦韆、鞍式鞦韆",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：塑膠(彎曲)溜滑梯、磨石子(直道)溜滑梯、低齡兒童遊具組、攀爬牆、隧道、搖搖馬、一般鞦韆、鞍式鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -433,10 +773,10 @@
      "at": null
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站：猿林區有溜索與座式滑索",
+     "at": "2026-10-24"
     },
     "seesaw": {
      "v": "u",
@@ -481,10 +821,10 @@
      "at": null
     },
     "suspension_bridge": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站：桃氣猿遊戲場有繩橋",
+     "at": "2026-10-24"
     },
     "tunnel": {
      "v": "y",
@@ -499,10 +839,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站：猿林區有沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
      "v": "u",
@@ -517,10 +857,10 @@
      "at": null
     },
     "water_pump": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站：親水生態區有壓水器",
+     "at": "2026-10-24"
     },
     "trampoline": {
      "v": "u",
@@ -559,16 +899,16 @@
      "at": null
     },
     "music": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站：猿林區有拍擊樂器",
+     "at": "2026-10-24"
     },
     "chalk_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站：有可以用水塗鴉的水畫牆",
+     "at": "2026-10-24"
     },
     "toddler_zone": {
      "v": "y",
@@ -583,10 +923,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -595,10 +935,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-5",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -2566,7 +2906,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：滾輪(彎道)溜滑梯、磨石子(彎道、直道)溜滑梯、滑桿、攀爬牆、木樁爬坡、一般鞦韆、共融式沙坑",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：滾輪(彎道)溜滑梯、磨石子(彎道、直道)溜滑梯、滑桿、攀爬牆、木樁爬坡、一般鞦韆、共融式沙坑。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -2587,10 +2927,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-66",
+     "note": "市府遊戲場網站：有一座無障礙鳥巢鞦韆",
+     "at": "2026-10-24"
     },
     "zipline": {
      "v": "u",
@@ -2665,10 +3005,10 @@
      "at": "2026-10-11"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-66",
+     "note": "市府遊戲場網站：沙坑配置輪椅可用的沙桌",
+     "at": "2026-10-24"
     },
     "water_play": {
      "v": "u",
@@ -2743,10 +3083,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-66",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -2755,10 +3095,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-66",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -2836,7 +3176,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆與(直道)溜滑梯、多人翹翹板",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆與(直道)溜滑梯、多人翹翹板。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -2845,10 +3185,10 @@
      "at": "2026-10-11"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-15",
+     "note": "市府遊戲場網站：有鞦韆",
+     "at": "2026-10-24"
     },
     "baby_swing": {
      "v": "u",
@@ -2923,10 +3263,10 @@
      "at": null
     },
     "tree_house": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-15",
+     "note": "市府遊戲場網站：組合遊具有樹屋",
+     "at": "2026-10-24"
     },
     "sandpit": {
      "v": "u",
@@ -3025,10 +3365,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-15",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -3106,7 +3446,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：立體攀爬網、攀爬牆、磨石子(直道)溜滑梯、隧道、一般鞦韆、親子鞦韆、旋轉攀爬網",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：立體攀爬網、攀爬牆、磨石子(直道)溜滑梯、隧道、一般鞦韆、親子鞦韆、旋轉攀爬網。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -3139,16 +3479,16 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-14",
+     "note": "市府遊戲場網站：有蹺蹺板",
+     "at": "2026-10-24"
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-14",
+     "note": "市府遊戲場網站：有搖搖馬",
+     "at": "2026-10-24"
     },
     "spinner": {
      "v": "y",
@@ -3241,10 +3581,10 @@
      "at": null
     },
     "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-14",
+     "note": "市府遊戲場網站：服務設施列有籃球場 2 面",
+     "at": "2026-10-24"
     },
     "skatepark": {
      "v": "u",
@@ -3295,10 +3635,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-14",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -3376,7 +3716,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀岩坡、金屬(螺旋)溜滑梯、磨石子(直道)溜滑梯、攀爬架",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀岩坡、金屬(螺旋)溜滑梯、磨石子(直道)溜滑梯、攀爬架。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -3469,16 +3809,16 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-68",
+     "note": "市府遊戲場網站：有帆布遮蔭的沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-68",
+     "note": "市府遊戲場網站：沙坑有無障礙沙桌",
+     "at": "2026-10-24"
     },
     "water_play": {
      "v": "u",
@@ -3553,10 +3893,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-68",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -3565,10 +3905,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-68",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -3601,10 +3941,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-68",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -3646,7 +3986,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：有三座大型遊樂設施、盪鞦韆、溜滑梯、攀岩、獨木橋、單槓及蹺蹺板",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：有三座大型遊樂設施、盪鞦韆、溜滑梯、攀岩、獨木橋、單槓及蹺蹺板。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -3685,10 +4025,10 @@
      "at": "2026-10-11"
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-18",
+     "note": "市府遊戲場網站：有兩座搖搖馬",
+     "at": "2026-10-24"
     },
     "spinner": {
      "v": "u",
@@ -3697,10 +4037,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-18",
+     "note": "市府遊戲場網站：有球型攀爬架",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "y",
@@ -3727,10 +4067,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-18",
+     "note": "市府遊戲場網站：服務設施列有鑽籠",
+     "at": "2026-10-24"
     },
     "tree_house": {
      "v": "u",
@@ -3835,10 +4175,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-18",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -3916,7 +4256,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬障礙物坡道、攀爬繩、磨石子(直道)溜滑梯、旋轉盤、一般鞦韆、鞍式鞦韆、鳥巢鞦韆、沙坑、",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬障礙物坡道、攀爬繩、磨石子(直道)溜滑梯、旋轉盤、一般鞦韆、鞍式鞦韆、鳥巢鞦韆、沙坑、。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -4093,10 +4433,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-22",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -4141,10 +4481,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-22",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -4186,7 +4526,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆、攀爬繩、木箱階梯、木樁攀爬坡、磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯、平衡木、沙坑、挖土機、玩沙台、旋轉擺盪椅、一般鞦韆、鞍式鞦韆、座椅式鞦韆、攀岩牆、搖搖馬",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬牆、攀爬繩、木箱階梯、木樁攀爬坡、磨石子(直道)溜滑梯、塑膠(彎道)溜滑梯、平衡木、沙坑、挖土機、玩沙台、旋轉擺盪椅、一般鞦韆、鞍式鞦韆、座椅式鞦韆、攀岩牆、搖搖馬。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -4201,16 +4541,16 @@
      "at": "2026-10-11"
     },
     "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-24",
+     "note": "市府遊戲場網站：有尿布鞦韆",
+     "at": "2026-10-24"
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-24",
+     "note": "市府遊戲場網站：有圓盤鞦韆",
+     "at": "2026-10-24"
     },
     "zipline": {
      "v": "u",
@@ -4267,16 +4607,16 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-24",
+     "note": "市府遊戲場網站：海盜船遊具有鑽籠",
+     "at": "2026-10-24"
     },
     "tree_house": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-24",
+     "note": "市府遊戲場網站：有瞭望台遊具",
+     "at": "2026-10-24"
     },
     "sandpit": {
      "v": "y",
@@ -4363,10 +4703,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-24",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -4411,10 +4751,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-24",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -4456,7 +4796,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（埤塘公園、特色遊戲場）列出的設施：10米高透明管狀溜滑梯、複合式攀爬網、沙坑、步道、遊戲場",
+   "summary": "桃園市公園資料（埤塘公園、特色遊戲場）列出的設施：10米高透明管狀溜滑梯、複合式攀爬網、沙坑、步道、遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -4633,10 +4973,10 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-23",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -4727,13 +5067,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大型沙坑、恐龍化石、沙坑挖土機、戲沙盤、攀岩牆、共融鞦韆",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大型沙坑、恐龍化石、沙坑挖土機、戲沙盤、攀岩牆、共融鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-180",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "y",
@@ -4778,10 +5118,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-180",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "y",
@@ -5267,7 +5607,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：藤蔓遊戲區包含波浪流滑梯及大葉攀爬網、彈跳床、鳥巢鞦韆、親子鞦韆",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：藤蔓遊戲區包含波浪流滑梯及大葉攀爬網、彈跳床、鳥巢鞦韆、親子鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -5444,10 +5784,10 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-8",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -5807,13 +6147,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：樹屋、遊戲沙坑、一般鞦韆、親子鞦韆",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：樹屋、遊戲沙坑、一般鞦韆、親子鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-49",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "y",
@@ -5858,10 +6198,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-49",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -5978,16 +6318,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-49",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-49",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -5996,10 +6336,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-49",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -6077,7 +6417,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：冒險遊戲溜滑梯塔、沙坑、彈跳床、極限飛輪、攀爬、親子鞦韆、鳥巢鞦韆",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：冒險遊戲溜滑梯塔、沙坑、彈跳床、極限飛輪、攀爬、親子鞦韆、鳥巢鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -6110,10 +6450,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-42",
+     "note": "市府遊戲場網站：有蹺蹺板",
+     "at": "2026-10-24"
     },
     "spring_rider": {
      "v": "u",
@@ -6254,10 +6594,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-42",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -6302,10 +6642,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-42",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -6347,13 +6687,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大型戲水池、低齡兒童遊具組",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大型戲水池、低齡兒童遊具組。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-34",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -6386,10 +6726,10 @@
      "at": null
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-34",
+     "note": "市府遊戲場網站：有搖搖馬",
+     "at": "2026-10-24"
     },
     "spinner": {
      "v": "u",
@@ -6398,10 +6738,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-34",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -6887,7 +7227,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：沙坑、磨石子(直道)溜滑梯、攀爬牆",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：沙坑、磨石子(直道)溜滑梯、攀爬牆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -7058,16 +7398,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-37",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-37",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -7157,13 +7497,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬架、大小彈跳床、一般鞦韆、座椅鞦韆、鳥巢鞦韆、親子鞦韆、沙坑",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：攀爬架、大小彈跳床、一般鞦韆、座椅鞦韆、鳥巢鞦韆、親子鞦韆、沙坑。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-38",
+     "note": "市府遊戲場網站：有香蕉造型溜滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "y",
@@ -7220,10 +7560,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-38",
+     "note": "市府遊戲場網站：有爬網",
+     "at": "2026-10-24"
     },
     "balance": {
      "v": "u",
@@ -7232,10 +7572,10 @@
      "at": null
     },
     "suspension_bridge": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-38",
+     "note": "市府遊戲場網站：有繩索橋",
+     "at": "2026-10-24"
     },
     "tunnel": {
      "v": "u",
@@ -7334,10 +7674,10 @@
      "at": null
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-38",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -7427,7 +7767,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：鑽石旋轉盤、極限飛輪、彩虹山丘、大型攀爬網、擺盪大索",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：鑽石旋轉盤、極限飛輪、彩虹山丘、大型攀爬網、擺盪大索。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "u",
@@ -7604,10 +7944,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-40",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -7616,10 +7956,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-40",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -7697,7 +8037,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大齡兒童體能遊具組、塑膠(直道)溜滑梯、攀爬牆、腳踏車越野場、船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)、共融式旋轉盤、聲音遊戲板、一般鞦韆、座椅鞦韆、鳥巢鞦韆",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：大齡兒童體能遊具組、塑膠(直道)溜滑梯、攀爬牆、腳踏車越野場、船型遊具組(雲梯、梅花樁、搖晃吊橋、鑽籠、塑膠溜滑梯、遊戲板)、共融式旋轉盤、聲音遊戲板、一般鞦韆、座椅鞦韆、鳥巢鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -7886,10 +8226,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-12",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -7967,7 +8307,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（特色遊戲場）列出的設施：三層樓高度滑道/礫石沙坑/迷宮",
+   "summary": "桃園市公園資料（特色遊戲場）列出的設施：三層樓高度滑道/礫石沙坑/迷宮。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "y",
@@ -7976,10 +8316,10 @@
      "at": "2026-10-11"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-67",
+     "note": "市府遊戲場網站：有單人與雙人鞦韆",
+     "at": "2026-10-24"
     },
     "baby_swing": {
      "v": "u",
@@ -8006,10 +8346,10 @@
      "at": null
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-67",
+     "note": "市府遊戲場網站：有三座搖搖馬",
+     "at": "2026-10-24"
     },
     "spinner": {
      "v": "u",
@@ -8018,10 +8358,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-67",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -8048,10 +8388,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-67",
+     "note": "市府遊戲場網站：有涵洞",
+     "at": "2026-10-24"
     },
     "tree_house": {
      "v": "u",
@@ -8144,10 +8484,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-67",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -8156,10 +8496,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-67",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -8192,10 +8532,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-67",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -8507,13 +8847,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（埤塘公園）列出的設施：步道、涼亭、體健設施、遊戲場",
+   "summary": "桃園市公園資料（埤塘公園）列出的設施：步道、涼亭、體健設施、遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-71",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -8558,10 +8898,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-71",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -8777,13 +9117,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "桃園市公園資料（埤塘公園）列出的設施：公車站、單車驛站、環湖步道、湖景木棧道、觀光吊橋、腳踏船",
+   "summary": "桃園市公園資料（埤塘公園）列出的設施：公車站、單車驛站、環湖步道、湖景木棧道、觀光吊橋、腳踏船。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-41",
+     "note": "市府遊戲場網站：戲水區有龍造型溜滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -8828,10 +9168,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-41",
+     "note": "市府遊戲場網站：有立體攀爬架",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -8870,10 +9210,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-41",
+     "note": "市府遊戲場網站的遊戲類型有沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
      "v": "u",
@@ -8882,10 +9222,10 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-41",
+     "note": "市府遊戲場網站：有夏季限定的兒童戲水區",
+     "at": "2026-10-24"
     },
     "water_pump": {
      "v": "u",
@@ -8954,10 +9294,10 @@
      "at": "2026-10-11"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-41",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -8966,10 +9306,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-41",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -9317,13 +9657,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-62",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -9368,10 +9708,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-62",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -9488,10 +9828,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-62",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
      "v": "u",
@@ -9506,10 +9846,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-62",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -9847,13 +10187,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-188",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -9898,10 +10238,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-188",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -10112,13 +10452,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-185",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -10163,10 +10503,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-185",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -10377,13 +10717,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站：有溜滑梯塔與滾輪溜滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -10398,28 +10738,28 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站：有鳥巢鞦韆",
+     "at": "2026-10-24"
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站：有溜索",
+     "at": "2026-10-24"
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站：有四人蹺蹺板",
+     "at": "2026-10-24"
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站：有搖搖馬",
+     "at": "2026-10-24"
     },
     "spinner": {
      "v": "u",
@@ -10428,10 +10768,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -10464,16 +10804,16 @@
      "at": null
     },
     "tree_house": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站：有樹屋",
+     "at": "2026-10-24"
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站的遊戲類型有沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
      "v": "u",
@@ -10548,16 +10888,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -10566,10 +10906,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -10602,10 +10942,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-11",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -10642,13 +10982,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-237",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -10693,10 +11033,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-237",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -10907,13 +11247,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-365",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -10958,10 +11298,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-365",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -11132,10 +11472,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-365",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -11967,13 +12307,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-194",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -12018,10 +12358,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-194",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -12232,13 +12572,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-193",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -12283,10 +12623,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-193",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -12497,13 +12837,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 5 處遊戲區：大福河馬遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 5 處遊戲區：大福河馬遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-236",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -12548,10 +12888,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-236",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -12762,13 +13102,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -12801,10 +13141,10 @@
      "at": null
     },
     "spring_rider": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站：有搖搖馬",
+     "at": "2026-10-24"
     },
     "spinner": {
      "v": "u",
@@ -12813,10 +13153,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -12855,16 +13195,16 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站的遊戲類型有沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站：有沙桌",
+     "at": "2026-10-24"
     },
     "water_play": {
      "v": "u",
@@ -12897,10 +13237,10 @@
      "at": null
     },
     "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站：服務設施列有籃球場",
+     "at": "2026-10-24"
     },
     "skatepark": {
      "v": "u",
@@ -12933,16 +13273,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -12951,10 +13291,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -12987,10 +13327,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-348",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -13027,13 +13367,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-201",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -13078,10 +13418,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-201",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -13292,13 +13632,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-131",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -13343,10 +13683,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-131",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -13557,13 +13897,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：兒童遊樂區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：兒童遊樂區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-80",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -13608,10 +13948,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-80",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -13822,13 +14162,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-229",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -13873,10 +14213,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-229",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -14617,13 +14957,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：兒童遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：兒童遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-142",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -14668,10 +15008,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-142",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -14882,19 +15222,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站：小丘上有磨石子滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站：有多種鞦韆",
+     "at": "2026-10-24"
     },
     "baby_swing": {
      "v": "u",
@@ -14933,10 +15273,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -14975,16 +15315,16 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站：有商店造型的沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站：沙坑有輪椅可用的沙桌",
+     "at": "2026-10-24"
     },
     "water_play": {
      "v": "u",
@@ -15029,10 +15369,10 @@
      "at": null
     },
     "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站：有水平吊梯",
+     "at": "2026-10-24"
     },
     "music": {
      "v": "u",
@@ -15053,16 +15393,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -15107,10 +15447,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-6",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -15412,13 +15752,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-264",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -15463,10 +15803,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-264",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -15677,13 +16017,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-263",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -15728,10 +16068,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-263",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -15942,13 +16282,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-303",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -16207,7 +16547,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "u",
@@ -16258,10 +16598,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-324",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -16472,13 +16812,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-370",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -16523,10 +16863,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-370",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -17002,13 +17342,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-368",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -17267,13 +17607,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：白馬公園遊樂場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：白馬公園遊樂場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-169",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -17318,10 +17658,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-169",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -18062,13 +18402,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-374",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -18113,10 +18453,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-374",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -18592,31 +18932,31 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：遊樂場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：遊樂場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站：有三座滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站：有單人鞦韆",
+     "at": "2026-10-24"
     },
     "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站：有尿布鞦韆",
+     "at": "2026-10-24"
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站：有鳥巢鞦韆",
+     "at": "2026-10-24"
     },
     "zipline": {
      "v": "u",
@@ -18637,16 +18977,16 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站：有旋轉盤",
+     "at": "2026-10-24"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -18709,10 +19049,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站：有彈跳床",
+     "at": "2026-10-24"
     },
     "pushbike": {
      "v": "u",
@@ -18763,16 +19103,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -18781,10 +19121,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -18817,10 +19157,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-25",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -18857,13 +19197,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-143",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -18908,10 +19248,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-143",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -19082,10 +19422,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-143",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -19122,13 +19462,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-140",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -19387,13 +19727,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-224",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -19438,10 +19778,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-224",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -19917,13 +20257,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 4 處遊戲區：遊樂場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 4 處遊戲區：遊樂場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-63",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -19968,10 +20308,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-63",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -20010,10 +20350,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-63",
+     "note": "市府遊戲場網站的遊戲類型有沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
      "v": "u",
@@ -20088,16 +20428,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-63",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-63",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -20106,10 +20446,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-63",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -20124,10 +20464,10 @@
      "at": null
     },
     "nursing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-63",
+     "note": "市府遊戲場網站的服務設施有哺乳室",
+     "at": "2026-10-24"
     },
     "lighting": {
      "v": "u",
@@ -20182,19 +20522,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站：有磨石子溜滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站：有共融盪鞦韆",
+     "at": "2026-10-24"
     },
     "baby_swing": {
      "v": "u",
@@ -20233,16 +20573,16 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站：有山丘型攀爬牆",
+     "at": "2026-10-24"
     },
     "rope_net": {
      "v": "u",
@@ -20251,10 +20591,10 @@
      "at": null
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站：沙坑裡有平衡木",
+     "at": "2026-10-24"
     },
     "suspension_bridge": {
      "v": "u",
@@ -20275,10 +20615,10 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站：有沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
      "v": "u",
@@ -20353,16 +20693,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -20371,10 +20711,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -20407,10 +20747,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-21",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -20447,19 +20787,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：有單道、雙道與旋轉溜滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：有座椅式鞦韆",
+     "at": "2026-10-24"
     },
     "baby_swing": {
      "v": "u",
@@ -20468,10 +20808,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：有鳥巢式鞦韆",
+     "at": "2026-10-24"
     },
     "zipline": {
      "v": "u",
@@ -20480,10 +20820,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：有蹺蹺板",
+     "at": "2026-10-24"
     },
     "spring_rider": {
      "v": "u",
@@ -20498,10 +20838,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：地景土丘組合遊具有攀爬設施",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -20528,10 +20868,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：組合遊具有鑽籠",
+     "at": "2026-10-24"
     },
     "tree_house": {
      "v": "u",
@@ -20564,10 +20904,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：有可容納三人的彈跳床",
+     "at": "2026-10-24"
     },
     "pushbike": {
      "v": "u",
@@ -20582,10 +20922,10 @@
      "at": null
     },
     "ball_court": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站：服務設施列有天幕籃球場",
+     "at": "2026-10-24"
     },
     "skatepark": {
      "v": "u",
@@ -20618,10 +20958,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
      "v": "u",
@@ -20672,10 +21012,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-16",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -20977,13 +21317,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：兒童遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：兒童遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-269",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -21028,10 +21368,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-269",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -21242,13 +21582,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：埔心公園遊樂區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：埔心公園遊樂區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-255",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -21772,13 +22112,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-123",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -21823,10 +22163,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-123",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -22037,13 +22377,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-254",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -22088,10 +22428,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-254",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -22567,13 +22907,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-113",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -22618,10 +22958,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-113",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -22832,31 +23172,31 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：有硬式與軟式單片鞦韆、親子共融鞦韆",
+     "at": "2026-10-24"
     },
     "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：有包覆尿布型鞦韆",
+     "at": "2026-10-24"
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：有鳥巢型鞦韆",
+     "at": "2026-10-24"
     },
     "zipline": {
      "v": "u",
@@ -22883,22 +23223,22 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：鰻魚冒險地標有挑戰高塔與垂直爬梯",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：有立體岩塊的攀岩坡",
+     "at": "2026-10-24"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：鰻魚冒險地標有攀爬網",
+     "at": "2026-10-24"
     },
     "balance": {
      "v": "u",
@@ -22913,10 +23253,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：鰻魚冒險地標有鑽籠",
+     "at": "2026-10-24"
     },
     "tree_house": {
      "v": "u",
@@ -22925,16 +23265,16 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：有細沙沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：有無障礙戲沙桌",
+     "at": "2026-10-24"
     },
     "water_play": {
      "v": "u",
@@ -22943,10 +23283,10 @@
      "at": null
     },
     "water_pump": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站：有戲水泵浦",
+     "at": "2026-10-24"
     },
     "trampoline": {
      "v": "u",
@@ -23003,16 +23343,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -23021,10 +23361,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -23057,10 +23397,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-381",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -23362,7 +23702,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "u",
@@ -23413,10 +23753,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-320",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -24157,13 +24497,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-231",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -24208,10 +24548,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-231",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -24422,13 +24762,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-241",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -24473,10 +24813,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-241",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -24687,13 +25027,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-304",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -24952,13 +25292,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 3 處遊戲區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 3 處遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-228",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -25003,10 +25343,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-228",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -25177,10 +25517,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-228",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -25217,13 +25557,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區：極限山丘、冒險森林。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區：極限山丘、冒險森林。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站：有山丘滑梯與碗狀磨石子溜滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -25244,10 +25584,10 @@
      "at": null
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站：有弧形滑軌溜索",
+     "at": "2026-10-24"
     },
     "seesaw": {
      "v": "u",
@@ -25268,28 +25608,28 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站的遊戲類型有攀爬",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站：有挑戰級攀爬牆",
+     "at": "2026-10-24"
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站：有多層攀爬網",
+     "at": "2026-10-24"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站：有平衡木與梅花樁",
+     "at": "2026-10-24"
     },
     "suspension_bridge": {
      "v": "u",
@@ -25322,10 +25662,10 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站：有定時噴水的淺水池",
+     "at": "2026-10-24"
     },
     "water_pump": {
      "v": "u",
@@ -25388,16 +25728,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -25424,10 +25764,10 @@
      "at": null
     },
     "nursing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-2",
+     "note": "市府遊戲場網站的服務設施有哺乳室",
+     "at": "2026-10-24"
     },
     "lighting": {
      "v": "u",
@@ -25482,19 +25822,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-50",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-50",
+     "note": "市府遊戲場網站：有鞦韆組",
+     "at": "2026-10-24"
     },
     "baby_swing": {
      "v": "u",
@@ -25533,10 +25873,10 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-50",
+     "note": "市府遊戲場網站：有圓頂攀爬架與攀爬架",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -25545,10 +25885,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-50",
+     "note": "市府遊戲場網站：有攀爬網",
+     "at": "2026-10-24"
     },
     "balance": {
      "v": "u",
@@ -25707,10 +26047,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-50",
+     "note": "市府遊戲場網站：有共融式鞦韆",
+     "at": "2026-10-24"
     }
    },
    "parking": {
@@ -26012,13 +26352,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-230",
+     "note": "市府遊戲場網站的遊戲類型有溜滑",
+     "at": "2026-10-24"
     },
     "swing": {
      "v": "u",
@@ -26542,19 +26882,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示了 2 處遊戲區：兒童遊樂場、親水區。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示了 2 處遊戲區：兒童遊樂場、親水區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有 11.2 公尺高的攀爬網溜滑梯",
+     "at": "2026-10-24"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有雙人鞦韆、親子鞦韆等",
+     "at": "2026-10-24"
     },
     "baby_swing": {
      "v": "u",
@@ -26563,10 +26903,10 @@
      "at": null
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有鳥巢鞦韆",
+     "at": "2026-10-24"
     },
     "zipline": {
      "v": "u",
@@ -26575,10 +26915,10 @@
      "at": null
     },
     "seesaw": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有旋轉蹺蹺板",
+     "at": "2026-10-24"
     },
     "spring_rider": {
      "v": "u",
@@ -26587,16 +26927,16 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有大家一起轉的共融轉盤",
+     "at": "2026-10-24"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有小丘、攀爬柱等攀爬設施",
+     "at": "2026-10-24"
     },
     "climbing_wall": {
      "v": "u",
@@ -26605,16 +26945,16 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有勝利女神飛彈造型的攀爬網",
+     "at": "2026-10-24"
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：障礙闖關區有梅花樁",
+     "at": "2026-10-24"
     },
     "suspension_bridge": {
      "v": "u",
@@ -26635,16 +26975,16 @@
      "at": null
     },
     "sandpit": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：有共融沙坑",
+     "at": "2026-10-24"
     },
     "sand_table": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：沙坑有沙桌",
+     "at": "2026-10-24"
     },
     "water_play": {
      "v": "u",
@@ -26695,10 +27035,10 @@
      "at": null
     },
     "music": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站：戰鬥機遊具可以話筒傳聲",
+     "at": "2026-10-24"
     },
     "chalk_wall": {
      "v": "u",
@@ -26713,16 +27053,16 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站的服務設施有廁所",
+     "at": "2026-10-24"
     },
     "handwash": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站的服務設施有洗手台",
+     "at": "2026-10-24"
     },
     "footwash": {
      "v": "u",
@@ -26731,10 +27071,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站的服務設施有遮陽",
+     "at": "2026-10-24"
     },
     "transit": {
      "v": "u",
@@ -26767,10 +27107,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tycpark-7",
+     "note": "市府遊戲場網站標示為無障礙共融遊戲場",
+     "at": "2026-10-24"
     }
    },
    "parking": {

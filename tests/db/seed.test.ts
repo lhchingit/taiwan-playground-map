@@ -693,9 +693,15 @@ describe('pnpm seed', () => {
     expect(tyc?.places.length).toBeGreaterThan(0);
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'tyc'`;
     expect(c?.launched_at).toBeNull();
-    const toilet = await sql`SELECT DISTINCT value, source_id FROM place_attributes
-                             WHERE place_id LIKE 'tyc-%' AND key = 'toilet'`;
-    expect(toilet).toEqual([{ value: 'y', source_id: 'tycg' }]);
+    // 廁所來自市府開放資料，或市府遊戲場網站（research.json，只補未知的項目）
+    const toilet = await sql`SELECT DISTINCT value, source_id LIKE 'tycpark-%' AS researched
+                             FROM place_attributes WHERE place_id LIKE 'tyc-%' AND key = 'toilet'
+                               AND source_id <> 'tycg' ORDER BY 1`;
+    expect(toilet).toEqual([{ value: 'y', researched: true }]);
+    const [official] = await sql`SELECT count(*)::int AS n FROM place_attributes
+                                 WHERE place_id LIKE 'tyc-%' AND key = 'toilet' AND source_id = 'tycg'
+                                   AND value = 'y'`;
+    expect(official?.n).toBeGreaterThan(0);
     const [n] =
       await sql`SELECT count(*)::int AS n FROM place_attributes WHERE place_id LIKE 'tyc-%' AND value = 'n'`;
     expect(n?.n).toBe(0);

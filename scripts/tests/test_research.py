@@ -47,6 +47,15 @@ class ApplyTest(unittest.TestCase):
         self.assertEqual(p["summary"],
                          "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。地址來自測試清單。")
 
+    def test_official_summary_gets_note(self):
+        # 官方清冊的場地（桃園）說明沒有「還沒有資料」，補了查證資料就在最後加上說明
+        p = place("tyc-tycg-001")
+        p["summary"] = "桃園市公園資料（特色遊戲場）列出的設施：溜滑梯"
+        d = data(places={"tyc-tycg-001": {"toilet": ["y", "news-1", "有廁所"]}})
+        research.apply(d, [p], ["slide", "toilet"])
+        self.assertEqual(p["summary"], "桃園市公園資料（特色遊戲場）列出的設施：溜滑梯。"
+                                       "部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。")
+
 
 class ValidateTest(unittest.TestCase):
     def assert_error(self, d, message):
@@ -58,6 +67,14 @@ class ValidateTest(unittest.TestCase):
         d = data()
         d["places"] = {"hsq-osm-w1": {key: entry}}
         return d
+
+    def test_does_not_override_existing_value(self):
+        # 官方資料已經有值的項目不覆蓋（桃園市府開放資料）
+        p = place()
+        p["attrs"]["slide"] = {"v": "y", "src": "tycg", "note": "溜滑梯", "at": "2026-10-11"}
+        with self.assertRaises(research.ResearchError) as e:
+            research.apply(data(), [p], ["slide", "toilet"])
+        self.assertIn("hsq-osm-w1 slide：已經有資料（來源 tycg），不覆蓋", str(e.exception))
 
     def test_unknown_place(self):
         d = data()

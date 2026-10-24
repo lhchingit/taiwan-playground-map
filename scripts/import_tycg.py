@@ -6,7 +6,8 @@
 輸入：data/raw/tyc/tycg-parks.json、osm-matches.tsv、manual-review.tsv（人工定位工具）、
       item-decisions.tsv（對不到的設施用語，人工決定怎麼處理）、
       osm.json（scripts/fetch_osm_city.py tyc）、manual-names.tsv（OSM 遊戲場的人工命名或排除）、
-      osm-institutions.json（位在學校、機關範圍內的 OSM 遊戲場，自動排除）
+      osm-institutions.json（位在學校、機關範圍內的 OSM 遊戲場，自動排除）、
+      research.json（有的話：人工查證的遊具與設施，只補未知的項目，sources/research.py）
 輸出：data/seed/tyc/places.json、places.csv；data/review/tyc/ 的 unmatched、match-review、unmapped-items、
       no-playground（官方資料）、unnamed、merged、excluded、excluded-institution、osm-covered、osm-near-official（OSM 遊戲場）（CSV），
       以及人工定位工具讀的 to-locate.json
@@ -18,7 +19,7 @@ from lib.attrs import attr_keys, blank_attrs
 from lib.io import read_json, read_tsv, write_csv, write_json
 from lib.labels import labels_json
 from lib.manual import coord_label, read_manual, status_text
-from sources import hccg, tycg
+from sources import hccg, research, tycg
 from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -146,6 +147,9 @@ def main():
 
     sources = {**tycg.SOURCES, **{k: v for k, v in hccg.SOURCES.items() if k == "osm"},
                "est": {"label": "依面積與設施推估", "url": None, "kind": "estimate"}}
+    research_path = RAW / "research.json"
+    if research_path.exists():  # 人工查證的遊具與設施，只補未知的項目（sources/research.py）
+        sources.update(research.apply(read_json(research_path), places, keys, tycg.CITY))
     seed = {"version": "0.2", "city": "桃園市", "generated": fetched, "sources": sources,
             "labels": labels, "places": places}
     seed_dir = ROOT / "data/seed/tyc"
