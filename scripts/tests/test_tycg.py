@@ -195,6 +195,10 @@ class RepoSeedTest(unittest.TestCase):
         for p in extra:
             for k, a in p["attrs"].items():
                 self.assertTrue(a["v"] == "u" or a["src"] in researched, (p["id"], k))
+        # 市府遊戲場網站列出、OSM 只畫了公園的遊戲場（research.json 的 parks）
+        listed = [p for p in extra if p.get("listing_src")]
+        self.assertTrue(listed)
+        self.assertTrue(all(p["listing_src"].startswith("tycpark-") for p in listed))
         names = [p["name"] for p in seed["places"]]
         self.assertEqual(len(names), len(set(names)))
 
