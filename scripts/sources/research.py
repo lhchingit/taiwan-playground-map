@@ -12,6 +12,7 @@
 parks：OSM 公園裡沒有標遊戲場、但新聞或文章寫明有的，用公園範圍中心點（data/raw/<縣市>/osm-parks.json，
 scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱；依據的來源記在 listing_src／listing_at（places.listing_source）。
 只記來源文字明確寫到的；「沒有」也要來源明寫才填 n。格式有錯就中止匯入，不會默默略過。
+場地屬性已經有其他來源的值（例如桃園市府開放資料）時不覆蓋，也算格式錯誤。
 """
 import math
 from datetime import date
@@ -73,7 +74,8 @@ def validate_base(research):
 def validate_places(research, places, keys):
     errors = []
     sources = research.get("sources") or {}
-    ids = {p["id"] for p in places}
+    by_id = {p["id"]: p for p in places}
+    ids = set(by_id)
     for pid, entry in (research.get("aka") or {}).items():
         if pid not in ids:
             errors.append(f"aka {pid}：沒有這個場地")
@@ -90,6 +92,10 @@ def validate_places(research, places, keys):
                 continue
             v, src, note = entry[:3]
             check_date(errors, where, entry, 3)
+            place = by_id.get(pid)
+            old = place["attrs"].get(k) if place else None
+            if old and old["v"] != "u":  # 官方資料（例如桃園市府開放資料）已經有值：不覆蓋
+                errors.append(f"{where}：已經有資料（來源 {old['src']}），不覆蓋")
             if v not in VALUES:
                 errors.append(f"{where}：值只能是 y 或 n")
             if src not in sources:
@@ -164,6 +170,8 @@ def apply(research, places, keys, city=None, osm_parks=None):
         # 官方公園清單補地址時，說明後面會再接「地址來自…」，所以不只看結尾
         if attrs and UNKNOWN_TAIL in p["summary"]:
             p["summary"] = p["summary"].replace(UNKNOWN_TAIL, RESEARCHED_TAIL, 1)
+        elif attrs and RESEARCHED_TAIL not in p["summary"]:  # 官方清冊的場地（桃園）原本就有遊具資料
+            p["summary"] = p["summary"].rstrip("。") + "。" + RESEARCHED_TAIL
     used = {e[1] for attrs in (research.get("places") or {}).values() for e in attrs.values()}
     used |= {e[0] for section in ("parks", "aka") for e in (research.get(section) or {}).values()}
     return {k: s for k, s in research["sources"].items() if k in used}

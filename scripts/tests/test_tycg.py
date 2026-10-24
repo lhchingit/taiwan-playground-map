@@ -190,8 +190,11 @@ class RepoSeedTest(unittest.TestCase):
         self.assertEqual(len(official) + len(extra), len(seed["places"]))
         self.assertEqual(len(official), 34)
         self.assertTrue(extra)
+        # OSM 遊戲場的屬性只會來自人工查證（research.json 的網路文章或新聞），其他都是未知
+        researched = {k for k, s in seed["sources"].items() if s["kind"] in ("news", "article")}
         for p in extra:
-            self.assertEqual({a["v"] for a in p["attrs"].values()}, {"u"}, p["id"])
+            for k, a in p["attrs"].items():
+                self.assertTrue(a["v"] == "u" or a["src"] in researched, (p["id"], k))
         names = [p["name"] for p in seed["places"]]
         self.assertEqual(len(names), len(set(names)))
 
