@@ -140,7 +140,7 @@ def park_places(research, osm_parks, places, keys, city):
             status="open", summary=PARK_TEXT.format(note.strip()) + UNKNOWN_TAIL,
             attrs={k: {"v": "u", "src": None, "note": None, "at": None} for k in keys},
             parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
-            source_coords=f"OpenStreetMap {ref}（leisure=park 範圍中心）",
+            source_coords=f"OpenStreetMap {ref}（leisure={park.get('leisure') or 'park'} 範圍中心）",
             listing_src=parks[ref][0] if ok else None,
             listing_at=parks[ref][2] if ok and len(parks[ref]) == 3 else research.get("verified_at"),
             official_ref=[{"osm": ref}],

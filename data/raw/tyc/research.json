@@ -2,73 +2,380 @@
  "verified_at": "2026-10-24",
  "sources": {
   "tycpark-2": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 華興池生態埤塘公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/2", "kind": "article"},
+  "tycpark-3": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 光明公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/3", "kind": "article"},
   "tycpark-5": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 陽明運動公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/5", "kind": "article"},
   "tycpark-6": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 四維兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/6", "kind": "article"},
   "tycpark-7": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 龍潭運動公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/7", "kind": "article"},
   "tycpark-8": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 傑克冒險公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/8", "kind": "article"},
+  "tycpark-9": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 建德公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/9", "kind": "article"},
+  "tycpark-10": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 豐德公園(遊具區)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/10", "kind": "article"},
   "tycpark-11": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 埔頂公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/11", "kind": "article"},
   "tycpark-12": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 河濱公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/12", "kind": "article"},
   "tycpark-14": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 藝術園區公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/14", "kind": "article"},
   "tycpark-15": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 仁祥公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/15", "kind": "article"},
   "tycpark-16": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 文化公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/16", "kind": "article"},
+  "tycpark-17": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 中正公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/17", "kind": "article"},
   "tycpark-18": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 星河親子公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/18", "kind": "article"},
+  "tycpark-19": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 永福羅漢松公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/19", "kind": "article"},
+  "tycpark-20": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 內定大江公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/20", "kind": "article"},
   "tycpark-21": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 1895乙未保台紀念公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/21", "kind": "article"},
   "tycpark-22": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 雙連坡碉堡公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/22", "kind": "article"},
   "tycpark-23": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 鑊篤陂塘生態公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/23", "kind": "article"},
   "tycpark-24": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 新勢公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/24", "kind": "article"},
   "tycpark-25": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 民俗文化公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/25", "kind": "article"},
+  "tycpark-26": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 廣仁公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/26", "kind": "article"},
   "tycpark-28": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 大有梯田生態公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/28", "kind": "article"},
+  "tycpark-32": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 新屋區 公二公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/32", "kind": "article"},
   "tycpark-34": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 伯公岡公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/34", "kind": "article"},
   "tycpark-37": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 富岡運動公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/37", "kind": "article"},
   "tycpark-38": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 三民公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/38", "kind": "article"},
+  "tycpark-39": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 綠杉林公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/39", "kind": "article"},
   "tycpark-40": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 國三橋下舞動園區（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/40", "kind": "article"},
   "tycpark-41": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 龍潭大池（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/41", "kind": "article"},
   "tycpark-42": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 中正公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/42", "kind": "article"},
+  "tycpark-43": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 大華公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/43", "kind": "article"},
+  "tycpark-45": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 大坪頂公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/45", "kind": "article"},
+  "tycpark-47": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 新龍公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/47", "kind": "article"},
   "tycpark-49": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 南興水岸遊憩公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/49", "kind": "article"},
   "tycpark-50": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 台茂公園 TaimallPark（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/50", "kind": "article"},
   "tycpark-62": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 中正公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/62", "kind": "article"},
   "tycpark-63": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 虎頭山公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/63", "kind": "article"},
+  "tycpark-64": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 公一公園（橫山書法公園）（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/64", "kind": "article"},
   "tycpark-66": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 公一公園 (風禾公園)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/66", "kind": "article"},
   "tycpark-67": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 觀音區 草漯水之丘（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/67", "kind": "article"},
   "tycpark-68": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 青埔公七公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/68", "kind": "article"},
+  "tycpark-69": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 里昂社區公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/69", "kind": "article"},
+  "tycpark-70": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 興豐公園(二)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/70", "kind": "article"},
   "tycpark-71": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 茄苳埤塘公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/71", "kind": "article"},
+  "tycpark-72": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 高城公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/72", "kind": "article"},
+  "tycpark-73": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 茄明公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/73", "kind": "article"},
+  "tycpark-75": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 仁德公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/75", "kind": "article"},
+  "tycpark-79": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 福僑公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/79", "kind": "article"},
   "tycpark-80": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大湳公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/80", "kind": "article"},
+  "tycpark-81": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 公二公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/81", "kind": "article"},
+  "tycpark-82": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 忠勇公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/82", "kind": "article"},
+  "tycpark-83": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大勇兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/83", "kind": "article"},
+  "tycpark-84": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 同福公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/84", "kind": "article"},
+  "tycpark-86": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大和公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/86", "kind": "article"},
+  "tycpark-87": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 廣豐兒一公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/87", "kind": "article"},
+  "tycpark-88": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 瑞安公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/88", "kind": "article"},
+  "tycpark-89": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 瑞泰鄰里公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/89", "kind": "article"},
+  "tycpark-90": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大昌鄰里公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/90", "kind": "article"},
+  "tycpark-91": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 瑞發公園(973巷)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/91", "kind": "article"},
+  "tycpark-92": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 瑞發公園(825巷)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/92", "kind": "article"},
+  "tycpark-94": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 陽光活力園區（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/94", "kind": "article"},
+  "tycpark-96": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大明公園(一)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/96", "kind": "article"},
+  "tycpark-97": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大明公園(二)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/97", "kind": "article"},
+  "tycpark-100": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 思源公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/100", "kind": "article"},
+  "tycpark-103": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 重慶公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/103", "kind": "article"},
+  "tycpark-106": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 八德區 大安果樹公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/106", "kind": "article"},
+  "tycpark-108": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 大園公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/108", "kind": "article"},
   "tycpark-113": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 橫峰河濱公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/113", "kind": "article"},
+  "tycpark-118": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 士香公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/118", "kind": "article"},
+  "tycpark-119": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 仁和公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/119", "kind": "article"},
+  "tycpark-122": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 勤奮公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/122", "kind": "article"},
   "tycpark-123": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大溪區 運動公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/123", "kind": "article"},
+  "tycpark-124": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 復興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/124", "kind": "article"},
+  "tycpark-125": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 五權兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/125", "kind": "article"},
+  "tycpark-126": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 中鑄公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/126", "kind": "article"},
+  "tycpark-127": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 忠孝公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/127", "kind": "article"},
+  "tycpark-128": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 甲蟲兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/128", "kind": "article"},
+  "tycpark-129": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 幸福公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/129", "kind": "article"},
+  "tycpark-130": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 忠福廣場（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/130", "kind": "article"},
   "tycpark-131": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 過嶺松勇公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/131", "kind": "article"},
+  "tycpark-133": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 自強公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/133", "kind": "article"},
+  "tycpark-134": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 新興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/134", "kind": "article"},
+  "tycpark-135": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 華勛公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/135", "kind": "article"},
+  "tycpark-136": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 仁德公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/136", "kind": "article"},
+  "tycpark-137": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 普慶公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/137", "kind": "article"},
+  "tycpark-138": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 普忠公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/138", "kind": "article"},
   "tycpark-140": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 新興綠地公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/140", "kind": "article"},
   "tycpark-142": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 龍岡森林公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/142", "kind": "article"},
   "tycpark-143": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 興仁親子公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/143", "kind": "article"},
+  "tycpark-144": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 莊敬廣場（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/144", "kind": "article"},
+  "tycpark-145": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 月眉環保公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/145", "kind": "article"},
+  "tycpark-147": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 舊社公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/147", "kind": "article"},
+  "tycpark-148": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 常樂公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/148", "kind": "article"},
+  "tycpark-149": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 仁福公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/149", "kind": "article"},
+  "tycpark-152": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 中山公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/152", "kind": "article"},
+  "tycpark-154": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 龍德公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/154", "kind": "article"},
+  "tycpark-156": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 黎明公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/156", "kind": "article"},
+  "tycpark-157": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 台貿公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/157", "kind": "article"},
+  "tycpark-158": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 仁美公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/158", "kind": "article"},
+  "tycpark-160": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 後寮兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/160", "kind": "article"},
+  "tycpark-161": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 至善兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/161", "kind": "article"},
+  "tycpark-163": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 振興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/163", "kind": "article"},
+  "tycpark-164": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 南亞公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/164", "kind": "article"},
+  "tycpark-165": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 夢幻公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/165", "kind": "article"},
+  "tycpark-166": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 坤慶公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/166", "kind": "article"},
+  "tycpark-167": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 過嶺兒一公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/167", "kind": "article"},
+  "tycpark-168": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 六和兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/168", "kind": "article"},
   "tycpark-169": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 白馬公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/169", "kind": "article"},
+  "tycpark-170": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 五福公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/170", "kind": "article"},
+  "tycpark-171": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 德和公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/171", "kind": "article"},
+  "tycpark-172": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 龍和公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/172", "kind": "article"},
+  "tycpark-173": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 成功公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/173", "kind": "article"},
+  "tycpark-174": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中壢區 龍岡萬坪公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/174", "kind": "article"},
   "tycpark-180": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 新富公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/180", "kind": "article"},
+  "tycpark-183": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 文化公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/183", "kind": "article"},
+  "tycpark-184": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 社子埤塘生態公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/184", "kind": "article"},
   "tycpark-185": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國強公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/185", "kind": "article"},
+  "tycpark-186": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國信公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/186", "kind": "article"},
+  "tycpark-187": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 中信公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/187", "kind": "article"},
   "tycpark-188": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 龍鳳公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/188", "kind": "article"},
+  "tycpark-189": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國豐公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/189", "kind": "article"},
+  "tycpark-190": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 龍興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/190", "kind": "article"},
+  "tycpark-191": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 福信公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/191", "kind": "article"},
+  "tycpark-192": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 中山公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/192", "kind": "article"},
   "tycpark-193": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 忠孝公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/193", "kind": "article"},
   "tycpark-194": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 仁愛公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/194", "kind": "article"},
+  "tycpark-198": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 中德休閒廣場（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/198", "kind": "article"},
+  "tycpark-199": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 龍祥公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/199", "kind": "article"},
+  "tycpark-200": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 建國公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/200", "kind": "article"},
   "tycpark-201": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 建新公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/201", "kind": "article"},
+  "tycpark-204": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 文昌公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/204", "kind": "article"},
+  "tycpark-205": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 朝陽森林公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/205", "kind": "article"},
+  "tycpark-206": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 雲林公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/206", "kind": "article"},
+  "tycpark-209": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 介壽公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/209", "kind": "article"},
+  "tycpark-210": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 福林公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/210", "kind": "article"},
+  "tycpark-211": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 福安公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/211", "kind": "article"},
+  "tycpark-212": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 大林公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/212", "kind": "article"},
+  "tycpark-215": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 瑞明公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/215", "kind": "article"},
+  "tycpark-216": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 西門綠園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/216", "kind": "article"},
+  "tycpark-217": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 明德公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/217", "kind": "article"},
+  "tycpark-218": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 中正公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/218", "kind": "article"},
+  "tycpark-219": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 寶慶公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/219", "kind": "article"},
+  "tycpark-220": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 同新公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/220", "kind": "article"},
+  "tycpark-221": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 莊敬公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/221", "kind": "article"},
+  "tycpark-222": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 中寧公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/222", "kind": "article"},
   "tycpark-224": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 東埔公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/224", "kind": "article"},
+  "tycpark-226": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 南通運動公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/226", "kind": "article"},
   "tycpark-228": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 三民運動公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/228", "kind": "article"},
   "tycpark-229": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 忠義公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/229", "kind": "article"},
   "tycpark-230": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 快樂公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/230", "kind": "article"},
   "tycpark-231": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 寶山公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/231", "kind": "article"},
+  "tycpark-234": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 敬安公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/234", "kind": "article"},
   "tycpark-236": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國道2號橋下(冒險公園)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/236", "kind": "article"},
   "tycpark-237": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 國道2號橋下(桃園區福林里段)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/237", "kind": "article"},
+  "tycpark-239": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 南門公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/239", "kind": "article"},
   "tycpark-241": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 兒11公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/241", "kind": "article"},
+  "tycpark-243": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 福民公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/243", "kind": "article"},
+  "tycpark-244": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 同德環保公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/244", "kind": "article"},
+  "tycpark-245": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 龍安公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/245", "kind": "article"},
+  "tycpark-249": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 新屋區 兒二公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/249", "kind": "article"},
+  "tycpark-251": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 新屋區 兒七公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/251", "kind": "article"},
   "tycpark-254": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 瑞溪兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/254", "kind": "article"},
   "tycpark-255": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 埔心公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/255", "kind": "article"},
+  "tycpark-256": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 楊明公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/256", "kind": "article"},
+  "tycpark-258": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 頭重溪公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/258", "kind": "article"},
+  "tycpark-259": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 水美竹賀公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/259", "kind": "article"},
+  "tycpark-260": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 民族兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/260", "kind": "article"},
+  "tycpark-262": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 鵬程萬里綠地（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/262", "kind": "article"},
   "tycpark-263": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 豐野兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/263", "kind": "article"},
   "tycpark-264": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 新富兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/264", "kind": "article"},
+  "tycpark-266": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 中山親水公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/266", "kind": "article"},
   "tycpark-269": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 新梅兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/269", "kind": "article"},
+  "tycpark-270": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 楊梅區 永福兒童公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/270", "kind": "article"},
+  "tycpark-276": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 大平山公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/276", "kind": "article"},
+  "tycpark-277": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龍潭區 龍潭大池水體環教園區（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/277", "kind": "article"},
+  "tycpark-280": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 復興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/280", "kind": "article"},
+  "tycpark-281": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 華東公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/281", "kind": "article"},
+  "tycpark-283": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 頂湖環保公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/283", "kind": "article"},
+  "tycpark-284": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 大湖紀念公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/284", "kind": "article"},
+  "tycpark-287": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 新城環保公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/287", "kind": "article"},
+  "tycpark-289": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 文化公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/289", "kind": "article"},
+  "tycpark-290": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 大同公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/290", "kind": "article"},
+  "tycpark-291": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 華友公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/291", "kind": "article"},
+  "tycpark-292": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 大崗公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/292", "kind": "article"},
+  "tycpark-293": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 蔡公堂公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/293", "kind": "article"},
+  "tycpark-294": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 婦幼公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/294", "kind": "article"},
+  "tycpark-299": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 華美公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/299", "kind": "article"},
+  "tycpark-300": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 華興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/300", "kind": "article"},
   "tycpark-303": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 樂善公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/303", "kind": "article"},
   "tycpark-304": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 第一河濱公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/304", "kind": "article"},
+  "tycpark-306": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 長峰親子公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/306", "kind": "article"},
+  "tycpark-307": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 龜山區 龍昇公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/307", "kind": "article"},
+  "tycpark-312": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 觀音區 十全休憩公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/312", "kind": "article"},
+  "tycpark-313": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 觀音區 四維環保公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/313", "kind": "article"},
   "tycpark-320": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 公三公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/320", "kind": "article"},
   "tycpark-324": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 兒二公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/324", "kind": "article"},
+  "tycpark-326": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 兒五公園 （同心公園）（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/326", "kind": "article"},
+  "tycpark-330": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 兒十一公園 （清溪兒童公園）（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/330", "kind": "article"},
+  "tycpark-333": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 兒十五公園 (青芝兒童公園）（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/333", "kind": "article"},
+  "tycpark-335": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 中路兒1 (中埔一號公園)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/335", "kind": "article"},
+  "tycpark-346": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 草漯兒五公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/346", "kind": "article"},
   "tycpark-348": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 桃園區 向陽公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/348", "kind": "article"},
+  "tycpark-357": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 兒三環保公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/357", "kind": "article"},
+  "tycpark-360": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 南榮公園(遊六)（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/360", "kind": "article"},
+  "tycpark-361": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 光明河濱公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/361", "kind": "article"},
+  "tycpark-362": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 吉林公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/362", "kind": "article"},
+  "tycpark-363": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 營盤坑溪帶狀綠九公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/363", "kind": "article"},
   "tycpark-365": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 上興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/365", "kind": "article"},
   "tycpark-368": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 大興公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/368", "kind": "article"},
   "tycpark-370": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 上竹公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/370", "kind": "article"},
+  "tycpark-373": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 山鼻之望公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/373", "kind": "article"},
   "tycpark-374": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 蘆竹區 明德公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/374", "kind": "article"},
+  "tycpark-380": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 平鎮區 廣達公園（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/380", "kind": "article"},
   "tycpark-381": {"label": "政府網站：桃園市政府工務局 FUN遊桃園玩公園 大園區 青山河濱公園（青埔公4公園）（頁面未標日期）", "url": "https://playfulpark-taoyuan.tycg.gov.tw/playgrounds/381", "kind": "article"}
+ },
+ "parks": {
+  "r10180463": ["tycpark-360", "市府遊戲場網站有這處的介紹頁"],
+  "r13805208": ["tycpark-362", "市府遊戲場網站有這處的介紹頁"],
+  "r2535301": ["tycpark-75", "市府遊戲場網站有這處的介紹頁"],
+  "r2535302": ["tycpark-10", "市府遊戲場網站有這處的介紹頁"],
+  "r2535303": ["tycpark-70", "市府遊戲場網站有這處的介紹頁"],
+  "r7510997": ["tycpark-26", "市府遊戲場網站有這處的介紹頁"],
+  "r8367594": ["tycpark-174", "市府遊戲場網站有這處的介紹頁"],
+  "w1019542578": ["tycpark-262", "市府遊戲場網站有這處的介紹頁"],
+  "w1021120246": ["tycpark-129", "市府遊戲場網站有這處的介紹頁"],
+  "w1021330275": ["tycpark-335", "市府遊戲場網站有這處的介紹頁"],
+  "w1025730291": ["tycpark-160", "市府遊戲場網站有這處的介紹頁"],
+  "w1036429026": ["tycpark-106", "市府遊戲場網站有這處的介紹頁"],
+  "w1047762319": ["tycpark-283", "市府遊戲場網站有這處的介紹頁"],
+  "w1054198535": ["tycpark-373", "市府遊戲場網站有這處的介紹頁"],
+  "w1067095264": ["tycpark-277", "市府遊戲場網站有這處的介紹頁"],
+  "w1071401410": ["tycpark-363", "市府遊戲場網站有這處的介紹頁"],
+  "w1074078823": ["tycpark-19", "市府遊戲場網站有這處的介紹頁"],
+  "w109836484": ["tycpark-17", "市府遊戲場網站有這處的介紹頁"],
+  "w109836486": ["tycpark-3", "市府遊戲場網站有這處的介紹頁"],
+  "w109839183": ["tycpark-124", "市府遊戲場網站有這處的介紹頁"],
+  "w109839185": ["tycpark-127", "市府遊戲場網站有這處的介紹頁"],
+  "w109863658": ["tycpark-148", "市府遊戲場網站有這處的介紹頁"],
+  "w109863659": ["tycpark-173", "市府遊戲場網站有這處的介紹頁"],
+  "w110013979": ["tycpark-128", "市府遊戲場網站有這處的介紹頁"],
+  "w110013980": ["tycpark-133", "市府遊戲場網站有這處的介紹頁"],
+  "w110014786": ["tycpark-152", "市府遊戲場網站有這處的介紹頁"],
+  "w110973522": ["tycpark-168", "市府遊戲場網站有這處的介紹頁"],
+  "w113804237": ["tycpark-136", "市府遊戲場網站有這處的介紹頁"],
+  "w114224737": ["tycpark-134", "市府遊戲場網站有這處的介紹頁"],
+  "w114430356": ["tycpark-144", "市府遊戲場網站有這處的介紹頁"],
+  "w1149050189": ["tycpark-20", "市府遊戲場網站有這處的介紹頁"],
+  "w114978136": ["tycpark-165", "市府遊戲場網站有這處的介紹頁"],
+  "w115242812": ["tycpark-147", "市府遊戲場網站有這處的介紹頁"],
+  "w1203392892": ["tycpark-39", "市府遊戲場網站有這處的介紹頁"],
+  "w123873580": ["tycpark-333", "市府遊戲場網站有這處的介紹頁"],
+  "w123873587": ["tycpark-326", "市府遊戲場網站有這處的介紹頁"],
+  "w123873589": ["tycpark-330", "市府遊戲場網站有這處的介紹頁"],
+  "w128093393": ["tycpark-64", "市府遊戲場網站有這處的介紹頁"],
+  "w129526387": ["tycpark-226", "市府遊戲場網站有這處的介紹頁"],
+  "w129526393": ["tycpark-218", "市府遊戲場網站有這處的介紹頁"],
+  "w129526394": ["tycpark-221", "市府遊戲場網站有這處的介紹頁"],
+  "w1314131699": ["tycpark-73", "市府遊戲場網站有這處的介紹頁"],
+  "w1344477535": ["tycpark-190", "市府遊戲場網站有這處的介紹頁"],
+  "w170181177": ["tycpark-210", "市府遊戲場網站有這處的介紹頁"],
+  "w170181215": ["tycpark-209", "市府遊戲場網站有這處的介紹頁"],
+  "w170183728": ["tycpark-204", "市府遊戲場網站有這處的介紹頁"],
+  "w170483338": ["tycpark-205", "市府遊戲場網站有這處的介紹頁"],
+  "w170484518": ["tycpark-200", "市府遊戲場網站有這處的介紹頁"],
+  "w182971820": ["tycpark-293", "市府遊戲場網站有這處的介紹頁"],
+  "w184178699": ["tycpark-244", "市府遊戲場網站有這處的介紹頁"],
+  "w188179196": ["tycpark-9", "市府遊戲場網站有這處的介紹頁"],
+  "w188230274": ["tycpark-91", "市府遊戲場網站有這處的介紹頁"],
+  "w190064670": ["tycpark-96", "市府遊戲場網站有這處的介紹頁"],
+  "w202596125": ["tycpark-126", "市府遊戲場網站有這處的介紹頁"],
+  "w202713455": ["tycpark-72", "市府遊戲場網站有這處的介紹頁"],
+  "w202801496": ["tycpark-163", "市府遊戲場網站有這處的介紹頁"],
+  "w202816221": ["tycpark-166", "市府遊戲場網站有這處的介紹頁"],
+  "w204392208": ["tycpark-149", "市府遊戲場網站有這處的介紹頁"],
+  "w204392212": ["tycpark-137", "市府遊戲場網站有這處的介紹頁"],
+  "w204609583": ["tycpark-135", "市府遊戲場網站有這處的介紹頁"],
+  "w263913075": ["tycpark-118", "市府遊戲場網站有這處的介紹頁"],
+  "w263977699": ["tycpark-284", "市府遊戲場網站有這處的介紹頁"],
+  "w269654169": ["tycpark-189", "市府遊戲場網站有這處的介紹頁"],
+  "w285605487": ["tycpark-357", "市府遊戲場網站有這處的介紹頁"],
+  "w316226644": ["tycpark-130", "市府遊戲場網站有這處的介紹頁"],
+  "w316226646": ["tycpark-158", "市府遊戲場網站有這處的介紹頁"],
+  "w320635344": ["tycpark-170", "市府遊戲場網站有這處的介紹頁"],
+  "w330314828": ["tycpark-198", "市府遊戲場網站有這處的介紹頁"],
+  "w330314889": ["tycpark-81", "市府遊戲場網站有這處的介紹頁"],
+  "w344009452": ["tycpark-164", "市府遊戲場網站有這處的介紹頁"],
+  "w344478607": ["tycpark-256", "市府遊戲場網站有這處的介紹頁"],
+  "w344669915": ["tycpark-154", "市府遊戲場網站有這處的介紹頁"],
+  "w348063364": ["tycpark-276", "市府遊戲場網站有這處的介紹頁"],
+  "w362694508": ["tycpark-183", "市府遊戲場網站有這處的介紹頁"],
+  "w362705778": ["tycpark-380", "市府遊戲場網站有這處的介紹頁"],
+  "w367111527": ["tycpark-307", "市府遊戲場網站有這處的介紹頁"],
+  "w373393590": ["tycpark-270", "市府遊戲場網站有這處的介紹頁"],
+  "w395714183": ["tycpark-346", "市府遊戲場網站有這處的介紹頁"],
+  "w414746235": ["tycpark-47", "市府遊戲場網站有這處的介紹頁"],
+  "w421396766": ["tycpark-79", "市府遊戲場網站有這處的介紹頁"],
+  "w431617682": ["tycpark-220", "市府遊戲場網站有這處的介紹頁"],
+  "w437908567": ["tycpark-94", "市府遊戲場網站有這處的介紹頁"],
+  "w437912377": ["tycpark-88", "市府遊戲場網站有這處的介紹頁"],
+  "w437919427": ["tycpark-100", "市府遊戲場網站有這處的介紹頁"],
+  "w437928029": ["tycpark-97", "市府遊戲場網站有這處的介紹頁"],
+  "w437932232": ["tycpark-82", "市府遊戲場網站有這處的介紹頁"],
+  "w437935910": ["tycpark-83", "市府遊戲場網站有這處的介紹頁"],
+  "w437936463": ["tycpark-89", "市府遊戲場網站有這處的介紹頁"],
+  "w438364067": ["tycpark-86", "市府遊戲場網站有這處的介紹頁"],
+  "w438366848": ["tycpark-84", "市府遊戲場網站有這處的介紹頁"],
+  "w448954852": ["tycpark-125", "市府遊戲場網站有這處的介紹頁"],
+  "w456139102": ["tycpark-258", "市府遊戲場網站有這處的介紹頁"],
+  "w468663980": ["tycpark-211", "市府遊戲場網站有這處的介紹頁"],
+  "w474928037": ["tycpark-119", "市府遊戲場網站有這處的介紹頁"],
+  "w492514549": ["tycpark-45", "市府遊戲場網站有這處的介紹頁"],
+  "w496702352": ["tycpark-280", "市府遊戲場網站有這處的介紹頁"],
+  "w514642262": ["tycpark-103", "市府遊戲場網站有這處的介紹頁"],
+  "w527302949": ["tycpark-206", "市府遊戲場網站有這處的介紹頁"],
+  "w530482057": ["tycpark-87", "市府遊戲場網站有這處的介紹頁"],
+  "w537930484": ["tycpark-192", "市府遊戲場網站有這處的介紹頁"],
+  "w542369460": ["tycpark-191", "市府遊戲場網站有這處的介紹頁"],
+  "w542369670": ["tycpark-186", "市府遊戲場網站有這處的介紹頁"],
+  "w542393558": ["tycpark-187", "市府遊戲場網站有這處的介紹頁"],
+  "w543631226": ["tycpark-292", "市府遊戲場網站有這處的介紹頁"],
+  "w543646556": ["tycpark-43", "市府遊戲場網站有這處的介紹頁"],
+  "w544927915": ["tycpark-108", "市府遊戲場網站有這處的介紹頁"],
+  "w545211042": ["tycpark-216", "市府遊戲場網站有這處的介紹頁"],
+  "w545211045": ["tycpark-239", "市府遊戲場網站有這處的介紹頁"],
+  "w547150752": ["tycpark-266", "市府遊戲場網站有這處的介紹頁"],
+  "w547821859": ["tycpark-167", "市府遊戲場網站有這處的介紹頁"],
+  "w558777065": ["tycpark-243", "市府遊戲場網站有這處的介紹頁"],
+  "w567752560": ["tycpark-290", "市府遊戲場網站有這處的介紹頁"],
+  "w575209310": ["tycpark-212", "市府遊戲場網站有這處的介紹頁"],
+  "w587642580": ["tycpark-289", "市府遊戲場網站有這處的介紹頁"],
+  "w591165348": ["tycpark-219", "市府遊戲場網站有這處的介紹頁"],
+  "w594164705": ["tycpark-156", "市府遊戲場網站有這處的介紹頁"],
+  "w594299844": ["tycpark-157", "市府遊戲場網站有這處的介紹頁"],
+  "w598235702": ["tycpark-172", "市府遊戲場網站有這處的介紹頁"],
+  "w615933026": ["tycpark-299", "市府遊戲場網站有這處的介紹頁"],
+  "w615933028": ["tycpark-281", "市府遊戲場網站有這處的介紹頁"],
+  "w615933082": ["tycpark-287", "市府遊戲場網站有這處的介紹頁"],
+  "w625065889": ["tycpark-249", "市府遊戲場網站有這處的介紹頁"],
+  "w625117039": ["tycpark-312", "市府遊戲場網站有這處的介紹頁"],
+  "w625317765": ["tycpark-145", "市府遊戲場網站有這處的介紹頁"],
+  "w625551727": ["tycpark-245", "市府遊戲場網站有這處的介紹頁"],
+  "w630871434": ["tycpark-361", "市府遊戲場網站有這處的介紹頁"],
+  "w636636892": ["tycpark-90", "市府遊戲場網站有這處的介紹頁"],
+  "w659857494": ["tycpark-234", "市府遊戲場網站有這處的介紹頁"],
+  "w659857726": ["tycpark-217", "市府遊戲場網站有這處的介紹頁"],
+  "w662275619": ["tycpark-199", "市府遊戲場網站有這處的介紹頁"],
+  "w689812206": ["tycpark-313", "市府遊戲場網站有這處的介紹頁"],
+  "w734035581": ["tycpark-32", "市府遊戲場網站有這處的介紹頁"],
+  "w734374106": ["tycpark-138", "市府遊戲場網站有這處的介紹頁"],
+  "w734692622": ["tycpark-171", "市府遊戲場網站有這處的介紹頁"],
+  "w739099387": ["tycpark-259", "市府遊戲場網站有這處的介紹頁"],
+  "w739167745": ["tycpark-122", "市府遊戲場網站有這處的介紹頁"],
+  "w739902387": ["tycpark-222", "市府遊戲場網站有這處的介紹頁"],
+  "w739902388": ["tycpark-215", "市府遊戲場網站有這處的介紹頁"],
+  "w751521736": ["tycpark-69", "市府遊戲場網站有這處的介紹頁"],
+  "w756961623": ["tycpark-306", "市府遊戲場網站有這處的介紹頁"],
+  "w857725603": ["tycpark-294", "市府遊戲場網站有這處的介紹頁"],
+  "w867627568": ["tycpark-251", "市府遊戲場網站有這處的介紹頁"],
+  "w958474684": ["tycpark-300", "市府遊戲場網站有這處的介紹頁"],
+  "w961893674": ["tycpark-291", "市府遊戲場網站有這處的介紹頁"],
+  "w995168640": ["tycpark-260", "市府遊戲場網站有這處的介紹頁"],
+  "w995992360": ["tycpark-161", "市府遊戲場網站有這處的介紹頁"],
+  "w998456212": ["tycpark-184", "市府遊戲場網站有這處的介紹頁"]
+ },
+ "aka": {
+  "tyc-osm-r10180463": ["tycpark-360", "市府遊戲場網站稱為「南榮公園(遊六)」"],
+  "tyc-osm-r2535302": ["tycpark-10", "市府遊戲場網站稱為「豐德公園(遊具區)」「豐德公園(鞦韆區)」"],
+  "tyc-osm-w1021330275": ["tycpark-335", "市府遊戲場網站稱為「中路兒1 (中埔一號公園)」"],
+  "tyc-osm-w123873580": ["tycpark-333", "市府遊戲場網站稱為「兒十五公園 (青芝兒童公園）」"],
+  "tyc-osm-w123873587": ["tycpark-326", "市府遊戲場網站稱為「兒五公園 （同心公園）」"],
+  "tyc-osm-w123873589": ["tycpark-330", "市府遊戲場網站稱為「兒十一公園 （清溪兒童公園）」"],
+  "tyc-osm-w128093393": ["tycpark-64", "市府遊戲場網站稱為「公一公園（橫山書法公園）」"],
+  "tyc-osm-w188230274": ["tycpark-91", "市府遊戲場網站稱為「瑞發公園(973巷)」「瑞發公園(825巷)」"]
  },
  "places": {
   "tyc-tycg-001": {
@@ -469,6 +776,632 @@
   "tyc-osm-w1056580270": {
    "slide": ["y", "tycpark-123", "市府遊戲場網站的遊戲類型有溜滑"],
    "climbing": ["y", "tycpark-123", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w109836486": {
+   "climbing": ["y", "tycpark-3", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-3", "市府遊戲場網站的遊戲類型有溜滑"],
+   "sandpit": ["y", "tycpark-3", "市府遊戲場網站的遊戲類型有沙坑"],
+   "trampoline": ["y", "tycpark-3", "市府遊戲場網站：森林冒險挑戰區有可以連續彈跳的彈跳床"],
+   "tree_house": ["y", "tycpark-3", "市府遊戲場網站：有樹屋造型的遊戲塔"],
+   "tunnel": ["y", "tycpark-3", "市府遊戲場網站：樹屋守護塔有秘密隧道"],
+   "rope_net": ["y", "tycpark-3", "市府遊戲場網站：有冒險爬網"],
+   "swing": ["y", "tycpark-3", "市府遊戲場網站：有 2.5 公尺高的鞦韆，座椅有不同形式"],
+   "water_play": ["y", "tycpark-3", "市府遊戲場網站：水樹遊戲島有噴霧與觸控噴水（依時間、季節開放）"],
+   "music": ["y", "tycpark-3", "市府遊戲場網站：有可以觸控演奏的音樂遊戲面板"],
+   "inclusive": ["y", "tycpark-3", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "toilet": ["y", "tycpark-3", "市府遊戲場網站的服務設施有廁所"],
+   "handwash": ["y", "tycpark-3", "市府遊戲場網站的服務設施有洗手台"],
+   "shade": ["y", "tycpark-3", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w188179196": {
+   "climbing": ["y", "tycpark-9", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-9", "市府遊戲場網站：有磨石子滑梯，組合遊具也有滑梯"],
+   "seesaw": ["y", "tycpark-9", "市府遊戲場網站：有 2 座彈簧蹺蹺板"],
+   "climbing_wall": ["y", "tycpark-9", "市府遊戲場網站：組合遊具有攀爬牆"],
+   "swing": ["y", "tycpark-9", "市府遊戲場網站：組合遊具旁有鞦韆"],
+   "toilet": ["y", "tycpark-9", "市府遊戲場網站的服務設施有廁所"]
+  },
+  "tyc-osm-r2535302": {
+   "climbing": ["y", "tycpark-10", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-10", "市府遊戲場網站的遊戲類型有溜滑"],
+   "spring_rider": ["y", "tycpark-10", "市府遊戲場網站：有搖搖馬"],
+   "seesaw": ["y", "tycpark-10", "市府遊戲場網站：有蹺蹺板"],
+   "toilet": ["y", "tycpark-10", "市府遊戲場網站的服務設施有廁所"],
+   "shade": ["y", "tycpark-10", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w109836484": {
+   "climbing": ["y", "tycpark-17", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-17", "市府遊戲場網站的遊戲類型有溜滑"],
+   "toilet": ["y", "tycpark-17", "市府遊戲場網站的服務設施有廁所"],
+   "shade": ["y", "tycpark-17", "市府遊戲場網站的服務設施有遮陽"],
+   "ball_court": ["y", "tycpark-17", "市府遊戲場網站：服務設施列有籃球場"]
+  },
+  "tyc-osm-w1074078823": {
+   "climbing": ["y", "tycpark-19", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-19", "市府遊戲場網站：地景土丘組合遊具有磨石子滑梯"],
+   "music": ["y", "tycpark-19", "市府遊戲場網站：組合遊具有傳聲筒"],
+   "rope_net": ["y", "tycpark-19", "市府遊戲場網站：有結合老樹的環形攀爬網"],
+   "sandpit": ["y", "tycpark-19", "市府遊戲場網站：有白沙坑"],
+   "sand_table": ["y", "tycpark-19", "市府遊戲場網站：沙坑有玩沙桌"],
+   "water_pump": ["y", "tycpark-19", "市府遊戲場網站：服務設施列有汲水器"],
+   "inclusive": ["y", "tycpark-19", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "toilet": ["y", "tycpark-19", "市府遊戲場網站的服務設施有廁所"],
+   "shade": ["y", "tycpark-19", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w1149050189": {
+   "slide": ["y", "tycpark-20", "市府遊戲場網站：有地景溜滑梯"],
+   "climbing": ["y", "tycpark-20", "市府遊戲場網站：有隕石造型攀爬架"],
+   "spinner": ["y", "tycpark-20", "市府遊戲場網站：有轉轉杯與旋轉盤"],
+   "spring_rider": ["y", "tycpark-20", "市府遊戲場網站：有太空毛毛蟲造型的搖搖馬"],
+   "seesaw": ["y", "tycpark-20", "市府遊戲場網站：有蹺蹺板"],
+   "nest_swing": ["y", "tycpark-20", "市府遊戲場網站：有飛行盤鞦韆"],
+   "inclusive": ["y", "tycpark-20", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "handwash": ["y", "tycpark-20", "市府遊戲場網站的服務設施有洗手台"],
+   "shade": ["y", "tycpark-20", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-r7510997": {
+   "climbing": ["y", "tycpark-26", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-26", "市府遊戲場網站的遊戲類型有溜滑"],
+   "sandpit": ["y", "tycpark-26", "市府遊戲場網站的遊戲類型有沙坑"],
+   "nest_swing": ["y", "tycpark-26", "市府遊戲場網站：鞦韆區有鳥巢鞦韆"],
+   "spinner": ["y", "tycpark-26", "市府遊戲場網站：鞦韆區有旋轉杯與旋轉架"],
+   "inclusive": ["y", "tycpark-26", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "handwash": ["y", "tycpark-26", "市府遊戲場網站的服務設施有洗手台"],
+   "shade": ["y", "tycpark-26", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w734035581": {
+   "climbing": ["y", "tycpark-32", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-32", "市府遊戲場網站的遊戲類型有溜滑"],
+   "rope_net": ["y", "tycpark-32", "市府遊戲場網站：共融式遊具有攀爬網"]
+  },
+  "tyc-osm-w1203392892": {
+   "climbing": ["y", "tycpark-39", "市府遊戲場網站：杉林挑戰區有用樹幹與繩索組成的攀爬設施"],
+   "climbing_wall": ["y", "tycpark-39", "市府遊戲場網站：杉林挑戰區有攀上斜牆的關卡"],
+   "balance": ["y", "tycpark-39", "市府遊戲場網站：有兩人牽手前進的平衡設施"],
+   "sandpit": ["y", "tycpark-39", "市府遊戲場網站：有細沙的共融式沙坑"],
+   "slide": ["y", "tycpark-39", "市府遊戲場網站的遊戲類型有溜滑"],
+   "toilet": ["y", "tycpark-39", "市府遊戲場網站的服務設施有廁所"],
+   "handwash": ["y", "tycpark-39", "市府遊戲場網站的服務設施有洗手台"],
+   "shade": ["y", "tycpark-39", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w543646556": {
+   "slide": ["y", "tycpark-43", "市府遊戲場網站：有溜滑梯"],
+   "swing": ["y", "tycpark-43", "市府遊戲場網站：有鞦韆"],
+   "inclusive": ["y", "tycpark-43", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "toilet": ["y", "tycpark-43", "市府遊戲場網站的服務設施有廁所"],
+   "shade": ["y", "tycpark-43", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w492514549": {
+   "climbing": ["y", "tycpark-45", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-45", "市府遊戲場網站：有溜滑梯"],
+   "rope_net": ["y", "tycpark-45", "市府遊戲場網站：溜滑梯組合有攀爬網"],
+   "spring_rider": ["y", "tycpark-45", "市府遊戲場網站：有搖搖馬"],
+   "seesaw": ["y", "tycpark-45", "市府遊戲場網站：有蹺蹺板"],
+   "inclusive": ["y", "tycpark-45", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "toilet": ["y", "tycpark-45", "市府遊戲場網站的服務設施有廁所"],
+   "shade": ["y", "tycpark-45", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w414746235": {
+   "climbing": ["y", "tycpark-47", "市府遊戲場網站的遊戲類型有攀爬"],
+   "sandpit": ["y", "tycpark-47", "市府遊戲場網站的遊戲類型有沙坑"],
+   "climbing_wall": ["y", "tycpark-47", "市府遊戲場網站：有攀爬牆"],
+   "slide": ["y", "tycpark-47", "市府遊戲場網站：有梯田式滑坡與磨石子滑梯"],
+   "balance": ["y", "tycpark-47", "市府遊戲場網站：有跳樁與繩索平衡橋"],
+   "swing": ["y", "tycpark-47", "市府遊戲場網站：有鞦韆"],
+   "inclusive": ["y", "tycpark-47", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "shade": ["y", "tycpark-47", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w128093393": {
+   "slide": ["y", "tycpark-64", "市府遊戲場網站：地景遊具組有兩道磨石子滑梯"],
+   "tunnel": ["y", "tycpark-64", "市府遊戲場網站：有彩色水泥管狀隧道"],
+   "spring_rider": ["y", "tycpark-64", "市府遊戲場網站：有五座搖搖馬"],
+   "climbing": ["y", "tycpark-64", "市府遊戲場網站：有約 3 公尺高的攀爬組"],
+   "spinner": ["y", "tycpark-64", "市府遊戲場網站：有旋轉杯"],
+   "swing": ["y", "tycpark-64", "市府遊戲場網站：有兩座一般鞦韆"],
+   "nest_swing": ["y", "tycpark-64", "市府遊戲場網站：有共融式鳥巢鞦韆"],
+   "inclusive": ["y", "tycpark-64", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "handwash": ["y", "tycpark-64", "市府遊戲場網站的服務設施有洗手台"],
+   "shade": ["y", "tycpark-64", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-w751521736": {
+   "slide": ["y", "tycpark-69", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-69", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-r2535303": {
+   "slide": ["y", "tycpark-70", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-70", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w202713455": {
+   "slide": ["y", "tycpark-72", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-72", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w1314131699": {
+   "slide": ["y", "tycpark-73", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-r2535301": {
+   "slide": ["y", "tycpark-75", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-75", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w421396766": {
+   "slide": ["y", "tycpark-79", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w330314889": {
+   "slide": ["y", "tycpark-81", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-81", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w437932232": {
+   "slide": ["y", "tycpark-82", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-82", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w437935910": {
+   "slide": ["y", "tycpark-83", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-83", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w438366848": {
+   "slide": ["y", "tycpark-84", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-84", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w438364067": {
+   "slide": ["y", "tycpark-86", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w530482057": {
+   "slide": ["y", "tycpark-87", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-87", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w437912377": {
+   "slide": ["y", "tycpark-88", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-88", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w437936463": {
+   "slide": ["y", "tycpark-89", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-89", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w636636892": {
+   "slide": ["y", "tycpark-90", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w188230274": {
+   "slide": ["y", "tycpark-92", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w437908567": {
+   "slide": ["y", "tycpark-94", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w190064670": {
+   "slide": ["y", "tycpark-96", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-96", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w437928029": {
+   "slide": ["y", "tycpark-97", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w437919427": {
+   "slide": ["y", "tycpark-100", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w514642262": {
+   "slide": ["y", "tycpark-103", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-103", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w1036429026": {
+   "slide": ["y", "tycpark-106", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w544927915": {
+   "climbing": ["y", "tycpark-108", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w263913075": {
+   "slide": ["y", "tycpark-118", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w474928037": {
+   "slide": ["y", "tycpark-119", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w739167745": {
+   "slide": ["y", "tycpark-122", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w109839183": {
+   "slide": ["y", "tycpark-124", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-124", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w448954852": {
+   "slide": ["y", "tycpark-125", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-125", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w202596125": {
+   "slide": ["y", "tycpark-126", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-126", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w109839185": {
+   "slide": ["y", "tycpark-127", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-127", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w110013979": {
+   "slide": ["y", "tycpark-128", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-128", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w1021120246": {
+   "slide": ["y", "tycpark-129", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-129", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w316226644": {
+   "slide": ["y", "tycpark-130", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-130", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w110013980": {
+   "slide": ["y", "tycpark-133", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-133", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w114224737": {
+   "slide": ["y", "tycpark-134", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-134", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w204609583": {
+   "slide": ["y", "tycpark-135", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-135", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w113804237": {
+   "slide": ["y", "tycpark-136", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w204392212": {
+   "slide": ["y", "tycpark-137", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-137", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w114430356": {
+   "slide": ["y", "tycpark-144", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-144", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w625317765": {
+   "slide": ["y", "tycpark-145", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-145", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w115242812": {
+   "slide": ["y", "tycpark-147", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-147", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w109863658": {
+   "slide": ["y", "tycpark-148", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-148", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w204392208": {
+   "slide": ["y", "tycpark-149", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-149", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w110014786": {
+   "slide": ["y", "tycpark-152", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-152", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w344669915": {
+   "slide": ["y", "tycpark-154", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-154", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w594164705": {
+   "slide": ["y", "tycpark-156", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-156", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w594299844": {
+   "slide": ["y", "tycpark-157", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-157", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w316226646": {
+   "slide": ["y", "tycpark-158", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-158", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w1025730291": {
+   "slide": ["y", "tycpark-160", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-160", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w995992360": {
+   "slide": ["y", "tycpark-161", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-161", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w202801496": {
+   "slide": ["y", "tycpark-163", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-163", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w344009452": {
+   "slide": ["y", "tycpark-164", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-164", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w114978136": {
+   "slide": ["y", "tycpark-165", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-165", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w202816221": {
+   "climbing": ["y", "tycpark-166", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w547821859": {
+   "slide": ["y", "tycpark-167", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-167", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w110973522": {
+   "slide": ["y", "tycpark-168", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-168", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w320635344": {
+   "slide": ["y", "tycpark-170", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-170", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w734692622": {
+   "slide": ["y", "tycpark-171", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w598235702": {
+   "slide": ["y", "tycpark-172", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-172", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w109863659": {
+   "slide": ["y", "tycpark-173", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-173", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-r8367594": {
+   "slide": ["y", "tycpark-174", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-174", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w362694508": {
+   "slide": ["y", "tycpark-183", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-183", "市府遊戲場網站的遊戲類型有攀爬"],
+   "inclusive": ["y", "tycpark-183", "市府遊戲場網站標示為無障礙共融遊戲場"]
+  },
+  "tyc-osm-w998456212": {
+   "slide": ["y", "tycpark-184", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-184", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w542369670": {
+   "slide": ["y", "tycpark-186", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-186", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w542393558": {
+   "slide": ["y", "tycpark-187", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w269654169": {
+   "slide": ["y", "tycpark-189", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-189", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w1344477535": {
+   "slide": ["y", "tycpark-190", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-190", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w542369460": {
+   "slide": ["y", "tycpark-191", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-191", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w537930484": {
+   "slide": ["y", "tycpark-192", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-192", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w330314828": {
+   "slide": ["y", "tycpark-198", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-198", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w662275619": {
+   "slide": ["y", "tycpark-199", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w170484518": {
+   "slide": ["y", "tycpark-200", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-200", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w170183728": {
+   "slide": ["y", "tycpark-204", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-204", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w170483338": {
+   "slide": ["y", "tycpark-205", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-205", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w527302949": {
+   "slide": ["y", "tycpark-206", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-206", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w170181215": {
+   "slide": ["y", "tycpark-209", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-209", "市府遊戲場網站的遊戲類型有攀爬"],
+   "inclusive": ["y", "tycpark-209", "市府遊戲場網站標示為無障礙共融遊戲場"]
+  },
+  "tyc-osm-w170181177": {
+   "slide": ["y", "tycpark-210", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-210", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w468663980": {
+   "slide": ["y", "tycpark-211", "市府遊戲場網站的遊戲類型有溜滑"],
+   "inclusive": ["y", "tycpark-211", "市府遊戲場網站標示為無障礙共融遊戲場"]
+  },
+  "tyc-osm-w575209310": {
+   "slide": ["y", "tycpark-212", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-212", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w739902388": {
+   "slide": ["y", "tycpark-215", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-215", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w545211042": {
+   "slide": ["y", "tycpark-216", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-216", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w659857726": {
+   "slide": ["y", "tycpark-217", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-217", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w129526393": {
+   "slide": ["y", "tycpark-218", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-218", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w591165348": {
+   "slide": ["y", "tycpark-219", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-219", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w431617682": {
+   "slide": ["y", "tycpark-220", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w129526394": {
+   "slide": ["y", "tycpark-221", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-221", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w739902387": {
+   "slide": ["y", "tycpark-222", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-222", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w129526387": {
+   "slide": ["y", "tycpark-226", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-226", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w545211045": {
+   "slide": ["y", "tycpark-239", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-239", "市府遊戲場網站的遊戲類型有攀爬"],
+   "inclusive": ["y", "tycpark-239", "市府遊戲場網站標示為無障礙共融遊戲場"]
+  },
+  "tyc-osm-w558777065": {
+   "slide": ["y", "tycpark-243", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-243", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w184178699": {
+   "slide": ["y", "tycpark-244", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-244", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w625551727": {
+   "slide": ["y", "tycpark-245", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-245", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w625065889": {
+   "slide": ["y", "tycpark-249", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w867627568": {
+   "slide": ["y", "tycpark-251", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w344478607": {
+   "slide": ["y", "tycpark-256", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-256", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w456139102": {
+   "slide": ["y", "tycpark-258", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-258", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w739099387": {
+   "slide": ["y", "tycpark-259", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-259", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w995168640": {
+   "slide": ["y", "tycpark-260", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-260", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w1019542578": {
+   "slide": ["y", "tycpark-262", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-262", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w547150752": {
+   "slide": ["y", "tycpark-266", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-266", "市府遊戲場網站的遊戲類型有攀爬"],
+   "sandpit": ["y", "tycpark-266", "市府遊戲場網站的遊戲類型有沙坑"]
+  },
+  "tyc-osm-w373393590": {
+   "slide": ["y", "tycpark-270", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-270", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w348063364": {
+   "slide": ["y", "tycpark-276", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-276", "市府遊戲場網站的遊戲類型有攀爬"],
+   "sandpit": ["y", "tycpark-276", "市府遊戲場網站的遊戲類型有沙坑"]
+  },
+  "tyc-osm-w1067095264": {
+   "slide": ["y", "tycpark-277", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-277", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w496702352": {
+   "slide": ["y", "tycpark-280", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w615933028": {
+   "slide": ["y", "tycpark-281", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w1047762319": {
+   "slide": ["y", "tycpark-283", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w263977699": {
+   "slide": ["y", "tycpark-284", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w615933082": {
+   "slide": ["y", "tycpark-287", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w587642580": {
+   "slide": ["y", "tycpark-289", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-289", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w567752560": {
+   "slide": ["y", "tycpark-290", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w961893674": {
+   "slide": ["y", "tycpark-291", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w182971820": {
+   "slide": ["y", "tycpark-293", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w857725603": {
+   "slide": ["y", "tycpark-294", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w615933026": {
+   "slide": ["y", "tycpark-299", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w958474684": {
+   "slide": ["y", "tycpark-300", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w756961623": {
+   "slide": ["y", "tycpark-306", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-306", "市府遊戲場網站的遊戲類型有攀爬"],
+   "sandpit": ["y", "tycpark-306", "市府遊戲場網站的遊戲類型有沙坑"]
+  },
+  "tyc-osm-w367111527": {
+   "slide": ["y", "tycpark-307", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-307", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w625117039": {
+   "slide": ["y", "tycpark-312", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w689812206": {
+   "slide": ["y", "tycpark-313", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w123873587": {
+   "slide": ["y", "tycpark-326", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-326", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w123873589": {
+   "slide": ["y", "tycpark-330", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-330", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w123873580": {
+   "slide": ["y", "tycpark-333", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-333", "市府遊戲場網站的遊戲類型有攀爬"],
+   "sandpit": ["y", "tycpark-333", "市府遊戲場網站的遊戲類型有沙坑"]
+  },
+  "tyc-osm-w1021330275": {
+   "slide": ["y", "tycpark-335", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-335", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-w395714183": {
+   "slide": ["y", "tycpark-346", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-346", "市府遊戲場網站的遊戲類型有攀爬"],
+   "inclusive": ["y", "tycpark-346", "市府遊戲場網站標示為無障礙共融遊戲場"]
+  },
+  "tyc-osm-w285605487": {
+   "climbing": ["y", "tycpark-357", "市府遊戲場網站：有台灣藍鵲造型攀爬架與攀爬籠"],
+   "shade": ["y", "tycpark-357", "市府遊戲場網站的服務設施有遮陽"]
+  },
+  "tyc-osm-r10180463": {
+   "slide": ["y", "tycpark-360", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w630871434": {
+   "slide": ["y", "tycpark-361", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-361", "市府遊戲場網站的遊戲類型有攀爬"]
+  },
+  "tyc-osm-r13805208": {
+   "slide": ["y", "tycpark-362", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w1071401410": {
+   "slide": ["y", "tycpark-363", "市府遊戲場網站的遊戲類型有溜滑"]
+  },
+  "tyc-osm-w1054198535": {
+   "slide": ["y", "tycpark-373", "市府遊戲場網站的遊戲類型有溜滑"],
+   "climbing": ["y", "tycpark-373", "市府遊戲場網站的遊戲類型有攀爬"],
+   "inclusive": ["y", "tycpark-373", "市府遊戲場網站標示為無障礙共融遊戲場"]
+  },
+  "tyc-osm-w362705778": {
+   "climbing": ["y", "tycpark-380", "市府遊戲場網站的遊戲類型有攀爬"],
+   "slide": ["y", "tycpark-380", "市府遊戲場網站的遊戲類型有溜滑"],
+   "inclusive": ["y", "tycpark-380", "市府遊戲場網站標示為無障礙共融遊戲場"],
+   "toilet": ["y", "tycpark-380", "市府遊戲場網站的服務設施有廁所"],
+   "handwash": ["y", "tycpark-380", "市府遊戲場網站的服務設施有洗手台"],
+   "shade": ["y", "tycpark-380", "市府遊戲場網站的服務設施有遮陽"]
   }
  }
 }

@@ -135,6 +135,13 @@ class ParksTest(unittest.TestCase):
         self.assertEqual(new["attrs"]["toilet"]["v"], "u")
         self.assertIn("news-1", sources)
 
+    def test_playground_coords_label(self):
+        # OSM 標成 leisure=playground 的，座標說明照實際的 leisure 寫
+        places = [place()]
+        parks = osm_parks(w9={"name": "兒9公園", "leisure": "playground", "lat": 24.81, "lng": 121.01, "districts": []})
+        research.apply(with_parks(), places, ["slide", "toilet"], "hsq", parks)
+        self.assertEqual(places[-1]["source_coords"], "OpenStreetMap w9（leisure=playground 範圍中心）")
+
     def test_park_with_own_date(self):
         places = [place()]
         research.apply(with_parks({"w9": ["news-1", "特色遊戲場", "2026-10-23"]}), places, ["slide", "toilet"], "hsq",

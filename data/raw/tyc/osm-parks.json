@@ -1,0 +1,1772 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-25",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "r10180463": {
+   "name": "南榮公園",
+   "leisure": "park",
+   "lat": 25.044987,
+   "lng": 121.2913985,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆竹區"
+    }
+   ]
+  },
+  "r13805208": {
+   "name": "吉林公園",
+   "leisure": "park",
+   "lat": 25.0499121,
+   "lng": 121.2997893,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆竹區"
+    }
+   ]
+  },
+  "r2535301": {
+   "name": "仁德公園",
+   "leisure": "park",
+   "lat": 24.9353972,
+   "lng": 121.2873727,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "r2535302": {
+   "name": "豐德公園",
+   "leisure": "park",
+   "lat": 24.9270667,
+   "lng": 121.2867854,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "r2535303": {
+   "name": "興豐公園二",
+   "leisure": "park",
+   "lat": 24.9308325,
+   "lng": 121.2902106,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "r7510997": {
+   "name": "廣仁公園",
+   "leisure": "park",
+   "lat": 24.9397856,
+   "lng": 121.2072445,
+   "districts": [
+    {
+     "level": 7,
+     "name": "平鎮區"
+    }
+   ]
+  },
+  "r8367594": {
+   "name": "龍岡萬坪公園",
+   "leisure": "park",
+   "lat": 24.9328572,
+   "lng": 121.2509401,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w1019542578": {
+   "name": "鵬程萬里綠地",
+   "leisure": "park",
+   "lat": 24.9253032,
+   "lng": 121.138641,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楊梅區"
+    }
+   ]
+  },
+  "w1021120246": {
+   "name": "幸福公園",
+   "leisure": "park",
+   "lat": 24.9647192,
+   "lng": 121.2306583,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w1021330275": {
+   "name": "中埔一號公園",
+   "leisure": "park",
+   "lat": 25.0081753,
+   "lng": 121.2881883,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w1025730291": {
+   "name": "後寮兒童公園",
+   "leisure": "park",
+   "lat": 24.9429861,
+   "lng": 121.2483287,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w1036429026": {
+   "name": "大安果樹公園",
+   "leisure": "park",
+   "lat": 24.9502539,
+   "lng": 121.3181143,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w1047762319": {
+   "name": "頂湖環保公園",
+   "leisure": "park",
+   "lat": 25.0476736,
+   "lng": 121.3575225,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w1054198535": {
+   "name": "山鼻之望公園",
+   "leisure": "park",
+   "lat": 25.0795437,
+   "lng": 121.2913128,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆竹區"
+    }
+   ]
+  },
+  "w1067095264": {
+   "name": "龍潭大池水體環教園區",
+   "leisure": "park",
+   "lat": 24.8540015,
+   "lng": 121.2084249,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龍潭區"
+    }
+   ]
+  },
+  "w1071401410": {
+   "name": "營盤坑溪帶狀綠九公園",
+   "leisure": "park",
+   "lat": 25.0605154,
+   "lng": 121.2962978,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆竹區"
+    }
+   ]
+  },
+  "w1074078823": {
+   "name": "永福羅漢松公園",
+   "leisure": "park",
+   "lat": 24.93674,
+   "lng": 121.2539175,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w109836484": {
+   "name": "中正公園",
+   "leisure": "park",
+   "lat": 24.9593359,
+   "lng": 121.2263903,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w109836486": {
+   "name": "光明公園",
+   "leisure": "park",
+   "lat": 24.9631157,
+   "lng": 121.2163271,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w109839183": {
+   "name": "復興公園",
+   "leisure": "park",
+   "lat": 24.9734204,
+   "lng": 121.2483738,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w109839185": {
+   "name": "忠孝公園",
+   "leisure": "park",
+   "lat": 24.9762098,
+   "lng": 121.254064,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w109863658": {
+   "name": "常樂公園",
+   "leisure": "park",
+   "lat": 24.9760442,
+   "lng": 121.2506748,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w109863659": {
+   "name": "成功公園",
+   "leisure": "park",
+   "lat": 24.9775982,
+   "lng": 121.2578644,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w110013979": {
+   "name": "甲蟲兒童公園",
+   "leisure": "park",
+   "lat": 24.9779475,
+   "lng": 121.2528241,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w110013980": {
+   "name": "自強公園",
+   "leisure": "park",
+   "lat": 24.9678463,
+   "lng": 121.2595456,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w110014786": {
+   "name": "中山公園",
+   "leisure": "park",
+   "lat": 24.9860281,
+   "lng": 121.2511972,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w110973522": {
+   "name": "六和兒童公園",
+   "leisure": "park",
+   "lat": 24.9633394,
+   "lng": 121.2246105,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w113804237": {
+   "name": "仁德公園",
+   "leisure": "park",
+   "lat": 24.953424,
+   "lng": 121.2663305,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w114224737": {
+   "name": "新興公園",
+   "leisure": "park",
+   "lat": 24.9453101,
+   "lng": 121.2255237,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w114430356": {
+   "name": "莊敬廣場",
+   "leisure": "park",
+   "lat": 24.9717354,
+   "lng": 121.2575754,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w1149050189": {
+   "name": "內定大江公園",
+   "leisure": "park",
+   "lat": 25.0039548,
+   "lng": 121.2283639,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w114978136": {
+   "name": "夢幻公園",
+   "leisure": "park",
+   "lat": 24.9620092,
+   "lng": 121.2615898,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w115242812": {
+   "name": "舊社公園",
+   "leisure": "park",
+   "lat": 24.9539493,
+   "lng": 121.2160448,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w1203392892": {
+   "name": "綠杉林公園",
+   "leisure": "park",
+   "lat": 24.8515866,
+   "lng": 121.2265051,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龍潭區"
+    }
+   ]
+  },
+  "w123873580": {
+   "name": "青芝兒童公園",
+   "leisure": "park",
+   "lat": 25.0003253,
+   "lng": 121.2054186,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w123873587": {
+   "name": "同心公園",
+   "leisure": "park",
+   "lat": 25.0044191,
+   "lng": 121.2192755,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w123873589": {
+   "name": "清溪兒童公園",
+   "leisure": "park",
+   "lat": 25.0097807,
+   "lng": 121.2040222,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w128093393": {
+   "name": "橫山書法公園",
+   "leisure": "park",
+   "lat": 25.0209348,
+   "lng": 121.2173847,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大園區"
+    }
+   ]
+  },
+  "w129526387": {
+   "name": "南通運動公園",
+   "leisure": "park",
+   "lat": 25.0200527,
+   "lng": 121.3059707,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w129526393": {
+   "name": "中正公園",
+   "leisure": "park",
+   "lat": 25.0224104,
+   "lng": 121.2974006,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w129526394": {
+   "name": "莊敬公園",
+   "leisure": "park",
+   "lat": 25.0238714,
+   "lng": 121.2982162,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w1314131699": {
+   "name": "茄明公園",
+   "leisure": "park",
+   "lat": 24.9826881,
+   "lng": 121.2801041,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w1344477535": {
+   "name": "龍興公園",
+   "leisure": "park",
+   "lat": 24.9914817,
+   "lng": 121.278253,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w170181177": {
+   "name": "福林公園",
+   "leisure": "park",
+   "lat": 24.9803326,
+   "lng": 121.306312,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w170181215": {
+   "name": "介壽公園",
+   "leisure": "park",
+   "lat": 24.9792191,
+   "lng": 121.3054237,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w170183728": {
+   "name": "文昌公園",
+   "leisure": "park",
+   "lat": 24.9927148,
+   "lng": 121.3098867,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w170483338": {
+   "name": "朝陽森林公園",
+   "leisure": "park",
+   "lat": 24.9988198,
+   "lng": 121.3118381,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w170484518": {
+   "name": "建國公園",
+   "leisure": "park",
+   "lat": 24.9871661,
+   "lng": 121.3165642,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w182971820": {
+   "name": "蔡公堂公園",
+   "leisure": "park",
+   "lat": 25.056589,
+   "lng": 121.368264,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w184178699": {
+   "name": "同德環保公園",
+   "leisure": "park",
+   "lat": 25.0155204,
+   "lng": 121.2951396,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w188179196": {
+   "name": "建德公園",
+   "leisure": "park",
+   "lat": 24.9313377,
+   "lng": 121.28188,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w188230274": {
+   "name": "瑞發公園",
+   "leisure": "park",
+   "lat": 24.9340879,
+   "lng": 121.2989261,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w190064670": {
+   "name": "大明公園一",
+   "leisure": "park",
+   "lat": 24.968655,
+   "lng": 121.3276779,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w202596125": {
+   "name": "中鑄公園",
+   "leisure": "park",
+   "lat": 24.968173,
+   "lng": 121.2499208,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w202713455": {
+   "name": "高城公園",
+   "leisure": "park",
+   "lat": 24.9792601,
+   "lng": 121.2738595,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w202801496": {
+   "name": "振興公園",
+   "leisure": "park",
+   "lat": 24.931696,
+   "lng": 121.2311459,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w202816221": {
+   "name": "坤慶公園",
+   "leisure": "park",
+   "lat": 24.9620686,
+   "lng": 121.229575,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w204392208": {
+   "name": "仁福公園",
+   "leisure": "park",
+   "lat": 24.9405379,
+   "lng": 121.2537349,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w204392212": {
+   "name": "普慶公園",
+   "leisure": "park",
+   "lat": 24.9487511,
+   "lng": 121.2465341,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w204609583": {
+   "name": "華勛公園",
+   "leisure": "park",
+   "lat": 24.9464374,
+   "lng": 121.2622626,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w263913075": {
+   "name": "士香公園",
+   "leisure": "park",
+   "lat": 24.8960423,
+   "lng": 121.277033,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大溪區"
+    }
+   ]
+  },
+  "w263977699": {
+   "name": "大湖紀念公園",
+   "leisure": "park",
+   "lat": 25.0571282,
+   "lng": 121.3577061,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w269654169": {
+   "name": "國豐公園",
+   "leisure": "park",
+   "lat": 24.9872095,
+   "lng": 121.2795998,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w285605487": {
+   "name": "兒三環保公園",
+   "leisure": "park",
+   "lat": 25.0259628,
+   "lng": 121.2594589,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆竹區"
+    }
+   ]
+  },
+  "w316226644": {
+   "name": "忠福廣場",
+   "leisure": "park",
+   "lat": 24.9718848,
+   "lng": 121.2275217,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w316226646": {
+   "name": "仁美公園",
+   "leisure": "park",
+   "lat": 24.9441549,
+   "lng": 121.2502856,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w320635344": {
+   "name": "五福公園",
+   "leisure": "park",
+   "lat": 24.9593942,
+   "lng": 121.2096327,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w330314828": {
+   "name": "中德休閒廣場",
+   "leisure": "park",
+   "lat": 24.962023,
+   "lng": 121.293099,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w330314889": {
+   "name": "公二公園",
+   "leisure": "park",
+   "lat": 24.9628248,
+   "lng": 121.2973823,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w344009452": {
+   "name": "南亞公園",
+   "leisure": "park",
+   "lat": 24.935069,
+   "lng": 121.2521255,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w344478607": {
+   "name": "楊明公園",
+   "leisure": "park",
+   "lat": 24.9105447,
+   "lng": 121.1589557,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楊梅區"
+    }
+   ]
+  },
+  "w344669915": {
+   "name": "龍德公園",
+   "leisure": "park",
+   "lat": 24.937667,
+   "lng": 121.238074,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w348063364": {
+   "name": "大平山公園",
+   "leisure": "park",
+   "lat": 24.8235981,
+   "lng": 121.2346666,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龍潭區"
+    }
+   ]
+  },
+  "w362694508": {
+   "name": "文化公園",
+   "leisure": "park",
+   "lat": 24.9541503,
+   "lng": 121.2040721,
+   "districts": [
+    {
+     "level": 7,
+     "name": "平鎮區"
+    }
+   ]
+  },
+  "w362705778": {
+   "name": "廣達公園",
+   "leisure": "park",
+   "lat": 24.9559626,
+   "lng": 121.2076604,
+   "districts": [
+    {
+     "level": 7,
+     "name": "平鎮區"
+    }
+   ]
+  },
+  "w367111527": {
+   "name": "龍昇公園",
+   "leisure": "park",
+   "lat": 25.0185522,
+   "lng": 121.4117347,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w373393590": {
+   "name": "永福兒童公園",
+   "leisure": "park",
+   "lat": 24.8986599,
+   "lng": 121.148112,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楊梅區"
+    }
+   ]
+  },
+  "w395714183": {
+   "name": "草漯兒五公園",
+   "leisure": "park",
+   "lat": 25.0435392,
+   "lng": 121.1362654,
+   "districts": [
+    {
+     "level": 7,
+     "name": "觀音區"
+    }
+   ]
+  },
+  "w414746235": {
+   "name": "新龍公園",
+   "leisure": "park",
+   "lat": 25.0211933,
+   "lng": 121.2497751,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆竹區"
+    }
+   ]
+  },
+  "w421396766": {
+   "name": "福僑公園",
+   "leisure": "park",
+   "lat": 24.9576351,
+   "lng": 121.2950705,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w431617682": {
+   "name": "同新公園",
+   "leisure": "park",
+   "lat": 25.0123571,
+   "lng": 121.3058794,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w437908567": {
+   "name": "陽光活力園區",
+   "leisure": "park",
+   "lat": 24.9528628,
+   "lng": 121.3237736,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w437912377": {
+   "name": "瑞安公園",
+   "leisure": "park",
+   "lat": 24.9361533,
+   "lng": 121.2961871,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w437919427": {
+   "name": "思源公園",
+   "leisure": "park",
+   "lat": 24.9730105,
+   "lng": 121.2986119,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w437928029": {
+   "name": "大明公園二",
+   "leisure": "park",
+   "lat": 24.9672009,
+   "lng": 121.3270529,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w437932232": {
+   "name": "忠勇公園",
+   "leisure": "park",
+   "lat": 24.9640157,
+   "lng": 121.3047784,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w437935910": {
+   "name": "大勇兒童公園",
+   "leisure": "park",
+   "lat": 24.9659393,
+   "lng": 121.3058212,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w437936463": {
+   "name": "瑞泰鄰里公園",
+   "leisure": "park",
+   "lat": 24.9451131,
+   "lng": 121.2956455,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w438364067": {
+   "name": "大和公園",
+   "leisure": "park",
+   "lat": 24.9554359,
+   "lng": 121.2964529,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w438366848": {
+   "name": "同福公園",
+   "leisure": "park",
+   "lat": 24.9589337,
+   "lng": 121.3087007,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w448954852": {
+   "name": "五權兒童公園",
+   "leisure": "park",
+   "lat": 24.9592495,
+   "lng": 121.2043373,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w456139102": {
+   "name": "頭重溪公園",
+   "leisure": "park",
+   "lat": 24.9113922,
+   "lng": 121.171713,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楊梅區"
+    }
+   ]
+  },
+  "w468663980": {
+   "name": "福安公園",
+   "leisure": "park",
+   "lat": 24.9863921,
+   "lng": 121.3126996,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w474928037": {
+   "name": "仁和公園",
+   "leisure": "park",
+   "lat": 24.8975401,
+   "lng": 121.2807499,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大溪區"
+    }
+   ]
+  },
+  "w492514549": {
+   "name": "大坪頂公園",
+   "leisure": "park",
+   "lat": 25.0542863,
+   "lng": 121.3673107,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w496702352": {
+   "name": "復興公園",
+   "leisure": "park",
+   "lat": 25.0541196,
+   "lng": 121.3736459,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w514642262": {
+   "name": "重慶公園",
+   "leisure": "park",
+   "lat": 24.9558104,
+   "lng": 121.3040442,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w527302949": {
+   "name": "雲林公園",
+   "leisure": "park",
+   "lat": 24.9848908,
+   "lng": 121.3170381,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w530482057": {
+   "name": "廣豐兒一公園",
+   "leisure": "park",
+   "lat": 24.9642926,
+   "lng": 121.296943,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w537930484": {
+   "name": "中山公園",
+   "leisure": "park",
+   "lat": 24.9897299,
+   "lng": 121.2905065,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w542369460": {
+   "name": "福信公園",
+   "leisure": "park",
+   "lat": 24.9940633,
+   "lng": 121.2836804,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w542369670": {
+   "name": "國信公園",
+   "leisure": "park",
+   "lat": 24.9945169,
+   "lng": 121.2869291,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w542393558": {
+   "name": "中信公園",
+   "leisure": "park",
+   "lat": 24.9904995,
+   "lng": 121.2865657,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w543631226": {
+   "name": "大崗公園",
+   "leisure": "park",
+   "lat": 25.0532221,
+   "lng": 121.3576791,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w543646556": {
+   "name": "大華公園",
+   "leisure": "park",
+   "lat": 25.0508743,
+   "lng": 121.3663121,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w544927915": {
+   "name": "大園公園",
+   "leisure": "park",
+   "lat": 25.0657349,
+   "lng": 121.1939777,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大園區"
+    }
+   ]
+  },
+  "w545211042": {
+   "name": "西門綠園",
+   "leisure": "park",
+   "lat": 24.9939253,
+   "lng": 121.3045167,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w545211045": {
+   "name": "南門公園",
+   "leisure": "park",
+   "lat": 24.9915057,
+   "lng": 121.3056951,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w547150752": {
+   "name": "中山親水公園",
+   "leisure": "park",
+   "lat": 24.9087302,
+   "lng": 121.1487252,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楊梅區"
+    }
+   ]
+  },
+  "w547821859": {
+   "name": "過嶺兒一公園",
+   "leisure": "park",
+   "lat": 24.959644,
+   "lng": 121.1738723,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w558777065": {
+   "name": "福民公園",
+   "leisure": "park",
+   "lat": 25.0076081,
+   "lng": 121.3178605,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w567752560": {
+   "name": "大同公園",
+   "leisure": "park",
+   "lat": 24.9896482,
+   "lng": 121.3424438,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w575209310": {
+   "name": "大林公園",
+   "leisure": "park",
+   "lat": 24.9773753,
+   "lng": 121.3204117,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w587642580": {
+   "name": "文化公園",
+   "leisure": "park",
+   "lat": 25.0570438,
+   "lng": 121.3708699,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w591165348": {
+   "name": "寶慶公園",
+   "leisure": "park",
+   "lat": 25.0170906,
+   "lng": 121.2922597,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w594164705": {
+   "name": "黎明公園",
+   "leisure": "park",
+   "lat": 24.9395546,
+   "lng": 121.256004,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w594299844": {
+   "name": "台貿公園",
+   "leisure": "park",
+   "lat": 24.9379501,
+   "lng": 121.2561204,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w598235702": {
+   "name": "龍和公園",
+   "leisure": "park",
+   "lat": 24.934134,
+   "lng": 121.2444654,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w615933026": {
+   "name": "華美公園",
+   "leisure": "park",
+   "lat": 25.0524843,
+   "lng": 121.3605068,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w615933028": {
+   "name": "華東公園",
+   "leisure": "park",
+   "lat": 25.0505243,
+   "lng": 121.3630907,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w615933082": {
+   "name": "新城環保公園",
+   "leisure": "park",
+   "lat": 25.0501455,
+   "lng": 121.3561446,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w625065889": {
+   "name": "兒二公園",
+   "leisure": "park",
+   "lat": 24.9717439,
+   "lng": 121.101163,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新屋區"
+    }
+   ]
+  },
+  "w625117039": {
+   "name": "十全休憩公園",
+   "leisure": "park",
+   "lat": 25.0364087,
+   "lng": 121.1391651,
+   "districts": [
+    {
+     "level": 7,
+     "name": "觀音區"
+    }
+   ]
+  },
+  "w625317765": {
+   "name": "月眉環保公園",
+   "leisure": "park",
+   "lat": 25.0147807,
+   "lng": 121.1893956,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w625551727": {
+   "name": "龍安公園",
+   "leisure": "park",
+   "lat": 24.9915231,
+   "lng": 121.2760802,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w630871434": {
+   "name": "光明河濱公園",
+   "leisure": "park",
+   "lat": 25.0459551,
+   "lng": 121.2872014,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆竹區"
+    }
+   ]
+  },
+  "w636636892": {
+   "name": "大昌鄰里公園",
+   "leisure": "park",
+   "lat": 24.9474918,
+   "lng": 121.2961093,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w659857494": {
+   "name": "敬安公園",
+   "leisure": "park",
+   "lat": 25.0200601,
+   "lng": 121.2986152,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w659857726": {
+   "name": "明德公園",
+   "leisure": "park",
+   "lat": 25.0183971,
+   "lng": 121.2959977,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w662275619": {
+   "name": "龍祥公園",
+   "leisure": "park",
+   "lat": 24.9795414,
+   "lng": 121.270244,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w689812206": {
+   "name": "四維環保公園",
+   "leisure": "park",
+   "lat": 25.0447329,
+   "lng": 121.1419275,
+   "districts": [
+    {
+     "level": 7,
+     "name": "觀音區"
+    }
+   ]
+  },
+  "w734035581": {
+   "name": "公二公園",
+   "leisure": "park",
+   "lat": 24.9611851,
+   "lng": 121.1576742,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新屋區"
+    }
+   ]
+  },
+  "w734374106": {
+   "name": "普忠公園",
+   "leisure": "park",
+   "lat": 24.9600844,
+   "lng": 121.2437656,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w734692622": {
+   "name": "德和公園",
+   "leisure": "park",
+   "lat": 24.9529459,
+   "lng": 121.2622059,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w739099387": {
+   "name": "水美竹賀公園",
+   "leisure": "park",
+   "lat": 24.9195922,
+   "lng": 121.1356546,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楊梅區"
+    }
+   ]
+  },
+  "w739167745": {
+   "name": "勤奮公園",
+   "leisure": "park",
+   "lat": 24.8868879,
+   "lng": 121.2719929,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大溪區"
+    }
+   ]
+  },
+  "w739902387": {
+   "name": "中寧公園",
+   "leisure": "park",
+   "lat": 25.0101202,
+   "lng": 121.2994591,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w739902388": {
+   "name": "瑞明公園",
+   "leisure": "park",
+   "lat": 25.0216375,
+   "lng": 121.2938303,
+   "districts": [
+    {
+     "level": 7,
+     "name": "桃園區"
+    }
+   ]
+  },
+  "w751521736": {
+   "name": "里昂社區公園",
+   "leisure": "park",
+   "lat": 24.9335216,
+   "lng": 121.2706305,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八德區"
+    }
+   ]
+  },
+  "w756961623": {
+   "name": "長峰親子公園",
+   "leisure": "park",
+   "lat": 25.0040586,
+   "lng": 121.3422114,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w857725603": {
+   "name": "婦幼公園",
+   "leisure": "park",
+   "lat": 25.0503112,
+   "lng": 121.3599731,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w867627568": {
+   "name": "兒七公園",
+   "leisure": "park",
+   "lat": 24.9637214,
+   "lng": 121.1458575,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新屋區"
+    }
+   ]
+  },
+  "w958474684": {
+   "name": "華興公園",
+   "leisure": "park",
+   "lat": 25.053699,
+   "lng": 121.3641224,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w961893674": {
+   "name": "華友公園",
+   "leisure": "park",
+   "lat": 25.0506754,
+   "lng": 121.3687629,
+   "districts": [
+    {
+     "level": 7,
+     "name": "龜山區"
+    }
+   ]
+  },
+  "w995168640": {
+   "name": "民族兒童公園",
+   "leisure": "park",
+   "lat": 24.9578607,
+   "lng": 121.1714479,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楊梅區"
+    }
+   ]
+  },
+  "w995992360": {
+   "name": "至善兒童公園",
+   "leisure": "park",
+   "lat": 24.9375567,
+   "lng": 121.2478342,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中壢區"
+    }
+   ]
+  },
+  "w998456212": {
+   "name": "社子埤塘生態公園",
+   "leisure": "park",
+   "lat": 24.9142112,
+   "lng": 121.2514791,
+   "districts": [
+    {
+     "level": 7,
+     "name": "平鎮區"
+    }
+   ]
+  }
+ }
+}
