@@ -3,9 +3,11 @@
 格式：
   {"verified_at": "2026-10-18",
    "sources": {"<來源 key>": {"label": "...", "url": "...", "kind": "news|article"}},
-   "parks": {"<OSM ref>": ["<來源 key>", "<哪篇報導寫明裡面有遊戲場>"]},
+   "parks": {"<OSM ref>": ["<來源 key>", "<哪篇報導寫明裡面有遊戲場>", "<查證日期，選填>"]},
    "aka": {"<場地 id>": ["<來源 key>", "<新聞或文章用的名稱>"]},
-   "places": {"<場地 id>": {"<屬性 key>": ["y|n", "<來源 key>", "<重新整理的說明>"]}}}
+   "places": {"<場地 id>": {"<屬性 key>": ["y|n", "<來源 key>", "<重新整理的說明>", "<查證日期，選填>"]}}}
+
+查證日期沒寫就用 verified_at；之後補查的項目寫自己的日期，先前查的項目日期不變。
 
 parks：OSM 公園裡沒有標遊戲場、但新聞或文章寫明有的，用公園範圍中心點（data/raw/<縣市>/osm-parks.json，
 scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱；依據的來源記在 listing_src／listing_at（places.listing_source）。
@@ -32,11 +34,22 @@ def distance_m(a, b):
     return math.hypot((a["lat"] - b["lat"]) * 111_195, (a["lng"] - b["lng"]) * 111_195 * math.cos(lat))
 
 
-def check_cited(errors, where, entry, sources):
-    if not isinstance(entry, list) or len(entry) != 2:
-        errors.append(f"{where}：格式要是 [來源, 說明]")
+def check_date(errors, where, entry, n):
+    """entry 的第 n 項（選填）是查證日期"""
+    if len(entry) > n:
+        try:
+            date.fromisoformat(entry[n] or "")
+        except (TypeError, ValueError):
+            errors.append(f"{where}：查證日期要是 YYYY-MM-DD")
+
+
+def check_cited(errors, where, entry, sources, dated=False):
+    lengths = (2, 3) if dated else (2,)
+    if not isinstance(entry, list) or len(entry) not in lengths:
+        errors.append(f"{where}：格式要是 [來源, 說明{', 查證日期（選填）' if dated else ''}]")
         return
-    src, note = entry
+    src, note = entry[:2]
+    check_date(errors, where, entry, 2)
     if src not in sources:
         errors.append(f"{where}：來源 {src} 沒有定義")
     if not (note or "").strip():
@@ -72,10 +85,11 @@ def validate_places(research, places, keys):
             where = f"{pid} {k}"
             if k not in keys:
                 errors.append(f"{where}：沒有這個屬性")
-            if not isinstance(entry, list) or len(entry) != 3:
-                errors.append(f"{where}：格式要是 [值, 來源, 說明]")
+            if not isinstance(entry, list) or len(entry) not in (3, 4):
+                errors.append(f"{where}：格式要是 [值, 來源, 說明, 查證日期（選填）]")
                 continue
-            v, src, note = entry
+            v, src, note = entry[:3]
+            check_date(errors, where, entry, 3)
             if v not in VALUES:
                 errors.append(f"{where}：值只能是 y 或 n")
             if src not in sources:
@@ -99,7 +113,7 @@ def park_places(research, osm_parks, places, keys, city):
     for ref in sorted(parks):
         pid = f"{city}-osm-{ref}"
         where = f"parks {ref}"
-        check_cited(errors, where, parks[ref], sources)
+        check_cited(errors, where, parks[ref], sources, dated=True)
         park = fetched[ref]
         if pid in ids:
             errors.append(f"{where}：已經是場地")
@@ -110,7 +124,8 @@ def park_places(research, osm_parks, places, keys, city):
             if d < MIN_DISTANCE_M:
                 errors.append(f"{where}：離 {other['name']}（{other['id']}）只有 {d:.0f} 公尺，可能是同一處")
         ds = sorted(park.get("districts", []), key=lambda x: -x["level"])
-        note = parks[ref][1] if isinstance(parks[ref], list) and len(parks[ref]) == 2 else ""
+        ok = isinstance(parks[ref], list) and len(parks[ref]) in (2, 3)
+        note = parks[ref][1] if ok else ""
         new.append(dict(
             id=pid, name=(park.get("name") or "").strip(), district=ds[0]["name"] if ds else None, address=None,
             lat=park["lat"], lng=park["lng"],
@@ -120,8 +135,8 @@ def park_places(research, osm_parks, places, keys, city):
             attrs={k: {"v": "u", "src": None, "note": None, "at": None} for k in keys},
             parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
             source_coords=f"OpenStreetMap {ref}（leisure=park 範圍中心）",
-            listing_src=parks[ref][0] if isinstance(parks[ref], list) and len(parks[ref]) == 2 else None,
-            listing_at=research.get("verified_at"),
+            listing_src=parks[ref][0] if ok else None,
+            listing_at=parks[ref][2] if ok and len(parks[ref]) == 3 else research.get("verified_at"),
             official_ref=[{"osm": ref}],
             area_ha=None,
             city=city,
@@ -144,11 +159,11 @@ def apply(research, places, keys, city=None, osm_parks=None):
         p["summary"] = p["summary"][:cut] + note.strip() + "。" + p["summary"][cut:]
     for pid, attrs in (research.get("places") or {}).items():
         p = by_id[pid]
-        for k, (v, src, note) in attrs.items():
-            p["attrs"][k] = {"v": v, "src": src, "note": note.strip(), "at": at}
+        for k, (v, src, note, *own) in attrs.items():
+            p["attrs"][k] = {"v": v, "src": src, "note": note.strip(), "at": own[0] if own else at}
         # 官方公園清單補地址時，說明後面會再接「地址來自…」，所以不只看結尾
         if attrs and UNKNOWN_TAIL in p["summary"]:
             p["summary"] = p["summary"].replace(UNKNOWN_TAIL, RESEARCHED_TAIL, 1)
-    used = {src for attrs in (research.get("places") or {}).values() for _, src, _ in attrs.values()}
+    used = {e[1] for attrs in (research.get("places") or {}).values() for e in attrs.values()}
     used |= {e[0] for section in ("parks", "aka") for e in (research.get(section) or {}).values()}
     return {k: s for k, s in research["sources"].items() if k in used}

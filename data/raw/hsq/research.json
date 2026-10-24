@@ -11,7 +11,17 @@
   "ltn-2023-04-picturebook": {"label": "新聞：自由時報 2023-04 竹北 6 座公園遊戲場改造啟用（新竹縣政府）", "url": "https://news.ltn.com.tw/news/HsinchuCounty/breakingnews/4285200", "kind": "news"},
   "ltn-2023-07-jack": {"label": "新聞：自由時報 2023-07 竹北 6 座特色公園開放（新竹縣政府產業發展處）", "url": "https://news.ltn.com.tw/news/life/breakingnews/4357946", "kind": "news"},
   "nienie-2023-p26": {"label": "網路文章：nienie 部落格 2023-10 竹北公兒26 五色鳥之家公園", "url": "https://nienie.tw/kid26park/", "kind": "article"},
-  "blog-2025-mushroom": {"label": "網路文章：部落格 2025-03 竹北公兒30 蘑菇城堡公園", "url": "https://as660707.com/%E8%98%91%E8%8F%87%E5%9F%8E%E5%A0%A1%E5%85%AC%E5%9C%922025", "kind": "article"}
+  "blog-2025-mushroom": {"label": "網路文章：部落格 2025-03 竹北公兒30 蘑菇城堡公園", "url": "https://as660707.com/%E8%98%91%E8%8F%87%E5%9F%8E%E5%A0%A1%E5%85%AC%E5%9C%922025", "kind": "article"},
+  "zhubei-2025-treenet": {"label": "新聞：竹北市公所 2025-08 新社樹網公園（原兒十五公園）啟用（vocus 轉載）", "url": "https://vocus.cc/article/68b17facfd8978000104c712", "kind": "news"},
+  "nienie-2023-p4": {"label": "網路文章：nienie 部落格 2023-04 竹北魔豆歷險公園（兒四公園）", "url": "https://nienie.tw/zhubei-park-4/", "kind": "article"},
+  "bunnyann-2025-mist": {"label": "網路文章：兔兔安 2025-08 芎林公四水霧公園", "url": "https://bunnyann.tw/?p=94406", "kind": "article"},
+  "tvbs-taini": {"label": "網路文章：TVBS 食尚玩家 竹東台泥公園（頁面未標日期）", "url": "https://supertaste.tvbs.com.tw/travel/328990", "kind": "article"},
+  "ltn-2026-06-mingfeng": {"label": "新聞：自由時報 2026-06 關西鳴鳳公園完工啟用", "url": "https://news.ltn.com.tw/news/HsinchuCounty/breakingnews/5468933", "kind": "news"},
+  "ltn-2026-02-mingfeng": {"label": "新聞：自由時報 2026-02 關西鳴鳳公園第三期改善工程開放", "url": "https://news.ltn.com.tw/news/life/breakingnews/5344016", "kind": "news"},
+  "cna-2024-tank": {"label": "新聞：中央社訊息平台 2024-09 湖口公五公園裝甲戰車遊戲場啟用（新竹縣政府）", "url": "https://www.cna.com.tw/postwrite/chi/380801", "kind": "news"},
+  "yam-2026-tank": {"label": "網路文章：肥哥肥嫂的肥肥日常 2026-06 湖口公五特色公園", "url": "https://travel.yam.com/post/2051", "kind": "article"},
+  "bunnyann-2026-ai": {"label": "網路文章：兔兔安 2026-07 竹北 AI 智慧園區公園", "url": "https://bunnyann.tw/ai-park/", "kind": "article"},
+  "q82465-2024-note": {"label": "網路文章：竹亭聽雨 2024-03 竹北高鐵兒十一公園音符遊戲場", "url": "https://q82465.pixnet.net/blog/post/226914631", "kind": "article"}
  },
  "parks": {
   "w321416652": ["ltn-2023-04-picturebook", "縣府 2023 年啟用的小竹繪本主題遊戲場「巨大的蝴蝶」"],
@@ -23,7 +33,8 @@
   "w323598298": ["tvbs-star", "竹北市公所星際系列遊戲場「星河之夢」（自強五路、成功六街、成功七街口）"],
   "w323598294": ["tvbs-star", "竹北市公所星際系列遊戲場「土航環線」（莊敬六街）"],
   "w544941404": ["tvbs-star", "竹北市公所星際系列遊戲場「黑曜星際戰艦」（六家五路一段）"],
-  "w323598314": ["tvbs-star", "竹北市公所星際系列遊戲場「星際天體」（六家五路）"]
+  "w323598314": ["tvbs-star", "竹北市公所星際系列遊戲場「星際天體」（六家五路）"],
+  "w369610950": ["cna-2024-tank", "縣府 2024 年啟用的裝甲戰車造型特色遊戲場", "2026-10-23"]
  },
  "aka": {
   "hsq-osm-w1387488174": ["blog-2025-mushroom", "網路文章稱這裡為公兒30 蘑菇城堡公園（小竹繪本主題遊戲場，光明八街與縣政十三路口）"]
@@ -61,7 +72,9 @@
    "toilet": ["y", "natsu-2024-ai", "原本的流動廁所改建成公廁"],
    "handwash": ["y", "natsu-2024-ai", "園區有多處洗手台"],
    "shade": ["y", "natsu-2024-ai", "遊戲場有遮陽休憩區，沙坑上方有遮陽"],
-   "inclusive": ["y", "natsu-2024-ai", "竹北第一座共融式公園"]
+   "inclusive": ["y", "natsu-2024-ai", "竹北第一座共融式公園"],
+   "nest_swing": ["y", "bunnyann-2026-ai", "鞦韆有一般、鳥巢和幼兒款", "2026-10-23"],
+   "climbing_wall": ["y", "bunnyann-2026-ai", "磨石子溜滑梯旁有攀岩", "2026-10-23"]
   },
   "hsq-osm-w492346303": {
    "slide": ["y", "natsu-2025-p24", "森林小木屋滑梯組，另有兩座磨石子地景滑梯"],
@@ -121,7 +134,15 @@
   "hsq-osm-w321787018": {
    "slide": ["y", "ltn-2023-07-jack", "又高又長的滑梯，建議 5 歲以上"],
    "balance": ["y", "ltn-2023-07-jack", "跳樁平衡木"],
-   "sand_table": ["y", "ltn-2023-07-jack", "給低齡孩子的遊戲沙桌"]
+   "sand_table": ["y", "ltn-2023-07-jack", "給低齡孩子的遊戲沙桌"],
+   "sandpit": ["y", "q82465-2024-note", "有沙坑遊戲區", "2026-10-23"],
+   "music": ["y", "q82465-2024-note", "往溜滑梯的斜坡上有可以轉動、拍打發出聲音的音樂設施", "2026-10-23"],
+   "rope_net": ["y", "q82465-2024-note", "有攀爬網和圓柱攀爬網", "2026-10-23"],
+   "toilet": ["y", "q82465-2024-note", "有採光良好的廁所", "2026-10-23"],
+   "nursing": ["y", "q82465-2024-note", "廁所有尿布台", "2026-10-23"],
+   "handwash": ["y", "q82465-2024-note", "沙坑旁有洗手洗腳台", "2026-10-23"],
+   "footwash": ["y", "q82465-2024-note", "沙坑旁有洗手洗腳台", "2026-10-23"],
+   "open_lawn": ["y", "q82465-2024-note", "有草地，上面有足球網", "2026-10-23"]
   },
   "hsq-osm-w323598298": {
    "slide": ["y", "tvbs-star", "風車塔溜滑梯"],
@@ -144,6 +165,50 @@
    "rope_net": ["y", "tvbs-star", "立體星球造型爬網"],
    "sandpit": ["y", "tvbs-star", "「星河沙灘」沙區，適合 6 歲以下"],
    "footwash": ["y", "tvbs-star", "有洗腳區"]
+  },
+  "hsq-osm-w1347535690": {
+   "slide": ["y", "zhubei-2025-treenet", "樹網遊具搭配溜滑梯", "2026-10-23"],
+   "rope_net": ["y", "zhubei-2025-treenet", "主要遊具是樹網，可以上下、左右攀爬", "2026-10-23"]
+  },
+  "hsq-osm-w323598305": {
+   "slide": ["y", "nienie-2023-p4", "有高塔隧道溜滑梯", "2026-10-23"],
+   "swing": ["y", "nienie-2023-p4", "有一般鞦韆", "2026-10-23"],
+   "nest_swing": ["y", "nienie-2023-p4", "有鳥巢鞦韆", "2026-10-23"],
+   "climbing": ["y", "nienie-2023-p4", "金雞蛋造型遊具可以攀爬", "2026-10-23"],
+   "climbing_wall": ["y", "nienie-2023-p4", "有難度較低的攀爬牆", "2026-10-23"],
+   "rope_net": ["y", "nienie-2023-p4", "有魔豆密林造型的攀爬網", "2026-10-23"],
+   "balance": ["y", "nienie-2023-p4", "有矮木樁連成的平衡步道", "2026-10-23"],
+   "tunnel": ["y", "nienie-2023-p4", "綠色小山丘裡有攀爬隧道", "2026-10-23"]
+  },
+  "hsq-osm-w1294737888": {
+   "water_play": ["y", "bunnyann-2025-mist", "每天 11 點起會間歇噴水霧", "2026-10-23"],
+   "sandpit": ["y", "bunnyann-2025-mist", "有大沙坑，裡面有怪手和家家酒", "2026-10-23"],
+   "nest_swing": ["y", "bunnyann-2025-mist", "沙坑旁有鳥巢鞦韆，下方鋪軟墊", "2026-10-23"],
+   "slide": ["y", "bunnyann-2025-mist", "大孩子區有溜滑梯", "2026-10-23"],
+   "handwash": ["y", "bunnyann-2025-mist", "有沖洗手腳的水龍頭", "2026-10-23"],
+   "footwash": ["y", "bunnyann-2025-mist", "有沖洗手腳的水龍頭", "2026-10-23"]
+  },
+  "hsq-osm-w878838483": {
+   "slide": ["y", "tvbs-taini", "有 3 座長溜滑梯", "2026-10-23"],
+   "sandpit": ["y", "tvbs-taini", "有大型沙坑，上面有松鼠造型裝飾", "2026-10-23"],
+   "open_lawn": ["y", "tvbs-taini", "園區有綠地", "2026-10-23"]
+  },
+  "hsq-osm-w1351534499": {
+   "climbing_wall": ["y", "ltn-2026-06-mingfeng", "石山主題遊戲場有攀岩坡", "2026-10-23"],
+   "ball_court": ["y", "ltn-2026-06-mingfeng", "有籃球場", "2026-10-23"],
+   "inclusive": ["y", "ltn-2026-02-mingfeng", "遊戲場規劃分齡與混齡的共融遊戲設施", "2026-10-23"]
+  },
+  "hsq-osm-w369610950": {
+   "slide": ["y", "cna-2024-tank", "裝甲戰車遊具有兩個不同高度的滑道", "2026-10-23"],
+   "swing": ["y", "cna-2024-tank", "有鞦韆", "2026-10-23"],
+   "sandpit": ["y", "cna-2024-tank", "原有的沙坑區重新整理過", "2026-10-23"],
+   "rope_net": ["y", "cna-2024-tank", "戰車內部有立體攀爬網", "2026-10-23"],
+   "climbing": ["y", "yam-2026-tank", "戰車內外都可以攀爬", "2026-10-23"],
+   "pushbike": ["y", "cna-2024-tank", "滑步車道分成挑戰段、S 形彎道和直線段", "2026-10-23"],
+   "balance": ["y", "yam-2026-tank", "障礙闖關區有獨木橋", "2026-10-23"],
+   "open_lawn": ["y", "cna-2024-tank", "保留大片綠地", "2026-10-23"],
+   "inclusive": ["y", "cna-2024-tank", "無障礙遊戲路徑串連共融式遊戲設施", "2026-10-23"],
+   "shade": ["n", "yam-2026-tank", "遊記寫現場沒有遮陽設施", "2026-10-23"]
   }
  }
 }

@@ -1,7 +1,7 @@
 {
  "source": "OpenStreetMap（Overpass API）",
  "license": "© OpenStreetMap contributors，ODbL",
- "fetched": "2026-10-18",
+ "fetched": "2026-10-23",
  "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
  "parks": {
   "w318662245": {
@@ -109,6 +109,18 @@
     {
      "level": 8,
      "name": "竹北市"
+    }
+   ]
+  },
+  "w369610950": {
+   "name": "公五公園",
+   "leisure": "park",
+   "lat": 24.8945699,
+   "lng": 121.0462343,
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
     }
    ]
   },
