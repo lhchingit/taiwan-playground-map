@@ -14,7 +14,6 @@
       以及人工定位工具讀的 to-locate.json
 不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
 """
-from collections import Counter
 from pathlib import Path
 
 from lib.attrs import attr_keys, blank_attrs
@@ -154,10 +153,6 @@ def main():
         parks_path = RAW / "osm-parks.json"
         osm_parks = read_json(parks_path) if parks_path.exists() else None
         sources.update(research.apply(read_json(research_path), places, keys, tycg.CITY, osm_parks))
-        counts = Counter(p["name"] for p in places)
-        for p in places:  # 市府遊戲場網站列出的公園跟其他場地同名、但在不同行政區：加上行政區
-            if p.get("listing_src") and counts[p["name"]] > 1:
-                p["name"] = f"{p['name']}（{p['district'] or '行政區未知'}）"
     seed = {"version": "0.2", "city": "桃園市", "generated": fetched, "sources": sources,
             "labels": labels, "places": places}
     seed_dir = ROOT / "data/seed/tyc"

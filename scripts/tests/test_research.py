@@ -142,6 +142,14 @@ class ParksTest(unittest.TestCase):
         research.apply(with_parks(), places, ["slide", "toilet"], "hsq", parks)
         self.assertEqual(places[-1]["source_coords"], "OpenStreetMap w9（leisure=playground 範圍中心）")
 
+    def test_same_name_gets_district(self):
+        # 新公園跟現有場地同名（不同行政區）：名稱加上行政區，現有場地不改
+        places = [place()]
+        parks = osm_parks(w9={"name": "場地hsq-osm-w1", "leisure": "park", "lat": 24.81, "lng": 121.01,
+                              "districts": [{"level": 8, "name": "竹北市"}]})
+        research.apply(with_parks(), places, ["slide", "toilet"], "hsq", parks)
+        self.assertEqual([p["name"] for p in places], ["場地hsq-osm-w1", "場地hsq-osm-w1（竹北市）"])
+
     def test_park_with_own_date(self):
         places = [place()]
         research.apply(with_parks({"w9": ["news-1", "特色遊戲場", "2026-10-23"]}), places, ["slide", "toilet"], "hsq",
