@@ -245,6 +245,38 @@ data.gov.tw 上三份資料的「更新時間」與下載網址：
 - **匯入失敗**：整個匯入在同一個交易裡，失敗就全部回滾，資料庫不會停在一半。看 job 的錯誤訊息修正後重跑。
 - **清快取失敗**：資料庫已經更新，網站最多 1 小時後也會更新。檢查 `SITE_URL`、`REVALIDATE_SECRET` 是否跟網站的設定一致。
 
+## 資料庫備份與還原
+
+Supabase 免費方案沒有自動備份，所以用 GitHub Actions 每週備份一次（`.github/workflows/db-backup.yml`，週一 02:00 台灣時間，也可以在 Actions → 資料庫備份 → Run workflow 手動執行）。
+
+- **內容：** `supabase db dump` 的 roles.sql、schema.sql、data.sql（含 `public` 全部資料與 `auth` 會員帳號），打包後用 [age](https://github.com/FiloSottile/age) 加密，存成 workflow 構件，保留 90 天。
+- **為什麼要加密：** repo 是公開的，構件任何登入 GitHub 的人都能下載；備份裡有會員 email。只上傳加密檔，未加密的檔案只在 job 的暫存目錄，結束就刪掉。
+- **不包含照片：** Storage 裡的檔案（會員上傳的照片）不在資料庫備份內，要另外處理。
+
+### 設定（只做一次）
+
+1. **金鑰：** `age-keygen -o backup-key.txt` 產生一組金鑰。私鑰檔放在 repo 以外，另外存一份到密碼管理器；**私鑰遺失，備份就解不開。** 公鑰設成 repo variable：`gh variable set BACKUP_AGE_RECIPIENT --body age1...`。
+   - 目前的公鑰：`age1l9lw4ljeehlm3mnj4hne48jk4skq6akd3l5gsqt00mglcwqh2yhsvq27x7`（私鑰在維護者電腦的 `~/.playmap/backup-key.txt`）。
+2. **連線字串：** Supabase 後台 → Project Settings → Database → Connection string → **Session pooler**（GitHub 的機器不支援 IPv6，連不上直連），設成 repo secret：`gh secret set BACKUP_DATABASE_URL`（執行後貼上，不要放在指令列）。
+3. 手動執行一次，確認構件有上傳，並照下面的步驟解密一次。
+
+### 還原
+
+```bash
+gh run list --workflow db-backup.yml                     # 找到要用的那一次
+gh run download <run-id> -n playmap-db-backup -D restore
+age -d -i ~/.playmap/backup-key.txt restore/playmap-db-*.tar.gz.age | tar -xz -C restore
+cd restore/playmap-db-*/
+psql --single-transaction --variable ON_ERROR_STOP=1 \
+  --file roles.sql --file schema.sql \
+  --command 'SET session_replication_role = replica' --file data.sql \
+  --dbname "$NEW_DATABASE_URL"
+```
+
+- 還原到**新的 Supabase 專案**（或本機 `supabase start` 之後的空資料庫）：它已經有 `auth`、`storage` 的表，備份只補資料。只有 Postgres 的空資料庫沒有這些表，`auth` 的資料會匯不進去。
+- 還原完把解密出來的檔案刪掉（裡面有會員資料）。
+- 本機也可以手動備份：`BACKUP_DATABASE_URL=... BACKUP_AGE_RECIPIENT=age1... bash scripts/db_backup.sh <輸出目錄>`（需要 Docker 與 age）。
+
 ## 從本機操作
 
 第一次部署（GitHub 的 `production` environment 還沒設定）時用這個；之後平常的匯入、上線建議用 GitHub Actions 的資料作業（有核准紀錄）。

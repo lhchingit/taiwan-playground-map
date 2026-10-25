@@ -1,0 +1,48 @@
+# 正式資料庫每週備份：supabase db dump → age 加密 → workflow 構件（保留 90 天）。
+# repo 是公開的，構件任何登入 GitHub 的人都能下載，所以只上傳加密檔；私鑰只在維護者手上。
+# 設定與還原方式見 docs/operations.md「資料庫備份與還原」。
+name: 資料庫備份（正式環境）
+
+on:
+  schedule:
+    - cron: '0 18 * * 0' # 每週一 02:00（台灣時間）
+  workflow_dispatch:
+
+concurrency:
+  group: db-backup
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  backup:
+    name: 備份並加密
+    runs-on: ubuntu-latest
+    env:
+      BACKUP_DATABASE_URL: ${{ secrets.BACKUP_DATABASE_URL }}
+      BACKUP_AGE_RECIPIENT: ${{ vars.BACKUP_AGE_RECIPIENT }}
+    steps:
+      - name: 檢查設定
+        run: |
+          [ -n "$BACKUP_DATABASE_URL" ] || { echo "::error::沒有設定 secret BACKUP_DATABASE_URL（Session pooler 連線字串）"; exit 1; }
+          [ -n "$BACKUP_AGE_RECIPIENT" ] || { echo "::error::沒有設定 variable BACKUP_AGE_RECIPIENT（age 公鑰）"; exit 1; }
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq age
+      - run: bash scripts/db_backup.sh backup
+      - uses: actions/upload-artifact@v4
+        with:
+          name: playmap-db-backup
+          path: backup/*.age
+          retention-days: 90
+          if-no-files-found: error
