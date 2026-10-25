@@ -1,6 +1,6 @@
 // 首頁 e2e。地圖圖磚與 Nominatim 在測試中攔截，不連外網；定位權限未授予，出發點維持範例（新竹火車站）。
 // 前提：本機 Supabase 已 db reset + seed，並執行過 pnpm env:local。
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
 import { expected, TOTAL } from './expected';
 
 /** 新竹市與新竹縣交界附近（竹北市與新竹市東區之間）。只用在攔截的 Nominatim 回應。 */
@@ -27,6 +27,18 @@ const cards = (page: Page) => page.getByTestId('results').locator('.card');
 const markers = (page: Page) => page.getByTestId('marker');
 const chip = (page: Page, name: string) =>
   page.locator('#filter-body').getByRole('button', { name, exact: true });
+
+/**
+ * 按下切換按鈕，等到 aria-pressed 變成 true。
+ * 頁面剛載入、React 還沒 hydrate 時點下去不會有反應（CI 偶爾發生），所以沒按下就再點一次；
+ * 已經按下就不再點，不會點兩次又切回去。
+ */
+async function press(button: Locator) {
+  await expect(async () => {
+    if ((await button.getAttribute('aria-pressed')) !== 'true') await button.click();
+    await expect(button).toHaveAttribute('aria-pressed', 'true', { timeout: 1000 });
+  }).toPass();
+}
 
 /** 地圖標記數量要等於清單數量 */
 async function expectMarkersMatchList(page: Page) {
@@ -86,8 +98,7 @@ test('出發點方式二選一：地圖點選時選「在地圖上點選」，�
   await expect(here).toHaveAttribute('aria-pressed', 'false');
   await expect(pick).toHaveAttribute('aria-pressed', 'false');
 
-  await pick.click();
-  await expect(pick).toHaveAttribute('aria-pressed', 'true');
+  await press(pick);
   await expect(here).toHaveAttribute('aria-pressed', 'false');
   const map = page.getByRole('region', { name: '地圖' });
   await expect(page.getByText('地圖載入中…')).toHaveCount(0, { timeout: 15_000 });
@@ -194,8 +205,8 @@ test.describe('桌機', () => {
     const strict = expected('沙坑＋廁所');
     const loose = expected('沙坑＋廁所（包含未知）');
     await page.goto('/hsinchu-city');
-    await chip(page, '沙坑').click();
-    await chip(page, '廁所').click();
+    await press(chip(page, '沙坑'));
+    await press(chip(page, '廁所'));
     await expect(count(page)).toHaveText(String(strict.expected_count));
     await expect(page.getByText(`另有 ${strict.unknown_hint} 處資料未知`)).toBeVisible();
     await expectMarkersMatchList(page);
@@ -227,10 +238,10 @@ test.describe('桌機', () => {
   }) => {
     const any = expected('攀爬平衡（任一種）');
     await page.goto('/hsinchu-city');
-    await chip(page, '攀爬架').click();
+    await press(chip(page, '攀爬架'));
     const climbingOnly = Number(await count(page).innerText());
 
-    await chip(page, '攀爬平衡').click();
+    await press(chip(page, '攀爬平衡'));
     await expect(chip(page, '攀爬平衡')).toHaveAttribute('aria-pressed', 'true');
     await expect(chip(page, '攀爬架')).toHaveAttribute('aria-pressed', 'false');
     await expect(count(page)).toHaveText(String(any.expected_count));
@@ -239,7 +250,7 @@ test.describe('桌機', () => {
     await expect(page).toHaveURL(/\?grp=climb$/);
     await expectMarkersMatchList(page);
 
-    await chip(page, '攀岩牆').click();
+    await press(chip(page, '攀岩牆'));
     await expect(chip(page, '攀爬平衡')).toHaveAttribute('aria-pressed', 'false');
     await expect(chip(page, '攀岩牆')).toHaveAttribute('aria-pressed', 'true');
     await expect(page).toHaveURL(/\?play=climbing_wall$/);
@@ -261,11 +272,10 @@ test.describe('桌機', () => {
 
   test('停車場＋付費：南寮兒童挖沙玩水區', async ({ page }) => {
     await page.goto('/hsinchu-city');
-    await chip(page, '停車場').click();
-    await page
-      .getByRole('group', { name: '停車費用' })
-      .getByRole('button', { name: '付費' })
-      .click();
+    await press(chip(page, '停車場'));
+    await press(
+      page.getByRole('group', { name: '停車費用' }).getByRole('button', { name: '付費' }),
+    );
     await expect(count(page)).toHaveText(String(expected('停車場＋付費').expected_count));
     await expect(cards(page)).toHaveCount(1);
     await expect(cards(page).first()).toContainText('南寮兒童挖沙玩水區');
@@ -376,8 +386,13 @@ test.describe('手機', () => {
   test('選取選項（變粗體、加勾）時按鈕寬度不變，不會掉到下一行', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 860 });
     await page.goto('/hsinchu-city');
-    await page.getByRole('button', { name: '篩選條件' }).click();
     const baby = chip(page, '嬰兒鞦韆');
+    // 伺服器端當成桌機（aria-expanded 是 true），hydrate 後才變成手機的收起，
+    // 所以用選項有沒有出現判斷，還沒出現就再點一次（hydrate 前點的不算）
+    await expect(async () => {
+      if (!(await baby.isVisible())) await page.getByRole('button', { name: '篩選條件' }).click();
+      await expect(baby).toBeVisible({ timeout: 1000 });
+    }).toPass();
     // 點擊會把面板捲動到按鈕的位置，所以量相對於同一組選項的位置
     const box = () =>
       baby.evaluate((c) => {
@@ -386,8 +401,7 @@ test.describe('手機', () => {
       });
     await baby.scrollIntoViewIfNeeded();
     const before = await box();
-    await baby.click();
-    await expect(baby).toHaveAttribute('aria-pressed', 'true');
+    await press(baby);
     const after = await box();
     expect(after.width).toBeCloseTo(before.width, 0);
     expect(after.y).toBeCloseTo(before.y, 0);
