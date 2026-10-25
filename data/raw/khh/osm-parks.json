@@ -1,0 +1,284 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-25",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "r19172588": {
+   "name": "後勁公園",
+   "leisure": "park",
+   "lat": 22.7245402,
+   "lng": 120.3163751,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楠梓區"
+    }
+   ]
+  },
+  "r5341412": {
+   "name": "小港森林公園",
+   "leisure": "park",
+   "lat": 22.570138,
+   "lng": 120.3685295,
+   "districts": [
+    {
+     "level": 7,
+     "name": "小港區"
+    }
+   ]
+  },
+  "w116161206": {
+   "name": "同盟公園",
+   "leisure": "park",
+   "lat": 22.6485647,
+   "lng": 120.3115509,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三民區"
+    }
+   ]
+  },
+  "w118220658": {
+   "name": "中山公園",
+   "leisure": "park",
+   "lat": 22.6135026,
+   "lng": 120.361427,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鳳山區"
+    }
+   ]
+  },
+  "w1185489770": {
+   "name": "南燕公園",
+   "leisure": "park",
+   "lat": 22.789465,
+   "lng": 120.3584044,
+   "districts": [
+    {
+     "level": 7,
+     "name": "燕巢區"
+    }
+   ]
+  },
+  "w1313155570": {
+   "name": "華美公園",
+   "leisure": "park",
+   "lat": 22.6599633,
+   "lng": 120.3935408,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鳥松區"
+    }
+   ]
+  },
+  "w150730948": {
+   "name": "岡山河堤公園",
+   "leisure": "park",
+   "lat": 22.7868349,
+   "lng": 120.2932767,
+   "districts": [
+    {
+     "level": 7,
+     "name": "岡山區"
+    }
+   ]
+  },
+  "w205898514": {
+   "name": "星光水岸公園",
+   "leisure": "park",
+   "lat": 22.6093475,
+   "lng": 120.2978107,
+   "districts": [
+    {
+     "level": 7,
+     "name": "前鎮區"
+    }
+   ]
+  },
+  "w206833531": {
+   "name": "北凱旋公園",
+   "leisure": "park",
+   "lat": 22.6307058,
+   "lng": 120.3221253,
+   "districts": [
+    {
+     "level": 7,
+     "name": "苓雅區"
+    }
+   ]
+  },
+  "w217517890": {
+   "name": "茄萣運動公園",
+   "leisure": "park",
+   "lat": 22.9085694,
+   "lng": 120.1857645,
+   "districts": [
+    {
+     "level": 7,
+     "name": "茄萣區"
+    }
+   ]
+  },
+  "w253933421": {
+   "name": "信蚵公園",
+   "leisure": "park",
+   "lat": 22.726593,
+   "lng": 120.2572019,
+   "districts": [
+    {
+     "level": 7,
+     "name": "梓官區"
+    }
+   ]
+  },
+  "w255987010": {
+   "name": "青年公園",
+   "leisure": "park",
+   "lat": 22.6299452,
+   "lng": 120.3479709,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鳳山區"
+    }
+   ]
+  },
+  "w286066515": {
+   "name": "清豐公園",
+   "leisure": "park",
+   "lat": 22.7353195,
+   "lng": 120.3375642,
+   "districts": [
+    {
+     "level": 7,
+     "name": "楠梓區"
+    }
+   ]
+  },
+  "w295443770": {
+   "name": "汕頭公園",
+   "leisure": "park",
+   "lat": 22.6092691,
+   "lng": 120.3186577,
+   "districts": [
+    {
+     "level": 7,
+     "name": "前鎮區"
+    }
+   ]
+  },
+  "w322643425": {
+   "name": "新強公園",
+   "leisure": "park",
+   "lat": 22.6124513,
+   "lng": 120.3404009,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鳳山區"
+    }
+   ]
+  },
+  "w391865114": {
+   "name": "博愛扶輪公園",
+   "leisure": "park",
+   "lat": 22.6826628,
+   "lng": 120.3122852,
+   "districts": [
+    {
+     "level": 7,
+     "name": "左營區"
+    }
+   ]
+  },
+  "w468743037": {
+   "name": "一品公園",
+   "leisure": "park",
+   "lat": 22.7630438,
+   "lng": 120.3017063,
+   "districts": [
+    {
+     "level": 7,
+     "name": "橋頭區"
+    }
+   ]
+  },
+  "w598366622": {
+   "name": "和蓮公園",
+   "leisure": "park",
+   "lat": 22.8828438,
+   "lng": 120.3257054,
+   "districts": [
+    {
+     "level": 7,
+     "name": "阿蓮區"
+    }
+   ]
+  },
+  "w603978368": {
+   "name": "彌陀公園",
+   "leisure": "park",
+   "lat": 22.7849086,
+   "lng": 120.246162,
+   "districts": [
+    {
+     "level": 7,
+     "name": "彌陀區"
+    }
+   ]
+  },
+  "w620853896": {
+   "name": "路竹公園",
+   "leisure": "park",
+   "lat": 22.8540613,
+   "lng": 120.2538107,
+   "districts": [
+    {
+     "level": 7,
+     "name": "路竹區"
+    }
+   ]
+  },
+  "w87793472": {
+   "name": "漢民公園",
+   "leisure": "park",
+   "lat": 22.5660952,
+   "lng": 120.3575752,
+   "districts": [
+    {
+     "level": 7,
+     "name": "小港區"
+    }
+   ]
+  },
+  "w932355881": {
+   "name": "籬仔內公園",
+   "leisure": "park",
+   "lat": 22.6044337,
+   "lng": 120.320205,
+   "districts": [
+    {
+     "level": 7,
+     "name": "前鎮區"
+    }
+   ]
+  },
+  "w937965613": {
+   "name": "牛寮公園",
+   "leisure": "park",
+   "lat": 22.5886587,
+   "lng": 120.3451268,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鳳山區"
+    }
+   ]
+  }
+ }
+}
