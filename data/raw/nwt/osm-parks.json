@@ -1,0 +1,1304 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-25",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "r11329253": {
+   "name": "永吉公園",
+   "leisure": "park",
+   "lat": 24.9610942,
+   "lng": 121.3364669,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  "r18155467": {
+   "name": "綠湖公園",
+   "leisure": "park",
+   "lat": 24.9784463,
+   "lng": 121.5475756,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "r19324810": {
+   "name": "重慶公園",
+   "leisure": "park",
+   "lat": 24.9999598,
+   "lng": 121.4648425,
+   "districts": [
+    {
+     "level": 7,
+     "name": "板橋區"
+    }
+   ]
+  },
+  "r5256957": {
+   "name": "親情河濱公園",
+   "leisure": "park",
+   "lat": 24.9645267,
+   "lng": 121.535005,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "r5709048": {
+   "name": "中興公園",
+   "leisure": "park",
+   "lat": 24.9811768,
+   "lng": 121.5454796,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "r6744655": {
+   "name": "安光公園",
+   "leisure": "park",
+   "lat": 24.9639388,
+   "lng": 121.5137135,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "r7499754": {
+   "name": "自強公園",
+   "leisure": "park",
+   "lat": 24.9997655,
+   "lng": 121.4708093,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中和區"
+    }
+   ]
+  },
+  "w1018271317": {
+   "name": "建成公園",
+   "leisure": "park",
+   "lat": 25.106921,
+   "lng": 121.8085584,
+   "districts": [
+    {
+     "level": 7,
+     "name": "瑞芳區"
+    }
+   ]
+  },
+  "w105778441": {
+   "name": "柳堤公園",
+   "leisure": "park",
+   "lat": 25.0880807,
+   "lng": 121.4626452,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆洲區"
+    }
+   ]
+  },
+  "w105778494": {
+   "name": "中原公園",
+   "leisure": "park",
+   "lat": 25.0838008,
+   "lng": 121.4641199,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆洲區"
+    }
+   ]
+  },
+  "w1068430249": {
+   "name": "洛陽公園",
+   "leisure": "park",
+   "lat": 25.0633764,
+   "lng": 121.4816374,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w1075956070": {
+   "name": "尖福公園",
+   "leisure": "park",
+   "lat": 24.9419092,
+   "lng": 121.3404156,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  "w1098018096": {
+   "name": "新濱公園",
+   "leisure": "park",
+   "lat": 25.1977429,
+   "lng": 121.4209488,
+   "districts": [
+    {
+     "level": 7,
+     "name": "淡水區"
+    }
+   ]
+  },
+  "w1103735888": {
+   "name": "彭興親子公園",
+   "leisure": "park",
+   "lat": 24.9734461,
+   "lng": 121.4190476,
+   "districts": [
+    {
+     "level": 7,
+     "name": "樹林區"
+    }
+   ]
+  },
+  "w1107753695": {
+   "name": "天乙公園",
+   "leisure": "park",
+   "lat": 25.1051096,
+   "lng": 121.4478855,
+   "districts": [
+    {
+     "level": 7,
+     "name": "五股區"
+    }
+   ]
+  },
+  "w1116401237": {
+   "name": "永平公園",
+   "leisure": "park",
+   "lat": 24.9842749,
+   "lng": 121.5166309,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "w1169514845": {
+   "name": "瑪鋉運動公園",
+   "leisure": "park",
+   "lat": 25.175321,
+   "lng": 121.6901629,
+   "districts": [
+    {
+     "level": 7,
+     "name": "萬里區"
+    }
+   ]
+  },
+  "w1183817827": {
+   "name": "康誥坑公園",
+   "leisure": "park",
+   "lat": 25.057056,
+   "lng": 121.6558233,
+   "districts": [
+    {
+     "level": 7,
+     "name": "汐止區"
+    }
+   ]
+  },
+  "w1245787765": {
+   "name": "佳和公園",
+   "leisure": "park",
+   "lat": 25.00697,
+   "lng": 121.5031725,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中和區"
+    }
+   ]
+  },
+  "w1348647869": {
+   "name": "頂寮公園",
+   "leisure": "park",
+   "lat": 25.2092569,
+   "lng": 121.6572961,
+   "districts": [
+    {
+     "level": 7,
+     "name": "萬里區"
+    }
+   ]
+  },
+  "w1366740973": {
+   "name": "集智綠地",
+   "leisure": "park",
+   "lat": 25.087466,
+   "lng": 121.4870066,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w1375026527": {
+   "name": "福營新公園",
+   "leisure": "park",
+   "lat": 25.0280246,
+   "lng": 121.4235218,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w1517447342": {
+   "name": "中正公園",
+   "leisure": "park",
+   "lat": 24.9277611,
+   "lng": 121.373838,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三峽區"
+    }
+   ]
+  },
+  "w193048630": {
+   "name": "交通公園",
+   "leisure": "park",
+   "lat": 24.9766002,
+   "lng": 121.5384992,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "w213539113": {
+   "name": "三民公園",
+   "leisure": "park",
+   "lat": 24.9713796,
+   "lng": 121.5374928,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "w215457121": {
+   "name": "三民公園",
+   "leisure": "park",
+   "lat": 25.0944664,
+   "lng": 121.4597177,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆洲區"
+    }
+   ]
+  },
+  "w215457122": {
+   "name": "永平公園",
+   "leisure": "park",
+   "lat": 25.0902471,
+   "lng": 121.4589417,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆洲區"
+    }
+   ]
+  },
+  "w215457123": {
+   "name": "永康公園",
+   "leisure": "park",
+   "lat": 25.0848527,
+   "lng": 121.458548,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆洲區"
+    }
+   ]
+  },
+  "w215552058": {
+   "name": "三德公園",
+   "leisure": "park",
+   "lat": 25.0753846,
+   "lng": 121.5007117,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215552059": {
+   "name": "龍濱公園",
+   "leisure": "park",
+   "lat": 25.073382,
+   "lng": 121.5021425,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215552067": {
+   "name": "六合公園",
+   "leisure": "park",
+   "lat": 25.0691578,
+   "lng": 121.4878935,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215552076": {
+   "name": "大智公園",
+   "leisure": "park",
+   "lat": 25.0632943,
+   "lng": 121.4946328,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215552078": {
+   "name": "三民公園",
+   "leisure": "park",
+   "lat": 25.065491,
+   "lng": 121.482893,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215552085": {
+   "name": "聯邦公園",
+   "leisure": "park",
+   "lat": 25.0641591,
+   "lng": 121.4841276,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215554734": {
+   "name": "開元公園",
+   "leisure": "park",
+   "lat": 25.0660715,
+   "lng": 121.5038706,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215554735": {
+   "name": "永盛公園",
+   "leisure": "park",
+   "lat": 25.0760468,
+   "lng": 121.4847565,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215554740": {
+   "name": "慈愛公園",
+   "leisure": "park",
+   "lat": 25.0810309,
+   "lng": 121.4847788,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215554742": {
+   "name": "慈祐公園",
+   "leisure": "park",
+   "lat": 25.081586,
+   "lng": 121.4912401,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215554743": {
+   "name": "慈化公園",
+   "leisure": "park",
+   "lat": 25.0844957,
+   "lng": 121.4884668,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w215557468": {
+   "name": "重陽公園",
+   "leisure": "park",
+   "lat": 25.0578589,
+   "lng": 121.4837027,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w217454601": {
+   "name": "莊敬公園",
+   "leisure": "park",
+   "lat": 25.0202007,
+   "lng": 121.4707064,
+   "districts": [
+    {
+     "level": 7,
+     "name": "板橋區"
+    }
+   ]
+  },
+  "w230842168": {
+   "name": "福壽公園",
+   "leisure": "park",
+   "lat": 25.0519129,
+   "lng": 121.4573261,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w232226576": {
+   "name": "興化公園",
+   "leisure": "park",
+   "lat": 25.0648316,
+   "lng": 121.4609117,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w232667488": {
+   "name": "黃城公園",
+   "leisure": "park",
+   "lat": 25.0522621,
+   "lng": 121.4487041,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w232980764": {
+   "name": "龍學公園",
+   "leisure": "park",
+   "lat": 24.9436716,
+   "lng": 121.3773601,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三峽區"
+    }
+   ]
+  },
+  "w263590700": {
+   "name": "兒三公園",
+   "leisure": "park",
+   "lat": 24.9458374,
+   "lng": 121.382708,
+   "districts": [
+    {
+     "level": 7,
+     "name": "樹林區"
+    }
+   ]
+  },
+  "w268276308": {
+   "name": "嘉穗公園",
+   "leisure": "park",
+   "lat": 24.9972199,
+   "lng": 121.4790212,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中和區"
+    }
+   ]
+  },
+  "w271667492": {
+   "name": "國光公園",
+   "leisure": "park",
+   "lat": 25.0203113,
+   "lng": 121.4530701,
+   "districts": [
+    {
+     "level": 7,
+     "name": "板橋區"
+    }
+   ]
+  },
+  "w272360168": {
+   "name": "復興公園",
+   "leisure": "park",
+   "lat": 25.0643938,
+   "lng": 121.6558745,
+   "districts": [
+    {
+     "level": 7,
+     "name": "汐止區"
+    }
+   ]
+  },
+  "w274467965": {
+   "name": "德厚公園",
+   "leisure": "park",
+   "lat": 25.049355,
+   "lng": 121.4787173,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w278451928": {
+   "name": "頂新公園",
+   "leisure": "park",
+   "lat": 24.9539301,
+   "lng": 121.4154682,
+   "districts": [
+    {
+     "level": 7,
+     "name": "土城區"
+    }
+   ]
+  },
+  "w289578419": {
+   "name": "福民公園",
+   "leisure": "park",
+   "lat": 24.9731845,
+   "lng": 121.5326564,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "w311050913": {
+   "name": "中港公園",
+   "leisure": "park",
+   "lat": 25.0451368,
+   "lng": 121.4455036,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w311471062": {
+   "name": "福基公園",
+   "leisure": "park",
+   "lat": 25.0584435,
+   "lng": 121.4610913,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w329664606": {
+   "name": "玫瑰公園",
+   "leisure": "park",
+   "lat": 25.0246961,
+   "lng": 121.4557526,
+   "districts": [
+    {
+     "level": 7,
+     "name": "板橋區"
+    }
+   ]
+  },
+  "w333727923": {
+   "name": "永昌公園",
+   "leisure": "park",
+   "lat": 24.9487791,
+   "lng": 121.3402421,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  "w334824544": {
+   "name": "尖山公園",
+   "leisure": "park",
+   "lat": 24.9471088,
+   "lng": 121.3462631,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  "w353461494": {
+   "name": "民樂人行廣場",
+   "leisure": "park",
+   "lat": 25.0015111,
+   "lng": 121.482441,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中和區"
+    }
+   ]
+  },
+  "w366414914": {
+   "name": "商港公園",
+   "leisure": "park",
+   "lat": 25.1501841,
+   "lng": 121.3989823,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八里區"
+    }
+   ]
+  },
+  "w366414926": {
+   "name": "文昌公園",
+   "leisure": "park",
+   "lat": 25.1570921,
+   "lng": 121.4109758,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八里區"
+    }
+   ]
+  },
+  "w367904287": {
+   "name": "東明公園",
+   "leisure": "park",
+   "lat": 25.0724729,
+   "lng": 121.3903318,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w370524437": {
+   "name": "兒童公園",
+   "leisure": "park",
+   "lat": 25.032853,
+   "lng": 121.8671784,
+   "districts": [
+    {
+     "level": 7,
+     "name": "雙溪區"
+    }
+   ]
+  },
+  "w390963102": {
+   "name": "青潭公園",
+   "leisure": "park",
+   "lat": 24.9510362,
+   "lng": 121.5487022,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "w429330950": {
+   "name": "大清水運動公園",
+   "leisure": "park",
+   "lat": 24.9801148,
+   "lng": 121.4663847,
+   "districts": [
+    {
+     "level": 7,
+     "name": "土城區"
+    }
+   ]
+  },
+  "w429648148": {
+   "name": "青山公園",
+   "leisure": "park",
+   "lat": 24.9778578,
+   "lng": 121.464422,
+   "districts": [
+    {
+     "level": 7,
+     "name": "土城區"
+    }
+   ]
+  },
+  "w429680810": {
+   "name": "中山公園",
+   "leisure": "park",
+   "lat": 24.9350814,
+   "lng": 121.3661254,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三峽區"
+    }
+   ]
+  },
+  "w443039921": {
+   "name": "吉祥公園",
+   "leisure": "park",
+   "lat": 25.0803627,
+   "lng": 121.3760614,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w447659750": {
+   "name": "菜寮公園",
+   "leisure": "park",
+   "lat": 25.0579304,
+   "lng": 121.4928122,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三重區"
+    }
+   ]
+  },
+  "w456509332": {
+   "name": "建福公園",
+   "leisure": "park",
+   "lat": 25.027778,
+   "lng": 121.4269906,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w463818561": {
+   "name": "民享藝文特區",
+   "leisure": "park",
+   "lat": 25.0036504,
+   "lng": 121.4755583,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中和區"
+    }
+   ]
+  },
+  "w468610703": {
+   "name": "正義公園",
+   "leisure": "park",
+   "lat": 25.0833907,
+   "lng": 121.4603716,
+   "districts": [
+    {
+     "level": 7,
+     "name": "蘆洲區"
+    }
+   ]
+  },
+  "w487655608": {
+   "name": "蝙蝠洞公園",
+   "leisure": "park",
+   "lat": 25.1263557,
+   "lng": 121.8324736,
+   "districts": [
+    {
+     "level": 7,
+     "name": "瑞芳區"
+    }
+   ]
+  },
+  "w504373684": {
+   "name": "雙鳳公園",
+   "leisure": "park",
+   "lat": 25.0270471,
+   "lng": 121.4135733,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w529013624": {
+   "name": "東昇公園",
+   "leisure": "park",
+   "lat": 24.9847266,
+   "lng": 121.4148154,
+   "districts": [
+    {
+     "level": 7,
+     "name": "樹林區"
+    }
+   ]
+  },
+  "w534197914": {
+   "name": "鹿角溪公園",
+   "leisure": "park",
+   "lat": 24.9716848,
+   "lng": 121.3959787,
+   "districts": [
+    {
+     "level": 7,
+     "name": "樹林區"
+    }
+   ]
+  },
+  "w534484035": {
+   "name": "育德公園",
+   "leisure": "park",
+   "lat": 24.9695365,
+   "lng": 121.3903915,
+   "districts": [
+    {
+     "level": 7,
+     "name": "樹林區"
+    }
+   ]
+  },
+  "w543478925": {
+   "name": "斬龍山遺址文化公園",
+   "leisure": "park",
+   "lat": 24.9779862,
+   "lng": 121.4493548,
+   "districts": [
+    {
+     "level": 7,
+     "name": "土城區"
+    }
+   ]
+  },
+  "w544725813": {
+   "name": "吉安公園",
+   "leisure": "park",
+   "lat": 24.9662224,
+   "lng": 121.5159823,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
+    }
+   ]
+  },
+  "w545770024": {
+   "name": "鳳祥公園",
+   "leisure": "park",
+   "lat": 24.962936,
+   "lng": 121.3303255,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  "w546248308": {
+   "name": "樹林口公園",
+   "leisure": "park",
+   "lat": 25.0781233,
+   "lng": 121.3931112,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w546320822": {
+   "name": "一品公園",
+   "leisure": "park",
+   "lat": 25.0839456,
+   "lng": 121.3827299,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w549564875": {
+   "name": "和平公園",
+   "leisure": "park",
+   "lat": 25.0653534,
+   "lng": 121.4352322,
+   "districts": [
+    {
+     "level": 7,
+     "name": "泰山區"
+    }
+   ]
+  },
+  "w557380021": {
+   "name": "兒三公園",
+   "leisure": "park",
+   "lat": 25.2594499,
+   "lng": 121.5044197,
+   "districts": [
+    {
+     "level": 7,
+     "name": "三芝區"
+    }
+   ]
+  },
+  "w562461749": {
+   "name": "鳳福公園",
+   "leisure": "park",
+   "lat": 24.9751491,
+   "lng": 121.329501,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  "w566295077": {
+   "name": "瓊泰河濱公園",
+   "leisure": "park",
+   "lat": 25.0297698,
+   "lng": 121.4440699,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新莊區"
+    }
+   ]
+  },
+  "w567247185": {
+   "name": "興林口公園",
+   "leisure": "park",
+   "lat": 25.0768491,
+   "lng": 121.3894791,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w570408681": {
+   "name": "裕民廣場",
+   "leisure": "park",
+   "lat": 24.9854619,
+   "lng": 121.4535881,
+   "districts": [
+    {
+     "level": 7,
+     "name": "土城區"
+    }
+   ]
+  },
+  "w571717617": {
+   "name": "富貴綠地公園",
+   "leisure": "park",
+   "lat": 25.0176422,
+   "lng": 121.4824759,
+   "districts": [
+    {
+     "level": 7,
+     "name": "板橋區"
+    }
+   ]
+  },
+  "w585485776": {
+   "name": "新民公園",
+   "leisure": "park",
+   "lat": 25.1790839,
+   "lng": 121.4394714,
+   "districts": [
+    {
+     "level": 7,
+     "name": "淡水區"
+    }
+   ]
+  },
+  "w586109296": {
+   "name": "東勢公園",
+   "leisure": "park",
+   "lat": 25.0400908,
+   "lng": 121.6256127,
+   "districts": [
+    {
+     "level": 7,
+     "name": "汐止區"
+    }
+   ]
+  },
+  "w590402583": {
+   "name": "永豐社區公園",
+   "leisure": "park",
+   "lat": 24.9822587,
+   "lng": 121.4625896,
+   "districts": [
+    {
+     "level": 7,
+     "name": "土城區"
+    }
+   ]
+  },
+  "w616030150": {
+   "name": "井泉公園",
+   "leisure": "park",
+   "lat": 25.0701979,
+   "lng": 121.3560547,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w616049024": {
+   "name": "翰林公園",
+   "leisure": "park",
+   "lat": 25.0815468,
+   "lng": 121.3722665,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w633231347": {
+   "name": "福德公園",
+   "leisure": "park",
+   "lat": 25.131943,
+   "lng": 121.4649357,
+   "districts": [
+    {
+     "level": 7,
+     "name": "淡水區"
+    }
+   ]
+  },
+  "w639891319": {
+   "name": "白雲公園",
+   "leisure": "park",
+   "lat": 25.0469756,
+   "lng": 121.6176284,
+   "districts": [
+    {
+     "level": 7,
+     "name": "汐止區"
+    }
+   ]
+  },
+  "w714659307": {
+   "name": "南山公園",
+   "leisure": "park",
+   "lat": 25.1584341,
+   "lng": 121.4187393,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八里區"
+    }
+   ]
+  },
+  "w724449071": {
+   "name": "光之公園",
+   "leisure": "park",
+   "lat": 25.0119547,
+   "lng": 121.4869854,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中和區"
+    }
+   ]
+  },
+  "w734321382": {
+   "name": "貴子兒童公園",
+   "leisure": "park",
+   "lat": 25.0422915,
+   "lng": 121.423592,
+   "districts": [
+    {
+     "level": 7,
+     "name": "泰山區"
+    }
+   ]
+  },
+  "w765149123": {
+   "name": "芳洲公園",
+   "leisure": "park",
+   "lat": 25.0868239,
+   "lng": 121.4451563,
+   "districts": [
+    {
+     "level": 7,
+     "name": "五股區"
+    }
+   ]
+  },
+  "w772664005": {
+   "name": "瑞芳運動公園",
+   "leisure": "park",
+   "lat": 25.1022795,
+   "lng": 121.8219288,
+   "districts": [
+    {
+     "level": 7,
+     "name": "瑞芳區"
+    }
+   ]
+  },
+  "w772823605": {
+   "name": "渡船頭公園",
+   "leisure": "park",
+   "lat": 25.157488,
+   "lng": 121.4334812,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八里區"
+    }
+   ]
+  },
+  "w825373351": {
+   "name": "片仔溝公園",
+   "leisure": "park",
+   "lat": 25.1502873,
+   "lng": 121.4056207,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八里區"
+    }
+   ]
+  },
+  "w825373355": {
+   "name": "龍源公園",
+   "leisure": "park",
+   "lat": 25.1307652,
+   "lng": 121.4504967,
+   "districts": [
+    {
+     "level": 7,
+     "name": "八里區"
+    }
+   ]
+  },
+  "w880659010": {
+   "name": "逗逗龍公園",
+   "leisure": "park",
+   "lat": 24.9704529,
+   "lng": 121.3319058,
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  "w891739418": {
+   "name": "成功運動公園",
+   "leisure": "park",
+   "lat": 25.09251,
+   "lng": 121.4446066,
+   "districts": [
+    {
+     "level": 7,
+     "name": "五股區"
+    }
+   ]
+  },
+  "w949716917": {
+   "name": "宗北公園",
+   "leisure": "park",
+   "lat": 25.0881732,
+   "lng": 121.384358,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w949716950": {
+   "name": "東湖公園",
+   "leisure": "park",
+   "lat": 25.0725119,
+   "lng": 121.3848972,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  },
+  "w949716955": {
+   "name": "隆林公園",
+   "leisure": "park",
+   "lat": 25.0752013,
+   "lng": 121.3879645,
+   "districts": [
+    {
+     "level": 7,
+     "name": "林口區"
+    }
+   ]
+  }
+ }
+}

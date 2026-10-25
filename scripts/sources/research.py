@@ -15,6 +15,7 @@ scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱；依據�
 場地屬性已經有其他來源的值（例如桃園市府開放資料）時不覆蓋，也算格式錯誤。
 """
 import math
+from collections import Counter
 from datetime import date
 
 KINDS = {"news", "article"}
@@ -157,6 +158,10 @@ def apply(research, places, keys, city=None, osm_parks=None):
     if errors:
         raise ResearchError("research.json 有錯：\n  " + "\n  ".join(errors))
     places.extend(new)
+    counts = Counter(p["name"] for p in places)
+    for p in new:  # 跟其他場地同名、但在不同行政區（例如兩個中山公園）：加上行政區
+        if counts[p["name"]] > 1:
+            p["name"] = f"{p['name']}（{p['district'] or '行政區未知'}）"
     at = research["verified_at"]
     by_id = {p["id"]: p for p in places}
     for pid, (_, note) in (research.get("aka") or {}).items():
