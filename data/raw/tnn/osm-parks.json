@@ -1,0 +1,140 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-26",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "r13591661": {
+   "name": "新宅公園",
+   "leisure": "park",
+   "lat": 23.0553389,
+   "lng": 120.2100688,
+   "districts": [
+    {
+     "level": 7,
+     "name": "安南區"
+    }
+   ]
+  },
+  "r6416771": {
+   "name": "灣裡休閒公園",
+   "leisure": "park",
+   "lat": 22.9296968,
+   "lng": 120.1823278,
+   "districts": [
+    {
+     "level": 7,
+     "name": "南區"
+    }
+   ]
+  },
+  "w1066866174": {
+   "name": "閱之森公園",
+   "leisure": "park",
+   "lat": 23.0238868,
+   "lng": 120.2371383,
+   "districts": [
+    {
+     "level": 7,
+     "name": "永康區"
+    }
+   ]
+  },
+  "w1306283203": {
+   "name": "櫻花滯洪池特色公園",
+   "leisure": "park",
+   "lat": 23.27346,
+   "lng": 120.3088253,
+   "districts": [
+    {
+     "level": 7,
+     "name": "柳營區"
+    }
+   ]
+  },
+  "w173351759": {
+   "name": "新化體育公園",
+   "leisure": "park",
+   "lat": 23.0299962,
+   "lng": 120.3057077,
+   "districts": [
+    {
+     "level": 7,
+     "name": "新化區"
+    }
+   ]
+  },
+  "w183394191": {
+   "name": "歸仁運動公園",
+   "leisure": "park",
+   "lat": 22.9635113,
+   "lng": 120.297615,
+   "districts": [
+    {
+     "level": 7,
+     "name": "歸仁區"
+    }
+   ]
+  },
+  "w338750464": {
+   "name": "玉井運動公園",
+   "leisure": "park",
+   "lat": 23.121417,
+   "lng": 120.4702578,
+   "districts": [
+    {
+     "level": 7,
+     "name": "玉井區"
+    }
+   ]
+  },
+  "w450230424": {
+   "name": "仁德運動公園",
+   "leisure": "park",
+   "lat": 22.9677103,
+   "lng": 120.2585913,
+   "districts": [
+    {
+     "level": 7,
+     "name": "仁德區"
+    }
+   ]
+  },
+  "w551947197": {
+   "name": "竹篙厝公園",
+   "leisure": "park",
+   "lat": 22.9640759,
+   "lng": 120.2374392,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w553521428": {
+   "name": "大恩公園",
+   "leisure": "park",
+   "lat": 22.9666918,
+   "lng": 120.2088496,
+   "districts": [
+    {
+     "level": 7,
+     "name": "南區"
+    }
+   ]
+  },
+  "w920882298": {
+   "name": "健康綠洲公園",
+   "leisure": "park",
+   "lat": 22.9833534,
+   "lng": 120.1833845,
+   "districts": [
+    {
+     "level": 7,
+     "name": "南區"
+    }
+   ]
+  }
+ }
+}
