@@ -2,7 +2,9 @@
 
   python3 scripts/import_pkl.py
 
-輸入：data/raw/tpe/pkl-arcade.json、data/raw/tpe/manual-names.tsv、data/raw/osm-city-bounds.json（範圍檢查）
+輸入：data/raw/tpe/pkl-arcade.json、data/raw/tpe/manual-names.tsv、data/raw/osm-city-bounds.json（範圍檢查）、
+      research.json、osm-parks.json（有的話：人工查證的遊具與設施，只補未知的項目；市府遊戲場網站列出、
+      OSM 只畫了公園的遊戲場，sources/research.py）
 輸出：data/seed/tpe/places.json、places.csv；data/review/tpe/ 的 odd-names、out-of-bounds、districts-unknown（CSV）
 不連網路，同樣的輸入一定產生同樣的輸出（check_seed_hash.py）。
 """
@@ -11,7 +13,7 @@ from pathlib import Path
 from lib.attrs import attr_keys, blank_attrs
 from lib.io import read_json, write_csv, write_json
 from lib.labels import labels_json
-from sources import hccg, pkl
+from sources import hccg, pkl, research
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data/raw/tpe"
@@ -69,6 +71,11 @@ def main():
         ))
 
     sources = {**pkl.SOURCES, "est": {"label": "依面積與設施推估", "url": None, "kind": "estimate"}}
+    research_path = RAW / "research.json"
+    if research_path.exists():  # 人工查證的遊具與設施，只補未知的項目（sources/research.py）
+        parks_path = RAW / "osm-parks.json"
+        osm_parks = read_json(parks_path) if parks_path.exists() else None
+        sources.update(research.apply(read_json(research_path), places, keys, pkl.CITY, osm_parks))
     seed = {"version": "0.2", "city": "臺北市", "generated": fetched, "sources": sources,
             "labels": labels, "places": places}
     seed_dir = ROOT / "data/seed/tpe"

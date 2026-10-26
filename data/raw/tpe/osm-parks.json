@@ -1,0 +1,296 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-26",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "r10279463": {
+   "name": "辛亥生態公園",
+   "leisure": "park",
+   "lat": 25.0031966,
+   "lng": 121.5565795,
+   "districts": [
+    {
+     "level": 7,
+     "name": "文山區"
+    }
+   ]
+  },
+  "r16410525": {
+   "name": "興國公園",
+   "leisure": "park",
+   "lat": 25.0530748,
+   "lng": 121.5412931,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  "r6958707": {
+   "name": "晴光公園",
+   "leisure": "park",
+   "lat": 25.06392,
+   "lng": 121.5243716,
+   "districts": [
+    {
+     "level": 7,
+     "name": "中山區"
+    }
+   ]
+  },
+  "w1158421218": {
+   "name": "福星公園",
+   "leisure": "park",
+   "lat": 25.1086468,
+   "lng": 121.5126973,
+   "districts": [
+    {
+     "level": 7,
+     "name": "北投區"
+    }
+   ]
+  },
+  "w1372611061": {
+   "name": "山仔后公園",
+   "leisure": "park",
+   "lat": 25.1371947,
+   "lng": 121.5458284,
+   "districts": [
+    {
+     "level": 7,
+     "name": "士林區"
+    }
+   ]
+  },
+  "w207150141": {
+   "name": "西康二號公園",
+   "leisure": "park",
+   "lat": 25.0849783,
+   "lng": 121.5642033,
+   "districts": [
+    {
+     "level": 7,
+     "name": "內湖區"
+    }
+   ]
+  },
+  "w229733673": {
+   "name": "古莊公園",
+   "leisure": "park",
+   "lat": 25.0223651,
+   "lng": 121.5272581,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大安區"
+    }
+   ]
+  },
+  "w234586708": {
+   "name": "景勤2號公園",
+   "leisure": "park",
+   "lat": 25.0265451,
+   "lng": 121.5583778,
+   "districts": [
+    {
+     "level": 7,
+     "name": "信義區"
+    }
+   ]
+  },
+  "w244115936": {
+   "name": "瑞光公園",
+   "leisure": "park",
+   "lat": 25.0714064,
+   "lng": 121.578143,
+   "districts": [
+    {
+     "level": 7,
+     "name": "內湖區"
+    }
+   ]
+  },
+  "w253207984": {
+   "name": "富民生態公園",
+   "leisure": "park",
+   "lat": 25.0603006,
+   "lng": 121.5644724,
+   "districts": [
+    {
+     "level": 7,
+     "name": "松山區"
+    }
+   ]
+  },
+  "w257924458": {
+   "name": "寧安公園",
+   "leisure": "park",
+   "lat": 25.0506863,
+   "lng": 121.5548596,
+   "districts": [
+    {
+     "level": 7,
+     "name": "松山區"
+    }
+   ]
+  },
+  "w259080204": {
+   "name": "福林公園",
+   "leisure": "park",
+   "lat": 25.0951978,
+   "lng": 121.5300302,
+   "districts": [
+    {
+     "level": 7,
+     "name": "士林區"
+    }
+   ]
+  },
+  "w287217253": {
+   "name": "健康公園",
+   "leisure": "park",
+   "lat": 25.0541414,
+   "lng": 121.5689155,
+   "districts": [
+    {
+     "level": 7,
+     "name": "松山區"
+    }
+   ]
+  },
+  "w303852587": {
+   "name": "德安公園",
+   "leisure": "park",
+   "lat": 25.0348611,
+   "lng": 121.5477763,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大安區"
+    }
+   ]
+  },
+  "w318173776": {
+   "name": "壽德公園",
+   "leisure": "park",
+   "lat": 25.0244447,
+   "lng": 121.501187,
+   "districts": [
+    {
+     "level": 7,
+     "name": "萬華區"
+    }
+   ]
+  },
+  "w333206919": {
+   "name": "延壽三號公園",
+   "leisure": "park",
+   "lat": 25.0568811,
+   "lng": 121.5518245,
+   "districts": [
+    {
+     "level": 7,
+     "name": "松山區"
+    }
+   ]
+  },
+  "w346730239": {
+   "name": "龍門公園",
+   "leisure": "park",
+   "lat": 25.024296,
+   "lng": 121.5366935,
+   "districts": [
+    {
+     "level": 7,
+     "name": "大安區"
+    }
+   ]
+  },
+  "w375180591": {
+   "name": "建民公園",
+   "leisure": "park",
+   "lat": 25.1057995,
+   "lng": 121.5203394,
+   "districts": [
+    {
+     "level": 7,
+     "name": "北投區"
+    }
+   ]
+  },
+  "w377325626": {
+   "name": "軟橋公園",
+   "leisure": "park",
+   "lat": 25.1028696,
+   "lng": 121.5176115,
+   "districts": [
+    {
+     "level": 7,
+     "name": "北投區"
+    }
+   ]
+  },
+  "w423746100": {
+   "name": "興泰公園",
+   "leisure": "park",
+   "lat": 25.0051425,
+   "lng": 121.5555454,
+   "districts": [
+    {
+     "level": 7,
+     "name": "文山區"
+    }
+   ]
+  },
+  "w572764804": {
+   "name": "克強公園",
+   "leisure": "park",
+   "lat": 25.1078104,
+   "lng": 121.5219961,
+   "districts": [
+    {
+     "level": 7,
+     "name": "士林區"
+    }
+   ]
+  },
+  "w810136497": {
+   "name": "士林89號綠地",
+   "leisure": "park",
+   "lat": 25.105953,
+   "lng": 121.5290096,
+   "districts": [
+    {
+     "level": 7,
+     "name": "士林區"
+    }
+   ]
+  },
+  "w855924397": {
+   "name": "基隆河沖洗溝加蓋綠地",
+   "leisure": "park",
+   "lat": 25.0840354,
+   "lng": 121.5230952,
+   "districts": [
+    {
+     "level": 7,
+     "name": "士林區"
+    }
+   ]
+  },
+  "w910296940": {
+   "name": "洲美公園",
+   "leisure": "park",
+   "lat": 25.0998849,
+   "lng": 121.5059335,
+   "districts": [
+    {
+     "level": 7,
+     "name": "北投區"
+    }
+   ]
+  }
+ }
+}
