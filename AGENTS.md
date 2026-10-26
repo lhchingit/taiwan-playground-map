@@ -68,7 +68,7 @@
 | `mlc` | 苗栗縣 | `miaoli` | OSM | `import_osm_city.py mlc` |
 | `tpe` | 臺北市 | `taipei` | 公園處設施資料（D21） | `import_pkl.py` |
 | `nwt` | 新北市 | `new-taipei` | OSM＋官方清單補地址 | `import_osm_city.py nwt` |
-| `txg` | 臺中市 | `taichung` | OSM＋公園綠地清冊補地址、面積 | `import_osm_city.py txg` |
+| `txg` | 臺中市 | `taichung` | OSM＋公園綠地清冊補地址、面積；美樂地網站與兒童遊具開放資料（research.json） | `import_osm_city.py txg` |
 | `khh` | 高雄市 | `kaohsiung` | OSM | `import_osm_city.py khh` |
 | `tnn` | 臺南市 | `tainan` | 公園設施資料＋OSM 補充 | `import_tnn.py` |
 | `cyi` | 嘉義市 | `chiayi-city` | OSM | `import_osm_city.py cyi` |

@@ -627,10 +627,10 @@ describe('pnpm seed', () => {
     expect(c?.launched_at).toBeNull();
   });
 
-  it('臺中市（OpenStreetMap，decisions D20）：未上線、座標來自 OSM；屬性只有人工查證的項目，每一項都有來源', async () => {
+  it('臺中市（OpenStreetMap，decisions D20）：未上線、座標來自 OSM；屬性只有人工查證與兒童遊具開放資料，每一項都有來源', async () => {
     const txg = allSeeds.find((s) => s.places[0]?.city === 'txg');
     expect(txg?.places.length).toBeGreaterThan(0);
-    // data/raw/txg/research.json：網路文章與新聞明確寫到的遊具與設施
+    // data/raw/txg/research.json：網路文章與新聞明確寫到的遊具與設施，以及公園設施資料-兒童遊具（152426）數量 > 0 的項目
     const entries = txg!.places.flatMap((p) => Object.values(p.attrs).filter((a) => a.v !== 'u'));
     expect(entries.length).toBeGreaterThan(0);
     const [r] = await sql`
@@ -641,7 +641,7 @@ describe('pnpm seed', () => {
     const [a] = await sql`
       SELECT count(*)::int AS n,
              count(*) FILTER (WHERE pa.verified_at IS NULL)::int AS no_date,
-             count(*) FILTER (WHERE s.kind NOT IN ('news', 'article'))::int AS other_kind
+             count(*) FILTER (WHERE s.kind NOT IN ('news', 'article', 'open_data'))::int AS other_kind
       FROM place_attributes pa JOIN sources s ON s.id = pa.source_id
       WHERE pa.place_id LIKE 'txg-%'`;
     expect(a).toEqual({ n: entries.length, no_date: 0, other_kind: 0 });

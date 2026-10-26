@@ -2,14 +2,14 @@
 
 格式：
   {"verified_at": "2026-10-18",
-   "sources": {"<來源 key>": {"label": "...", "url": "...", "kind": "news|article"}},
+   "sources": {"<來源 key>": {"label": "...", "url": "...", "kind": "news|article|open_data"}},
    "parks": {"<OSM ref>": ["<來源 key>", "<哪篇報導寫明裡面有遊戲場>", "<查證日期，選填>"]},
    "aka": {"<場地 id>": ["<來源 key>", "<新聞或文章用的名稱>"]},
    "places": {"<場地 id>": {"<屬性 key>": ["y|n", "<來源 key>", "<重新整理的說明>", "<查證日期，選填>"]}}}
 
 查證日期沒寫就用 verified_at；之後補查的項目寫自己的日期，先前查的項目日期不變。
 
-parks：OSM 公園裡沒有標遊戲場、但新聞或文章寫明有的，用公園範圍中心點（data/raw/<縣市>/osm-parks.json，
+parks：OSM 公園裡沒有標遊戲場、但新聞、文章或政府開放資料寫明有的，用公園範圍中心點（data/raw/<縣市>/osm-parks.json，
 scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱；依據的來源記在 listing_src／listing_at（places.listing_source）。
 只記來源文字明確寫到的；「沒有」也要來源明寫才填 n。格式有錯就中止匯入，不會默默略過。
 場地屬性已經有其他來源的值（例如桃園市府開放資料）時不覆蓋，也算格式錯誤。
@@ -18,11 +18,14 @@ import math
 from collections import Counter
 from datetime import date
 
-KINDS = {"news", "article"}
+KINDS = {"news", "article", "open_data"}
 VALUES = {"y", "n"}
 UNKNOWN_TAIL = "遊具與設施還沒有資料，歡迎回報。"
 RESEARCHED_TAIL = "部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。"
+# 補的項目全部來自政府開放資料（例如臺中市公園設施資料-兒童遊具）
+OPEN_DATA_TAIL = "部分遊具資料來自政府開放資料，現場可能已經不同，歡迎回報。"
 PARK_TEXT = "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：{}。"
+OPEN_DATA_PARK_TEXT = "OpenStreetMap 標示的公園，政府開放資料列有兒童遊具：{}。"
 # 新公園的中心點離現有場地太近，可能是同一處（OSM 遊戲場已經在地圖上）
 MIN_DISTANCE_M = 100
 
@@ -133,12 +136,14 @@ def park_places(research, osm_parks, places, keys, city):
         ds = sorted(park.get("districts", []), key=lambda x: -x["level"])
         ok = isinstance(parks[ref], list) and len(parks[ref]) in (2, 3)
         note = parks[ref][1] if ok else ""
+        kind = (sources.get(parks[ref][0]) or {}).get("kind") if ok else None
+        text = OPEN_DATA_PARK_TEXT if kind == "open_data" else PARK_TEXT
         new.append(dict(
             id=pid, name=(park.get("name") or "").strip(), district=ds[0]["name"] if ds else None, address=None,
             lat=park["lat"], lng=park["lng"],
             size=None, stay=None, stay_src=None, age_min=None, age_max=None,
             fee=None, indoor=False, hours=None, surface=None,
-            status="open", summary=PARK_TEXT.format(note.strip()) + UNKNOWN_TAIL,
+            status="open", summary=text.format(note.strip()) + UNKNOWN_TAIL,
             attrs={k: {"v": "u", "src": None, "note": None, "at": None} for k in keys},
             parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
             source_coords=f"OpenStreetMap {ref}（leisure={park.get('leisure') or 'park'} 範圍中心）",
@@ -172,11 +177,15 @@ def apply(research, places, keys, city=None, osm_parks=None):
         p = by_id[pid]
         for k, (v, src, note, *own) in attrs.items():
             p["attrs"][k] = {"v": v, "src": src, "note": note.strip(), "at": own[0] if own else at}
+        # 全部來自開放資料的用開放資料的說法；有用到新聞或文章的照舊
+        open_only = all(research["sources"][e[1]]["kind"] == "open_data" for e in attrs.values())
+        tail = OPEN_DATA_TAIL if open_only else RESEARCHED_TAIL
         # 官方公園清單補地址時，說明後面會再接「地址來自…」，所以不只看結尾
         if attrs and UNKNOWN_TAIL in p["summary"]:
-            p["summary"] = p["summary"].replace(UNKNOWN_TAIL, RESEARCHED_TAIL, 1)
-        elif attrs and RESEARCHED_TAIL not in p["summary"]:  # 官方清冊的場地（桃園）原本就有遊具資料
-            p["summary"] = p["summary"].rstrip("。") + "。" + RESEARCHED_TAIL
+            p["summary"] = p["summary"].replace(UNKNOWN_TAIL, tail, 1)
+        elif attrs and RESEARCHED_TAIL not in p["summary"] and OPEN_DATA_TAIL not in p["summary"]:
+            # 官方清冊的場地（桃園）原本就有遊具資料
+            p["summary"] = p["summary"].rstrip("。") + "。" + tail
     used = {e[1] for attrs in (research.get("places") or {}).values() for e in attrs.values()}
     used |= {e[0] for section in ("parks", "aka") for e in (research.get(section) or {}).values()}
     return {k: s for k, s in research["sources"].items() if k in used}

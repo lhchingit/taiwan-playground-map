@@ -156,6 +156,22 @@ class ParksTest(unittest.TestCase):
                        osm_parks())
         self.assertEqual((places[-1]["listing_src"], places[-1]["listing_at"]), ("news-1", "2026-10-23"))
 
+    def test_open_data_wording(self):
+        # 只靠政府開放資料（臺中市公園設施資料-兒童遊具）列入、補遊具的：說明寫開放資料，不寫新聞或文章
+        places = [place()]
+        d = with_parks({"w9": ["od", "公園設施資料-兒童遊具列有遊具"]},
+                       places={"hsq-osm-w9": {"slide": ["y", "od", "公園設施資料：溜滑梯 1"]}})
+        d["sources"] = {**d["sources"], "od": {"label": "開放資料：測試", "url": "https://example.test/od",
+                                                "kind": "open_data"}}
+        research.apply(d, places, ["slide", "toilet"], "hsq", osm_parks())
+        self.assertEqual(places[-1]["summary"], "OpenStreetMap 標示的公園，政府開放資料列有兒童遊具：公園設施資料-兒童遊具列有遊具。"
+                                                "部分遊具資料來自政府開放資料，現場可能已經不同，歡迎回報。")
+        # 開放資料和新聞都有用到：照舊寫網路文章或新聞
+        places = [place()]
+        d["places"] = {"hsq-osm-w1": {"slide": ["y", "od", "公園設施資料：溜滑梯 1"], "toilet": ["y", "news-1", "有廁所"]}}
+        research.apply(d, places, ["slide", "toilet"], "hsq", osm_parks())
+        self.assertTrue(places[0]["summary"].endswith("部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。"))
+
     def test_without_attrs_keeps_unknown_tail(self):
         places = [place()]
         research.apply(with_parks(), places, ["slide", "toilet"], "hsq", osm_parks())
