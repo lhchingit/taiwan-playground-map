@@ -5,7 +5,9 @@
 
 輸入：data/raw/tnn/tnn-parks.json（fetch_tnn_parks.py）、
       osm.json、osm-institutions.json（fetch_osm_city.py tnn、fetch_osm_institutions.py tnn）、
-      manual-names.tsv（OSM 遊戲場的人工命名或排除）、data/raw/osm-city-bounds.json（範圍檢查）
+      manual-names.tsv（OSM 遊戲場的人工命名或排除）、data/raw/osm-city-bounds.json（範圍檢查）、
+      research.json、osm-parks.json（有的話：人工查證的遊具與設施，只補未知的項目；工務局特色遊戲場網站列出、
+      OSM 只畫了公園的遊戲場，sources/research.py）
 輸出：data/seed/tnn/places.json、places.csv；data/review/tnn/ 的
       no-playground、odd-names-official、no-coords、out-of-bounds（官方資料），
       unnamed、named-suspicious、merged、excluded、excluded-institution、osm-covered、osm-near-official（OSM 遊戲場）（CSV）
@@ -16,7 +18,7 @@ from pathlib import Path
 from lib.attrs import attr_keys, blank_attrs
 from lib.io import read_json, write_csv, write_json
 from lib.labels import labels_json
-from sources import hccg, tnn, tycg
+from sources import hccg, research, tnn, tycg
 from sources import osm_playgrounds as osm
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -113,6 +115,11 @@ def main():
     places += osm_places
 
     sources = {**tnn.SOURCES, **osm.SOURCES, "est": {"label": "依面積與設施推估", "url": None, "kind": "estimate"}}
+    research_path = RAW / "research.json"
+    if research_path.exists():  # 人工查證的遊具與設施，只補未知的項目（sources/research.py）
+        parks_path = RAW / "osm-parks.json"
+        osm_parks = read_json(parks_path) if parks_path.exists() else None
+        sources.update(research.apply(read_json(research_path), places, keys, tnn.CITY, osm_parks))
     seed = {"version": "0.2", "city": "臺南市", "generated": fetched, "sources": sources,
             "labels": labels, "places": places}
     seed_dir = ROOT / "data/seed/tnn"

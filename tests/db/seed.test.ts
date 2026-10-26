@@ -649,14 +649,22 @@ describe('pnpm seed', () => {
     expect(c?.launched_at).toBeNull();
   });
 
-  it('臺南市（公園設施資料＋OSM 補充，decisions D20、D21）：未上線；只有「有」或未知；停車場有格數與來源', async () => {
+  it('臺南市（公園設施資料＋OSM 補充，decisions D20、D21）：未上線；「無」只來自工務局網站；停車場有格數與來源', async () => {
     const tnn = allSeeds.find((s) => s.places[0]?.city === 'tnn');
     expect(tnn?.places.length).toBeGreaterThan(0);
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'tnn'`;
     expect(c?.launched_at).toBeNull();
-    const values = await sql`SELECT DISTINCT value, source_id FROM place_attributes
-                             WHERE place_id LIKE 'tnn-%' ORDER BY 1`;
-    expect(values).toEqual([{ value: 'y', source_id: 'tnn' }]);
+    // 設施資料（tnn）只有數量 > 0 →「有」；工務局特色遊戲場網站（research.json，D20）的「廁所：無」「遮蔭：無」→「無」
+    const values = await sql`SELECT DISTINCT value, source_id = 'tnn' AS official
+                             FROM place_attributes WHERE place_id LIKE 'tnn-%' ORDER BY 1, 2`;
+    expect(values).toEqual([
+      { value: 'n', official: false },
+      { value: 'y', official: false },
+      { value: 'y', official: true },
+    ]);
+    const [site] = await sql`SELECT count(*)::int AS n FROM place_attributes
+                             WHERE place_id LIKE 'tnn-%' AND source_id <> 'tnn' AND source_id NOT LIKE 'tnnpw-%'`;
+    expect(site?.n).toBe(0);
     const [r] = await sql`
       SELECT count(*)::int AS n,
              count(*) FILTER (WHERE coord_source NOT LIKE '臺南市公園設施資料%'

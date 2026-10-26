@@ -17,6 +17,56 @@
    "label": "依面積與設施推估",
    "url": null,
    "kind": "estimate"
+  },
+  "tnnpw-8621107": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 歸仁運動公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621107",
+   "kind": "article"
+  },
+  "tnnpw-8621117": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 櫻花滯洪池公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621117",
+   "kind": "article"
+  },
+  "tnnpw-8621124": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 閱之森公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621124",
+   "kind": "article"
+  },
+  "tnnpw-8621125": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 希望特色公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621125",
+   "kind": "article"
+  },
+  "tnnpw-8621387": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 仁德運動公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621387",
+   "kind": "article"
+  },
+  "tnnpw-8621388": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 台南都會公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621388",
+   "kind": "article"
+  },
+  "tnnpw-8621390": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 健康綠洲公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621390",
+   "kind": "article"
+  },
+  "tnnpw-8621392": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 大恩公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621392",
+   "kind": "article"
+  },
+  "tnnpw-8621393": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場 港濱公園",
+   "url": "https://publicworks.tainan.gov.tw/News_Content.aspx?n=41283&sms=26345&s=8621393",
+   "kind": "article"
+  },
+  "tnnpw-list": {
+   "label": "政府網站：臺南市政府工務局 特色遊戲場簡表",
+   "url": "https://publicworks.tainan.gov.tw/cp.aspx?n=25199",
+   "kind": "article"
   }
  },
  "labels": {
@@ -46500,7 +46550,7 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "臺南市公園設施資料列出的兒童遊具：搖搖樂 3 座、彈力蹺蹺板 1 座、沙坑 1 座；另有小型兒童遊具 1 座。",
+   "summary": "臺南市公園設施資料列出的兒童遊具：搖搖樂 3 座、彈力蹺蹺板 1 座、沙坑 1 座；另有小型兒童遊具 1 座。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
      "v": "u",
@@ -46551,16 +46601,16 @@
      "at": null
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621125",
+     "note": "工務局特色遊戲場介紹頁寫有攀爬架",
+     "at": "2026-10-26"
     },
     "climbing_wall": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621125",
+     "note": "工務局特色遊戲場介紹頁寫有約 7 公尺長、可攀岩的攀爬牆",
+     "at": "2026-10-26"
     },
     "rope_net": {
      "v": "u",
@@ -46569,16 +46619,16 @@
      "at": null
     },
     "balance": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621125",
+     "note": "工務局特色遊戲場介紹頁寫有垂吊平衡木",
+     "at": "2026-10-26"
     },
     "suspension_bridge": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621125",
+     "note": "工務局特色遊戲場介紹頁寫有繩索橋",
+     "at": "2026-10-26"
     },
     "tunnel": {
      "v": "u",
@@ -46617,10 +46667,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621125",
+     "note": "工務局特色遊戲場介紹頁寫有彈跳床",
+     "at": "2026-10-26"
     },
     "pushbike": {
      "v": "u",
@@ -46671,10 +46721,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "n",
+     "src": "tnnpw-8621125",
+     "note": "工務局特色遊戲場介紹頁的「廁所」欄寫無",
+     "at": "2026-10-26"
     },
     "handwash": {
      "v": "u",
@@ -46689,10 +46739,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621125",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫有",
+     "at": "2026-10-26"
     },
     "transit": {
      "v": "u",
@@ -53736,13 +53786,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "臺南市公園設施資料列出的兒童遊具：搖搖樂 4 座、攀爬梯網狀爬架 1 座；另有中型兒童遊具 1 座、小型兒童遊具 1 座、其他遊樂設施 2 座。",
+   "summary": "臺南市公園設施資料列出的兒童遊具：搖搖樂 4 座、攀爬梯網狀爬架 1 座；另有中型兒童遊具 1 座、小型兒童遊具 1 座、其他遊樂設施 2 座。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621388",
+     "note": "工務局特色遊戲場介紹頁寫有樹屋結合的溜滑梯",
+     "at": "2026-10-26"
     },
     "swing": {
      "v": "u",
@@ -53751,16 +53801,16 @@
      "at": null
     },
     "baby_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621388",
+     "note": "工務局特色遊戲場介紹頁寫有幼兒型盪鞦韆",
+     "at": "2026-10-26"
     },
     "nest_swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621388",
+     "note": "工務局特色遊戲場介紹頁寫有鳥巢型盪鞦韆",
+     "at": "2026-10-26"
     },
     "zipline": {
      "v": "u",
@@ -53823,10 +53873,10 @@
      "at": null
     },
     "tree_house": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621388",
+     "note": "工務局特色遊戲場介紹頁寫有三座冒險樹屋",
+     "at": "2026-10-26"
     },
     "sandpit": {
      "v": "u",
@@ -53925,10 +53975,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621388",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫有",
+     "at": "2026-10-26"
     },
     "transit": {
      "v": "u",
@@ -68952,13 +69002,13 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場：港濱歷史公園特色遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場：港濱歷史公園特色遊戲場。工務局特色遊戲場網站稱為「港濱公園」，OpenStreetMap 的遊戲場名稱是「港濱歷史公園特色遊戲場」。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁寫有海洋高塔溜滑梯",
+     "at": "2026-10-26"
     },
     "swing": {
      "v": "u",
@@ -68979,10 +69029,10 @@
      "at": null
     },
     "zipline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁寫有雙軌滑溜索",
+     "at": "2026-10-26"
     },
     "seesaw": {
      "v": "u",
@@ -68997,10 +69047,10 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁寫有旋轉盤",
+     "at": "2026-10-26"
     },
     "climbing": {
      "v": "u",
@@ -69057,10 +69107,10 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁寫有鯨魚噴霧與噴霧消暑設施",
+     "at": "2026-10-26"
     },
     "water_pump": {
      "v": "u",
@@ -69069,10 +69119,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁寫有彈跳床",
+     "at": "2026-10-26"
     },
     "pushbike": {
      "v": "u",
@@ -69123,10 +69173,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁的「廁所」欄寫有",
+     "at": "2026-10-26"
     },
     "handwash": {
      "v": "u",
@@ -69141,10 +69191,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫有，並有遮陽設施",
+     "at": "2026-10-26"
     },
     "transit": {
      "v": "u",
@@ -69177,10 +69227,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tnnpw-8621393",
+     "note": "工務局特色遊戲場介紹頁寫有無障礙遊具",
+     "at": "2026-10-26"
     }
    },
    "parking": {
@@ -71580,6 +71630,2943 @@
    "official_ref": [
     {
      "osm": "w1557343836,w1557343837"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-r13591661",
+   "name": "新宅公園",
+   "district": "安南區",
+   "address": null,
+   "lat": 23.0553389,
+   "lng": 120.2100688,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場簡表列為已完工。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap r13591661（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-list",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "r13591661"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-r6416771",
+   "name": "灣裡休閒公園",
+   "district": "南區",
+   "address": null,
+   "lat": 22.9296968,
+   "lng": 120.1823278,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場簡表列為已完工（簡表寫「南區灣裡人工溼地公園」，工務局特色遊戲場公園頁寫明灣裡人工濕地開發為灣裡休閒公園）。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap r6416771（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-list",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "r6416771"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w1066866174",
+   "name": "閱之森公園",
+   "district": "永康區",
+   "address": null,
+   "lat": 23.0238868,
+   "lng": 120.2371383,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場網站有這處的介紹頁。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁寫有山坡溜滑梯",
+     "at": "2026-10-26"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁寫有盪鞦韆",
+     "at": "2026-10-26"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁寫有旋轉座椅",
+     "at": "2026-10-26"
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁寫有大型攀爬網",
+     "at": "2026-10-26"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁寫有遊戲沙坑",
+     "at": "2026-10-26"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁寫有陽光草坪、花語草坪",
+     "at": "2026-10-26"
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁：廁所在旁邊的圖書館內，週一休館時 8:30–16:30 仍開放",
+     "at": "2026-10-26"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "y",
+     "src": "tnnpw-8621124",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫有，並新設遮蔽設施",
+     "at": "2026-10-26"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1066866174（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-8621124",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w1066866174"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w1306283203",
+   "name": "櫻花滯洪池特色公園",
+   "district": "柳營區",
+   "address": null,
+   "lat": 23.27346,
+   "lng": 120.3088253,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場網站有這處的介紹頁。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tnnpw-8621117",
+     "note": "工務局特色遊戲場介紹頁寫有軍艦造型的滑梯",
+     "at": "2026-10-26"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "tnnpw-8621117",
+     "note": "工務局特色遊戲場介紹頁寫有鳥巢盪鞦韆",
+     "at": "2026-10-26"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tnnpw-8621117",
+     "note": "工務局特色遊戲場介紹頁寫有隧道爬網",
+     "at": "2026-10-26"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tnnpw-8621117",
+     "note": "工務局特色遊戲場介紹頁寫有隧道爬網",
+     "at": "2026-10-26"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "n",
+     "src": "tnnpw-8621117",
+     "note": "工務局特色遊戲場介紹頁的「廁所」欄寫無",
+     "at": "2026-10-26"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "y",
+     "src": "tnnpw-8621117",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫有",
+     "at": "2026-10-26"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1306283203（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-8621117",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w1306283203"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w173351759",
+   "name": "新化體育公園",
+   "district": "新化區",
+   "address": null,
+   "lat": 23.0299962,
+   "lng": 120.3057077,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場簡表列為已完工（簡表寫「新化區體育公園」）。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w173351759（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-list",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w173351759"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w183394191",
+   "name": "歸仁運動公園",
+   "district": "歸仁區",
+   "address": null,
+   "lat": 22.9635113,
+   "lng": 120.297615,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場網站有這處的介紹頁。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tnnpw-8621107",
+     "note": "工務局特色遊戲場介紹頁寫有高層樓的旋轉滑梯",
+     "at": "2026-10-26"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "n",
+     "src": "tnnpw-8621107",
+     "note": "工務局特色遊戲場介紹頁的「廁所」欄寫無",
+     "at": "2026-10-26"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "n",
+     "src": "tnnpw-8621107",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫無",
+     "at": "2026-10-26"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w183394191（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-8621107",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w183394191"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w338750464",
+   "name": "玉井運動公園",
+   "district": "玉井區",
+   "address": null,
+   "lat": 23.121417,
+   "lng": 120.4702578,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場簡表列為已完工（簡表寫「玉井區體育公園」）。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w338750464（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-list",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w338750464"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w450230424",
+   "name": "仁德運動公園",
+   "district": "仁德區",
+   "address": null,
+   "lat": 22.9677103,
+   "lng": 120.2585913,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場網站有這處的介紹頁。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁寫有旋轉滑梯、雙座滑梯",
+     "at": "2026-10-26"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁寫有攀爬繩",
+     "at": "2026-10-26"
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁寫有攀岩板",
+     "at": "2026-10-26"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁寫有攀爬網",
+     "at": "2026-10-26"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁寫有仿火車山洞的迷你隧道",
+     "at": "2026-10-26"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁寫有磨石子滑梯沙坑，滑梯底部鋪細沙",
+     "at": "2026-10-26"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "n",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁的「廁所」欄寫無",
+     "at": "2026-10-26"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "n",
+     "src": "tnnpw-8621387",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫無",
+     "at": "2026-10-26"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w450230424（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-8621387",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w450230424"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w551947197",
+   "name": "竹篙厝公園",
+   "district": "東區",
+   "address": null,
+   "lat": 22.9640759,
+   "lng": 120.2374392,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場簡表列為已完工。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w551947197（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-list",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w551947197"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w553521428",
+   "name": "大恩公園",
+   "district": "南區",
+   "address": null,
+   "lat": 22.9666918,
+   "lng": 120.2088496,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場網站有這處的介紹頁。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "y",
+     "src": "tnnpw-8621392",
+     "note": "工務局特色遊戲場介紹頁寫有戰鬥機造型盪鞦韆",
+     "at": "2026-10-26"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tnnpw-8621392",
+     "note": "工務局特色遊戲場介紹頁寫有兒童攀岩場",
+     "at": "2026-10-26"
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tnnpw-8621392",
+     "note": "工務局特色遊戲場介紹頁寫有碉堡造型、有遮蔽的沙坑",
+     "at": "2026-10-26"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "tnnpw-8621392",
+     "note": "工務局特色遊戲場介紹頁寫有熱氣球造型彈跳床",
+     "at": "2026-10-26"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tnnpw-8621392",
+     "note": "工務局特色遊戲場介紹頁：廁所在附近的活動中心內",
+     "at": "2026-10-26"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "y",
+     "src": "tnnpw-8621392",
+     "note": "工務局特色遊戲場介紹頁：沙坑有遮蔭",
+     "at": "2026-10-26"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w553521428（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-8621392",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w553521428"
+    }
+   ],
+   "area_ha": null,
+   "city": "tnn"
+  },
+  {
+   "id": "tnn-osm-w920882298",
+   "name": "健康綠洲公園",
+   "district": "南區",
+   "address": null,
+   "lat": 22.9833534,
+   "lng": 120.1833845,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：工務局特色遊戲場網站有這處的介紹頁。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tnnpw-8621390",
+     "note": "工務局特色遊戲場介紹頁寫有約三層樓高的旋轉溜滑梯",
+     "at": "2026-10-26"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "y",
+     "src": "tnnpw-8621390",
+     "note": "工務局特色遊戲場介紹頁寫有約 25 公尺長的雙軌滑索",
+     "at": "2026-10-26"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tnnpw-8621390",
+     "note": "工務局特色遊戲場介紹頁寫有攀爬網",
+     "at": "2026-10-26"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "tnnpw-8621390",
+     "note": "工務局特色遊戲場介紹頁的「廁所」欄寫有",
+     "at": "2026-10-26"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "y",
+     "src": "tnnpw-8621390",
+     "note": "工務局特色遊戲場介紹頁的「遮蔭」欄寫有",
+     "at": "2026-10-26"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w920882298（leisure=park 範圍中心）",
+   "listing_src": "tnnpw-8621390",
+   "listing_at": "2026-10-26",
+   "official_ref": [
+    {
+     "osm": "w920882298"
     }
    ],
    "area_ha": null,
