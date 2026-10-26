@@ -46538,8 +46538,8 @@
    "name": "希望公園",
    "district": "北區",
    "address": "文成一路-育德街(和緯賓館邊)",
-   "lat": 23.139208,
-   "lng": 120.204672,
+   "lat": 23.0135094,
+   "lng": 120.2046793,
    "size": "M",
    "stay": "30_60",
    "stay_src": "est",
@@ -46789,7 +46789,7 @@
     "note": null,
     "at": null
    },
-   "source_coords": "臺南市公園設施資料（WGS84）",
+   "source_coords": "OpenStreetMap w158821417（leisure=park 範圍中心；開放資料座標有誤，見 coord-fixes.tsv）",
    "official_ref": [
     {
      "tnn_no": 246,
