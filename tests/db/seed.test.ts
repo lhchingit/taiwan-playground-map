@@ -678,14 +678,26 @@ describe('pnpm seed', () => {
     expect(tpe?.places.length).toBeGreaterThan(0);
     const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'tpe'`;
     expect(c?.launched_at).toBeNull();
-    const values = await sql`SELECT DISTINCT value, source_id FROM place_attributes
-                             WHERE place_id LIKE 'tpe-%' ORDER BY 1`;
-    expect(values).toEqual([{ value: 'y', source_id: 'pkl' }]);
+    // 遊具來自公園處設施資料（pkl），或市府兒童遊戲場網站（research.json，只補未知的項目，D20）
+    const values = await sql`SELECT DISTINCT value, source_id = 'pkl' AS official,
+                                    source_id = 'pkl' OR source_id LIKE 'tpepark-%' AS known
+                             FROM place_attributes WHERE place_id LIKE 'tpe-%' ORDER BY 1, 2`;
+    expect(values).toEqual([
+      { value: 'y', official: false, known: true },
+      { value: 'y', official: true, known: true },
+    ]);
+    // 設施資料的場地用它的座標；網站列出、OSM 只畫了公園的用 OSM 公園範圍中心
     const [r] = await sql`
       SELECT count(*)::int AS n,
-             count(*) FILTER (WHERE coord_source NOT LIKE '臺北市公園設施資料%')::int AS other
+             count(*) FILTER (WHERE id LIKE 'tpe-pkl-%'
+                                AND coord_source NOT LIKE '臺北市公園設施資料%')::int AS pkl_other,
+             count(*) FILTER (WHERE id LIKE 'tpe-osm-%'
+                                AND coord_source LIKE 'OpenStreetMap %')::int AS osm,
+             count(*) FILTER (WHERE id NOT LIKE 'tpe-pkl-%' AND id NOT LIKE 'tpe-osm-%')::int AS other
       FROM places WHERE city = 'tpe'`;
-    expect(r).toEqual({ n: tpe!.places.length, other: 0 });
+    const osm = tpe!.places.filter((p) => p.id.startsWith('tpe-osm-')).length;
+    expect(osm).toBeGreaterThan(0);
+    expect(r).toEqual({ n: tpe!.places.length, pkl_other: 0, osm, other: 0 });
   });
 
   it('桃園市（桃園市公園資料）：未上線；廁所、停車只有「有」或未知，沒有「無」', async () => {

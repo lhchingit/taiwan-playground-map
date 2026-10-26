@@ -1,0 +1,5898 @@
+{
+ "verified_at": "2026-10-26",
+ "sources": {
+  "tpepark-7": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 明美公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=7",
+   "kind": "article"
+  },
+  "tpepark-8": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 南昌公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=8",
+   "kind": "article"
+  },
+  "tpepark-10": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 新榮公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=10",
+   "kind": "article"
+  },
+  "tpepark-12": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 港後公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=12",
+   "kind": "article"
+  },
+  "tpepark-13": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 古莊公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=13",
+   "kind": "article"
+  },
+  "tpepark-19": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 仁愛公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=19",
+   "kind": "article"
+  },
+  "tpepark-24": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 龍陣一號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=24",
+   "kind": "article"
+  },
+  "tpepark-26": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 東園公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=26",
+   "kind": "article"
+  },
+  "tpepark-28": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 行善公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=28",
+   "kind": "article"
+  },
+  "tpepark-31": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 松友公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=31",
+   "kind": "article"
+  },
+  "tpepark-33": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 三張里公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=33",
+   "kind": "article"
+  },
+  "tpepark-36": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 久康公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=36",
+   "kind": "article"
+  },
+  "tpepark-37": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 文盛公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=37",
+   "kind": "article"
+  },
+  "tpepark-39": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 忠誠公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=39",
+   "kind": "article"
+  },
+  "tpepark-40": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 新東公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=40",
+   "kind": "article"
+  },
+  "tpepark-41": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 聯成公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=41",
+   "kind": "article"
+  },
+  "tpepark-42": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 和平公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=42",
+   "kind": "article"
+  },
+  "tpepark-44": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 立農公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=44",
+   "kind": "article"
+  },
+  "tpepark-45": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 厚生廣場",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=45",
+   "kind": "article"
+  },
+  "tpepark-46": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 金華公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=46",
+   "kind": "article"
+  },
+  "tpepark-47": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 延壽二號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=47",
+   "kind": "article"
+  },
+  "tpepark-53": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 花博公園美術園區",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=53",
+   "kind": "article"
+  },
+  "tpepark-59": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 崇仰公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=59",
+   "kind": "article"
+  },
+  "tpepark-62": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景行公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=62",
+   "kind": "article"
+  },
+  "tpepark-65": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 仙樹公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=65",
+   "kind": "article"
+  },
+  "tpepark-66": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬芳6號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=66",
+   "kind": "article"
+  },
+  "tpepark-67": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬和2號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=67",
+   "kind": "article"
+  },
+  "tpepark-69": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 永盛公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=69",
+   "kind": "article"
+  },
+  "tpepark-71": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 敬業公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=71",
+   "kind": "article"
+  },
+  "tpepark-73": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 錦安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=73",
+   "kind": "article"
+  },
+  "tpepark-77": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 明水公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=77",
+   "kind": "article"
+  },
+  "tpepark-94": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 湖興公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=94",
+   "kind": "article"
+  },
+  "tpepark-95": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 東湖一號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=95",
+   "kind": "article"
+  },
+  "tpepark-98": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 三犁公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=98",
+   "kind": "article"
+  },
+  "tpepark-103": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 天壽公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=103",
+   "kind": "article"
+  },
+  "tpepark-105": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 仁慈公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=105",
+   "kind": "article"
+  },
+  "tpepark-106": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 永直公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=106",
+   "kind": "article"
+  },
+  "tpepark-108": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 安泰公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=108",
+   "kind": "article"
+  },
+  "tpepark-109": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 安祥公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=109",
+   "kind": "article"
+  },
+  "tpepark-113": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 新興公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=113",
+   "kind": "article"
+  },
+  "tpepark-118": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 永春崗公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=118",
+   "kind": "article"
+  },
+  "tpepark-121": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 長安公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=121",
+   "kind": "article"
+  },
+  "tpepark-123": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 龍江公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=123",
+   "kind": "article"
+  },
+  "tpepark-124": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中430公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=124",
+   "kind": "article"
+  },
+  "tpepark-125": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 文德1號綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=125",
+   "kind": "article"
+  },
+  "tpepark-126": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 南興公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=126",
+   "kind": "article"
+  },
+  "tpepark-128": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 豐年公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=128",
+   "kind": "article"
+  },
+  "tpepark-130": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 虎嘯公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=130",
+   "kind": "article"
+  },
+  "tpepark-132": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 松隆綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=132",
+   "kind": "article"
+  },
+  "tpepark-133": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 西園公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=133",
+   "kind": "article"
+  },
+  "tpepark-137": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 健康公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=137",
+   "kind": "article"
+  },
+  "tpepark-141": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 知行公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=141",
+   "kind": "article"
+  },
+  "tpepark-144": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 撫遠公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=144",
+   "kind": "article"
+  },
+  "tpepark-154": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 大安森林公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=154",
+   "kind": "article"
+  },
+  "tpepark-156": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 和平青草園公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=156",
+   "kind": "article"
+  },
+  "tpepark-157": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 七虎公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=157",
+   "kind": "article"
+  },
+  "tpepark-161": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 西松公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=161",
+   "kind": "article"
+  },
+  "tpepark-169": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 復源公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=169",
+   "kind": "article"
+  },
+  "tpepark-174": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 桃源公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=174",
+   "kind": "article"
+  },
+  "tpepark-178": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 樟興公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=178",
+   "kind": "article"
+  },
+  "tpepark-182": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 保儀公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=182",
+   "kind": "article"
+  },
+  "tpepark-188": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 永康公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=188",
+   "kind": "article"
+  },
+  "tpepark-195": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 敦親公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=195",
+   "kind": "article"
+  },
+  "tpepark-197": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中全公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=197",
+   "kind": "article"
+  },
+  "tpepark-199": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 群賢公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=199",
+   "kind": "article"
+  },
+  "tpepark-204": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中428公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=204",
+   "kind": "article"
+  },
+  "tpepark-207": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 碧山公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=207",
+   "kind": "article"
+  },
+  "tpepark-209": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 民生公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=209",
+   "kind": "article"
+  },
+  "tpepark-212": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 黎孝公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=212",
+   "kind": "article"
+  },
+  "tpepark-221": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 福林公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=221",
+   "kind": "article"
+  },
+  "tpepark-222": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 虎林公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=222",
+   "kind": "article"
+  },
+  "tpepark-224": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 磺港公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=224",
+   "kind": "article"
+  },
+  "tpepark-226": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 富錦一號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=226",
+   "kind": "article"
+  },
+  "tpepark-227": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 通化公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=227",
+   "kind": "article"
+  },
+  "tpepark-229": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 興旺公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=229",
+   "kind": "article"
+  },
+  "tpepark-230": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 湖元公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=230",
+   "kind": "article"
+  },
+  "tpepark-235": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 成功公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=235",
+   "kind": "article"
+  },
+  "tpepark-237": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 龍圖公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=237",
+   "kind": "article"
+  },
+  "tpepark-241": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景勤2號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=241",
+   "kind": "article"
+  },
+  "tpepark-243": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 連雲公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=243",
+   "kind": "article"
+  },
+  "tpepark-244": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 龍門公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=244",
+   "kind": "article"
+  },
+  "tpepark-248": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 敦安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=248",
+   "kind": "article"
+  },
+  "tpepark-252": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 民輝公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=252",
+   "kind": "article"
+  },
+  "tpepark-253": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 敦化公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=253",
+   "kind": "article"
+  },
+  "tpepark-254": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 德安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=254",
+   "kind": "article"
+  },
+  "tpepark-257": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景華公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=257",
+   "kind": "article"
+  },
+  "tpepark-268": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 文化3號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=268",
+   "kind": "article"
+  },
+  "tpepark-270": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 龍陣二號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=270",
+   "kind": "article"
+  },
+  "tpepark-275": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景福公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=275",
+   "kind": "article"
+  },
+  "tpepark-278": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景仁公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=278",
+   "kind": "article"
+  },
+  "tpepark-281": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 錦北公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=281",
+   "kind": "article"
+  },
+  "tpepark-287": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 建成公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=287",
+   "kind": "article"
+  },
+  "tpepark-290": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 福志公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=290",
+   "kind": "article"
+  },
+  "tpepark-294": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 名山公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=294",
+   "kind": "article"
+  },
+  "tpepark-297": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 南港公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=297",
+   "kind": "article"
+  },
+  "tpepark-298": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 全安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=298",
+   "kind": "article"
+  },
+  "tpepark-299": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 榮華公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=299",
+   "kind": "article"
+  },
+  "tpepark-300": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 四維公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=300",
+   "kind": "article"
+  },
+  "tpepark-304": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 迪化公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=304",
+   "kind": "article"
+  },
+  "tpepark-306": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 培英公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=306",
+   "kind": "article"
+  },
+  "tpepark-311": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 老松公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=311",
+   "kind": "article"
+  },
+  "tpepark-313": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 樹德公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=313",
+   "kind": "article"
+  },
+  "tpepark-317": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 後港公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=317",
+   "kind": "article"
+  },
+  "tpepark-319": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 民權公園C",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=319",
+   "kind": "article"
+  },
+  "tpepark-320": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 錦德公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=320",
+   "kind": "article"
+  },
+  "tpepark-322": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 居安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=322",
+   "kind": "article"
+  },
+  "tpepark-330": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 同德公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=330",
+   "kind": "article"
+  },
+  "tpepark-333": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 華聲公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=333",
+   "kind": "article"
+  },
+  "tpepark-336": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 民榮公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=336",
+   "kind": "article"
+  },
+  "tpepark-338": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 螢橋公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=338",
+   "kind": "article"
+  },
+  "tpepark-339": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 春光公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=339",
+   "kind": "article"
+  },
+  "tpepark-341": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景化公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=341",
+   "kind": "article"
+  },
+  "tpepark-345": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 新龍公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=345",
+   "kind": "article"
+  },
+  "tpepark-346": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 敦中公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=346",
+   "kind": "article"
+  },
+  "tpepark-348": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 木南公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=348",
+   "kind": "article"
+  },
+  "tpepark-349": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 原野運動公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=349",
+   "kind": "article"
+  },
+  "tpepark-350": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬和3號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=350",
+   "kind": "article"
+  },
+  "tpepark-360": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 奇岩1號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=360",
+   "kind": "article"
+  },
+  "tpepark-362": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 溫州公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=362",
+   "kind": "article"
+  },
+  "tpepark-363": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 衛理公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=363",
+   "kind": "article"
+  },
+  "tpepark-367": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 天福2號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=367",
+   "kind": "article"
+  },
+  "tpepark-376": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 敦仁公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=376",
+   "kind": "article"
+  },
+  "tpepark-381": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 蘭州公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=381",
+   "kind": "article"
+  },
+  "tpepark-382": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 明德公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=382",
+   "kind": "article"
+  },
+  "tpepark-384": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 永昌公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=384",
+   "kind": "article"
+  },
+  "tpepark-386": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 糖廍文化園區公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=386",
+   "kind": "article"
+  },
+  "tpepark-399": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 忠順公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=399",
+   "kind": "article"
+  },
+  "tpepark-411": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬芳12號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=411",
+   "kind": "article"
+  },
+  "tpepark-414": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 辛亥一號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=414",
+   "kind": "article"
+  },
+  "tpepark-416": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 社子公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=416",
+   "kind": "article"
+  },
+  "tpepark-419": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 磺溪公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=419",
+   "kind": "article"
+  },
+  "tpepark-420": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 文光公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=420",
+   "kind": "article"
+  },
+  "tpepark-421": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 進安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=421",
+   "kind": "article"
+  },
+  "tpepark-424": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 安湖三號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=424",
+   "kind": "article"
+  },
+  "tpepark-428": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 瑞光公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=428",
+   "kind": "article"
+  },
+  "tpepark-431": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 林森公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=431",
+   "kind": "article"
+  },
+  "tpepark-433": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 五分公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=433",
+   "kind": "article"
+  },
+  "tpepark-434": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 新壽公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=434",
+   "kind": "article"
+  },
+  "tpepark-437": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 伊通公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=437",
+   "kind": "article"
+  },
+  "tpepark-439": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 天和公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=439",
+   "kind": "article"
+  },
+  "tpepark-442": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 玉泉公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=442",
+   "kind": "article"
+  },
+  "tpepark-444": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 寧安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=444",
+   "kind": "article"
+  },
+  "tpepark-446": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中庸1號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=446",
+   "kind": "article"
+  },
+  "tpepark-451": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 東豐公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=451",
+   "kind": "article"
+  },
+  "tpepark-454": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 眷村文化公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=454",
+   "kind": "article"
+  },
+  "tpepark-460": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 合成8號綠園綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=460",
+   "kind": "article"
+  },
+  "tpepark-462": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 慶城公園 A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=462",
+   "kind": "article"
+  },
+  "tpepark-463": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬盛公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=463",
+   "kind": "article"
+  },
+  "tpepark-465": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中央藝文公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=465",
+   "kind": "article"
+  },
+  "tpepark-466": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 湖山六號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=466",
+   "kind": "article"
+  },
+  "tpepark-468": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 美善公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=468",
+   "kind": "article"
+  },
+  "tpepark-472": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 江寧公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=472",
+   "kind": "article"
+  },
+  "tpepark-475": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景平公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=475",
+   "kind": "article"
+  },
+  "tpepark-476": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 和安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=476",
+   "kind": "article"
+  },
+  "tpepark-479": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 軍功綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=479",
+   "kind": "article"
+  },
+  "tpepark-482": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 樂康公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=482",
+   "kind": "article"
+  },
+  "tpepark-485": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 木新公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=485",
+   "kind": "article"
+  },
+  "tpepark-488": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 碧湖公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=488",
+   "kind": "article"
+  },
+  "tpepark-498": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 金瑞公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=498",
+   "kind": "article"
+  },
+  "tpepark-500": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 光明公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=500",
+   "kind": "article"
+  },
+  "tpepark-505": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬芳11號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=505",
+   "kind": "article"
+  },
+  "tpepark-506": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 富民生態公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=506",
+   "kind": "article"
+  },
+  "tpepark-519": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中興公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=519",
+   "kind": "article"
+  },
+  "tpepark-523": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 丹鳳公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=523",
+   "kind": "article"
+  },
+  "tpepark-526": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 海光公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=526",
+   "kind": "article"
+  },
+  "tpepark-529": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 晴光公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=529",
+   "kind": "article"
+  },
+  "tpepark-534": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景豐公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=534",
+   "kind": "article"
+  },
+  "tpepark-535": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬芳4號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=535",
+   "kind": "article"
+  },
+  "tpepark-539": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 三重世貿公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=539",
+   "kind": "article"
+  },
+  "tpepark-548": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 安東公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=548",
+   "kind": "article"
+  },
+  "tpepark-549": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 光信公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=549",
+   "kind": "article"
+  },
+  "tpepark-554": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 四平公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=554",
+   "kind": "article"
+  },
+  "tpepark-556": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 至聖公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=556",
+   "kind": "article"
+  },
+  "tpepark-557": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 博嘉公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=557",
+   "kind": "article"
+  },
+  "tpepark-563": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 象山公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=563",
+   "kind": "article"
+  },
+  "tpepark-564": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 水景公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=564",
+   "kind": "article"
+  },
+  "tpepark-566": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 榮光公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=566",
+   "kind": "article"
+  },
+  "tpepark-570": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 吉祥公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=570",
+   "kind": "article"
+  },
+  "tpepark-571": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 永吉公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=571",
+   "kind": "article"
+  },
+  "tpepark-575": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景勤1號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=575",
+   "kind": "article"
+  },
+  "tpepark-577": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 興豐公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=577",
+   "kind": "article"
+  },
+  "tpepark-578": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 仙岩公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=578",
+   "kind": "article"
+  },
+  "tpepark-579": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 石牌公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=579",
+   "kind": "article"
+  },
+  "tpepark-580": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬芳10號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=580",
+   "kind": "article"
+  },
+  "tpepark-585": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 建民公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=585",
+   "kind": "article"
+  },
+  "tpepark-586": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 天母公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=586",
+   "kind": "article"
+  },
+  "tpepark-588": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 東湖四號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=588",
+   "kind": "article"
+  },
+  "tpepark-589": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 樟林公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=589",
+   "kind": "article"
+  },
+  "tpepark-590": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 保德公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=590",
+   "kind": "article"
+  },
+  "tpepark-592": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 朱昌公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=592",
+   "kind": "article"
+  },
+  "tpepark-593": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 週美綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=593",
+   "kind": "article"
+  },
+  "tpepark-594": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 綠堤公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=594",
+   "kind": "article"
+  },
+  "tpepark-601": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中研公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=601",
+   "kind": "article"
+  },
+  "tpepark-603": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 四分綠地A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=603",
+   "kind": "article"
+  },
+  "tpepark-604": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 北投3號廣場",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=604",
+   "kind": "article"
+  },
+  "tpepark-612": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 西康二號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=612",
+   "kind": "article"
+  },
+  "tpepark-614": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 大安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=614",
+   "kind": "article"
+  },
+  "tpepark-620": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 嘉興公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=620",
+   "kind": "article"
+  },
+  "tpepark-621": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 東和公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=621",
+   "kind": "article"
+  },
+  "tpepark-624": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 中原公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=624",
+   "kind": "article"
+  },
+  "tpepark-629": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 興福公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=629",
+   "kind": "article"
+  },
+  "tpepark-630": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 玉成公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=630",
+   "kind": "article"
+  },
+  "tpepark-631": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 法治公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=631",
+   "kind": "article"
+  },
+  "tpepark-637": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 櫻花崗公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=637",
+   "kind": "article"
+  },
+  "tpepark-640": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 東新綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=640",
+   "kind": "article"
+  },
+  "tpepark-641": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬芳9號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=641",
+   "kind": "article"
+  },
+  "tpepark-642": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 誠安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=642",
+   "kind": "article"
+  },
+  "tpepark-643": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 西安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=643",
+   "kind": "article"
+  },
+  "tpepark-644": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 附中公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=644",
+   "kind": "article"
+  },
+  "tpepark-647": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 榮星花園公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=647",
+   "kind": "article"
+  },
+  "tpepark-650": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 延壽三號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=650",
+   "kind": "article"
+  },
+  "tpepark-653": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 瑠公公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=653",
+   "kind": "article"
+  },
+  "tpepark-655": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 士林89號綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=655",
+   "kind": "article"
+  },
+  "tpepark-659": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 民有三號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=659",
+   "kind": "article"
+  },
+  "tpepark-660": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 復興公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=660",
+   "kind": "article"
+  },
+  "tpepark-662": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 興國公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=662",
+   "kind": "article"
+  },
+  "tpepark-664": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 富台公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=664",
+   "kind": "article"
+  },
+  "tpepark-671": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 四育公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=671",
+   "kind": "article"
+  },
+  "tpepark-672": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 忠義公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=672",
+   "kind": "article"
+  },
+  "tpepark-676": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 致遠公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=676",
+   "kind": "article"
+  },
+  "tpepark-685": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 前港公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=685",
+   "kind": "article"
+  },
+  "tpepark-688": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 港墘公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=688",
+   "kind": "article"
+  },
+  "tpepark-692": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 新陽綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=692",
+   "kind": "article"
+  },
+  "tpepark-693": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 木榮公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=693",
+   "kind": "article"
+  },
+  "tpepark-700": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 克強公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=700",
+   "kind": "article"
+  },
+  "tpepark-701": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 振興公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=701",
+   "kind": "article"
+  },
+  "tpepark-705": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 大學公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=705",
+   "kind": "article"
+  },
+  "tpepark-709": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 五常公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=709",
+   "kind": "article"
+  },
+  "tpepark-710": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景美運動公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=710",
+   "kind": "article"
+  },
+  "tpepark-713": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 興安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=713",
+   "kind": "article"
+  },
+  "tpepark-715": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 承德公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=715",
+   "kind": "article"
+  },
+  "tpepark-719": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 婦聯公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=719",
+   "kind": "article"
+  },
+  "tpepark-720": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 敦煌2號綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=720",
+   "kind": "article"
+  },
+  "tpepark-721": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 瑞安公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=721",
+   "kind": "article"
+  },
+  "tpepark-723": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 稻香公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=723",
+   "kind": "article"
+  },
+  "tpepark-725": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬有2號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=725",
+   "kind": "article"
+  },
+  "tpepark-726": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 試院公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=726",
+   "kind": "article"
+  },
+  "tpepark-728": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 泰順公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=728",
+   "kind": "article"
+  },
+  "tpepark-732": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 康寧公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=732",
+   "kind": "article"
+  },
+  "tpepark-735": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 華江八號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=735",
+   "kind": "article"
+  },
+  "tpepark-736": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 清溪綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=736",
+   "kind": "article"
+  },
+  "tpepark-737": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 福順公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=737",
+   "kind": "article"
+  },
+  "tpepark-740": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 景聯廣場",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=740",
+   "kind": "article"
+  },
+  "tpepark-745": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 振華公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=745",
+   "kind": "article"
+  },
+  "tpepark-747": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 榮富公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=747",
+   "kind": "article"
+  },
+  "tpepark-748": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 一江公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=748",
+   "kind": "article"
+  },
+  "tpepark-750": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 五分埔公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=750",
+   "kind": "article"
+  },
+  "tpepark-752": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 延吉公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=752",
+   "kind": "article"
+  },
+  "tpepark-753": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 椰城公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=753",
+   "kind": "article"
+  },
+  "tpepark-756": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 興泰公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=756",
+   "kind": "article"
+  },
+  "tpepark-760": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 吉利公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=760",
+   "kind": "article"
+  },
+  "tpepark-763": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 潭美公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=763",
+   "kind": "article"
+  },
+  "tpepark-764": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 齊東公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=764",
+   "kind": "article"
+  },
+  "tpepark-765": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 康樂綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=765",
+   "kind": "article"
+  },
+  "tpepark-766": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 壽德公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=766",
+   "kind": "article"
+  },
+  "tpepark-768": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 雅祥公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=768",
+   "kind": "article"
+  },
+  "tpepark-770": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 樟樹公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=770",
+   "kind": "article"
+  },
+  "tpepark-775": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 柳鄉公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=775",
+   "kind": "article"
+  },
+  "tpepark-778": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬年2號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=778",
+   "kind": "article"
+  },
+  "tpepark-779": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 臨江公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=779",
+   "kind": "article"
+  },
+  "tpepark-781": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 光輝公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=781",
+   "kind": "article"
+  },
+  "tpepark-783": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 福中公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=783",
+   "kind": "article"
+  },
+  "tpepark-789": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 成德綠地",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=789",
+   "kind": "article"
+  },
+  "tpepark-790": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 新新公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=790",
+   "kind": "article"
+  },
+  "tpepark-796": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 松基公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=796",
+   "kind": "article"
+  },
+  "tpepark-797": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 軟橋公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=797",
+   "kind": "article"
+  },
+  "tpepark-813": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 孝德公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=813",
+   "kind": "article"
+  },
+  "tpepark-818": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 大港墘公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=818",
+   "kind": "article"
+  },
+  "tpepark-837": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 金山公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=837",
+   "kind": "article"
+  },
+  "tpepark-838": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 國順公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=838",
+   "kind": "article"
+  },
+  "tpepark-843": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 金杭公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=843",
+   "kind": "article"
+  },
+  "tpepark-844": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 榮華公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=844",
+   "kind": "article"
+  },
+  "tpepark-859": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 辛亥生態公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=859",
+   "kind": "article"
+  },
+  "tpepark-867": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 福星公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=867",
+   "kind": "article"
+  },
+  "tpepark-871": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 洲美公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=871",
+   "kind": "article"
+  },
+  "tpepark-875": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 北投2號公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=875",
+   "kind": "article"
+  },
+  "tpepark-879": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 長安公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=879",
+   "kind": "article"
+  },
+  "tpepark-880": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 青年公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=880",
+   "kind": "article"
+  },
+  "tpepark-881": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 青年公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=881",
+   "kind": "article"
+  },
+  "tpepark-883": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 松德公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=883",
+   "kind": "article"
+  },
+  "tpepark-889": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 興隆公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=889",
+   "kind": "article"
+  },
+  "tpepark-891": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 木柵公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=891",
+   "kind": "article"
+  },
+  "tpepark-893": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 萬有1號公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=893",
+   "kind": "article"
+  },
+  "tpepark-895": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 華興公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=895",
+   "kind": "article"
+  },
+  "tpepark-902": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 蘭興公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=902",
+   "kind": "article"
+  },
+  "tpepark-909": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 成功公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=909",
+   "kind": "article"
+  },
+  "tpepark-913": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 二二八和平公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=913",
+   "kind": "article"
+  },
+  "tpepark-914": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 二二八和平公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=914",
+   "kind": "article"
+  },
+  "tpepark-915": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 牯嶺公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=915",
+   "kind": "article"
+  },
+  "tpepark-920": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 芝山公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=920",
+   "kind": "article"
+  },
+  "tpepark-932": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 德鄰公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=932",
+   "kind": "article"
+  },
+  "tpepark-936": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 慶城公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=936",
+   "kind": "article"
+  },
+  "tpepark-941": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 九如綠地C",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=941",
+   "kind": "article"
+  },
+  "tpepark-947": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 福德綠地B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=947",
+   "kind": "article"
+  },
+  "tpepark-948": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 福德綠地A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=948",
+   "kind": "article"
+  },
+  "tpepark-949": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 基隆河沖洗溝加蓋綠地A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=949",
+   "kind": "article"
+  },
+  "tpepark-950": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 基隆河沖洗溝加蓋綠地B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=950",
+   "kind": "article"
+  },
+  "tpepark-951": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 九如綠地A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=951",
+   "kind": "article"
+  },
+  "tpepark-952": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 四分綠地B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=952",
+   "kind": "article"
+  },
+  "tpepark-953": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 向陽綠地A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=953",
+   "kind": "article"
+  },
+  "tpepark-978": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 樟新公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=978",
+   "kind": "article"
+  },
+  "tpepark-979": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 樟新公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=979",
+   "kind": "article"
+  },
+  "tpepark-980": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 山仔后公園",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=980",
+   "kind": "article"
+  },
+  "tpepark-1022": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 美崙公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=1022",
+   "kind": "article"
+  },
+  "tpepark-1023": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 美崙公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=1023",
+   "kind": "article"
+  },
+  "tpepark-1061": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 瑠公圳公園B",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=1061",
+   "kind": "article"
+  },
+  "tpepark-1063": {
+   "label": "政府網站：臺北市公園路燈工程管理處 兒童遊戲場 瑠公圳公園A",
+   "url": "https://parks.gov.taipei/playground/content/m102.php?sid=1063",
+   "kind": "article"
+  }
+ },
+ "parks": {
+  "r10279463": [
+   "tpepark-859",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "r16410525": [
+   "tpepark-662",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "r6958707": [
+   "tpepark-529",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w1158421218": [
+   "tpepark-867",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w1372611061": [
+   "tpepark-980",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w207150141": [
+   "tpepark-612",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w229733673": [
+   "tpepark-13",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w234586708": [
+   "tpepark-241",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w244115936": [
+   "tpepark-428",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w253207984": [
+   "tpepark-506",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w257924458": [
+   "tpepark-444",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w259080204": [
+   "tpepark-221",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w287217253": [
+   "tpepark-137",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w303852587": [
+   "tpepark-254",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w318173776": [
+   "tpepark-766",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w333206919": [
+   "tpepark-650",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w346730239": [
+   "tpepark-244",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w375180591": [
+   "tpepark-585",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w377325626": [
+   "tpepark-797",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w423746100": [
+   "tpepark-756",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w572764804": [
+   "tpepark-700",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w810136497": [
+   "tpepark-655",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w855924397": [
+   "tpepark-949",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ],
+  "w910296940": [
+   "tpepark-871",
+   "市府兒童遊戲場網站有這處的介紹頁",
+   "2026-10-26"
+  ]
+ },
+ "aka": {
+  "tpe-osm-w855924397": [
+   "tpepark-949",
+   "市府兒童遊戲場網站稱為「基隆河沖洗溝加蓋綠地A」「基隆河沖洗溝加蓋綠地B」"
+  ]
+ },
+ "places": {
+  "tpe-pkl-002": {
+   "spinner": [
+    "y",
+    "tpepark-883",
+    "市府兒童遊戲場網站的遊具列有大轉轉杯",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-883",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-005": {
+   "seesaw": [
+    "y",
+    "tpepark-664",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-006": {
+   "toilet": [
+    "y",
+    "tpepark-118",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-010": {
+   "spinner": [
+    "y",
+    "tpepark-41",
+    "市府兒童遊戲場網站的遊具列有旋轉飛輪",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-41",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-41",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-012": {
+   "spinner": [
+    "y",
+    "tpepark-77",
+    "市府兒童遊戲場網站的遊具列有旋轉杯、衛星旋轉設施",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-77",
+    "市府兒童遊戲場網站的遊具列有圈圈平衡",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-77",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-77",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-013": {
+   "spinner": [
+    "y",
+    "tpepark-601",
+    "市府兒童遊戲場網站的遊具列有旋轉杯、旋轉飛輪",
+    "2026-10-26"
+   ],
+   "sand_table": [
+    "y",
+    "tpepark-601",
+    "市府兒童遊戲場網站的遊具列有沙坑遊戲桌",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-601",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-015": {
+   "seesaw": [
+    "y",
+    "tpepark-563",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "climbing_wall": [
+    "y",
+    "tpepark-563",
+    "市府兒童遊戲場網站的遊具列有攀岩牆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-563",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-563",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "nursing": [
+    "y",
+    "tpepark-563",
+    "市府兒童遊戲場網站的周邊設施列有哺乳室、育嬰室",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-016": {
+   "climbing": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的遊具列有旋轉杯、無障礙旋轉盤",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "inclusive": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的遊具列有無障礙鞦韆、無障礙旋轉盤",
+    "2026-10-26"
+   ],
+   "music": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的遊具列有音樂球、叮噹管、歡樂鼓",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-53",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-018": {
+   "balance": [
+    "y",
+    "tpepark-431",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-431",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-431",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-431",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-020": {
+   "spinner": [
+    "y",
+    "tpepark-287",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-287",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-287",
+    "市府兒童遊戲場網站的遊具列有滾輪滑梯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-021": {
+   "slide": [
+    "y",
+    "tpepark-442",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-442",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-442",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-029": {
+   "spring_rider": [
+    "y",
+    "tpepark-69",
+    "市府兒童遊戲場網站的遊具列有搖搖馬",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-031": {
+   "swing": [
+    "y",
+    "tpepark-319",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-319",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-033": {
+   "swing": [
+    "y",
+    "tpepark-209",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-209",
+    "市府兒童遊戲場網站的遊具列有旋轉球椅",
+    "2026-10-26"
+   ],
+   "trampoline": [
+    "y",
+    "tpepark-209",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-040": {
+   "bars": [
+    "y",
+    "tpepark-838",
+    "市府兒童遊戲場網站的遊具列有MONKEY BAR",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-838",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-838",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-838",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-041": {
+   "swing": [
+    "y",
+    "tpepark-341",
+    "市府兒童遊戲場網站的遊具列有行動補給站鞦韆",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-341",
+    "市府兒童遊戲場網站的遊具列有太空基地滑梯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-042": {
+   "climbing": [
+    "y",
+    "tpepark-313",
+    "市府兒童遊戲場網站的遊具列有攀爬架",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-313",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-044": {
+   "swing": [
+    "y",
+    "tpepark-556",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-045": {
+   "spring_rider": [
+    "y",
+    "tpepark-304",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-047": {
+   "seesaw": [
+    "y",
+    "tpepark-381",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-381",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-381",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-048": {
+   "seesaw": [
+    "y",
+    "tpepark-932",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-051": {
+   "seesaw": [
+    "y",
+    "tpepark-421",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-421",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-054": {
+   "seesaw": [
+    "y",
+    "tpepark-592",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-592",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-055": {
+   "spring_rider": [
+    "y",
+    "tpepark-713",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-057": {
+   "seesaw": [
+    "y",
+    "tpepark-624",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-060": {
+   "spring_rider": [
+    "y",
+    "tpepark-437",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-437",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-064": {
+   "spinner": [
+    "y",
+    "tpepark-434",
+    "市府兒童遊戲場網站的遊具列有旋轉椅",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-434",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-067": {
+   "toilet": [
+    "y",
+    "tpepark-123",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-068": {
+   "seesaw": [
+    "y",
+    "tpepark-472",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-069": {
+   "seesaw": [
+    "y",
+    "tpepark-281",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-072": {
+   "toilet": [
+    "y",
+    "tpepark-554",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-073": {
+   "slide": [
+    "y",
+    "tpepark-748",
+    "市府兒童遊戲場網站的遊具列有磨石子滑梯",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-748",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-075": {
+   "climbing": [
+    "y",
+    "tpepark-204",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-077": {
+   "balance": [
+    "y",
+    "tpepark-106",
+    "市府兒童遊戲場網站的遊具列有跳樁組1組",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-106",
+    "市府兒童遊戲場網站的遊具列有攀爬組合滑梯",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-106",
+    "市府兒童遊戲場網站的遊具列有攀爬組合滑梯",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-106",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-078": {
+   "spring_rider": [
+    "y",
+    "tpepark-71",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-082": {
+   "climbing": [
+    "y",
+    "tpepark-306",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-083": {
+   "seesaw": [
+    "y",
+    "tpepark-124",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-124",
+    "市府兒童遊戲場網站的遊具列有樹果造型滑梯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-085": {
+   "spinner": [
+    "y",
+    "tpepark-647",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ],
+   "bars": [
+    "y",
+    "tpepark-647",
+    "市府兒童遊戲場網站的遊具列有環型天梯無障礙上肢設施",
+    "2026-10-26"
+   ],
+   "inclusive": [
+    "y",
+    "tpepark-647",
+    "市府兒童遊戲場網站的遊具列有環型天梯無障礙上肢設施",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-647",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-647",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-647",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-647",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-088": {
+   "climbing": [
+    "y",
+    "tpepark-659",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-089": {
+   "swing": [
+    "y",
+    "tpepark-226",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-093": {
+   "seesaw": [
+    "y",
+    "tpepark-144",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-094": {
+   "shade": [
+    "y",
+    "tpepark-40",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-095": {
+   "shade": [
+    "y",
+    "tpepark-47",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-096": {
+   "spinner": [
+    "y",
+    "tpepark-462",
+    "市府兒童遊戲場網站的遊具列有共融式旋轉碗碟",
+    "2026-10-26"
+   ],
+   "inclusive": [
+    "y",
+    "tpepark-462",
+    "市府兒童遊戲場網站的遊具列有共融式旋轉碗碟",
+    "2026-10-26"
+   ],
+   "bars": [
+    "y",
+    "tpepark-462",
+    "市府兒童遊戲場網站的遊具列有曲型單槓",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-936",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-936",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-099": {
+   "shade": [
+    "y",
+    "tpepark-161",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-102": {
+   "seesaw": [
+    "y",
+    "tpepark-570",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-104": {
+   "swing": [
+    "y",
+    "tpepark-346",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-106": {
+   "seesaw": [
+    "y",
+    "tpepark-253",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-253",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-108": {
+   "slide": [
+    "y",
+    "tpepark-169",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-169",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-112": {
+   "shade": [
+    "y",
+    "tpepark-672",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-113": {
+   "sand_table": [
+    "y",
+    "tpepark-44",
+    "市府兒童遊戲場網站的遊具列有戲沙坑遊戲桌",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-44",
+    "市府兒童遊戲場網站的遊具列有旋轉台、旋轉飛輪",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-44",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-44",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-44",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-114": {
+   "slide": [
+    "y",
+    "tpepark-948",
+    "市府兒童遊戲場網站的遊具列有特色磨石子滑梯",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-947",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-947",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-115": {
+   "spinner": [
+    "y",
+    "tpepark-1022",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-1022",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-1022",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-1023",
+    "市府兒童遊戲場網站的遊具列有搖搖馬",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-1023",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-117": {
+   "shade": [
+    "y",
+    "tpepark-174",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-118": {
+   "seesaw": [
+    "y",
+    "tpepark-723",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-723",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-119": {
+   "spinner": [
+    "y",
+    "tpepark-128",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-128",
+    "市府兒童遊戲場網站的遊具列有搖搖馬",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-128",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-121": {
+   "spinner": [
+    "y",
+    "tpepark-660",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-660",
+    "市府兒童遊戲場網站的遊具列有平衡木",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-660",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-122": {
+   "shade": [
+    "y",
+    "tpepark-446",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-123": {
+   "zipline": [
+    "y",
+    "tpepark-879",
+    "市府兒童遊戲場網站的遊具列有雙滑軌",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-879",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-121",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-121",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-124": {
+   "shade": [
+    "y",
+    "tpepark-523",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-523",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-125": {
+   "nest_swing": [
+    "y",
+    "tpepark-224",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "sandpit": [
+    "y",
+    "tpepark-224",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-224",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-126": {
+   "balance": [
+    "y",
+    "tpepark-621",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-621",
+    "市府兒童遊戲場網站的遊具列有特色溜滑梯",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-621",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-128": {
+   "spinner": [
+    "y",
+    "tpepark-299",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-299",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "zipline": [
+    "y",
+    "tpepark-844",
+    "市府兒童遊戲場網站的遊具列有雙滑軌",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-129": {
+   "spring_rider": [
+    "y",
+    "tpepark-676",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-676",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-676",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-130": {
+   "seesaw": [
+    "y",
+    "tpepark-419",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-419",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-131": {
+   "sandpit": [
+    "y",
+    "tpepark-745",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-132": {
+   "shade": [
+    "y",
+    "tpepark-566",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-133": {
+   "shade": [
+    "y",
+    "tpepark-760",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-134": {
+   "nest_swing": [
+    "y",
+    "tpepark-330",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "trampoline": [
+    "y",
+    "tpepark-330",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-330",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-330",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-330",
+    "市府兒童遊戲場網站的遊具列有磨石子滑梯",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-330",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-137": {
+   "seesaw": [
+    "y",
+    "tpepark-141",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-141",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-138": {
+   "spring_rider": [
+    "y",
+    "tpepark-875",
+    "市府兒童遊戲場網站的遊具列有搖搖馬",
+    "2026-10-26"
+   ],
+   "trampoline": [
+    "y",
+    "tpepark-875",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-875",
+    "市府兒童遊戲場網站的遊具列有平衡木",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-875",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-875",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-139": {
+   "shade": [
+    "y",
+    "tpepark-719",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-140": {
+   "shade": [
+    "y",
+    "tpepark-593",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-593",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-142": {
+   "seesaw": [
+    "y",
+    "tpepark-579",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-579",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-579",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-143": {
+   "seesaw": [
+    "y",
+    "tpepark-59",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-59",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-144": {
+   "trampoline": [
+    "y",
+    "tpepark-157",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-157",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-157",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-157",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-145": {
+   "shade": [
+    "y",
+    "tpepark-382",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-148": {
+   "shade": [
+    "y",
+    "tpepark-637",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-149": {
+   "tunnel": [
+    "y",
+    "tpepark-747",
+    "市府兒童遊戲場網站的遊具列有木隧道",
+    "2026-10-26"
+   ],
+   "trampoline": [
+    "y",
+    "tpepark-747",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-747",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-747",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-747",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-150": {
+   "spinner": [
+    "y",
+    "tpepark-701",
+    "市府兒童遊戲場網站的遊具列有旋轉桶椅",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-701",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-151": {
+   "seesaw": [
+    "y",
+    "tpepark-268",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-268",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-152": {
+   "shade": [
+    "y",
+    "tpepark-113",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-113",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-153": {
+   "sandpit": [
+    "y",
+    "tpepark-360",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-360",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-360",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-360",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-154": {
+   "sandpit": [
+    "y",
+    "tpepark-586",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ],
+   "trampoline": [
+    "y",
+    "tpepark-586",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-586",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-586",
+    "市府兒童遊戲場網站的遊具列有旋轉組",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-586",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-586",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-586",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-155": {
+   "slide": [
+    "y",
+    "tpepark-439",
+    "市府兒童遊戲場網站的遊具列有特色溜滑梯",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-439",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-156": {
+   "seesaw": [
+    "y",
+    "tpepark-920",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-920",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-920",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-157": {
+   "seesaw": [
+    "y",
+    "tpepark-416",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-416",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-416",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-158": {
+   "spinner": [
+    "y",
+    "tpepark-526",
+    "市府兒童遊戲場網站的遊具列有旋轉台、旋轉陀螺",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-526",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-526",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-159": {
+   "slide": [
+    "y",
+    "tpepark-685",
+    "市府兒童遊戲場網站的遊具列有天空樹溜滑梯",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-685",
+    "市府兒童遊戲場網站的遊具列有X型翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-685",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-160": {
+   "nest_swing": [
+    "y",
+    "tpepark-902",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-902",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "sand_table": [
+    "y",
+    "tpepark-902",
+    "市府兒童遊戲場網站的遊具列有玩沙台",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-902",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-161": {
+   "spinner": [
+    "y",
+    "tpepark-39",
+    "市府兒童遊戲場網站的遊具列有旋轉盤",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-39",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-39",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-39",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-162": {
+   "shade": [
+    "y",
+    "tpepark-294",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-163": {
+   "shade": [
+    "y",
+    "tpepark-367",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-165": {
+   "spring_rider": [
+    "y",
+    "tpepark-333",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-333",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-333",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-167": {
+   "nest_swing": [
+    "y",
+    "tpepark-783",
+    "市府兒童遊戲場網站的遊具列有鳥巢盪鞦韆",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-783",
+    "市府兒童遊戲場網站的遊具列有一般坐式盪鞦韆",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-783",
+    "市府兒童遊戲場網站的遊具列有蝴蝶翹翹板",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-783",
+    "市府兒童遊戲場網站的遊具列有旋轉盤",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-783",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-168": {
+   "spring_rider": [
+    "y",
+    "tpepark-715",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-169": {
+   "shade": [
+    "y",
+    "tpepark-45",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-170": {
+   "climbing": [
+    "y",
+    "tpepark-317",
+    "市府兒童遊戲場網站的遊具列有攀爬遊戲組",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-317",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-317",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-317",
+    "市府兒童遊戲場網站的周邊設施列有無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-171": {
+   "shade": [
+    "y",
+    "tpepark-132",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-172": {
+   "balance": [
+    "y",
+    "tpepark-737",
+    "市府兒童遊戲場網站的遊具列有跳樁、平衡木",
+    "2026-10-26"
+   ],
+   "tunnel": [
+    "y",
+    "tpepark-737",
+    "市府兒童遊戲場網站的遊具列有隧道",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-737",
+    "市府兒童遊戲場網站的遊具列有組合遊具(叢林攀爬組)",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-173": {
+   "spring_rider": [
+    "y",
+    "tpepark-290",
+    "市府兒童遊戲場網站的遊具列有機車搖搖樂",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-290",
+    "市府兒童遊戲場網站的遊具列有金字塔滑梯組",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-290",
+    "市府兒童遊戲場網站的遊具列有特色旋轉盤",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-290",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-174": {
+   "shade": [
+    "y",
+    "tpepark-460",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-175": {
+   "shade": [
+    "y",
+    "tpepark-789",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-176": {
+   "swing": [
+    "y",
+    "tpepark-953",
+    "市府兒童遊戲場網站的遊具列有雙人鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-953",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-177": {
+   "seesaw": [
+    "y",
+    "tpepark-692",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-692",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-179": {
+   "balance": [
+    "y",
+    "tpepark-913",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-913",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-913",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-914",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-180": {
+   "shade": [
+    "y",
+    "tpepark-125",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-182": {
+   "trampoline": [
+    "y",
+    "tpepark-880",
+    "市府兒童遊戲場網站的遊具列有彈跳床2、彈跳床1",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-880",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-880",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "nursing": [
+    "y",
+    "tpepark-880",
+    "市府兒童遊戲場網站的周邊設施列有哺乳室",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-881",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-183": {
+   "slide": [
+    "y",
+    "tpepark-765",
+    "市府兒童遊戲場網站的遊具列有溜滑梯組合遊具",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-765",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-186": {
+   "spinner": [
+    "y",
+    "tpepark-103",
+    "市府兒童遊戲場網站的遊具列有4人旋轉器",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-103",
+    "市府兒童遊戲場網站的遊具列有叢林攀爬組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-187": {
+   "seesaw": [
+    "y",
+    "tpepark-640",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-640",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-189": {
+   "shade": [
+    "y",
+    "tpepark-338",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-190": {
+   "slide": [
+    "y",
+    "tpepark-951",
+    "市府兒童遊戲場網站的遊具列有攀爬網架滑梯",
+    "2026-10-26"
+   ],
+   "rope_net": [
+    "y",
+    "tpepark-951",
+    "市府兒童遊戲場網站的遊具列有攀爬網架滑梯",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-951",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-951",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "zipline": [
+    "y",
+    "tpepark-941",
+    "市府兒童遊戲場網站的遊具列有滑索",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-191": {
+   "inclusive": [
+    "y",
+    "tpepark-243",
+    "市府兒童遊戲場網站的遊具列有共融式綜合鞦韆組",
+    "2026-10-26"
+   ],
+   "bars": [
+    "y",
+    "tpepark-243",
+    "市府兒童遊戲場網站的遊具列有曲型monkey bar",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-243",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-192": {
+   "seesaw": [
+    "y",
+    "tpepark-693",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-693",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-193": {
+   "rope_net": [
+    "y",
+    "tpepark-603",
+    "市府兒童遊戲場網站的遊具列有拱型攀爬網",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-603",
+    "市府兒童遊戲場網站的遊具列有大轉盤",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-603",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-952",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-194": {
+   "rope_net": [
+    "y",
+    "tpepark-384",
+    "市府兒童遊戲場網站的遊具列有樹屋攀爬網",
+    "2026-10-26"
+   ],
+   "tree_house": [
+    "y",
+    "tpepark-384",
+    "市府兒童遊戲場網站的遊具列有樹屋攀爬網",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-384",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-195": {
+   "spinner": [
+    "y",
+    "tpepark-604",
+    "市府兒童遊戲場網站的遊具列有大轉轉杯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-197": {
+   "seesaw": [
+    "y",
+    "tpepark-363",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-363",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-199": {
+   "spring_rider": [
+    "y",
+    "tpepark-720",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-200": {
+   "shade": [
+    "y",
+    "tpepark-764",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-201": {
+   "seesaw": [
+    "y",
+    "tpepark-479",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-203": {
+   "shade": [
+    "y",
+    "tpepark-688",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-207": {
+   "shade": [
+    "y",
+    "tpepark-643",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-211": {
+   "seesaw": [
+    "y",
+    "tpepark-28",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-28",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-213": {
+   "shade": [
+    "y",
+    "tpepark-468",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-214": {
+   "zipline": [
+    "y",
+    "tpepark-465",
+    "市府兒童遊戲場網站的遊具列有滑索(軌)",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-465",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-465",
+    "市府兒童遊戲場網站的遊具列有大坡面磨石溜滑梯",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-465",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-465",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-215": {
+   "swing": [
+    "y",
+    "tpepark-796",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-796",
+    "市府兒童遊戲場網站的遊具列有木製攀爬遊具",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-220": {
+   "shade": [
+    "y",
+    "tpepark-65",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-223": {
+   "shade": [
+    "y",
+    "tpepark-498",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-224": {
+   "seesaw": [
+    "y",
+    "tpepark-207",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-207",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-226": {
+   "spinner": [
+    "y",
+    "tpepark-466",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "sandpit": [
+    "y",
+    "tpepark-466",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-227": {
+   "swing": [
+    "y",
+    "tpepark-7",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-7",
+    "市府兒童遊戲場網站的周邊設施列有無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-229": {
+   "seesaw": [
+    "y",
+    "tpepark-349",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-230": {
+   "shade": [
+    "y",
+    "tpepark-182",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-231": {
+   "shade": [
+    "y",
+    "tpepark-230",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-232": {
+   "climbing": [
+    "y",
+    "tpepark-94",
+    "市府兒童遊戲場網站的遊具列有攀爬架",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-94",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-94",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-237": {
+   "shade": [
+    "y",
+    "tpepark-108",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-238": {
+   "seesaw": [
+    "y",
+    "tpepark-763",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-239": {
+   "shade": [
+    "y",
+    "tpepark-95",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-240": {
+   "spring_rider": [
+    "y",
+    "tpepark-424",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-424",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-241": {
+   "shade": [
+    "y",
+    "tpepark-588",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-242": {
+   "shade": [
+    "y",
+    "tpepark-482",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-243": {
+   "shade": [
+    "y",
+    "tpepark-433",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-245": {
+   "sandpit": [
+    "y",
+    "tpepark-732",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-732",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-246": {
+   "shade": [
+    "y",
+    "tpepark-485",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-248": {
+   "shade": [
+    "y",
+    "tpepark-488",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-488",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-250": {
+   "balance": [
+    "y",
+    "tpepark-909",
+    "市府兒童遊戲場網站的遊具列有平衡木、梅花樁",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-909",
+    "市府兒童遊戲場網站的遊具列有攀爬架",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-909",
+    "市府兒童遊戲場網站的遊具列有高塔管狀滑梯",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-235",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-253": {
+   "seesaw": [
+    "y",
+    "tpepark-818",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-818",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-818",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-254": {
+   "shade": [
+    "y",
+    "tpepark-641",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-255": {
+   "shade": [
+    "y",
+    "tpepark-580",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-256": {
+   "shade": [
+    "y",
+    "tpepark-753",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-258": {
+   "shade": [
+    "y",
+    "tpepark-505",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-261": {
+   "balance": [
+    "y",
+    "tpepark-790",
+    "市府兒童遊戲場網站的遊具列有跳樁、平衡木、平衡索",
+    "2026-10-26"
+   ],
+   "zipline": [
+    "y",
+    "tpepark-790",
+    "市府兒童遊戲場網站的遊具列有滑索(軌)",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-790",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-262": {
+   "spinner": [
+    "y",
+    "tpepark-257",
+    "市府兒童遊戲場網站的遊具列有旋轉飛輪",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-257",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-257",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "nursing": [
+    "y",
+    "tpepark-257",
+    "市府兒童遊戲場網站的周邊設施列有哺乳室、育嬰室",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-264": {
+   "shade": [
+    "y",
+    "tpepark-710",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-710",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-265": {
+   "spinner": [
+    "y",
+    "tpepark-889",
+    "市府兒童遊戲場網站的遊具列有旋轉台、旋轉杯",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-889",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-889",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-266": {
+   "shade": [
+    "y",
+    "tpepark-891",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-891",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-267": {
+   "seesaw": [
+    "y",
+    "tpepark-348",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-348",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-268": {
+   "shade": [
+    "y",
+    "tpepark-10",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-270": {
+   "seesaw": [
+    "y",
+    "tpepark-399",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-271": {
+   "shade": [
+    "y",
+    "tpepark-770",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-272": {
+   "seesaw": [
+    "y",
+    "tpepark-178",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-273": {
+   "seesaw": [
+    "y",
+    "tpepark-978",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-978",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-979",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-274": {
+   "spring_rider": [
+    "y",
+    "tpepark-736",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-736",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-736",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-275": {
+   "seesaw": [
+    "y",
+    "tpepark-564",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-277": {
+   "shade": [
+    "y",
+    "tpepark-36",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-278": {
+   "slide": [
+    "y",
+    "tpepark-893",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-893",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-279": {
+   "shade": [
+    "y",
+    "tpepark-725",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-280": {
+   "shade": [
+    "y",
+    "tpepark-278",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-281": {
+   "shade": [
+    "y",
+    "tpepark-275",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-282": {
+   "shade": [
+    "y",
+    "tpepark-350",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-283": {
+   "seesaw": [
+    "y",
+    "tpepark-67",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-67",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-67",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-284": {
+   "shade": [
+    "y",
+    "tpepark-781",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-285": {
+   "shade": [
+    "y",
+    "tpepark-500",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-286": {
+   "climbing": [
+    "y",
+    "tpepark-535",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-535",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-535",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-535",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "nursing": [
+    "y",
+    "tpepark-535",
+    "市府兒童遊戲場網站的周邊設施列有哺乳室、育嬰室",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-288": {
+   "seesaw": [
+    "y",
+    "tpepark-229",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-229",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-290": {
+   "shade": [
+    "y",
+    "tpepark-577",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-291": {
+   "climbing": [
+    "y",
+    "tpepark-534",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-292": {
+   "shade": [
+    "y",
+    "tpepark-463",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-293": {
+   "shade": [
+    "y",
+    "tpepark-778",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-294": {
+   "swing": [
+    "y",
+    "tpepark-62",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-62",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-295": {
+   "climbing": [
+    "y",
+    "tpepark-629",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-629",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-296": {
+   "seesaw": [
+    "y",
+    "tpepark-578",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-578",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-578",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-297": {
+   "shade": [
+    "y",
+    "tpepark-726",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-298": {
+   "spring_rider": [
+    "y",
+    "tpepark-895",
+    "市府兒童遊戲場網站的遊具列有搖搖樂*2",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-895",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-299": {
+   "seesaw": [
+    "y",
+    "tpepark-589",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-301": {
+   "shade": [
+    "y",
+    "tpepark-411",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-302": {
+   "seesaw": [
+    "y",
+    "tpepark-66",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "zipline": [
+    "y",
+    "tpepark-66",
+    "市府兒童遊戲場網站的遊具列有滑索(軌)",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-66",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-303": {
+   "seesaw": [
+    "y",
+    "tpepark-557",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-557",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-304": {
+   "balance": [
+    "y",
+    "tpepark-98",
+    "市府兒童遊戲場網站的遊具列有平衡木、梅花樁",
+    "2026-10-26"
+   ],
+   "music": [
+    "y",
+    "tpepark-98",
+    "市府兒童遊戲場網站的遊具列有傳聲筒",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-306": {
+   "spinner": [
+    "y",
+    "tpepark-630",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-630",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "nursing": [
+    "y",
+    "tpepark-630",
+    "市府兒童遊戲場網站的周邊設施列有哺乳室",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-307": {
+   "spinner": [
+    "y",
+    "tpepark-454",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-454",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-454",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-454",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-454",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-308": {
+   "swing": [
+    "y",
+    "tpepark-126",
+    "市府兒童遊戲場網站的遊具列有鞦韆組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-126",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-309": {
+   "seesaw": [
+    "y",
+    "tpepark-31",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-312": {
+   "toilet": [
+    "y",
+    "tpepark-33",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-313": {
+   "nest_swing": [
+    "y",
+    "tpepark-571",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-571",
+    "市府兒童遊戲場網站的遊具列有旋轉飛輪、旋轉杯",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-571",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-318": {
+   "seesaw": [
+    "y",
+    "tpepark-222",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-320": {
+   "toilet": [
+    "y",
+    "tpepark-768",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-323": {
+   "climbing": [
+    "y",
+    "tpepark-297",
+    "市府兒童遊戲場網站的遊具列有旋轉攀爬架",
+    "2026-10-26"
+   ],
+   "zipline": [
+    "y",
+    "tpepark-297",
+    "市府兒童遊戲場網站的遊具列有滑索(軌)",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-297",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-297",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "nursing": [
+    "y",
+    "tpepark-297",
+    "市府兒童遊戲場網站的周邊設施列有哺乳室、育嬰室",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-325": {
+   "seesaw": [
+    "y",
+    "tpepark-197",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-326": {
+   "toilet": [
+    "y",
+    "tpepark-339",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-328": {
+   "bars": [
+    "y",
+    "tpepark-750",
+    "市府兒童遊戲場網站的遊具列有MONKEY  BAR",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-750",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-330": {
+   "balance": [
+    "y",
+    "tpepark-519",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-332": {
+   "seesaw": [
+    "y",
+    "tpepark-12",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-12",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-337": {
+   "balance": [
+    "y",
+    "tpepark-475",
+    "市府兒童遊戲場網站的遊具列有跳樁",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-341": {
+   "shade": [
+    "y",
+    "tpepark-709",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-709",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-344": {
+   "shade": [
+    "y",
+    "tpepark-26",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-345": {
+   "spinner": [
+    "y",
+    "tpepark-154",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-154",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-154",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ],
+   "nursing": [
+    "y",
+    "tpepark-154",
+    "市府兒童遊戲場網站的周邊設施列有哺乳室、育嬰室",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-346": {
+   "spinner": [
+    "y",
+    "tpepark-320",
+    "市府兒童遊戲場網站的遊具列有無障礙旋轉盤",
+    "2026-10-26"
+   ],
+   "inclusive": [
+    "y",
+    "tpepark-320",
+    "市府兒童遊戲場網站的遊具列有無障礙旋轉盤",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-320",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-347": {
+   "shade": [
+    "y",
+    "tpepark-594",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-348": {
+   "shade": [
+    "y",
+    "tpepark-813",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-349": {
+   "toilet": [
+    "y",
+    "tpepark-311",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-351": {
+   "shade": [
+    "y",
+    "tpepark-133",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-352": {
+   "shade": [
+    "y",
+    "tpepark-590",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-353": {
+   "climbing": [
+    "y",
+    "tpepark-386",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-386",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-354": {
+   "seesaw": [
+    "y",
+    "tpepark-46",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-46",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-355": {
+   "toilet": [
+    "y",
+    "tpepark-188",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-356": {
+   "rope_net": [
+    "y",
+    "tpepark-837",
+    "市府兒童遊戲場網站的遊具列有攀爬網",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-837",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-357": {
+   "spinner": [
+    "y",
+    "tpepark-843",
+    "市府兒童遊戲場網站的遊具列有旋轉設施",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-843",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-843",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-358": {
+   "shade": [
+    "y",
+    "tpepark-73",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-360": {
+   "shade": [
+    "y",
+    "tpepark-414",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-361": {
+   "shade": [
+    "y",
+    "tpepark-728",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-362": {
+   "shade": [
+    "y",
+    "tpepark-705",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-363": {
+   "shade": [
+    "y",
+    "tpepark-721",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-364": {
+   "shade": [
+    "y",
+    "tpepark-644",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-365": {
+   "shade": [
+    "y",
+    "tpepark-37",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-366": {
+   "seesaw": [
+    "y",
+    "tpepark-740",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-740",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-368": {
+   "shade": [
+    "y",
+    "tpepark-24",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-369": {
+   "shade": [
+    "y",
+    "tpepark-322",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-370": {
+   "spinner": [
+    "y",
+    "tpepark-915",
+    "市府兒童遊戲場網站的遊具列有大轉轉椅",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-915",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-371": {
+   "rope_net": [
+    "y",
+    "tpepark-8",
+    "市府兒童遊戲場網站的遊具列有側向爬網",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-8",
+    "市府兒童遊戲場網站的遊具列有多元攀爬遊具",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-8",
+    "市府兒童遊戲場網站的遊具列有平衡獨木橋",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-8",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-372": {
+   "shade": [
+    "y",
+    "tpepark-420",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-376": {
+   "water_play": [
+    "y",
+    "tpepark-539",
+    "市府兒童遊戲場網站的遊具列有雷龍噴霧設施",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-539",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-377": {
+   "toilet": [
+    "y",
+    "tpepark-156",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-378": {
+   "climbing": [
+    "y",
+    "tpepark-376",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-376",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-380": {
+   "spinner": [
+    "y",
+    "tpepark-775",
+    "市府兒童遊戲場網站的遊具列有旋轉木馬",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-775",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-381": {
+   "seesaw": [
+    "y",
+    "tpepark-735",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-735",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-735",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-382": {
+   "nest_swing": [
+    "y",
+    "tpepark-1063",
+    "市府兒童遊戲場網站的遊具列有鳥巢",
+    "2026-10-26"
+   ],
+   "sandpit": [
+    "y",
+    "tpepark-1063",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-1063",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-1061",
+    "市府兒童遊戲場網站的遊具列有滑梯",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-1061",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-1061",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-383": {
+   "shade": [
+    "y",
+    "tpepark-270",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-384": {
+   "shade": [
+    "y",
+    "tpepark-237",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-385": {
+   "climbing": [
+    "y",
+    "tpepark-345",
+    "市府兒童遊戲場網站的遊具列有攀爬設施",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-345",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-345",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-387": {
+   "shade": [
+    "y",
+    "tpepark-109",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-388": {
+   "shade": [
+    "y",
+    "tpepark-476",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-389": {
+   "shade": [
+    "y",
+    "tpepark-105",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-390": {
+   "shade": [
+    "y",
+    "tpepark-451",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-391": {
+   "shade": [
+    "y",
+    "tpepark-19",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-392": {
+   "shade": [
+    "y",
+    "tpepark-248",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-393": {
+   "spring_rider": [
+    "y",
+    "tpepark-549",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-549",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-394": {
+   "seesaw": [
+    "y",
+    "tpepark-300",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-300",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-395": {
+   "seesaw": [
+    "y",
+    "tpepark-548",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-548",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-396": {
+   "spring_rider": [
+    "y",
+    "tpepark-42",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-42",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-397": {
+   "seesaw": [
+    "y",
+    "tpepark-195",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-195",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-398": {
+   "shade": [
+    "y",
+    "tpepark-199",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-399": {
+   "spring_rider": [
+    "y",
+    "tpepark-298",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-298",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-400": {
+   "spinner": [
+    "y",
+    "tpepark-631",
+    "市府兒童遊戲場網站的遊具列有5人轉轉椅",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-631",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-401": {
+   "shade": [
+    "y",
+    "tpepark-779",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-402": {
+   "shade": [
+    "y",
+    "tpepark-227",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-403": {
+   "spring_rider": [
+    "y",
+    "tpepark-130",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-130",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-404": {
+   "shade": [
+    "y",
+    "tpepark-620",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-620",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-405": {
+   "seesaw": [
+    "y",
+    "tpepark-212",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-212",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-406": {
+   "shade": [
+    "y",
+    "tpepark-752",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-407": {
+   "sandpit": [
+    "y",
+    "tpepark-653",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-653",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-408": {
+   "seesaw": [
+    "y",
+    "tpepark-362",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-362",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-409": {
+   "seesaw": [
+    "y",
+    "tpepark-642",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-642",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-410": {
+   "seesaw": [
+    "y",
+    "tpepark-336",
+    "市府兒童遊戲場網站的遊具列有翹翹板",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-336",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-412": {
+   "shade": [
+    "y",
+    "tpepark-252",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-413": {
+   "shade": [
+    "y",
+    "tpepark-614",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-415": {
+   "trampoline": [
+    "y",
+    "tpepark-671",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ]
+  },
+  "tpe-pkl-416": {
+   "spinner": [
+    "y",
+    "tpepark-575",
+    "市府兒童遊戲場網站的遊具列有旋轉杯、旋轉飛輪",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-r10279463": {
+   "slide": [
+    "y",
+    "tpepark-859",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-859",
+    "市府兒童遊戲場網站的遊具列有旋轉杯",
+    "2026-10-26"
+   ],
+   "sandpit": [
+    "y",
+    "tpepark-859",
+    "市府兒童遊戲場網站的遊具列有戲沙坑",
+    "2026-10-26"
+   ],
+   "trampoline": [
+    "y",
+    "tpepark-859",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-859",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "climbing_wall": [
+    "y",
+    "tpepark-859",
+    "市府兒童遊戲場網站的遊具列有攀岩塊",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-859",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-r16410525": {
+   "swing": [
+    "y",
+    "tpepark-662",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-662",
+    "市府兒童遊戲場網站的遊具列有磨石子滑梯",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w1158421218": {
+   "zipline": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有雙滑軌溜索",
+    "2026-10-26"
+   ],
+   "trampoline": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有彈跳床",
+    "2026-10-26"
+   ],
+   "spinner": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有旋轉台",
+    "2026-10-26"
+   ],
+   "sandpit": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有沙坑",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ],
+   "baby_swing": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有尿布鞦韆",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有攀爬組、攀爬繩網組",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有磨石子滑梯",
+    "2026-10-26"
+   ],
+   "rope_net": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有攀爬繩網組",
+    "2026-10-26"
+   ],
+   "swing": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的遊具列有輪胎鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-867",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w1372611061": {
+   "slide": [
+    "y",
+    "tpepark-980",
+    "市府兒童遊戲場網站的遊具列有滑梯",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-980",
+    "市府兒童遊戲場網站的周邊設施列有廁所",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w207150141": {
+   "spring_rider": [
+    "y",
+    "tpepark-612",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w229733673": {
+   "spring_rider": [
+    "y",
+    "tpepark-13",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-13",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w244115936": {
+   "spring_rider": [
+    "y",
+    "tpepark-428",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w253207984": {
+   "slide": [
+    "y",
+    "tpepark-506",
+    "市府兒童遊戲場網站的遊具列有磨石滑梯",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-506",
+    "市府兒童遊戲場網站的遊具列有旋轉攀爬架",
+    "2026-10-26"
+   ],
+   "nest_swing": [
+    "y",
+    "tpepark-506",
+    "市府兒童遊戲場網站的遊具列有鳥巢鞦韆",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w259080204": {
+   "swing": [
+    "y",
+    "tpepark-221",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-221",
+    "市府兒童遊戲場網站的遊具列有體能訓練平衡組",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w287217253": {
+   "spring_rider": [
+    "y",
+    "tpepark-137",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w303852587": {
+   "swing": [
+    "y",
+    "tpepark-254",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-254",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w333206919": {
+   "climbing": [
+    "y",
+    "tpepark-650",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-650",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w346730239": {
+   "spring_rider": [
+    "y",
+    "tpepark-244",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-244",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w375180591": {
+   "seesaw": [
+    "y",
+    "tpepark-585",
+    "市府兒童遊戲場網站的遊具列有X型翹翹板",
+    "2026-10-26"
+   ],
+   "balance": [
+    "y",
+    "tpepark-585",
+    "市府兒童遊戲場網站的遊具列有數字造型跳樁",
+    "2026-10-26"
+   ],
+   "tunnel": [
+    "y",
+    "tpepark-585",
+    "市府兒童遊戲場網站的遊具列有水管隧道",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-585",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w377325626": {
+   "spinner": [
+    "y",
+    "tpepark-797",
+    "市府兒童遊戲場網站的遊具列有大轉轉杯",
+    "2026-10-26"
+   ],
+   "tunnel": [
+    "y",
+    "tpepark-797",
+    "市府兒童遊戲場網站的遊具列有隧道山丘地形",
+    "2026-10-26"
+   ],
+   "suspension_bridge": [
+    "y",
+    "tpepark-797",
+    "市府兒童遊戲場網站的遊具列有軟橋設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w423746100": {
+   "swing": [
+    "y",
+    "tpepark-756",
+    "市府兒童遊戲場網站的遊具列有鞦韆",
+    "2026-10-26"
+   ],
+   "spring_rider": [
+    "y",
+    "tpepark-756",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-756",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w572764804": {
+   "swing": [
+    "y",
+    "tpepark-700",
+    "市府兒童遊戲場網站的遊具列有盪鞦韆",
+    "2026-10-26"
+   ],
+   "climbing": [
+    "y",
+    "tpepark-700",
+    "市府兒童遊戲場網站的遊具列有攀爬組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-700",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w810136497": {
+   "spring_rider": [
+    "y",
+    "tpepark-655",
+    "市府兒童遊戲場網站的遊具列有搖搖樂",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w855924397": {
+   "spring_rider": [
+    "y",
+    "tpepark-949",
+    "市府兒童遊戲場網站的遊具列有搖搖馬",
+    "2026-10-26"
+   ],
+   "slide": [
+    "y",
+    "tpepark-949",
+    "市府兒童遊戲場網站的遊具列有磨石子滑梯",
+    "2026-10-26"
+   ],
+   "seesaw": [
+    "y",
+    "tpepark-950",
+    "市府兒童遊戲場網站的遊具列有蹺蹺板",
+    "2026-10-26"
+   ]
+  },
+  "tpe-osm-w910296940": {
+   "spinner": [
+    "y",
+    "tpepark-871",
+    "市府兒童遊戲場網站的遊具列有旋轉桶椅、大旋轉組",
+    "2026-10-26"
+   ],
+   "shade": [
+    "y",
+    "tpepark-871",
+    "市府兒童遊戲場網站的周邊設施列有遮陽設施",
+    "2026-10-26"
+   ],
+   "toilet": [
+    "y",
+    "tpepark-871",
+    "市府兒童遊戲場網站的周邊設施列有廁所、無障礙廁所",
+    "2026-10-26"
+   ]
+  }
+ }
+}
