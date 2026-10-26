@@ -1,5 +1,7 @@
 """臺南市公園設施資料（sources/tnn.py，decisions D21）：數量 > 0 才是「有」，0 或空白是未知，沒有任何「無」"""
+import tempfile
 import unittest
+from pathlib import Path
 
 from sources import osm_playgrounds as osm
 from sources import tnn
@@ -84,6 +86,26 @@ class TnnTest(unittest.TestCase):
         self.assertEqual(tnn.osm_coordinate("測試公園", "東區", pgs, osm.district_of, osm.ref_key),
                          (23.0, 120.2, "w10"))
         self.assertIsNone(tnn.osm_coordinate("測試公園", "南區", pgs, osm.district_of, osm.ref_key))
+
+    def test_coord_fixes(self):
+        def tsv(*rows):
+            return "".join("\t".join(r) + "\n" for r in rows)
+        head = tnn.COORD_FIX_COLUMNS
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "coord-fixes.tsv"
+            path.write_text("# 註解\n" + tsv(head, ["246", "希望公園", "北區", "w158821417", "23.01", "120.20", "離 OSM 公園 14 公里"]),
+                            encoding="utf-8")
+            self.assertEqual(tnn.load_coord_fixes(path), {246: (23.01, 120.20, "w158821417")})
+            bad = [
+                tsv(head, ["246", "希望公園", "北區", "w1", "23.01", "120.20", ""]),  # 沒寫依據
+                tsv(head, ["246", "希望公園", "北區", "w1", "北緯", "120.20", "依據"]),  # 座標不是數字
+                tsv(head, ["246", "希望公園", "北區", "158821417", "23.01", "120.20", "依據"]),  # OSM 格式
+                tsv(["編號"], ["246"]),  # 欄位不對
+            ]
+            for text in bad:
+                path.write_text(text, encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    tnn.load_coord_fixes(path)
 
 
 if __name__ == "__main__":

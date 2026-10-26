@@ -5,7 +5,7 @@
 
 輸入：data/raw/tnn/tnn-parks.json（fetch_tnn_parks.py）、
       osm.json、osm-institutions.json（fetch_osm_city.py tnn、fetch_osm_institutions.py tnn）、
-      manual-names.tsv（OSM 遊戲場的人工命名或排除）、data/raw/osm-city-bounds.json（範圍檢查）、
+      manual-names.tsv（OSM 遊戲場的人工命名或排除）、coord-fixes.tsv（座標明顯錯誤的公園改用 OSM 座標）、data/raw/osm-city-bounds.json（範圍檢查）、
       research.json、osm-parks.json（有的話：人工查證的遊具與設施，只補未知的項目；工務局特色遊戲場網站列出、
       OSM 只畫了公園的遊戲場，sources/research.py）
 輸出：data/seed/tnn/places.json、places.csv；data/review/tnn/ 的
@@ -45,6 +45,8 @@ def main():
     labels = labels_json()
     keys = attr_keys(labels)
 
+    fixes = tnn.load_coord_fixes(RAW / "coord-fixes.tsv")
+    fixed = set()
     review = {"no-playground": [], "odd-names-official": [], "no-coords": [], "out-of-bounds": []}
     places, officials = [], []
     for r in sorted(data["records"], key=lambda r: r["no"]):
@@ -58,6 +60,10 @@ def main():
                                                  "用地編號，確認名稱後再處理"])
             continue
         coord, coord_label = tnn.coordinate(r), "臺南市公園設施資料（WGS84）"
+        if no in fixes:  # 開放資料座標明顯錯誤：用 coord-fixes.tsv 的 OSM 公園範圍中心
+            lat, lng, ref = fixes[no]
+            coord, coord_label = (lat, lng), tnn.COORD_FIX_LABEL.format(ref)
+            fixed.add(no)
         if coord is None:
             hit = tnn.osm_coordinate(name, dist, playgrounds, osm.district_of, osm.ref_key)
             if hit is None:
@@ -90,6 +96,10 @@ def main():
             official_ref=[{"tnn_no": no, "name": raw_name, "district": dist, "kind": r.get("類別", "")}],
             area_ha=tnn.area_ha(r), city=tnn.CITY,
         ))
+
+    unused = sorted(set(fixes) - fixed)
+    if unused:
+        raise SystemExit(f"coord-fixes.tsv 的編號 {unused} 沒有用上（資料裡沒有，或那筆不上地圖）")
 
     # 同一個行政區有同名的官方場地：加上行政區（目前資料沒有，以防萬一）
     count = {}

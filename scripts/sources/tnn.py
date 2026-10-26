@@ -10,6 +10,7 @@
   - 名稱是用地編號（「公一」「公兒三」）的不上地圖，等人工命名
   - 名稱裡用地編號的括號拿掉再顯示（「南門公園(公8)」→ 南門公園），原文保留在 official_ref；
     「公兒(中埕里鄰公園)」這種取括號裡的名稱；「(舊苗圃)」「(一)」等說明保留
+  - 座標明顯錯誤的（例如離同區同名的 OSM 公園十幾公里），用 data/raw/tnn/coord-fixes.tsv 列出的 OSM 公園範圍中心
   - OSM 補充裡名稱不像公共遊戲場的（沒有公園、遊戲、兒童…等字，或本身是用地編號）先不上地圖，等人工確認
 """
 import re
@@ -132,6 +133,30 @@ def coordinate(row):
     except ValueError:
         return None
     return (lat, lng) if lat and lng else None
+
+
+COORD_FIX_LABEL = "OpenStreetMap {}（leisure=park 範圍中心；開放資料座標有誤，見 coord-fixes.tsv）"
+COORD_FIX_COLUMNS = ["編號", "公園", "行政區", "OSM", "緯度", "經度", "依據"]
+
+
+def load_coord_fixes(path):
+    """coord-fixes.tsv → {編號: (緯度, 經度, OSM ref)}；# 開頭是註解。格式錯就中止，不默默略過"""
+    lines = [line for line in path.read_text(encoding="utf-8").splitlines() if line.strip() and not line.startswith("#")]
+    if not lines or lines[0].split("\t") != COORD_FIX_COLUMNS:
+        raise ValueError(f"{path.name}：第一列要是 {'、'.join(COORD_FIX_COLUMNS)}")
+    fixes = {}
+    for n, line in enumerate(lines[1:], 2):
+        cells = line.split("\t")
+        if len(cells) != len(COORD_FIX_COLUMNS) or not all(c.strip() for c in cells):
+            raise ValueError(f"{path.name} 第 {n} 列：每一欄都要填")
+        no, _, _, ref, lat, lng, _ = cells
+        try:
+            fixes[int(no)] = (float(lat), float(lng), ref.strip())
+        except ValueError:
+            raise ValueError(f"{path.name} 第 {n} 列：編號要是整數、緯度經度要是數字") from None
+        if not re.fullmatch(r"[nwr]\d+", ref.strip()):
+            raise ValueError(f"{path.name} 第 {n} 列：OSM 要寫成 w123 這種格式")
+    return fixes
 
 
 def name_key(name):
