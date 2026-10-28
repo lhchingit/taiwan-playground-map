@@ -1,0 +1,500 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-27",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "n8869123660": {
+   "name": "豐順公園",
+   "leisure": "park",
+   "lat": 23.9032829,
+   "lng": 120.3794332,
+   "districts": [
+    {
+     "level": 8,
+     "name": "二林鎮"
+    }
+   ]
+  },
+  "r17857831": {
+   "name": "河濱公園",
+   "leisure": "park",
+   "lat": 23.8974793,
+   "lng": 120.3736777,
+   "districts": [
+    {
+     "level": 8,
+     "name": "二林鎮"
+    }
+   ]
+  },
+  "w1020358002": {
+   "name": "華興公園",
+   "leisure": "park",
+   "lat": 24.0911782,
+   "lng": 120.5376521,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w1023941056": {
+   "name": "東芳公園",
+   "leisure": "park",
+   "lat": 24.0656487,
+   "lng": 120.516199,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w1023962898": {
+   "name": "永芳公園",
+   "leisure": "park",
+   "lat": 24.0661293,
+   "lng": 120.5123607,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w1158746344": {
+   "name": "鹿港小鹿兒童公園",
+   "leisure": "park",
+   "lat": 24.0561737,
+   "lng": 120.4302226,
+   "districts": [
+    {
+     "level": 8,
+     "name": "鹿港鎮"
+    }
+   ]
+  },
+  "w1227967588": {
+   "name": "福山公園",
+   "leisure": "park",
+   "lat": 24.0751088,
+   "lng": 120.5744847,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w1257094848": {
+   "name": "奉天宮公園",
+   "leisure": "park",
+   "lat": 23.9654533,
+   "lng": 120.4787652,
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪湖鎮"
+    }
+   ]
+  },
+  "w1267040409": {
+   "name": "嬉濱海豚公園",
+   "leisure": "park",
+   "lat": 24.1537473,
+   "lng": 120.4532065,
+   "districts": [
+    {
+     "level": 8,
+     "name": "伸港鄉"
+    }
+   ]
+  },
+  "w1497284034": {
+   "name": "一番地公園",
+   "leisure": "park",
+   "lat": 23.9186705,
+   "lng": 120.6073545,
+   "districts": [
+    {
+     "level": 8,
+     "name": "社頭鄉"
+    }
+   ]
+  },
+  "w271120751": {
+   "name": "怡心園",
+   "leisure": "park",
+   "lat": 23.8961281,
+   "lng": 120.532349,
+   "districts": [
+    {
+     "level": 8,
+     "name": "田尾鄉"
+    }
+   ]
+  },
+  "w310758761": {
+   "name": "陽明公園",
+   "leisure": "park",
+   "lat": 24.0860829,
+   "lng": 120.5494809,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w383435912": {
+   "name": "南瑤公園",
+   "leisure": "park",
+   "lat": 24.0674275,
+   "lng": 120.5359572,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w438844468": {
+   "name": "中興運動公園",
+   "leisure": "park",
+   "lat": 24.1531419,
+   "lng": 120.489345,
+   "districts": [
+    {
+     "level": 8,
+     "name": "伸港鄉"
+    }
+   ]
+  },
+  "w469412790": {
+   "name": "溪湖軍機公園",
+   "leisure": "park",
+   "lat": 23.9624237,
+   "lng": 120.4735569,
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪湖鎮"
+    }
+   ]
+  },
+  "w480867299": {
+   "name": "芳苑運動公園",
+   "leisure": "park",
+   "lat": 23.9071376,
+   "lng": 120.3470765,
+   "districts": [
+    {
+     "level": 8,
+     "name": "芳苑鄉"
+    }
+   ]
+  },
+  "w545947585": {
+   "name": "德美公園",
+   "leisure": "park",
+   "lat": 24.1151935,
+   "lng": 120.4994335,
+   "districts": [
+    {
+     "level": 8,
+     "name": "和美鎮"
+    }
+   ]
+  },
+  "w556159667": {
+   "name": "金馬公園",
+   "leisure": "park",
+   "lat": 24.0929439,
+   "lng": 120.5466177,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w556177680": {
+   "name": "長青公園",
+   "leisure": "park",
+   "lat": 23.904013,
+   "lng": 120.3695311,
+   "districts": [
+    {
+     "level": 8,
+     "name": "二林鎮"
+    }
+   ]
+  },
+  "w556284007": {
+   "name": "泰和公園",
+   "leisure": "park",
+   "lat": 24.0944777,
+   "lng": 120.5522056,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w557801572": {
+   "name": "田中文中公園",
+   "leisure": "park",
+   "lat": 23.8540388,
+   "lng": 120.5916081,
+   "districts": [
+    {
+     "level": 8,
+     "name": "田中鎮"
+    }
+   ]
+  },
+  "w557897885": {
+   "name": "華中公園",
+   "leisure": "park",
+   "lat": 23.9576203,
+   "lng": 120.4756928,
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪湖鎮"
+    }
+   ]
+  },
+  "w558190343": {
+   "name": "小天使公園",
+   "leisure": "park",
+   "lat": 23.964331,
+   "lng": 120.4853826,
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪湖鎮"
+    }
+   ]
+  },
+  "w558400631": {
+   "name": "彰化市景觀公園",
+   "leisure": "park",
+   "lat": 24.1005481,
+   "lng": 120.5548288,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w559475720": {
+   "name": "居仁兒童公園",
+   "leisure": "park",
+   "lat": 23.8748755,
+   "lng": 120.5259985,
+   "districts": [
+    {
+     "level": 8,
+     "name": "北斗鎮"
+    }
+   ]
+  },
+  "w560408233": {
+   "name": "二八水水公園",
+   "leisure": "park",
+   "lat": 23.8144329,
+   "lng": 120.6161627,
+   "districts": [
+    {
+     "level": 8,
+     "name": "二水鄉"
+    }
+   ]
+  },
+  "w561224367": {
+   "name": "秀水公園",
+   "leisure": "park",
+   "lat": 24.0289595,
+   "lng": 120.5006682,
+   "districts": [
+    {
+     "level": 8,
+     "name": "秀水鄉"
+    }
+   ]
+  },
+  "w583611843": {
+   "name": "早安公園",
+   "leisure": "park",
+   "lat": 23.9573766,
+   "lng": 120.5807979,
+   "districts": [
+    {
+     "level": 8,
+     "name": "員林市"
+    }
+   ]
+  },
+  "w602914233": {
+   "name": "五權街北側公園",
+   "leisure": "park",
+   "lat": 23.9010631,
+   "lng": 120.3801495,
+   "districts": [
+    {
+     "level": 8,
+     "name": "二林鎮"
+    }
+   ]
+  },
+  "w602914234": {
+   "name": "大城運動公園",
+   "leisure": "park",
+   "lat": 23.8576784,
+   "lng": 120.321677,
+   "districts": [
+    {
+     "level": 8,
+     "name": "大城鄉"
+    }
+   ]
+  },
+  "w689322207": {
+   "name": "崑崙兒童公園",
+   "leisure": "park",
+   "lat": 23.988273,
+   "lng": 120.4790957,
+   "districts": [
+    {
+     "level": 8,
+     "name": "埔鹽鄉"
+    }
+   ]
+  },
+  "w726179602": {
+   "name": "南區公園",
+   "leisure": "park",
+   "lat": 23.9384899,
+   "lng": 120.5794355,
+   "districts": [
+    {
+     "level": 8,
+     "name": "員林市"
+    }
+   ]
+  },
+  "w734811054": {
+   "name": "戰車公園",
+   "leisure": "park",
+   "lat": 23.8410422,
+   "lng": 120.4566279,
+   "districts": [
+    {
+     "level": 8,
+     "name": "埤頭鄉"
+    }
+   ]
+  },
+  "w735392556": {
+   "name": "舊社庄公園",
+   "leisure": "park",
+   "lat": 23.8972793,
+   "lng": 120.5976358,
+   "districts": [
+    {
+     "level": 8,
+     "name": "社頭鄉"
+    }
+   ]
+  },
+  "w741585626": {
+   "name": "溪州森林公園",
+   "leisure": "park",
+   "lat": 23.851188,
+   "lng": 120.4917279,
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪州鄉"
+    }
+   ]
+  },
+  "w825568885": {
+   "name": "向陽公園",
+   "leisure": "park",
+   "lat": 24.0651772,
+   "lng": 120.526777,
+   "districts": [
+    {
+     "level": 8,
+     "name": "彰化市"
+    }
+   ]
+  },
+  "w932032168": {
+   "name": "玄璣公園",
+   "leisure": "park",
+   "lat": 23.8780057,
+   "lng": 120.5230592,
+   "districts": [
+    {
+     "level": 8,
+     "name": "北斗鎮"
+    }
+   ]
+  },
+  "w958553721": {
+   "name": "仁雅公園",
+   "leisure": "park",
+   "lat": 23.8951369,
+   "lng": 120.5858333,
+   "districts": [
+    {
+     "level": 8,
+     "name": "社頭鄉"
+    }
+   ]
+  },
+  "w971408870": {
+   "name": "富貴公園",
+   "leisure": "park",
+   "lat": 23.9658849,
+   "lng": 120.4755803,
+   "districts": [
+    {
+     "level": 8,
+     "name": "溪湖鎮"
+    }
+   ]
+  },
+  "w976044315": {
+   "name": "伸港文學公園",
+   "leisure": "park",
+   "lat": 24.1449616,
+   "lng": 120.4853651,
+   "districts": [
+    {
+     "level": 8,
+     "name": "伸港鄉"
+    }
+   ]
+  },
+  "w983215908": {
+   "name": "忠誠公園",
+   "leisure": "park",
+   "lat": 24.1119834,
+   "lng": 120.5043926,
+   "districts": [
+    {
+     "level": 8,
+     "name": "和美鎮"
+    }
+   ]
+  }
+ }
+}
