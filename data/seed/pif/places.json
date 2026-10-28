@@ -42,6 +42,76 @@
    "label": "網路文章：小腹婆大世界 2021-12 屏東里港阿里港公園",
    "url": "https://fupo.tw/blog/post/ligangpark",
    "kind": "article"
+  },
+  "ipt-list": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 共融式公園 寶貝放電護照（總覽頁；頁面未標日期）",
+   "url": "https://www.i-pingtung.com/babysplayground",
+   "kind": "article"
+  },
+  "ipt-chaozhon": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 潮州特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/chaozhon",
+   "kind": "article"
+  },
+  "ipt-donggang": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 東港兒童公園（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/donggang",
+   "kind": "article"
+  },
+  "ipt-hengchun": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 恆春特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/hengchun",
+   "kind": "article"
+  },
+  "ipt-jhongjheng": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 車城特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/jhongjheng",
+   "kind": "article"
+  },
+  "ipt-laiyi": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 來義特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/laiyi",
+   "kind": "article"
+  },
+  "ipt-linbian": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 林邊特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/linbian",
+   "kind": "article"
+  },
+  "ipt-liuqiu": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 琉球共融公園（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/liuqiu",
+   "kind": "article"
+  },
+  "ipt-neipu": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 內埔共融遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/neipu",
+   "kind": "article"
+  },
+  "ipt-sinpi": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 新埤貓頭鷹共融公園（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/sinpi",
+   "kind": "article"
+  },
+  "ipt-wandan": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 萬丹特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/wandan",
+   "kind": "article"
+  },
+  "ipt-xinyuan": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 新園特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/xinyuan",
+   "kind": "article"
+  },
+  "ipt-linluo": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 麟洛特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/linluo",
+   "kind": "article"
+  },
+  "ipt-nanzhou": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 南州特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/nanzhou",
+   "kind": "article"
   }
  },
  "labels": {
@@ -796,10 +866,10 @@
      "at": null
     },
     "water_play": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ipt-nanzhou",
+     "note": "縣府網頁列有水舞鞦韆",
+     "at": "2026-10-28"
     },
     "water_pump": {
      "v": "u",
@@ -838,10 +908,10 @@
      "at": null
     },
     "bars": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ipt-nanzhou",
+     "note": "縣府網頁寫遊具之間以 monkey bar 連結",
+     "at": "2026-10-28"
     },
     "music": {
      "v": "u",
@@ -904,10 +974,10 @@
      "at": null
     },
     "lighting": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ipt-nanzhou",
+     "note": "縣府網頁寫有太陽能發電座椅提供夜間照明",
+     "at": "2026-10-28"
     },
     "food": {
      "v": "u",
@@ -1230,10 +1300,10 @@
      "at": "2026-10-23"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ipt-linluo",
+     "note": "縣府網頁列有鞦韆",
+     "at": "2026-10-28"
     },
     "baby_swing": {
      "v": "u",
@@ -1302,10 +1372,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ipt-linluo",
+     "note": "縣府網頁寫花轎造型遊具有隧道",
+     "at": "2026-10-28"
     },
     "tree_house": {
      "v": "u",
@@ -1392,10 +1462,10 @@
      "at": null
     },
     "toilet": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ipt-linluo",
+     "note": "縣府網頁寫公廁在台鐵麟洛車站",
+     "at": "2026-10-28"
     },
     "handwash": {
      "v": "u",
@@ -1446,10 +1516,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "ipt-linluo",
+     "note": "縣府網頁列有無障礙遊具",
+     "at": "2026-10-28"
     }
    },
    "parking": {
@@ -1994,6 +2064,4278 @@
    "official_ref": [
     {
      "osm": "w1027568185,w1272733549,w1273345929,w1284842700,w1284842701,w1284842702"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-r2954172",
+   "name": "六堆紀念公園",
+   "district": "內埔鄉",
+   "address": null,
+   "lat": 22.6072296,
+   "lng": 120.5692242,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹內埔共融遊戲場，總覽頁稱為「內埔六堆共融遊戲場」。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有溜滑梯（9 公尺高的綜合型遊具）",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有共融鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有攀爬牆",
+     "at": "2026-10-28"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有沙坑",
+     "at": "2026-10-28"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有消暑戲水區",
+     "at": "2026-10-28"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有公廁",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "ipt-neipu",
+     "note": "縣府網頁列有共融鞦韆",
+     "at": "2026-10-28"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap r2954172（leisure=park 範圍中心）",
+   "listing_src": "ipt-neipu",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "r2954172"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-r8902559",
+   "name": "潮好玩幸福村",
+   "district": "潮州鎮",
+   "address": null,
+   "lat": 22.5328431,
+   "lng": 120.5386537,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹潮州的旗艦版共融遊戲場（潮好玩）。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有溜滑梯，另有 5 公尺高的躲貓貓瞭望台溜滑梯",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有鞦韆與共融鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有翹翹板",
+     "at": "2026-10-28"
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有攀爬設施",
+     "at": "2026-10-28"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有7.5 公尺高的雙塔攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有平衡木",
+     "at": "2026-10-28"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有躲貓貓瞭望台",
+     "at": "2026-10-28"
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有大沙坑區",
+     "at": "2026-10-28"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有野餐大草皮",
+     "at": "2026-10-28"
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有公廁",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有小孩館內的哺乳室與尿布台（週一到週日 9:00–17:00，國定假日休息）",
+     "at": "2026-10-28"
+    },
+    "lighting": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有夜間點燈到晚上 9 點",
+     "at": "2026-10-28"
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "ipt-chaozhon",
+     "note": "縣府網頁列有無障礙遊具與共融鞦韆",
+     "at": "2026-10-28"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap r8902559（leisure=park 範圍中心）",
+   "listing_src": "ipt-chaozhon",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "r8902559"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w1026885666",
+   "name": "幸福公園",
+   "district": "屏東市",
+   "address": null,
+   "lat": 22.6782612,
+   "lng": 120.4913279,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」總覽頁列有「幸福公園」共融遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1026885666（leisure=park 範圍中心）",
+   "listing_src": "ipt-list",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w1026885666"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w1030070103",
+   "name": "車城洋蔥大福樂園",
+   "district": "車城鄉",
+   "address": null,
+   "lat": 22.071003,
+   "lng": 120.7098587,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹車城「洋蔥大福遊樂園」，在福安宮後方。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-jhongjheng",
+     "note": "縣府網頁列有9 公尺高的洋蔥大福溜滑梯",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-jhongjheng",
+     "note": "縣府網頁列有親子同樂鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-jhongjheng",
+     "note": "縣府網頁列有蟲洞攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-jhongjheng",
+     "note": "縣府網頁列有公廁",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1030070103（leisure=park 範圍中心）",
+   "listing_src": "ipt-jhongjheng",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w1030070103"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w1030250947",
+   "name": "謝馬湖公園",
+   "district": "竹田鄉",
+   "address": null,
+   "lat": 22.5857535,
+   "lng": 120.5427461,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」總覽頁列有「竹田謝馬湖共融公園」。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1030250947（leisure=park 範圍中心）",
+   "listing_src": "ipt-list",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w1030250947"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w1124614007",
+   "name": "新園共融遊戲場",
+   "district": "新園鄉",
+   "address": null,
+   "lat": 22.543951,
+   "lng": 120.4600698,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹新園仙隆宮旁的特色遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁列有4 公尺與 6.5 公尺的溜滑梯",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁列有親子鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁列有旋轉盤",
+     "at": "2026-10-28"
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁列有攀岩牆",
+     "at": "2026-10-28"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁列有攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁列有鑽籠",
+     "at": "2026-10-28"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "y",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁列有鴨蛋滑步車道",
+     "at": "2026-10-28"
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "n",
+     "src": "ipt-xinyuan",
+     "note": "縣府網頁的公廁欄寫「無」",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1124614007（leisure=park 範圍中心）",
+   "listing_src": "ipt-xinyuan",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w1124614007"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w1138183189",
+   "name": "來義共融遊戲場",
+   "district": "來義鄉",
+   "address": null,
+   "lat": 22.5080987,
+   "lng": 120.5805487,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹新來義部落的原住民族特色遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-laiyi",
+     "note": "縣府網頁列有百步蛇高塔的 2 道溜滑梯與部落瞭望亭溜滑梯",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-laiyi",
+     "note": "縣府網頁列有共融鞦韆區",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-laiyi",
+     "note": "縣府網頁列有刺福球攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "y",
+     "src": "ipt-laiyi",
+     "note": "縣府網頁列有平衡小徑與跳樁平衡木",
+     "at": "2026-10-28"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "n",
+     "src": "ipt-laiyi",
+     "note": "縣府網頁的公廁欄寫「無」",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "ipt-laiyi",
+     "note": "縣府網頁列有共融鞦韆區，高塔有無障礙斜坡道",
+     "at": "2026-10-28"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1138183189（leisure=park 範圍中心）",
+   "listing_src": "ipt-laiyi",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w1138183189"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w1155049494",
+   "name": "琉球共融公園",
+   "district": "琉球鄉",
+   "address": null,
+   "lat": 22.3472457,
+   "lng": 120.3860836,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹琉球共融公園。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-liuqiu",
+     "note": "縣府網頁列有溜滑梯與超大滑面滑道",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "ipt-liuqiu",
+     "note": "縣府網頁列有觀星草坪",
+     "at": "2026-10-28"
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-liuqiu",
+     "note": "縣府網頁列有公廁",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1155049494（leisure=park 範圍中心）",
+   "listing_src": "ipt-liuqiu",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w1155049494"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w1225822090",
+   "name": "林邊共融遊戲場(親子飛天火車)",
+   "district": "林邊鄉",
+   "address": null,
+   "lat": 22.4319287,
+   "lng": 120.5150199,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹林邊車站旁的「蓮霧飛天火車」遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-linbian",
+     "note": "縣府網頁列有溜滑梯（熱氣球車廂溜滑梯）",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-linbian",
+     "note": "縣府網頁列有盪鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "ipt-linbian",
+     "note": "縣府網頁列有攀爬架",
+     "at": "2026-10-28"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "y",
+     "src": "ipt-linbian",
+     "note": "縣府網頁列有平衡架",
+     "at": "2026-10-28"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-linbian",
+     "note": "縣府網頁寫公廁在林邊車站內",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1225822090（leisure=park 範圍中心）",
+   "listing_src": "ipt-linbian",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w1225822090"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w142232075",
+   "name": "千禧公園",
+   "district": "屏東市",
+   "address": null,
+   "lat": 22.6787686,
+   "lng": 120.4994879,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」總覽頁列有「屏東總圖共融遊戲場」；這座公園在縣立圖書館總館旁。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w142232075（leisure=park 範圍中心）",
+   "listing_src": "ipt-list",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w142232075"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w144354321",
+   "name": "和平公園",
+   "district": "屏東市",
+   "address": null,
+   "lat": 22.6853725,
+   "lng": 120.5006252,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」總覽頁列有「屏東和平共融遊戲場」。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w144354321（leisure=park 範圍中心）",
+   "listing_src": "ipt-list",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w144354321"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w232206673",
+   "name": "恆春鎮石牌公園",
+   "district": "恆春鎮",
+   "address": null,
+   "lat": 22.0047357,
+   "lng": 120.7425545,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹「恆春特色遊戲場」，在西門石牌公園旁。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有攻城塔溜滑梯與高空滑梯",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有親子同樂鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有樹屋攀岩場",
+     "at": "2026-10-28"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有六角樹屋",
+     "at": "2026-10-28"
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有多功能沙坑",
+     "at": "2026-10-28"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有水舞遊戲區與月琴噴泉",
+     "at": "2026-10-28"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有月琴彈跳床",
+     "at": "2026-10-28"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有音樂遊具",
+     "at": "2026-10-28"
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-hengchun",
+     "note": "縣府網頁列有男廁、女廁及無障礙廁所",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w232206673（leisure=park 範圍中心）",
+   "listing_src": "ipt-hengchun",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w232206673"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w253033385",
+   "name": "萬丹鄉公園",
+   "district": "萬丹鄉",
+   "address": null,
+   "lat": 22.5938174,
+   "lng": 120.4866488,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹「萬丹特色遊戲場」，在萬丹游泳池前。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有雙塔溜滑梯",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有共融鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有空中滑索",
+     "at": "2026-10-28"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有攀爬牆",
+     "at": "2026-10-28"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有有遮陽的塑木沙坑",
+     "at": "2026-10-28"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有消暑戲水區",
+     "at": "2026-10-28"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有男廁、女廁及無障礙廁所",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "ipt-wandan",
+     "note": "縣府網頁列有共融鞦韆",
+     "at": "2026-10-28"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w253033385（leisure=park 範圍中心）",
+   "listing_src": "ipt-wandan",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w253033385"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w310500937",
+   "name": "新埤鄉綜合休閒公園",
+   "district": "新埤鄉",
+   "address": null,
+   "lat": 22.4668105,
+   "lng": 120.5808035,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹新埤鄉綜合休閒公園裡的貓頭鷹共融遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ipt-sinpi",
+     "note": "縣府網頁列有貓頭鷹主塔的 3 到 6 公尺高溜滑梯",
+     "at": "2026-10-28"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-sinpi",
+     "note": "縣府網頁列有攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "ipt-sinpi",
+     "note": "縣府網頁列有鑽籠",
+     "at": "2026-10-28"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-sinpi",
+     "note": "縣府網頁列有公廁（含性別友善廁所）",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w310500937（leisure=park 範圍中心）",
+   "listing_src": "ipt-sinpi",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w310500937"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w484589492",
+   "name": "兒童公園",
+   "district": "東港鎮",
+   "address": null,
+   "lat": 22.4647773,
+   "lng": 120.4569053,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」介紹東港兒童公園的共融遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "y",
+     "src": "ipt-donggang",
+     "note": "縣府網頁列有鞦韆",
+     "at": "2026-10-28"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "ipt-donggang",
+     "note": "縣府網頁列有攀爬網",
+     "at": "2026-10-28"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "ipt-donggang",
+     "note": "縣府網頁列有大樹下的戲水區",
+     "at": "2026-10-28"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "ipt-donggang",
+     "note": "縣府網頁列有大草坪活動區",
+     "at": "2026-10-28"
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "ipt-donggang",
+     "note": "縣府網頁列有男廁、女廁及無障礙廁所",
+     "at": "2026-10-28"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "ipt-donggang",
+     "note": "縣府網頁列有無障礙遊具",
+     "at": "2026-10-28"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w484589492（leisure=park 範圍中心）",
+   "listing_src": "ipt-donggang",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w484589492"
+    }
+   ],
+   "area_ha": null,
+   "city": "pif"
+  },
+  {
+   "id": "pif-osm-w905266594",
+   "name": "蘭州街特色公園",
+   "district": "屏東市",
+   "address": null,
+   "lat": 22.679908,
+   "lng": 120.4853306,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：屏東旅遊網「寶貝放電護照」總覽頁列有「屏東蘭州共融遊戲場」。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w905266594（leisure=park 範圍中心）",
+   "listing_src": "ipt-list",
+   "listing_at": "2026-10-28",
+   "official_ref": [
+    {
+     "osm": "w905266594"
     }
    ],
    "area_ha": null,

@@ -1,0 +1,204 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-28",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "r2954172": {
+   "name": "六堆紀念公園",
+   "leisure": "park",
+   "lat": 22.6072296,
+   "lng": 120.5692242,
+   "districts": [
+    {
+     "level": 8,
+     "name": "內埔鄉"
+    }
+   ]
+  },
+  "r8902559": {
+   "name": "潮好玩幸福村",
+   "leisure": "park",
+   "lat": 22.5328431,
+   "lng": 120.5386537,
+   "districts": [
+    {
+     "level": 8,
+     "name": "潮州鎮"
+    }
+   ]
+  },
+  "w1026885666": {
+   "name": "幸福公園",
+   "leisure": "park",
+   "lat": 22.6782612,
+   "lng": 120.4913279,
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  "w1030070103": {
+   "name": "車城洋蔥大福樂園",
+   "leisure": "park",
+   "lat": 22.071003,
+   "lng": 120.7098587,
+   "districts": [
+    {
+     "level": 8,
+     "name": "車城鄉"
+    }
+   ]
+  },
+  "w1030250947": {
+   "name": "謝馬湖公園",
+   "leisure": "park",
+   "lat": 22.5857535,
+   "lng": 120.5427461,
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹田鄉"
+    }
+   ]
+  },
+  "w1124614007": {
+   "name": "新園共融遊戲場",
+   "leisure": "park",
+   "lat": 22.543951,
+   "lng": 120.4600698,
+   "districts": [
+    {
+     "level": 8,
+     "name": "新園鄉"
+    }
+   ]
+  },
+  "w1138183189": {
+   "name": "來義共融遊戲場",
+   "leisure": "park",
+   "lat": 22.5080987,
+   "lng": 120.5805487,
+   "districts": [
+    {
+     "level": 8,
+     "name": ""
+    },
+    {
+     "level": 8,
+     "name": "來義鄉"
+    }
+   ]
+  },
+  "w1155049494": {
+   "name": "琉球共融公園",
+   "leisure": "park",
+   "lat": 22.3472457,
+   "lng": 120.3860836,
+   "districts": [
+    {
+     "level": 8,
+     "name": "琉球鄉"
+    }
+   ]
+  },
+  "w1225822090": {
+   "name": "林邊共融遊戲場(親子飛天火車)",
+   "leisure": "park",
+   "lat": 22.4319287,
+   "lng": 120.5150199,
+   "districts": [
+    {
+     "level": 8,
+     "name": "林邊鄉"
+    }
+   ]
+  },
+  "w142232075": {
+   "name": "千禧公園",
+   "leisure": "park",
+   "lat": 22.6787686,
+   "lng": 120.4994879,
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  "w144354321": {
+   "name": "和平公園",
+   "leisure": "park",
+   "lat": 22.6853725,
+   "lng": 120.5006252,
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  },
+  "w232206673": {
+   "name": "恆春鎮石牌公園",
+   "leisure": "park",
+   "lat": 22.0047357,
+   "lng": 120.7425545,
+   "districts": [
+    {
+     "level": 8,
+     "name": "恆春鎮"
+    }
+   ]
+  },
+  "w253033385": {
+   "name": "萬丹鄉公園",
+   "leisure": "park",
+   "lat": 22.5938174,
+   "lng": 120.4866488,
+   "districts": [
+    {
+     "level": 8,
+     "name": "萬丹鄉"
+    }
+   ]
+  },
+  "w310500937": {
+   "name": "新埤鄉綜合休閒公園",
+   "leisure": "park",
+   "lat": 22.4668105,
+   "lng": 120.5808035,
+   "districts": [
+    {
+     "level": 8,
+     "name": "新埤鄉"
+    }
+   ]
+  },
+  "w484589492": {
+   "name": "兒童公園",
+   "leisure": "park",
+   "lat": 22.4647773,
+   "lng": 120.4569053,
+   "districts": [
+    {
+     "level": 8,
+     "name": "東港鎮"
+    }
+   ]
+  },
+  "w905266594": {
+   "name": "蘭州街特色公園",
+   "leisure": "park",
+   "lat": 22.679908,
+   "lng": 120.4853306,
+   "districts": [
+    {
+     "level": 8,
+     "name": "屏東市"
+    }
+   ]
+  }
+ }
+}

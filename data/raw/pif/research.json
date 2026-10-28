@@ -35,9 +35,464 @@
    "label": "網路文章：小腹婆大世界 2021-12 屏東里港阿里港公園",
    "url": "https://fupo.tw/blog/post/ligangpark",
    "kind": "article"
+  },
+  "ipt-list": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 共融式公園 寶貝放電護照（總覽頁；頁面未標日期）",
+   "url": "https://www.i-pingtung.com/babysplayground",
+   "kind": "article"
+  },
+  "ipt-chaozhon": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 潮州特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/chaozhon",
+   "kind": "article"
+  },
+  "ipt-donggang": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 東港兒童公園（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/donggang",
+   "kind": "article"
+  },
+  "ipt-hengchun": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 恆春特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/hengchun",
+   "kind": "article"
+  },
+  "ipt-jhongjheng": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 車城特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/jhongjheng",
+   "kind": "article"
+  },
+  "ipt-laiyi": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 來義特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/laiyi",
+   "kind": "article"
+  },
+  "ipt-linbian": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 林邊特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/linbian",
+   "kind": "article"
+  },
+  "ipt-liuqiu": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 琉球共融公園（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/liuqiu",
+   "kind": "article"
+  },
+  "ipt-neipu": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 內埔共融遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/neipu",
+   "kind": "article"
+  },
+  "ipt-sinpi": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 新埤貓頭鷹共融公園（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/sinpi",
+   "kind": "article"
+  },
+  "ipt-wandan": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 萬丹特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/wandan",
+   "kind": "article"
+  },
+  "ipt-xinyuan": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 新園特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/xinyuan",
+   "kind": "article"
+  },
+  "ipt-linluo": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 麟洛特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/linluo",
+   "kind": "article"
+  },
+  "ipt-nanzhou": {
+   "label": "政府網站：屏東縣政府 屏東旅遊網 寶貝放電護照 南州特色遊戲場（頁面未標日期）",
+   "url": "https://www.i-pingtung.com/baby/nanzhou",
+   "kind": "article"
   }
  },
+ "parks": {
+  "r2954172": [
+   "ipt-neipu",
+   "屏東旅遊網「寶貝放電護照」介紹內埔共融遊戲場，總覽頁稱為「內埔六堆共融遊戲場」",
+   "2026-10-28"
+  ],
+  "r8902559": [
+   "ipt-chaozhon",
+   "屏東旅遊網「寶貝放電護照」介紹潮州的旗艦版共融遊戲場（潮好玩）",
+   "2026-10-28"
+  ],
+  "w1026885666": [
+   "ipt-list",
+   "屏東旅遊網「寶貝放電護照」總覽頁列有「幸福公園」共融遊戲場",
+   "2026-10-28"
+  ],
+  "w1030070103": [
+   "ipt-jhongjheng",
+   "屏東旅遊網「寶貝放電護照」介紹車城「洋蔥大福遊樂園」，在福安宮後方",
+   "2026-10-28"
+  ],
+  "w1030250947": [
+   "ipt-list",
+   "屏東旅遊網「寶貝放電護照」總覽頁列有「竹田謝馬湖共融公園」",
+   "2026-10-28"
+  ],
+  "w1124614007": [
+   "ipt-xinyuan",
+   "屏東旅遊網「寶貝放電護照」介紹新園仙隆宮旁的特色遊戲場",
+   "2026-10-28"
+  ],
+  "w1138183189": [
+   "ipt-laiyi",
+   "屏東旅遊網「寶貝放電護照」介紹新來義部落的原住民族特色遊戲場",
+   "2026-10-28"
+  ],
+  "w1155049494": [
+   "ipt-liuqiu",
+   "屏東旅遊網「寶貝放電護照」介紹琉球共融公園",
+   "2026-10-28"
+  ],
+  "w1225822090": [
+   "ipt-linbian",
+   "屏東旅遊網「寶貝放電護照」介紹林邊車站旁的「蓮霧飛天火車」遊戲場",
+   "2026-10-28"
+  ],
+  "w142232075": [
+   "ipt-list",
+   "屏東旅遊網「寶貝放電護照」總覽頁列有「屏東總圖共融遊戲場」；這座公園在縣立圖書館總館旁",
+   "2026-10-28"
+  ],
+  "w144354321": [
+   "ipt-list",
+   "屏東旅遊網「寶貝放電護照」總覽頁列有「屏東和平共融遊戲場」",
+   "2026-10-28"
+  ],
+  "w232206673": [
+   "ipt-hengchun",
+   "屏東旅遊網「寶貝放電護照」介紹「恆春特色遊戲場」，在西門石牌公園旁",
+   "2026-10-28"
+  ],
+  "w253033385": [
+   "ipt-wandan",
+   "屏東旅遊網「寶貝放電護照」介紹「萬丹特色遊戲場」，在萬丹游泳池前",
+   "2026-10-28"
+  ],
+  "w310500937": [
+   "ipt-sinpi",
+   "屏東旅遊網「寶貝放電護照」介紹新埤鄉綜合休閒公園裡的貓頭鷹共融遊戲場",
+   "2026-10-28"
+  ],
+  "w484589492": [
+   "ipt-donggang",
+   "屏東旅遊網「寶貝放電護照」介紹東港兒童公園的共融遊戲場",
+   "2026-10-28"
+  ],
+  "w905266594": [
+   "ipt-list",
+   "屏東旅遊網「寶貝放電護照」總覽頁列有「屏東蘭州共融遊戲場」",
+   "2026-10-28"
+  ]
+ },
  "places": {
+  "pif-osm-n10284328831": {
+   "slide": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有兩座水管滑梯（一彎一直）和一座磨石子滑梯"
+   ],
+   "zipline": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有可以擺盪滑行的溜索"
+   ],
+   "rope_net": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有攀爬網"
+   ],
+   "climbing": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有攀爬塊、輪胎和高低不一的原木攀爬架"
+   ],
+   "climbing_wall": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有攀岩塊"
+   ],
+   "swing": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "共 4 座鞦韆，有單人和汽座型"
+   ],
+   "nest_swing": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有鳥巢鞦韆"
+   ],
+   "spinner": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有可以多人坐進去的旋轉球"
+   ],
+   "sandpit": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "大部分遊具下方是沙坑"
+   ],
+   "toilet": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有廁所"
+   ],
+   "open_lawn": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "有小山坡草皮，周邊是大片綠地"
+   ],
+   "inclusive": [
+    "y",
+    "myjourney-2023-nanzhou",
+    "共融遊戲場，不同年齡的孩子可以一起玩"
+   ],
+   "water_play": [
+    "y",
+    "ipt-nanzhou",
+    "縣府網頁列有水舞鞦韆",
+    "2026-10-28"
+   ],
+   "bars": [
+    "y",
+    "ipt-nanzhou",
+    "縣府網頁寫遊具之間以 monkey bar 連結",
+    "2026-10-28"
+   ],
+   "lighting": [
+    "y",
+    "ipt-nanzhou",
+    "縣府網頁寫有太陽能發電座椅提供夜間照明",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-n6283977539": {
+   "slide": [
+    "y",
+    "cmeyy-2023-ligang",
+    "有海盜船造型溜滑梯和四線道的河馬溜滑梯"
+   ],
+   "climbing_wall": [
+    "y",
+    "cmeyy-2023-ligang",
+    "河馬溜滑梯旁有攀岩和拉繩"
+   ],
+   "nest_swing": [
+    "y",
+    "cmeyy-2023-ligang",
+    "有鳥巢鞦韆"
+   ],
+   "seesaw": [
+    "y",
+    "fupo-2021-ligang",
+    "有蹺蹺板（2021 年的文章）"
+   ],
+   "toilet": [
+    "y",
+    "cmeyy-2023-ligang",
+    "有公廁"
+   ]
+  },
+  "pif-osm-r2954172": {
+   "climbing_wall": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有攀爬牆",
+    "2026-10-28"
+   ],
+   "rope_net": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有攀爬網",
+    "2026-10-28"
+   ],
+   "slide": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有溜滑梯（9 公尺高的綜合型遊具）",
+    "2026-10-28"
+   ],
+   "swing": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有共融鞦韆",
+    "2026-10-28"
+   ],
+   "inclusive": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有共融鞦韆",
+    "2026-10-28"
+   ],
+   "water_play": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有消暑戲水區",
+    "2026-10-28"
+   ],
+   "sandpit": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有沙坑",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-neipu",
+    "縣府網頁列有公廁",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-r8902559": {
+   "slide": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有溜滑梯，另有 5 公尺高的躲貓貓瞭望台溜滑梯",
+    "2026-10-28"
+   ],
+   "swing": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有鞦韆與共融鞦韆",
+    "2026-10-28"
+   ],
+   "sandpit": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有大沙坑區",
+    "2026-10-28"
+   ],
+   "balance": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有平衡木",
+    "2026-10-28"
+   ],
+   "climbing": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有攀爬設施",
+    "2026-10-28"
+   ],
+   "rope_net": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有7.5 公尺高的雙塔攀爬網",
+    "2026-10-28"
+   ],
+   "seesaw": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有翹翹板",
+    "2026-10-28"
+   ],
+   "tree_house": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有躲貓貓瞭望台",
+    "2026-10-28"
+   ],
+   "inclusive": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有無障礙遊具與共融鞦韆",
+    "2026-10-28"
+   ],
+   "open_lawn": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有野餐大草皮",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有公廁",
+    "2026-10-28"
+   ],
+   "nursing": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有小孩館內的哺乳室與尿布台（週一到週日 9:00–17:00，國定假日休息）",
+    "2026-10-28"
+   ],
+   "lighting": [
+    "y",
+    "ipt-chaozhon",
+    "縣府網頁列有夜間點燈到晚上 9 點",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w1026582043": {
+   "slide": [
+    "y",
+    "bunny-2022-linluo",
+    "花轎四面共有七道滑梯：直道、彎道、旋轉和水管滑梯"
+   ],
+   "sandpit": [
+    "y",
+    "bunny-2022-linluo",
+    "遊具蓋在有圍欄的大沙坑上，進沙坑要脫鞋"
+   ],
+   "water_play": [
+    "y",
+    "ettoday-2022-linluo",
+    "有客家花布衣造型的灑水廊道，按按鈕會噴水霧（只在夏天開放）"
+   ],
+   "climbing_wall": [
+    "y",
+    "bunny-2022-linluo",
+    "有攀岩牆"
+   ],
+   "rope_net": [
+    "y",
+    "bunny-2022-linluo",
+    "有繩網攀爬"
+   ],
+   "climbing": [
+    "y",
+    "ettoday-2022-linluo",
+    "滑梯下有攀爬架，也可以爬攀爬桿上滑梯"
+   ],
+   "balance": [
+    "y",
+    "bunny-2022-linluo",
+    "有獨木橋和平衡木"
+   ],
+   "spinner": [
+    "y",
+    "bunny-2022-linluo",
+    "有旋轉架"
+   ],
+   "swing": [
+    "y",
+    "ipt-linluo",
+    "縣府網頁列有鞦韆",
+    "2026-10-28"
+   ],
+   "inclusive": [
+    "y",
+    "ipt-linluo",
+    "縣府網頁列有無障礙遊具",
+    "2026-10-28"
+   ],
+   "tunnel": [
+    "y",
+    "ipt-linluo",
+    "縣府網頁寫花轎造型遊具有隧道",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-linluo",
+    "縣府網頁寫公廁在台鐵麟洛車站",
+    "2026-10-28"
+   ]
+  },
   "pif-osm-w1027568185": {
    "slide": [
     "y",
@@ -120,6 +575,316 @@
     "屏東第一座共融公園"
    ]
   },
+  "pif-osm-w1030070103": {
+   "slide": [
+    "y",
+    "ipt-jhongjheng",
+    "縣府網頁列有9 公尺高的洋蔥大福溜滑梯",
+    "2026-10-28"
+   ],
+   "swing": [
+    "y",
+    "ipt-jhongjheng",
+    "縣府網頁列有親子同樂鞦韆",
+    "2026-10-28"
+   ],
+   "rope_net": [
+    "y",
+    "ipt-jhongjheng",
+    "縣府網頁列有蟲洞攀爬網",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-jhongjheng",
+    "縣府網頁列有公廁",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w1124614007": {
+   "rope_net": [
+    "y",
+    "ipt-xinyuan",
+    "縣府網頁列有攀爬網",
+    "2026-10-28"
+   ],
+   "climbing_wall": [
+    "y",
+    "ipt-xinyuan",
+    "縣府網頁列有攀岩牆",
+    "2026-10-28"
+   ],
+   "tunnel": [
+    "y",
+    "ipt-xinyuan",
+    "縣府網頁列有鑽籠",
+    "2026-10-28"
+   ],
+   "slide": [
+    "y",
+    "ipt-xinyuan",
+    "縣府網頁列有4 公尺與 6.5 公尺的溜滑梯",
+    "2026-10-28"
+   ],
+   "swing": [
+    "y",
+    "ipt-xinyuan",
+    "縣府網頁列有親子鞦韆",
+    "2026-10-28"
+   ],
+   "spinner": [
+    "y",
+    "ipt-xinyuan",
+    "縣府網頁列有旋轉盤",
+    "2026-10-28"
+   ],
+   "pushbike": [
+    "y",
+    "ipt-xinyuan",
+    "縣府網頁列有鴨蛋滑步車道",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "n",
+    "ipt-xinyuan",
+    "縣府網頁的公廁欄寫「無」",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w1138183189": {
+   "slide": [
+    "y",
+    "ipt-laiyi",
+    "縣府網頁列有百步蛇高塔的 2 道溜滑梯與部落瞭望亭溜滑梯",
+    "2026-10-28"
+   ],
+   "rope_net": [
+    "y",
+    "ipt-laiyi",
+    "縣府網頁列有刺福球攀爬網",
+    "2026-10-28"
+   ],
+   "balance": [
+    "y",
+    "ipt-laiyi",
+    "縣府網頁列有平衡小徑與跳樁平衡木",
+    "2026-10-28"
+   ],
+   "swing": [
+    "y",
+    "ipt-laiyi",
+    "縣府網頁列有共融鞦韆區",
+    "2026-10-28"
+   ],
+   "inclusive": [
+    "y",
+    "ipt-laiyi",
+    "縣府網頁列有共融鞦韆區，高塔有無障礙斜坡道",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "n",
+    "ipt-laiyi",
+    "縣府網頁的公廁欄寫「無」",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w1155049494": {
+   "slide": [
+    "y",
+    "ipt-liuqiu",
+    "縣府網頁列有溜滑梯與超大滑面滑道",
+    "2026-10-28"
+   ],
+   "open_lawn": [
+    "y",
+    "ipt-liuqiu",
+    "縣府網頁列有觀星草坪",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-liuqiu",
+    "縣府網頁列有公廁",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w1225822090": {
+   "swing": [
+    "y",
+    "ipt-linbian",
+    "縣府網頁列有盪鞦韆",
+    "2026-10-28"
+   ],
+   "slide": [
+    "y",
+    "ipt-linbian",
+    "縣府網頁列有溜滑梯（熱氣球車廂溜滑梯）",
+    "2026-10-28"
+   ],
+   "climbing": [
+    "y",
+    "ipt-linbian",
+    "縣府網頁列有攀爬架",
+    "2026-10-28"
+   ],
+   "balance": [
+    "y",
+    "ipt-linbian",
+    "縣府網頁列有平衡架",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-linbian",
+    "縣府網頁寫公廁在林邊車站內",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w232206673": {
+   "slide": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有攻城塔溜滑梯與高空滑梯",
+    "2026-10-28"
+   ],
+   "swing": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有親子同樂鞦韆",
+    "2026-10-28"
+   ],
+   "climbing_wall": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有樹屋攀岩場",
+    "2026-10-28"
+   ],
+   "rope_net": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有攀爬網",
+    "2026-10-28"
+   ],
+   "tree_house": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有六角樹屋",
+    "2026-10-28"
+   ],
+   "sandpit": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有多功能沙坑",
+    "2026-10-28"
+   ],
+   "water_play": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有水舞遊戲區與月琴噴泉",
+    "2026-10-28"
+   ],
+   "trampoline": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有月琴彈跳床",
+    "2026-10-28"
+   ],
+   "music": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有音樂遊具",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-hengchun",
+    "縣府網頁列有男廁、女廁及無障礙廁所",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w253033385": {
+   "climbing_wall": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有攀爬牆",
+    "2026-10-28"
+   ],
+   "rope_net": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有攀爬網",
+    "2026-10-28"
+   ],
+   "slide": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有雙塔溜滑梯",
+    "2026-10-28"
+   ],
+   "swing": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有共融鞦韆",
+    "2026-10-28"
+   ],
+   "inclusive": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有共融鞦韆",
+    "2026-10-28"
+   ],
+   "sandpit": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有有遮陽的塑木沙坑",
+    "2026-10-28"
+   ],
+   "zipline": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有空中滑索",
+    "2026-10-28"
+   ],
+   "water_play": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有消暑戲水區",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-wandan",
+    "縣府網頁列有男廁、女廁及無障礙廁所",
+    "2026-10-28"
+   ]
+  },
+  "pif-osm-w310500937": {
+   "slide": [
+    "y",
+    "ipt-sinpi",
+    "縣府網頁列有貓頭鷹主塔的 3 到 6 公尺高溜滑梯",
+    "2026-10-28"
+   ],
+   "rope_net": [
+    "y",
+    "ipt-sinpi",
+    "縣府網頁列有攀爬網",
+    "2026-10-28"
+   ],
+   "tunnel": [
+    "y",
+    "ipt-sinpi",
+    "縣府網頁列有鑽籠",
+    "2026-10-28"
+   ],
+   "toilet": [
+    "y",
+    "ipt-sinpi",
+    "縣府網頁列有公廁（含性別友善廁所）",
+    "2026-10-28"
+   ]
+  },
   "pif-osm-w400903246": {
    "slide": [
     "y",
@@ -157,135 +922,42 @@
     "有共融式遊戲區"
    ]
   },
-  "pif-osm-w1026582043": {
-   "slide": [
+  "pif-osm-w484589492": {
+   "swing": [
     "y",
-    "bunny-2022-linluo",
-    "花轎四面共有七道滑梯：直道、彎道、旋轉和水管滑梯"
+    "ipt-donggang",
+    "縣府網頁列有鞦韆",
+    "2026-10-28"
    ],
-   "sandpit": [
+   "rope_net": [
     "y",
-    "bunny-2022-linluo",
-    "遊具蓋在有圍欄的大沙坑上，進沙坑要脫鞋"
+    "ipt-donggang",
+    "縣府網頁列有攀爬網",
+    "2026-10-28"
    ],
    "water_play": [
     "y",
-    "ettoday-2022-linluo",
-    "有客家花布衣造型的灑水廊道，按按鈕會噴水霧（只在夏天開放）"
-   ],
-   "climbing_wall": [
-    "y",
-    "bunny-2022-linluo",
-    "有攀岩牆"
-   ],
-   "rope_net": [
-    "y",
-    "bunny-2022-linluo",
-    "有繩網攀爬"
-   ],
-   "climbing": [
-    "y",
-    "ettoday-2022-linluo",
-    "滑梯下有攀爬架，也可以爬攀爬桿上滑梯"
-   ],
-   "balance": [
-    "y",
-    "bunny-2022-linluo",
-    "有獨木橋和平衡木"
-   ],
-   "spinner": [
-    "y",
-    "bunny-2022-linluo",
-    "有旋轉架"
-   ]
-  },
-  "pif-osm-n10284328831": {
-   "slide": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有兩座水管滑梯（一彎一直）和一座磨石子滑梯"
-   ],
-   "zipline": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有可以擺盪滑行的溜索"
-   ],
-   "rope_net": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有攀爬網"
-   ],
-   "climbing": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有攀爬塊、輪胎和高低不一的原木攀爬架"
-   ],
-   "climbing_wall": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有攀岩塊"
-   ],
-   "swing": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "共 4 座鞦韆，有單人和汽座型"
-   ],
-   "nest_swing": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有鳥巢鞦韆"
-   ],
-   "spinner": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有可以多人坐進去的旋轉球"
-   ],
-   "sandpit": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "大部分遊具下方是沙坑"
-   ],
-   "toilet": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有廁所"
-   ],
-   "open_lawn": [
-    "y",
-    "myjourney-2023-nanzhou",
-    "有小山坡草皮，周邊是大片綠地"
+    "ipt-donggang",
+    "縣府網頁列有大樹下的戲水區",
+    "2026-10-28"
    ],
    "inclusive": [
     "y",
-    "myjourney-2023-nanzhou",
-    "共融遊戲場，不同年齡的孩子可以一起玩"
-   ]
-  },
-  "pif-osm-n6283977539": {
-   "slide": [
-    "y",
-    "cmeyy-2023-ligang",
-    "有海盜船造型溜滑梯和四線道的河馬溜滑梯"
+    "ipt-donggang",
+    "縣府網頁列有無障礙遊具",
+    "2026-10-28"
    ],
-   "climbing_wall": [
+   "open_lawn": [
     "y",
-    "cmeyy-2023-ligang",
-    "河馬溜滑梯旁有攀岩和拉繩"
-   ],
-   "nest_swing": [
-    "y",
-    "cmeyy-2023-ligang",
-    "有鳥巢鞦韆"
-   ],
-   "seesaw": [
-    "y",
-    "fupo-2021-ligang",
-    "有蹺蹺板（2021 年的文章）"
+    "ipt-donggang",
+    "縣府網頁列有大草坪活動區",
+    "2026-10-28"
    ],
    "toilet": [
     "y",
-    "cmeyy-2023-ligang",
-    "有公廁"
+    "ipt-donggang",
+    "縣府網頁列有男廁、女廁及無障礙廁所",
+    "2026-10-28"
    ]
   }
  }

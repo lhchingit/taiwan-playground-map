@@ -14,7 +14,7 @@ from pathlib import Path
 from lib.overpass import batched, is_in_query, overpass, parse_is_in
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = ["hsq", "tyc", "nwt", "txg", "khh", "tpe", "tnn", "chw"]
+CITIES = ["hsq", "tyc", "nwt", "txg", "khh", "tpe", "tnn", "chw", "pif"]
 KINDS = {"n": "node", "w": "way", "r": "relation"}
 
 

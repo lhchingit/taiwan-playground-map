@@ -133,7 +133,8 @@ def park_places(research, osm_parks, places, keys, city):
             d = distance_m(park, other)
             if d < MIN_DISTANCE_M:
                 errors.append(f"{where}：離 {other['name']}（{other['id']}）只有 {d:.0f} 公尺，可能是同一處")
-        ds = sorted(park.get("districts", []), key=lambda x: -x["level"])
+        # OSM 偶爾有沒有名稱的行政界（例如屏東縣來義鄉），跳過
+        ds = sorted((x for x in park.get("districts", []) if x.get("name")), key=lambda x: -x["level"])
         ok = isinstance(parks[ref], list) and len(parks[ref]) in (2, 3)
         note = parks[ref][1] if ok else ""
         kind = (sources.get(parks[ref][0]) or {}).get("kind") if ok else None
