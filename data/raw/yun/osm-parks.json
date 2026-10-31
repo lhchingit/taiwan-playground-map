@@ -1,0 +1,68 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-31",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w1158588668": {
+   "name": "虎尾632高地公園",
+   "leisure": "park",
+   "lat": 23.7130433,
+   "lng": 120.4265279,
+   "districts": [
+    {
+     "level": 8,
+     "name": "虎尾鎮"
+    }
+   ]
+  },
+  "w167708526": {
+   "name": "人文公園",
+   "leisure": "park",
+   "lat": 23.6969118,
+   "lng": 120.5334287,
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗六市"
+    }
+   ]
+  },
+  "w167823208": {
+   "name": "斗六膨鼠森林公園",
+   "leisure": "park",
+   "lat": 23.6969166,
+   "lng": 120.5299892,
+   "districts": [
+    {
+     "level": 8,
+     "name": "斗六市"
+    }
+   ]
+  },
+  "w737217868": {
+   "name": "西螺大橋親子公園戲水區",
+   "leisure": "park",
+   "lat": 23.8050053,
+   "lng": 120.4576734,
+   "districts": [
+    {
+     "level": 8,
+     "name": "西螺鎮"
+    }
+   ]
+  },
+  "w854178233": {
+   "name": "埤頭繪本公園",
+   "leisure": "park",
+   "lat": 23.7738657,
+   "lng": 120.4782534,
+   "districts": [
+    {
+     "level": 8,
+     "name": "西螺鎮"
+    }
+   ]
+  }
+ }
+}
