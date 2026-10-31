@@ -1,0 +1,236 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-31",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w256955013": {
+   "name": "興嘉公園",
+   "leisure": "park",
+   "lat": 23.46852,
+   "lng": 120.4351511,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w257941560": {
+   "name": "劉厝公園",
+   "leisure": "park",
+   "lat": 23.4676016,
+   "lng": 120.4160157,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w263609881": {
+   "name": "宣信公園",
+   "leisure": "park",
+   "lat": 23.4688412,
+   "lng": 120.4601249,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w263610270": {
+   "name": "崇文公園",
+   "leisure": "park",
+   "lat": 23.4709457,
+   "lng": 120.4521439,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w263744431": {
+   "name": "文雅公園",
+   "leisure": "park",
+   "lat": 23.4824223,
+   "lng": 120.4844983,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w465621868": {
+   "name": "南田公園",
+   "leisure": "park",
+   "lat": 23.470703,
+   "lng": 120.4559261,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w544481850": {
+   "name": "長榮公園",
+   "leisure": "park",
+   "lat": 23.484851,
+   "lng": 120.4577649,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w544689723": {
+   "name": "短竹公園",
+   "leisure": "park",
+   "lat": 23.4695694,
+   "lng": 120.4683459,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w544706379": {
+   "name": "友忠公園",
+   "leisure": "park",
+   "lat": 23.477187,
+   "lng": 120.4330444,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w545185167": {
+   "name": "中庄公園",
+   "leisure": "park",
+   "lat": 23.4963794,
+   "lng": 120.4501463,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w548372060": {
+   "name": "北社尾公園",
+   "leisure": "park",
+   "lat": 23.4934861,
+   "lng": 120.4252636,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w550415540": {
+   "name": "劉厝二號公園",
+   "leisure": "park",
+   "lat": 23.4637489,
+   "lng": 120.4176638,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w550535316": {
+   "name": "劉厝三號公園",
+   "leisure": "park",
+   "lat": 23.4609165,
+   "lng": 120.4159743,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w550807774": {
+   "name": "光路公園",
+   "leisure": "park",
+   "lat": 23.4599766,
+   "lng": 120.4416818,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w552057276": {
+   "name": "芳草公園",
+   "leisure": "park",
+   "lat": 23.4666566,
+   "lng": 120.4650406,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w556398719": {
+   "name": "湖內兒童公園",
+   "leisure": "park",
+   "lat": 23.4553731,
+   "lng": 120.4415829,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w563423882": {
+   "name": "仁愛兒童公園",
+   "leisure": "park",
+   "lat": 23.4674053,
+   "lng": 120.4434165,
+   "districts": [
+    {
+     "level": 7,
+     "name": "西區"
+    }
+   ]
+  },
+  "w566514896": {
+   "name": "南興公園",
+   "leisure": "park",
+   "lat": 23.4657104,
+   "lng": 120.4567758,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  },
+  "w574251485": {
+   "name": "頂庄公園",
+   "leisure": "park",
+   "lat": 23.4974839,
+   "lng": 120.4570907,
+   "districts": [
+    {
+     "level": 7,
+     "name": "東區"
+    }
+   ]
+  }
+ }
+}

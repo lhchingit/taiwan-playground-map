@@ -71,7 +71,7 @@
 | `txg` | 臺中市 | `taichung` | OSM＋公園綠地清冊補地址、面積；美樂地網站與兒童遊具開放資料（research.json） | `import_osm_city.py txg` |
 | `khh` | 高雄市 | `kaohsiung` | OSM | `import_osm_city.py khh` |
 | `tnn` | 臺南市 | `tainan` | 公園設施資料＋OSM 補充 | `import_tnn.py` |
-| `cyi` | 嘉義市 | `chiayi-city` | OSM | `import_osm_city.py cyi` |
+| `cyi` | 嘉義市 | `chiayi-city` | OSM；市府公園位置圖網頁（research.json） | `import_osm_city.py cyi` |
 | `chw` | 彰化縣 | `changhua` | OSM（名稱可疑：嚴格模式）；樂遊彰化公園網站（research.json） | `import_osm_city.py chw` |
 | `pif` | 屏東縣 | `pingtung` | OSM（名稱可疑：嚴格模式）；寶貝放電護照網頁（research.json） | `import_osm_city.py pif` |
 | `yun` | 雲林縣 | `yunlin` | OSM（名稱可疑：嚴格模式）；新聞與網路文章（research.json） | `import_osm_city.py yun` |
