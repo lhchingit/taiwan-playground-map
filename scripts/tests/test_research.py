@@ -142,6 +142,13 @@ class ParksTest(unittest.TestCase):
         research.apply(with_parks(), places, ["slide", "toilet"], "hsq", parks)
         self.assertEqual(places[-1]["source_coords"], "OpenStreetMap w9（leisure=playground 範圍中心）")
 
+    def test_node_coords_label(self):
+        # OSM 只畫成一個點的，座標說明寫「點」，不寫範圍中心
+        places = [place()]
+        parks = {"parks": {"n9": {"name": "兒9公園", "leisure": "park", "lat": 24.81, "lng": 121.01, "districts": []}}}
+        research.apply(with_parks({"n9": ["news-1", "測試"]}), places, ["slide", "toilet"], "hsq", parks)
+        self.assertEqual(places[-1]["source_coords"], "OpenStreetMap n9（leisure=park 點）")
+
     def test_unnamed_boundary_skipped(self):
         # 沒有名稱的行政界不當成行政區
         places = [place()]

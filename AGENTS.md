@@ -65,7 +65,7 @@
 | `hsc` | 新竹市 | `hsinchu-city` | 兒童遊戲場清冊＋網路資料（座標 OSM） | `build_seed.py` → `import_hccg.py` |
 | `hsq` | 新竹縣 | `hsinchu-county` | OSM | `import_osm_city.py hsq` |
 | `tyc` | 桃園市 | `taoyuan` | 桃園市公園＋OSM 補充 | `import_tycg.py` |
-| `mlc` | 苗栗縣 | `miaoli` | OSM | `import_osm_city.py mlc` |
+| `mlc` | 苗栗縣 | `miaoli` | OSM；新聞與網路文章（research.json） | `import_osm_city.py mlc` |
 | `tpe` | 臺北市 | `taipei` | 公園處設施資料（D21） | `import_pkl.py` |
 | `nwt` | 新北市 | `new-taipei` | OSM＋官方清單補地址 | `import_osm_city.py nwt` |
 | `txg` | 臺中市 | `taichung` | OSM＋公園綠地清冊補地址、面積；美樂地網站與兒童遊具開放資料（research.json） | `import_osm_city.py txg` |
