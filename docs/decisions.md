@@ -287,6 +287,7 @@
     - **嘉義市「公園位置圖」網頁（2026-10-31，嘉義市政府建設處 economic.chiayi.gov.tw/News2.aspx?n=56&sms=9454，35 頁）：** 沒有授權聲明，比照彰化、屏東網站當成 `article`，每頁一個來源。網頁寫明有兒童遊戲場（遊樂場、遊戲區）、OSM 有同名公園的才用 `parks` 上地圖；網頁大多沒有遊具清單，遊具留 `u`，只填明寫的廁所、照明、砂坑。只寫「預計規劃」的、帶狀公園中心點會跟其他場地混在一起的，列在 `data/review/cyi/site-unmapped.csv`。
   - **OSM 只畫了公園的遊戲場（2026-10-18，先用於新竹縣）：** OSM 公園（`leisure=park`）裡沒有標遊戲場，但新聞或文章寫明裡面有兒童遊戲場、而且寫的路口跟 OSM 公園位置對得上的，可以列在 `research.json` 的 `parks` 上地圖。
     - 名稱用 OSM 公園名稱，座標用公園範圍中心點（`scripts/fetch_osm_parks.py` → `osm-parks.json`），`source_coords` 註明「leisure=park 範圍中心」（OSM 標成 `leisure=playground` 的寫 playground）。
+    - 下載時會查中心點所在的縣市（OSM `admin_level=4`），跟要下載的縣市不同就停下來、不寫檔（2026-10-31 起；嘉義市實作時曾把嘉義縣民雄左岸公園的編號誤寫成北社尾公園）。
     - 中心點離現有場地不到 100 公尺的，可能是同一處，匯入中止。
     - 依據的來源與查證日期記在 `places.listing_source`／`listing_verified_at`（0032），場地頁的「場地依據」與「資料來源」會列出。
     - 新聞或文章用的名稱跟 OSM 不同時（例如 OSM「公16公園」就是文章說的「公兒30 蘑菇城堡」），寫在 `aka`，放進場地說明，不改名稱。
