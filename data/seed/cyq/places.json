@@ -37,6 +37,21 @@
    "label": "新聞：青年日報 2024-01 嘉義朴子藝術公園軍事營區脫胎換骨（Yahoo 新聞轉載）",
    "url": "https://tw.news.yahoo.com/%E5%98%89%E7%BE%A9%E6%9C%B4%E5%AD%90%E8%97%9D%E8%A1%93%E5%85%AC%E5%9C%92-%E8%BB%8D%E4%BA%8B%E7%87%9F%E5%8D%80%E8%84%AB%E8%83%8E%E6%8F%9B%E9%AA%A8-160000886.html",
    "kind": "news"
+  },
+  "bunnyann-2025-zaoan": {
+   "label": "網路文章：小兔小安 2025-04 民雄打貓親子廣場（早安公園）",
+   "url": "https://bunnyann.tw/?p=85309",
+   "kind": "article"
+  },
+  "udn-2026-dalin": {
+   "label": "新聞：聯合報 2026-06 大林「諸羅樹蛙」遊戲場啟用",
+   "url": "https://udn.com/news/story/7326/9576980",
+   "kind": "news"
+  },
+  "bunnyann-2024-space": {
+   "label": "網路文章：小兔小安 2024-04 水上北回二館太空教育館",
+   "url": "https://bunnyann.tw/space/",
+   "kind": "article"
   }
  },
  "labels": {
@@ -1194,6 +1209,807 @@
    "official_ref": [
     {
      "osm": "w586089286"
+    }
+   ],
+   "area_ha": null,
+   "city": "cyq"
+  },
+  {
+   "id": "cyq-osm-w1062516559",
+   "name": "北回歸線太空科學教育園區",
+   "district": "水上鄉",
+   "address": null,
+   "lat": 23.4513652,
+   "lng": 120.416881,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹北回二館太空教育館的戶外遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "bunnyann-2024-space",
+     "note": "有三層樓高的太空梭造型溜滑梯和旋轉溜滑梯",
+     "at": "2026-10-31"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1062516559（leisure=park 範圍中心）",
+   "listing_src": "bunnyann-2024-space",
+   "listing_at": "2026-10-31",
+   "official_ref": [
+    {
+     "osm": "w1062516559"
+    }
+   ],
+   "area_ha": null,
+   "city": "cyq"
+  },
+  {
+   "id": "cyq-osm-w496726538",
+   "name": "大林體育運動公園",
+   "district": "大林鎮",
+   "address": null,
+   "lat": 23.5991333,
+   "lng": 120.4572204,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：新聞寫大林運動公園的「諸羅樹蛙」親子共融遊戲場 2026 年 6 月啟用。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有青蛙造型高塔滑梯",
+     "at": "2026-10-31"
+    },
+    "swing": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有共融鞦韆",
+     "at": "2026-10-31"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有十字型蹺蹺板",
+     "at": "2026-10-31"
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有五孔轉轉盤",
+     "at": "2026-10-31"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有青蛙攀爬架",
+     "at": "2026-10-31"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有彈跳床",
+     "at": "2026-10-31"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有高、中、低單槓",
+     "at": "2026-10-31"
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有三角遮陽網",
+     "at": "2026-10-31"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "照明有更新",
+     "at": "2026-10-31"
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "udn-2026-dalin",
+     "note": "有共融鞦韆",
+     "at": "2026-10-31"
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w496726538（leisure=park 範圍中心）",
+   "listing_src": "udn-2026-dalin",
+   "listing_at": "2026-10-31",
+   "official_ref": [
+    {
+     "osm": "w496726538"
+    }
+   ],
+   "area_ha": null,
+   "city": "cyq"
+  },
+  {
+   "id": "cyq-osm-w544689757",
+   "name": "民雄早安公園",
+   "district": "民雄鄉",
+   "address": null,
+   "lat": 23.5543591,
+   "lng": 120.4258026,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹民雄早安公園裡的「打貓親子廣場」遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "有溜滑梯，含大型磨石子溜滑梯",
+     "at": "2026-10-31"
+    },
+    "swing": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "有鞦韆",
+     "at": "2026-10-31"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "有滑索",
+     "at": "2026-10-31"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "有攀爬網",
+     "at": "2026-10-31"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "遊戲小山丘可以鑽山洞",
+     "at": "2026-10-31"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "有貓咪造型沙坑",
+     "at": "2026-10-31"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "有廁所",
+     "at": "2026-10-31"
+    },
+    "handwash": {
+     "v": "y",
+     "src": "bunnyann-2025-zaoan",
+     "note": "洗手台有兒童用的設計",
+     "at": "2026-10-31"
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w544689757（leisure=park 範圍中心）",
+   "listing_src": "bunnyann-2025-zaoan",
+   "listing_at": "2026-10-31",
+   "official_ref": [
+    {
+     "osm": "w544689757"
     }
    ],
    "area_ha": null,

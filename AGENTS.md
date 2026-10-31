@@ -76,7 +76,7 @@
 | `pif` | 屏東縣 | `pingtung` | OSM（名稱可疑：嚴格模式）；寶貝放電護照網頁（research.json） | `import_osm_city.py pif` |
 | `yun` | 雲林縣 | `yunlin` | OSM（名稱可疑：嚴格模式）；新聞與網路文章（research.json） | `import_osm_city.py yun` |
 | `ila` | 宜蘭縣 | `yilan` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py ila` |
-| `cyq` | 嘉義縣 | `chiayi-county` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py cyq` |
+| `cyq` | 嘉義縣 | `chiayi-county` | OSM（名稱可疑：嚴格模式）；新聞與網路文章（research.json） | `import_osm_city.py cyq` |
 | `hua` | 花蓮縣 | `hualien` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py hua` |
 | `ttt` | 臺東縣 | `taitung` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py ttt` |
 | `kee` | 基隆市 | `keelung` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py kee` |
