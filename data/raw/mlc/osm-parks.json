@@ -1,0 +1,56 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-31",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "n12874575766": {
+   "name": "WAKHUL親子公園",
+   "leisure": "park",
+   "lat": 24.4686125,
+   "lng": 120.9461167,
+   "districts": [
+    {
+     "level": 8,
+     "name": "泰安鄉"
+    }
+   ]
+  },
+  "w198876061": {
+   "name": "蟠桃公園",
+   "leisure": "park",
+   "lat": 24.696469,
+   "lng": 120.9112518,
+   "districts": [
+    {
+     "level": 8,
+     "name": "頭份市"
+    }
+   ]
+  },
+  "w983263067": {
+   "name": "灣麗親子公園",
+   "leisure": "park",
+   "lat": 24.4475216,
+   "lng": 120.6565101,
+   "districts": [
+    {
+     "level": 8,
+     "name": "苑裡鎮"
+    }
+   ]
+  },
+  "w988794675": {
+   "name": "音樂公園",
+   "leisure": "park",
+   "lat": 24.6872707,
+   "lng": 120.9001847,
+   "districts": [
+    {
+     "level": 8,
+     "name": "頭份市"
+    }
+   ]
+  }
+ }
+}

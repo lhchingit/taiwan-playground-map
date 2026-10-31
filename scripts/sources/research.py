@@ -147,7 +147,8 @@ def park_places(research, osm_parks, places, keys, city):
             status="open", summary=text.format(note.strip()) + UNKNOWN_TAIL,
             attrs={k: {"v": "u", "src": None, "note": None, "at": None} for k in keys},
             parking={"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None},
-            source_coords=f"OpenStreetMap {ref}（leisure={park.get('leisure') or 'park'} 範圍中心）",
+            # OSM 只畫成一個點（node）的，沒有範圍，座標就是那個點
+            source_coords=f"OpenStreetMap {ref}（leisure={park.get('leisure') or 'park'} {'點' if ref.startswith('n') else '範圍中心'}）",
             listing_src=parks[ref][0] if ok else None,
             listing_at=parks[ref][2] if ok and len(parks[ref]) == 3 else research.get("verified_at"),
             official_ref=[{"osm": ref}],
