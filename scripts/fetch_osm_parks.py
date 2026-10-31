@@ -11,11 +11,23 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from fetch_city_bounds import CITIES as CITY_NAMES
 from lib.overpass import batched, is_in_query, overpass, parse_is_in
 
 ROOT = Path(__file__).resolve().parent.parent
 CITIES = ["hsq", "tyc", "nwt", "txg", "khh", "tpe", "tnn", "chw", "pif", "yun", "mlc", "cyq", "cyi"]
 KINDS = {"n": "node", "w": "way", "r": "relation"}
+
+
+def wrong_city(parks, name):
+    """中心點不在 name 這個縣市（OSM admin_level=4）的公園：[(ref, OSM 名稱, 實際所在的縣市，查不到是空字串)]。
+    編號打錯時（例如把嘉義縣的公園寫進嘉義市）在下載階段就擋下來；查不到縣市的也算錯。"""
+    out = []
+    for ref, p in parks.items():
+        found = [d["name"] for d in p.get("districts", []) if d["level"] == 4 and d["name"]]
+        if name not in found:
+            out.append((ref, p.get("name", ""), "、".join(found)))
+    return out
 
 
 def main():
@@ -38,9 +50,18 @@ def main():
     if missing:
         sys.exit(f"OSM 找不到：{missing}")
     where = batched([(r, (p["lat"], p["lng"])) for r, p in parks.items()],
-                    lambda batch: overpass(is_in_query(batch), tries=3)[1], parse_is_in)
+                    lambda batch: overpass(is_in_query(batch, levels="4|7|8"), tries=3)[1], parse_is_in)
     for r, p in parks.items():
         p["districts"] = where.get(r, {}).get("districts", [])
+    name = dict(CITY_NAMES)[city]
+    wrong = wrong_city(parks, name)
+    if wrong:
+        sys.exit(f"OSM 公園不在{name}（research.json 的 parks 編號可能打錯），沒有寫檔：\n  "
+                 + "\n  ".join(f"{r} {n}：" + (f"在{found}，不在{name}" if found else "查不到所在的縣市")
+                               for r, n, found in wrong))
+    for p in parks.values():
+        # 縣市只用來檢查；districts 只存鄉鎮市（跟 research.py 選行政區的方式一致）
+        p["districts"] = [d for d in p["districts"] if d["level"] != 4]
     out = {
         "source": "OpenStreetMap（Overpass API）",
         "license": "© OpenStreetMap contributors，ODbL",

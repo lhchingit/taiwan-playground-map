@@ -30,15 +30,15 @@ def overpass(q, tries=5):
     raise RuntimeError("unreachable")
 
 
-def is_in_query(points):
-    """每個點前面放一個 marker，回應依序是 marker、所在的公園、所在的鄉鎮市"""
+def is_in_query(points, levels="7|8"):
+    """每個點前面放一個 marker，回應依序是 marker、所在的公園、所在的行政區（levels：admin_level，預設鄉鎮市）"""
     parts = ["[out:json][timeout:180];"]
     for r, (lat, lon) in points:
         parts.append(
             f'make marker ref="{r}";out;'
             f"is_in({lat},{lon})->.x;"
             'area.x["leisure"="park"]["name"];out tags;'
-            'area.x["boundary"="administrative"]["admin_level"~"^(7|8)$"];out tags;'
+            f'area.x["boundary"="administrative"]["admin_level"~"^({levels})$"];out tags;'
         )
     return "".join(parts)
 
