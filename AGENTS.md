@@ -74,7 +74,7 @@
 | `cyi` | 嘉義市 | `chiayi-city` | OSM | `import_osm_city.py cyi` |
 | `chw` | 彰化縣 | `changhua` | OSM（名稱可疑：嚴格模式）；樂遊彰化公園網站（research.json） | `import_osm_city.py chw` |
 | `pif` | 屏東縣 | `pingtung` | OSM（名稱可疑：嚴格模式）；寶貝放電護照網頁（research.json） | `import_osm_city.py pif` |
-| `yun` | 雲林縣 | `yunlin` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py yun` |
+| `yun` | 雲林縣 | `yunlin` | OSM（名稱可疑：嚴格模式）；新聞與網路文章（research.json） | `import_osm_city.py yun` |
 | `ila` | 宜蘭縣 | `yilan` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py ila` |
 | `cyq` | 嘉義縣 | `chiayi-county` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py cyq` |
 | `hua` | 花蓮縣 | `hualien` | OSM（名稱可疑：嚴格模式） | `import_osm_city.py hua` |
