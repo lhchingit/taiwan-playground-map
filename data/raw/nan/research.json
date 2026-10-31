@@ -25,9 +25,113 @@
    "label": "網路文章：愛週末 LoveWeekend 2026-06 南投公園景點懶人包（竹山公園；2026-10 更新）",
    "url": "https://loveweekend.tw/taiwan-travel/nantou-park-guide/",
    "kind": "article"
+  },
+  "cna-2024-kubi": {
+   "label": "新聞：中央社 2024-10-11 草屯酷比親子運動公園啟用",
+   "url": "https://www.cna.com.tw/news/afe/202410110293.aspx",
+   "kind": "news"
+  },
+  "bunnyann-2026-kubi": {
+   "label": "網路文章：小兔小安 2026-04 草屯酷比親子運動公園",
+   "url": "https://bunnyann.tw/?p=137524",
+   "kind": "article"
+  },
+  "ltn-2024-caotun-zhushan": {
+   "label": "新聞：自由時報 2024-09-02 草屯、竹山兩座親子公園預計 10 月啟用",
+   "url": "https://news.ltn.com.tw/news/Nantou/breakingnews/4787297",
+   "kind": "news"
+  },
+  "bunnyann-2026-spapark": {
+   "label": "網路文章：小兔小安 2026-07 福興溫泉公園",
+   "url": "https://bunnyann.tw/spapark/",
+   "kind": "article"
   }
  },
+ "parks": {
+  "r2746383": [
+   "cna-2024-kubi",
+   "新聞寫草屯酷比親子運動公園 2024 年 10 月啟用，有遊戲主塔、攀爬網、砂坑等兒童遊具",
+   "2026-10-31"
+  ],
+  "w1419319706": [
+   "ltn-2024-caotun-zhushan",
+   "新聞介紹竹山大智路的竹夢親子共融公園，有溜滑梯、沙坑、鞦韆等遊戲區",
+   "2026-10-31"
+  ],
+  "w858413968": [
+   "bunnyann-2026-spapark",
+   "網路文章介紹埔里福興溫泉公園的親子遊戲設施",
+   "2026-10-31"
+  ],
+  "w197020660": [
+   "loveweekend-2026-nantou",
+   "網路文章寫集集軍史公園有溜滑梯、攀爬網和鞦韆",
+   "2026-10-31"
+  ]
+ },
  "places": {
+  "nan-osm-r2746383": {
+   "slide": [
+    "y",
+    "bunnyann-2026-kubi",
+    "三層樓高的貨櫃遊戲塔有長圓筒溜滑梯，另有滾輪溜滑梯和磨石子溜滑梯",
+    "2026-10-31"
+   ],
+   "climbing": [
+    "y",
+    "cna-2024-kubi",
+    "遊戲主塔可以攀爬",
+    "2026-10-31"
+   ],
+   "rope_net": [
+    "y",
+    "cna-2024-kubi",
+    "有攀爬網具",
+    "2026-10-31"
+   ],
+   "trampoline": [
+    "y",
+    "cna-2024-kubi",
+    "有彈跳床",
+    "2026-10-31"
+   ],
+   "spinner": [
+    "y",
+    "cna-2024-kubi",
+    "有共融遊戲轉盤和旋轉棒",
+    "2026-10-31"
+   ],
+   "sandpit": [
+    "y",
+    "cna-2024-kubi",
+    "有砂坑區",
+    "2026-10-31"
+   ],
+   "pushbike": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有高低起伏的滑輪賽道，可以騎滑步車",
+    "2026-10-31"
+   ],
+   "open_lawn": [
+    "y",
+    "bunnyann-2026-kubi",
+    "有寬敞的草地",
+    "2026-10-31"
+   ],
+   "toilet": [
+    "y",
+    "bunnyann-2026-kubi",
+    "公園旁有親子廁所",
+    "2026-10-31"
+   ],
+   "toddler_zone": [
+    "y",
+    "bunnyann-2026-kubi",
+    "有適合幼兒的親子遊戲區",
+    "2026-10-31"
+   ]
+  },
   "nan-osm-w1013976631": {
    "slide": [
     "y",
@@ -115,6 +219,119 @@
     "有廁所，但離遊戲區比較遠"
    ]
   },
+  "nan-osm-w1065422564": {
+   "slide": [
+    "y",
+    "loveweekend-2026-nantou",
+    "兒童遊樂區有溜滑梯"
+   ]
+  },
+  "nan-osm-w1419319706": {
+   "slide": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有竹筍造型的雙塔大型溜滑梯",
+    "2026-10-31"
+   ],
+   "spinner": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有旋轉飛盤和旋轉攀爬塔",
+    "2026-10-31"
+   ],
+   "climbing": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有旋轉攀爬塔",
+    "2026-10-31"
+   ],
+   "trampoline": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有彈跳網",
+    "2026-10-31"
+   ],
+   "sandpit": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有沙坑遊戲區",
+    "2026-10-31"
+   ],
+   "balance": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "沙坑區有平衡木",
+    "2026-10-31"
+   ],
+   "swing": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有鞦韆遊戲區",
+    "2026-10-31"
+   ],
+   "baby_swing": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有尿布型鞦韆",
+    "2026-10-31"
+   ],
+   "nest_swing": [
+    "y",
+    "ltn-2024-caotun-zhushan",
+    "有鳥巢鞦韆",
+    "2026-10-31"
+   ],
+   "zipline": [
+    "y",
+    "loveweekend-2026-nantou",
+    "有滑索",
+    "2026-10-31"
+   ],
+   "rope_net": [
+    "y",
+    "loveweekend-2026-nantou",
+    "有攀爬網",
+    "2026-10-31"
+   ],
+   "toilet": [
+    "y",
+    "loveweekend-2026-nantou",
+    "有廁所",
+    "2026-10-31"
+   ],
+   "handwash": [
+    "y",
+    "loveweekend-2026-nantou",
+    "有戶外洗手台",
+    "2026-10-31"
+   ]
+  },
+  "nan-osm-w197020660": {
+   "slide": [
+    "y",
+    "loveweekend-2026-nantou",
+    "有加了彩色遮陽棚的溜滑梯",
+    "2026-10-31"
+   ],
+   "rope_net": [
+    "y",
+    "loveweekend-2026-nantou",
+    "有攀爬網",
+    "2026-10-31"
+   ],
+   "swing": [
+    "y",
+    "loveweekend-2026-nantou",
+    "有鞦韆",
+    "2026-10-31"
+   ],
+   "toilet": [
+    "n",
+    "loveweekend-2026-nantou",
+    "文章寫園內沒有廁所",
+    "2026-10-31"
+   ]
+  },
   "nan-osm-w468282564": {
    "slide": [
     "y",
@@ -197,11 +414,48 @@
     "有粉筆塗鴉牆，作者去時沒有粉筆（2020 年的文章）"
    ]
   },
-  "nan-osm-w1065422564": {
-   "slide": [
+  "nan-osm-w858413968": {
+   "nest_swing": [
     "y",
-    "loveweekend-2026-nantou",
-    "兒童遊樂區有溜滑梯"
+    "bunnyann-2026-spapark",
+    "有鳥巢鞦韆",
+    "2026-10-31"
+   ],
+   "rope_net": [
+    "y",
+    "bunnyann-2026-spapark",
+    "有攀爬網",
+    "2026-10-31"
+   ],
+   "zipline": [
+    "y",
+    "bunnyann-2026-spapark",
+    "有滑索",
+    "2026-10-31"
+   ],
+   "trampoline": [
+    "y",
+    "bunnyann-2026-spapark",
+    "有彈跳網",
+    "2026-10-31"
+   ],
+   "tunnel": [
+    "y",
+    "bunnyann-2026-spapark",
+    "有可以鑽的山洞",
+    "2026-10-31"
+   ],
+   "sandpit": [
+    "y",
+    "bunnyann-2026-spapark",
+    "有沙坑，上方有遮陽布",
+    "2026-10-31"
+   ],
+   "toilet": [
+    "y",
+    "bunnyann-2026-spapark",
+    "有廁所",
+    "2026-10-31"
    ]
   }
  }
