@@ -1,0 +1,56 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-31",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "r2746383": {
+   "name": "酷比親子運動公園",
+   "leisure": "park",
+   "lat": 23.9779949,
+   "lng": 120.6940144,
+   "districts": [
+    {
+     "level": 8,
+     "name": "草屯鎮"
+    }
+   ]
+  },
+  "w1419319706": {
+   "name": "竹夢親子公園",
+   "leisure": "park",
+   "lat": 23.7528913,
+   "lng": 120.6873141,
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹山鎮"
+    }
+   ]
+  },
+  "w197020660": {
+   "name": "軍史公園",
+   "leisure": "park",
+   "lat": 23.8271553,
+   "lng": 120.7954256,
+   "districts": [
+    {
+     "level": 8,
+     "name": "集集鎮"
+    }
+   ]
+  },
+  "w858413968": {
+   "name": "福興溫泉區親子共榮公園",
+   "leisure": "park",
+   "lat": 24.0118021,
+   "lng": 120.9663656,
+   "districts": [
+    {
+     "level": 8,
+     "name": "埔里鎮"
+    }
+   ]
+  }
+ }
+}

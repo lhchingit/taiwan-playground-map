@@ -37,6 +37,26 @@
    "label": "網路文章：愛週末 LoveWeekend 2026-06 南投公園景點懶人包（竹山公園；2026-10 更新）",
    "url": "https://loveweekend.tw/taiwan-travel/nantou-park-guide/",
    "kind": "article"
+  },
+  "cna-2024-kubi": {
+   "label": "新聞：中央社 2024-10-11 草屯酷比親子運動公園啟用",
+   "url": "https://www.cna.com.tw/news/afe/202410110293.aspx",
+   "kind": "news"
+  },
+  "bunnyann-2026-kubi": {
+   "label": "網路文章：小兔小安 2026-04 草屯酷比親子運動公園",
+   "url": "https://bunnyann.tw/?p=137524",
+   "kind": "article"
+  },
+  "ltn-2024-caotun-zhushan": {
+   "label": "新聞：自由時報 2024-09-02 草屯、竹山兩座親子公園預計 10 月啟用",
+   "url": "https://news.ltn.com.tw/news/Nantou/breakingnews/4787297",
+   "kind": "news"
+  },
+  "bunnyann-2026-spapark": {
+   "label": "網路文章：小兔小安 2026-07 福興溫泉公園",
+   "url": "https://bunnyann.tw/spapark/",
+   "kind": "article"
   }
  },
  "labels": {
@@ -1467,6 +1487,1074 @@
     }
    ],
    "area_ha": 2.0,
+   "city": "nan"
+  },
+  {
+   "id": "nan-osm-r2746383",
+   "name": "酷比親子運動公園",
+   "district": "草屯鎮",
+   "address": null,
+   "lat": 23.9779949,
+   "lng": 120.6940144,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：新聞寫草屯酷比親子運動公園 2024 年 10 月啟用，有遊戲主塔、攀爬網、砂坑等兒童遊具。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "bunnyann-2026-kubi",
+     "note": "三層樓高的貨櫃遊戲塔有長圓筒溜滑梯，另有滾輪溜滑梯和磨石子溜滑梯",
+     "at": "2026-10-31"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "cna-2024-kubi",
+     "note": "有共融遊戲轉盤和旋轉棒",
+     "at": "2026-10-31"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "cna-2024-kubi",
+     "note": "遊戲主塔可以攀爬",
+     "at": "2026-10-31"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "cna-2024-kubi",
+     "note": "有攀爬網具",
+     "at": "2026-10-31"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "cna-2024-kubi",
+     "note": "有砂坑區",
+     "at": "2026-10-31"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "cna-2024-kubi",
+     "note": "有彈跳床",
+     "at": "2026-10-31"
+    },
+    "pushbike": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有高低起伏的滑輪賽道，可以騎滑步車",
+     "at": "2026-10-31"
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "bunnyann-2026-kubi",
+     "note": "有寬敞的草地",
+     "at": "2026-10-31"
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "y",
+     "src": "bunnyann-2026-kubi",
+     "note": "有適合幼兒的親子遊戲區",
+     "at": "2026-10-31"
+    },
+    "toilet": {
+     "v": "y",
+     "src": "bunnyann-2026-kubi",
+     "note": "公園旁有親子廁所",
+     "at": "2026-10-31"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap r2746383（leisure=park 範圍中心）",
+   "listing_src": "cna-2024-kubi",
+   "listing_at": "2026-10-31",
+   "official_ref": [
+    {
+     "osm": "r2746383"
+    }
+   ],
+   "area_ha": null,
+   "city": "nan"
+  },
+  {
+   "id": "nan-osm-w1419319706",
+   "name": "竹夢親子公園",
+   "district": "竹山鎮",
+   "address": null,
+   "lat": 23.7528913,
+   "lng": 120.6873141,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：新聞介紹竹山大智路的竹夢親子共融公園，有溜滑梯、沙坑、鞦韆等遊戲區。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有竹筍造型的雙塔大型溜滑梯",
+     "at": "2026-10-31"
+    },
+    "swing": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有鞦韆遊戲區",
+     "at": "2026-10-31"
+    },
+    "baby_swing": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有尿布型鞦韆",
+     "at": "2026-10-31"
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-31"
+    },
+    "zipline": {
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "有滑索",
+     "at": "2026-10-31"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有旋轉飛盤和旋轉攀爬塔",
+     "at": "2026-10-31"
+    },
+    "climbing": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有旋轉攀爬塔",
+     "at": "2026-10-31"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "有攀爬網",
+     "at": "2026-10-31"
+    },
+    "balance": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "沙坑區有平衡木",
+     "at": "2026-10-31"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有沙坑遊戲區",
+     "at": "2026-10-31"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "ltn-2024-caotun-zhushan",
+     "note": "有彈跳網",
+     "at": "2026-10-31"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "有廁所",
+     "at": "2026-10-31"
+    },
+    "handwash": {
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "有戶外洗手台",
+     "at": "2026-10-31"
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1419319706（leisure=park 範圍中心）",
+   "listing_src": "ltn-2024-caotun-zhushan",
+   "listing_at": "2026-10-31",
+   "official_ref": [
+    {
+     "osm": "w1419319706"
+    }
+   ],
+   "area_ha": null,
+   "city": "nan"
+  },
+  {
+   "id": "nan-osm-w197020660",
+   "name": "軍史公園",
+   "district": "集集鎮",
+   "address": null,
+   "lat": 23.8271553,
+   "lng": 120.7954256,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章寫集集軍史公園有溜滑梯、攀爬網和鞦韆。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "有加了彩色遮陽棚的溜滑梯",
+     "at": "2026-10-31"
+    },
+    "swing": {
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "有鞦韆",
+     "at": "2026-10-31"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "loveweekend-2026-nantou",
+     "note": "有攀爬網",
+     "at": "2026-10-31"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "n",
+     "src": "loveweekend-2026-nantou",
+     "note": "文章寫園內沒有廁所",
+     "at": "2026-10-31"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w197020660（leisure=park 範圍中心）",
+   "listing_src": "loveweekend-2026-nantou",
+   "listing_at": "2026-10-31",
+   "official_ref": [
+    {
+     "osm": "w197020660"
+    }
+   ],
+   "area_ha": null,
+   "city": "nan"
+  },
+  {
+   "id": "nan-osm-w858413968",
+   "name": "福興溫泉區親子共榮公園",
+   "district": "埔里鎮",
+   "address": null,
+   "lat": 24.0118021,
+   "lng": 120.9663656,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹埔里福興溫泉公園的親子遊戲設施。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "bunnyann-2026-spapark",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-10-31"
+    },
+    "zipline": {
+     "v": "y",
+     "src": "bunnyann-2026-spapark",
+     "note": "有滑索",
+     "at": "2026-10-31"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "bunnyann-2026-spapark",
+     "note": "有攀爬網",
+     "at": "2026-10-31"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "bunnyann-2026-spapark",
+     "note": "有可以鑽的山洞",
+     "at": "2026-10-31"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "bunnyann-2026-spapark",
+     "note": "有沙坑，上方有遮陽布",
+     "at": "2026-10-31"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "bunnyann-2026-spapark",
+     "note": "有彈跳網",
+     "at": "2026-10-31"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "bunnyann-2026-spapark",
+     "note": "有廁所",
+     "at": "2026-10-31"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w858413968（leisure=park 範圍中心）",
+   "listing_src": "bunnyann-2026-spapark",
+   "listing_at": "2026-10-31",
+   "official_ref": [
+    {
+     "osm": "w858413968"
+    }
+   ],
+   "area_ha": null,
    "city": "nan"
   }
  ]

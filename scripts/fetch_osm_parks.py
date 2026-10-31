@@ -15,7 +15,7 @@ from fetch_city_bounds import CITIES as CITY_NAMES
 from lib.overpass import batched, is_in_query, overpass, parse_is_in
 
 ROOT = Path(__file__).resolve().parent.parent
-CITIES = ["hsq", "tyc", "nwt", "txg", "khh", "tpe", "tnn", "chw", "pif", "yun", "mlc", "cyq", "cyi"]
+CITIES = ["hsq", "tyc", "nwt", "txg", "khh", "tpe", "tnn", "chw", "pif", "yun", "mlc", "cyq", "cyi", "nan"]
 KINDS = {"n": "node", "w": "way", "r": "relation"}
 
 
