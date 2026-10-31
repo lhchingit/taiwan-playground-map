@@ -1,0 +1,44 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-10-31",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w1062516559": {
+   "name": "北回歸線太空科學教育園區",
+   "leisure": "park",
+   "lat": 23.4513652,
+   "lng": 120.416881,
+   "districts": [
+    {
+     "level": 8,
+     "name": "水上鄉"
+    }
+   ]
+  },
+  "w496726538": {
+   "name": "大林體育運動公園",
+   "leisure": "park",
+   "lat": 23.5991333,
+   "lng": 120.4572204,
+   "districts": [
+    {
+     "level": 8,
+     "name": "大林鎮"
+    }
+   ]
+  },
+  "w544689757": {
+   "name": "民雄早安公園",
+   "leisure": "park",
+   "lat": 23.5543591,
+   "lng": 120.4258026,
+   "districts": [
+    {
+     "level": 8,
+     "name": "民雄鄉"
+    }
+   ]
+  }
+ }
+}
