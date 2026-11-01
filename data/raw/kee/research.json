@@ -15,7 +15,44 @@
    "label": "網路文章：bunnyann.tw 2026-07 基隆中正公園希望之丘",
    "url": "https://bunnyann.tw/gohope-0502/",
    "kind": "article"
+  },
+  "ltn-2026-baifu": {
+   "label": "新聞：自由時報 2026-04-03 七堵百福公園兒童遊戲場改造完成",
+   "url": "https://news.ltn.com.tw/news/life/breakingnews/5392177",
+   "kind": "news"
+  },
+  "udn-2026-nuannuan-water": {
+   "label": "新聞：聯合報 2026-06-26 基隆親水季 暖暖親水公園",
+   "url": "https://udn.com/news/story/7328/9590453",
+   "kind": "news"
+  },
+  "nownews-2018-xiaode": {
+   "label": "新聞：NOWnews 2018-03-22 信義區孝德公園溜滑梯地景",
+   "url": "https://www.nownews.com/news/2721820",
+   "kind": "news"
+  },
+  "tvbs-slides": {
+   "label": "網路文章：TVBS 食尚玩家 全台 20 大溜滑梯（頁面未標日期）",
+   "url": "https://supertaste.tvbs.com.tw/hot/320804",
+   "kind": "article"
   }
+ },
+ "parks": {
+  "w367635145": [
+   "ltn-2026-baifu",
+   "新聞寫七堵百福公園的兒童遊戲場改造完成，有赤蛙造型高塔溜滑梯",
+   "2026-11-01"
+  ],
+  "w158081014": [
+   "udn-2026-nuannuan-water",
+   "新聞寫暖暖親水公園在夏天親水季開放戲水設施",
+   "2026-11-01"
+  ],
+  "w1152339674": [
+   "nownews-2018-xiaode",
+   "新聞寫培德路與東峰街 42 巷口的孝德公園利用山坡地形做了溜滑梯地景",
+   "2026-11-01"
+  ]
  },
  "places": {
   "kee-osm-n4943448982": {
@@ -65,6 +102,20 @@
     "公園裡有籃球場和棒球場"
    ]
   },
+  "kee-osm-w1152339674": {
+   "slide": [
+    "y",
+    "tvbs-slides",
+    "利用山坡高低差做的彎曲長溜滑梯，約 20 公尺",
+    "2026-11-01"
+   ],
+   "bars": [
+    "y",
+    "tvbs-slides",
+    "有單槓",
+    "2026-11-01"
+   ]
+  },
   "kee-osm-w1486210997": {
    "slide": [
     "y",
@@ -76,6 +127,61 @@
     "bunnyann-2026-hope",
     "親子公園旁邊有公廁"
    ]
+  },
+  "kee-osm-w158081014": {
+   "water_play": [
+    "y",
+    "udn-2026-nuannuan-water",
+    "夏天親水季開放戲水設施，2026 年新增烏龜、螃蟹等造型設施",
+    "2026-11-01"
+   ],
+   "slide": [
+    "y",
+    "gofunit-keelung",
+    "戲水區周圍有磨石子大象溜滑梯",
+    "2026-11-01"
+   ]
+  },
+  "kee-osm-w367635145": {
+   "slide": [
+    "y",
+    "ltn-2026-baifu",
+    "有赤蛙造型的高塔溜滑梯",
+    "2026-11-01"
+   ],
+   "climbing": [
+    "y",
+    "ltn-2026-baifu",
+    "赤蛙高塔可以攀爬",
+    "2026-11-01"
+   ],
+   "swing": [
+    "y",
+    "ltn-2026-baifu",
+    "有鞦韆",
+    "2026-11-01"
+   ],
+   "trampoline": [
+    "y",
+    "ltn-2026-baifu",
+    "有彈跳床",
+    "2026-11-01"
+   ],
+   "seesaw": [
+    "y",
+    "ltn-2026-baifu",
+    "有赤蛙造型的蹺蹺板",
+    "2026-11-01"
+   ]
+  }
+ },
+ "parking": {
+  "kee-osm-w158081014": {
+   "type": "lot",
+   "fee": "paid",
+   "src": "udn-2026-nuannuan-water",
+   "note": "新聞寫開車可以停在水源橋下的收費停車場，再走進公園",
+   "at": "2026-11-01"
   }
  }
 }

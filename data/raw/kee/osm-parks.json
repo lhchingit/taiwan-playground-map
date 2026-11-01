@@ -1,0 +1,44 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-11-01",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w1152339674": {
+   "name": "孝德公園",
+   "leisure": "park",
+   "lat": 25.1308182,
+   "lng": 121.7736755,
+   "districts": [
+    {
+     "level": 7,
+     "name": "信義區"
+    }
+   ]
+  },
+  "w158081014": {
+   "name": "暖暖親水公園",
+   "leisure": "park",
+   "lat": 25.0997706,
+   "lng": 121.7348605,
+   "districts": [
+    {
+     "level": 7,
+     "name": "暖暖區"
+    }
+   ]
+  },
+  "w367635145": {
+   "name": "百福公園",
+   "leisure": "park",
+   "lat": 25.0884676,
+   "lng": 121.6942816,
+   "districts": [
+    {
+     "level": 7,
+     "name": "七堵區"
+    }
+   ]
+  }
+ }
+}
