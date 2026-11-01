@@ -1,0 +1,20 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-11-01",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w253422826": {
+   "name": "東海運動公園",
+   "leisure": "park",
+   "lat": 22.7444561,
+   "lng": 121.1421689,
+   "districts": [
+    {
+     "level": 8,
+     "name": "臺東市"
+    }
+   ]
+  }
+ }
+}
