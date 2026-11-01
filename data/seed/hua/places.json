@@ -22,6 +22,26 @@
    "label": "網路文章：1＋1＝3 玩學樂生活（小Yo之家）2019-04 花崗山親子戲沙池",
    "url": "https://yoyoman822.pixnet.net/blog/posts/5067955310",
    "kind": "article"
+  },
+  "bunnyann-2025-giraffe": {
+   "label": "網路文章：小兔小安 2025-08 花蓮長頸鹿親子公園",
+   "url": "https://bunnyann.tw/giraffe/",
+   "kind": "article"
+  },
+  "tvbs-hualien-parks": {
+   "label": "網路文章：TVBS 食尚玩家 花東親子景點（頁面未標日期，照片為 2023-08）",
+   "url": "https://supertaste.tvbs.com.tw/esg/344721",
+   "kind": "article"
+  },
+  "tvbs-owl": {
+   "label": "網路文章：TVBS 食尚玩家 花蓮貓頭鷹兒童遊戲公園（頁面未標日期，照片為 2023-07）",
+   "url": "https://supertaste.tvbs.com.tw/kids/343995",
+   "kind": "article"
+  },
+  "storm-2022-dongdamen": {
+   "label": "新聞：風傳媒 2022-10-31 東大門共融公園啟用",
+   "url": "https://www.storm.mg/article/4588989",
+   "kind": "news"
   }
  },
  "labels": {
@@ -2239,6 +2259,807 @@
    "official_ref": [
     {
      "osm": "w1286647241"
+    }
+   ],
+   "area_ha": null,
+   "city": "hua"
+  },
+  {
+   "id": "hua-osm-w1236763468",
+   "name": "東大門共融公園",
+   "district": "花蓮市",
+   "address": null,
+   "lat": 23.9713296,
+   "lng": 121.6119536,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：新聞寫縣府在東大門夜市南側打造共融公園，有親子遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1236763468（leisure=park 範圍中心）",
+   "listing_src": "storm-2022-dongdamen",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w1236763468"
+    }
+   ],
+   "area_ha": null,
+   "city": "hua"
+  },
+  {
+   "id": "hua-osm-w377256077",
+   "name": "花蓮市進豐生活園區",
+   "district": "花蓮市",
+   "address": null,
+   "lat": 23.9875281,
+   "lng": 121.6059565,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹進豐生活園區裡的貓頭鷹兒童遊戲公園。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "貓頭鷹城堡左右各有一座溜滑梯",
+     "at": "2026-11-01"
+    },
+    "swing": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "戶外有一般鞦韆",
+     "at": "2026-11-01"
+    },
+    "baby_swing": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "有尿布鞦韆",
+     "at": "2026-11-01"
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-11-01"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "有旋轉盤",
+     "at": "2026-11-01"
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "城堡旁有攀岩牆",
+     "at": "2026-11-01"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "有攀爬網橋，另有約兩層樓高的攀爬網架",
+     "at": "2026-11-01"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "攀爬網架下有大沙坑",
+     "at": "2026-11-01"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "y",
+     "src": "tvbs-owl",
+     "note": "貓頭鷹遊戲區是半開放空間，不怕日曬雨淋",
+     "at": "2026-11-01"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w377256077（leisure=park 範圍中心）",
+   "listing_src": "tvbs-owl",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w377256077"
+    }
+   ],
+   "area_ha": null,
+   "city": "hua"
+  },
+  {
+   "id": "hua-osm-w523193065",
+   "name": "長頸鹿親子公園",
+   "district": "花蓮市",
+   "address": null,
+   "lat": 23.9839437,
+   "lng": 121.6065873,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹長頸鹿親子公園的長頸鹿溜滑梯遊具和沙坑。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "bunnyann-2025-giraffe",
+     "note": "6 米高的長頸鹿遊具有溜滑梯",
+     "at": "2026-11-01"
+    },
+    "swing": {
+     "v": "y",
+     "src": "bunnyann-2025-giraffe",
+     "note": "有一組兒童鞦韆",
+     "at": "2026-11-01"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "y",
+     "src": "bunnyann-2025-giraffe",
+     "note": "遊戲區另一側有小攀岩",
+     "at": "2026-11-01"
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "bunnyann-2025-giraffe",
+     "note": "長頸鹿遊具上有攀爬網",
+     "at": "2026-11-01"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "tvbs-hualien-parks",
+     "note": "長頸鹿遊具有鑽籠",
+     "at": "2026-11-01"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "bunnyann-2025-giraffe",
+     "note": "長頸鹿遊具底下是沙坑",
+     "at": "2026-11-01"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "y",
+     "src": "bunnyann-2025-giraffe",
+     "note": "公園入口有打水器",
+     "at": "2026-11-01"
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "bunnyann-2025-giraffe",
+     "note": "有寬闊的草地",
+     "at": "2026-11-01"
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "n",
+     "src": "bunnyann-2025-giraffe",
+     "note": "文章寫公園沒有遮陽",
+     "at": "2026-11-01"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "street",
+    "fee": "u",
+    "spaces": null,
+    "src": "bunnyann-2025-giraffe",
+    "note": "文章寫公園旁有不少路邊停車格",
+    "at": "2026-11-01"
+   },
+   "source_coords": "OpenStreetMap w523193065（leisure=park 範圍中心）",
+   "listing_src": "bunnyann-2025-giraffe",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w523193065"
     }
    ],
    "area_ha": null,
