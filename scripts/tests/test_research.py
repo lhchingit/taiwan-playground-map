@@ -208,6 +208,67 @@ class ParksTest(unittest.TestCase):
         self.assert_error(with_parks({"w9": ["news-1", "有", "昨天"]}), osm_parks(), "parks w9：查證日期要是 YYYY-MM-DD")
 
 
+UNKNOWN_PARKING = {"type": "u", "fee": "u", "spaces": None, "src": None, "note": None, "at": None}
+
+
+def parked(pid="hsq-osm-w1", **parking):
+    p = place(pid)
+    p["parking"] = dict(UNKNOWN_PARKING, **parking)
+    return p
+
+
+def with_parking(**entry):
+    e = {"type": "lot", "fee": "free", "src": "news-1", "note": "對面有免費停車場"}
+    e.update(entry)
+    return data(places={}, parking={"hsq-osm-w1": e})
+
+
+class ParkingTest(unittest.TestCase):
+    def test_sets_parking_and_source(self):
+        places = [parked()]
+        sources = research.apply(with_parking(spaces=20), places, ["slide"])
+        self.assertEqual(places[0]["parking"], {"type": "lot", "fee": "free", "spaces": 20, "src": "news-1",
+                                                "note": "對面有免費停車場", "at": "2026-10-18"})
+        self.assertEqual(list(sources), ["news-1"])
+        # 說明講的是遊具，只有停車時不改
+        self.assertEqual(places[0]["summary"], place()["summary"])
+
+    def test_entry_date_and_unknown_type(self):
+        places = [parked()]
+        research.apply(with_parking(type="u", at="2026-11-01"), places, ["slide"])
+        self.assertEqual((places[0]["parking"]["type"], places[0]["parking"]["fee"],
+                          places[0]["parking"]["spaces"], places[0]["parking"]["at"]), ("u", "free", None, "2026-11-01"))
+
+    def test_new_park_place(self):
+        places = [parked()]
+        d = with_parks()
+        d["parking"] = {"hsq-osm-w9": {"type": "street", "fee": "u", "src": "news-1", "note": "可以路邊停車"}}
+        research.apply(d, places, ["slide", "toilet"], "hsq", osm_parks())
+        self.assertEqual(places[-1]["parking"]["type"], "street")
+
+    def assert_error(self, d, message, places=None):
+        with self.assertRaises(research.ResearchError) as e:
+            research.apply(d, places or [parked()], ["slide"])
+        self.assertIn(message, str(e.exception))
+
+    def test_errors(self):
+        self.assert_error(data(places={}, parking={"hsq-osm-w7": {"type": "lot", "fee": "u", "src": "news-1", "note": "有"}}),
+                          "hsq-osm-w7：沒有這個場地")
+        self.assert_error(data(places={}, parking={"hsq-osm-w1": ["lot", "news-1"]}), "格式要是")
+        self.assert_error(with_parking(type="parking"), "type 只能是")
+        self.assert_error(with_parking(fee="yes"), "fee 只能是")
+        self.assert_error(with_parking(type="u", fee="u"), "都是未知")
+        self.assert_error(with_parking(spaces=0), "spaces 要是正整數")
+        self.assert_error(with_parking(spaces="20"), "spaces 要是正整數")
+        self.assert_error(with_parking(type="street", spaces=5), "spaces 要是正整數，而且 type 是 lot")
+        self.assert_error(with_parking(src="blog-9"), "來源 blog-9 沒有定義")
+        self.assert_error(with_parking(note=" "), "停車：要有說明")
+        self.assert_error(with_parking(at="昨天"), "查證日期要是 YYYY-MM-DD")
+        self.assert_error(with_parking(fees="free"), "不認得的欄位 fees")
+        # 已經有其他來源（例如臺南開放資料）的停車資料：不覆蓋
+        self.assert_error(with_parking(), "已經有資料（來源 tnn）", places=[parked(type="lot", spaces=30, src="tnn")])
+
+
 class AkaTest(unittest.TestCase):
     def test_aka_goes_into_summary(self):
         places = [place()]

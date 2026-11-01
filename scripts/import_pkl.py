@@ -82,7 +82,8 @@ def main():
     seed_dir.mkdir(parents=True, exist_ok=True)
     write_json(seed_dir / "places.json", seed)
     write_csv(seed_dir / "places.csv", CSV_BASE + keys + ["parking_type", "parking_fee", "parking_spaces"],
-              [[p[k] for k in CSV_BASE] + [p["attrs"][k]["v"] for k in keys] + ["u", "u", ""] for p in places])
+              [[p[k] for k in CSV_BASE] + [p["attrs"][k]["v"] for k in keys]
+               + [p["parking"]["type"], p["parking"]["fee"], p["parking"]["spaces"] or ""] for p in places])
 
     out = ROOT / "data/review/tpe"
     out.mkdir(parents=True, exist_ok=True)

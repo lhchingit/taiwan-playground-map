@@ -553,5 +553,21 @@
     "2026-11-01"
    ]
   }
+ },
+ "parking": {
+  "ila-osm-w1104941563": {
+   "type": "lot",
+   "fee": "free",
+   "src": "gofunit-2024-erlong",
+   "note": "文章寫有免費停車場（08:00–20:00 開放）",
+   "at": "2026-11-01"
+  },
+  "ila-osm-w727431548": {
+   "type": "u",
+   "fee": "free",
+   "src": "bunnyann-2025-wuyuan",
+   "note": "文章寫可以免費停車",
+   "at": "2026-11-01"
+  }
  }
 }
