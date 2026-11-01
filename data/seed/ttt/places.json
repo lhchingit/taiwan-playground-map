@@ -47,6 +47,11 @@
    "label": "新聞：中時新聞網 2026-09 台東南京路攀爬公園遊具螺栓掉落（Yahoo 新聞轉載）",
    "url": "https://tw.news.yahoo.com/%E5%8F%B0%E6%9D%B1%E5%85%AC%E5%9C%92%E5%85%92%E7%AB%A5%E6%94%80%E7%88%AC%E9%81%8A%E5%85%B7-%E8%9E%BA%E6%A0%93%E6%8E%89%E8%90%BD-%E5%BB%A0%E5%95%86%E5%88%9D%E5%88%A4%E9%81%AD%E4%BA%BA%E7%82%BA%E6%8B%86%E5%8D%B8-091226075.html",
    "kind": "news"
+  },
+  "markhazyl-2026-taitung": {
+   "label": "網路文章：gowithmarkhazyl 2026-06-04 台東親子景點推薦",
+   "url": "https://gowithmarkhazyl.com/must-visit-places-for-family-in-taitung/",
+   "kind": "article"
   }
  },
  "labels": {
@@ -1204,6 +1209,273 @@
    "official_ref": [
     {
      "osm": "w916118471"
+    }
+   ],
+   "area_ha": null,
+   "city": "ttt"
+  },
+  {
+   "id": "ttt-osm-w253422826",
+   "name": "東海運動公園",
+   "district": "臺東市",
+   "address": null,
+   "lat": 22.7444561,
+   "lng": 121.1421689,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹太平溪旁的東海運動公園，有溜滑梯、鞦韆等遊具。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "markhazyl-2026-taitung",
+     "note": "遊具區有溜滑梯",
+     "at": "2026-11-01"
+    },
+    "swing": {
+     "v": "y",
+     "src": "markhazyl-2026-taitung",
+     "note": "遊具區有鞦韆",
+     "at": "2026-11-01"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "y",
+     "src": "markhazyl-2026-taitung",
+     "note": "遊具區有旋轉椅",
+     "at": "2026-11-01"
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "markhazyl-2026-taitung",
+     "note": "公園在太平溪旁，草地很大",
+     "at": "2026-11-01"
+    },
+    "ball_court": {
+     "v": "y",
+     "src": "markhazyl-2026-taitung",
+     "note": "公園旁有籃球場",
+     "at": "2026-11-01"
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w253422826（leisure=park 範圍中心）",
+   "listing_src": "markhazyl-2026-taitung",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w253422826"
     }
    ],
    "area_ha": null,
