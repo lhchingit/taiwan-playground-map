@@ -445,3 +445,11 @@
 - **原因：** Supabase 安全檢查回報 `public.spatial_ref_sys` 沒有 RLS。這是 PostGIS 自帶的座標系統表，擁有者是 `supabase_admin`，我們不能開 RLS 也收不回權限；實測任何人都能用匿名金鑰透過 API 刪改。刪掉 SRID 4326，審核的距離判斷、新增場地、匯入都會壞掉。
 - **做法：** migration 0033 把 PostGIS 移除後重裝在 `extensions`（不對 API 公開；PostGIS 不支援 `ALTER EXTENSION … SET SCHEMA`）。重裝前記下每一筆座標，重建 `geom` 欄位、索引與 `place_cards`、`naming_open` 兩個 view，逐筆比對座標，不同就整個退回。PostGIS 的函式也不再透過 API 公開。
 - **之後的 migration：** 用到 PostGIS 的 SECURITY DEFINER 函式，`search_path` 要寫 `public, extensions`（DB 測試會檢查）；view 與 SQL 裡可以寫 `extensions.ST_*`。
+
+## D32 只改資料的合併不重新部署（2026-11-01 決定）
+
+- **原因：** Vercel 通知 Deployment Storage 已用了免費額度（10 GB）的 75%。每次正式部署都會先產生全部場地頁，約 110 MB，而大部分合併只是資料 PR。網站不讀 `data/` 等資料夾，場地資料在資料庫，`pnpm seed` 匯入後會呼叫 `/api/revalidate` 更新頁面，所以不用重新部署。
+- **做法：** `vercel.json` 的 `ignoreCommand` 執行 `scripts/vercel-ignore.mjs`。它比較上一次成功部署（`VERCEL_GIT_PREVIOUS_SHA`）到現在改了哪些檔案；全部都在 `data/`、`docs/`、`scripts/`、`tests/`、`.github/` 或根目錄的 `*.md`，就跳過。
+- **照常建置：** 有其他檔案（`src/`、`public/`、`supabase/`、`package.json` 等）、沒有改動（後台按 Redeploy）或拿不到改動清單時。
+- **只建置正式環境：** `vercel.json` 會蓋掉後台的「Only build production」，所以腳本裡也會跳過不是 `production` 的部署。
+- **舊部署：** 已經有的部署要靠 Vercel 後台的 Deployment Retention Policy 清掉。
