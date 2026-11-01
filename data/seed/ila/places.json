@@ -62,6 +62,31 @@
    "label": "網路文章：愛貝客親子遊 員山公園（頁面未標日期）",
    "url": "https://www.abic.com.tw/place/view/id/11113",
    "kind": "article"
+  },
+  "gofunit-2024-erlong": {
+   "label": "網路文章：霏霓莫屬 2024-04 礁溪二龍之心（國 5 橋下龍舟主題公園）",
+   "url": "https://gofunit.com/%e5%ae%9c%e8%98%ad%e6%9c%80%e6%96%b0%e5%85%ac%e5%9c%92%ef%bc%8c%e6%a9%8b%e4%b8%8b%e7%9a%84%e9%be%8d%e8%88%9f%e9%80%a0%e5%9e%8b%e4%b8%bb%e9%a1%8c%ef%bc%8c%e4%b8%8d%e7%ae%a1%e6%99%b4%e9%9b%a8%e5%a4%a9/",
+   "kind": "article"
+  },
+  "yam-2021-dongshan": {
+   "label": "網路文章：蕃薯藤旅遊 2021-12 冬山鄉政公園",
+   "url": "https://travel.yam.com/article/126419",
+   "kind": "article"
+  },
+  "bunnyann-2025-wuyuan": {
+   "label": "網路文章：小兔小安 2025-09 武淵水火同源",
+   "url": "https://bunnyann.tw/bunnyann253/",
+   "kind": "article"
+  },
+  "ltn-2023-wuyuan": {
+   "label": "新聞：自由時報 2023-02 武淵水火同源啟動二期親子公園工程",
+   "url": "https://news.ltn.com.tw/news/life/breakingnews/4216280",
+   "kind": "news"
+  },
+  "yam-2023-zhangziyuan": {
+   "label": "網路文章：蕃薯藤旅遊 羅東景點（2023-06 更新）樟仔園文化園區",
+   "url": "https://travel.yam.com/article/125769",
+   "kind": "article"
   }
  },
  "labels": {
@@ -2544,6 +2569,1074 @@
    "official_ref": [
     {
      "osm": "w1547375337"
+    }
+   ],
+   "area_ha": null,
+   "city": "ila"
+  },
+  {
+   "id": "ila-osm-w1104941563",
+   "name": "礁溪二龍之心公園",
+   "district": "礁溪鄉",
+   "address": null,
+   "lat": 24.807239,
+   "lng": 121.7821258,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹國 5 高架橋下的二龍之心龍舟主題遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有龍舟造型溜滑梯和大碗公溜滑梯",
+     "at": "2026-11-01"
+    },
+    "swing": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有單排鞦韆和適合多人的波浪鞦韆",
+     "at": "2026-11-01"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有鳥巢鞦韆",
+     "at": "2026-11-01"
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有蹺蹺板",
+     "at": "2026-11-01"
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有搖搖樂",
+     "at": "2026-11-01"
+    },
+    "spinner": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有旋轉盤",
+     "at": "2026-11-01"
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "龍舟上有攀爬網，另有旋轉攀爬網",
+     "at": "2026-11-01"
+    },
+    "balance": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有鱷魚造型平衡木",
+     "at": "2026-11-01"
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "龍舟上有可以鑽的籠子",
+     "at": "2026-11-01"
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有沙坑",
+     "at": "2026-11-01"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "園內有廁所",
+     "at": "2026-11-01"
+    },
+    "handwash": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有洗手洗腳區",
+     "at": "2026-11-01"
+    },
+    "footwash": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "有洗手洗腳區",
+     "at": "2026-11-01"
+    },
+    "shade": {
+     "v": "y",
+     "src": "gofunit-2024-erlong",
+     "note": "在國 5 高架橋下，晴天雨天都能玩",
+     "at": "2026-11-01"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1104941563（leisure=park 範圍中心）",
+   "listing_src": "gofunit-2024-erlong",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w1104941563"
+    }
+   ],
+   "area_ha": null,
+   "city": "ila"
+  },
+  {
+   "id": "ila-osm-w1108911516",
+   "name": "冬山鄉政公園",
+   "district": "冬山鄉",
+   "address": null,
+   "lat": 24.6340606,
+   "lng": 121.7941216,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹冬山鄉政公園的兒童遊樂場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "yam-2021-dongshan",
+     "note": "有貓咪造型搖搖馬",
+     "at": "2026-11-01"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "yam-2021-dongshan",
+     "note": "有大型攀爬網",
+     "at": "2026-11-01"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "yam-2021-dongshan",
+     "note": "有大沙坑",
+     "at": "2026-11-01"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "y",
+     "src": "yam-2021-dongshan",
+     "note": "沙坑旁有水管遊戲組",
+     "at": "2026-11-01"
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "yam-2021-dongshan",
+     "note": "攀爬網中央是彈跳區，另有微彈跳床",
+     "at": "2026-11-01"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "y",
+     "src": "yam-2021-dongshan",
+     "note": "沙坑區旁有洗手區",
+     "at": "2026-11-01"
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w1108911516（leisure=park 範圍中心）",
+   "listing_src": "yam-2021-dongshan",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w1108911516"
+    }
+   ],
+   "area_ha": null,
+   "city": "ila"
+  },
+  {
+   "id": "ila-osm-w727431548",
+   "name": "武淵水火同源",
+   "district": "冬山鄉",
+   "address": null,
+   "lat": 24.6621918,
+   "lng": 121.8002807,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹武淵水火同源的溜滑梯、攀爬網和沙坑。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "bunnyann-2025-wuyuan",
+     "note": "有大碗公溜滑梯，草丘上另有滾輪溜滑梯",
+     "at": "2026-11-01"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "bunnyann-2025-wuyuan",
+     "note": "有攀爬網",
+     "at": "2026-11-01"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "bunnyann-2025-wuyuan",
+     "note": "有大沙坑",
+     "at": "2026-11-01"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "y",
+     "src": "ltn-2023-wuyuan",
+     "note": "遊憩區在國 5 高架橋下，可以遮陽避雨",
+     "at": "2026-11-01"
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w727431548（leisure=park 範圍中心）",
+   "listing_src": "bunnyann-2025-wuyuan",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w727431548"
+    }
+   ],
+   "area_ha": null,
+   "city": "ila"
+  },
+  {
+   "id": "ila-osm-w859549322",
+   "name": "樟仔園文化園區",
+   "district": "羅東鎮",
+   "address": null,
+   "lat": 24.6745284,
+   "lng": 121.761954,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：網路文章介紹樟仔園文化園區的山丘造型溜滑梯和沙坑。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "yam-2023-zhangziyuan",
+     "note": "有山丘造型溜滑梯",
+     "at": "2026-11-01"
+    },
+    "swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "zipline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "yam-2023-zhangziyuan",
+     "note": "溜滑梯滑下來就是沙坑",
+     "at": "2026-11-01"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    }
+   },
+   "parking": {
+    "type": "u",
+    "fee": "u",
+    "spaces": null,
+    "src": null,
+    "note": null,
+    "at": null
+   },
+   "source_coords": "OpenStreetMap w859549322（leisure=park 範圍中心）",
+   "listing_src": "yam-2023-zhangziyuan",
+   "listing_at": "2026-11-01",
+   "official_ref": [
+    {
+     "osm": "w859549322"
     }
    ],
    "area_ha": null,

@@ -1,0 +1,56 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-11-01",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w1104941563": {
+   "name": "礁溪二龍之心公園",
+   "leisure": "park",
+   "lat": 24.807239,
+   "lng": 121.7821258,
+   "districts": [
+    {
+     "level": 8,
+     "name": "礁溪鄉"
+    }
+   ]
+  },
+  "w1108911516": {
+   "name": "冬山鄉政公園",
+   "leisure": "park",
+   "lat": 24.6340606,
+   "lng": 121.7941216,
+   "districts": [
+    {
+     "level": 8,
+     "name": "冬山鄉"
+    }
+   ]
+  },
+  "w727431548": {
+   "name": "武淵水火同源",
+   "leisure": "park",
+   "lat": 24.6621918,
+   "lng": 121.8002807,
+   "districts": [
+    {
+     "level": 8,
+     "name": "冬山鄉"
+    }
+   ]
+  },
+  "w859549322": {
+   "name": "樟仔園文化園區",
+   "leisure": "park",
+   "lat": 24.6745284,
+   "lng": 121.761954,
+   "districts": [
+    {
+     "level": 8,
+     "name": "羅東鎮"
+    }
+   ]
+  }
+ }
+}

@@ -55,9 +55,90 @@
    "label": "網路文章：愛貝客親子遊 員山公園（頁面未標日期）",
    "url": "https://www.abic.com.tw/place/view/id/11113",
    "kind": "article"
+  },
+  "gofunit-2024-erlong": {
+   "label": "網路文章：霏霓莫屬 2024-04 礁溪二龍之心（國 5 橋下龍舟主題公園）",
+   "url": "https://gofunit.com/%e5%ae%9c%e8%98%ad%e6%9c%80%e6%96%b0%e5%85%ac%e5%9c%92%ef%bc%8c%e6%a9%8b%e4%b8%8b%e7%9a%84%e9%be%8d%e8%88%9f%e9%80%a0%e5%9e%8b%e4%b8%bb%e9%a1%8c%ef%bc%8c%e4%b8%8d%e7%ae%a1%e6%99%b4%e9%9b%a8%e5%a4%a9/",
+   "kind": "article"
+  },
+  "yam-2021-dongshan": {
+   "label": "網路文章：蕃薯藤旅遊 2021-12 冬山鄉政公園",
+   "url": "https://travel.yam.com/article/126419",
+   "kind": "article"
+  },
+  "bunnyann-2025-wuyuan": {
+   "label": "網路文章：小兔小安 2025-09 武淵水火同源",
+   "url": "https://bunnyann.tw/bunnyann253/",
+   "kind": "article"
+  },
+  "ltn-2023-wuyuan": {
+   "label": "新聞：自由時報 2023-02 武淵水火同源啟動二期親子公園工程",
+   "url": "https://news.ltn.com.tw/news/life/breakingnews/4216280",
+   "kind": "news"
+  },
+  "yam-2023-zhangziyuan": {
+   "label": "網路文章：蕃薯藤旅遊 羅東景點（2023-06 更新）樟仔園文化園區",
+   "url": "https://travel.yam.com/article/125769",
+   "kind": "article"
   }
  },
+ "parks": {
+  "w1104941563": [
+   "gofunit-2024-erlong",
+   "網路文章介紹國 5 高架橋下的二龍之心龍舟主題遊戲場",
+   "2026-11-01"
+  ],
+  "w1108911516": [
+   "yam-2021-dongshan",
+   "網路文章介紹冬山鄉政公園的兒童遊樂場",
+   "2026-11-01"
+  ],
+  "w727431548": [
+   "bunnyann-2025-wuyuan",
+   "網路文章介紹武淵水火同源的溜滑梯、攀爬網和沙坑",
+   "2026-11-01"
+  ],
+  "w859549322": [
+   "yam-2023-zhangziyuan",
+   "網路文章介紹樟仔園文化園區的山丘造型溜滑梯和沙坑",
+   "2026-11-01"
+  ]
+ },
  "places": {
+  "ila-osm-n10712095224": {
+   "slide": [
+    "y",
+    "pts-2025-zhongshan",
+    "報導寫到公園裡的兒童溜滑梯"
+   ]
+  },
+  "ila-osm-n12531281902": {
+   "slide": [
+    "y",
+    "ltn-2025-yangming",
+    "有磨石子溜滑梯"
+   ],
+   "climbing": [
+    "y",
+    "ltn-2025-yangming",
+    "有體能攀爬組"
+   ],
+   "climbing_wall": [
+    "y",
+    "bjsmile-2026-yangming",
+    "有攀岩牆"
+   ],
+   "balance": [
+    "y",
+    "bjsmile-2026-yangming",
+    "有平衡木"
+   ],
+   "inclusive": [
+    "y",
+    "ltn-2025-yangming",
+    "宜蘭市公所蓋的全齡共融公園，設有無障礙設施"
+   ]
+  },
   "ila-osm-n4538912045": {
    "slide": [
     "y",
@@ -103,6 +184,219 @@
     "y",
     "ltn-2026-ilsp",
     "「雨後彩虹平台」有大範圍的遮蔭"
+   ]
+  },
+  "ila-osm-n9868393996": {
+   "slide": [
+    "y",
+    "tvbs-ld9",
+    "海盜船遊戲場有 2 座溜滑梯（含螺旋滑梯），草坡上另有磨石子溜滑梯"
+   ],
+   "rope_net": [
+    "y",
+    "tvbs-ld9",
+    "海盜船遊戲場有攀爬網"
+   ],
+   "climbing_wall": [
+    "y",
+    "tvbs-ld9",
+    "有 2 面攀岩牆"
+   ],
+   "swing": [
+    "y",
+    "tvbs-ld9",
+    "有 3 種鞦韆，包括雙人鞦韆"
+   ],
+   "baby_swing": [
+    "y",
+    "tvbs-ld9",
+    "有適合小小孩的椅型鞦韆"
+   ],
+   "bars": [
+    "y",
+    "tvbs-ld9",
+    "山丘旁有單槓活動區"
+   ],
+   "water_play": [
+    "y",
+    "tvbs-ld9",
+    "有噴水池，預計 5 到 10 月開放，整點噴水"
+   ],
+   "inclusive": [
+    "y",
+    "tvbs-ld9",
+    "原本的兒童遊戲場改建成共融式遊戲場"
+   ]
+  },
+  "ila-osm-w1104941563": {
+   "slide": [
+    "y",
+    "gofunit-2024-erlong",
+    "有龍舟造型溜滑梯和大碗公溜滑梯",
+    "2026-11-01"
+   ],
+   "rope_net": [
+    "y",
+    "gofunit-2024-erlong",
+    "龍舟上有攀爬網，另有旋轉攀爬網",
+    "2026-11-01"
+   ],
+   "tunnel": [
+    "y",
+    "gofunit-2024-erlong",
+    "龍舟上有可以鑽的籠子",
+    "2026-11-01"
+   ],
+   "balance": [
+    "y",
+    "gofunit-2024-erlong",
+    "有鱷魚造型平衡木",
+    "2026-11-01"
+   ],
+   "swing": [
+    "y",
+    "gofunit-2024-erlong",
+    "有單排鞦韆和適合多人的波浪鞦韆",
+    "2026-11-01"
+   ],
+   "nest_swing": [
+    "y",
+    "gofunit-2024-erlong",
+    "有鳥巢鞦韆",
+    "2026-11-01"
+   ],
+   "spinner": [
+    "y",
+    "gofunit-2024-erlong",
+    "有旋轉盤",
+    "2026-11-01"
+   ],
+   "sandpit": [
+    "y",
+    "gofunit-2024-erlong",
+    "有沙坑",
+    "2026-11-01"
+   ],
+   "seesaw": [
+    "y",
+    "gofunit-2024-erlong",
+    "有蹺蹺板",
+    "2026-11-01"
+   ],
+   "spring_rider": [
+    "y",
+    "gofunit-2024-erlong",
+    "有搖搖樂",
+    "2026-11-01"
+   ],
+   "toilet": [
+    "y",
+    "gofunit-2024-erlong",
+    "園內有廁所",
+    "2026-11-01"
+   ],
+   "handwash": [
+    "y",
+    "gofunit-2024-erlong",
+    "有洗手洗腳區",
+    "2026-11-01"
+   ],
+   "footwash": [
+    "y",
+    "gofunit-2024-erlong",
+    "有洗手洗腳區",
+    "2026-11-01"
+   ],
+   "shade": [
+    "y",
+    "gofunit-2024-erlong",
+    "在國 5 高架橋下，晴天雨天都能玩",
+    "2026-11-01"
+   ]
+  },
+  "ila-osm-w1108911516": {
+   "rope_net": [
+    "y",
+    "yam-2021-dongshan",
+    "有大型攀爬網",
+    "2026-11-01"
+   ],
+   "trampoline": [
+    "y",
+    "yam-2021-dongshan",
+    "攀爬網中央是彈跳區，另有微彈跳床",
+    "2026-11-01"
+   ],
+   "sandpit": [
+    "y",
+    "yam-2021-dongshan",
+    "有大沙坑",
+    "2026-11-01"
+   ],
+   "water_play": [
+    "y",
+    "yam-2021-dongshan",
+    "沙坑旁有水管遊戲組",
+    "2026-11-01"
+   ],
+   "handwash": [
+    "y",
+    "yam-2021-dongshan",
+    "沙坑區旁有洗手區",
+    "2026-11-01"
+   ],
+   "spring_rider": [
+    "y",
+    "yam-2021-dongshan",
+    "有貓咪造型搖搖馬",
+    "2026-11-01"
+   ]
+  },
+  "ila-osm-w1484822743": {
+   "slide": [
+    "y",
+    "abic-yuanshan",
+    "有大小兩座磨石子溜滑梯，另有塑膠大型溜滑梯組"
+   ],
+   "swing": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有盪鞦韆"
+   ],
+   "sandpit": [
+    "y",
+    "abic-yuanshan",
+    "磨石子溜滑梯下方是戲沙區"
+   ],
+   "seesaw": [
+    "y",
+    "abic-yuanshan",
+    "有蹺蹺板"
+   ],
+   "spring_rider": [
+    "y",
+    "abic-yuanshan",
+    "有搖搖馬"
+   ],
+   "climbing": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有木頭攀爬遊戲區"
+   ],
+   "ball_court": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有小型籃球場"
+   ],
+   "toilet": [
+    "y",
+    "bjsmile-2025-yuanshan",
+    "有洗手間"
+   ],
+   "shade": [
+    "y",
+    "abic-yuanshan",
+    "磨石子溜滑梯旁有涼亭"
    ]
   },
   "ila-osm-w1547375337": {
@@ -219,127 +513,44 @@
     "有傳聲筒和音樂牆板"
    ]
   },
-  "ila-osm-n9868393996": {
+  "ila-osm-w727431548": {
    "slide": [
     "y",
-    "tvbs-ld9",
-    "海盜船遊戲場有 2 座溜滑梯（含螺旋滑梯），草坡上另有磨石子溜滑梯"
+    "bunnyann-2025-wuyuan",
+    "有大碗公溜滑梯，草丘上另有滾輪溜滑梯",
+    "2026-11-01"
    ],
    "rope_net": [
     "y",
-    "tvbs-ld9",
-    "海盜船遊戲場有攀爬網"
-   ],
-   "climbing_wall": [
-    "y",
-    "tvbs-ld9",
-    "有 2 面攀岩牆"
-   ],
-   "swing": [
-    "y",
-    "tvbs-ld9",
-    "有 3 種鞦韆，包括雙人鞦韆"
-   ],
-   "baby_swing": [
-    "y",
-    "tvbs-ld9",
-    "有適合小小孩的椅型鞦韆"
-   ],
-   "bars": [
-    "y",
-    "tvbs-ld9",
-    "山丘旁有單槓活動區"
-   ],
-   "water_play": [
-    "y",
-    "tvbs-ld9",
-    "有噴水池，預計 5 到 10 月開放，整點噴水"
-   ],
-   "inclusive": [
-    "y",
-    "tvbs-ld9",
-    "原本的兒童遊戲場改建成共融式遊戲場"
-   ]
-  },
-  "ila-osm-n12531281902": {
-   "slide": [
-    "y",
-    "ltn-2025-yangming",
-    "有磨石子溜滑梯"
-   ],
-   "climbing": [
-    "y",
-    "ltn-2025-yangming",
-    "有體能攀爬組"
-   ],
-   "climbing_wall": [
-    "y",
-    "bjsmile-2026-yangming",
-    "有攀岩牆"
-   ],
-   "balance": [
-    "y",
-    "bjsmile-2026-yangming",
-    "有平衡木"
-   ],
-   "inclusive": [
-    "y",
-    "ltn-2025-yangming",
-    "宜蘭市公所蓋的全齡共融公園，設有無障礙設施"
-   ]
-  },
-  "ila-osm-w1484822743": {
-   "slide": [
-    "y",
-    "abic-yuanshan",
-    "有大小兩座磨石子溜滑梯，另有塑膠大型溜滑梯組"
-   ],
-   "swing": [
-    "y",
-    "bjsmile-2025-yuanshan",
-    "有盪鞦韆"
+    "bunnyann-2025-wuyuan",
+    "有攀爬網",
+    "2026-11-01"
    ],
    "sandpit": [
     "y",
-    "abic-yuanshan",
-    "磨石子溜滑梯下方是戲沙區"
-   ],
-   "seesaw": [
-    "y",
-    "abic-yuanshan",
-    "有蹺蹺板"
-   ],
-   "spring_rider": [
-    "y",
-    "abic-yuanshan",
-    "有搖搖馬"
-   ],
-   "climbing": [
-    "y",
-    "bjsmile-2025-yuanshan",
-    "有木頭攀爬遊戲區"
-   ],
-   "ball_court": [
-    "y",
-    "bjsmile-2025-yuanshan",
-    "有小型籃球場"
-   ],
-   "toilet": [
-    "y",
-    "bjsmile-2025-yuanshan",
-    "有洗手間"
+    "bunnyann-2025-wuyuan",
+    "有大沙坑",
+    "2026-11-01"
    ],
    "shade": [
     "y",
-    "abic-yuanshan",
-    "磨石子溜滑梯旁有涼亭"
+    "ltn-2023-wuyuan",
+    "遊憩區在國 5 高架橋下，可以遮陽避雨",
+    "2026-11-01"
    ]
   },
-  "ila-osm-n10712095224": {
+  "ila-osm-w859549322": {
    "slide": [
     "y",
-    "pts-2025-zhongshan",
-    "報導寫到公園裡的兒童溜滑梯"
+    "yam-2023-zhangziyuan",
+    "有山丘造型溜滑梯",
+    "2026-11-01"
+   ],
+   "sandpit": [
+    "y",
+    "yam-2023-zhangziyuan",
+    "溜滑梯滑下來就是沙坑",
+    "2026-11-01"
    ]
   }
  }
