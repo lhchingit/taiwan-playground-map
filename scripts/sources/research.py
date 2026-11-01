@@ -5,9 +5,12 @@
    "sources": {"<來源 key>": {"label": "...", "url": "...", "kind": "news|article|open_data"}},
    "parks": {"<OSM ref>": ["<來源 key>", "<哪篇報導寫明裡面有遊戲場>", "<查證日期，選填>"]},
    "aka": {"<場地 id>": ["<來源 key>", "<新聞或文章用的名稱>"]},
-   "places": {"<場地 id>": {"<屬性 key>": ["y|n", "<來源 key>", "<重新整理的說明>", "<查證日期，選填>"]}}}
+   "places": {"<場地 id>": {"<屬性 key>": ["y|n", "<來源 key>", "<重新整理的說明>", "<查證日期，選填>"]}},
+   "parking": {"<場地 id>": {"type": "lot|street|none|u", "fee": "free|paid|u", "spaces": <格數，選填，只有 lot>,
+                            "src": "<來源 key>", "note": "<重新整理的說明>", "at": "<查證日期，選填>"}}}
 
 查證日期沒寫就用 verified_at；之後補查的項目寫自己的日期，先前查的項目日期不變。
+停車：type、fee、spaces 至少一項已知；type none（沒有停車）跟 n 一樣要來源明寫才填。
 
 parks：OSM 公園裡沒有標遊戲場、但新聞、文章或政府開放資料寫明有的，用公園範圍中心點（data/raw/<縣市>/osm-parks.json，
 scripts/fetch_osm_parks.py）建立場地，名稱用 OSM 公園名稱；依據的來源記在 listing_src／listing_at（places.listing_source）。
@@ -20,6 +23,9 @@ from datetime import date
 
 KINDS = {"news", "article", "open_data"}
 VALUES = {"y", "n"}
+PARKING_TYPES = {"lot", "street", "none", "u"}
+PARKING_FEES = {"free", "paid", "u"}
+PARKING_FIELDS = {"type", "fee", "spaces", "src", "note", "at"}
 UNKNOWN_TAIL = "遊具與設施還沒有資料，歡迎回報。"
 RESEARCHED_TAIL = "部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。"
 # 補的項目全部來自政府開放資料（例如臺中市公園設施資料-兒童遊具）
@@ -109,6 +115,41 @@ def validate_places(research, places, keys):
     return errors
 
 
+def validate_parking(research, places):
+    errors = []
+    sources = research.get("sources") or {}
+    by_id = {p["id"]: p for p in places}
+    for pid, e in (research.get("parking") or {}).items():
+        where = f"{pid} 停車"
+        if pid not in by_id:
+            errors.append(f"{pid}：沒有這個場地")
+        if not isinstance(e, dict):
+            errors.append(f"{where}：格式要是 {{type, fee, spaces（選填）, src, note, at（選填）}}")
+            continue
+        extra = sorted(set(e) - PARKING_FIELDS)
+        if extra:
+            errors.append(f"{where}：不認得的欄位 {'、'.join(extra)}")
+        if e.get("type") not in PARKING_TYPES:
+            errors.append(f"{where}：type 只能是 {'/'.join(sorted(PARKING_TYPES))}")
+        if e.get("fee") not in PARKING_FEES:
+            errors.append(f"{where}：fee 只能是 {'/'.join(sorted(PARKING_FEES))}")
+        spaces = e.get("spaces")
+        if spaces is not None and (type(spaces) is not int or spaces <= 0 or e.get("type") != "lot"):
+            errors.append(f"{where}：spaces 要是正整數，而且 type 是 lot")
+        if e.get("type") == "u" and e.get("fee") == "u" and spaces is None:
+            errors.append(f"{where}：type、fee、spaces 都是未知，不用填")
+        if e.get("src") not in sources:
+            errors.append(f"{where}：來源 {e.get('src')} 沒有定義")
+        if not (e.get("note") or "").strip():
+            errors.append(f"{where}：要有說明")
+        if "at" in e:
+            check_date(errors, where, [e["at"]], 0)
+        old = (by_id.get(pid) or {}).get("parking")
+        if old and old.get("src"):  # 已經有其他來源（例如臺南開放資料的停車位）：不覆蓋
+            errors.append(f"{where}：已經有資料（來源 {old['src']}），不覆蓋")
+    return errors
+
+
 def park_places(research, osm_parks, places, keys, city):
     """parks 列出的公園 → 新場地（不修改 places）。回傳 (新場地, 錯誤)"""
     errors, new = [], []
@@ -161,7 +202,8 @@ def park_places(research, osm_parks, places, keys, city):
 def apply(research, places, keys, city=None, osm_parks=None):
     """把查證結果寫進 places（就地修改，新公園加在最後），回傳要併進 seed 的來源"""
     new, park_errors = park_places(research, osm_parks, places, keys, city)
-    errors = validate_base(research) + park_errors + validate_places(research, places + new, keys)
+    errors = (validate_base(research) + park_errors + validate_places(research, places + new, keys)
+              + validate_parking(research, places + new))
     if errors:
         raise ResearchError("research.json 有錯：\n  " + "\n  ".join(errors))
     places.extend(new)
@@ -188,6 +230,10 @@ def apply(research, places, keys, city=None, osm_parks=None):
         elif attrs and RESEARCHED_TAIL not in p["summary"] and OPEN_DATA_TAIL not in p["summary"]:
             # 官方清冊的場地（桃園）原本就有遊具資料
             p["summary"] = p["summary"].rstrip("。") + "。" + tail
+    for pid, e in (research.get("parking") or {}).items():
+        by_id[pid]["parking"] = {"type": e["type"], "fee": e["fee"], "spaces": e.get("spaces"),
+                                 "src": e["src"], "note": e["note"].strip(), "at": e.get("at") or at}
     used = {e[1] for attrs in (research.get("places") or {}).values() for e in attrs.values()}
+    used |= {e["src"] for e in (research.get("parking") or {}).values()}
     used |= {e[0] for section in ("parks", "aka") for e in (research.get(section) or {}).values()}
     return {k: s for k, s in research["sources"].items() if k in used}
