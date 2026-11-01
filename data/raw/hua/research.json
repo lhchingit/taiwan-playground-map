@@ -15,9 +15,205 @@
    "label": "網路文章：1＋1＝3 玩學樂生活（小Yo之家）2019-04 花崗山親子戲沙池",
    "url": "https://yoyoman822.pixnet.net/blog/posts/5067955310",
    "kind": "article"
+  },
+  "bunnyann-2025-giraffe": {
+   "label": "網路文章：小兔小安 2025-08 花蓮長頸鹿親子公園",
+   "url": "https://bunnyann.tw/giraffe/",
+   "kind": "article"
+  },
+  "tvbs-hualien-parks": {
+   "label": "網路文章：TVBS 食尚玩家 花東親子景點（頁面未標日期，照片為 2023-08）",
+   "url": "https://supertaste.tvbs.com.tw/esg/344721",
+   "kind": "article"
+  },
+  "tvbs-owl": {
+   "label": "網路文章：TVBS 食尚玩家 花蓮貓頭鷹兒童遊戲公園（頁面未標日期，照片為 2023-07）",
+   "url": "https://supertaste.tvbs.com.tw/kids/343995",
+   "kind": "article"
+  },
+  "storm-2022-dongdamen": {
+   "label": "新聞：風傳媒 2022-10-31 東大門共融公園啟用",
+   "url": "https://www.storm.mg/article/4588989",
+   "kind": "news"
   }
  },
+ "parks": {
+  "w523193065": [
+   "bunnyann-2025-giraffe",
+   "網路文章介紹長頸鹿親子公園的長頸鹿溜滑梯遊具和沙坑",
+   "2026-11-01"
+  ],
+  "w377256077": [
+   "tvbs-owl",
+   "網路文章介紹進豐生活園區裡的貓頭鷹兒童遊戲公園",
+   "2026-11-01"
+  ],
+  "w1236763468": [
+   "storm-2022-dongdamen",
+   "新聞寫縣府在東大門夜市南側打造共融公園，有親子遊戲場",
+   "2026-11-01"
+  ]
+ },
  "places": {
+  "hua-osm-w145721908": {
+   "slide": [
+    "y",
+    "yoyo-2019-huagangshan",
+    "有從粉紅鯨魚嘴巴滑下的磨石子滑梯和貝殼磨石子滑梯（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "sandpit": [
+    "y",
+    "yoyo-2019-huagangshan",
+    "有大片白沙戲沙池，進去要脫鞋（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "climbing_wall": [
+    "y",
+    "yoyo-2019-huagangshan",
+    "有攀岩（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "climbing": [
+    "y",
+    "abic-huagangshan",
+    "有攀爬架（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "rope_net": [
+    "y",
+    "abic-huagangshan",
+    "有攀爬網（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "balance": [
+    "y",
+    "abic-huagangshan",
+    "有獨木橋和木樁（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "inclusive": [
+    "y",
+    "yoyo-2019-huagangshan",
+    "花蓮第一座共融特色遊戲場，主要遊具是共融遊具（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "toilet": [
+    "y",
+    "abic-huagangshan",
+    "有洗手間（2019 年的資料；2023 年曾暫停開放整修）"
+   ],
+   "handwash": [
+    "y",
+    "yoyo-2019-huagangshan",
+    "有小丑魚造型的洗手台（2019 年的資料；2023 年曾暫停開放整修）"
+   ]
+  },
+  "hua-osm-w377256077": {
+   "slide": [
+    "y",
+    "tvbs-owl",
+    "貓頭鷹城堡左右各有一座溜滑梯",
+    "2026-11-01"
+   ],
+   "rope_net": [
+    "y",
+    "tvbs-owl",
+    "有攀爬網橋，另有約兩層樓高的攀爬網架",
+    "2026-11-01"
+   ],
+   "climbing_wall": [
+    "y",
+    "tvbs-owl",
+    "城堡旁有攀岩牆",
+    "2026-11-01"
+   ],
+   "swing": [
+    "y",
+    "tvbs-owl",
+    "戶外有一般鞦韆",
+    "2026-11-01"
+   ],
+   "baby_swing": [
+    "y",
+    "tvbs-owl",
+    "有尿布鞦韆",
+    "2026-11-01"
+   ],
+   "nest_swing": [
+    "y",
+    "tvbs-owl",
+    "有鳥巢鞦韆",
+    "2026-11-01"
+   ],
+   "sandpit": [
+    "y",
+    "tvbs-owl",
+    "攀爬網架下有大沙坑",
+    "2026-11-01"
+   ],
+   "spinner": [
+    "y",
+    "tvbs-owl",
+    "有旋轉盤",
+    "2026-11-01"
+   ],
+   "shade": [
+    "y",
+    "tvbs-owl",
+    "貓頭鷹遊戲區是半開放空間，不怕日曬雨淋",
+    "2026-11-01"
+   ]
+  },
+  "hua-osm-w523193065": {
+   "slide": [
+    "y",
+    "bunnyann-2025-giraffe",
+    "6 米高的長頸鹿遊具有溜滑梯",
+    "2026-11-01"
+   ],
+   "rope_net": [
+    "y",
+    "bunnyann-2025-giraffe",
+    "長頸鹿遊具上有攀爬網",
+    "2026-11-01"
+   ],
+   "climbing_wall": [
+    "y",
+    "bunnyann-2025-giraffe",
+    "遊戲區另一側有小攀岩",
+    "2026-11-01"
+   ],
+   "tunnel": [
+    "y",
+    "tvbs-hualien-parks",
+    "長頸鹿遊具有鑽籠",
+    "2026-11-01"
+   ],
+   "sandpit": [
+    "y",
+    "bunnyann-2025-giraffe",
+    "長頸鹿遊具底下是沙坑",
+    "2026-11-01"
+   ],
+   "water_pump": [
+    "y",
+    "bunnyann-2025-giraffe",
+    "公園入口有打水器",
+    "2026-11-01"
+   ],
+   "swing": [
+    "y",
+    "bunnyann-2025-giraffe",
+    "有一組兒童鞦韆",
+    "2026-11-01"
+   ],
+   "open_lawn": [
+    "y",
+    "bunnyann-2025-giraffe",
+    "有寬闊的草地",
+    "2026-11-01"
+   ],
+   "shade": [
+    "n",
+    "bunnyann-2025-giraffe",
+    "文章寫公園沒有遮陽",
+    "2026-11-01"
+   ]
+  },
   "hua-osm-w698192088": {
    "slide": [
     "y",
@@ -74,53 +270,15 @@
     "bobowin-2025-nanbin",
     "有洗腳區"
    ]
-  },
-  "hua-osm-w145721908": {
-   "slide": [
-    "y",
-    "yoyo-2019-huagangshan",
-    "有從粉紅鯨魚嘴巴滑下的磨石子滑梯和貝殼磨石子滑梯（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "sandpit": [
-    "y",
-    "yoyo-2019-huagangshan",
-    "有大片白沙戲沙池，進去要脫鞋（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "climbing_wall": [
-    "y",
-    "yoyo-2019-huagangshan",
-    "有攀岩（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "climbing": [
-    "y",
-    "abic-huagangshan",
-    "有攀爬架（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "rope_net": [
-    "y",
-    "abic-huagangshan",
-    "有攀爬網（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "balance": [
-    "y",
-    "abic-huagangshan",
-    "有獨木橋和木樁（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "inclusive": [
-    "y",
-    "yoyo-2019-huagangshan",
-    "花蓮第一座共融特色遊戲場，主要遊具是共融遊具（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "toilet": [
-    "y",
-    "abic-huagangshan",
-    "有洗手間（2019 年的資料；2023 年曾暫停開放整修）"
-   ],
-   "handwash": [
-    "y",
-    "yoyo-2019-huagangshan",
-    "有小丑魚造型的洗手台（2019 年的資料；2023 年曾暫停開放整修）"
-   ]
+  }
+ },
+ "parking": {
+  "hua-osm-w523193065": {
+   "type": "street",
+   "fee": "u",
+   "src": "bunnyann-2025-giraffe",
+   "note": "文章寫公園旁有不少路邊停車格",
+   "at": "2026-11-01"
   }
  }
 }

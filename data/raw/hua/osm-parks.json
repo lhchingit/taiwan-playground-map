@@ -1,0 +1,44 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-11-01",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w1236763468": {
+   "name": "東大門共融公園",
+   "leisure": "park",
+   "lat": 23.9713296,
+   "lng": 121.6119536,
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  "w377256077": {
+   "name": "花蓮市進豐生活園區",
+   "leisure": "park",
+   "lat": 23.9875281,
+   "lng": 121.6059565,
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  },
+  "w523193065": {
+   "name": "長頸鹿親子公園",
+   "leisure": "park",
+   "lat": 23.9839437,
+   "lng": 121.6065873,
+   "districts": [
+    {
+     "level": 8,
+     "name": "花蓮市"
+    }
+   ]
+  }
+ }
+}
