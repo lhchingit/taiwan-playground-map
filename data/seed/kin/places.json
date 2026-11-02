@@ -7,6 +7,21 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "ltn-2021-juguang": {
+   "label": "新聞：自由時報 2021-05-02 金門首座共融式公園（莒光共融公園）啟用",
+   "url": "https://news.ltn.com.tw/news/life/breakingnews/3518813",
+   "kind": "news"
+  },
+  "vicky-2022-juguang": {
+   "label": "網路文章：Vicky 媽媽的遊樂園 2022-11-13 金門莒光共融公園遊戲場",
+   "url": "https://vickylife.com/kinmen-park/",
+   "kind": "article"
+  },
+  "abic-juguang": {
+   "label": "網路文章：愛貝客親子遊 莒光共融公園遊戲場（頁面未標日期，內容為 2021-05 啟用後）",
+   "url": "https://www.abic.com.tw/place/view/id/13790",
+   "kind": "article"
   }
  },
  "labels": {
@@ -108,5 +123,273 @@
    "inclusive": "共融遊具"
   }
  },
- "places": []
+ "places": [
+  {
+   "id": "kin-osm-w281067887",
+   "name": "莒光公園",
+   "district": "金城鎮",
+   "address": null,
+   "lat": 24.4274873,
+   "lng": 118.3169441,
+   "size": null,
+   "stay": null,
+   "stay_src": null,
+   "age_min": null,
+   "age_max": null,
+   "fee": null,
+   "indoor": false,
+   "hours": null,
+   "surface": null,
+   "status": "open",
+   "summary": "OpenStreetMap 標示的公園，新聞或網路文章寫明裡面有兒童遊戲場：新聞寫莒光湖畔的舊兒童樂園改建成金門第一座共融式公園遊戲場，2021 年 5 月啟用。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
+   "attrs": {
+    "slide": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有磨石子的迎風溜滑梯，可以爬上去或走樓梯",
+     "at": "2026-11-02"
+    },
+    "swing": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有好幾種鞦韆，包括旋轉鞦韆和親子鞦韆",
+     "at": "2026-11-02"
+    },
+    "baby_swing": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nest_swing": {
+     "v": "y",
+     "src": "ltn-2021-juguang",
+     "note": "有鳥巢鞦韆組",
+     "at": "2026-11-02"
+    },
+    "zipline": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有泰山滑索",
+     "at": "2026-11-02"
+    },
+    "seesaw": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "spring_rider": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "另一個角落有彈簧搖搖遊具",
+     "at": "2026-11-02"
+    },
+    "spinner": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "climbing": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有橘色的攀爬架",
+     "at": "2026-11-02"
+    },
+    "climbing_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "rope_net": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有鱟造型的攀爬網",
+     "at": "2026-11-02"
+    },
+    "balance": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "suspension_bridge": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tunnel": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "tree_house": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "sandpit": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有藍色的沙坑",
+     "at": "2026-11-02"
+    },
+    "sand_table": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_play": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "water_pump": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "trampoline": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有彩色彈跳床",
+     "at": "2026-11-02"
+    },
+    "pushbike": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "open_lawn": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有一大片草地，可以跑跳、野餐",
+     "at": "2026-11-02"
+    },
+    "ball_court": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "skatepark": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "bars": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "music": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "chalk_wall": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toddler_zone": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "toilet": {
+     "v": "y",
+     "src": "vicky-2022-juguang",
+     "note": "有乾淨的廁所",
+     "at": "2026-11-02"
+    },
+    "handwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "footwash": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "shade": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "transit": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "stroller": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "nursing": {
+     "v": "y",
+     "src": "abic-juguang",
+     "note": "公廁有尿布檯",
+     "at": "2026-11-02"
+    },
+    "lighting": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "food": {
+     "v": "u",
+     "src": null,
+     "note": null,
+     "at": null
+    },
+    "inclusive": {
+     "v": "y",
+     "src": "ltn-2021-juguang",
+     "note": "有輪椅使用者可以乘坐的無障礙鞦韆",
+     "at": "2026-11-02"
+    }
+   },
+   "parking": {
+    "type": "lot",
+    "fee": "u",
+    "spaces": null,
+    "src": "abic-juguang",
+    "note": "文章寫有停車場，沒寫是否收費",
+    "at": "2026-11-02"
+   },
+   "source_coords": "OpenStreetMap w281067887（leisure=park 範圍中心）",
+   "listing_src": "ltn-2021-juguang",
+   "listing_at": "2026-11-02",
+   "official_ref": [
+    {
+     "osm": "w281067887"
+    }
+   ],
+   "area_ha": null,
+   "city": "kin"
+  }
+ ]
 }

@@ -1,0 +1,118 @@
+{
+ "verified_at": "2026-11-02",
+ "sources": {
+  "ltn-2021-juguang": {
+   "label": "新聞：自由時報 2021-05-02 金門首座共融式公園（莒光共融公園）啟用",
+   "url": "https://news.ltn.com.tw/news/life/breakingnews/3518813",
+   "kind": "news"
+  },
+  "vicky-2022-juguang": {
+   "label": "網路文章：Vicky 媽媽的遊樂園 2022-11-13 金門莒光共融公園遊戲場",
+   "url": "https://vickylife.com/kinmen-park/",
+   "kind": "article"
+  },
+  "abic-juguang": {
+   "label": "網路文章：愛貝客親子遊 莒光共融公園遊戲場（頁面未標日期，內容為 2021-05 啟用後）",
+   "url": "https://www.abic.com.tw/place/view/id/13790",
+   "kind": "article"
+  }
+ },
+ "parks": {
+  "w281067887": [
+   "ltn-2021-juguang",
+   "新聞寫莒光湖畔的舊兒童樂園改建成金門第一座共融式公園遊戲場，2021 年 5 月啟用",
+   "2026-11-02"
+  ]
+ },
+ "places": {
+  "kin-osm-w281067887": {
+   "slide": [
+    "y",
+    "vicky-2022-juguang",
+    "有磨石子的迎風溜滑梯，可以爬上去或走樓梯",
+    "2026-11-02"
+   ],
+   "swing": [
+    "y",
+    "vicky-2022-juguang",
+    "有好幾種鞦韆，包括旋轉鞦韆和親子鞦韆",
+    "2026-11-02"
+   ],
+   "nest_swing": [
+    "y",
+    "ltn-2021-juguang",
+    "有鳥巢鞦韆組",
+    "2026-11-02"
+   ],
+   "inclusive": [
+    "y",
+    "ltn-2021-juguang",
+    "有輪椅使用者可以乘坐的無障礙鞦韆",
+    "2026-11-02"
+   ],
+   "zipline": [
+    "y",
+    "vicky-2022-juguang",
+    "有泰山滑索",
+    "2026-11-02"
+   ],
+   "trampoline": [
+    "y",
+    "vicky-2022-juguang",
+    "有彩色彈跳床",
+    "2026-11-02"
+   ],
+   "climbing": [
+    "y",
+    "vicky-2022-juguang",
+    "有橘色的攀爬架",
+    "2026-11-02"
+   ],
+   "rope_net": [
+    "y",
+    "vicky-2022-juguang",
+    "有鱟造型的攀爬網",
+    "2026-11-02"
+   ],
+   "spring_rider": [
+    "y",
+    "vicky-2022-juguang",
+    "另一個角落有彈簧搖搖遊具",
+    "2026-11-02"
+   ],
+   "sandpit": [
+    "y",
+    "vicky-2022-juguang",
+    "有藍色的沙坑",
+    "2026-11-02"
+   ],
+   "open_lawn": [
+    "y",
+    "vicky-2022-juguang",
+    "有一大片草地，可以跑跳、野餐",
+    "2026-11-02"
+   ],
+   "toilet": [
+    "y",
+    "vicky-2022-juguang",
+    "有乾淨的廁所",
+    "2026-11-02"
+   ],
+   "nursing": [
+    "y",
+    "abic-juguang",
+    "公廁有尿布檯",
+    "2026-11-02"
+   ]
+  }
+ },
+ "parking": {
+  "kin-osm-w281067887": {
+   "type": "lot",
+   "fee": "u",
+   "src": "abic-juguang",
+   "note": "文章寫有停車場，沒寫是否收費",
+   "at": "2026-11-02"
+  }
+ }
+}
