@@ -508,16 +508,16 @@ describe('pnpm seed', () => {
     expect(c?.launched_at).toBeNull();
   });
 
-  it('金門縣（OpenStreetMap，decisions D20）：場地 0 處（全部沒有名稱、在待命名清單），範圍用 OSM 行政界、未上線', async () => {
+  it('金門縣（OpenStreetMap，decisions D20）：場地只有網路文章查證的公園，OSM 遊戲場全部沒有名稱、在待命名清單，未上線', async () => {
     const kin = JSON.parse(readFileSync('data/seed/kin/places.json', 'utf8')) as SeedFile;
-    expect(kin.places).toEqual([]);
-    const [r] = await sql`SELECT count(*)::int AS n FROM places WHERE city = 'kin'`;
-    expect(r?.n).toBe(0);
-    const bounds = loadOsmBounds();
-    const [c] =
-      await sql`SELECT launched_at, bbox::float8[] AS bbox FROM cities WHERE code = 'kin'`;
+    expect(kin.places.map((p) => p.id)).toEqual(['kin-osm-w281067887']);
+    const [r] = await sql`
+      SELECT count(*)::int AS n,
+             count(*) FILTER (WHERE coord_source NOT LIKE 'OpenStreetMap %')::int AS not_osm
+      FROM places WHERE city = 'kin'`;
+    expect(r).toEqual({ n: 1, not_osm: 0 });
+    const [c] = await sql`SELECT launched_at FROM cities WHERE code = 'kin'`;
     expect(c?.launched_at).toBeNull();
-    expect(c?.bbox).toEqual(bounds.kin);
     const [n] = await sql`
       SELECT count(*)::int AS n FROM naming_candidates WHERE city = 'kin' AND status = 'open'`;
     const unnamed =

@@ -1,0 +1,20 @@
+{
+ "source": "OpenStreetMap（Overpass API）",
+ "license": "© OpenStreetMap contributors，ODbL",
+ "fetched": "2026-11-02",
+ "note": "research.json 的 parks 列出的公園：名稱、範圍中心點、所在鄉鎮市",
+ "parks": {
+  "w281067887": {
+   "name": "莒光公園",
+   "leisure": "park",
+   "lat": 24.4274873,
+   "lng": 118.3169441,
+   "districts": [
+    {
+     "level": 8,
+     "name": "金城鎮"
+    }
+   ]
+  }
+ }
+}
