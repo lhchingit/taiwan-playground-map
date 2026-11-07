@@ -7,6 +7,16 @@
    "label": "OpenStreetMap（© OpenStreetMap contributors, ODbL）",
    "url": "https://www.openstreetmap.org/copyright",
    "kind": "open_data"
+  },
+  "tvbs-guanyinting": {
+   "label": "網路文章：TVBS 食尚玩家 澎湖觀音亭共融遊戲區（頁面未標日期，內容是遊戲區 4 月開放後）",
+   "url": "https://supertaste.tvbs.com.tw/hot/331890",
+   "kind": "article"
+  },
+  "businesstoday-2025-penghu": {
+   "label": "新聞：商業周刊 2025-10-22 澎湖縣共融式遊戲場",
+   "url": "https://www.businesstoday.com.tw/article/category/80392/post/202510140030/",
+   "kind": "news"
   }
  },
  "labels": {
@@ -126,19 +136,19 @@
    "hours": null,
    "surface": null,
    "status": "open",
-   "summary": "OpenStreetMap 標示的遊戲場。遊具與設施還沒有資料，歡迎回報。",
+   "summary": "OpenStreetMap 標示的遊戲場。部分遊具資料來自網路文章或新聞，現場可能已經不同，歡迎回報。",
    "attrs": {
     "slide": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-guanyinting",
+     "note": "遊戲區有溜滑梯",
+     "at": "2026-11-03"
     },
     "swing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-guanyinting",
+     "note": "有鞦韆區",
+     "at": "2026-11-03"
     },
     "baby_swing": {
      "v": "u",
@@ -171,16 +181,16 @@
      "at": null
     },
     "spinner": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-guanyinting",
+     "note": "有旋轉遊具（天旋地轉）",
+     "at": "2026-11-03"
     },
     "climbing": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-guanyinting",
+     "note": "有山丘攀爬區和岩石造型的爬道",
+     "at": "2026-11-03"
     },
     "climbing_wall": {
      "v": "u",
@@ -189,10 +199,10 @@
      "at": null
     },
     "rope_net": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-guanyinting",
+     "note": "有攀爬網",
+     "at": "2026-11-03"
     },
     "balance": {
      "v": "u",
@@ -207,10 +217,10 @@
      "at": null
     },
     "tunnel": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-guanyinting",
+     "note": "有遊戲管",
+     "at": "2026-11-03"
     },
     "tree_house": {
      "v": "u",
@@ -243,10 +253,10 @@
      "at": null
     },
     "trampoline": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "tvbs-guanyinting",
+     "note": "有彈跳床",
+     "at": "2026-11-03"
     },
     "pushbike": {
      "v": "u",
@@ -315,10 +325,10 @@
      "at": null
     },
     "shade": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "n",
+     "src": "tvbs-guanyinting",
+     "note": "文章寫遊戲區沒有樹蔭，建議清晨或傍晚去",
+     "at": "2026-11-03"
     },
     "transit": {
      "v": "u",
@@ -351,10 +361,10 @@
      "at": null
     },
     "inclusive": {
-     "v": "u",
-     "src": null,
-     "note": null,
-     "at": null
+     "v": "y",
+     "src": "businesstoday-2025-penghu",
+     "note": "報導寫這裡是澎湖規模最大的共融式遊戲場",
+     "at": "2026-11-03"
     }
    },
    "parking": {
