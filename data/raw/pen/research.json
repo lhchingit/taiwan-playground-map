@@ -1,0 +1,73 @@
+{
+ "verified_at": "2026-11-03",
+ "sources": {
+  "tvbs-guanyinting": {
+   "label": "網路文章：TVBS 食尚玩家 澎湖觀音亭共融遊戲區（頁面未標日期，內容是遊戲區 4 月開放後）",
+   "url": "https://supertaste.tvbs.com.tw/hot/331890",
+   "kind": "article"
+  },
+  "businesstoday-2025-penghu": {
+   "label": "新聞：商業周刊 2025-10-22 澎湖縣共融式遊戲場",
+   "url": "https://www.businesstoday.com.tw/article/category/80392/post/202510140030/",
+   "kind": "news"
+  }
+ },
+ "places": {
+  "pen-osm-n13110201501": {
+   "slide": [
+    "y",
+    "tvbs-guanyinting",
+    "遊戲區有溜滑梯",
+    "2026-11-03"
+   ],
+   "swing": [
+    "y",
+    "tvbs-guanyinting",
+    "有鞦韆區",
+    "2026-11-03"
+   ],
+   "trampoline": [
+    "y",
+    "tvbs-guanyinting",
+    "有彈跳床",
+    "2026-11-03"
+   ],
+   "rope_net": [
+    "y",
+    "tvbs-guanyinting",
+    "有攀爬網",
+    "2026-11-03"
+   ],
+   "climbing": [
+    "y",
+    "tvbs-guanyinting",
+    "有山丘攀爬區和岩石造型的爬道",
+    "2026-11-03"
+   ],
+   "spinner": [
+    "y",
+    "tvbs-guanyinting",
+    "有旋轉遊具（天旋地轉）",
+    "2026-11-03"
+   ],
+   "tunnel": [
+    "y",
+    "tvbs-guanyinting",
+    "有遊戲管",
+    "2026-11-03"
+   ],
+   "inclusive": [
+    "y",
+    "businesstoday-2025-penghu",
+    "報導寫這裡是澎湖規模最大的共融式遊戲場",
+    "2026-11-03"
+   ],
+   "shade": [
+    "n",
+    "tvbs-guanyinting",
+    "文章寫遊戲區沒有樹蔭，建議清晨或傍晚去",
+    "2026-11-03"
+   ]
+  }
+ }
+}
