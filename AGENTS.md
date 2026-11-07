@@ -264,6 +264,7 @@ pnpm test:db                                       # 資料庫權限與 seed（�
 pnpm test:e2e                                      # 端對端（動到 UI 必跑）
 python -m unittest discover -s scripts/tests -t scripts
 python3 scripts/check_seed_hash.py                 # 重新產生 seed，逐位元組比對
+python3 scripts/check_opendata_update.py           # 政府開放資料有沒有更新（連網路、只讀；新竹市用 check_hccg_update.py）
 ```
 
 ### 常見陷阱
