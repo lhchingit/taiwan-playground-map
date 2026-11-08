@@ -239,6 +239,27 @@ data.gov.tw 上三份資料的「更新時間」與下載網址：
 6. **開 PR**，說明裡附上 issue 連結與報告重點。合併後關閉 issue。
 7. **匯入正式環境**：Actions → 資料作業 → `hsc` + `dry-run` 確認，再 `seed`（有場地被拿掉時勾 prune）。
 
+## 政府資料更新（其他縣市）
+
+臺北市、臺南市、桃園市、臺中市、新北市、南投縣的開放資料沒有排程，要更新時在本機手動檢查：
+
+```bash
+python3 scripts/check_opendata_update.py                 # 全部；也可以指定縣市：tpe tnn
+python3 scripts/check_opendata_update.py --report x.md   # 報告另外存成檔案
+```
+
+它在暫存資料夾執行各縣市的 `fetch_*.py`，repo 不會被改到。報告分兩層：
+
+- **原始資料**：筆數前後對照，依公園名稱列出新增、刪除、欄位變動。
+- **重新匯入後的場地**：場地增減，以及名稱、地址、面積、座標、屬性值、停車有變的場地。查證日期跟著擷取日期改，不算變動。
+
+結束碼 0 沒有變動／1 有變動／2 有縣市下載失敗。有變動時，**一個縣市一個 PR**：
+
+1. 在 repo 執行那個縣市的 `fetch_*.py`，再跑匯入（指令見 `scripts/check_seed_hash.py` 的 `CITIES`），看 `git diff data/`。
+2. 規則同新竹市：清單沒列出不代表沒有，**不可以改成「無」**；看不出是什麼設施的文字**不可推測**。
+3. `data/raw/txg/txg-play.json` 不參與匯入，有變動時要人工看 `research.json` 裡對應的項目。
+4. 跑完整測試、開 PR；合併後 `pnpm seed --city <縣市> --dry-run` 確認，再匯入（有場地被拿掉時加 `--prune`）。
+
 ## 出錯時
 
 - **資料有問題、要先收回**：`hsq` + `unlaunch`。訪客立刻看不到新竹縣（RLS＋清快取），資料留在資料庫，修正後重新 `seed`、`launch`。
