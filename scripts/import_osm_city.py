@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 from lib.attrs import attr_keys
-from lib.io import read_json, write_csv, write_json
+from lib.io import read_json, read_tsv, write_csv, write_json
 from lib.labels import labels_json
 from sources import park_lists, research
 from sources import osm_playgrounds as osm
@@ -50,7 +50,9 @@ def main():
     if config:  # 官方公園清單只補地址與面積（sources/park_lists.py）
         parks = read_json(ROOT / config["raw"])
         ordered = sorted(groups, key=lambda g: osm.ref_key(g["members"][0]["ref"]))  # 跟 to_places 相同的順序
-        official = park_lists.enrich(places, ordered, parks["records"], config)
+        aliases_path = raw_dir / "official-aliases.tsv"  # 官方改名、OSM 還是舊名時的人工對照
+        aliases = park_lists.read_aliases(read_tsv(aliases_path)) if aliases_path.exists() else None
+        official = park_lists.enrich(places, ordered, parks["records"], config, aliases)
         sources.update(config["sources"])
     research_path = raw_dir / "research.json"
     if research_path.exists():  # 人工查證的遊具與設施（sources/research.py）

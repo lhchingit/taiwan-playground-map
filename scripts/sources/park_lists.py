@@ -6,10 +6,14 @@
   - 比對鍵：去掉括號裡的用地編號與空白的名稱＋行政區（「南山公園 (公兒三)」→ 南山公園｜八里區）
   - 唯一相符才補；同一區有兩個以上相符的不補，列進 review
   - 不改名稱、座標與屬性；清冊的座標不使用
+  - 官方改名而 OSM 還是舊名時，用 data/raw/<縣市>/official-aliases.tsv 人工對照（要寫依據）；
+    對照的官方名稱在清單找不到就報錯，免得對照表過期沒人發現
+  - 清冊地址寫「河川區域無住址」等（NO_ADDRESS）當成沒有地址；沒有地址也沒有面積的不算對上（沒有東西可補）
 """
 import re
 
 PAREN = re.compile(r"[（(][^）)]*[）)]")
+NO_ADDRESS = {"河川區域無住址"}
 
 
 def base_name(name):
@@ -88,15 +92,40 @@ def index(records):
     return out
 
 
-def enrich(places, groups, raw_records, config):
+def read_aliases(rows):
+    """official-aliases.tsv 的列（OSM 公園名稱、行政區、官方名稱、依據；第一列是欄名）→ {OSM 鍵: 官方名稱}"""
+    out = {}
+    for r in rows[1:]:
+        if len(r) < 4 or not all(x.strip() for x in r[:4]):
+            raise ValueError(f"official-aliases.tsv 每一列都要有 OSM 公園名稱、行政區、官方名稱、依據：{r}")
+        out[f"{base_name(r[0])}｜{r[1].strip()}"] = r[2].strip()
+    return out
+
+
+def enrich(places, groups, raw_records, config, aliases=None):
     """依所在公園命名的場地補上地址（與面積）。places 與 groups 一一對應（osm.to_places 的順序）。
-    回傳 (matched, ambiguous)：[(場地, 清冊資料或候選清單)]"""
-    idx = index([config["record"](r) for r in raw_records])
+    aliases：{OSM 鍵: 官方名稱}（read_aliases）。回傳 (matched, ambiguous)：[(場地, 清冊資料或候選清單)]"""
+    records = []
+    for r in raw_records:
+        rec = config["record"](r)
+        if (rec["address"] or "").strip() in NO_ADDRESS:
+            rec["address"] = ""
+        records.append(rec)
+    idx = index(records)
+    aliases = aliases or {}
+    stale = [f"{k} → {v}" for k, v in aliases.items() if f"{base_name(v)}｜{k.split('｜')[1]}" not in idx]
+    if stale:
+        raise ValueError(f"official-aliases.tsv 的官方名稱在清單裡找不到（對照表可能過期）：{'、'.join(stale)}")
     matched, ambiguous = [], []
     for place, group in zip(places, groups):
         if not group["key"].startswith("park:"):
             continue  # 遊戲場自己的名稱或人工命名：不是公園名稱，不比對
-        hits = idx.get(f"{base_name(group['name'])}｜{group['district']}", [])
+        key = f"{base_name(group['name'])}｜{group['district']}"
+        if key in aliases:
+            key = f"{base_name(aliases[key])}｜{group['district']}"
+        hits = idx.get(key, [])
+        if len(hits) == 1 and not hits[0]["address"] and hits[0]["area_m2"] is None:
+            continue  # 沒有地址也沒有面積：沒有東西可補
         if len(hits) == 1:
             r = hits[0]
             place["address"] = r["address"] or None

@@ -62,6 +62,35 @@ class EnrichTest(unittest.TestCase):
         self.assertEqual(matched, [])
 
 
+    def test_alias_matches_renamed_park(self):
+        # 官方把「和平親子公園」改名成「和平公園」，OSM 還是舊名
+        aliases = park_lists.read_aliases([["OSM 公園名稱", "行政區", "官方名稱", "依據"],
+                                           ["和平親子公園", "板橋區", "和平公園", "新舊版同地址"]])
+        groups, _, _ = osm.group_playgrounds([pg("n1", park=(1, "和平親子公園")), pg("n2", park=(2, "南山公園"))], {})
+        groups = sorted(groups, key=lambda g: osm.ref_key(g["members"][0]["ref"]))
+        places = osm.to_places(groups, "nwt", ["slide"])
+        matched, _ = park_lists.enrich(places, groups, [official("1", "和平公園"), official("2", "南山公園(公一)")],
+                                       park_lists.CONFIGS["nwt"], aliases)
+        self.assertEqual(len(matched), 2)  # 對照表沒列的照舊比對
+        self.assertEqual(places[0]["name"], "和平親子公園")  # 不改名稱
+
+    def test_stale_alias_is_an_error(self):
+        aliases = park_lists.read_aliases([["h"], ["和平親子公園", "板橋區", "和平公園", "依據"]])
+        with self.assertRaisesRegex(ValueError, "找不到"):
+            park_lists.enrich([], [], [official("1", "南山公園")], park_lists.CONFIGS["nwt"], aliases)
+
+    def test_alias_needs_reason(self):
+        with self.assertRaisesRegex(ValueError, "依據"):
+            park_lists.read_aliases([["h"], ["和平親子公園", "板橋區", "和平公園", ""]])
+
+    def test_no_address_is_not_a_match(self):
+        places, matched, _ = self.run_enrich([pg("n1", park=(1, "福和運動公園"))],
+                                             [official("2", "福和運動公園", address="河川區域無住址")])
+        self.assertIsNone(places[0]["address"])
+        self.assertEqual(places[0]["official_ref"], [r for r in places[0]["official_ref"] if "ntpc_seqno" not in r])
+        self.assertNotIn("地址來自", places[0]["summary"])
+        self.assertEqual(matched, [])
+
     def test_area_not_set_for_new_taipei(self):
         places, _, _ = self.run_enrich([pg("n1", park=(1, "南山公園"))], [official("2", "南山公園")])
         self.assertIsNone(places[0]["area_ha"])

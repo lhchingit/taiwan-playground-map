@@ -257,6 +257,7 @@ python3 scripts/check_opendata_update.py --report x.md   # 報告另外存成檔
 
 1. 在 repo 執行那個縣市的 `fetch_*.py`，再跑匯入（指令見 `scripts/check_seed_hash.py` 的 `CITIES`），看 `git diff data/`。
 2. 規則同新竹市：清單沒列出不代表沒有，**不可以改成「無」**；看不出是什麼設施的文字**不可推測**。
+   官方清單改名、OSM 還是舊名時，在 `data/raw/<縣市>/official-aliases.tsv` 加一列人工對照，寫明依據（例如新舊版同地址）。
 3. `data/raw/txg/txg-play.json` 不參與匯入，有變動時要人工看 `research.json` 裡對應的項目。
 4. 跑完整測試、開 PR；合併後 `pnpm seed --city <縣市> --dry-run` 確認，再匯入（有場地被拿掉時加 `--prune`）。
 
