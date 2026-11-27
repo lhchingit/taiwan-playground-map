@@ -265,6 +265,7 @@ pnpm test:e2e                                      # 端對端（動到 UI 必�
 python -m unittest discover -s scripts/tests -t scripts
 python3 scripts/check_seed_hash.py                 # 重新產生 seed，逐位元組比對
 python3 scripts/check_opendata_update.py           # 政府開放資料有沒有更新（連網路、只讀；新竹市用 check_hccg_update.py）
+python3 scripts/check_osm_update.py                # OSM 遊戲場有沒有變動（連網路、只讀；新竹市以外 21 個縣市）
 ```
 
 ### 常見陷阱

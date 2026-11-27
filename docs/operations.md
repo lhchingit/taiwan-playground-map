@@ -261,6 +261,32 @@ python3 scripts/check_opendata_update.py --report x.md   # 報告另外存成檔
 3. `data/raw/txg/txg-play.json` 不參與匯入，有變動時要人工看 `research.json` 裡對應的項目。
 4. 跑完整測試、開 PR；合併後 `pnpm seed --city <縣市> --dry-run` 確認，再匯入（有場地被拿掉時加 `--prune`）。
 
+## OSM 更新檢查
+
+新竹市以外的 21 個縣市都用到 OSM（15 個縣市的場地全部來自 OSM）。OSM 上有人新增、刪除、改名或移動遊戲場時，要更新時在本機手動檢查：
+
+```bash
+python3 scripts/check_osm_update.py                 # 全部（約 15～30 分鐘）；也可以指定縣市：pen kin
+python3 scripts/check_osm_update.py --report x.md   # 報告另外存成檔案
+```
+
+它在暫存資料夾執行 `fetch_osm_city.py`、`fetch_osm_institutions.py`（有 `osm-parks.json` 的縣市再加 `fetch_osm_parks.py`；
+臺北市只有這一項），再重新匯入，repo 不會被改到。報告分兩層：
+
+- **原始資料**：遊戲場依 OSM 編號列出新增、刪除，以及名稱、其他標籤、位置、所在公園、行政區的變動；
+  進入或離開學校／機關範圍的遊戲場；research.json 用到的公園有沒有變。
+- **重新匯入後的場地**：同 `check_opendata_update.py`。
+
+結束碼 0 沒有變動／1 有變動／2 有縣市下載或匯入失敗（例如 OSM 刪掉了 research.json 引用的公園，要人處理）。
+錯誤是 `HTTP Error 502`／`504`／`429` 時是 Overpass 暫時忙碌，過幾分鐘只重跑失敗的縣市即可（例如 `python3 scripts/check_osm_update.py txg`）。
+新增的 OSM 遊戲場不一定變成新場地（可能併入既有場地、沒有名稱、或被排除），以「重新匯入後的場地」為準。有變動時，**一個縣市一個 PR**：
+
+1. 在 repo 依序執行 `python3 scripts/fetch_osm_city.py <縣市>`、`fetch_osm_institutions.py <縣市>`（有 `osm-parks.json` 的再跑 `fetch_osm_parks.py <縣市>`），
+   再跑匯入（指令見 `scripts/check_seed_hash.py` 的 `CITIES`），看 `git diff data/`。
+2. 看 `data/review/<縣市>/`：新的沒有名稱的遊戲場進 `unnamed.csv`（人工命名或會員命名，**不可以猜名稱**）；
+   進入學校或機關範圍的會被排除；`manual-names.tsv` 引用的遊戲場在 OSM 被刪掉時，匯入會報錯，要移除那一列。
+3. 跑完整測試、開 PR；合併後 `pnpm seed --city <縣市> --dry-run` 確認，再匯入（有場地被拿掉時加 `--prune`）。
+
 ## 出錯時
 
 - **資料有問題、要先收回**：`hsq` + `unlaunch`。訪客立刻看不到新竹縣（RLS＋清快取），資料留在資料庫，修正後重新 `seed`、`launch`。
