@@ -2,9 +2,9 @@
  "source": "OpenStreetMap（Overpass API）",
  "license": "© OpenStreetMap contributors，ODbL",
  "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-HSQ\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
- "fetched": "2026-10-11",
- "osm_base": "2026-10-11T04:32:45Z",
- "sha256": "4956a6a42126c40dec4e276d9412c295faa90875fc7dcd5f397a049f28c25041",
+ "fetched": "2026-11-27",
+ "osm_base": "2026-11-27T11:31:55Z",
+ "sha256": "a415953ff1a332b66d5aae320d1b38631d2406ca65fcd35c904fe8f11f36534d",
  "playgrounds": [
   {
    "ref": "n2632373343",
@@ -398,7 +398,7 @@
   {
    "ref": "w492346303",
    "lat": 24.8186768,
-   "lng": 121.0131003,
+   "lng": 121.0132245,
    "tags": {
     "leisure": "playground"
    },
@@ -773,6 +773,7 @@
    "lat": 24.8683586,
    "lng": 121.0267467,
    "tags": {
+    "access": "yes",
     "leisure": "playground"
    },
    "parks": [
@@ -1524,6 +1525,119 @@
     {
      "area": 805993388,
      "name": "高鐵4號公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "竹北市"
+    }
+   ]
+  },
+  {
+   "ref": "w1575192612",
+   "lat": 24.9019301,
+   "lng": 121.0579823,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1575192651",
+   "lat": 24.9151964,
+   "lng": 121.0506096,
+   "tags": {
+    "leisure": "playground",
+    "name": "共融式鞦韆"
+   },
+   "parks": [
+    {
+     "area": 1575192639,
+     "name": "東興村特色公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1575192653",
+   "lat": 24.9153816,
+   "lng": 121.0506454,
+   "tags": {
+    "leisure": "playground",
+    "name": "塔型遊具"
+   },
+   "parks": [
+    {
+     "area": 1575192639,
+     "name": "東興村特色公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1575192655",
+   "lat": 24.9156108,
+   "lng": 121.0506223,
+   "tags": {
+    "leisure": "playground",
+    "name": "體鍵設施"
+   },
+   "parks": [
+    {
+     "area": 1575192639,
+     "name": "東興村特色公園"
+    }
+   ],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1575192664",
+   "lat": 24.9182771,
+   "lng": 121.0471464,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [],
+   "districts": [
+    {
+     "level": 8,
+     "name": "湖口鄉"
+    }
+   ]
+  },
+  {
+   "ref": "w1577592284",
+   "lat": 24.8413857,
+   "lng": 120.9965684,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 1227086583,
+     "name": "新國公園"
     }
    ],
    "districts": [
