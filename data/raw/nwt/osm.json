@@ -2,9 +2,9 @@
  "source": "OpenStreetMap（Overpass API）",
  "license": "© OpenStreetMap contributors，ODbL",
  "query": "[out:json][timeout:180];area[\"ISO3166-2\"=\"TW-NWT\"]->.a;nwr[\"leisure\"=\"playground\"](area.a);out center tags;",
- "fetched": "2026-10-13",
- "osm_base": "2026-10-13T12:34:21Z",
- "sha256": "4d14871668397dc7278e5ad8861bea331570c8bf8fdf16588d24bdb509f86b50",
+ "fetched": "2026-11-28",
+ "osm_base": "2026-11-28T00:02:50Z",
+ "sha256": "b9d4e44958e8b04b8b59f055f9ec0026881e40a6bd7da3915077d96785cb32b3",
  "playgrounds": [
   {
    "ref": "n323156554",
@@ -811,8 +811,8 @@
   },
   {
    "ref": "n6464293202",
-   "lat": 25.1070253,
-   "lng": 121.828111,
+   "lat": 25.1070259,
+   "lng": 121.8278998,
    "tags": {
     "leisure": "playground"
    },
@@ -1167,6 +1167,28 @@
     {
      "area": 240590820,
      "name": "三鶯藝術村"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "鶯歌區"
+    }
+   ]
+  },
+  {
+   "ref": "n14320227494",
+   "lat": 24.9528285,
+   "lng": 121.3484569,
+   "tags": {
+    "access": "yes",
+    "check_date": "2026-10-26",
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 302356299,
+     "name": "三號公園"
     }
    ],
    "districts": [
@@ -1789,8 +1811,8 @@
   },
   {
    "ref": "w501526131",
-   "lat": 24.9781477,
-   "lng": 121.5182693,
+   "lat": 24.9782218,
+   "lng": 121.5186743,
    "tags": {
     "leisure": "playground"
    },
@@ -1809,28 +1831,8 @@
   },
   {
    "ref": "w501526132",
-   "lat": 24.9781627,
-   "lng": 121.5187249,
-   "tags": {
-    "leisure": "playground"
-   },
-   "parks": [
-    {
-     "area": 256934670,
-     "name": "陽光運動園區"
-    }
-   ],
-   "districts": [
-    {
-     "level": 7,
-     "name": "新店區"
-    }
-   ]
-  },
-  {
-   "ref": "w501526133",
-   "lat": 24.978273,
-   "lng": 121.5185087,
+   "lat": 24.9780471,
+   "lng": 121.5189664,
    "tags": {
     "leisure": "playground"
    },
@@ -1849,8 +1851,8 @@
   },
   {
    "ref": "w501528441",
-   "lat": 24.9778505,
-   "lng": 121.5184628,
+   "lat": 24.9779703,
+   "lng": 121.5186238,
    "tags": {
     "leisure": "playground"
    },
@@ -2095,7 +2097,12 @@
     "playground": "slide",
     "wheelchair": "yes"
    },
-   "parks": [],
+   "parks": [
+    {
+     "area": 525480605,
+     "name": "員和公園"
+    }
+   ],
    "districts": [
     {
      "level": 7,
@@ -3290,6 +3297,7 @@
    "lat": 25.0077708,
    "lng": 121.4626423,
    "tags": {
+    "access": "yes",
     "leisure": "playground"
    },
    "parks": [
@@ -4305,6 +4313,26 @@
     {
      "level": 7,
      "name": "永和區"
+    }
+   ]
+  },
+  {
+   "ref": "w1578384827",
+   "lat": 24.9777507,
+   "lng": 121.5188031,
+   "tags": {
+    "leisure": "playground"
+   },
+   "parks": [
+    {
+     "area": 256934670,
+     "name": "陽光運動園區"
+    }
+   ],
+   "districts": [
+    {
+     "level": 7,
+     "name": "新店區"
     }
    ]
   }
