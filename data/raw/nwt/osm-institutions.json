@@ -1,8 +1,8 @@
 {
  "source": "OpenStreetMap（Overpass API）",
  "license": "© OpenStreetMap contributors，ODbL",
- "fetched": "2026-10-15",
- "osm_json_sha256": "86bbe26327459cd2d1c70aa91721e9d3137f15e7afd2335a62b0b8e0059c0deb",
+ "fetched": "2026-11-28",
+ "osm_json_sha256": "07b87b98432f5b7a252f1d6d0ed2c737a6f9670f9fc84a70aa31eecebf310a2a",
  "note": "遊戲場所在的學校、幼兒園、政府機關、軍營（只列在範圍內的）；匯入時自動排除",
  "inside": {
   "n3311969242": [
